@@ -2,7 +2,7 @@
 FROM node:20
 
 # Set working directory
-WORKDIR /Users/chadbercea/Github/ai-design-system
+WORKDIR /app
 
 # Copy files
 COPY package.json package-lock.json ./
