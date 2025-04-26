@@ -6,7 +6,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
 
-# Copy the rest of the application
+# Copy all files including index.html in the root
 COPY . .
 
 # Make sure the port is exposed
