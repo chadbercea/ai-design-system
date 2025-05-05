@@ -74,8 +74,8 @@
   "colors": {
     "black": {
       "$type": "color",
-      "$value": "#CDC50A",
-      "$description": "Switch this back to fff plz"
+      "$value": "#000",
+      "$description": "Token is set back to black to test sync."
     },
     "white": {
       "$type": "color",
