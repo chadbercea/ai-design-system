@@ -74,7 +74,8 @@
   "colors": {
     "black": {
       "$type": "color",
-      "$value": "#000000"
+      "$value": "#CDC50A",
+      "$description": "Switch this back to fff plz"
     },
     "white": {
       "$type": "color",
