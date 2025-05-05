@@ -1,0 +1,21 @@
+Monday May 5, 2025
+
+I needed to get the actual color tokens from the MUI package—not from documentation, not from a theme snapshot, but from the real source of truth in our installed package.
+
+What I discovered:
+MUI’s foundational color palettes (like blue, red, green, etc.) are defined as JavaScript objects in the @mui/material/colors directory inside node_modules.
+Each color (e.g., blue) is an object with all its shades (50, 100, ..., 900, A100, etc.).
+
+What I did:
+We wrote a Node.js script (mui-token-map.js) that imports the color palettes directly from the MUI package using require('@mui/material/colors').
+The script collects all the color objects and writes them into a single flat JSON file called mui-token-map.json.
+This gives us a machine-readable, up-to-date list of all MUI color tokens and their values, straight from the package.
+
+Result:
+We now have a JSON file with all the MUI color tokens, ready for further processing or mapping to other systems.
+
+---
+
+Then, I modularized the process of extracting MUI design tokens by writing a dedicated script for each token category (colors, spacing, font sizes, etc.) and organizing them in a scripts folder. Each script outputs a JSON file with the exact MUI naming and values.
+After that, I created a script that reads all these modular JSON files and merges them into a single W3C DTCG-compliant JSON file (w3c-tokens.json). This script is fully automatable and can be triggered by a GitHub Action, making it easy to keep our design tokens in sync across engineering and design.
+Now, we have a complete, machine-readable map of MUI design tokens, ready for use in Tokens Studio and Figma, and set up for a modern, automated design system workflow.
