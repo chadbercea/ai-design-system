@@ -47,7 +47,7 @@ const CANONICAL_CATEGORIES = [
 
 // Read input
 const inputPath = path.join(__dirname, '../w3c-tokens.json');
-const outputPath = path.join(__dirname, '../tokens-studio.json');
+const outputPath = path.join(__dirname, '../../build/tokens-studio.json');
 const input = JSON.parse(fs.readFileSync(inputPath, 'utf-8'));
 
 const output = {};
