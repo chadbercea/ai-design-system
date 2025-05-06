@@ -1110,34 +1110,6 @@
         }
       }
     },
-    "dimension": {
-      "spacing": {
-        "$value": "8px",
-        "$type": "Dimension"
-      },
-      "breakpoints": {
-        "xs": {
-          "$value": 0,
-          "$type": "Dimension"
-        },
-        "sm": {
-          "$value": 600,
-          "$type": "Dimension"
-        },
-        "md": {
-          "$value": 900,
-          "$type": "Dimension"
-        },
-        "lg": {
-          "$value": 1200,
-          "$type": "Dimension"
-        },
-        "xl": {
-          "$value": 1536,
-          "$type": "Dimension"
-        }
-      }
-    },
     "fontFamily": {
       "global": {
         "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",

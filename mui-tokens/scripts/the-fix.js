@@ -56,14 +56,13 @@ const output = {};
 // Map and copy tokens to canonical categories
 for (const [key, value] of Object.entries(input)) {
   const canonicalKey = CANONICAL_MAP[key] || key;
-  if (!output[canonicalKey]) output[canonicalKey] = {};
 
   // Recursively map $type fields and capitalize them
   function mapTypes(obj, typeHint) {
     if (typeof obj !== 'object' || obj === null) return obj;
     if ('$value' in obj && '$type' in obj) {
       // Capitalize the type
-      const canonicalType = CANONICAL_TYPES[obj['$type']] || CANONICAL_TYPES[typeHint] || obj['$type'];
+      const canonicalType = CANONICAL_TYPES[obj['$type']] || CANONICAL_TYPES[typeHint] || capitalize(obj['$type']);
       return { $value: obj['$value'], $type: canonicalType };
     }
     const result = Array.isArray(obj) ? [] : {};
@@ -73,7 +72,10 @@ for (const [key, value] of Object.entries(input)) {
     return result;
   }
 
-  output[canonicalKey] = mapTypes(value, canonicalKey);
+  // Only output canonical categories
+  if (CANONICAL_CATEGORIES.includes(canonicalKey)) {
+    output[canonicalKey] = mapTypes(value, canonicalKey);
+  }
 }
 
 // Optionally, fill in any missing canonical categories as empty objects
@@ -84,3 +86,9 @@ for (const cat of CANONICAL_CATEGORIES) {
 // Write output with "MUI" as the set
 fs.writeFileSync(outputPath, JSON.stringify({ MUI: output }, null, 2));
 console.log(`✅ Canonical tokens written to ${outputPath}`);
+
+// Helper to capitalize type if not in mapping
+function capitalize(str) {
+  if (!str) return str;
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
