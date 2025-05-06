@@ -3,26 +3,25 @@ const path = require('path');
 
 // Canonical category and type mapping
 const CANONICAL_MAP = {
-  color: 'colors',
-  fontFamily: 'fontFamilies',
-  fontSize: 'fontSizes',
-  fontWeight: 'fontWeights',
-  lineHeight: 'lineHeights',
+  color: 'color',
+  fontFamily: 'fontFamily',
+  fontSize: 'fontSize',
+  fontWeight: 'fontWeight',
+  lineHeight: 'lineHeight',
   radius: 'borderRadius',
   opacity: 'opacity',
   spacing: 'spacing',
   paragraphSpacing: 'paragraphSpacing',
   borderRadius: 'borderRadius',
-  dimension: 'dimension', // for completeness, but not canonical in TS
   letterSpacing: 'letterSpacing'
 };
 
 const CANONICAL_TYPES = {
   color: 'color',
-  fontFamily: 'fontFamilies',
-  fontSize: 'fontSizes',
-  fontWeight: 'fontWeights',
-  lineHeight: 'lineHeights',
+  fontFamily: 'fontFamily',
+  fontSize: 'fontSize',
+  fontWeight: 'fontWeight',
+  lineHeight: 'lineHeight',
   radius: 'borderRadius',
   borderRadius: 'borderRadius',
   opacity: 'opacity',
