@@ -69,5 +69,6 @@ for (const [file, category] of Object.entries(FILE_TO_CATEGORY)) {
   }
 }
 
-fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
-console.log(`Tokens Studio tokens written to ${OUTPUT_FILE}`);
+const finalOutput = { MUI: output };
+fs.writeFileSync(OUTPUT_FILE, JSON.stringify(finalOutput, null, 2));
+console.log(`Tokens Studio tokens written to ${OUTPUT_FILE} (MUI set)`);
