@@ -1,17 +1,62 @@
 {
-  "global": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "h1": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "h2": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "h3": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "h4": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "h5": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "h6": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "subtitle1": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "subtitle2": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "body1": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "body2": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "button": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "caption": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "overline": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-  "inherit": "inherit"
+  "global": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "h1": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "h2": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "h3": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "h4": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "h5": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "h6": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "subtitle1": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "subtitle2": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "body1": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "body2": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "button": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "caption": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "overline": {
+    "$type": "fontFamily",
+    "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+  },
+  "inherit": {
+    "$type": "fontFamily",
+    "$value": "inherit"
+  }
 }

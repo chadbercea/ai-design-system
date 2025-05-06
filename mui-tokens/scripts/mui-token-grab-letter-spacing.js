@@ -10,13 +10,17 @@ const theme = createTheme();
 // Extract letterSpacing tokens from typography
 const letterSpacingTokens = {};
 
+// Add letter spacing values for each typography style that has it
 for (const key in theme.typography) {
   if (
     theme.typography[key] &&
     typeof theme.typography[key] === 'object' &&
     theme.typography[key].letterSpacing
   ) {
-    letterSpacingTokens[key] = theme.typography[key].letterSpacing;
+    letterSpacingTokens[key] = {
+      $type: 'letterSpacing',
+      $value: theme.typography[key].letterSpacing.toString()
+    };
   }
 }
 

@@ -1,0 +1,136 @@
+A sample of the Tokens.Studio JSON for analysis:
+
+"borderRadius": {
+  "sm": {
+    "$type": "borderRadius",
+    "$value": "4"
+  },
+  "lg": {
+    "$type": "borderRadius",
+    "$value": "8"
+  },
+  "xl": {
+    "$type": "borderRadius",
+    "$value": "16"
+  },
+  "multi-value": {
+    "$type": "borderRadius",
+    "$value": "{borderRadius.sm} {borderRadius.lg}",
+    "$description": "You can have multiple values in a single radius token. Read more on these: https://docs.tokens.studio/available-tokens/border-radius-tokens#single--multiple-values"
+  }
+}
+
+Analysis:
+1. Category Name
+The category is "borderRadius" (camelCase, not plural, not snake_case).
+2. Token Keys
+Each key under borderRadius (e.g., "sm", "lg", "xl", "multi-value") is a named token.
+These names are semantic and can be arbitrary, but should be meaningful (e.g., "sm" for small, "lg" for large).
+3. Token Object Structure
+Each token is an object with at least:
+"$type": Always "borderRadius" for this category.
+"$value": The value of the token, which can be a number (as a string), a reference, or a space-separated list of references.
+"$description": (Optional) A string describing the token.
+4. Value Types
+Values can be:
+A stringified number (e.g., "4", "8", "16")
+A reference to another token (e.g., "{borderRadius.sm} {borderRadius.lg}")
+A space-separated list of references for multi-value tokens.
+5. References
+References use curly braces and dot notation to refer to other tokens in the same or other categories (e.g., "{borderRadius.sm}").
+6. Descriptions
+Descriptions are optional and provide human-readable context or documentation.
+7. No Extra Wrapping
+There is no extra nesting or wrapper around the tokens in this category.
+The structure is flat: category → token name → token object.
+
+Tokens Studio JSON Structure Reference
+1. Top-Level Structure
+The top-level of the JSON is a set (e.g., "core", "MUI", "light", "dark", "theme").
+Each set is an object containing categories as direct children.
+example:
+{
+  "core": {
+    // categories go here
+  }
+}
+
+2. Category Level
+Categories are direct children of the set.
+Category names are camelCase, singular, and never pluralized or wrapped.
+No extra nesting or wrappers.
+Example:
+"borderRadius": { ... }
+"colors": { ... }
+"fontFamilies": { ... }
+
+3. Token Level
+Each token is a direct child of its category.
+Token names are semantic and meaningful (e.g., "sm", "lg", "primary", "100").
+Example:
+"borderRadius": {
+  "sm": { ... },
+  "lg": { ... }
+}
+
+4. Token Object Structure
+Each token object must have:
+"$type": The type of the token, matching the category (e.g., "borderRadius", "color", "fontFamilies").
+"$value": The value, which can be a string, number, or reference.
+"$description": (Optional) Human-readable description.
+Example:
+"sm": {
+  "$type": "borderRadius",
+  "$value": "4"
+}
+
+5. References
+References use curly braces and dot notation: "{category.tokenName}"
+Multi-value tokens use space-separated references: "{borderRadius.sm} {borderRadius.lg}"
+
+6. No Extra Wrapping
+Never wrap categories or tokens in additional objects or arrays.
+Never use a "type" or "set" key at the top level—only the set name (e.g., "core").
+
+7. No Forced or Empty Categories
+Only include categories and tokens that are present and needed.
+Do not add empty categories or tokens.
+
+8. Example of a Full, Valid Structure
+{
+  "core": {
+    "borderRadius": {
+      "sm": {
+        "$type": "borderRadius",
+        "$value": "4"
+      },
+      "lg": {
+        "$type": "borderRadius",
+        "$value": "8"
+      }
+    },
+    "colors": {
+      "primary": {
+        "$type": "color",
+        "$value": "#1976d2"
+      }
+    }
+    // ... other categories ...
+  }
+}
+
+9. Golden Rules
+Set name is the only top-level key.
+Categories are direct children of the set.
+Tokens are direct children of categories.
+Token objects have $type, $value, and optionally $description.
+No extra wrappers, no pluralization, no empty categories.
+
+Instruction for Future Scripts/Developers
+Always validate your output against this reference before using or committing.
+If you add a new category or token type, update this reference with an example.
+If in doubt, compare your output to this file and to a known-good Tokens Studio export.
+
+Token Types in Tokens Studio
+The type is the anatomic part of a Design Token that defines the category of design property the decision belongs to, or when it can be applied.  
+

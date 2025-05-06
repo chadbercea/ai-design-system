@@ -9,15 +9,22 @@ const theme = createTheme();
 const fontFamilyTokens = {};
 
 // MUI's typography object has a global fontFamily and per-style fontFamily overrides
-fontFamilyTokens.global = theme.typography.fontFamily;
+fontFamilyTokens['global'] = {
+  $type: 'fontFamily',
+  $value: theme.typography.fontFamily
+};
 
+// Add per-style fontFamily overrides if they exist
 for (const key in theme.typography) {
   if (
     theme.typography[key] &&
     typeof theme.typography[key] === 'object' &&
     theme.typography[key].fontFamily
   ) {
-    fontFamilyTokens[key] = theme.typography[key].fontFamily;
+    fontFamilyTokens[key] = {
+      $type: 'fontFamily',
+      $value: theme.typography[key].fontFamily
+    };
   }
 }
 
