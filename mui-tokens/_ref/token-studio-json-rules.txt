@@ -13,3 +13,10 @@ No wrappers, no pluralization, no extra nesting.
 $description is included if present.
 Set name is always "MUI".
 If in doubt, compare output to the structure reference file.
+
+Action Plan
+Update the reference file to explicitly prohibit category nesting.
+Refactor the script to:
+Flatten all tokens to be direct children of the set.
+Ensure each token has a $type.
+Remove all category/grouping logic.
