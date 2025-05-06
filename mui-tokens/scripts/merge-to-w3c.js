@@ -6,21 +6,21 @@ const OUTPUT_FILE = path.join(TOKENS_DIR, 'w3c-tokens.json');
 
 // Map file name patterns to W3C categories/types
 const CATEGORY_MAP = {
-  colors: { w3c: 'color', type: 'color' },
+  'colors': { w3c: 'color', type: 'color' },
   'border-radius': { w3c: 'radius', type: 'dimension' },
-  dimension: { w3c: 'dimension', type: 'dimension' },
+  'dimension': { w3c: 'dimension', type: 'dimension' },
   'font-family': { w3c: 'fontFamily', type: 'fontFamily' },
   'font-weight': { w3c: 'fontWeight', type: 'fontWeight' },
   'font-size': { w3c: 'fontSize', type: 'dimension' },
   'letter-spacing': { w3c: 'letterSpacing', type: 'dimension' },
   'line-height': { w3c: 'lineHeight', type: 'dimension' },
-  opacity: { w3c: 'opacity', type: 'number' },
+  'opacity': { w3c: 'opacity', type: 'opacity' },
   'paragraph-spacing': { w3c: 'paragraphSpacing', type: 'dimension' },
-  spacing: { w3c: 'spacing', type: 'dimension' }
+  'spacing': { w3c: 'spacing', type: 'dimension' }
 };
 
 const files = fs.readdirSync(TOKENS_DIR).filter(
-  f => f.endsWith('.json') && !f.startsWith('w3c-')
+  f => f.startsWith('mui-token-') && f.endsWith('.json')
 );
 
 const w3cTokens = {};
@@ -40,10 +40,10 @@ for (const file of files) {
     if (typeof value === 'object' && !Array.isArray(value)) {
       w3cTokens[map.w3c][token] = {};
       for (const [subToken, subValue] of Object.entries(value)) {
-        w3cTokens[map.w3c][token][subToken] = { value: subValue, type: map.type };
+        w3cTokens[map.w3c][token][subToken] = { $value: subValue, $type: map.type };
       }
     } else {
-      w3cTokens[map.w3c][token] = { value, type: map.type };
+      w3cTokens[map.w3c][token] = { $value: value, $type: map.type };
     }
   }
 }

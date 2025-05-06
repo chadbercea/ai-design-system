@@ -1,0 +1,6965 @@
+{
+  "radius": {
+    "borderRadius": {
+      "$value": "4px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 4,
+        "$type": "dimension"
+      },
+      "name": "radiusBorderRadius",
+      "attributes": {
+        "category": "radius",
+        "type": "borderRadius"
+      },
+      "path": [
+        "radius",
+        "borderRadius"
+      ]
+    }
+  },
+  "color": {
+    "blue": {
+      "50": {
+        "$value": "#e3f2fd",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e3f2fd",
+          "$type": "color"
+        },
+        "name": "colorBlue50",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "blue",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#bbdefb",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#bbdefb",
+          "$type": "color"
+        },
+        "name": "colorBlue100",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "blue",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#90caf9",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#90caf9",
+          "$type": "color"
+        },
+        "name": "colorBlue200",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "blue",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#64b5f6",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#64b5f6",
+          "$type": "color"
+        },
+        "name": "colorBlue300",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "blue",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#42a5f5",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#42a5f5",
+          "$type": "color"
+        },
+        "name": "colorBlue400",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "blue",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#2196f3",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#2196f3",
+          "$type": "color"
+        },
+        "name": "colorBlue500",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "blue",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#1e88e5",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#1e88e5",
+          "$type": "color"
+        },
+        "name": "colorBlue600",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "blue",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#1976d2",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#1976d2",
+          "$type": "color"
+        },
+        "name": "colorBlue700",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "blue",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#1565c0",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#1565c0",
+          "$type": "color"
+        },
+        "name": "colorBlue800",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "blue",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#0d47a1",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#0d47a1",
+          "$type": "color"
+        },
+        "name": "colorBlue900",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "blue",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#82b1ff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#82b1ff",
+          "$type": "color"
+        },
+        "name": "colorBlueA100",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "blue",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#448aff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#448aff",
+          "$type": "color"
+        },
+        "name": "colorBlueA200",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "blue",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#2979ff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#2979ff",
+          "$type": "color"
+        },
+        "name": "colorBlueA400",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "blue",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#2962ff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#2962ff",
+          "$type": "color"
+        },
+        "name": "colorBlueA700",
+        "attributes": {
+          "category": "color",
+          "type": "blue",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "blue",
+          "A700"
+        ]
+      }
+    },
+    "red": {
+      "50": {
+        "$value": "#ffebee",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffebee",
+          "$type": "color"
+        },
+        "name": "colorRed50",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "red",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#ffcdd2",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffcdd2",
+          "$type": "color"
+        },
+        "name": "colorRed100",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "red",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#ef9a9a",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ef9a9a",
+          "$type": "color"
+        },
+        "name": "colorRed200",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "red",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#e57373",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e57373",
+          "$type": "color"
+        },
+        "name": "colorRed300",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "red",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#ef5350",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ef5350",
+          "$type": "color"
+        },
+        "name": "colorRed400",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "red",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#f44336",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f44336",
+          "$type": "color"
+        },
+        "name": "colorRed500",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "red",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#e53935",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e53935",
+          "$type": "color"
+        },
+        "name": "colorRed600",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "red",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#d32f2f",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#d32f2f",
+          "$type": "color"
+        },
+        "name": "colorRed700",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "red",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#c62828",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#c62828",
+          "$type": "color"
+        },
+        "name": "colorRed800",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "red",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#b71c1c",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#b71c1c",
+          "$type": "color"
+        },
+        "name": "colorRed900",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "red",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#ff8a80",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff8a80",
+          "$type": "color"
+        },
+        "name": "colorRedA100",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "red",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#ff5252",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff5252",
+          "$type": "color"
+        },
+        "name": "colorRedA200",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "red",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#ff1744",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff1744",
+          "$type": "color"
+        },
+        "name": "colorRedA400",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "red",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#d50000",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#d50000",
+          "$type": "color"
+        },
+        "name": "colorRedA700",
+        "attributes": {
+          "category": "color",
+          "type": "red",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "red",
+          "A700"
+        ]
+      }
+    },
+    "green": {
+      "50": {
+        "$value": "#e8f5e9",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e8f5e9",
+          "$type": "color"
+        },
+        "name": "colorGreen50",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "green",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#c8e6c9",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#c8e6c9",
+          "$type": "color"
+        },
+        "name": "colorGreen100",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "green",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#a5d6a7",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#a5d6a7",
+          "$type": "color"
+        },
+        "name": "colorGreen200",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "green",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#81c784",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#81c784",
+          "$type": "color"
+        },
+        "name": "colorGreen300",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "green",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#66bb6a",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#66bb6a",
+          "$type": "color"
+        },
+        "name": "colorGreen400",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "green",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#4caf50",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#4caf50",
+          "$type": "color"
+        },
+        "name": "colorGreen500",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "green",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#43a047",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#43a047",
+          "$type": "color"
+        },
+        "name": "colorGreen600",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "green",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#388e3c",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#388e3c",
+          "$type": "color"
+        },
+        "name": "colorGreen700",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "green",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#2e7d32",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#2e7d32",
+          "$type": "color"
+        },
+        "name": "colorGreen800",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "green",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#1b5e20",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#1b5e20",
+          "$type": "color"
+        },
+        "name": "colorGreen900",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "green",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#b9f6ca",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#b9f6ca",
+          "$type": "color"
+        },
+        "name": "colorGreenA100",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "green",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#69f0ae",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#69f0ae",
+          "$type": "color"
+        },
+        "name": "colorGreenA200",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "green",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#00e676",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00e676",
+          "$type": "color"
+        },
+        "name": "colorGreenA400",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "green",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#00c853",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00c853",
+          "$type": "color"
+        },
+        "name": "colorGreenA700",
+        "attributes": {
+          "category": "color",
+          "type": "green",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "green",
+          "A700"
+        ]
+      }
+    },
+    "purple": {
+      "50": {
+        "$value": "#f3e5f5",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f3e5f5",
+          "$type": "color"
+        },
+        "name": "colorPurple50",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "purple",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#e1bee7",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e1bee7",
+          "$type": "color"
+        },
+        "name": "colorPurple100",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "purple",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#ce93d8",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ce93d8",
+          "$type": "color"
+        },
+        "name": "colorPurple200",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "purple",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#ba68c8",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ba68c8",
+          "$type": "color"
+        },
+        "name": "colorPurple300",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "purple",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#ab47bc",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ab47bc",
+          "$type": "color"
+        },
+        "name": "colorPurple400",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "purple",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#9c27b0",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#9c27b0",
+          "$type": "color"
+        },
+        "name": "colorPurple500",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "purple",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#8e24aa",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#8e24aa",
+          "$type": "color"
+        },
+        "name": "colorPurple600",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "purple",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#7b1fa2",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#7b1fa2",
+          "$type": "color"
+        },
+        "name": "colorPurple700",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "purple",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#6a1b9a",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#6a1b9a",
+          "$type": "color"
+        },
+        "name": "colorPurple800",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "purple",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#4a148c",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#4a148c",
+          "$type": "color"
+        },
+        "name": "colorPurple900",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "purple",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#ea80fc",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ea80fc",
+          "$type": "color"
+        },
+        "name": "colorPurpleA100",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "purple",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#e040fb",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e040fb",
+          "$type": "color"
+        },
+        "name": "colorPurpleA200",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "purple",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#d500f9",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#d500f9",
+          "$type": "color"
+        },
+        "name": "colorPurpleA400",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "purple",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#aa00ff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#aa00ff",
+          "$type": "color"
+        },
+        "name": "colorPurpleA700",
+        "attributes": {
+          "category": "color",
+          "type": "purple",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "purple",
+          "A700"
+        ]
+      }
+    },
+    "orange": {
+      "50": {
+        "$value": "#fff3e0",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fff3e0",
+          "$type": "color"
+        },
+        "name": "colorOrange50",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "orange",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#ffe0b2",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffe0b2",
+          "$type": "color"
+        },
+        "name": "colorOrange100",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "orange",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#ffcc80",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffcc80",
+          "$type": "color"
+        },
+        "name": "colorOrange200",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "orange",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#ffb74d",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffb74d",
+          "$type": "color"
+        },
+        "name": "colorOrange300",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "orange",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#ffa726",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffa726",
+          "$type": "color"
+        },
+        "name": "colorOrange400",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "orange",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#ff9800",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff9800",
+          "$type": "color"
+        },
+        "name": "colorOrange500",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "orange",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#fb8c00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fb8c00",
+          "$type": "color"
+        },
+        "name": "colorOrange600",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "orange",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#f57c00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f57c00",
+          "$type": "color"
+        },
+        "name": "colorOrange700",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "orange",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#ef6c00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ef6c00",
+          "$type": "color"
+        },
+        "name": "colorOrange800",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "orange",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#e65100",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e65100",
+          "$type": "color"
+        },
+        "name": "colorOrange900",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "orange",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#ffd180",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffd180",
+          "$type": "color"
+        },
+        "name": "colorOrangeA100",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "orange",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#ffab40",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffab40",
+          "$type": "color"
+        },
+        "name": "colorOrangeA200",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "orange",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#ff9100",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff9100",
+          "$type": "color"
+        },
+        "name": "colorOrangeA400",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "orange",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#ff6d00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff6d00",
+          "$type": "color"
+        },
+        "name": "colorOrangeA700",
+        "attributes": {
+          "category": "color",
+          "type": "orange",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "orange",
+          "A700"
+        ]
+      }
+    },
+    "yellow": {
+      "50": {
+        "$value": "#fffde7",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fffde7",
+          "$type": "color"
+        },
+        "name": "colorYellow50",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#fff9c4",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fff9c4",
+          "$type": "color"
+        },
+        "name": "colorYellow100",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#fff59d",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fff59d",
+          "$type": "color"
+        },
+        "name": "colorYellow200",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#fff176",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fff176",
+          "$type": "color"
+        },
+        "name": "colorYellow300",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#ffee58",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffee58",
+          "$type": "color"
+        },
+        "name": "colorYellow400",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#ffeb3b",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffeb3b",
+          "$type": "color"
+        },
+        "name": "colorYellow500",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#fdd835",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fdd835",
+          "$type": "color"
+        },
+        "name": "colorYellow600",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#fbc02d",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fbc02d",
+          "$type": "color"
+        },
+        "name": "colorYellow700",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#f9a825",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f9a825",
+          "$type": "color"
+        },
+        "name": "colorYellow800",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#f57f17",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f57f17",
+          "$type": "color"
+        },
+        "name": "colorYellow900",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#ffff8d",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffff8d",
+          "$type": "color"
+        },
+        "name": "colorYellowA100",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#ffff00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffff00",
+          "$type": "color"
+        },
+        "name": "colorYellowA200",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#ffea00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffea00",
+          "$type": "color"
+        },
+        "name": "colorYellowA400",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#ffd600",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffd600",
+          "$type": "color"
+        },
+        "name": "colorYellowA700",
+        "attributes": {
+          "category": "color",
+          "type": "yellow",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "yellow",
+          "A700"
+        ]
+      }
+    },
+    "pink": {
+      "50": {
+        "$value": "#fce4ec",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fce4ec",
+          "$type": "color"
+        },
+        "name": "colorPink50",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "pink",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#f8bbd0",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f8bbd0",
+          "$type": "color"
+        },
+        "name": "colorPink100",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "pink",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#f48fb1",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f48fb1",
+          "$type": "color"
+        },
+        "name": "colorPink200",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "pink",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#f06292",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f06292",
+          "$type": "color"
+        },
+        "name": "colorPink300",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "pink",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#ec407a",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ec407a",
+          "$type": "color"
+        },
+        "name": "colorPink400",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "pink",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#e91e63",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e91e63",
+          "$type": "color"
+        },
+        "name": "colorPink500",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "pink",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#d81b60",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#d81b60",
+          "$type": "color"
+        },
+        "name": "colorPink600",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "pink",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#c2185b",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#c2185b",
+          "$type": "color"
+        },
+        "name": "colorPink700",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "pink",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#ad1457",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ad1457",
+          "$type": "color"
+        },
+        "name": "colorPink800",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "pink",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#880e4f",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#880e4f",
+          "$type": "color"
+        },
+        "name": "colorPink900",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "pink",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#ff80ab",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff80ab",
+          "$type": "color"
+        },
+        "name": "colorPinkA100",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "pink",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#ff4081",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff4081",
+          "$type": "color"
+        },
+        "name": "colorPinkA200",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "pink",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#f50057",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f50057",
+          "$type": "color"
+        },
+        "name": "colorPinkA400",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "pink",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#c51162",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#c51162",
+          "$type": "color"
+        },
+        "name": "colorPinkA700",
+        "attributes": {
+          "category": "color",
+          "type": "pink",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "pink",
+          "A700"
+        ]
+      }
+    },
+    "indigo": {
+      "50": {
+        "$value": "#e8eaf6",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e8eaf6",
+          "$type": "color"
+        },
+        "name": "colorIndigo50",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#c5cae9",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#c5cae9",
+          "$type": "color"
+        },
+        "name": "colorIndigo100",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#9fa8da",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#9fa8da",
+          "$type": "color"
+        },
+        "name": "colorIndigo200",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#7986cb",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#7986cb",
+          "$type": "color"
+        },
+        "name": "colorIndigo300",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#5c6bc0",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#5c6bc0",
+          "$type": "color"
+        },
+        "name": "colorIndigo400",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#3f51b5",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#3f51b5",
+          "$type": "color"
+        },
+        "name": "colorIndigo500",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#3949ab",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#3949ab",
+          "$type": "color"
+        },
+        "name": "colorIndigo600",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#303f9f",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#303f9f",
+          "$type": "color"
+        },
+        "name": "colorIndigo700",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#283593",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#283593",
+          "$type": "color"
+        },
+        "name": "colorIndigo800",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#1a237e",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#1a237e",
+          "$type": "color"
+        },
+        "name": "colorIndigo900",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#8c9eff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#8c9eff",
+          "$type": "color"
+        },
+        "name": "colorIndigoA100",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#536dfe",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#536dfe",
+          "$type": "color"
+        },
+        "name": "colorIndigoA200",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#3d5afe",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#3d5afe",
+          "$type": "color"
+        },
+        "name": "colorIndigoA400",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#304ffe",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#304ffe",
+          "$type": "color"
+        },
+        "name": "colorIndigoA700",
+        "attributes": {
+          "category": "color",
+          "type": "indigo",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "indigo",
+          "A700"
+        ]
+      }
+    },
+    "teal": {
+      "50": {
+        "$value": "#e0f2f1",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e0f2f1",
+          "$type": "color"
+        },
+        "name": "colorTeal50",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "teal",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#b2dfdb",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#b2dfdb",
+          "$type": "color"
+        },
+        "name": "colorTeal100",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "teal",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#80cbc4",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#80cbc4",
+          "$type": "color"
+        },
+        "name": "colorTeal200",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "teal",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#4db6ac",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#4db6ac",
+          "$type": "color"
+        },
+        "name": "colorTeal300",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "teal",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#26a69a",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#26a69a",
+          "$type": "color"
+        },
+        "name": "colorTeal400",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "teal",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#009688",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#009688",
+          "$type": "color"
+        },
+        "name": "colorTeal500",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "teal",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#00897b",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00897b",
+          "$type": "color"
+        },
+        "name": "colorTeal600",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "teal",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#00796b",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00796b",
+          "$type": "color"
+        },
+        "name": "colorTeal700",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "teal",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#00695c",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00695c",
+          "$type": "color"
+        },
+        "name": "colorTeal800",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "teal",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#004d40",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#004d40",
+          "$type": "color"
+        },
+        "name": "colorTeal900",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "teal",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#a7ffeb",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#a7ffeb",
+          "$type": "color"
+        },
+        "name": "colorTealA100",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "teal",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#64ffda",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#64ffda",
+          "$type": "color"
+        },
+        "name": "colorTealA200",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "teal",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#1de9b6",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#1de9b6",
+          "$type": "color"
+        },
+        "name": "colorTealA400",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "teal",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#00bfa5",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00bfa5",
+          "$type": "color"
+        },
+        "name": "colorTealA700",
+        "attributes": {
+          "category": "color",
+          "type": "teal",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "teal",
+          "A700"
+        ]
+      }
+    },
+    "cyan": {
+      "50": {
+        "$value": "#e0f7fa",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e0f7fa",
+          "$type": "color"
+        },
+        "name": "colorCyan50",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#b2ebf2",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#b2ebf2",
+          "$type": "color"
+        },
+        "name": "colorCyan100",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#80deea",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#80deea",
+          "$type": "color"
+        },
+        "name": "colorCyan200",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#4dd0e1",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#4dd0e1",
+          "$type": "color"
+        },
+        "name": "colorCyan300",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#26c6da",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#26c6da",
+          "$type": "color"
+        },
+        "name": "colorCyan400",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#00bcd4",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00bcd4",
+          "$type": "color"
+        },
+        "name": "colorCyan500",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#00acc1",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00acc1",
+          "$type": "color"
+        },
+        "name": "colorCyan600",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#0097a7",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#0097a7",
+          "$type": "color"
+        },
+        "name": "colorCyan700",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#00838f",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00838f",
+          "$type": "color"
+        },
+        "name": "colorCyan800",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#006064",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#006064",
+          "$type": "color"
+        },
+        "name": "colorCyan900",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#84ffff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#84ffff",
+          "$type": "color"
+        },
+        "name": "colorCyanA100",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#18ffff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#18ffff",
+          "$type": "color"
+        },
+        "name": "colorCyanA200",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#00e5ff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00e5ff",
+          "$type": "color"
+        },
+        "name": "colorCyanA400",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#00b8d4",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00b8d4",
+          "$type": "color"
+        },
+        "name": "colorCyanA700",
+        "attributes": {
+          "category": "color",
+          "type": "cyan",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "cyan",
+          "A700"
+        ]
+      }
+    },
+    "amber": {
+      "50": {
+        "$value": "#fff8e1",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fff8e1",
+          "$type": "color"
+        },
+        "name": "colorAmber50",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "amber",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#ffecb3",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffecb3",
+          "$type": "color"
+        },
+        "name": "colorAmber100",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "amber",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#ffe082",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffe082",
+          "$type": "color"
+        },
+        "name": "colorAmber200",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "amber",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#ffd54f",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffd54f",
+          "$type": "color"
+        },
+        "name": "colorAmber300",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "amber",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#ffca28",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffca28",
+          "$type": "color"
+        },
+        "name": "colorAmber400",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "amber",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#ffc107",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffc107",
+          "$type": "color"
+        },
+        "name": "colorAmber500",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "amber",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#ffb300",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffb300",
+          "$type": "color"
+        },
+        "name": "colorAmber600",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "amber",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#ffa000",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffa000",
+          "$type": "color"
+        },
+        "name": "colorAmber700",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "amber",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#ff8f00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff8f00",
+          "$type": "color"
+        },
+        "name": "colorAmber800",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "amber",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#ff6f00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff6f00",
+          "$type": "color"
+        },
+        "name": "colorAmber900",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "amber",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#ffe57f",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffe57f",
+          "$type": "color"
+        },
+        "name": "colorAmberA100",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "amber",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#ffd740",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffd740",
+          "$type": "color"
+        },
+        "name": "colorAmberA200",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "amber",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#ffc400",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffc400",
+          "$type": "color"
+        },
+        "name": "colorAmberA400",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "amber",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#ffab00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffab00",
+          "$type": "color"
+        },
+        "name": "colorAmberA700",
+        "attributes": {
+          "category": "color",
+          "type": "amber",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "amber",
+          "A700"
+        ]
+      }
+    },
+    "deepOrange": {
+      "50": {
+        "$value": "#fbe9e7",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fbe9e7",
+          "$type": "color"
+        },
+        "name": "colorDeepOrange50",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#ffccbc",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffccbc",
+          "$type": "color"
+        },
+        "name": "colorDeepOrange100",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#ffab91",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ffab91",
+          "$type": "color"
+        },
+        "name": "colorDeepOrange200",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#ff8a65",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff8a65",
+          "$type": "color"
+        },
+        "name": "colorDeepOrange300",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#ff7043",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff7043",
+          "$type": "color"
+        },
+        "name": "colorDeepOrange400",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#ff5722",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff5722",
+          "$type": "color"
+        },
+        "name": "colorDeepOrange500",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#f4511e",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f4511e",
+          "$type": "color"
+        },
+        "name": "colorDeepOrange600",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#e64a19",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e64a19",
+          "$type": "color"
+        },
+        "name": "colorDeepOrange700",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#d84315",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#d84315",
+          "$type": "color"
+        },
+        "name": "colorDeepOrange800",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#bf360c",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#bf360c",
+          "$type": "color"
+        },
+        "name": "colorDeepOrange900",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#ff9e80",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff9e80",
+          "$type": "color"
+        },
+        "name": "colorDeepOrangeA100",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#ff6e40",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff6e40",
+          "$type": "color"
+        },
+        "name": "colorDeepOrangeA200",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#ff3d00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ff3d00",
+          "$type": "color"
+        },
+        "name": "colorDeepOrangeA400",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#dd2c00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#dd2c00",
+          "$type": "color"
+        },
+        "name": "colorDeepOrangeA700",
+        "attributes": {
+          "category": "color",
+          "type": "deepOrange",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "deepOrange",
+          "A700"
+        ]
+      }
+    },
+    "deepPurple": {
+      "50": {
+        "$value": "#ede7f6",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ede7f6",
+          "$type": "color"
+        },
+        "name": "colorDeepPurple50",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#d1c4e9",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#d1c4e9",
+          "$type": "color"
+        },
+        "name": "colorDeepPurple100",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#b39ddb",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#b39ddb",
+          "$type": "color"
+        },
+        "name": "colorDeepPurple200",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#9575cd",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#9575cd",
+          "$type": "color"
+        },
+        "name": "colorDeepPurple300",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#7e57c2",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#7e57c2",
+          "$type": "color"
+        },
+        "name": "colorDeepPurple400",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#673ab7",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#673ab7",
+          "$type": "color"
+        },
+        "name": "colorDeepPurple500",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#5e35b1",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#5e35b1",
+          "$type": "color"
+        },
+        "name": "colorDeepPurple600",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#512da8",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#512da8",
+          "$type": "color"
+        },
+        "name": "colorDeepPurple700",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#4527a0",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#4527a0",
+          "$type": "color"
+        },
+        "name": "colorDeepPurple800",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#311b92",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#311b92",
+          "$type": "color"
+        },
+        "name": "colorDeepPurple900",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#b388ff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#b388ff",
+          "$type": "color"
+        },
+        "name": "colorDeepPurpleA100",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#7c4dff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#7c4dff",
+          "$type": "color"
+        },
+        "name": "colorDeepPurpleA200",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#651fff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#651fff",
+          "$type": "color"
+        },
+        "name": "colorDeepPurpleA400",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#6200ea",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#6200ea",
+          "$type": "color"
+        },
+        "name": "colorDeepPurpleA700",
+        "attributes": {
+          "category": "color",
+          "type": "deepPurple",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "deepPurple",
+          "A700"
+        ]
+      }
+    },
+    "lightBlue": {
+      "50": {
+        "$value": "#e1f5fe",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e1f5fe",
+          "$type": "color"
+        },
+        "name": "colorLightBlue50",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#b3e5fc",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#b3e5fc",
+          "$type": "color"
+        },
+        "name": "colorLightBlue100",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#81d4fa",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#81d4fa",
+          "$type": "color"
+        },
+        "name": "colorLightBlue200",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#4fc3f7",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#4fc3f7",
+          "$type": "color"
+        },
+        "name": "colorLightBlue300",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#29b6f6",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#29b6f6",
+          "$type": "color"
+        },
+        "name": "colorLightBlue400",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#03a9f4",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#03a9f4",
+          "$type": "color"
+        },
+        "name": "colorLightBlue500",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#039be5",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#039be5",
+          "$type": "color"
+        },
+        "name": "colorLightBlue600",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#0288d1",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#0288d1",
+          "$type": "color"
+        },
+        "name": "colorLightBlue700",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#0277bd",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#0277bd",
+          "$type": "color"
+        },
+        "name": "colorLightBlue800",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#01579b",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#01579b",
+          "$type": "color"
+        },
+        "name": "colorLightBlue900",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#80d8ff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#80d8ff",
+          "$type": "color"
+        },
+        "name": "colorLightBlueA100",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#40c4ff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#40c4ff",
+          "$type": "color"
+        },
+        "name": "colorLightBlueA200",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#00b0ff",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#00b0ff",
+          "$type": "color"
+        },
+        "name": "colorLightBlueA400",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#0091ea",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#0091ea",
+          "$type": "color"
+        },
+        "name": "colorLightBlueA700",
+        "attributes": {
+          "category": "color",
+          "type": "lightBlue",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "lightBlue",
+          "A700"
+        ]
+      }
+    },
+    "lightGreen": {
+      "50": {
+        "$value": "#f1f8e9",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f1f8e9",
+          "$type": "color"
+        },
+        "name": "colorLightGreen50",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#dcedc8",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#dcedc8",
+          "$type": "color"
+        },
+        "name": "colorLightGreen100",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#c5e1a5",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#c5e1a5",
+          "$type": "color"
+        },
+        "name": "colorLightGreen200",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#aed581",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#aed581",
+          "$type": "color"
+        },
+        "name": "colorLightGreen300",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#9ccc65",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#9ccc65",
+          "$type": "color"
+        },
+        "name": "colorLightGreen400",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#8bc34a",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#8bc34a",
+          "$type": "color"
+        },
+        "name": "colorLightGreen500",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#7cb342",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#7cb342",
+          "$type": "color"
+        },
+        "name": "colorLightGreen600",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#689f38",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#689f38",
+          "$type": "color"
+        },
+        "name": "colorLightGreen700",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#558b2f",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#558b2f",
+          "$type": "color"
+        },
+        "name": "colorLightGreen800",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#33691e",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#33691e",
+          "$type": "color"
+        },
+        "name": "colorLightGreen900",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#ccff90",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#ccff90",
+          "$type": "color"
+        },
+        "name": "colorLightGreenA100",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#b2ff59",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#b2ff59",
+          "$type": "color"
+        },
+        "name": "colorLightGreenA200",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#76ff03",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#76ff03",
+          "$type": "color"
+        },
+        "name": "colorLightGreenA400",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#64dd17",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#64dd17",
+          "$type": "color"
+        },
+        "name": "colorLightGreenA700",
+        "attributes": {
+          "category": "color",
+          "type": "lightGreen",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "lightGreen",
+          "A700"
+        ]
+      }
+    },
+    "lime": {
+      "50": {
+        "$value": "#f9fbe7",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f9fbe7",
+          "$type": "color"
+        },
+        "name": "colorLime50",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "lime",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#f0f4c3",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f0f4c3",
+          "$type": "color"
+        },
+        "name": "colorLime100",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "lime",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#e6ee9c",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e6ee9c",
+          "$type": "color"
+        },
+        "name": "colorLime200",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "lime",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#dce775",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#dce775",
+          "$type": "color"
+        },
+        "name": "colorLime300",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "lime",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#d4e157",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#d4e157",
+          "$type": "color"
+        },
+        "name": "colorLime400",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "lime",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#cddc39",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#cddc39",
+          "$type": "color"
+        },
+        "name": "colorLime500",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "lime",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#c0ca33",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#c0ca33",
+          "$type": "color"
+        },
+        "name": "colorLime600",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "lime",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#afb42b",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#afb42b",
+          "$type": "color"
+        },
+        "name": "colorLime700",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "lime",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#9e9d24",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#9e9d24",
+          "$type": "color"
+        },
+        "name": "colorLime800",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "lime",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#827717",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#827717",
+          "$type": "color"
+        },
+        "name": "colorLime900",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "lime",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#f4ff81",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f4ff81",
+          "$type": "color"
+        },
+        "name": "colorLimeA100",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "lime",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#eeff41",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#eeff41",
+          "$type": "color"
+        },
+        "name": "colorLimeA200",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "lime",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#c6ff00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#c6ff00",
+          "$type": "color"
+        },
+        "name": "colorLimeA400",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "lime",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#aeea00",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#aeea00",
+          "$type": "color"
+        },
+        "name": "colorLimeA700",
+        "attributes": {
+          "category": "color",
+          "type": "lime",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "lime",
+          "A700"
+        ]
+      }
+    },
+    "brown": {
+      "50": {
+        "$value": "#efebe9",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#efebe9",
+          "$type": "color"
+        },
+        "name": "colorBrown50",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "brown",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#d7ccc8",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#d7ccc8",
+          "$type": "color"
+        },
+        "name": "colorBrown100",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "brown",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#bcaaa4",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#bcaaa4",
+          "$type": "color"
+        },
+        "name": "colorBrown200",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "brown",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#a1887f",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#a1887f",
+          "$type": "color"
+        },
+        "name": "colorBrown300",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "brown",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#8d6e63",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#8d6e63",
+          "$type": "color"
+        },
+        "name": "colorBrown400",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "brown",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#795548",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#795548",
+          "$type": "color"
+        },
+        "name": "colorBrown500",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "brown",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#6d4c41",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#6d4c41",
+          "$type": "color"
+        },
+        "name": "colorBrown600",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "brown",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#5d4037",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#5d4037",
+          "$type": "color"
+        },
+        "name": "colorBrown700",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "brown",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#4e342e",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#4e342e",
+          "$type": "color"
+        },
+        "name": "colorBrown800",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "brown",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#3e2723",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#3e2723",
+          "$type": "color"
+        },
+        "name": "colorBrown900",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "brown",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#d7ccc8",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#d7ccc8",
+          "$type": "color"
+        },
+        "name": "colorBrownA100",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "brown",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#bcaaa4",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#bcaaa4",
+          "$type": "color"
+        },
+        "name": "colorBrownA200",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "brown",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#8d6e63",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#8d6e63",
+          "$type": "color"
+        },
+        "name": "colorBrownA400",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "brown",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#5d4037",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#5d4037",
+          "$type": "color"
+        },
+        "name": "colorBrownA700",
+        "attributes": {
+          "category": "color",
+          "type": "brown",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "brown",
+          "A700"
+        ]
+      }
+    },
+    "grey": {
+      "50": {
+        "$value": "#fafafa",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#fafafa",
+          "$type": "color"
+        },
+        "name": "colorGrey50",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "grey",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#f5f5f5",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f5f5f5",
+          "$type": "color"
+        },
+        "name": "colorGrey100",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "grey",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#eeeeee",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#eeeeee",
+          "$type": "color"
+        },
+        "name": "colorGrey200",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "grey",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#e0e0e0",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#e0e0e0",
+          "$type": "color"
+        },
+        "name": "colorGrey300",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "grey",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#bdbdbd",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#bdbdbd",
+          "$type": "color"
+        },
+        "name": "colorGrey400",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "grey",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#9e9e9e",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#9e9e9e",
+          "$type": "color"
+        },
+        "name": "colorGrey500",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "grey",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#757575",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#757575",
+          "$type": "color"
+        },
+        "name": "colorGrey600",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "grey",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#616161",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#616161",
+          "$type": "color"
+        },
+        "name": "colorGrey700",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "grey",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#424242",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#424242",
+          "$type": "color"
+        },
+        "name": "colorGrey800",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "grey",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#212121",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#212121",
+          "$type": "color"
+        },
+        "name": "colorGrey900",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "grey",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#f5f5f5",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#f5f5f5",
+          "$type": "color"
+        },
+        "name": "colorGreyA100",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "grey",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#eeeeee",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#eeeeee",
+          "$type": "color"
+        },
+        "name": "colorGreyA200",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "grey",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#bdbdbd",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#bdbdbd",
+          "$type": "color"
+        },
+        "name": "colorGreyA400",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "grey",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#616161",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#616161",
+          "$type": "color"
+        },
+        "name": "colorGreyA700",
+        "attributes": {
+          "category": "color",
+          "type": "grey",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "grey",
+          "A700"
+        ]
+      }
+    },
+    "blueGrey": {
+      "50": {
+        "$value": "#eceff1",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#eceff1",
+          "$type": "color"
+        },
+        "name": "colorBlueGrey50",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "50"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "50"
+        ]
+      },
+      "100": {
+        "$value": "#cfd8dc",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#cfd8dc",
+          "$type": "color"
+        },
+        "name": "colorBlueGrey100",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "100"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "100"
+        ]
+      },
+      "200": {
+        "$value": "#b0bec5",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#b0bec5",
+          "$type": "color"
+        },
+        "name": "colorBlueGrey200",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "200"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "200"
+        ]
+      },
+      "300": {
+        "$value": "#90a4ae",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#90a4ae",
+          "$type": "color"
+        },
+        "name": "colorBlueGrey300",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "300"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "300"
+        ]
+      },
+      "400": {
+        "$value": "#78909c",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#78909c",
+          "$type": "color"
+        },
+        "name": "colorBlueGrey400",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "400"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "400"
+        ]
+      },
+      "500": {
+        "$value": "#607d8b",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#607d8b",
+          "$type": "color"
+        },
+        "name": "colorBlueGrey500",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "500"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "500"
+        ]
+      },
+      "600": {
+        "$value": "#546e7a",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#546e7a",
+          "$type": "color"
+        },
+        "name": "colorBlueGrey600",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "600"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "600"
+        ]
+      },
+      "700": {
+        "$value": "#455a64",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#455a64",
+          "$type": "color"
+        },
+        "name": "colorBlueGrey700",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "700"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "700"
+        ]
+      },
+      "800": {
+        "$value": "#37474f",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#37474f",
+          "$type": "color"
+        },
+        "name": "colorBlueGrey800",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "800"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "800"
+        ]
+      },
+      "900": {
+        "$value": "#263238",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#263238",
+          "$type": "color"
+        },
+        "name": "colorBlueGrey900",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "900"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "900"
+        ]
+      },
+      "A100": {
+        "$value": "#cfd8dc",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#cfd8dc",
+          "$type": "color"
+        },
+        "name": "colorBlueGreyA100",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "A100"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "A100"
+        ]
+      },
+      "A200": {
+        "$value": "#b0bec5",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#b0bec5",
+          "$type": "color"
+        },
+        "name": "colorBlueGreyA200",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "A200"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "A200"
+        ]
+      },
+      "A400": {
+        "$value": "#78909c",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#78909c",
+          "$type": "color"
+        },
+        "name": "colorBlueGreyA400",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "A400"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "A400"
+        ]
+      },
+      "A700": {
+        "$value": "#455a64",
+        "$type": "color",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": "#455a64",
+          "$type": "color"
+        },
+        "name": "colorBlueGreyA700",
+        "attributes": {
+          "category": "color",
+          "type": "blueGrey",
+          "item": "A700"
+        },
+        "path": [
+          "color",
+          "blueGrey",
+          "A700"
+        ]
+      }
+    }
+  },
+  "dimension": {
+    "spacing": {
+      "$value": "8px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "8px",
+        "$type": "dimension"
+      },
+      "name": "dimensionSpacing",
+      "attributes": {
+        "category": "dimension",
+        "type": "spacing"
+      },
+      "path": [
+        "dimension",
+        "spacing"
+      ]
+    },
+    "breakpoints": {
+      "xs": {
+        "$value": "0",
+        "$type": "dimension",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": 0,
+          "$type": "dimension"
+        },
+        "name": "dimensionBreakpointsXs",
+        "attributes": {
+          "category": "dimension",
+          "type": "breakpoints",
+          "item": "xs"
+        },
+        "path": [
+          "dimension",
+          "breakpoints",
+          "xs"
+        ]
+      },
+      "sm": {
+        "$value": "600px",
+        "$type": "dimension",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": 600,
+          "$type": "dimension"
+        },
+        "name": "dimensionBreakpointsSm",
+        "attributes": {
+          "category": "dimension",
+          "type": "breakpoints",
+          "item": "sm"
+        },
+        "path": [
+          "dimension",
+          "breakpoints",
+          "sm"
+        ]
+      },
+      "md": {
+        "$value": "900px",
+        "$type": "dimension",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": 900,
+          "$type": "dimension"
+        },
+        "name": "dimensionBreakpointsMd",
+        "attributes": {
+          "category": "dimension",
+          "type": "breakpoints",
+          "item": "md"
+        },
+        "path": [
+          "dimension",
+          "breakpoints",
+          "md"
+        ]
+      },
+      "lg": {
+        "$value": "1200px",
+        "$type": "dimension",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": 1200,
+          "$type": "dimension"
+        },
+        "name": "dimensionBreakpointsLg",
+        "attributes": {
+          "category": "dimension",
+          "type": "breakpoints",
+          "item": "lg"
+        },
+        "path": [
+          "dimension",
+          "breakpoints",
+          "lg"
+        ]
+      },
+      "xl": {
+        "$value": "1536px",
+        "$type": "dimension",
+        "filePath": "mui-tokens/w3c-tokens.json",
+        "isSource": true,
+        "original": {
+          "$value": 1536,
+          "$type": "dimension"
+        },
+        "name": "dimensionBreakpointsXl",
+        "attributes": {
+          "category": "dimension",
+          "type": "breakpoints",
+          "item": "xl"
+        },
+        "path": [
+          "dimension",
+          "breakpoints",
+          "xl"
+        ]
+      }
+    }
+  },
+  "fontFamily": {
+    "global": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyGlobal",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "global"
+      },
+      "path": [
+        "fontFamily",
+        "global"
+      ]
+    },
+    "h1": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyH1",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "h1"
+      },
+      "path": [
+        "fontFamily",
+        "h1"
+      ]
+    },
+    "h2": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyH2",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "h2"
+      },
+      "path": [
+        "fontFamily",
+        "h2"
+      ]
+    },
+    "h3": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyH3",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "h3"
+      },
+      "path": [
+        "fontFamily",
+        "h3"
+      ]
+    },
+    "h4": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyH4",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "h4"
+      },
+      "path": [
+        "fontFamily",
+        "h4"
+      ]
+    },
+    "h5": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyH5",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "h5"
+      },
+      "path": [
+        "fontFamily",
+        "h5"
+      ]
+    },
+    "h6": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyH6",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "h6"
+      },
+      "path": [
+        "fontFamily",
+        "h6"
+      ]
+    },
+    "subtitle1": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilySubtitle1",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "subtitle1"
+      },
+      "path": [
+        "fontFamily",
+        "subtitle1"
+      ]
+    },
+    "subtitle2": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilySubtitle2",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "subtitle2"
+      },
+      "path": [
+        "fontFamily",
+        "subtitle2"
+      ]
+    },
+    "body1": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyBody1",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "body1"
+      },
+      "path": [
+        "fontFamily",
+        "body1"
+      ]
+    },
+    "body2": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyBody2",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "body2"
+      },
+      "path": [
+        "fontFamily",
+        "body2"
+      ]
+    },
+    "button": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyButton",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "button"
+      },
+      "path": [
+        "fontFamily",
+        "button"
+      ]
+    },
+    "caption": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyCaption",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "caption"
+      },
+      "path": [
+        "fontFamily",
+        "caption"
+      ]
+    },
+    "overline": {
+      "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyOverline",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "overline"
+      },
+      "path": [
+        "fontFamily",
+        "overline"
+      ]
+    },
+    "inherit": {
+      "$value": "inherit",
+      "$type": "fontFamily",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "inherit",
+        "$type": "fontFamily"
+      },
+      "name": "fontFamilyInherit",
+      "attributes": {
+        "category": "fontFamily",
+        "type": "inherit"
+      },
+      "path": [
+        "fontFamily",
+        "inherit"
+      ]
+    }
+  },
+  "fontSize": {
+    "global": {
+      "$value": "14px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 14,
+        "$type": "dimension"
+      },
+      "name": "fontSizeGlobal",
+      "attributes": {
+        "category": "fontSize",
+        "type": "global"
+      },
+      "path": [
+        "fontSize",
+        "global"
+      ]
+    },
+    "h1": {
+      "$value": "6rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "6rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeH1",
+      "attributes": {
+        "category": "fontSize",
+        "type": "h1"
+      },
+      "path": [
+        "fontSize",
+        "h1"
+      ]
+    },
+    "h2": {
+      "$value": "3.75rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "3.75rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeH2",
+      "attributes": {
+        "category": "fontSize",
+        "type": "h2"
+      },
+      "path": [
+        "fontSize",
+        "h2"
+      ]
+    },
+    "h3": {
+      "$value": "3rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "3rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeH3",
+      "attributes": {
+        "category": "fontSize",
+        "type": "h3"
+      },
+      "path": [
+        "fontSize",
+        "h3"
+      ]
+    },
+    "h4": {
+      "$value": "2.125rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "2.125rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeH4",
+      "attributes": {
+        "category": "fontSize",
+        "type": "h4"
+      },
+      "path": [
+        "fontSize",
+        "h4"
+      ]
+    },
+    "h5": {
+      "$value": "1.5rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "1.5rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeH5",
+      "attributes": {
+        "category": "fontSize",
+        "type": "h5"
+      },
+      "path": [
+        "fontSize",
+        "h5"
+      ]
+    },
+    "h6": {
+      "$value": "1.25rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "1.25rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeH6",
+      "attributes": {
+        "category": "fontSize",
+        "type": "h6"
+      },
+      "path": [
+        "fontSize",
+        "h6"
+      ]
+    },
+    "subtitle1": {
+      "$value": "1rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "1rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeSubtitle1",
+      "attributes": {
+        "category": "fontSize",
+        "type": "subtitle1"
+      },
+      "path": [
+        "fontSize",
+        "subtitle1"
+      ]
+    },
+    "subtitle2": {
+      "$value": "0.875rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.875rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeSubtitle2",
+      "attributes": {
+        "category": "fontSize",
+        "type": "subtitle2"
+      },
+      "path": [
+        "fontSize",
+        "subtitle2"
+      ]
+    },
+    "body1": {
+      "$value": "1rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "1rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeBody1",
+      "attributes": {
+        "category": "fontSize",
+        "type": "body1"
+      },
+      "path": [
+        "fontSize",
+        "body1"
+      ]
+    },
+    "body2": {
+      "$value": "0.875rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.875rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeBody2",
+      "attributes": {
+        "category": "fontSize",
+        "type": "body2"
+      },
+      "path": [
+        "fontSize",
+        "body2"
+      ]
+    },
+    "button": {
+      "$value": "0.875rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.875rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeButton",
+      "attributes": {
+        "category": "fontSize",
+        "type": "button"
+      },
+      "path": [
+        "fontSize",
+        "button"
+      ]
+    },
+    "caption": {
+      "$value": "0.75rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.75rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeCaption",
+      "attributes": {
+        "category": "fontSize",
+        "type": "caption"
+      },
+      "path": [
+        "fontSize",
+        "caption"
+      ]
+    },
+    "overline": {
+      "$value": "0.75rem",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.75rem",
+        "$type": "dimension"
+      },
+      "name": "fontSizeOverline",
+      "attributes": {
+        "category": "fontSize",
+        "type": "overline"
+      },
+      "path": [
+        "fontSize",
+        "overline"
+      ]
+    },
+    "inherit": {
+      "$value": "inherit",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "inherit",
+        "$type": "dimension"
+      },
+      "name": "fontSizeInherit",
+      "attributes": {
+        "category": "fontSize",
+        "type": "inherit"
+      },
+      "path": [
+        "fontSize",
+        "inherit"
+      ]
+    }
+  },
+  "fontWeight": {
+    "fontWeightLight": {
+      "$value": "300",
+      "$type": "fontWeight",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 300,
+        "$type": "fontWeight"
+      },
+      "name": "fontWeightFontWeightLight",
+      "attributes": {
+        "category": "fontWeight",
+        "type": "fontWeightLight"
+      },
+      "path": [
+        "fontWeight",
+        "fontWeightLight"
+      ]
+    },
+    "fontWeightRegular": {
+      "$value": "400",
+      "$type": "fontWeight",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 400,
+        "$type": "fontWeight"
+      },
+      "name": "fontWeightFontWeightRegular",
+      "attributes": {
+        "category": "fontWeight",
+        "type": "fontWeightRegular"
+      },
+      "path": [
+        "fontWeight",
+        "fontWeightRegular"
+      ]
+    },
+    "fontWeightMedium": {
+      "$value": "500",
+      "$type": "fontWeight",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 500,
+        "$type": "fontWeight"
+      },
+      "name": "fontWeightFontWeightMedium",
+      "attributes": {
+        "category": "fontWeight",
+        "type": "fontWeightMedium"
+      },
+      "path": [
+        "fontWeight",
+        "fontWeightMedium"
+      ]
+    },
+    "fontWeightBold": {
+      "$value": "700",
+      "$type": "fontWeight",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 700,
+        "$type": "fontWeight"
+      },
+      "name": "fontWeightFontWeightBold",
+      "attributes": {
+        "category": "fontWeight",
+        "type": "fontWeightBold"
+      },
+      "path": [
+        "fontWeight",
+        "fontWeightBold"
+      ]
+    }
+  },
+  "letterSpacing": {
+    "h1": {
+      "$value": "-0.0156em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "-0.01562em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingH1",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "h1"
+      },
+      "path": [
+        "letterSpacing",
+        "h1"
+      ]
+    },
+    "h2": {
+      "$value": "-0.0083em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "-0.00833em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingH2",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "h2"
+      },
+      "path": [
+        "letterSpacing",
+        "h2"
+      ]
+    },
+    "h3": {
+      "$value": "0em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingH3",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "h3"
+      },
+      "path": [
+        "letterSpacing",
+        "h3"
+      ]
+    },
+    "h4": {
+      "$value": "0.0073em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.00735em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingH4",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "h4"
+      },
+      "path": [
+        "letterSpacing",
+        "h4"
+      ]
+    },
+    "h5": {
+      "$value": "0em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingH5",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "h5"
+      },
+      "path": [
+        "letterSpacing",
+        "h5"
+      ]
+    },
+    "h6": {
+      "$value": "0.0075em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.0075em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingH6",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "h6"
+      },
+      "path": [
+        "letterSpacing",
+        "h6"
+      ]
+    },
+    "subtitle1": {
+      "$value": "0.0094em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.00938em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingSubtitle1",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "subtitle1"
+      },
+      "path": [
+        "letterSpacing",
+        "subtitle1"
+      ]
+    },
+    "subtitle2": {
+      "$value": "0.0071em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.00714em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingSubtitle2",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "subtitle2"
+      },
+      "path": [
+        "letterSpacing",
+        "subtitle2"
+      ]
+    },
+    "body1": {
+      "$value": "0.0094em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.00938em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingBody1",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "body1"
+      },
+      "path": [
+        "letterSpacing",
+        "body1"
+      ]
+    },
+    "body2": {
+      "$value": "0.0107em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.01071em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingBody2",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "body2"
+      },
+      "path": [
+        "letterSpacing",
+        "body2"
+      ]
+    },
+    "button": {
+      "$value": "0.0286em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.02857em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingButton",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "button"
+      },
+      "path": [
+        "letterSpacing",
+        "button"
+      ]
+    },
+    "caption": {
+      "$value": "0.0333em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.03333em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingCaption",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "caption"
+      },
+      "path": [
+        "letterSpacing",
+        "caption"
+      ]
+    },
+    "overline": {
+      "$value": "0.0833em",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "0.08333em",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingOverline",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "overline"
+      },
+      "path": [
+        "letterSpacing",
+        "overline"
+      ]
+    },
+    "inherit": {
+      "$value": "inherit",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "inherit",
+        "$type": "dimension"
+      },
+      "name": "letterSpacingInherit",
+      "attributes": {
+        "category": "letterSpacing",
+        "type": "inherit"
+      },
+      "path": [
+        "letterSpacing",
+        "inherit"
+      ]
+    }
+  },
+  "lineHeight": {
+    "h1": {
+      "$value": "1.167px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.167,
+        "$type": "dimension"
+      },
+      "name": "lineHeightH1",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "h1"
+      },
+      "path": [
+        "lineHeight",
+        "h1"
+      ]
+    },
+    "h2": {
+      "$value": "1.2px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.2,
+        "$type": "dimension"
+      },
+      "name": "lineHeightH2",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "h2"
+      },
+      "path": [
+        "lineHeight",
+        "h2"
+      ]
+    },
+    "h3": {
+      "$value": "1.167px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.167,
+        "$type": "dimension"
+      },
+      "name": "lineHeightH3",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "h3"
+      },
+      "path": [
+        "lineHeight",
+        "h3"
+      ]
+    },
+    "h4": {
+      "$value": "1.235px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.235,
+        "$type": "dimension"
+      },
+      "name": "lineHeightH4",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "h4"
+      },
+      "path": [
+        "lineHeight",
+        "h4"
+      ]
+    },
+    "h5": {
+      "$value": "1.334px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.334,
+        "$type": "dimension"
+      },
+      "name": "lineHeightH5",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "h5"
+      },
+      "path": [
+        "lineHeight",
+        "h5"
+      ]
+    },
+    "h6": {
+      "$value": "1.6px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.6,
+        "$type": "dimension"
+      },
+      "name": "lineHeightH6",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "h6"
+      },
+      "path": [
+        "lineHeight",
+        "h6"
+      ]
+    },
+    "subtitle1": {
+      "$value": "1.75px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.75,
+        "$type": "dimension"
+      },
+      "name": "lineHeightSubtitle1",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "subtitle1"
+      },
+      "path": [
+        "lineHeight",
+        "subtitle1"
+      ]
+    },
+    "subtitle2": {
+      "$value": "1.57px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.57,
+        "$type": "dimension"
+      },
+      "name": "lineHeightSubtitle2",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "subtitle2"
+      },
+      "path": [
+        "lineHeight",
+        "subtitle2"
+      ]
+    },
+    "body1": {
+      "$value": "1.5px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.5,
+        "$type": "dimension"
+      },
+      "name": "lineHeightBody1",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "body1"
+      },
+      "path": [
+        "lineHeight",
+        "body1"
+      ]
+    },
+    "body2": {
+      "$value": "1.43px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.43,
+        "$type": "dimension"
+      },
+      "name": "lineHeightBody2",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "body2"
+      },
+      "path": [
+        "lineHeight",
+        "body2"
+      ]
+    },
+    "button": {
+      "$value": "1.75px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.75,
+        "$type": "dimension"
+      },
+      "name": "lineHeightButton",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "button"
+      },
+      "path": [
+        "lineHeight",
+        "button"
+      ]
+    },
+    "caption": {
+      "$value": "1.66px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 1.66,
+        "$type": "dimension"
+      },
+      "name": "lineHeightCaption",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "caption"
+      },
+      "path": [
+        "lineHeight",
+        "caption"
+      ]
+    },
+    "overline": {
+      "$value": "2.66px",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": 2.66,
+        "$type": "dimension"
+      },
+      "name": "lineHeightOverline",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "overline"
+      },
+      "path": [
+        "lineHeight",
+        "overline"
+      ]
+    },
+    "inherit": {
+      "$value": "inherit",
+      "$type": "dimension",
+      "filePath": "mui-tokens/w3c-tokens.json",
+      "isSource": true,
+      "original": {
+        "$value": "inherit",
+        "$type": "dimension"
+      },
+      "name": "lineHeightInherit",
+      "attributes": {
+        "category": "lineHeight",
+        "type": "inherit"
+      },
+      "path": [
+        "lineHeight",
+        "inherit"
+      ]
+    }
+  }
+}
