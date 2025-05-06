@@ -6,6 +6,16 @@
     }
   },
   "color": {
+    "base": {
+      "white": {
+        "value": "#fff",
+        "type": "color"
+      },
+      "black": {
+        "value": "#000",
+        "type": "color"
+      }
+    },
     "blue": {
       "50": {
         "value": "#e3f2fd",
