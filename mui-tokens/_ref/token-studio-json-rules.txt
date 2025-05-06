@@ -1,0 +1,15 @@
+Input:
+Read MUI tokens from w3c-tokens.json.
+Output:
+Write a new tokens-studio.json file with the following structure:
+Top-level key is "MUI".
+Categories are direct children of "MUI", camelCase, never pluralized or wrapped.
+Each token is a direct child of its category, with a semantic name.
+Each token object has at least $type and $value, and includes $description if present.
+No extra wrapping, no forced/empty categories, no arrays unless required by the spec.
+If a MUI token does not exist in the output structure, add it as a new token, following the same structure rules.
+Rules:
+No wrappers, no pluralization, no extra nesting.
+$description is included if present.
+Set name is always "MUI".
+If in doubt, compare output to the structure reference file.

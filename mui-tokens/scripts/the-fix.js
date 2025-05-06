@@ -55,48 +55,67 @@ const outputPath = path.join(__dirname, '../../build/tokens-studio.json');
 const core = JSON.parse(fs.readFileSync(corePath, 'utf-8'));
 const mui = JSON.parse(fs.readFileSync(muiPath, 'utf-8'));
 
-// Helper: Recursively search for a value in the MUI tokens by path
-function findMuiValue(pathArr, muiNode) {
-  let node = muiNode;
-  for (const key of pathArr) {
-    if (node && typeof node === 'object' && key in node) {
-      node = node[key];
-    } else {
-      return undefined;
+// Helper: Recursively flatten MUI tokens to category → tokenName → tokenObject
+function flattenTokens(obj, parentKeys = []) {
+  let result = {};
+  for (const [key, value] of Object.entries(obj)) {
+    if (value && typeof value === 'object' && ('$value' in value || '$type' in value)) {
+      // This is a token object
+      const [category, ...tokenPath] = parentKeys.concat(key);
+      if (!result[category]) result[category] = {};
+      // Build token name from tokenPath (joined by dots if nested)
+      const tokenName = tokenPath.join('.') || key;
+      // Only include $type, $value, $description if present
+      const tokenObj = {};
+      if ('$type' in value) tokenObj['$type'] = value['$type'];
+      if ('$value' in value) tokenObj['$value'] = value['$value'];
+      if ('$description' in value) tokenObj['$description'] = value['$description'];
+      result[category][tokenName] = tokenObj;
+    } else if (value && typeof value === 'object') {
+      // Recurse
+      const nested = flattenTokens(value, parentKeys.concat(key));
+      for (const [cat, tokens] of Object.entries(nested)) {
+        if (!result[cat]) result[cat] = {};
+        Object.assign(result[cat], tokens);
+      }
     }
   }
-  // If we find a $value, return it
-  if (node && typeof node === 'object' && '$value' in node) {
-    return node['$value'];
-  }
-  return undefined;
+  return result;
 }
 
-// Recursively walk the core structure and replace $value with MUI value if found
-function mergeTokens(coreNode, muiNode, pathArr = []) {
-  if (coreNode && typeof coreNode === 'object' && '$value' in coreNode) {
-    // Try to find a matching value in muiNode by path
-    const muiValue = findMuiValue(pathArr, mui);
-    return {
-      ...coreNode,
-      $value: muiValue !== undefined ? muiValue : coreNode.$value
-    };
+// Flatten and build the output structure
+const flat = flattenTokens(mui);
+
+// Remove empty categories
+for (const cat of Object.keys(flat)) {
+  if (Object.keys(flat[cat]).length === 0) {
+    delete flat[cat];
   }
-  // Recurse for objects
-  if (coreNode && typeof coreNode === 'object') {
-    const result = Array.isArray(coreNode) ? [] : {};
-    for (const key in coreNode) {
-      result[key] = mergeTokens(coreNode[key], muiNode ? muiNode[key] : undefined, [...pathArr, key]);
+}
+
+// Un-flatten: category → tokenName → tokenObject (no dot notation in token names if not needed)
+function unflattenCategory(tokens) {
+  const result = {};
+  for (const [tokenName, tokenObj] of Object.entries(tokens)) {
+    // If tokenName contains dots, nest accordingly
+    const parts = tokenName.split('.');
+    let node = result;
+    for (let i = 0; i < parts.length - 1; i++) {
+      if (!node[parts[i]]) node[parts[i]] = {};
+      node = node[parts[i]];
     }
-    return result;
+    node[parts[parts.length - 1]] = tokenObj;
   }
-  // Primitive value, just return
-  return coreNode;
+  return result;
 }
 
-// Merge and write output
-const output = mergeTokens(core, mui);
-fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
+const output = {};
+for (const [cat, tokens] of Object.entries(flat)) {
+  output[cat] = unflattenCategory(tokens);
+}
+
+// Write output with "MUI" as the set
+fs.writeFileSync(outputPath, JSON.stringify({ MUI: output }, null, 2));
 console.log(`✅ tokens-studio.json written to ${outputPath}`);
 
 // Helper to capitalize type if not in mapping
