@@ -46,46 +46,58 @@ const CANONICAL_CATEGORIES = [
   'letterSpacing'
 ];
 
-// Read input
-const inputPath = path.join(__dirname, '../w3c-tokens.json');
+// File paths
+const corePath = path.join(__dirname, '../../TS-TOKEN-EXAMPLE-DO-NOT-USE/core.json');
+const muiPath = path.join(__dirname, '../w3c-tokens.json');
 const outputPath = path.join(__dirname, '../../build/tokens-studio.json');
-const input = JSON.parse(fs.readFileSync(inputPath, 'utf-8'));
 
-const output = {};
+// Read files
+const core = JSON.parse(fs.readFileSync(corePath, 'utf-8'));
+const mui = JSON.parse(fs.readFileSync(muiPath, 'utf-8'));
 
-// Map and copy tokens to canonical categories
-for (const [key, value] of Object.entries(input)) {
-  const canonicalKey = CANONICAL_MAP[key] || key;
-
-  // Recursively map $type fields and capitalize them
-  function mapTypes(obj, typeHint) {
-    if (typeof obj !== 'object' || obj === null) return obj;
-    if ('$value' in obj && '$type' in obj) {
-      // Capitalize the type
-      const canonicalType = CANONICAL_TYPES[obj['$type']] || CANONICAL_TYPES[typeHint] || capitalize(obj['$type']);
-      return { $value: obj['$value'], $type: canonicalType };
+// Helper: Recursively search for a value in the MUI tokens by path
+function findMuiValue(pathArr, muiNode) {
+  let node = muiNode;
+  for (const key of pathArr) {
+    if (node && typeof node === 'object' && key in node) {
+      node = node[key];
+    } else {
+      return undefined;
     }
-    const result = Array.isArray(obj) ? [] : {};
-    for (const [k, v] of Object.entries(obj)) {
-      result[k] = mapTypes(v, canonicalKey);
+  }
+  // If we find a $value, return it
+  if (node && typeof node === 'object' && '$value' in node) {
+    return node['$value'];
+  }
+  return undefined;
+}
+
+// Recursively walk the core structure and replace $value with MUI value if found
+function mergeTokens(coreNode, muiNode, pathArr = []) {
+  if (coreNode && typeof coreNode === 'object' && '$value' in coreNode) {
+    // Try to find a matching value in muiNode by path
+    const muiValue = findMuiValue(pathArr, mui);
+    return {
+      ...coreNode,
+      $value: muiValue !== undefined ? muiValue : coreNode.$value
+    };
+  }
+  // Recurse for objects
+  if (coreNode && typeof coreNode === 'object') {
+    const result = Array.isArray(coreNode) ? [] : {};
+    for (const key in coreNode) {
+      result[key] = mergeTokens(coreNode[key], muiNode ? muiNode[key] : undefined, [...pathArr, key]);
     }
     return result;
   }
-
-  // Only output canonical categories
-  if (CANONICAL_CATEGORIES.includes(canonicalKey)) {
-    output[canonicalKey] = mapTypes(value, canonicalKey);
-  }
+  // Primitive value, just return
+  return coreNode;
 }
 
-// Optionally, fill in any missing canonical categories as empty objects
-for (const cat of CANONICAL_CATEGORIES) {
-  if (!output[cat]) output[cat] = {};
-}
-
-// Write output with "MUI" as the set
-fs.writeFileSync(outputPath, JSON.stringify({ MUI: output }, null, 2));
-console.log(`✅ Canonical tokens written to ${outputPath}`);
+// Merge and write output
+const output = mergeTokens(core, mui);
+fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
+console.log(`✅ tokens-studio.json written to ${outputPath}`);
 
 // Helper to capitalize type if not in mapping
 function capitalize(str) {
