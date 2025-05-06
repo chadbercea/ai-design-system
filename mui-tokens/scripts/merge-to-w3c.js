@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const TOKENS_DIR = path.join(__dirname, '..');
-const OUTPUT_FILE = path.join(TOKENS_DIR, '../build/tokens-studio.json');
+const MUI_SET_FILE = path.join(TOKENS_DIR, '../build/mui-set.json');
 
 // Map of input files to their expected token types
 const FILE_TO_TYPE = {
@@ -38,5 +38,5 @@ for (const [file, type] of Object.entries(FILE_TO_TYPE)) {
 }
 
 // Write the merged tokens to the output file
-fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
-console.log(`Tokens Studio tokens written to ${OUTPUT_FILE} (MUI set)`);
+fs.writeFileSync(MUI_SET_FILE, JSON.stringify(output, null, 2));
+console.log(`Tokens Studio tokens written to ${MUI_SET_FILE} (MUI set)`);
