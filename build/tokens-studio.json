@@ -1,10 +1,4 @@
 {
-  "borderRadius": {
-    "borderRadius": {
-      "$value": 4,
-      "$type": "dimension"
-    }
-  },
   "colors": {
     "blue": {
       "50": {
@@ -1109,33 +1103,9 @@
       }
     }
   },
-  "dimension": {
-    "spacing": {
-      "$value": "8px",
-      "$type": "dimension"
-    },
-    "breakpoints": {
-      "xs": {
-        "$value": 0,
-        "$type": "dimension"
-      },
-      "sm": {
-        "$value": 600,
-        "$type": "dimension"
-      },
-      "md": {
-        "$value": 900,
-        "$type": "dimension"
-      },
-      "lg": {
-        "$value": 1200,
-        "$type": "dimension"
-      },
-      "xl": {
-        "$value": 1536,
-        "$type": "dimension"
-      }
-    }
+  "borderRadius": {
+    "$value": 4,
+    "$type": "dimension"
   },
   "fontFamilies": {
     "global": {
@@ -1279,64 +1249,6 @@
       "$type": "fontWeights"
     }
   },
-  "letterSpacing": {
-    "h1": {
-      "$value": "-0.01562em",
-      "$type": "dimension"
-    },
-    "h2": {
-      "$value": "-0.00833em",
-      "$type": "dimension"
-    },
-    "h3": {
-      "$value": "0em",
-      "$type": "dimension"
-    },
-    "h4": {
-      "$value": "0.00735em",
-      "$type": "dimension"
-    },
-    "h5": {
-      "$value": "0em",
-      "$type": "dimension"
-    },
-    "h6": {
-      "$value": "0.0075em",
-      "$type": "dimension"
-    },
-    "subtitle1": {
-      "$value": "0.00938em",
-      "$type": "dimension"
-    },
-    "subtitle2": {
-      "$value": "0.00714em",
-      "$type": "dimension"
-    },
-    "body1": {
-      "$value": "0.00938em",
-      "$type": "dimension"
-    },
-    "body2": {
-      "$value": "0.01071em",
-      "$type": "dimension"
-    },
-    "button": {
-      "$value": "0.02857em",
-      "$type": "dimension"
-    },
-    "caption": {
-      "$value": "0.03333em",
-      "$type": "dimension"
-    },
-    "overline": {
-      "$value": "0.08333em",
-      "$type": "dimension"
-    },
-    "inherit": {
-      "$value": "inherit",
-      "$type": "dimension"
-    }
-  },
   "lineHeights": {
     "h1": {
       "$value": 1.167,
@@ -1395,7 +1307,62 @@
       "$type": "dimension"
     }
   },
-  "opacity": {},
-  "spacing": {},
-  "paragraphSpacing": {}
+  "letterSpacing": {
+    "h1": {
+      "$value": "-0.01562em",
+      "$type": "dimension"
+    },
+    "h2": {
+      "$value": "-0.00833em",
+      "$type": "dimension"
+    },
+    "h3": {
+      "$value": "0em",
+      "$type": "dimension"
+    },
+    "h4": {
+      "$value": "0.00735em",
+      "$type": "dimension"
+    },
+    "h5": {
+      "$value": "0em",
+      "$type": "dimension"
+    },
+    "h6": {
+      "$value": "0.0075em",
+      "$type": "dimension"
+    },
+    "subtitle1": {
+      "$value": "0.00938em",
+      "$type": "dimension"
+    },
+    "subtitle2": {
+      "$value": "0.00714em",
+      "$type": "dimension"
+    },
+    "body1": {
+      "$value": "0.00938em",
+      "$type": "dimension"
+    },
+    "body2": {
+      "$value": "0.01071em",
+      "$type": "dimension"
+    },
+    "button": {
+      "$value": "0.02857em",
+      "$type": "dimension"
+    },
+    "caption": {
+      "$value": "0.03333em",
+      "$type": "dimension"
+    },
+    "overline": {
+      "$value": "0.08333em",
+      "$type": "dimension"
+    },
+    "inherit": {
+      "$value": "inherit",
+      "$type": "dimension"
+    }
+  }
 }

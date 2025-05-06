@@ -2,51 +2,72 @@ const fs = require('fs');
 const path = require('path');
 
 const TOKENS_DIR = path.join(__dirname, '..');
-const OUTPUT_FILE = path.join(TOKENS_DIR, 'w3c-tokens.json');
+const OUTPUT_FILE = path.join(TOKENS_DIR, '../build/tokens-studio.json');
 
-// Map file name patterns to W3C categories/types
-const CATEGORY_MAP = {
-  'colors': { w3c: 'color', type: 'color' },
-  'border-radius': { w3c: 'radius', type: 'dimension' },
-  'dimension': { w3c: 'dimension', type: 'dimension' },
-  'font-family': { w3c: 'fontFamily', type: 'fontFamily' },
-  'font-weight': { w3c: 'fontWeight', type: 'fontWeight' },
-  'font-size': { w3c: 'fontSize', type: 'dimension' },
-  'letter-spacing': { w3c: 'letterSpacing', type: 'dimension' },
-  'line-height': { w3c: 'lineHeight', type: 'dimension' },
-  'opacity': { w3c: 'opacity', type: 'opacity' },
-  'paragraph-spacing': { w3c: 'paragraphSpacing', type: 'dimension' },
-  'spacing': { w3c: 'spacing', type: 'dimension' }
+// Canonical, pluralized Tokens Studio categories
+const CANONICAL_CATEGORIES = {
+  colors:        { type: 'color' },
+  borderRadius:  { type: 'dimension' },
+  fontFamilies:  { type: 'fontFamilies' },
+  fontSizes:     { type: 'dimension' },
+  fontWeights:   { type: 'fontWeights' },
+  lineHeights:   { type: 'dimension' },
+  letterSpacing: { type: 'dimension' },
+  opacity:       { type: 'opacity' },
+  spacing:       { type: 'dimension' },
+  paragraphSpacing: { type: 'dimension' }
 };
 
-const files = fs.readdirSync(TOKENS_DIR).filter(
-  f => f.startsWith('mui-token-') && f.endsWith('.json')
-);
+const FILE_TO_CATEGORY = {
+  'mui-token-colors.json':         'colors',
+  'mui-token-border-radius.json':  'borderRadius',
+  'mui-token-font-family.json':    'fontFamilies',
+  'mui-token-font-size.json':      'fontSizes',
+  'mui-token-font-weight.json':    'fontWeights',
+  'mui-token-line-height.json':    'lineHeights',
+  'mui-token-letter-spacing.json': 'letterSpacing',
+  'mui-token-opacity.json':        'opacity',
+  'mui-token-spacing.json':        'spacing',
+  'mui-token-paragraph-spacing.json': 'paragraphSpacing'
+};
 
-const w3cTokens = {};
+const output = {};
 
-for (const file of files) {
-  const match = file.match(/^mui-token-(.+)\.json$/);
-  if (!match) continue;
-  const catKey = match[1];
-  const map = CATEGORY_MAP[catKey];
-  if (!map) continue;
+for (const [file, category] of Object.entries(FILE_TO_CATEGORY)) {
+  const filePath = path.join(TOKENS_DIR, file);
+  if (!fs.existsSync(filePath)) continue;
+  const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  const catInfo = CANONICAL_CATEGORIES[category];
+  if (!catInfo) continue;
 
-  const data = JSON.parse(fs.readFileSync(path.join(TOKENS_DIR, file), 'utf-8'));
-  if (!w3cTokens[map.w3c]) w3cTokens[map.w3c] = {};
+  // Flatten if the file is { "borderRadius": 4 }
+  if (
+    Object.keys(data).length === 1 &&
+    Object.keys(data)[0] === category &&
+    typeof data[category] !== 'object'
+  ) {
+    output[category] = { $value: data[category], $type: catInfo.type };
+    continue;
+  }
 
+  // Otherwise, build the category object
+  const catObj = {};
   for (const [token, value] of Object.entries(data)) {
-    // If value is an object (e.g., color shades), flatten one level
-    if (typeof value === 'object' && !Array.isArray(value)) {
-      w3cTokens[map.w3c][token] = {};
+    if (typeof value === 'object' && value !== null) {
+      // Nested tokens (e.g., colors)
+      catObj[token] = {};
       for (const [subToken, subValue] of Object.entries(value)) {
-        w3cTokens[map.w3c][token][subToken] = { $value: subValue, $type: map.type };
+        catObj[token][subToken] = { $value: subValue, $type: catInfo.type };
       }
     } else {
-      w3cTokens[map.w3c][token] = { $value: value, $type: map.type };
+      catObj[token] = { $value: value, $type: catInfo.type };
     }
+  }
+  // Only add if not empty
+  if (Object.keys(catObj).length > 0) {
+    output[category] = catObj;
   }
 }
 
-fs.writeFileSync(OUTPUT_FILE, JSON.stringify(w3cTokens, null, 2));
-console.log(`W3C tokens written to ${OUTPUT_FILE}`);
+fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
+console.log(`Tokens Studio tokens written to ${OUTPUT_FILE}`);
