@@ -19,3 +19,26 @@ We now have a JSON file with all the MUI color tokens, ready for further process
 Then, I modularized the process of extracting MUI design tokens by writing a dedicated script for each token category (colors, spacing, font sizes, etc.) and organizing them in a scripts folder. Each script outputs a JSON file with the exact MUI naming and values.
 After that, I created a script that reads all these modular JSON files and merges them into a single W3C DTCG-compliant JSON file (w3c-tokens.json). This script is fully automatable and can be triggered by a GitHub Action, making it easy to keep our design tokens in sync across engineering and design.
 Now, we have a complete, machine-readable map of MUI design tokens, ready for use in Tokens Studio and Figma, and set up for a modern, automated design system workflow.
+
+---
+
+## Summary
+
+- Modularized extraction of MUI design tokens (color, spacing, font, etc.) into individual JSON files.
+- Added scripts to `mui-tokens/scripts/` for each token category.
+- Implemented `merge-to-w3c.js` to merge all token JSON files into a single W3C DTCG-compliant file (`w3c-tokens.json`).
+- Output is ready for use with Tokens Studio, Figma, and CI automation.
+
+## Why
+
+- Enables automated, source-of-truth design token workflow.
+- Keeps engineering and design in sync using real MUI values.
+- Lays the foundation for future automation and integration.
+
+## How to use
+
+1. Run any grab script in `mui-tokens/scripts/` to update a token set.
+2. Run `merge-to-w3c.js` to generate the unified W3C token file.
+
+---
+
