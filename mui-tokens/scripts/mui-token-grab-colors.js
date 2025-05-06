@@ -11,7 +11,12 @@ const colorNames = [
 const output = {};
 for (const colorName of colorNames) {
   if (colors[colorName]) {
-    output[colorName] = colors[colorName];
+    for (const shade in colors[colorName]) {
+      output[`${colorName}.${shade}`] = {
+        $type: 'color',
+        $value: colors[colorName][shade]
+      };
+    }
   }
 }
 

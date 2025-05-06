@@ -1,17 +1,62 @@
 {
-  "global": 14,
-  "h1": "6rem",
-  "h2": "3.75rem",
-  "h3": "3rem",
-  "h4": "2.125rem",
-  "h5": "1.5rem",
-  "h6": "1.25rem",
-  "subtitle1": "1rem",
-  "subtitle2": "0.875rem",
-  "body1": "1rem",
-  "body2": "0.875rem",
-  "button": "0.875rem",
-  "caption": "0.75rem",
-  "overline": "0.75rem",
-  "inherit": "inherit"
+  "global": {
+    "$type": "fontSize",
+    "$value": "14"
+  },
+  "h1": {
+    "$type": "fontSize",
+    "$value": "6rem"
+  },
+  "h2": {
+    "$type": "fontSize",
+    "$value": "3.75rem"
+  },
+  "h3": {
+    "$type": "fontSize",
+    "$value": "3rem"
+  },
+  "h4": {
+    "$type": "fontSize",
+    "$value": "2.125rem"
+  },
+  "h5": {
+    "$type": "fontSize",
+    "$value": "1.5rem"
+  },
+  "h6": {
+    "$type": "fontSize",
+    "$value": "1.25rem"
+  },
+  "subtitle1": {
+    "$type": "fontSize",
+    "$value": "1rem"
+  },
+  "subtitle2": {
+    "$type": "fontSize",
+    "$value": "0.875rem"
+  },
+  "body1": {
+    "$type": "fontSize",
+    "$value": "1rem"
+  },
+  "body2": {
+    "$type": "fontSize",
+    "$value": "0.875rem"
+  },
+  "button": {
+    "$type": "fontSize",
+    "$value": "0.875rem"
+  },
+  "caption": {
+    "$type": "fontSize",
+    "$value": "0.75rem"
+  },
+  "overline": {
+    "$type": "fontSize",
+    "$value": "0.75rem"
+  },
+  "inherit": {
+    "$type": "fontSize",
+    "$value": "inherit"
+  }
 }

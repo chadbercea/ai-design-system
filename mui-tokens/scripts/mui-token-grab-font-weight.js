@@ -7,10 +7,22 @@ const theme = createTheme();
 
 // Extract fontWeight tokens from typography
 const fontWeightTokens = {
-  fontWeightLight: theme.typography.fontWeightLight,
-  fontWeightRegular: theme.typography.fontWeightRegular,
-  fontWeightMedium: theme.typography.fontWeightMedium,
-  fontWeightBold: theme.typography.fontWeightBold
+  'light': {
+    $type: 'fontWeight',
+    $value: theme.typography.fontWeightLight.toString()
+  },
+  'regular': {
+    $type: 'fontWeight',
+    $value: theme.typography.fontWeightRegular.toString()
+  },
+  'medium': {
+    $type: 'fontWeight',
+    $value: theme.typography.fontWeightMedium.toString()
+  },
+  'bold': {
+    $type: 'fontWeight',
+    $value: theme.typography.fontWeightBold.toString()
+  }
 };
 
 // Write to JSON file

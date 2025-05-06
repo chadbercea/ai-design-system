@@ -15,12 +15,15 @@ if (theme.palette && theme.palette.action) {
       typeof theme.palette.action[key] === 'number' ||
       (typeof theme.palette.action[key] === 'string' && theme.palette.action[key].match(/^\d*\.?\d+$/))
     ) {
-      opacityTokens[key] = theme.palette.action[key];
+      opacityTokens[key] = {
+        $type: 'opacity',
+        $value: theme.palette.action[key].toString()
+      };
     }
   }
 }
 
 // Write to JSON file
-const outPath = path.join(__dirname, 'mui-token-grab-opacity.json');
+const outPath = path.join(__dirname, 'mui-token-opacity.json');
 fs.writeFileSync(outPath, JSON.stringify(opacityTokens, null, 2));
 console.log(`MUI opacity tokens written to ${outPath}`);

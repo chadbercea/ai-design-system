@@ -1,0 +1,22 @@
+{
+  "hoverOpacity": {
+    "$type": "opacity",
+    "$value": "0.04"
+  },
+  "selectedOpacity": {
+    "$type": "opacity",
+    "$value": "0.08"
+  },
+  "disabledOpacity": {
+    "$type": "opacity",
+    "$value": "0.38"
+  },
+  "focusOpacity": {
+    "$type": "opacity",
+    "$value": "0.12"
+  },
+  "activatedOpacity": {
+    "$type": "opacity",
+    "$value": "0.12"
+  }
+}

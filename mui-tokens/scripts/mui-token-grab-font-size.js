@@ -9,15 +9,22 @@ const theme = createTheme();
 const fontSizeTokens = {};
 
 // MUI's typography object has a global fontSize and per-style fontSize overrides
-fontSizeTokens.global = theme.typography.fontSize;
+fontSizeTokens['global'] = {
+  $type: 'fontSize',
+  $value: theme.typography.fontSize.toString()
+};
 
+// Add per-style fontSize overrides if they exist
 for (const key in theme.typography) {
   if (
     theme.typography[key] &&
     typeof theme.typography[key] === 'object' &&
     theme.typography[key].fontSize
   ) {
-    fontSizeTokens[key] = theme.typography[key].fontSize;
+    fontSizeTokens[key] = {
+      $type: 'fontSize',
+      $value: theme.typography[key].fontSize.toString()
+    };
   }
 }
 

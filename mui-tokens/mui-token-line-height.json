@@ -1,16 +1,58 @@
 {
-  "h1": 1.167,
-  "h2": 1.2,
-  "h3": 1.167,
-  "h4": 1.235,
-  "h5": 1.334,
-  "h6": 1.6,
-  "subtitle1": 1.75,
-  "subtitle2": 1.57,
-  "body1": 1.5,
-  "body2": 1.43,
-  "button": 1.75,
-  "caption": 1.66,
-  "overline": 2.66,
-  "inherit": "inherit"
+  "h1": {
+    "$type": "lineHeight",
+    "$value": "1.167"
+  },
+  "h2": {
+    "$type": "lineHeight",
+    "$value": "1.2"
+  },
+  "h3": {
+    "$type": "lineHeight",
+    "$value": "1.167"
+  },
+  "h4": {
+    "$type": "lineHeight",
+    "$value": "1.235"
+  },
+  "h5": {
+    "$type": "lineHeight",
+    "$value": "1.334"
+  },
+  "h6": {
+    "$type": "lineHeight",
+    "$value": "1.6"
+  },
+  "subtitle1": {
+    "$type": "lineHeight",
+    "$value": "1.75"
+  },
+  "subtitle2": {
+    "$type": "lineHeight",
+    "$value": "1.57"
+  },
+  "body1": {
+    "$type": "lineHeight",
+    "$value": "1.5"
+  },
+  "body2": {
+    "$type": "lineHeight",
+    "$value": "1.43"
+  },
+  "button": {
+    "$type": "lineHeight",
+    "$value": "1.75"
+  },
+  "caption": {
+    "$type": "lineHeight",
+    "$value": "1.66"
+  },
+  "overline": {
+    "$type": "lineHeight",
+    "$value": "2.66"
+  },
+  "inherit": {
+    "$type": "lineHeight",
+    "$value": "inherit"
+  }
 }

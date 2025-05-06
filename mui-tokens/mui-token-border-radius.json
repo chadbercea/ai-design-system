@@ -1,3 +1,6 @@
 {
-  "borderRadius": 4
+  "default": {
+    "$type": "borderRadius",
+    "$value": 4
+  }
 }
