@@ -47,75 +47,40 @@ const CANONICAL_CATEGORIES = [
 ];
 
 // File paths
-const corePath = path.join(__dirname, '../../TS-TOKEN-EXAMPLE-DO-NOT-USE/core.json');
 const muiPath = path.join(__dirname, '../w3c-tokens.json');
 const outputPath = path.join(__dirname, '../../build/tokens-studio.json');
 
-// Read files
-const core = JSON.parse(fs.readFileSync(corePath, 'utf-8'));
+// Read MUI tokens
 const mui = JSON.parse(fs.readFileSync(muiPath, 'utf-8'));
 
-// Helper: Recursively flatten MUI tokens to category → tokenName → tokenObject
+// Helper: Recursively flatten tokens to dot.notation keys
 function flattenTokens(obj, parentKeys = []) {
   let result = {};
   for (const [key, value] of Object.entries(obj)) {
     if (value && typeof value === 'object' && ('$value' in value || '$type' in value)) {
       // This is a token object
-      const [category, ...tokenPath] = parentKeys.concat(key);
-      if (!result[category]) result[category] = {};
-      // Build token name from tokenPath (joined by dots if nested)
-      const tokenName = tokenPath.join('.') || key;
-      // Only include $type, $value, $description if present
+      const tokenName = [...parentKeys, key].join('.');
       const tokenObj = {};
       if ('$type' in value) tokenObj['$type'] = value['$type'];
       if ('$value' in value) tokenObj['$value'] = value['$value'];
       if ('$description' in value) tokenObj['$description'] = value['$description'];
-      result[category][tokenName] = tokenObj;
+      result[tokenName] = tokenObj;
     } else if (value && typeof value === 'object') {
       // Recurse
-      const nested = flattenTokens(value, parentKeys.concat(key));
-      for (const [cat, tokens] of Object.entries(nested)) {
-        if (!result[cat]) result[cat] = {};
-        Object.assign(result[cat], tokens);
-      }
+      Object.assign(result, flattenTokens(value, [...parentKeys, key]));
     }
   }
   return result;
 }
 
-// Flatten and build the output structure
-const flat = flattenTokens(mui);
+// Flatten all tokens under MUI
+const flatTokens = flattenTokens(mui);
 
-// Remove empty categories
-for (const cat of Object.keys(flat)) {
-  if (Object.keys(flat[cat]).length === 0) {
-    delete flat[cat];
-  }
-}
+// Build the output: all tokens are direct children of "MUI"
+const output = { MUI: flatTokens };
 
-// Un-flatten: category → tokenName → tokenObject (no dot notation in token names if not needed)
-function unflattenCategory(tokens) {
-  const result = {};
-  for (const [tokenName, tokenObj] of Object.entries(tokens)) {
-    // If tokenName contains dots, nest accordingly
-    const parts = tokenName.split('.');
-    let node = result;
-    for (let i = 0; i < parts.length - 1; i++) {
-      if (!node[parts[i]]) node[parts[i]] = {};
-      node = node[parts[i]];
-    }
-    node[parts[parts.length - 1]] = tokenObj;
-  }
-  return result;
-}
-
-const output = {};
-for (const [cat, tokens] of Object.entries(flat)) {
-  output[cat] = unflattenCategory(tokens);
-}
-
-// Write output with "MUI" as the set
-fs.writeFileSync(outputPath, JSON.stringify({ MUI: output }, null, 2));
+// Write output
+fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
 console.log(`✅ tokens-studio.json written to ${outputPath}`);
 
 // Helper to capitalize type if not in mapping
