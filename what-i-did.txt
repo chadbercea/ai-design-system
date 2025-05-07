@@ -42,3 +42,42 @@ Now, we have a complete, machine-readable map of MUI design tokens, ready for us
 
 ---
 
+Monday May 6, 2025
+
+## Progress Update
+
+- **Refined MUI token extraction:**  
+  Modular scripts now extract each token category (colors, spacing, font sizes, etc.) directly from the MUI package, ensuring all values are up-to-date and source-of-truth.
+- **Automated merging:**  
+  The `merge-to-w3c.js` script combines all modular token files into a single W3C DTCG-compliant JSON (`mui-set.json`), ready for use in Tokens Studio and Figma.
+- **Semantic tokens exploration:**  
+  Investigated generating semantic tokens (e.g., `background.primary`, `button.padding`) from raw MUI tokens.  
+  Determined that while raw tokens are fully automated, semantic tokens require a mapping layer that is not easily derived programmatically from MUI alone.
+- **Script flexibility:**  
+  The pipeline can output either a flat set of raw tokens or wrap them in a set (e.g., `"MUI"`), as required by Tokens Studio and your reference standards.
+
+## Outcomes
+
+- **Automated, up-to-date raw token extraction and merging.**
+- **W3C-compliant output, ready for design and engineering workflows.**
+- **Clear understanding of the gap between raw and semantic tokens.**
+- **Scripts and structure are ready for future automation and integration.**
+
+## Current Status / Next Steps
+
+- **Raw tokens:**  
+  Fully automated and in sync with MUI.
+- **Semantic tokens:**  
+  Not yet automated—requires a mapping of semantic names to raw tokens, which is a mix of programmatic rules and human curation.
+- **Decision point:**  
+  Researching best practices and seeking input on how to efficiently define and maintain semantic tokens at scale.
+
+---
+
+**How to use:**
+1. Run any grab script in `mui-tokens/scripts/` to update a token set.
+2. Run `merge-to-w3c.js` to generate the unified W3C token file.
+3. Use the output in Tokens Studio, Figma, or downstream automation.
+
+---
+
