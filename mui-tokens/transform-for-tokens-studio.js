@@ -104,8 +104,8 @@ function buildAtomicTokens(rawTokens) {
 }
 
 function buildCompositeTokens(rawTokens, atomic) {
-  const composite = { typography: {} };
-  // Typography composite tokens
+  const composite = {};
+  // Typography composite tokens as direct children of MUI
   if (rawTokens.base.typography?.typography) {
     const typographyStyles = rawTokens.base.typography.typography;
     Object.entries(typographyStyles).forEach(([styleKey, styleValue]) => {
@@ -117,7 +117,7 @@ function buildCompositeTokens(rawTokens, atomic) {
         if (styleValue.lineHeight) value.lineHeight = `{Atomic.typography-${styleKey}-lineHeight}`;
         if (styleValue.letterSpacing) value.letterSpacing = `{Atomic.typography-${styleKey}-letterSpacing}`;
         if (styleValue.textTransform) value.textCase = `{Atomic.typography-${styleKey}-textCase}`;
-        composite.typography[styleKey] = {
+        composite[styleKey] = {
           "$type": "typography",
           "$value": value,
           "$description": `Composite typography token for ${styleKey}`

@@ -136,6 +136,8 @@ The type is the anatomic part of a Design Token that defines the category of des
 
 A full Composite Design Token looks like this and this is the ultimate goal:
 
+
+Fake.Font.Token renders as:
 "Fake": {
       "Font": {
         "Token": {

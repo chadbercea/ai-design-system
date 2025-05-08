@@ -1,177 +1,160 @@
 {
   "MUI": {
-    "typography": {
-      "h1": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-h1-fontFamily}",
-          "fontSize": "{Atomic.typography-h1-fontSize}",
-          "fontWeight": "{Atomic.typography-h1-fontWeight}",
-          "lineHeight": "{Atomic.typography-h1-lineHeight}",
-          "letterSpacing": "{Atomic.typography-h1-letterSpacing}"
-        },
-        "$description": "Composite typography token for h1"
-      },
-      "h2": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-h2-fontFamily}",
-          "fontSize": "{Atomic.typography-h2-fontSize}",
-          "fontWeight": "{Atomic.typography-h2-fontWeight}",
-          "lineHeight": "{Atomic.typography-h2-lineHeight}",
-          "letterSpacing": "{Atomic.typography-h2-letterSpacing}"
-        },
-        "$description": "Composite typography token for h2"
-      },
-      "h3": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-h3-fontFamily}",
-          "fontSize": "{Atomic.typography-h3-fontSize}",
-          "fontWeight": "{Atomic.typography-h3-fontWeight}",
-          "lineHeight": "{Atomic.typography-h3-lineHeight}",
-          "letterSpacing": "{Atomic.typography-h3-letterSpacing}"
-        },
-        "$description": "Composite typography token for h3"
-      },
-      "h4": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-h4-fontFamily}",
-          "fontSize": "{Atomic.typography-h4-fontSize}",
-          "fontWeight": "{Atomic.typography-h4-fontWeight}",
-          "lineHeight": "{Atomic.typography-h4-lineHeight}",
-          "letterSpacing": "{Atomic.typography-h4-letterSpacing}"
-        },
-        "$description": "Composite typography token for h4"
-      },
-      "h5": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-h5-fontFamily}",
-          "fontSize": "{Atomic.typography-h5-fontSize}",
-          "fontWeight": "{Atomic.typography-h5-fontWeight}",
-          "lineHeight": "{Atomic.typography-h5-lineHeight}",
-          "letterSpacing": "{Atomic.typography-h5-letterSpacing}"
-        },
-        "$description": "Composite typography token for h5"
-      },
-      "h6": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-h6-fontFamily}",
-          "fontSize": "{Atomic.typography-h6-fontSize}",
-          "fontWeight": "{Atomic.typography-h6-fontWeight}",
-          "lineHeight": "{Atomic.typography-h6-lineHeight}",
-          "letterSpacing": "{Atomic.typography-h6-letterSpacing}"
-        },
-        "$description": "Composite typography token for h6"
-      },
-      "subtitle1": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-subtitle1-fontFamily}",
-          "fontSize": "{Atomic.typography-subtitle1-fontSize}",
-          "fontWeight": "{Atomic.typography-subtitle1-fontWeight}",
-          "lineHeight": "{Atomic.typography-subtitle1-lineHeight}",
-          "letterSpacing": "{Atomic.typography-subtitle1-letterSpacing}"
-        },
-        "$description": "Composite typography token for subtitle1"
-      },
-      "subtitle2": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-subtitle2-fontFamily}",
-          "fontSize": "{Atomic.typography-subtitle2-fontSize}",
-          "fontWeight": "{Atomic.typography-subtitle2-fontWeight}",
-          "lineHeight": "{Atomic.typography-subtitle2-lineHeight}",
-          "letterSpacing": "{Atomic.typography-subtitle2-letterSpacing}"
-        },
-        "$description": "Composite typography token for subtitle2"
-      },
-      "body1": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-body1-fontFamily}",
-          "fontSize": "{Atomic.typography-body1-fontSize}",
-          "fontWeight": "{Atomic.typography-body1-fontWeight}",
-          "lineHeight": "{Atomic.typography-body1-lineHeight}",
-          "letterSpacing": "{Atomic.typography-body1-letterSpacing}"
-        },
-        "$description": "Composite typography token for body1"
-      },
-      "body2": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-body2-fontFamily}",
-          "fontSize": "{Atomic.typography-body2-fontSize}",
-          "fontWeight": "{Atomic.typography-body2-fontWeight}",
-          "lineHeight": "{Atomic.typography-body2-lineHeight}",
-          "letterSpacing": "{Atomic.typography-body2-letterSpacing}"
-        },
-        "$description": "Composite typography token for body2"
-      },
-      "button": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-button-fontFamily}",
-          "fontSize": "{Atomic.typography-button-fontSize}",
-          "fontWeight": "{Atomic.typography-button-fontWeight}",
-          "lineHeight": "{Atomic.typography-button-lineHeight}",
-          "letterSpacing": "{Atomic.typography-button-letterSpacing}",
-          "textCase": "{Atomic.typography-button-textCase}"
-        },
-        "$description": "Composite typography token for button"
-      },
-      "caption": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-caption-fontFamily}",
-          "fontSize": "{Atomic.typography-caption-fontSize}",
-          "fontWeight": "{Atomic.typography-caption-fontWeight}",
-          "lineHeight": "{Atomic.typography-caption-lineHeight}",
-          "letterSpacing": "{Atomic.typography-caption-letterSpacing}"
-        },
-        "$description": "Composite typography token for caption"
-      },
-      "overline": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-overline-fontFamily}",
-          "fontSize": "{Atomic.typography-overline-fontSize}",
-          "fontWeight": "{Atomic.typography-overline-fontWeight}",
-          "lineHeight": "{Atomic.typography-overline-lineHeight}",
-          "letterSpacing": "{Atomic.typography-overline-letterSpacing}",
-          "textCase": "{Atomic.typography-overline-textCase}"
-        },
-        "$description": "Composite typography token for overline"
-      },
-      "inherit": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{Atomic.typography-inherit-fontFamily}",
-          "fontSize": "{Atomic.typography-inherit-fontSize}",
-          "fontWeight": "{Atomic.typography-inherit-fontWeight}",
-          "lineHeight": "{Atomic.typography-inherit-lineHeight}",
-          "letterSpacing": "{Atomic.typography-inherit-letterSpacing}"
-        },
-        "$description": "Composite typography token for inherit"
-      }
-    },
-    "secondFakeToken": {
+    "h1": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "null",
-        "fontWeight": "null",
-        "fontSize": "null",
-        "lineHeight": "null",
-        "letterSpacing": "null",
-        "paragraphSpacing": "null",
-        "paragraphIndent": "null",
-        "textDecoration": "null",
-        "textCase": "null"
+        "fontFamily": "{Atomic.typography-h1-fontFamily}",
+        "fontSize": "{Atomic.typography-h1-fontSize}",
+        "fontWeight": "{Atomic.typography-h1-fontWeight}",
+        "lineHeight": "{Atomic.typography-h1-lineHeight}",
+        "letterSpacing": "{Atomic.typography-h1-letterSpacing}"
       },
-      "$description": "Description is null"
+      "$description": "Composite typography token for h1"
+    },
+    "h2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-h2-fontFamily}",
+        "fontSize": "{Atomic.typography-h2-fontSize}",
+        "fontWeight": "{Atomic.typography-h2-fontWeight}",
+        "lineHeight": "{Atomic.typography-h2-lineHeight}",
+        "letterSpacing": "{Atomic.typography-h2-letterSpacing}"
+      },
+      "$description": "Composite typography token for h2"
+    },
+    "h3": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-h3-fontFamily}",
+        "fontSize": "{Atomic.typography-h3-fontSize}",
+        "fontWeight": "{Atomic.typography-h3-fontWeight}",
+        "lineHeight": "{Atomic.typography-h3-lineHeight}",
+        "letterSpacing": "{Atomic.typography-h3-letterSpacing}"
+      },
+      "$description": "Composite typography token for h3"
+    },
+    "h4": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-h4-fontFamily}",
+        "fontSize": "{Atomic.typography-h4-fontSize}",
+        "fontWeight": "{Atomic.typography-h4-fontWeight}",
+        "lineHeight": "{Atomic.typography-h4-lineHeight}",
+        "letterSpacing": "{Atomic.typography-h4-letterSpacing}"
+      },
+      "$description": "Composite typography token for h4"
+    },
+    "h5": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-h5-fontFamily}",
+        "fontSize": "{Atomic.typography-h5-fontSize}",
+        "fontWeight": "{Atomic.typography-h5-fontWeight}",
+        "lineHeight": "{Atomic.typography-h5-lineHeight}",
+        "letterSpacing": "{Atomic.typography-h5-letterSpacing}"
+      },
+      "$description": "Composite typography token for h5"
+    },
+    "h6": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-h6-fontFamily}",
+        "fontSize": "{Atomic.typography-h6-fontSize}",
+        "fontWeight": "{Atomic.typography-h6-fontWeight}",
+        "lineHeight": "{Atomic.typography-h6-lineHeight}",
+        "letterSpacing": "{Atomic.typography-h6-letterSpacing}"
+      },
+      "$description": "Composite typography token for h6"
+    },
+    "subtitle1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-subtitle1-fontFamily}",
+        "fontSize": "{Atomic.typography-subtitle1-fontSize}",
+        "fontWeight": "{Atomic.typography-subtitle1-fontWeight}",
+        "lineHeight": "{Atomic.typography-subtitle1-lineHeight}",
+        "letterSpacing": "{Atomic.typography-subtitle1-letterSpacing}"
+      },
+      "$description": "Composite typography token for subtitle1"
+    },
+    "subtitle2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-subtitle2-fontFamily}",
+        "fontSize": "{Atomic.typography-subtitle2-fontSize}",
+        "fontWeight": "{Atomic.typography-subtitle2-fontWeight}",
+        "lineHeight": "{Atomic.typography-subtitle2-lineHeight}",
+        "letterSpacing": "{Atomic.typography-subtitle2-letterSpacing}"
+      },
+      "$description": "Composite typography token for subtitle2"
+    },
+    "body1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-body1-fontFamily}",
+        "fontSize": "{Atomic.typography-body1-fontSize}",
+        "fontWeight": "{Atomic.typography-body1-fontWeight}",
+        "lineHeight": "{Atomic.typography-body1-lineHeight}",
+        "letterSpacing": "{Atomic.typography-body1-letterSpacing}"
+      },
+      "$description": "Composite typography token for body1"
+    },
+    "body2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-body2-fontFamily}",
+        "fontSize": "{Atomic.typography-body2-fontSize}",
+        "fontWeight": "{Atomic.typography-body2-fontWeight}",
+        "lineHeight": "{Atomic.typography-body2-lineHeight}",
+        "letterSpacing": "{Atomic.typography-body2-letterSpacing}"
+      },
+      "$description": "Composite typography token for body2"
+    },
+    "button": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-button-fontFamily}",
+        "fontSize": "{Atomic.typography-button-fontSize}",
+        "fontWeight": "{Atomic.typography-button-fontWeight}",
+        "lineHeight": "{Atomic.typography-button-lineHeight}",
+        "letterSpacing": "{Atomic.typography-button-letterSpacing}",
+        "textCase": "{Atomic.typography-button-textCase}"
+      },
+      "$description": "Composite typography token for button"
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-caption-fontFamily}",
+        "fontSize": "{Atomic.typography-caption-fontSize}",
+        "fontWeight": "{Atomic.typography-caption-fontWeight}",
+        "lineHeight": "{Atomic.typography-caption-lineHeight}",
+        "letterSpacing": "{Atomic.typography-caption-letterSpacing}"
+      },
+      "$description": "Composite typography token for caption"
+    },
+    "overline": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-overline-fontFamily}",
+        "fontSize": "{Atomic.typography-overline-fontSize}",
+        "fontWeight": "{Atomic.typography-overline-fontWeight}",
+        "lineHeight": "{Atomic.typography-overline-lineHeight}",
+        "letterSpacing": "{Atomic.typography-overline-letterSpacing}",
+        "textCase": "{Atomic.typography-overline-textCase}"
+      },
+      "$description": "Composite typography token for overline"
+    },
+    "inherit": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{Atomic.typography-inherit-fontFamily}",
+        "fontSize": "{Atomic.typography-inherit-fontSize}",
+        "fontWeight": "{Atomic.typography-inherit-fontWeight}",
+        "lineHeight": "{Atomic.typography-inherit-lineHeight}",
+        "letterSpacing": "{Atomic.typography-inherit-letterSpacing}"
+      },
+      "$description": "Composite typography token for inherit"
     }
   },
   "Atomic": {
@@ -672,7 +655,6 @@
       "$value": "inherit"
     }
   },
-  "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
       "MUI",
