@@ -1,11 +1,14 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
+import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
+import TokenExtractor from './components/TokenExtractor';
+
+const theme = createTheme();
 
 export default function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
-      <Button variant="contained">Click Me</Button>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <TokenExtractor />
+    </ThemeProvider>
   );
 }
