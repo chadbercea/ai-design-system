@@ -1,0 +1,8987 @@
+{
+  "Accordion/Accordion.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Accordion/AccordionContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Accordion/accordionClasses.js": {
+    "getAccordionUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AccordionActions/AccordionActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AccordionActions/accordionActionsClasses.js": {
+    "getAccordionActionsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AccordionDetails/AccordionDetails.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AccordionDetails/accordionDetailsClasses.js": {
+    "getAccordionDetailsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AccordionSummary/AccordionSummary.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AccordionSummary/accordionSummaryClasses.js": {
+    "getAccordionSummaryUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Alert/Alert.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Alert/alertClasses.js": {
+    "getAlertUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AlertTitle/AlertTitle.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AlertTitle/alertTitleClasses.js": {
+    "getAlertTitleUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AppBar/AppBar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AppBar/appBarClasses.js": {
+    "getAppBarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Autocomplete/Autocomplete.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Autocomplete/autocompleteClasses.js": {
+    "getAutocompleteUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Avatar/Avatar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Avatar/avatarClasses.js": {
+    "getAvatarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AvatarGroup/AvatarGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "AvatarGroup/avatarGroupClasses.js": {
+    "getAvatarGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Backdrop/Backdrop.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Backdrop/backdropClasses.js": {
+    "getBackdropUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Badge/Badge.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Badge/badgeClasses.js": {
+    "getBadgeUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Badge/useBadge.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "BottomNavigation/BottomNavigation.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "BottomNavigation/bottomNavigationClasses.js": {
+    "getBottomNavigationUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "BottomNavigationAction/BottomNavigationAction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "BottomNavigationAction/bottomNavigationActionClasses.js": {
+    "getBottomNavigationActionUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Box/Box.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Box/boxClasses.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Breadcrumbs/BreadcrumbCollapsed.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Breadcrumbs/Breadcrumbs.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Breadcrumbs/breadcrumbsClasses.js": {
+    "getBreadcrumbsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Button/Button.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Button/buttonClasses.js": {
+    "getButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ButtonBase/ButtonBase.js": {
+    "ButtonBaseRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ButtonBase/Ripple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ButtonBase/TouchRipple.js": {
+    "DELAY_RIPPLE": {
+      "type": "number"
+    },
+    "TouchRippleRoot": {
+      "type": "CallExpression"
+    },
+    "TouchRippleRipple": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ButtonBase/buttonBaseClasses.js": {
+    "getButtonBaseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ButtonBase/touchRippleClasses.js": {
+    "getTouchRippleUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ButtonGroup/ButtonGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ButtonGroup/ButtonGroupButtonContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ButtonGroup/ButtonGroupContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ButtonGroup/buttonGroupClasses.js": {
+    "getButtonGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Card/Card.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Card/cardClasses.js": {
+    "getCardUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CardActionArea/CardActionArea.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CardActionArea/cardActionAreaClasses.js": {
+    "getCardActionAreaUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CardActions/CardActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CardActions/cardActionsClasses.js": {
+    "getCardActionsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CardContent/CardContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CardContent/cardContentClasses.js": {
+    "getCardContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CardHeader/CardHeader.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CardHeader/cardHeaderClasses.js": {
+    "getCardHeaderUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CardMedia/CardMedia.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CardMedia/cardMediaClasses.js": {
+    "getCardMediaUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Checkbox/Checkbox.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Checkbox/checkboxClasses.js": {
+    "getCheckboxUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Chip/Chip.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Chip/chipClasses.js": {
+    "getChipUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CircularProgress/CircularProgress.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CircularProgress/circularProgressClasses.js": {
+    "getCircularProgressUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Collapse/Collapse.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Collapse/collapseClasses.js": {
+    "getCollapseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Container/Container.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Container/containerClasses.js": {
+    "getContainerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "CssBaseline/CssBaseline.js": {
+    "html": {
+      "type": "function"
+    },
+    "body": {
+      "type": "function"
+    },
+    "styles": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "DefaultPropsProvider/DefaultPropsProvider.js": {
+    "default": {
+      "type": "Identifier"
+    },
+    "useDefaultProps": {
+      "type": "function"
+    }
+  },
+  "Dialog/Dialog.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Dialog/DialogContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Dialog/dialogClasses.js": {
+    "getDialogUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "DialogActions/DialogActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "DialogActions/dialogActionsClasses.js": {
+    "getDialogActionsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "DialogContent/DialogContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "DialogContent/dialogContentClasses.js": {
+    "getDialogContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "DialogContentText/DialogContentText.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "DialogContentText/dialogContentTextClasses.js": {
+    "getDialogContentTextUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "DialogTitle/DialogTitle.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "DialogTitle/dialogTitleClasses.js": {
+    "getDialogTitleUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Divider/Divider.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Divider/dividerClasses.js": {
+    "getDividerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Drawer/Drawer.js": {
+    "isHorizontal": {
+      "type": "function"
+    },
+    "getAnchor": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Drawer/drawerClasses.js": {
+    "getDrawerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Fab/Fab.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Fab/fabClasses.js": {
+    "getFabUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Fade/Fade.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FilledInput/FilledInput.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FilledInput/filledInputClasses.js": {
+    "getFilledInputUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FormControl/FormControl.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FormControl/FormControlContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FormControl/formControlClasses.js": {
+    "getFormControlUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FormControl/formControlState.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "FormControl/useFormControl.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "FormControlLabel/FormControlLabel.js": {
+    "FormControlLabelRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FormControlLabel/formControlLabelClasses.js": {
+    "getFormControlLabelUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FormGroup/FormGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FormGroup/formGroupClasses.js": {
+    "getFormGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FormHelperText/FormHelperText.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FormHelperText/formHelperTextClasses.js": {
+    "getFormHelperTextUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FormLabel/FormLabel.js": {
+    "FormLabelRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "FormLabel/formLabelClasses.js": {
+    "getFormLabelUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "GlobalStyles/GlobalStyles.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Grid/Grid.js": {
+    "generateGrid": {
+      "type": "function"
+    },
+    "generateDirection": {
+      "type": "function"
+    },
+    "generateRowGap": {
+      "type": "function"
+    },
+    "generateColumnGap": {
+      "type": "function"
+    },
+    "resolveSpacingStyles": {
+      "type": "function"
+    },
+    "resolveSpacingClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Grid/GridContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Grid/gridClasses.js": {
+    "getGridUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Grow/Grow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Hidden/Hidden.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Hidden/HiddenCss.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Hidden/HiddenJs.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "Hidden/hiddenCssClasses.js": {
+    "getHiddenCssUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Hidden/withWidth.js": {
+    "isWidthUp": {
+      "type": "function"
+    },
+    "isWidthDown": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Icon/Icon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Icon/iconClasses.js": {
+    "getIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "IconButton/IconButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "IconButton/iconButtonClasses.js": {
+    "getIconButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ImageList/ImageList.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ImageList/ImageListContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ImageList/imageListClasses.js": {
+    "getImageListUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ImageListItem/ImageListItem.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ImageListItem/imageListItemClasses.js": {
+    "getImageListItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ImageListItemBar/ImageListItemBar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ImageListItemBar/imageListItemBarClasses.js": {
+    "getImageListItemBarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "InitColorSchemeScript/InitColorSchemeScript.js": {
+    "defaultConfig": {
+      "type": "object",
+      "sampleKeys": [
+        "attribute",
+        "colorSchemeStorageKey",
+        "defaultLightColorScheme",
+        "defaultDarkColorScheme",
+        "modeStorageKey"
+      ]
+    },
+    "default": {
+      "type": "function"
+    }
+  },
+  "Input/Input.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Input/inputClasses.js": {
+    "getInputUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "InputAdornment/InputAdornment.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "InputAdornment/inputAdornmentClasses.js": {
+    "getInputAdornmentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "InputBase/InputBase.js": {
+    "rootOverridesResolver": {
+      "type": "function"
+    },
+    "inputOverridesResolver": {
+      "type": "function"
+    },
+    "InputBaseRoot": {
+      "type": "CallExpression"
+    },
+    "InputBaseComponent": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "InputBase/inputBaseClasses.js": {
+    "getInputBaseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "InputBase/utils.js": {
+    "hasValue": {
+      "type": "function"
+    },
+    "isFilled": {
+      "type": "function"
+    },
+    "isAdornedStart": {
+      "type": "function"
+    }
+  },
+  "InputLabel/InputLabel.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "InputLabel/inputLabelClasses.js": {
+    "getInputLabelUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "LinearProgress/LinearProgress.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "LinearProgress/linearProgressClasses.js": {
+    "getLinearProgressUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Link/Link.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Link/getTextDecoration.js": {
+    "colorTransformations": {
+      "type": "object",
+      "sampleKeys": [
+        "primary",
+        "textPrimary",
+        "secondary",
+        "textSecondary",
+        "error"
+      ]
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Link/linkClasses.js": {
+    "getLinkUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "List/List.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "List/ListContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "List/listClasses.js": {
+    "getListUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItem/ListItem.js": {
+    "overridesResolver": {
+      "type": "function"
+    },
+    "ListItemRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItem/listItemClasses.js": {
+    "getListItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItemAvatar/ListItemAvatar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItemAvatar/listItemAvatarClasses.js": {
+    "getListItemAvatarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItemButton/ListItemButton.js": {
+    "overridesResolver": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItemButton/listItemButtonClasses.js": {
+    "getListItemButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItemIcon/ListItemIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItemIcon/listItemIconClasses.js": {
+    "getListItemIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItemSecondaryAction/ListItemSecondaryAction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItemSecondaryAction/listItemSecondaryActionClasses.js": {
+    "getListItemSecondaryActionClassesUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItemText/ListItemText.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListItemText/listItemTextClasses.js": {
+    "getListItemTextUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListSubheader/ListSubheader.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ListSubheader/listSubheaderClasses.js": {
+    "getListSubheaderUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Menu/Menu.js": {
+    "MenuPaper": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Menu/menuClasses.js": {
+    "getMenuUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "MenuItem/MenuItem.js": {
+    "overridesResolver": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "MenuItem/menuItemClasses.js": {
+    "getMenuItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "MenuList/MenuList.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "MobileStepper/MobileStepper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "MobileStepper/mobileStepperClasses.js": {
+    "getMobileStepperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Modal/Modal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Modal/ModalManager.js": {
+    "ariaHidden": {
+      "type": "function"
+    }
+  },
+  "Modal/modalClasses.js": {
+    "getModalUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Modal/useModal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "NativeSelect/NativeSelect.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "NativeSelect/NativeSelectInput.js": {
+    "nativeSelectSelectStyles": {
+      "type": "function"
+    },
+    "nativeSelectIconStyles": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "NativeSelect/nativeSelectClasses.js": {
+    "getNativeSelectUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "NoSsr/NoSsr.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "OutlinedInput/NotchedOutline.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "OutlinedInput/OutlinedInput.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "OutlinedInput/outlinedInputClasses.js": {
+    "getOutlinedInputUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Pagination/Pagination.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Pagination/paginationClasses.js": {
+    "getPaginationUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "PaginationItem/PaginationItem.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "PaginationItem/paginationItemClasses.js": {
+    "getPaginationItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Paper/Paper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Paper/paperClasses.js": {
+    "getPaperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Popover/Popover.js": {
+    "getOffsetTop": {
+      "type": "function"
+    },
+    "getOffsetLeft": {
+      "type": "function"
+    },
+    "PopoverRoot": {
+      "type": "CallExpression"
+    },
+    "PopoverPaper": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Popover/popoverClasses.js": {
+    "getPopoverUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Popper/BasePopper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Popper/Popper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Popper/popperClasses.js": {
+    "getPopperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Portal/Portal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Radio/Radio.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Radio/RadioButtonIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Radio/radioClasses.js": {
+    "getRadioUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "RadioGroup/RadioGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "RadioGroup/RadioGroupContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "RadioGroup/radioGroupClasses.js": {
+    "getRadioGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "RadioGroup/useRadioGroup.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "Rating/Rating.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Rating/ratingClasses.js": {
+    "getRatingUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ScopedCssBaseline/ScopedCssBaseline.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ScopedCssBaseline/scopedCssBaselineClasses.js": {
+    "getScopedCssBaselineUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Select/Select.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Select/SelectInput.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Select/selectClasses.js": {
+    "getSelectUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Skeleton/Skeleton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Skeleton/skeletonClasses.js": {
+    "getSkeletonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Slide/Slide.js": {
+    "setTranslateValue": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Slider/Slider.js": {
+    "SliderRoot": {
+      "type": "CallExpression"
+    },
+    "SliderRail": {
+      "type": "CallExpression"
+    },
+    "SliderTrack": {
+      "type": "CallExpression"
+    },
+    "SliderThumb": {
+      "type": "CallExpression"
+    },
+    "SliderValueLabel": {
+      "type": "CallExpression"
+    },
+    "SliderMark": {
+      "type": "CallExpression"
+    },
+    "SliderMarkLabel": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Slider/SliderValueLabel.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "Slider/sliderClasses.js": {
+    "getSliderUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Slider/useSlider.js": {
+    "valueToPercent": {
+      "type": "function"
+    },
+    "Identity": {
+      "type": "function"
+    },
+    "useSlider": {
+      "type": "function"
+    }
+  },
+  "Snackbar/Snackbar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Snackbar/snackbarClasses.js": {
+    "getSnackbarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Snackbar/useSnackbar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SnackbarContent/SnackbarContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SnackbarContent/snackbarContentClasses.js": {
+    "getSnackbarContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SpeedDial/SpeedDial.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SpeedDial/speedDialClasses.js": {
+    "getSpeedDialUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SpeedDialAction/SpeedDialAction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SpeedDialAction/speedDialActionClasses.js": {
+    "getSpeedDialActionUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SpeedDialIcon/SpeedDialIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SpeedDialIcon/speedDialIconClasses.js": {
+    "getSpeedDialIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Stack/Stack.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Stack/stackClasses.js": {
+    "getStackUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Step/Step.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Step/StepContext.js": {
+    "useStepContext": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Step/stepClasses.js": {
+    "getStepUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "StepButton/StepButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "StepButton/stepButtonClasses.js": {
+    "getStepButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "StepConnector/StepConnector.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "StepConnector/stepConnectorClasses.js": {
+    "getStepConnectorUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "StepContent/StepContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "StepContent/stepContentClasses.js": {
+    "getStepContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "StepIcon/StepIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "StepIcon/stepIconClasses.js": {
+    "getStepIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "StepLabel/StepLabel.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "StepLabel/stepLabelClasses.js": {
+    "getStepLabelUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Stepper/Stepper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Stepper/StepperContext.js": {
+    "useStepperContext": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Stepper/stepperClasses.js": {
+    "getStepperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SvgIcon/SvgIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SvgIcon/svgIconClasses.js": {
+    "getSvgIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SwipeableDrawer/SwipeArea.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "SwipeableDrawer/SwipeableDrawer.js": {
+    "reset": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Switch/Switch.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Switch/switchClasses.js": {
+    "getSwitchUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Tab/Tab.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Tab/tabClasses.js": {
+    "getTabUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TabScrollButton/TabScrollButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TabScrollButton/tabScrollButtonClasses.js": {
+    "getTabScrollButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Table/Table.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Table/TableContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Table/Tablelvl2Context.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Table/tableClasses.js": {
+    "getTableUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableBody/TableBody.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableBody/tableBodyClasses.js": {
+    "getTableBodyUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableCell/TableCell.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableCell/tableCellClasses.js": {
+    "getTableCellUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableContainer/TableContainer.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableContainer/tableContainerClasses.js": {
+    "getTableContainerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableFooter/TableFooter.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableFooter/tableFooterClasses.js": {
+    "getTableFooterUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableHead/TableHead.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableHead/tableHeadClasses.js": {
+    "getTableHeadUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TablePagination/TablePagination.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TablePagination/TablePaginationActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TablePagination/tablePaginationClasses.js": {
+    "getTablePaginationUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableRow/TableRow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableRow/tableRowClasses.js": {
+    "getTableRowUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableSortLabel/TableSortLabel.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TableSortLabel/tableSortLabelClasses.js": {
+    "getTableSortLabelUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Tabs/ScrollbarSize.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "Tabs/Tabs.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Tabs/tabsClasses.js": {
+    "getTabsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TextField/TextField.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TextField/textFieldClasses.js": {
+    "getTextFieldUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "TextareaAutosize/TextareaAutosize.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ToggleButton/ToggleButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ToggleButton/toggleButtonClasses.js": {
+    "getToggleButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ToggleButtonGroup/ToggleButtonGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ToggleButtonGroup/ToggleButtonGroupButtonContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ToggleButtonGroup/ToggleButtonGroupContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "ToggleButtonGroup/isValueSelected.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "ToggleButtonGroup/toggleButtonGroupClasses.js": {
+    "getToggleButtonGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Toolbar/Toolbar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Toolbar/toolbarClasses.js": {
+    "getToolbarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Tooltip/Tooltip.js": {
+    "testReset": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Tooltip/tooltipClasses.js": {
+    "getTooltipUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Typography/Typography.js": {
+    "TypographyRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "Typography/index.js": {
+    "_themeRelated": true
+  },
+  "Typography/typographyClasses.js": {
+    "getTypographyUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "Unstable_Grid2/Grid2.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Unstable_Grid2/grid2Classes.js": {
+    "getGrid2UtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Unstable_TrapFocus/FocusTrap.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "Zoom/Zoom.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/amber.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/blue.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/blueGrey.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/brown.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/common.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/cyan.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/deepOrange.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/deepPurple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/green.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/grey.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/indigo.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/lightBlue.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/lightGreen.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/lime.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/orange.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/pink.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/purple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/red.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/teal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "colors/yellow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "darkScrollbar/index.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "internal/SwitchBase.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "internal/animate.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "internal/svg-icons/Add.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/ArrowDownward.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/ArrowDropDown.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/Cancel.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/CheckBox.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/CheckBoxOutlineBlank.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/CheckCircle.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/Close.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/ErrorOutline.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/FirstPage.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/IndeterminateCheckBox.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/InfoOutlined.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/KeyboardArrowLeft.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/KeyboardArrowRight.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/LastPage.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/MoreHoriz.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/NavigateBefore.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/NavigateNext.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/Person.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/RadioButtonChecked.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/RadioButtonUnchecked.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/ReportProblemOutlined.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/Star.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/StarBorder.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/SuccessOutlined.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/svg-icons/Warning.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "internal/switchBaseClasses.js": {
+    "getSwitchBaseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Accordion/Accordion.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Accordion/AccordionContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Accordion/accordionClasses.js": {
+    "getAccordionUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AccordionActions/AccordionActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AccordionActions/accordionActionsClasses.js": {
+    "getAccordionActionsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AccordionDetails/AccordionDetails.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AccordionDetails/accordionDetailsClasses.js": {
+    "getAccordionDetailsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AccordionSummary/AccordionSummary.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AccordionSummary/accordionSummaryClasses.js": {
+    "getAccordionSummaryUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Alert/Alert.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Alert/alertClasses.js": {
+    "getAlertUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AlertTitle/AlertTitle.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AlertTitle/alertTitleClasses.js": {
+    "getAlertTitleUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AppBar/AppBar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AppBar/appBarClasses.js": {
+    "getAppBarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Autocomplete/Autocomplete.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Autocomplete/autocompleteClasses.js": {
+    "getAutocompleteUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Avatar/Avatar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Avatar/avatarClasses.js": {
+    "getAvatarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AvatarGroup/AvatarGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/AvatarGroup/avatarGroupClasses.js": {
+    "getAvatarGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Backdrop/Backdrop.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Backdrop/backdropClasses.js": {
+    "getBackdropUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Badge/Badge.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Badge/badgeClasses.js": {
+    "getBadgeUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Badge/useBadge.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/BottomNavigation/BottomNavigation.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/BottomNavigation/bottomNavigationClasses.js": {
+    "getBottomNavigationUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/BottomNavigationAction/BottomNavigationAction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/BottomNavigationAction/bottomNavigationActionClasses.js": {
+    "getBottomNavigationActionUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Box/Box.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Box/boxClasses.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Breadcrumbs/BreadcrumbCollapsed.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Breadcrumbs/Breadcrumbs.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Breadcrumbs/breadcrumbsClasses.js": {
+    "getBreadcrumbsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Button/Button.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Button/buttonClasses.js": {
+    "getButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ButtonBase/ButtonBase.js": {
+    "ButtonBaseRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ButtonBase/Ripple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ButtonBase/TouchRipple.js": {
+    "DELAY_RIPPLE": {
+      "type": "number"
+    },
+    "TouchRippleRoot": {
+      "type": "CallExpression"
+    },
+    "TouchRippleRipple": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ButtonBase/buttonBaseClasses.js": {
+    "getButtonBaseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ButtonBase/touchRippleClasses.js": {
+    "getTouchRippleUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ButtonGroup/ButtonGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ButtonGroup/ButtonGroupButtonContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ButtonGroup/ButtonGroupContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ButtonGroup/buttonGroupClasses.js": {
+    "getButtonGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Card/Card.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Card/cardClasses.js": {
+    "getCardUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CardActionArea/CardActionArea.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CardActionArea/cardActionAreaClasses.js": {
+    "getCardActionAreaUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CardActions/CardActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CardActions/cardActionsClasses.js": {
+    "getCardActionsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CardContent/CardContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CardContent/cardContentClasses.js": {
+    "getCardContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CardHeader/CardHeader.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CardHeader/cardHeaderClasses.js": {
+    "getCardHeaderUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CardMedia/CardMedia.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CardMedia/cardMediaClasses.js": {
+    "getCardMediaUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Checkbox/Checkbox.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Checkbox/checkboxClasses.js": {
+    "getCheckboxUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Chip/Chip.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Chip/chipClasses.js": {
+    "getChipUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CircularProgress/CircularProgress.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CircularProgress/circularProgressClasses.js": {
+    "getCircularProgressUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Collapse/Collapse.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Collapse/collapseClasses.js": {
+    "getCollapseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Container/Container.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Container/containerClasses.js": {
+    "getContainerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/CssBaseline/CssBaseline.js": {
+    "html": {
+      "type": "function"
+    },
+    "body": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/DefaultPropsProvider/DefaultPropsProvider.js": {
+    "default": {
+      "type": "Identifier"
+    },
+    "useDefaultProps": {
+      "type": "function"
+    }
+  },
+  "legacy/Dialog/Dialog.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Dialog/DialogContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Dialog/dialogClasses.js": {
+    "getDialogUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/DialogActions/DialogActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/DialogActions/dialogActionsClasses.js": {
+    "getDialogActionsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/DialogContent/DialogContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/DialogContent/dialogContentClasses.js": {
+    "getDialogContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/DialogContentText/DialogContentText.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/DialogContentText/dialogContentTextClasses.js": {
+    "getDialogContentTextUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/DialogTitle/DialogTitle.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/DialogTitle/dialogTitleClasses.js": {
+    "getDialogTitleUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Divider/Divider.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Divider/dividerClasses.js": {
+    "getDividerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Drawer/Drawer.js": {
+    "isHorizontal": {
+      "type": "function"
+    },
+    "getAnchor": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Drawer/drawerClasses.js": {
+    "getDrawerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Fab/Fab.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Fab/fabClasses.js": {
+    "getFabUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Fade/Fade.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FilledInput/FilledInput.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FilledInput/filledInputClasses.js": {
+    "getFilledInputUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FormControl/FormControl.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FormControl/FormControlContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FormControl/formControlClasses.js": {
+    "getFormControlUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FormControl/formControlState.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/FormControl/useFormControl.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/FormControlLabel/FormControlLabel.js": {
+    "FormControlLabelRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FormControlLabel/formControlLabelClasses.js": {
+    "getFormControlLabelUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FormGroup/FormGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FormGroup/formGroupClasses.js": {
+    "getFormGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FormHelperText/FormHelperText.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FormHelperText/formHelperTextClasses.js": {
+    "getFormHelperTextUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FormLabel/FormLabel.js": {
+    "FormLabelRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/FormLabel/formLabelClasses.js": {
+    "getFormLabelUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/GlobalStyles/GlobalStyles.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Grid/Grid.js": {
+    "generateGrid": {
+      "type": "function"
+    },
+    "generateDirection": {
+      "type": "function"
+    },
+    "generateRowGap": {
+      "type": "function"
+    },
+    "generateColumnGap": {
+      "type": "function"
+    },
+    "resolveSpacingStyles": {
+      "type": "function"
+    },
+    "resolveSpacingClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Grid/GridContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Grid/gridClasses.js": {
+    "getGridUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Grow/Grow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Hidden/Hidden.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Hidden/HiddenCss.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Hidden/HiddenJs.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/Hidden/hiddenCssClasses.js": {
+    "getHiddenCssUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Hidden/withWidth.js": {
+    "isWidthUp": {
+      "type": "function"
+    },
+    "isWidthDown": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Icon/Icon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Icon/iconClasses.js": {
+    "getIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/IconButton/IconButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/IconButton/iconButtonClasses.js": {
+    "getIconButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ImageList/ImageList.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ImageList/ImageListContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ImageList/imageListClasses.js": {
+    "getImageListUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ImageListItem/ImageListItem.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ImageListItem/imageListItemClasses.js": {
+    "getImageListItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ImageListItemBar/ImageListItemBar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ImageListItemBar/imageListItemBarClasses.js": {
+    "getImageListItemBarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/InitColorSchemeScript/InitColorSchemeScript.js": {
+    "defaultConfig": {
+      "type": "object",
+      "sampleKeys": [
+        "attribute",
+        "colorSchemeStorageKey",
+        "defaultLightColorScheme",
+        "defaultDarkColorScheme",
+        "modeStorageKey"
+      ]
+    },
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/Input/Input.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Input/inputClasses.js": {
+    "getInputUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/InputAdornment/InputAdornment.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/InputAdornment/inputAdornmentClasses.js": {
+    "getInputAdornmentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/InputBase/InputBase.js": {
+    "rootOverridesResolver": {
+      "type": "function"
+    },
+    "inputOverridesResolver": {
+      "type": "function"
+    },
+    "InputBaseRoot": {
+      "type": "CallExpression"
+    },
+    "InputBaseComponent": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/InputBase/inputBaseClasses.js": {
+    "getInputBaseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/InputBase/utils.js": {
+    "hasValue": {
+      "type": "function"
+    },
+    "isFilled": {
+      "type": "function"
+    },
+    "isAdornedStart": {
+      "type": "function"
+    }
+  },
+  "legacy/InputLabel/InputLabel.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/InputLabel/inputLabelClasses.js": {
+    "getInputLabelUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/LinearProgress/LinearProgress.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/LinearProgress/linearProgressClasses.js": {
+    "getLinearProgressUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Link/Link.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Link/getTextDecoration.js": {
+    "colorTransformations": {
+      "type": "object",
+      "sampleKeys": [
+        "primary",
+        "textPrimary",
+        "secondary",
+        "textSecondary",
+        "error"
+      ]
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Link/linkClasses.js": {
+    "getLinkUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/List/List.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/List/ListContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/List/listClasses.js": {
+    "getListUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItem/ListItem.js": {
+    "overridesResolver": {
+      "type": "function"
+    },
+    "ListItemRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItem/listItemClasses.js": {
+    "getListItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItemAvatar/ListItemAvatar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItemAvatar/listItemAvatarClasses.js": {
+    "getListItemAvatarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItemButton/ListItemButton.js": {
+    "overridesResolver": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItemButton/listItemButtonClasses.js": {
+    "getListItemButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItemIcon/ListItemIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItemIcon/listItemIconClasses.js": {
+    "getListItemIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItemSecondaryAction/ListItemSecondaryAction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItemSecondaryAction/listItemSecondaryActionClasses.js": {
+    "getListItemSecondaryActionClassesUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItemText/ListItemText.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListItemText/listItemTextClasses.js": {
+    "getListItemTextUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListSubheader/ListSubheader.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ListSubheader/listSubheaderClasses.js": {
+    "getListSubheaderUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Menu/Menu.js": {
+    "MenuPaper": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Menu/menuClasses.js": {
+    "getMenuUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/MenuItem/MenuItem.js": {
+    "overridesResolver": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/MenuItem/menuItemClasses.js": {
+    "getMenuItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/MenuList/MenuList.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/MobileStepper/MobileStepper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/MobileStepper/mobileStepperClasses.js": {
+    "getMobileStepperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Modal/Modal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Modal/ModalManager.js": {
+    "ariaHidden": {
+      "type": "function"
+    },
+    "ModalManager": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/Modal/modalClasses.js": {
+    "getModalUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Modal/useModal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/NativeSelect/NativeSelect.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/NativeSelect/NativeSelectInput.js": {
+    "nativeSelectSelectStyles": {
+      "type": "function"
+    },
+    "nativeSelectIconStyles": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/NativeSelect/nativeSelectClasses.js": {
+    "getNativeSelectUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/NoSsr/NoSsr.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/OutlinedInput/NotchedOutline.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/OutlinedInput/OutlinedInput.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/OutlinedInput/outlinedInputClasses.js": {
+    "getOutlinedInputUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Pagination/Pagination.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Pagination/paginationClasses.js": {
+    "getPaginationUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/PaginationItem/PaginationItem.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/PaginationItem/paginationItemClasses.js": {
+    "getPaginationItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Paper/Paper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Paper/paperClasses.js": {
+    "getPaperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Popover/Popover.js": {
+    "getOffsetTop": {
+      "type": "function"
+    },
+    "getOffsetLeft": {
+      "type": "function"
+    },
+    "PopoverRoot": {
+      "type": "CallExpression"
+    },
+    "PopoverPaper": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Popover/popoverClasses.js": {
+    "getPopoverUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Popper/BasePopper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Popper/Popper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Popper/popperClasses.js": {
+    "getPopperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Portal/Portal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Radio/Radio.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Radio/RadioButtonIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Radio/radioClasses.js": {
+    "getRadioUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/RadioGroup/RadioGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/RadioGroup/RadioGroupContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/RadioGroup/radioGroupClasses.js": {
+    "getRadioGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/RadioGroup/useRadioGroup.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/Rating/Rating.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Rating/ratingClasses.js": {
+    "getRatingUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ScopedCssBaseline/ScopedCssBaseline.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ScopedCssBaseline/scopedCssBaselineClasses.js": {
+    "getScopedCssBaselineUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Select/Select.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Select/SelectInput.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Select/selectClasses.js": {
+    "getSelectUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Skeleton/Skeleton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Skeleton/skeletonClasses.js": {
+    "getSkeletonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Slide/Slide.js": {
+    "setTranslateValue": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Slider/Slider.js": {
+    "SliderRoot": {
+      "type": "CallExpression"
+    },
+    "SliderRail": {
+      "type": "CallExpression"
+    },
+    "SliderTrack": {
+      "type": "CallExpression"
+    },
+    "SliderThumb": {
+      "type": "CallExpression"
+    },
+    "SliderValueLabel": {
+      "type": "CallExpression"
+    },
+    "SliderMark": {
+      "type": "CallExpression"
+    },
+    "SliderMarkLabel": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Slider/SliderValueLabel.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/Slider/sliderClasses.js": {
+    "getSliderUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Slider/useSlider.js": {
+    "valueToPercent": {
+      "type": "function"
+    },
+    "Identity": {
+      "type": "function"
+    },
+    "useSlider": {
+      "type": "function"
+    }
+  },
+  "legacy/Snackbar/Snackbar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Snackbar/snackbarClasses.js": {
+    "getSnackbarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Snackbar/useSnackbar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SnackbarContent/SnackbarContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SnackbarContent/snackbarContentClasses.js": {
+    "getSnackbarContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SpeedDial/SpeedDial.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SpeedDial/speedDialClasses.js": {
+    "getSpeedDialUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SpeedDialAction/SpeedDialAction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SpeedDialAction/speedDialActionClasses.js": {
+    "getSpeedDialActionUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SpeedDialIcon/SpeedDialIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SpeedDialIcon/speedDialIconClasses.js": {
+    "getSpeedDialIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Stack/Stack.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Stack/stackClasses.js": {
+    "getStackUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Step/Step.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Step/StepContext.js": {
+    "useStepContext": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Step/stepClasses.js": {
+    "getStepUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/StepButton/StepButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/StepButton/stepButtonClasses.js": {
+    "getStepButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/StepConnector/StepConnector.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/StepConnector/stepConnectorClasses.js": {
+    "getStepConnectorUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/StepContent/StepContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/StepContent/stepContentClasses.js": {
+    "getStepContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/StepIcon/StepIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/StepIcon/stepIconClasses.js": {
+    "getStepIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/StepLabel/StepLabel.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/StepLabel/stepLabelClasses.js": {
+    "getStepLabelUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Stepper/Stepper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Stepper/StepperContext.js": {
+    "useStepperContext": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Stepper/stepperClasses.js": {
+    "getStepperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SvgIcon/SvgIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SvgIcon/svgIconClasses.js": {
+    "getSvgIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SwipeableDrawer/SwipeArea.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/SwipeableDrawer/SwipeableDrawer.js": {
+    "reset": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Switch/Switch.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Switch/switchClasses.js": {
+    "getSwitchUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Tab/Tab.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Tab/tabClasses.js": {
+    "getTabUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TabScrollButton/TabScrollButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TabScrollButton/tabScrollButtonClasses.js": {
+    "getTabScrollButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Table/Table.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Table/TableContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Table/Tablelvl2Context.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Table/tableClasses.js": {
+    "getTableUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableBody/TableBody.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableBody/tableBodyClasses.js": {
+    "getTableBodyUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableCell/TableCell.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableCell/tableCellClasses.js": {
+    "getTableCellUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableContainer/TableContainer.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableContainer/tableContainerClasses.js": {
+    "getTableContainerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableFooter/TableFooter.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableFooter/tableFooterClasses.js": {
+    "getTableFooterUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableHead/TableHead.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableHead/tableHeadClasses.js": {
+    "getTableHeadUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TablePagination/TablePagination.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TablePagination/TablePaginationActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TablePagination/tablePaginationClasses.js": {
+    "getTablePaginationUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableRow/TableRow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableRow/tableRowClasses.js": {
+    "getTableRowUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableSortLabel/TableSortLabel.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TableSortLabel/tableSortLabelClasses.js": {
+    "getTableSortLabelUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Tabs/ScrollbarSize.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/Tabs/Tabs.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Tabs/tabsClasses.js": {
+    "getTabsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TextField/TextField.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TextField/textFieldClasses.js": {
+    "getTextFieldUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/TextareaAutosize/TextareaAutosize.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ToggleButton/ToggleButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ToggleButton/toggleButtonClasses.js": {
+    "getToggleButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ToggleButtonGroup/ToggleButtonGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ToggleButtonGroup/ToggleButtonGroupButtonContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ToggleButtonGroup/ToggleButtonGroupContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/ToggleButtonGroup/isValueSelected.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/ToggleButtonGroup/toggleButtonGroupClasses.js": {
+    "getToggleButtonGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Toolbar/Toolbar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Toolbar/toolbarClasses.js": {
+    "getToolbarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Tooltip/Tooltip.js": {
+    "testReset": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Tooltip/tooltipClasses.js": {
+    "getTooltipUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Typography/Typography.js": {
+    "TypographyRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "legacy/Typography/index.js": {
+    "_themeRelated": true
+  },
+  "legacy/Typography/typographyClasses.js": {
+    "getTypographyUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "legacy/Unstable_Grid2/Grid2.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Unstable_Grid2/grid2Classes.js": {
+    "getGrid2UtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Unstable_TrapFocus/FocusTrap.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/Zoom/Zoom.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/amber.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/blue.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/blueGrey.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/brown.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/common.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/cyan.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/deepOrange.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/deepPurple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/green.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/grey.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/indigo.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/lightBlue.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/lightGreen.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/lime.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/orange.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/pink.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/purple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/red.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/teal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/colors/yellow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/darkScrollbar/index.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/internal/SwitchBase.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/internal/animate.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/internal/svg-icons/Add.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/ArrowDownward.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/ArrowDropDown.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/Cancel.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/CheckBox.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/CheckBoxOutlineBlank.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/CheckCircle.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/Close.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/ErrorOutline.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/FirstPage.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/IndeterminateCheckBox.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/InfoOutlined.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/KeyboardArrowLeft.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/KeyboardArrowRight.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/LastPage.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/MoreHoriz.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/NavigateBefore.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/NavigateNext.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/Person.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/RadioButtonChecked.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/RadioButtonUnchecked.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/ReportProblemOutlined.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/Star.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/StarBorder.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/SuccessOutlined.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/svg-icons/Warning.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "legacy/internal/switchBaseClasses.js": {
+    "getSwitchBaseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/locale/index.js": {
+    "amET": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "arEG": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "arSA": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "arSD": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "azAZ": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "bnBD": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "beBY": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "bgBG": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "caES": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "csCZ": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "daDK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "deDE": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "elGR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "enUS": {
+      "type": "object",
+      "sampleKeys": []
+    },
+    "esES": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "etEE": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "faIR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "fiFI": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "frFR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "heIL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "hiIN": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "hrHR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "huHU": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "hyAM": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "idID": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "isIS": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "itIT": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "jaJP": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "khKH": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "koKR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "kuCKB": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "kuLatn": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "kkKZ": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "mkMK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "myMY": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "msMS": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "neNP": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "nbNO": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "nnNO": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "nlNL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "plPL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ptBR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ptPT": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "roRO": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "srRS": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ruRU": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "siLK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "skSK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "svSE": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "thTH": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "trTR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "tlTL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ukUA": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "urPK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "viVN": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "zhCN": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "zhHK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "zhTW": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    }
+  },
+  "legacy/styles/CssVarsProvider.js": {
+    "getInitColorSchemeScript": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/styles/ThemeProvider.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/adaptV4Theme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/createMixins.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/styles/createMuiStrictModeTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/createPalette.js": {
+    "light": {
+      "type": "object",
+      "sampleKeys": [
+        "text",
+        "divider",
+        "background",
+        "action"
+      ]
+    },
+    "dark": {
+      "type": "object",
+      "sampleKeys": [
+        "text",
+        "divider",
+        "background",
+        "action"
+      ]
+    },
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/createStyles.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/styles/createTheme.js": {
+    "createMuiTheme": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/createTransitions.js": {
+    "easing": {
+      "type": "object",
+      "sampleKeys": [
+        "easeInOut",
+        "easeOut",
+        "easeIn",
+        "sharp"
+      ]
+    },
+    "duration": {
+      "type": "object",
+      "sampleKeys": [
+        "shortest",
+        "shorter",
+        "short",
+        "standard",
+        "complex"
+      ]
+    },
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/styles/createTypography.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/cssUtils.js": {
+    "isUnitless": {
+      "type": "function"
+    },
+    "getUnit": {
+      "type": "function"
+    },
+    "toUnitless": {
+      "type": "function"
+    },
+    "convertLength": {
+      "type": "function"
+    },
+    "alignProperty": {
+      "type": "function"
+    },
+    "fontGrid": {
+      "type": "function"
+    },
+    "responsiveProperty": {
+      "type": "function"
+    }
+  },
+  "legacy/styles/defaultTheme.js": {
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/excludeVariablesFromRoot.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/styles/experimental_extendTheme.js": {
+    "createGetCssVar": {
+      "type": "function"
+    },
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/getOverlayAlpha.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/styles/identifier.js": {
+    "default": {
+      "type": "string"
+    }
+  },
+  "legacy/styles/index.js": {
+    "experimental_sx": {
+      "type": "function"
+    }
+  },
+  "legacy/styles/makeStyles.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/styles/responsiveFontSizes.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/styles/rootShouldForwardProp.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/styles/shadows.js": {
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/shouldSkipGeneratingVar.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/styles/slotShouldForwardProp.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/styles/styled.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/styles/useTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/useThemeProps.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/withStyles.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/styles/withTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "legacy/styles/zIndex.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/transitions/utils.js": {
+    "reflow": {
+      "type": "function"
+    },
+    "getTransitionProps": {
+      "type": "function"
+    }
+  },
+  "legacy/useAutocomplete/useAutocomplete.js": {
+    "createFilterOptions": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/useMediaQuery/useMediaQueryTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "legacy/usePagination/usePagination.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/useScrollTrigger/useScrollTrigger.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/useTouchRipple/useTouchRipple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/areArraysEqual.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/capitalize.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/createChainedFunction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/createSvgIcon.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/utils/debounce.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/deprecatedPropType.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/getScrollbarSize.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/index.js": {
+    "unstable_ClassNameGenerator": {
+      "type": "object",
+      "sampleKeys": [
+        "configure"
+      ]
+    }
+  },
+  "legacy/utils/isMuiElement.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/ownerDocument.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/ownerWindow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/requirePropFactory.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/setRef.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/shouldSpreadAdditionalProps.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/unsupportedProp.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/useControlled.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/useEnhancedEffect.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/useEventCallback.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/useForkRef.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/useId.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/useIsFocusVisible.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/utils/useSlot.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "legacy/version/index.js": {
+    "version": {
+      "type": "string"
+    },
+    "major": {
+      "type": "CallExpression"
+    },
+    "minor": {
+      "type": "CallExpression"
+    },
+    "patch": {
+      "type": "CallExpression"
+    },
+    "preReleaseLabel": {
+      "type": "LogicalExpression"
+    },
+    "preReleaseNumber": {
+      "type": "LogicalExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "legacy/zero-styled/index.js": {
+    "createUseThemeProps": {
+      "type": "function"
+    }
+  },
+  "locale/index.js": {
+    "amET": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "arEG": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "arSA": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "arSD": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "azAZ": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "bnBD": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "beBY": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "bgBG": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "caES": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "csCZ": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "daDK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "deDE": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "elGR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "enUS": {
+      "type": "object",
+      "sampleKeys": []
+    },
+    "esES": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "etEE": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "faIR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "fiFI": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "frFR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "heIL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "hiIN": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "hrHR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "huHU": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "hyAM": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "idID": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "isIS": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "itIT": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "jaJP": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "khKH": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "koKR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "kuCKB": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "kuLatn": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "kkKZ": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "mkMK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "myMY": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "msMS": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "neNP": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "nbNO": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "nnNO": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "nlNL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "plPL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ptBR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ptPT": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "roRO": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "srRS": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ruRU": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "siLK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "skSK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "svSE": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "thTH": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "trTR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "tlTL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ukUA": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "urPK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "viVN": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "zhCN": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "zhHK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "zhTW": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    }
+  },
+  "modern/Accordion/Accordion.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Accordion/AccordionContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Accordion/accordionClasses.js": {
+    "getAccordionUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AccordionActions/AccordionActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AccordionActions/accordionActionsClasses.js": {
+    "getAccordionActionsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AccordionDetails/AccordionDetails.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AccordionDetails/accordionDetailsClasses.js": {
+    "getAccordionDetailsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AccordionSummary/AccordionSummary.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AccordionSummary/accordionSummaryClasses.js": {
+    "getAccordionSummaryUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Alert/Alert.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Alert/alertClasses.js": {
+    "getAlertUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AlertTitle/AlertTitle.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AlertTitle/alertTitleClasses.js": {
+    "getAlertTitleUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AppBar/AppBar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AppBar/appBarClasses.js": {
+    "getAppBarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Autocomplete/Autocomplete.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Autocomplete/autocompleteClasses.js": {
+    "getAutocompleteUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Avatar/Avatar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Avatar/avatarClasses.js": {
+    "getAvatarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AvatarGroup/AvatarGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/AvatarGroup/avatarGroupClasses.js": {
+    "getAvatarGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Backdrop/Backdrop.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Backdrop/backdropClasses.js": {
+    "getBackdropUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Badge/Badge.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Badge/badgeClasses.js": {
+    "getBadgeUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Badge/useBadge.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/BottomNavigation/BottomNavigation.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/BottomNavigation/bottomNavigationClasses.js": {
+    "getBottomNavigationUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/BottomNavigationAction/BottomNavigationAction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/BottomNavigationAction/bottomNavigationActionClasses.js": {
+    "getBottomNavigationActionUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Box/Box.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Box/boxClasses.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Breadcrumbs/BreadcrumbCollapsed.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Breadcrumbs/Breadcrumbs.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Breadcrumbs/breadcrumbsClasses.js": {
+    "getBreadcrumbsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Button/Button.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Button/buttonClasses.js": {
+    "getButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ButtonBase/ButtonBase.js": {
+    "ButtonBaseRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ButtonBase/Ripple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ButtonBase/TouchRipple.js": {
+    "DELAY_RIPPLE": {
+      "type": "number"
+    },
+    "TouchRippleRoot": {
+      "type": "CallExpression"
+    },
+    "TouchRippleRipple": {
+      "type": "TaggedTemplateExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ButtonBase/buttonBaseClasses.js": {
+    "getButtonBaseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ButtonBase/touchRippleClasses.js": {
+    "getTouchRippleUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ButtonGroup/ButtonGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ButtonGroup/ButtonGroupButtonContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ButtonGroup/ButtonGroupContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ButtonGroup/buttonGroupClasses.js": {
+    "getButtonGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Card/Card.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Card/cardClasses.js": {
+    "getCardUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CardActionArea/CardActionArea.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CardActionArea/cardActionAreaClasses.js": {
+    "getCardActionAreaUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CardActions/CardActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CardActions/cardActionsClasses.js": {
+    "getCardActionsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CardContent/CardContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CardContent/cardContentClasses.js": {
+    "getCardContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CardHeader/CardHeader.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CardHeader/cardHeaderClasses.js": {
+    "getCardHeaderUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CardMedia/CardMedia.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CardMedia/cardMediaClasses.js": {
+    "getCardMediaUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Checkbox/Checkbox.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Checkbox/checkboxClasses.js": {
+    "getCheckboxUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Chip/Chip.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Chip/chipClasses.js": {
+    "getChipUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CircularProgress/CircularProgress.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CircularProgress/circularProgressClasses.js": {
+    "getCircularProgressUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Collapse/Collapse.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Collapse/collapseClasses.js": {
+    "getCollapseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Container/Container.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Container/containerClasses.js": {
+    "getContainerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/CssBaseline/CssBaseline.js": {
+    "html": {
+      "type": "function"
+    },
+    "body": {
+      "type": "function"
+    },
+    "styles": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/DefaultPropsProvider/DefaultPropsProvider.js": {
+    "default": {
+      "type": "Identifier"
+    },
+    "useDefaultProps": {
+      "type": "function"
+    }
+  },
+  "modern/Dialog/Dialog.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Dialog/DialogContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Dialog/dialogClasses.js": {
+    "getDialogUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/DialogActions/DialogActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/DialogActions/dialogActionsClasses.js": {
+    "getDialogActionsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/DialogContent/DialogContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/DialogContent/dialogContentClasses.js": {
+    "getDialogContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/DialogContentText/DialogContentText.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/DialogContentText/dialogContentTextClasses.js": {
+    "getDialogContentTextUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/DialogTitle/DialogTitle.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/DialogTitle/dialogTitleClasses.js": {
+    "getDialogTitleUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Divider/Divider.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Divider/dividerClasses.js": {
+    "getDividerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Drawer/Drawer.js": {
+    "isHorizontal": {
+      "type": "function"
+    },
+    "getAnchor": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Drawer/drawerClasses.js": {
+    "getDrawerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Fab/Fab.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Fab/fabClasses.js": {
+    "getFabUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Fade/Fade.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FilledInput/FilledInput.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FilledInput/filledInputClasses.js": {
+    "getFilledInputUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FormControl/FormControl.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FormControl/FormControlContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FormControl/formControlClasses.js": {
+    "getFormControlUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FormControl/formControlState.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/FormControl/useFormControl.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/FormControlLabel/FormControlLabel.js": {
+    "FormControlLabelRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FormControlLabel/formControlLabelClasses.js": {
+    "getFormControlLabelUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FormGroup/FormGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FormGroup/formGroupClasses.js": {
+    "getFormGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FormHelperText/FormHelperText.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FormHelperText/formHelperTextClasses.js": {
+    "getFormHelperTextUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FormLabel/FormLabel.js": {
+    "FormLabelRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/FormLabel/formLabelClasses.js": {
+    "getFormLabelUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/GlobalStyles/GlobalStyles.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Grid/Grid.js": {
+    "generateGrid": {
+      "type": "function"
+    },
+    "generateDirection": {
+      "type": "function"
+    },
+    "generateRowGap": {
+      "type": "function"
+    },
+    "generateColumnGap": {
+      "type": "function"
+    },
+    "resolveSpacingStyles": {
+      "type": "function"
+    },
+    "resolveSpacingClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Grid/GridContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Grid/gridClasses.js": {
+    "getGridUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Grow/Grow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Hidden/Hidden.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Hidden/HiddenCss.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Hidden/HiddenJs.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/Hidden/hiddenCssClasses.js": {
+    "getHiddenCssUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Hidden/withWidth.js": {
+    "isWidthUp": {
+      "type": "function"
+    },
+    "isWidthDown": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Icon/Icon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Icon/iconClasses.js": {
+    "getIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/IconButton/IconButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/IconButton/iconButtonClasses.js": {
+    "getIconButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ImageList/ImageList.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ImageList/ImageListContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ImageList/imageListClasses.js": {
+    "getImageListUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ImageListItem/ImageListItem.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ImageListItem/imageListItemClasses.js": {
+    "getImageListItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ImageListItemBar/ImageListItemBar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ImageListItemBar/imageListItemBarClasses.js": {
+    "getImageListItemBarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/InitColorSchemeScript/InitColorSchemeScript.js": {
+    "defaultConfig": {
+      "type": "object",
+      "sampleKeys": [
+        "attribute",
+        "colorSchemeStorageKey",
+        "defaultLightColorScheme",
+        "defaultDarkColorScheme",
+        "modeStorageKey"
+      ]
+    },
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/Input/Input.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Input/inputClasses.js": {
+    "getInputUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/InputAdornment/InputAdornment.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/InputAdornment/inputAdornmentClasses.js": {
+    "getInputAdornmentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/InputBase/InputBase.js": {
+    "rootOverridesResolver": {
+      "type": "function"
+    },
+    "inputOverridesResolver": {
+      "type": "function"
+    },
+    "InputBaseRoot": {
+      "type": "CallExpression"
+    },
+    "InputBaseComponent": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/InputBase/inputBaseClasses.js": {
+    "getInputBaseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/InputBase/utils.js": {
+    "hasValue": {
+      "type": "function"
+    },
+    "isFilled": {
+      "type": "function"
+    },
+    "isAdornedStart": {
+      "type": "function"
+    }
+  },
+  "modern/InputLabel/InputLabel.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/InputLabel/inputLabelClasses.js": {
+    "getInputLabelUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/LinearProgress/LinearProgress.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/LinearProgress/linearProgressClasses.js": {
+    "getLinearProgressUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Link/Link.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Link/getTextDecoration.js": {
+    "colorTransformations": {
+      "type": "object",
+      "sampleKeys": [
+        "primary",
+        "textPrimary",
+        "secondary",
+        "textSecondary",
+        "error"
+      ]
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Link/linkClasses.js": {
+    "getLinkUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/List/List.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/List/ListContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/List/listClasses.js": {
+    "getListUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItem/ListItem.js": {
+    "overridesResolver": {
+      "type": "function"
+    },
+    "ListItemRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItem/listItemClasses.js": {
+    "getListItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItemAvatar/ListItemAvatar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItemAvatar/listItemAvatarClasses.js": {
+    "getListItemAvatarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItemButton/ListItemButton.js": {
+    "overridesResolver": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItemButton/listItemButtonClasses.js": {
+    "getListItemButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItemIcon/ListItemIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItemIcon/listItemIconClasses.js": {
+    "getListItemIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItemSecondaryAction/ListItemSecondaryAction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItemSecondaryAction/listItemSecondaryActionClasses.js": {
+    "getListItemSecondaryActionClassesUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItemText/ListItemText.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListItemText/listItemTextClasses.js": {
+    "getListItemTextUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListSubheader/ListSubheader.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ListSubheader/listSubheaderClasses.js": {
+    "getListSubheaderUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Menu/Menu.js": {
+    "MenuPaper": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Menu/menuClasses.js": {
+    "getMenuUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/MenuItem/MenuItem.js": {
+    "overridesResolver": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/MenuItem/menuItemClasses.js": {
+    "getMenuItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/MenuList/MenuList.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/MobileStepper/MobileStepper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/MobileStepper/mobileStepperClasses.js": {
+    "getMobileStepperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Modal/Modal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Modal/ModalManager.js": {
+    "ariaHidden": {
+      "type": "function"
+    }
+  },
+  "modern/Modal/modalClasses.js": {
+    "getModalUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Modal/useModal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/NativeSelect/NativeSelect.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/NativeSelect/NativeSelectInput.js": {
+    "nativeSelectSelectStyles": {
+      "type": "function"
+    },
+    "nativeSelectIconStyles": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/NativeSelect/nativeSelectClasses.js": {
+    "getNativeSelectUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/NoSsr/NoSsr.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/OutlinedInput/NotchedOutline.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/OutlinedInput/OutlinedInput.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/OutlinedInput/outlinedInputClasses.js": {
+    "getOutlinedInputUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Pagination/Pagination.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Pagination/paginationClasses.js": {
+    "getPaginationUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/PaginationItem/PaginationItem.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/PaginationItem/paginationItemClasses.js": {
+    "getPaginationItemUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Paper/Paper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Paper/paperClasses.js": {
+    "getPaperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Popover/Popover.js": {
+    "getOffsetTop": {
+      "type": "function"
+    },
+    "getOffsetLeft": {
+      "type": "function"
+    },
+    "PopoverRoot": {
+      "type": "CallExpression"
+    },
+    "PopoverPaper": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Popover/popoverClasses.js": {
+    "getPopoverUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Popper/BasePopper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Popper/Popper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Popper/popperClasses.js": {
+    "getPopperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Portal/Portal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Radio/Radio.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Radio/RadioButtonIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Radio/radioClasses.js": {
+    "getRadioUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/RadioGroup/RadioGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/RadioGroup/RadioGroupContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/RadioGroup/radioGroupClasses.js": {
+    "getRadioGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/RadioGroup/useRadioGroup.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/Rating/Rating.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Rating/ratingClasses.js": {
+    "getRatingUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ScopedCssBaseline/ScopedCssBaseline.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ScopedCssBaseline/scopedCssBaselineClasses.js": {
+    "getScopedCssBaselineUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Select/Select.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Select/SelectInput.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Select/selectClasses.js": {
+    "getSelectUtilityClasses": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Skeleton/Skeleton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Skeleton/skeletonClasses.js": {
+    "getSkeletonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Slide/Slide.js": {
+    "setTranslateValue": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Slider/Slider.js": {
+    "SliderRoot": {
+      "type": "CallExpression"
+    },
+    "SliderRail": {
+      "type": "CallExpression"
+    },
+    "SliderTrack": {
+      "type": "CallExpression"
+    },
+    "SliderThumb": {
+      "type": "CallExpression"
+    },
+    "SliderValueLabel": {
+      "type": "CallExpression"
+    },
+    "SliderMark": {
+      "type": "CallExpression"
+    },
+    "SliderMarkLabel": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Slider/SliderValueLabel.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/Slider/sliderClasses.js": {
+    "getSliderUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Slider/useSlider.js": {
+    "valueToPercent": {
+      "type": "function"
+    },
+    "Identity": {
+      "type": "function"
+    },
+    "useSlider": {
+      "type": "function"
+    }
+  },
+  "modern/Snackbar/Snackbar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Snackbar/snackbarClasses.js": {
+    "getSnackbarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Snackbar/useSnackbar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SnackbarContent/SnackbarContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SnackbarContent/snackbarContentClasses.js": {
+    "getSnackbarContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SpeedDial/SpeedDial.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SpeedDial/speedDialClasses.js": {
+    "getSpeedDialUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SpeedDialAction/SpeedDialAction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SpeedDialAction/speedDialActionClasses.js": {
+    "getSpeedDialActionUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SpeedDialIcon/SpeedDialIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SpeedDialIcon/speedDialIconClasses.js": {
+    "getSpeedDialIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Stack/Stack.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Stack/stackClasses.js": {
+    "getStackUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Step/Step.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Step/StepContext.js": {
+    "useStepContext": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Step/stepClasses.js": {
+    "getStepUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/StepButton/StepButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/StepButton/stepButtonClasses.js": {
+    "getStepButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/StepConnector/StepConnector.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/StepConnector/stepConnectorClasses.js": {
+    "getStepConnectorUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/StepContent/StepContent.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/StepContent/stepContentClasses.js": {
+    "getStepContentUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/StepIcon/StepIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/StepIcon/stepIconClasses.js": {
+    "getStepIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/StepLabel/StepLabel.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/StepLabel/stepLabelClasses.js": {
+    "getStepLabelUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Stepper/Stepper.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Stepper/StepperContext.js": {
+    "useStepperContext": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Stepper/stepperClasses.js": {
+    "getStepperUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SvgIcon/SvgIcon.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SvgIcon/svgIconClasses.js": {
+    "getSvgIconUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SwipeableDrawer/SwipeArea.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/SwipeableDrawer/SwipeableDrawer.js": {
+    "reset": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Switch/Switch.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Switch/switchClasses.js": {
+    "getSwitchUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Tab/Tab.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Tab/tabClasses.js": {
+    "getTabUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TabScrollButton/TabScrollButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TabScrollButton/tabScrollButtonClasses.js": {
+    "getTabScrollButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Table/Table.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Table/TableContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Table/Tablelvl2Context.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Table/tableClasses.js": {
+    "getTableUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableBody/TableBody.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableBody/tableBodyClasses.js": {
+    "getTableBodyUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableCell/TableCell.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableCell/tableCellClasses.js": {
+    "getTableCellUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableContainer/TableContainer.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableContainer/tableContainerClasses.js": {
+    "getTableContainerUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableFooter/TableFooter.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableFooter/tableFooterClasses.js": {
+    "getTableFooterUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableHead/TableHead.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableHead/tableHeadClasses.js": {
+    "getTableHeadUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TablePagination/TablePagination.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TablePagination/TablePaginationActions.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TablePagination/tablePaginationClasses.js": {
+    "getTablePaginationUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableRow/TableRow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableRow/tableRowClasses.js": {
+    "getTableRowUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableSortLabel/TableSortLabel.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TableSortLabel/tableSortLabelClasses.js": {
+    "getTableSortLabelUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Tabs/ScrollbarSize.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/Tabs/Tabs.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Tabs/tabsClasses.js": {
+    "getTabsUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TextField/TextField.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TextField/textFieldClasses.js": {
+    "getTextFieldUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/TextareaAutosize/TextareaAutosize.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ToggleButton/ToggleButton.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ToggleButton/toggleButtonClasses.js": {
+    "getToggleButtonUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ToggleButtonGroup/ToggleButtonGroup.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ToggleButtonGroup/ToggleButtonGroupButtonContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ToggleButtonGroup/ToggleButtonGroupContext.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/ToggleButtonGroup/isValueSelected.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/ToggleButtonGroup/toggleButtonGroupClasses.js": {
+    "getToggleButtonGroupUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Toolbar/Toolbar.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Toolbar/toolbarClasses.js": {
+    "getToolbarUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Tooltip/Tooltip.js": {
+    "testReset": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Tooltip/tooltipClasses.js": {
+    "getTooltipUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Typography/Typography.js": {
+    "TypographyRoot": {
+      "type": "CallExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "modern/Typography/index.js": {
+    "_themeRelated": true
+  },
+  "modern/Typography/typographyClasses.js": {
+    "getTypographyUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "modern/Unstable_Grid2/Grid2.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Unstable_Grid2/grid2Classes.js": {
+    "getGrid2UtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Unstable_TrapFocus/FocusTrap.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/Zoom/Zoom.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/amber.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/blue.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/blueGrey.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/brown.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/common.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/cyan.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/deepOrange.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/deepPurple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/green.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/grey.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/indigo.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/lightBlue.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/lightGreen.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/lime.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/orange.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/pink.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/purple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/red.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/teal.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/colors/yellow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/darkScrollbar/index.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/internal/SwitchBase.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/internal/animate.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/internal/svg-icons/Add.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/ArrowDownward.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/ArrowDropDown.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/Cancel.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/CheckBox.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/CheckBoxOutlineBlank.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/CheckCircle.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/Close.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/ErrorOutline.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/FirstPage.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/IndeterminateCheckBox.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/InfoOutlined.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/KeyboardArrowLeft.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/KeyboardArrowRight.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/LastPage.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/MoreHoriz.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/NavigateBefore.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/NavigateNext.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/Person.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/RadioButtonChecked.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/RadioButtonUnchecked.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/ReportProblemOutlined.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/Star.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/StarBorder.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/SuccessOutlined.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/svg-icons/Warning.js": {
+    "default": {
+      "type": "CallExpression"
+    }
+  },
+  "modern/internal/switchBaseClasses.js": {
+    "getSwitchBaseUtilityClass": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/locale/index.js": {
+    "amET": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "arEG": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "arSA": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "arSD": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "azAZ": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "bnBD": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "beBY": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "bgBG": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "caES": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "csCZ": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "daDK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "deDE": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "elGR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "enUS": {
+      "type": "object",
+      "sampleKeys": []
+    },
+    "esES": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "etEE": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "faIR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "fiFI": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "frFR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "heIL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "hiIN": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "hrHR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "huHU": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "hyAM": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "idID": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "isIS": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "itIT": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "jaJP": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "khKH": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "koKR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "kuCKB": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "kuLatn": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "kkKZ": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "mkMK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "myMY": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "msMS": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "neNP": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "nbNO": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "nnNO": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "nlNL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "plPL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ptBR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ptPT": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "roRO": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "srRS": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ruRU": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "siLK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "skSK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "svSE": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "thTH": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "trTR": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "tlTL": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "ukUA": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "urPK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "viVN": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "zhCN": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "zhHK": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    },
+    "zhTW": {
+      "type": "object",
+      "sampleKeys": [
+        "components"
+      ]
+    }
+  },
+  "modern/styles/CssVarsProvider.js": {
+    "getInitColorSchemeScript": {
+      "type": "Identifier"
+    }
+  },
+  "modern/styles/ThemeProvider.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/adaptV4Theme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/createMixins.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/styles/createMuiStrictModeTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/createPalette.js": {
+    "light": {
+      "type": "object",
+      "sampleKeys": [
+        "text",
+        "divider",
+        "background",
+        "action"
+      ]
+    },
+    "dark": {
+      "type": "object",
+      "sampleKeys": [
+        "text",
+        "divider",
+        "background",
+        "action"
+      ]
+    },
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/createStyles.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/styles/createTheme.js": {
+    "createMuiTheme": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/createTransitions.js": {
+    "easing": {
+      "type": "object",
+      "sampleKeys": [
+        "easeInOut",
+        "easeOut",
+        "easeIn",
+        "sharp"
+      ]
+    },
+    "duration": {
+      "type": "object",
+      "sampleKeys": [
+        "shortest",
+        "shorter",
+        "short",
+        "standard",
+        "complex"
+      ]
+    },
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/styles/createTypography.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/cssUtils.js": {
+    "isUnitless": {
+      "type": "function"
+    },
+    "getUnit": {
+      "type": "function"
+    },
+    "toUnitless": {
+      "type": "function"
+    },
+    "convertLength": {
+      "type": "function"
+    },
+    "alignProperty": {
+      "type": "function"
+    },
+    "fontGrid": {
+      "type": "function"
+    },
+    "responsiveProperty": {
+      "type": "function"
+    }
+  },
+  "modern/styles/defaultTheme.js": {
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/excludeVariablesFromRoot.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/styles/experimental_extendTheme.js": {
+    "createGetCssVar": {
+      "type": "function"
+    },
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/getOverlayAlpha.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/styles/identifier.js": {
+    "default": {
+      "type": "string"
+    }
+  },
+  "modern/styles/index.js": {
+    "experimental_sx": {
+      "type": "function"
+    }
+  },
+  "modern/styles/makeStyles.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/styles/responsiveFontSizes.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/styles/rootShouldForwardProp.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/styles/shadows.js": {
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/shouldSkipGeneratingVar.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/styles/slotShouldForwardProp.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/styles/styled.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/styles/useTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/useThemeProps.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/withStyles.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/styles/withTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "modern/styles/zIndex.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/transitions/utils.js": {
+    "reflow": {
+      "type": "function"
+    },
+    "getTransitionProps": {
+      "type": "function"
+    }
+  },
+  "modern/useAutocomplete/useAutocomplete.js": {
+    "createFilterOptions": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/useMediaQuery/useMediaQueryTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "modern/usePagination/usePagination.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/useScrollTrigger/useScrollTrigger.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/useTouchRipple/useTouchRipple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/areArraysEqual.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/capitalize.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/createChainedFunction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/createSvgIcon.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/utils/debounce.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/deprecatedPropType.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/getScrollbarSize.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/index.js": {
+    "unstable_ClassNameGenerator": {
+      "type": "object",
+      "sampleKeys": [
+        "configure"
+      ]
+    }
+  },
+  "modern/utils/isMuiElement.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/ownerDocument.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/ownerWindow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/requirePropFactory.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/setRef.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/shouldSpreadAdditionalProps.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/unsupportedProp.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/useControlled.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/useEnhancedEffect.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/useEventCallback.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/useForkRef.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/useId.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/useIsFocusVisible.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/utils/useSlot.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "modern/version/index.js": {
+    "version": {
+      "type": "string"
+    },
+    "major": {
+      "type": "CallExpression"
+    },
+    "minor": {
+      "type": "CallExpression"
+    },
+    "patch": {
+      "type": "CallExpression"
+    },
+    "preReleaseLabel": {
+      "type": "LogicalExpression"
+    },
+    "preReleaseNumber": {
+      "type": "LogicalExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "modern/zero-styled/index.js": {
+    "createUseThemeProps": {
+      "type": "function"
+    }
+  },
+  "node/Typography/Typography.js": {
+    "_themeRelated": true
+  },
+  "node/Typography/index.js": {
+    "_themeRelated": true
+  },
+  "node/Typography/typographyClasses.js": {
+    "_themeRelated": true
+  },
+  "node/styles/ThemeProvider.js": {
+    "_themeRelated": true
+  },
+  "node/styles/adaptV4Theme.js": {
+    "_themeRelated": true
+  },
+  "node/styles/createMuiStrictModeTheme.js": {
+    "_themeRelated": true
+  },
+  "node/styles/createPalette.js": {
+    "_themeRelated": true
+  },
+  "node/styles/createTheme.js": {
+    "_themeRelated": true
+  },
+  "node/styles/createTypography.js": {
+    "_themeRelated": true
+  },
+  "node/styles/defaultTheme.js": {
+    "_themeRelated": true
+  },
+  "node/styles/experimental_extendTheme.js": {
+    "_themeRelated": true
+  },
+  "node/styles/shadows.js": {
+    "_themeRelated": true
+  },
+  "node/styles/useTheme.js": {
+    "_themeRelated": true
+  },
+  "node/styles/useThemeProps.js": {
+    "_themeRelated": true
+  },
+  "node/styles/withTheme.js": {
+    "_themeRelated": true
+  },
+  "node/useMediaQuery/useMediaQueryTheme.js": {
+    "_themeRelated": true
+  },
+  "styles/CssVarsProvider.js": {
+    "getInitColorSchemeScript": {
+      "type": "Identifier"
+    }
+  },
+  "styles/ThemeProvider.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "styles/adaptV4Theme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "styles/createMixins.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "styles/createMuiStrictModeTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "styles/createPalette.js": {
+    "light": {
+      "type": "object",
+      "sampleKeys": [
+        "text",
+        "divider",
+        "background",
+        "action"
+      ]
+    },
+    "dark": {
+      "type": "object",
+      "sampleKeys": [
+        "text",
+        "divider",
+        "background",
+        "action"
+      ]
+    },
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "styles/createStyles.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "styles/createTheme.js": {
+    "createMuiTheme": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "styles/createTransitions.js": {
+    "easing": {
+      "type": "object",
+      "sampleKeys": [
+        "easeInOut",
+        "easeOut",
+        "easeIn",
+        "sharp"
+      ]
+    },
+    "duration": {
+      "type": "object",
+      "sampleKeys": [
+        "shortest",
+        "shorter",
+        "short",
+        "standard",
+        "complex"
+      ]
+    },
+    "default": {
+      "type": "function"
+    }
+  },
+  "styles/createTypography.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "styles/cssUtils.js": {
+    "isUnitless": {
+      "type": "function"
+    },
+    "getUnit": {
+      "type": "function"
+    },
+    "toUnitless": {
+      "type": "function"
+    },
+    "convertLength": {
+      "type": "function"
+    },
+    "alignProperty": {
+      "type": "function"
+    },
+    "fontGrid": {
+      "type": "function"
+    },
+    "responsiveProperty": {
+      "type": "function"
+    }
+  },
+  "styles/defaultTheme.js": {
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "styles/excludeVariablesFromRoot.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "styles/experimental_extendTheme.js": {
+    "createGetCssVar": {
+      "type": "function"
+    },
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "styles/getOverlayAlpha.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "styles/identifier.js": {
+    "default": {
+      "type": "string"
+    }
+  },
+  "styles/index.js": {
+    "experimental_sx": {
+      "type": "function"
+    }
+  },
+  "styles/makeStyles.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "styles/responsiveFontSizes.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "styles/rootShouldForwardProp.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "styles/shadows.js": {
+    "default": {
+      "type": "Identifier"
+    },
+    "_themeRelated": true
+  },
+  "styles/shouldSkipGeneratingVar.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "styles/slotShouldForwardProp.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "styles/styled.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "styles/useTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "styles/useThemeProps.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "styles/withStyles.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "styles/withTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "styles/zIndex.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "transitions/utils.js": {
+    "reflow": {
+      "type": "function"
+    },
+    "getTransitionProps": {
+      "type": "function"
+    }
+  },
+  "useAutocomplete/useAutocomplete.js": {
+    "createFilterOptions": {
+      "type": "function"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "useMediaQuery/useMediaQueryTheme.js": {
+    "default": {
+      "type": "function"
+    },
+    "_themeRelated": true
+  },
+  "usePagination/usePagination.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "useScrollTrigger/useScrollTrigger.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "useTouchRipple/useTouchRipple.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/areArraysEqual.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/capitalize.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/createChainedFunction.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/createSvgIcon.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "utils/debounce.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/deprecatedPropType.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/getScrollbarSize.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/index.js": {
+    "unstable_ClassNameGenerator": {
+      "type": "object",
+      "sampleKeys": [
+        "configure"
+      ]
+    }
+  },
+  "utils/isMuiElement.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/ownerDocument.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/ownerWindow.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/requirePropFactory.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/setRef.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/shouldSpreadAdditionalProps.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/unsupportedProp.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/useControlled.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/useEnhancedEffect.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/useEventCallback.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/useForkRef.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/useId.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/useIsFocusVisible.js": {
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "utils/useSlot.js": {
+    "default": {
+      "type": "function"
+    }
+  },
+  "version/index.js": {
+    "version": {
+      "type": "string"
+    },
+    "major": {
+      "type": "CallExpression"
+    },
+    "minor": {
+      "type": "CallExpression"
+    },
+    "patch": {
+      "type": "CallExpression"
+    },
+    "preReleaseLabel": {
+      "type": "LogicalExpression"
+    },
+    "preReleaseNumber": {
+      "type": "LogicalExpression"
+    },
+    "default": {
+      "type": "Identifier"
+    }
+  },
+  "zero-styled/index.js": {
+    "createUseThemeProps": {
+      "type": "function"
+    }
+  }
+}
