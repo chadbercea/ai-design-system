@@ -134,3 +134,24 @@ If in doubt, compare your output to this file and to a known-good Tokens Studio 
 Token Types in Tokens Studio
 The type is the anatomic part of a Design Token that defines the category of design property the decision belongs to, or when it can be applied.  
 
+A full Composite Design Token looks like this and this is the ultimate goal:
+
+"Fake": {
+      "Font": {
+        "Token": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "Roboto",
+            "fontSize": "{typography.body1.fontSize}",
+            "fontWeight": "Regular",
+            "letterSpacing": "{typography.body1.letterSpacing}",
+            "lineHeight": "{typography.body1.lineHeight}",
+            "paragraphSpacing": "Inherit",
+            "paragraphIndent": "Inherit",
+            "textDecoration": "none",
+            "textCase": "{typography.button.textCase}"
+          },
+          "$description": "This is an example I'm pushing to Github. This is the update."
+        }
+      }
+    }

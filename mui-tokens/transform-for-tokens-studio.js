@@ -1,178 +1,150 @@
 const fs = require('fs');
 
-function transformTokensForTokensStudio(rawTokens) {
-  const tokensStudioFormat = {
-    MUI: {
-      color: {},
-      typography: {},
-      spacing: {},
-      borderRadius: {},
-      shadow: {},
-      duration: {},
-      easing: {}
-    },
-    $metadata: {
-      tokenSetOrder: ["MUI"]
-    }
-  };
-
-  // Transform colors
+function buildAtomicTokens(rawTokens) {
+  const atomic = {};
+  // Colors
   const colors = rawTokens.base.color;
   Object.entries(colors).forEach(([key, value]) => {
-    // Convert nested paths to semantic names
-    const tokenName = key
-      .replace(/^palette\./, '')
-      .split('.')
-      .join('-');
-    
-    // Create color token under color category
-    tokensStudioFormat.MUI.color[tokenName] = {
+    const tokenName = key.replace(/^palette\./, '').replace(/\./g, '-');
+    atomic[`color-${tokenName}`] = {
       "$type": "color",
-      "$value": value,
-      "$description": getColorDescription(tokenName)
+      "$value": value
     };
   });
-
-  // Transform typography
+  // Typography
   if (rawTokens.base.typography?.typography) {
     const typographyStyles = rawTokens.base.typography.typography;
     Object.entries(typographyStyles).forEach(([styleKey, styleValue]) => {
       if (typeof styleValue === 'object') {
-        tokensStudioFormat.MUI.typography[styleKey] = {};
         if (styleValue.fontFamily) {
-          tokensStudioFormat.MUI.typography[styleKey]["fontFamily"] = {
+          atomic[`typography-${styleKey}-fontFamily`] = {
             "$type": "fontFamily",
-            "$value": styleValue.fontFamily,
-            "$description": `Font family for ${styleKey}`
+            "$value": styleValue.fontFamily
           };
         }
         if (styleValue.fontSize) {
-          tokensStudioFormat.MUI.typography[styleKey]["fontSize"] = {
+          atomic[`typography-${styleKey}-fontSize`] = {
             "$type": "dimension",
-            "$value": styleValue.fontSize,
-            "$description": `Font size for ${styleKey}`
+            "$value": styleValue.fontSize
           };
         }
         if (styleValue.fontWeight) {
-          tokensStudioFormat.MUI.typography[styleKey]["fontWeight"] = {
+          atomic[`typography-${styleKey}-fontWeight`] = {
             "$type": "fontWeight",
-            "$value": styleValue.fontWeight,
-            "$description": `Font weight for ${styleKey}`
+            "$value": styleValue.fontWeight
           };
         }
         if (styleValue.lineHeight) {
-          tokensStudioFormat.MUI.typography[styleKey]["lineHeight"] = {
+          atomic[`typography-${styleKey}-lineHeight`] = {
             "$type": "dimension",
-            "$value": styleValue.lineHeight,
-            "$description": `Line height for ${styleKey}`
+            "$value": styleValue.lineHeight
           };
         }
         if (styleValue.letterSpacing) {
-          tokensStudioFormat.MUI.typography[styleKey]["letterSpacing"] = {
+          atomic[`typography-${styleKey}-letterSpacing`] = {
             "$type": "dimension",
-            "$value": styleValue.letterSpacing,
-            "$description": `Letter spacing for ${styleKey}`
+            "$value": styleValue.letterSpacing
           };
         }
         if (styleValue.textTransform) {
-          tokensStudioFormat.MUI.typography[styleKey]["textCase"] = {
+          atomic[`typography-${styleKey}-textCase`] = {
             "$type": "textCase",
-            "$value": styleValue.textTransform,
-            "$description": `Text transform for ${styleKey}`
+            "$value": styleValue.textTransform
           };
         }
       }
     });
   }
-
-  // Transform spacing
+  // Spacing
   if (rawTokens.base.spacing) {
     Object.entries(rawTokens.base.spacing).forEach(([key, value]) => {
-      tokensStudioFormat.MUI.spacing[key] = {
+      atomic[`spacing-${key}`] = {
         "$type": "dimension",
-        "$value": value,
-        "$description": `Spacing unit ${key}`
+        "$value": value
       };
     });
   }
-
-  // Transform borderRadius
+  // BorderRadius
   if (rawTokens.base.shape?.borderRadius) {
-    tokensStudioFormat.MUI.borderRadius['default'] = {
+    atomic['borderRadius-default'] = {
       "$type": "dimension",
-      "$value": rawTokens.base.shape.borderRadius,
-      "$description": "Default border radius"
+      "$value": rawTokens.base.shape.borderRadius
     };
   }
-
-  // Transform shadows
+  // Shadows
   if (rawTokens.base.shadows) {
     Object.entries(rawTokens.base.shadows).forEach(([key, value]) => {
-      tokensStudioFormat.MUI.shadow[key] = {
+      atomic[`shadow-${key}`] = {
         "$type": "shadow",
-        "$value": value,
-        "$description": `Elevation shadow level ${key}`
+        "$value": value
       };
     });
   }
-
-  // Transform transitions
+  // Transitions
   if (rawTokens.base.transitions) {
     const { duration, easing } = rawTokens.base.transitions;
-    
-    // Transform durations into individual tokens
     if (duration) {
       Object.entries(duration).forEach(([key, value]) => {
-        tokensStudioFormat.MUI.duration[key] = {
+        atomic[`duration-${key}`] = {
           "$type": "duration",
-          "$value": `${value}ms`,
-          "$description": `Animation duration for ${key}`
+          "$value": `${value}ms`
         };
       });
     }
-
-    // Transform easing functions into individual tokens
     if (easing) {
       Object.entries(easing).forEach(([key, value]) => {
-        tokensStudioFormat.MUI.easing[key] = {
+        atomic[`easing-${key}`] = {
           "$type": "cubicBezier",
-          "$value": value,
-          "$description": `Easing function for ${key}`
+          "$value": value
         };
       });
     }
   }
-
-  return tokensStudioFormat;
+  return atomic;
 }
 
-function getColorDescription(key) {
-  if (key.includes('primary')) return 'Primary brand color';
-  if (key.includes('secondary')) return 'Secondary brand color';
-  if (key.includes('error')) return 'Error color';
-  if (key.includes('warning')) return 'Warning color';
-  if (key.includes('info')) return 'Info color';
-  if (key.includes('success')) return 'Success color';
-  if (key.includes('grey')) return 'Grey scale color';
-  if (key.includes('text')) return 'Text color';
-  if (key.includes('background')) return 'Background color';
-  if (key.includes('action')) return 'Interactive state color';
-  if (key.includes('common')) return 'Common color';
-  return 'Base color';
+function buildCompositeTokens(rawTokens, atomic) {
+  const composite = { typography: {} };
+  // Typography composite tokens
+  if (rawTokens.base.typography?.typography) {
+    const typographyStyles = rawTokens.base.typography.typography;
+    Object.entries(typographyStyles).forEach(([styleKey, styleValue]) => {
+      if (typeof styleValue === 'object') {
+        const value = {};
+        if (styleValue.fontFamily) value.fontFamily = `{Atomic.typography-${styleKey}-fontFamily}`;
+        if (styleValue.fontSize) value.fontSize = `{Atomic.typography-${styleKey}-fontSize}`;
+        if (styleValue.fontWeight) value.fontWeight = `{Atomic.typography-${styleKey}-fontWeight}`;
+        if (styleValue.lineHeight) value.lineHeight = `{Atomic.typography-${styleKey}-lineHeight}`;
+        if (styleValue.letterSpacing) value.letterSpacing = `{Atomic.typography-${styleKey}-letterSpacing}`;
+        if (styleValue.textTransform) value.textCase = `{Atomic.typography-${styleKey}-textCase}`;
+        composite.typography[styleKey] = {
+          "$type": "typography",
+          "$value": value,
+          "$description": `Composite typography token for ${styleKey}`
+        };
+      }
+    });
+  }
+  // Add more composite categories as needed
+  return composite;
 }
 
-// Main execution
 try {
   const rawTokens = require('./mui-tokens-raw.json');
-  const tokensStudioFormat = transformTokensForTokensStudio(rawTokens);
-
-  // Write the output in a pretty format
+  const atomic = buildAtomicTokens(rawTokens);
+  const composite = buildCompositeTokens(rawTokens, atomic);
+  const output = {
+    MUI: composite,
+    Atomic: atomic,
+    $metadata: {
+      tokenSetOrder: ["MUI", "Atomic"]
+    }
+  };
   fs.writeFileSync(
     'tokens-studio-format.json',
-    JSON.stringify(tokensStudioFormat, null, 2)
+    JSON.stringify(output, null, 2)
   );
-
-  console.log('Successfully transformed tokens to Tokens.Studio format');
+  console.log('Successfully transformed tokens to Tokens.Studio format with MUI and Atomic sets');
 } catch (error) {
   console.error('Error transforming tokens:', error);
 }
