@@ -276,12 +276,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 300,
+          "$value": "300",
           "$description": "Font weight for h1"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.167,
+          "$value": "1.167",
           "$description": "Line height for h1"
         },
         "letterSpacing": {
@@ -303,12 +303,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 300,
+          "$value": "300",
           "$description": "Font weight for h2"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.2,
+          "$value": "1.2",
           "$description": "Line height for h2"
         },
         "letterSpacing": {
@@ -330,12 +330,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 400,
+          "$value": "400",
           "$description": "Font weight for h3"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.167,
+          "$value": "1.167",
           "$description": "Line height for h3"
         },
         "letterSpacing": {
@@ -357,12 +357,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 400,
+          "$value": "400",
           "$description": "Font weight for h4"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.235,
+          "$value": "1.235",
           "$description": "Line height for h4"
         },
         "letterSpacing": {
@@ -384,12 +384,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 400,
+          "$value": "400",
           "$description": "Font weight for h5"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.334,
+          "$value": "1.334",
           "$description": "Line height for h5"
         },
         "letterSpacing": {
@@ -411,12 +411,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 500,
+          "$value": "500",
           "$description": "Font weight for h6"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.6,
+          "$value": "1.6",
           "$description": "Line height for h6"
         },
         "letterSpacing": {
@@ -438,12 +438,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 400,
+          "$value": "400",
           "$description": "Font weight for subtitle1"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.75,
+          "$value": "1.75",
           "$description": "Line height for subtitle1"
         },
         "letterSpacing": {
@@ -465,12 +465,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 500,
+          "$value": "500",
           "$description": "Font weight for subtitle2"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.57,
+          "$value": "1.57",
           "$description": "Line height for subtitle2"
         },
         "letterSpacing": {
@@ -492,12 +492,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 400,
+          "$value": "400",
           "$description": "Font weight for body1"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.5,
+          "$value": "1.5",
           "$description": "Line height for body1"
         },
         "letterSpacing": {
@@ -519,12 +519,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 400,
+          "$value": "400",
           "$description": "Font weight for body2"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.43,
+          "$value": "1.43",
           "$description": "Line height for body2"
         },
         "letterSpacing": {
@@ -546,12 +546,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 500,
+          "$value": "500",
           "$description": "Font weight for button"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.75,
+          "$value": "1.75",
           "$description": "Line height for button"
         },
         "letterSpacing": {
@@ -578,12 +578,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 400,
+          "$value": "400",
           "$description": "Font weight for caption"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 1.66,
+          "$value": "1.66",
           "$description": "Line height for caption"
         },
         "letterSpacing": {
@@ -605,12 +605,12 @@
         },
         "fontWeight": {
           "$type": "fontWeight",
-          "$value": 400,
+          "$value": "400",
           "$description": "Font weight for overline"
         },
         "lineHeight": {
           "$type": "dimension",
-          "$value": 2.66,
+          "$value": "2.66",
           "$description": "Line height for overline"
         },
         "letterSpacing": {
@@ -652,13 +652,24 @@
         }
       }
     },
-    "this-is-example-from-ts-plug-in": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "Roboto",
-        "fontWeight": "Regular"
-      },
-      "$description": "This is an example I'm pushing to Github."
+    "Fake": {
+      "Font": {
+        "Token": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "Roboto",
+            "fontSize": "{typography.body1.fontSize}",
+            "fontWeight": "Regular",
+            "letterSpacing": "{typography.body1.letterSpacing}",
+            "lineHeight": "{typography.body1.lineHeight}",
+            "paragraphSpacing": "Inherit",
+            "paragraphIndent": "Inherit",
+            "textDecoration": "none",
+            "textCase": "{typography.button.textCase}"
+          },
+          "$description": "This is an example I'm pushing to Github. This is the update."
+        }
+      }
     }
   },
   "$themes": [],
