@@ -218,11 +218,11 @@
     },
     "font-weight-h1": {
       "$type": "fontWeight",
-      "$value": 300
+      "$value": "300"
     },
     "line-height-h1": {
       "$type": "dimension",
-      "$value": 1.167
+      "$value": "1.167"
     },
     "letter-spacing-h1": {
       "$type": "dimension",
@@ -238,11 +238,11 @@
     },
     "font-weight-h2": {
       "$type": "fontWeight",
-      "$value": 300
+      "$value": "300"
     },
     "line-height-h2": {
       "$type": "dimension",
-      "$value": 1.2
+      "$value": "1.2"
     },
     "letter-spacing-h2": {
       "$type": "dimension",
@@ -258,11 +258,11 @@
     },
     "font-weight-h3": {
       "$type": "fontWeight",
-      "$value": 400
+      "$value": "400"
     },
     "line-height-h3": {
       "$type": "dimension",
-      "$value": 1.167
+      "$value": "1.167"
     },
     "letter-spacing-h3": {
       "$type": "dimension",
@@ -278,11 +278,11 @@
     },
     "font-weight-h4": {
       "$type": "fontWeight",
-      "$value": 400
+      "$value": "400"
     },
     "line-height-h4": {
       "$type": "dimension",
-      "$value": 1.235
+      "$value": "1.235"
     },
     "letter-spacing-h4": {
       "$type": "dimension",
@@ -298,11 +298,11 @@
     },
     "font-weight-h5": {
       "$type": "fontWeight",
-      "$value": 400
+      "$value": "400"
     },
     "line-height-h5": {
       "$type": "dimension",
-      "$value": 1.334
+      "$value": "1.334"
     },
     "letter-spacing-h5": {
       "$type": "dimension",
@@ -318,11 +318,11 @@
     },
     "font-weight-h6": {
       "$type": "fontWeight",
-      "$value": 500
+      "$value": "500"
     },
     "line-height-h6": {
       "$type": "dimension",
-      "$value": 1.6
+      "$value": "1.6"
     },
     "letter-spacing-h6": {
       "$type": "dimension",
@@ -338,11 +338,11 @@
     },
     "font-weight-subtitle1": {
       "$type": "fontWeight",
-      "$value": 400
+      "$value": "400"
     },
     "line-height-subtitle1": {
       "$type": "dimension",
-      "$value": 1.75
+      "$value": "1.75"
     },
     "letter-spacing-subtitle1": {
       "$type": "dimension",
@@ -358,11 +358,11 @@
     },
     "font-weight-subtitle2": {
       "$type": "fontWeight",
-      "$value": 500
+      "$value": "500"
     },
     "line-height-subtitle2": {
       "$type": "dimension",
-      "$value": 1.57
+      "$value": "1.57"
     },
     "letter-spacing-subtitle2": {
       "$type": "dimension",
@@ -378,11 +378,11 @@
     },
     "font-weight-body1": {
       "$type": "fontWeight",
-      "$value": 400
+      "$value": "400"
     },
     "line-height-body1": {
       "$type": "dimension",
-      "$value": 1.5
+      "$value": "1.5"
     },
     "letter-spacing-body1": {
       "$type": "dimension",
@@ -398,11 +398,11 @@
     },
     "font-weight-body2": {
       "$type": "fontWeight",
-      "$value": 400
+      "$value": "400"
     },
     "line-height-body2": {
       "$type": "dimension",
-      "$value": 1.43
+      "$value": "1.43"
     },
     "letter-spacing-body2": {
       "$type": "dimension",
@@ -418,11 +418,11 @@
     },
     "font-weight-button": {
       "$type": "fontWeight",
-      "$value": 500
+      "$value": "500"
     },
     "line-height-button": {
       "$type": "dimension",
-      "$value": 1.75
+      "$value": "1.75"
     },
     "letter-spacing-button": {
       "$type": "dimension",
@@ -442,11 +442,11 @@
     },
     "font-weight-caption": {
       "$type": "fontWeight",
-      "$value": 400
+      "$value": "400"
     },
     "line-height-caption": {
       "$type": "dimension",
-      "$value": 1.66
+      "$value": "1.66"
     },
     "letter-spacing-caption": {
       "$type": "dimension",
@@ -462,11 +462,11 @@
     },
     "font-weight-overline": {
       "$type": "fontWeight",
-      "$value": 400
+      "$value": "400"
     },
     "line-height-overline": {
       "$type": "dimension",
-      "$value": 2.66
+      "$value": "2.66"
     },
     "letter-spacing-overline": {
       "$type": "dimension",
@@ -495,8 +495,14 @@
     "letter-spacing-inherit": {
       "$type": "dimension",
       "$value": "inherit"
+    },
+    "color-chad-gray": {
+      "$type": "color",
+      "$value": "#cacaca",
+      "$description": "THIS IS CHAD'S COLOR OK. You need to realize that \"color-chad-gray\" is producing a name and that what I need for the colors is \"chad.gray\" with a $type of color do you understand this one is out of TS look at how it's different than the JSON you're providing!"
     }
   },
+  "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
       "MUI"
