@@ -263,365 +263,393 @@
       }
     },
     "typography": {
-      "h1-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for h1 style"
-      },
-      "h1-fontSize": {
-        "$type": "dimension",
-        "$value": "6rem",
-        "$description": "Font size for h1 style"
-      },
-      "h1-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 300,
-        "$description": "Font weight for h1 style"
-      },
-      "h1-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.167,
-        "$description": "Line height for h1 style"
-      },
-      "h1-letterSpacing": {
-        "$type": "dimension",
-        "$value": "-0.01562em",
-        "$description": "Letter spacing for h1 style"
-      },
-      "h2-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for h2 style"
-      },
-      "h2-fontSize": {
-        "$type": "dimension",
-        "$value": "3.75rem",
-        "$description": "Font size for h2 style"
-      },
-      "h2-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 300,
-        "$description": "Font weight for h2 style"
-      },
-      "h2-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.2,
-        "$description": "Line height for h2 style"
-      },
-      "h2-letterSpacing": {
-        "$type": "dimension",
-        "$value": "-0.00833em",
-        "$description": "Letter spacing for h2 style"
-      },
-      "h3-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for h3 style"
-      },
-      "h3-fontSize": {
-        "$type": "dimension",
-        "$value": "3rem",
-        "$description": "Font size for h3 style"
-      },
-      "h3-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 400,
-        "$description": "Font weight for h3 style"
-      },
-      "h3-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.167,
-        "$description": "Line height for h3 style"
-      },
-      "h3-letterSpacing": {
-        "$type": "dimension",
-        "$value": "0em",
-        "$description": "Letter spacing for h3 style"
-      },
-      "h4-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for h4 style"
-      },
-      "h4-fontSize": {
-        "$type": "dimension",
-        "$value": "2.125rem",
-        "$description": "Font size for h4 style"
-      },
-      "h4-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 400,
-        "$description": "Font weight for h4 style"
-      },
-      "h4-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.235,
-        "$description": "Line height for h4 style"
-      },
-      "h4-letterSpacing": {
-        "$type": "dimension",
-        "$value": "0.00735em",
-        "$description": "Letter spacing for h4 style"
-      },
-      "h5-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for h5 style"
-      },
-      "h5-fontSize": {
-        "$type": "dimension",
-        "$value": "1.5rem",
-        "$description": "Font size for h5 style"
-      },
-      "h5-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 400,
-        "$description": "Font weight for h5 style"
-      },
-      "h5-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.334,
-        "$description": "Line height for h5 style"
-      },
-      "h5-letterSpacing": {
-        "$type": "dimension",
-        "$value": "0em",
-        "$description": "Letter spacing for h5 style"
-      },
-      "h6-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for h6 style"
-      },
-      "h6-fontSize": {
-        "$type": "dimension",
-        "$value": "1.25rem",
-        "$description": "Font size for h6 style"
-      },
-      "h6-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 500,
-        "$description": "Font weight for h6 style"
-      },
-      "h6-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.6,
-        "$description": "Line height for h6 style"
-      },
-      "h6-letterSpacing": {
-        "$type": "dimension",
-        "$value": "0.0075em",
-        "$description": "Letter spacing for h6 style"
-      },
-      "subtitle1-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for subtitle1 style"
-      },
-      "subtitle1-fontSize": {
-        "$type": "dimension",
-        "$value": "1rem",
-        "$description": "Font size for subtitle1 style"
-      },
-      "subtitle1-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 400,
-        "$description": "Font weight for subtitle1 style"
-      },
-      "subtitle1-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.75,
-        "$description": "Line height for subtitle1 style"
-      },
-      "subtitle1-letterSpacing": {
-        "$type": "dimension",
-        "$value": "0.00938em",
-        "$description": "Letter spacing for subtitle1 style"
-      },
-      "subtitle2-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for subtitle2 style"
-      },
-      "subtitle2-fontSize": {
-        "$type": "dimension",
-        "$value": "0.875rem",
-        "$description": "Font size for subtitle2 style"
-      },
-      "subtitle2-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 500,
-        "$description": "Font weight for subtitle2 style"
-      },
-      "subtitle2-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.57,
-        "$description": "Line height for subtitle2 style"
-      },
-      "subtitle2-letterSpacing": {
-        "$type": "dimension",
-        "$value": "0.00714em",
-        "$description": "Letter spacing for subtitle2 style"
-      },
-      "body1-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for body1 style"
-      },
-      "body1-fontSize": {
-        "$type": "dimension",
-        "$value": "1rem",
-        "$description": "Font size for body1 style"
-      },
-      "body1-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 400,
-        "$description": "Font weight for body1 style"
-      },
-      "body1-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.5,
-        "$description": "Line height for body1 style"
-      },
-      "body1-letterSpacing": {
-        "$type": "dimension",
-        "$value": "0.00938em",
-        "$description": "Letter spacing for body1 style"
-      },
-      "body2-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for body2 style"
-      },
-      "body2-fontSize": {
-        "$type": "dimension",
-        "$value": "0.875rem",
-        "$description": "Font size for body2 style"
-      },
-      "body2-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 400,
-        "$description": "Font weight for body2 style"
-      },
-      "body2-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.43,
-        "$description": "Line height for body2 style"
-      },
-      "body2-letterSpacing": {
-        "$type": "dimension",
-        "$value": "0.01071em",
-        "$description": "Letter spacing for body2 style"
-      },
-      "button-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for button style"
-      },
-      "button-fontSize": {
-        "$type": "dimension",
-        "$value": "0.875rem",
-        "$description": "Font size for button style"
-      },
-      "button-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 500,
-        "$description": "Font weight for button style"
-      },
-      "button-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.75,
-        "$description": "Line height for button style"
-      },
-      "button-letterSpacing": {
-        "$type": "dimension",
-        "$value": "0.02857em",
-        "$description": "Letter spacing for button style"
-      },
-      "button-textCase": {
-        "$type": "textCase",
-        "$value": "uppercase",
-        "$description": "Text transform for button style"
-      },
-      "caption-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for caption style"
-      },
-      "caption-fontSize": {
-        "$type": "dimension",
-        "$value": "0.75rem",
-        "$description": "Font size for caption style"
-      },
-      "caption-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 400,
-        "$description": "Font weight for caption style"
-      },
-      "caption-lineHeight": {
-        "$type": "dimension",
-        "$value": 1.66,
-        "$description": "Line height for caption style"
-      },
-      "caption-letterSpacing": {
-        "$type": "dimension",
-        "$value": "0.03333em",
-        "$description": "Letter spacing for caption style"
-      },
-      "overline-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$description": "Font family for overline style"
-      },
-      "overline-fontSize": {
-        "$type": "dimension",
-        "$value": "0.75rem",
-        "$description": "Font size for overline style"
-      },
-      "overline-fontWeight": {
-        "$type": "fontWeight",
-        "$value": 400,
-        "$description": "Font weight for overline style"
-      },
-      "overline-lineHeight": {
-        "$type": "dimension",
-        "$value": 2.66,
-        "$description": "Line height for overline style"
-      },
-      "overline-letterSpacing": {
-        "$type": "dimension",
-        "$value": "0.08333em",
-        "$description": "Letter spacing for overline style"
-      },
-      "overline-textCase": {
-        "$type": "textCase",
-        "$value": "uppercase",
-        "$description": "Text transform for overline style"
-      },
-      "inherit-fontFamily": {
-        "$type": "fontFamily",
-        "$value": "inherit",
-        "$description": "Font family for inherit style"
-      },
-      "inherit-fontSize": {
-        "$type": "dimension",
-        "$value": "inherit",
-        "$description": "Font size for inherit style"
-      },
-      "inherit-fontWeight": {
-        "$type": "fontWeight",
-        "$value": "inherit",
-        "$description": "Font weight for inherit style"
-      },
-      "inherit-lineHeight": {
-        "$type": "dimension",
-        "$value": "inherit",
-        "$description": "Line height for inherit style"
-      },
-      "inherit-letterSpacing": {
-        "$type": "dimension",
-        "$value": "inherit",
-        "$description": "Letter spacing for inherit style"
+      "h1": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for h1"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "6rem",
+          "$description": "Font size for h1"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 300,
+          "$description": "Font weight for h1"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.167,
+          "$description": "Line height for h1"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "-0.01562em",
+          "$description": "Letter spacing for h1"
+        }
+      },
+      "h2": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for h2"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "3.75rem",
+          "$description": "Font size for h2"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 300,
+          "$description": "Font weight for h2"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.2,
+          "$description": "Line height for h2"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "-0.00833em",
+          "$description": "Letter spacing for h2"
+        }
+      },
+      "h3": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for h3"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "3rem",
+          "$description": "Font size for h3"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 400,
+          "$description": "Font weight for h3"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.167,
+          "$description": "Line height for h3"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0em",
+          "$description": "Letter spacing for h3"
+        }
+      },
+      "h4": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for h4"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "2.125rem",
+          "$description": "Font size for h4"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 400,
+          "$description": "Font weight for h4"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.235,
+          "$description": "Line height for h4"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0.00735em",
+          "$description": "Letter spacing for h4"
+        }
+      },
+      "h5": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for h5"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "1.5rem",
+          "$description": "Font size for h5"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 400,
+          "$description": "Font weight for h5"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.334,
+          "$description": "Line height for h5"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0em",
+          "$description": "Letter spacing for h5"
+        }
+      },
+      "h6": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for h6"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "1.25rem",
+          "$description": "Font size for h6"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 500,
+          "$description": "Font weight for h6"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.6,
+          "$description": "Line height for h6"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0.0075em",
+          "$description": "Letter spacing for h6"
+        }
+      },
+      "subtitle1": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for subtitle1"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "1rem",
+          "$description": "Font size for subtitle1"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 400,
+          "$description": "Font weight for subtitle1"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.75,
+          "$description": "Line height for subtitle1"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0.00938em",
+          "$description": "Letter spacing for subtitle1"
+        }
+      },
+      "subtitle2": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for subtitle2"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "0.875rem",
+          "$description": "Font size for subtitle2"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 500,
+          "$description": "Font weight for subtitle2"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.57,
+          "$description": "Line height for subtitle2"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0.00714em",
+          "$description": "Letter spacing for subtitle2"
+        }
+      },
+      "body1": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for body1"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "1rem",
+          "$description": "Font size for body1"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 400,
+          "$description": "Font weight for body1"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.5,
+          "$description": "Line height for body1"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0.00938em",
+          "$description": "Letter spacing for body1"
+        }
+      },
+      "body2": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for body2"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "0.875rem",
+          "$description": "Font size for body2"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 400,
+          "$description": "Font weight for body2"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.43,
+          "$description": "Line height for body2"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0.01071em",
+          "$description": "Letter spacing for body2"
+        }
+      },
+      "button": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for button"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "0.875rem",
+          "$description": "Font size for button"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 500,
+          "$description": "Font weight for button"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.75,
+          "$description": "Line height for button"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0.02857em",
+          "$description": "Letter spacing for button"
+        },
+        "textCase": {
+          "$type": "textCase",
+          "$value": "uppercase",
+          "$description": "Text transform for button"
+        }
+      },
+      "caption": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for caption"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "0.75rem",
+          "$description": "Font size for caption"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 400,
+          "$description": "Font weight for caption"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 1.66,
+          "$description": "Line height for caption"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0.03333em",
+          "$description": "Letter spacing for caption"
+        }
+      },
+      "overline": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+          "$description": "Font family for overline"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "0.75rem",
+          "$description": "Font size for overline"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": 400,
+          "$description": "Font weight for overline"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": 2.66,
+          "$description": "Line height for overline"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "0.08333em",
+          "$description": "Letter spacing for overline"
+        },
+        "textCase": {
+          "$type": "textCase",
+          "$value": "uppercase",
+          "$description": "Text transform for overline"
+        }
+      },
+      "inherit": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "inherit",
+          "$description": "Font family for inherit"
+        },
+        "fontSize": {
+          "$type": "dimension",
+          "$value": "inherit",
+          "$description": "Font size for inherit"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": "inherit",
+          "$description": "Font weight for inherit"
+        },
+        "lineHeight": {
+          "$type": "dimension",
+          "$value": "inherit",
+          "$description": "Line height for inherit"
+        },
+        "letterSpacing": {
+          "$type": "dimension",
+          "$value": "inherit",
+          "$description": "Letter spacing for inherit"
+        }
       }
     },
     "spacing": {},

@@ -36,49 +36,49 @@ function transformTokensForTokensStudio(rawTokens) {
   // Transform typography
   if (rawTokens.base.typography?.typography) {
     const typographyStyles = rawTokens.base.typography.typography;
-    Object.entries(typographyStyles).forEach(([key, value]) => {
-      if (typeof value === 'object') {
-        // Break down typography into individual tokens under typography category
-        if (value.fontFamily) {
-          tokensStudioFormat.MUI.typography[`${key}-fontFamily`] = {
+    Object.entries(typographyStyles).forEach(([styleKey, styleValue]) => {
+      if (typeof styleValue === 'object') {
+        tokensStudioFormat.MUI.typography[styleKey] = {};
+        if (styleValue.fontFamily) {
+          tokensStudioFormat.MUI.typography[styleKey]["fontFamily"] = {
             "$type": "fontFamily",
-            "$value": value.fontFamily,
-            "$description": `Font family for ${key} style`
+            "$value": styleValue.fontFamily,
+            "$description": `Font family for ${styleKey}`
           };
         }
-        if (value.fontSize) {
-          tokensStudioFormat.MUI.typography[`${key}-fontSize`] = {
+        if (styleValue.fontSize) {
+          tokensStudioFormat.MUI.typography[styleKey]["fontSize"] = {
             "$type": "dimension",
-            "$value": value.fontSize,
-            "$description": `Font size for ${key} style`
+            "$value": styleValue.fontSize,
+            "$description": `Font size for ${styleKey}`
           };
         }
-        if (value.fontWeight) {
-          tokensStudioFormat.MUI.typography[`${key}-fontWeight`] = {
+        if (styleValue.fontWeight) {
+          tokensStudioFormat.MUI.typography[styleKey]["fontWeight"] = {
             "$type": "fontWeight",
-            "$value": value.fontWeight,
-            "$description": `Font weight for ${key} style`
+            "$value": styleValue.fontWeight,
+            "$description": `Font weight for ${styleKey}`
           };
         }
-        if (value.lineHeight) {
-          tokensStudioFormat.MUI.typography[`${key}-lineHeight`] = {
+        if (styleValue.lineHeight) {
+          tokensStudioFormat.MUI.typography[styleKey]["lineHeight"] = {
             "$type": "dimension",
-            "$value": value.lineHeight,
-            "$description": `Line height for ${key} style`
+            "$value": styleValue.lineHeight,
+            "$description": `Line height for ${styleKey}`
           };
         }
-        if (value.letterSpacing) {
-          tokensStudioFormat.MUI.typography[`${key}-letterSpacing`] = {
+        if (styleValue.letterSpacing) {
+          tokensStudioFormat.MUI.typography[styleKey]["letterSpacing"] = {
             "$type": "dimension",
-            "$value": value.letterSpacing,
-            "$description": `Letter spacing for ${key} style`
+            "$value": styleValue.letterSpacing,
+            "$description": `Letter spacing for ${styleKey}`
           };
         }
-        if (value.textTransform) {
-          tokensStudioFormat.MUI.typography[`${key}-textCase`] = {
+        if (styleValue.textTransform) {
+          tokensStudioFormat.MUI.typography[styleKey]["textCase"] = {
             "$type": "textCase",
-            "$value": value.textTransform,
-            "$description": `Text transform for ${key} style`
+            "$value": styleValue.textTransform,
+            "$description": `Text transform for ${styleKey}`
           };
         }
       }
