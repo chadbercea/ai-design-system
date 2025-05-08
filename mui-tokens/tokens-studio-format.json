@@ -157,6 +157,21 @@
         },
         "$description": "Composite typography token for inherit"
       }
+    },
+    "secondFakeToken": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "null",
+        "fontWeight": "null",
+        "fontSize": "null",
+        "lineHeight": "null",
+        "letterSpacing": "null",
+        "paragraphSpacing": "null",
+        "paragraphIndent": "null",
+        "textDecoration": "null",
+        "textCase": "null"
+      },
+      "$description": "Description is null"
     }
   },
   "Atomic": {
@@ -657,6 +672,7 @@
       "$value": "inherit"
     }
   },
+  "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
       "MUI",
