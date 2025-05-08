@@ -652,12 +652,16 @@
         }
       }
     },
-    "spacing": {},
-    "borderRadius": {},
-    "shadow": {},
-    "duration": {},
-    "easing": {}
+    "this-is-example-from-ts-plug-in": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Roboto",
+        "fontWeight": "Regular"
+      },
+      "$description": "This is an example I'm pushing to Github."
+    }
   },
+  "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
       "MUI"
