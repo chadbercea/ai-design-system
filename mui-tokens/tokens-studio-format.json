@@ -208,291 +208,291 @@
       "$type": "color",
       "$value": "rgba(0, 0, 0, 0.12)"
     },
-    "typography-h1-fontFamily": {
+    "font-family-h1": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-h1-fontSize": {
+    "font-size-h1": {
       "$type": "dimension",
       "$value": "6rem"
     },
-    "typography-h1-fontWeight": {
+    "font-weight-h1": {
       "$type": "fontWeight",
       "$value": 300
     },
-    "typography-h1-lineHeight": {
+    "line-height-h1": {
       "$type": "dimension",
       "$value": 1.167
     },
-    "typography-h1-letterSpacing": {
+    "letter-spacing-h1": {
       "$type": "dimension",
       "$value": "-0.01562em"
     },
-    "typography-h2-fontFamily": {
+    "font-family-h2": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-h2-fontSize": {
+    "font-size-h2": {
       "$type": "dimension",
       "$value": "3.75rem"
     },
-    "typography-h2-fontWeight": {
+    "font-weight-h2": {
       "$type": "fontWeight",
       "$value": 300
     },
-    "typography-h2-lineHeight": {
+    "line-height-h2": {
       "$type": "dimension",
       "$value": 1.2
     },
-    "typography-h2-letterSpacing": {
+    "letter-spacing-h2": {
       "$type": "dimension",
       "$value": "-0.00833em"
     },
-    "typography-h3-fontFamily": {
+    "font-family-h3": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-h3-fontSize": {
+    "font-size-h3": {
       "$type": "dimension",
       "$value": "3rem"
     },
-    "typography-h3-fontWeight": {
+    "font-weight-h3": {
       "$type": "fontWeight",
       "$value": 400
     },
-    "typography-h3-lineHeight": {
+    "line-height-h3": {
       "$type": "dimension",
       "$value": 1.167
     },
-    "typography-h3-letterSpacing": {
+    "letter-spacing-h3": {
       "$type": "dimension",
       "$value": "0em"
     },
-    "typography-h4-fontFamily": {
+    "font-family-h4": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-h4-fontSize": {
+    "font-size-h4": {
       "$type": "dimension",
       "$value": "2.125rem"
     },
-    "typography-h4-fontWeight": {
+    "font-weight-h4": {
       "$type": "fontWeight",
       "$value": 400
     },
-    "typography-h4-lineHeight": {
+    "line-height-h4": {
       "$type": "dimension",
       "$value": 1.235
     },
-    "typography-h4-letterSpacing": {
+    "letter-spacing-h4": {
       "$type": "dimension",
       "$value": "0.00735em"
     },
-    "typography-h5-fontFamily": {
+    "font-family-h5": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-h5-fontSize": {
+    "font-size-h5": {
       "$type": "dimension",
       "$value": "1.5rem"
     },
-    "typography-h5-fontWeight": {
+    "font-weight-h5": {
       "$type": "fontWeight",
       "$value": 400
     },
-    "typography-h5-lineHeight": {
+    "line-height-h5": {
       "$type": "dimension",
       "$value": 1.334
     },
-    "typography-h5-letterSpacing": {
+    "letter-spacing-h5": {
       "$type": "dimension",
       "$value": "0em"
     },
-    "typography-h6-fontFamily": {
+    "font-family-h6": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-h6-fontSize": {
+    "font-size-h6": {
       "$type": "dimension",
       "$value": "1.25rem"
     },
-    "typography-h6-fontWeight": {
+    "font-weight-h6": {
       "$type": "fontWeight",
       "$value": 500
     },
-    "typography-h6-lineHeight": {
+    "line-height-h6": {
       "$type": "dimension",
       "$value": 1.6
     },
-    "typography-h6-letterSpacing": {
+    "letter-spacing-h6": {
       "$type": "dimension",
       "$value": "0.0075em"
     },
-    "typography-subtitle1-fontFamily": {
+    "font-family-subtitle1": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-subtitle1-fontSize": {
+    "font-size-subtitle1": {
       "$type": "dimension",
       "$value": "1rem"
     },
-    "typography-subtitle1-fontWeight": {
+    "font-weight-subtitle1": {
       "$type": "fontWeight",
       "$value": 400
     },
-    "typography-subtitle1-lineHeight": {
+    "line-height-subtitle1": {
       "$type": "dimension",
       "$value": 1.75
     },
-    "typography-subtitle1-letterSpacing": {
+    "letter-spacing-subtitle1": {
       "$type": "dimension",
       "$value": "0.00938em"
     },
-    "typography-subtitle2-fontFamily": {
+    "font-family-subtitle2": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-subtitle2-fontSize": {
+    "font-size-subtitle2": {
       "$type": "dimension",
       "$value": "0.875rem"
     },
-    "typography-subtitle2-fontWeight": {
+    "font-weight-subtitle2": {
       "$type": "fontWeight",
       "$value": 500
     },
-    "typography-subtitle2-lineHeight": {
+    "line-height-subtitle2": {
       "$type": "dimension",
       "$value": 1.57
     },
-    "typography-subtitle2-letterSpacing": {
+    "letter-spacing-subtitle2": {
       "$type": "dimension",
       "$value": "0.00714em"
     },
-    "typography-body1-fontFamily": {
+    "font-family-body1": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-body1-fontSize": {
+    "font-size-body1": {
       "$type": "dimension",
       "$value": "1rem"
     },
-    "typography-body1-fontWeight": {
+    "font-weight-body1": {
       "$type": "fontWeight",
       "$value": 400
     },
-    "typography-body1-lineHeight": {
+    "line-height-body1": {
       "$type": "dimension",
       "$value": 1.5
     },
-    "typography-body1-letterSpacing": {
+    "letter-spacing-body1": {
       "$type": "dimension",
       "$value": "0.00938em"
     },
-    "typography-body2-fontFamily": {
+    "font-family-body2": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-body2-fontSize": {
+    "font-size-body2": {
       "$type": "dimension",
       "$value": "0.875rem"
     },
-    "typography-body2-fontWeight": {
+    "font-weight-body2": {
       "$type": "fontWeight",
       "$value": 400
     },
-    "typography-body2-lineHeight": {
+    "line-height-body2": {
       "$type": "dimension",
       "$value": 1.43
     },
-    "typography-body2-letterSpacing": {
+    "letter-spacing-body2": {
       "$type": "dimension",
       "$value": "0.01071em"
     },
-    "typography-button-fontFamily": {
+    "font-family-button": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-button-fontSize": {
+    "font-size-button": {
       "$type": "dimension",
       "$value": "0.875rem"
     },
-    "typography-button-fontWeight": {
+    "font-weight-button": {
       "$type": "fontWeight",
       "$value": 500
     },
-    "typography-button-lineHeight": {
+    "line-height-button": {
       "$type": "dimension",
       "$value": 1.75
     },
-    "typography-button-letterSpacing": {
+    "letter-spacing-button": {
       "$type": "dimension",
       "$value": "0.02857em"
     },
-    "typography-button-textCase": {
+    "text-case-button": {
       "$type": "textCase",
       "$value": "uppercase"
     },
-    "typography-caption-fontFamily": {
+    "font-family-caption": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-caption-fontSize": {
+    "font-size-caption": {
       "$type": "dimension",
       "$value": "0.75rem"
     },
-    "typography-caption-fontWeight": {
+    "font-weight-caption": {
       "$type": "fontWeight",
       "$value": 400
     },
-    "typography-caption-lineHeight": {
+    "line-height-caption": {
       "$type": "dimension",
       "$value": 1.66
     },
-    "typography-caption-letterSpacing": {
+    "letter-spacing-caption": {
       "$type": "dimension",
       "$value": "0.03333em"
     },
-    "typography-overline-fontFamily": {
+    "font-family-overline": {
       "$type": "fontFamily",
       "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
     },
-    "typography-overline-fontSize": {
+    "font-size-overline": {
       "$type": "dimension",
       "$value": "0.75rem"
     },
-    "typography-overline-fontWeight": {
+    "font-weight-overline": {
       "$type": "fontWeight",
       "$value": 400
     },
-    "typography-overline-lineHeight": {
+    "line-height-overline": {
       "$type": "dimension",
       "$value": 2.66
     },
-    "typography-overline-letterSpacing": {
+    "letter-spacing-overline": {
       "$type": "dimension",
       "$value": "0.08333em"
     },
-    "typography-overline-textCase": {
+    "text-case-overline": {
       "$type": "textCase",
       "$value": "uppercase"
     },
-    "typography-inherit-fontFamily": {
+    "font-family-inherit": {
       "$type": "fontFamily",
       "$value": "inherit"
     },
-    "typography-inherit-fontSize": {
+    "font-size-inherit": {
       "$type": "dimension",
       "$value": "inherit"
     },
-    "typography-inherit-fontWeight": {
+    "font-weight-inherit": {
       "$type": "fontWeight",
       "$value": "inherit"
     },
-    "typography-inherit-lineHeight": {
+    "line-height-inherit": {
       "$type": "dimension",
       "$value": "inherit"
     },
-    "typography-inherit-letterSpacing": {
+    "letter-spacing-inherit": {
       "$type": "dimension",
       "$value": "inherit"
     }

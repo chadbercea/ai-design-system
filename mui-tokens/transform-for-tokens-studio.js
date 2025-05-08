@@ -1,12 +1,12 @@
 const fs = require('fs');
 
-function buildFlatAtomicTokens(rawTokens) {
-  const flat = {};
+function buildTrueAtomicTokens(rawTokens) {
+  const atomic = {};
   // Colors
   const colors = rawTokens.base.color;
   Object.entries(colors).forEach(([key, value]) => {
     const tokenName = key.replace(/^palette\./, '').replace(/\./g, '-');
-    flat[`color-${tokenName}`] = {
+    atomic[`color-${tokenName}`] = {
       "$type": "color",
       "$value": value
     };
@@ -17,37 +17,37 @@ function buildFlatAtomicTokens(rawTokens) {
     Object.entries(typographyStyles).forEach(([styleKey, styleValue]) => {
       if (typeof styleValue === 'object') {
         if (styleValue.fontFamily) {
-          flat[`typography-${styleKey}-fontFamily`] = {
+          atomic[`font-family-${styleKey}`] = {
             "$type": "fontFamily",
             "$value": styleValue.fontFamily
           };
         }
         if (styleValue.fontSize) {
-          flat[`typography-${styleKey}-fontSize`] = {
+          atomic[`font-size-${styleKey}`] = {
             "$type": "dimension",
             "$value": styleValue.fontSize
           };
         }
         if (styleValue.fontWeight) {
-          flat[`typography-${styleKey}-fontWeight`] = {
+          atomic[`font-weight-${styleKey}`] = {
             "$type": "fontWeight",
             "$value": styleValue.fontWeight
           };
         }
         if (styleValue.lineHeight) {
-          flat[`typography-${styleKey}-lineHeight`] = {
+          atomic[`line-height-${styleKey}`] = {
             "$type": "dimension",
             "$value": styleValue.lineHeight
           };
         }
         if (styleValue.letterSpacing) {
-          flat[`typography-${styleKey}-letterSpacing`] = {
+          atomic[`letter-spacing-${styleKey}`] = {
             "$type": "dimension",
             "$value": styleValue.letterSpacing
           };
         }
         if (styleValue.textTransform) {
-          flat[`typography-${styleKey}-textCase`] = {
+          atomic[`text-case-${styleKey}`] = {
             "$type": "textCase",
             "$value": styleValue.textTransform
           };
@@ -58,7 +58,7 @@ function buildFlatAtomicTokens(rawTokens) {
   // Spacing
   if (rawTokens.base.spacing) {
     Object.entries(rawTokens.base.spacing).forEach(([key, value]) => {
-      flat[`spacing-${key}`] = {
+      atomic[`spacing-${key}`] = {
         "$type": "dimension",
         "$value": value
       };
@@ -66,7 +66,7 @@ function buildFlatAtomicTokens(rawTokens) {
   }
   // BorderRadius
   if (rawTokens.base.shape?.borderRadius) {
-    flat['borderRadius-default'] = {
+    atomic['border-radius-default'] = {
       "$type": "dimension",
       "$value": rawTokens.base.shape.borderRadius
     };
@@ -74,7 +74,7 @@ function buildFlatAtomicTokens(rawTokens) {
   // Shadows
   if (rawTokens.base.shadows) {
     Object.entries(rawTokens.base.shadows).forEach(([key, value]) => {
-      flat[`shadow-${key}`] = {
+      atomic[`shadow-${key}`] = {
         "$type": "shadow",
         "$value": value
       };
@@ -85,7 +85,7 @@ function buildFlatAtomicTokens(rawTokens) {
     const { duration, easing } = rawTokens.base.transitions;
     if (duration) {
       Object.entries(duration).forEach(([key, value]) => {
-        flat[`duration-${key}`] = {
+        atomic[`duration-${key}`] = {
           "$type": "duration",
           "$value": `${value}ms`
         };
@@ -93,21 +93,21 @@ function buildFlatAtomicTokens(rawTokens) {
     }
     if (easing) {
       Object.entries(easing).forEach(([key, value]) => {
-        flat[`easing-${key}`] = {
+        atomic[`easing-${key}`] = {
           "$type": "cubicBezier",
           "$value": value
         };
       });
     }
   }
-  return flat;
+  return atomic;
 }
 
 try {
   const rawTokens = require('./mui-tokens-raw.json');
-  const flat = buildFlatAtomicTokens(rawTokens);
+  const atomic = buildTrueAtomicTokens(rawTokens);
   const output = {
-    MUI: flat,
+    MUI: atomic,
     $metadata: {
       tokenSetOrder: ["MUI"]
     }
@@ -116,7 +116,7 @@ try {
     'tokens-studio-format.json',
     JSON.stringify(output, null, 2)
   );
-  console.log('Successfully transformed tokens to flat atomic Tokens.Studio format under MUI set');
+  console.log('Successfully transformed tokens to true atomic Tokens.Studio format under MUI set');
 } catch (error) {
   console.error('Error transforming tokens:', error);
 }
