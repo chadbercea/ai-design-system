@@ -496,10 +496,12 @@
       "$type": "dimension",
       "$value": "inherit"
     },
-    "color-chad-gray": {
-      "$type": "color",
-      "$value": "#cacaca",
-      "$description": "THIS IS CHAD'S COLOR OK. You need to realize that \"color-chad-gray\" is producing a name and that what I need for the colors is \"chad.gray\" with a $type of color do you understand this one is out of TS look at how it's different than the JSON you're providing!"
+    "chad": {
+      "gray": {
+        "$type": "color",
+        "$value": "#cacaca",
+        "$description": "THIS IS a subset called CHAD'S COLOR OK. You need to realize that \"color-chad-gray\" is producing a name and that what I need for the colors is \"chad.gray\" with a $type of color do you understand this one is out of TS look at how it's different than the JSON you're providing!"
+      }
     }
   },
   "$themes": [],
