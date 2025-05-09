@@ -81,3 +81,6 @@ Monday May 6, 2025
 
 ---
 
+April 09 2025
+
+Q: How would a developer go about getting json design tokens out of a mutated mui theme object? The question stems from me thinking through, "Ok, our DDS devs are going through our theme obj and reseting most to mui defaults however we need to see the final output rendered in what tokens make it to the client when the app is rendered. I have a basic token extractor PoC setup in my Docker container to pull the tokens out of mui but this question remains for now.
