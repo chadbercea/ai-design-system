@@ -16,88 +16,69 @@ function extractPrimitiveColors(muiTokens) {
     "indigo": {}
   };
 
-  // Extract color tokens from MUI's palette
+  // Extract all color tokens from MUI's palette
   const colorMap = muiTokens.base.color || {};
   
-  // Map MUI colors to primitive colors
-  const colorMappings = {
-    // Primary colors (blue)
-    "palette.primary.main": { family: "blue", shade: "500" },
-    "palette.primary.light": { family: "blue", shade: "300" },
-    "palette.primary.dark": { family: "blue", shade: "700" },
-    
-    // Secondary colors (purple)
-    "palette.secondary.main": { family: "purple", shade: "500" },
-    "palette.secondary.light": { family: "purple", shade: "300" },
-    "palette.secondary.dark": { family: "purple", shade: "700" },
-    
-    // Error colors (red)
-    "palette.error.main": { family: "red", shade: "500" },
-    "palette.error.light": { family: "red", shade: "300" },
-    "palette.error.dark": { family: "red", shade: "700" },
-    
-    // Warning colors (orange)
-    "palette.warning.main": { family: "orange", shade: "500" },
-    "palette.warning.light": { family: "orange", shade: "300" },
-    "palette.warning.dark": { family: "orange", shade: "700" },
-    
-    // Info colors (blue)
-    "palette.info.main": { family: "blue", shade: "400" },
-    "palette.info.light": { family: "blue", shade: "200" },
-    "palette.info.dark": { family: "blue", shade: "600" },
-    
-    // Success colors (green)
-    "palette.success.main": { family: "green", shade: "500" },
-    "palette.success.light": { family: "green", shade: "300" },
-    "palette.success.dark": { family: "green", shade: "700" },
-    
-    // Grey scale
-    "palette.grey.50": { family: "grey", shade: "50" },
-    "palette.grey.100": { family: "grey", shade: "100" },
-    "palette.grey.200": { family: "grey", shade: "200" },
-    "palette.grey.300": { family: "grey", shade: "300" },
-    "palette.grey.400": { family: "grey", shade: "400" },
-    "palette.grey.500": { family: "grey", shade: "500" },
-    "palette.grey.600": { family: "grey", shade: "600" },
-    "palette.grey.700": { family: "grey", shade: "700" },
-    "palette.grey.800": { family: "grey", shade: "800" },
-    "palette.grey.900": { family: "grey", shade: "900" },
-    "palette.grey.A100": { family: "grey", shade: "A100" },
-    "palette.grey.A200": { family: "grey", shade: "A200" },
-    "palette.grey.A400": { family: "grey", shade: "A400" },
-    "palette.grey.A700": { family: "grey", shade: "A700" }
-  };
+  // Process each color in the palette
+  Object.entries(colorMap).forEach(([path, value]) => {
+    // Skip if not a color value
+    if (!value || typeof value !== 'string') return;
 
-  // Process each color mapping
-  Object.entries(colorMappings).forEach(([muiPath, mapping]) => {
-    const value = colorMap[muiPath];
-    if (value) {
-      if (!primitives[mapping.family]) {
-        primitives[mapping.family] = {};
-      }
-      primitives[mapping.family][mapping.shade] = {
-        "$type": "color",
-        "$value": value,
-        "$description": `MUI ${muiPath} color`
-      };
+    // Determine color family and shade based on the path
+    let colorFamily = 'grey'; // default
+    let shade = '500'; // default
+    let description = `MUI ${path} color`;
+
+    // Map paths to color families
+    if (path.includes('primary')) colorFamily = 'blue';
+    else if (path.includes('secondary')) colorFamily = 'purple';
+    else if (path.includes('error')) colorFamily = 'red';
+    else if (path.includes('warning')) colorFamily = 'orange';
+    else if (path.includes('success')) colorFamily = 'green';
+    else if (path.includes('info')) colorFamily = 'blue';
+    else if (path.includes('grey')) colorFamily = 'grey';
+    else if (path.includes('common.black')) {
+      colorFamily = 'grey';
+      shade = 'black';
     }
-  });
+    else if (path.includes('common.white')) {
+      colorFamily = 'grey';
+      shade = 'white';
+    }
 
-  // Add common colors
-  if (colorMap["palette.common.black"]) {
-    primitives.grey["black"] = {
+    // Extract shade from path
+    if (path.includes('light')) shade = '300';
+    else if (path.includes('dark')) shade = '700';
+    else if (path.includes('contrastText')) shade = 'contrast';
+    else if (path.includes('grey.')) {
+      const greyMatch = path.match(/grey\.(\w+)/);
+      if (greyMatch) shade = greyMatch[1];
+    }
+
+    // Handle RGBA values
+    if (value.startsWith('rgba')) {
+      // For RGBA values, we'll create a new shade with the opacity
+      const rgbaMatch = value.match(/rgba\((\d+),\s*(\d+),\s*(\d+),\s*([\d.]+)\)/);
+      if (rgbaMatch) {
+        const [_, r, g, b, a] = rgbaMatch;
+        // Convert to hex for the base color
+        const hex = `#${Number(r).toString(16).padStart(2, '0')}${Number(g).toString(16).padStart(2, '0')}${Number(b).toString(16).padStart(2, '0')}`;
+        // Add opacity to the shade name
+        shade = `${shade}-${Math.round(a * 100)}`;
+        value = hex;
+      }
+    }
+
+    // Add the color to primitives
+    if (!primitives[colorFamily]) {
+      primitives[colorFamily] = {};
+    }
+    primitives[colorFamily][shade] = {
       "$type": "color",
-      "$value": colorMap["palette.common.black"],
-      "$description": "MUI common black"
+      "$value": value,
+      "$description": description
     };
-  }
-  if (colorMap["palette.common.white"]) {
-    primitives.grey["white"] = {
-      "$type": "color",
-      "$value": colorMap["palette.common.white"],
-      "$description": "MUI common white"
-    };
-  }
+  });
 
   // Remove empty color families
   Object.keys(primitives).forEach(family => {
