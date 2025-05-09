@@ -1,20 +1,13 @@
 const fs = require('fs');
 
 function buildNestedTokens(rawTokens) {
-  const tokens = {
-    color: {},
-    typography: {},
-    spacing: {},
-    shape: {},
-    shadows: {},
-    transitions: {}
-  };
+  const tokens = {};
 
   // Colors
   const colors = rawTokens.base.color;
   Object.entries(colors).forEach(([key, value]) => {
     const parts = key.split('.');
-    let current = tokens.color;
+    let current = tokens;
     
     // Build nested structure for colors
     for (let i = 0; i < parts.length - 1; i++) {
@@ -35,7 +28,7 @@ function buildNestedTokens(rawTokens) {
     const typographyStyles = rawTokens.base.typography.typography;
     Object.entries(typographyStyles).forEach(([styleKey, styleValue]) => {
       if (typeof styleValue === 'object') {
-        tokens.typography[styleKey] = {
+        tokens[styleKey] = {
           "$type": "typography",
           "$value": {
             "fontFamily": styleValue.fontFamily,
@@ -53,7 +46,7 @@ function buildNestedTokens(rawTokens) {
   // Spacing
   if (rawTokens.base.spacing) {
     Object.entries(rawTokens.base.spacing).forEach(([key, value]) => {
-      tokens.spacing[key] = {
+      tokens[key] = {
         "$type": "dimension",
         "$value": value
       };
@@ -62,7 +55,7 @@ function buildNestedTokens(rawTokens) {
 
   // BorderRadius
   if (rawTokens.base.shape?.borderRadius) {
-    tokens.shape.borderRadius = {
+    tokens.borderRadius = {
       "$type": "dimension",
       "$value": rawTokens.base.shape.borderRadius
     };
@@ -71,7 +64,7 @@ function buildNestedTokens(rawTokens) {
   // Shadows
   if (rawTokens.base.shadows) {
     Object.entries(rawTokens.base.shadows).forEach(([key, value]) => {
-      tokens.shadows[key] = {
+      tokens[key] = {
         "$type": "shadow",
         "$value": value
       };
@@ -81,12 +74,10 @@ function buildNestedTokens(rawTokens) {
   // Transitions
   if (rawTokens.base.transitions) {
     const { duration, easing } = rawTokens.base.transitions;
-    tokens.transitions = {};
     
     if (duration) {
-      tokens.transitions.duration = {};
       Object.entries(duration).forEach(([key, value]) => {
-        tokens.transitions.duration[key] = {
+        tokens[`duration-${key}`] = {
           "$type": "duration",
           "$value": `${value}ms`
         };
@@ -94,9 +85,8 @@ function buildNestedTokens(rawTokens) {
     }
     
     if (easing) {
-      tokens.transitions.easing = {};
       Object.entries(easing).forEach(([key, value]) => {
-        tokens.transitions.easing[key] = {
+        tokens[`easing-${key}`] = {
           "$type": "cubicBezier",
           "$value": value
         };
@@ -110,13 +100,6 @@ function buildNestedTokens(rawTokens) {
 try {
   const rawTokens = require('./mui-tokens-raw.json');
   const nestedTokens = buildNestedTokens(rawTokens);
-  
-  // Remove empty categories
-  Object.keys(nestedTokens).forEach(key => {
-    if (Object.keys(nestedTokens[key]).length === 0) {
-      delete nestedTokens[key];
-    }
-  });
 
   const output = {
     MUI: nestedTokens,
