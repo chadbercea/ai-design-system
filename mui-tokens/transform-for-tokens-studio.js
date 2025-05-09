@@ -3,13 +3,11 @@ const fs = require('fs');
 function buildTokens(rawTokens) {
   const tokens = {};
 
-  // Palette (colors)
+  // Colors: flatten, use semantic/brand nesting only
   if (rawTokens.base.color) {
-    const colors = rawTokens.base.color;
-    tokens.palette = {};
-    Object.entries(colors).forEach(([key, value]) => {
+    Object.entries(rawTokens.base.color).forEach(([key, value]) => {
       const parts = key.split('.');
-      let current = tokens.palette;
+      let current = tokens;
       for (let i = 0; i < parts.length - 1; i++) {
         if (!current[parts[i]]) current[parts[i]] = {};
         current = current[parts[i]];
@@ -19,56 +17,47 @@ function buildTokens(rawTokens) {
         "$value": value
       };
     });
-    if (Object.keys(tokens.palette).length === 0) delete tokens.palette;
   }
 
-  // Spacing
+  // Spacing: direct children, no wrapper
   if (rawTokens.base.spacing) {
-    tokens.spacing = {};
     Object.entries(rawTokens.base.spacing).forEach(([key, value]) => {
-      tokens.spacing[key] = {
+      tokens[`spacing-${key}`] = {
         "$type": "dimension",
         "$value": value
       };
     });
-    if (Object.keys(tokens.spacing).length === 0) delete tokens.spacing;
   }
 
-  // Border Radius
+  // Border Radius: direct child, no wrapper
   if (rawTokens.base.shape?.borderRadius) {
-    tokens.borderRadius = {
-      "default": {
-        "$type": "borderRadius",
-        "$value": rawTokens.base.shape.borderRadius
-      }
+    tokens["borderRadius-default"] = {
+      "$type": "borderRadius",
+      "$value": rawTokens.base.shape.borderRadius
     };
   }
 
-  // Box Shadow
+  // Box Shadow: direct children, no wrapper
   if (rawTokens.base.shadows) {
-    tokens.boxShadow = {};
     Object.entries(rawTokens.base.shadows).forEach(([key, value]) => {
-      tokens.boxShadow[key] = {
+      tokens[`boxShadow-${key}`] = {
         "$type": "boxShadow",
         "$value": value
       };
     });
-    if (Object.keys(tokens.boxShadow).length === 0) delete tokens.boxShadow;
   }
 
-  // Opacity (if available)
+  // Opacity: direct children, no wrapper
   if (rawTokens.base.opacity) {
-    tokens.opacity = {};
     Object.entries(rawTokens.base.opacity).forEach(([key, value]) => {
-      tokens.opacity[key] = {
+      tokens[`opacity-${key}`] = {
         "$type": "opacity",
         "$value": value
       };
     });
-    if (Object.keys(tokens.opacity).length === 0) delete tokens.opacity;
   }
 
-  // Composite Typography
+  // Composite Typography: direct children, no wrapper
   if (rawTokens.base.typography?.typography) {
     const typographyStyles = rawTokens.base.typography.typography;
     Object.entries(typographyStyles).forEach(([styleKey, styleValue]) => {
@@ -88,28 +77,24 @@ function buildTokens(rawTokens) {
     });
   }
 
-  // Duration (Transitions)
+  // Duration (Transitions): direct children, no wrapper
   if (rawTokens.base.transitions?.duration) {
-    tokens.duration = {};
     Object.entries(rawTokens.base.transitions.duration).forEach(([key, value]) => {
-      tokens.duration[key] = {
+      tokens[`duration-${key}`] = {
         "$type": "duration",
         "$value": `${value}ms`
       };
     });
-    if (Object.keys(tokens.duration).length === 0) delete tokens.duration;
   }
 
-  // Easing (Transitions)
+  // Easing (Transitions): direct children, no wrapper
   if (rawTokens.base.transitions?.easing) {
-    tokens.easing = {};
     Object.entries(rawTokens.base.transitions.easing).forEach(([key, value]) => {
-      tokens.easing[key] = {
+      tokens[`easing-${key}`] = {
         "$type": "cubicBezier",
         "$value": value
       };
     });
-    if (Object.keys(tokens.easing).length === 0) delete tokens.easing;
   }
 
   return tokens;
@@ -128,7 +113,7 @@ try {
     'tokens-studio-format.json',
     JSON.stringify(output, null, 2)
   );
-  console.log('Successfully transformed tokens to Tokens.Studio format with all major categories.');
+  console.log('Successfully transformed tokens to flat, spec-compliant Tokens.Studio format.');
 } catch (error) {
   console.error('Error transforming tokens:', error);
 }
