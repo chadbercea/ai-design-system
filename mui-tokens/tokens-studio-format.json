@@ -237,8 +237,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "6rem",
-        "fontWeight": 300,
-        "lineHeight": 1.167,
+        "fontWeight": "300",
+        "lineHeight": "1.167",
         "letterSpacing": "-0.01562em"
       }
     },
@@ -247,8 +247,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "3.75rem",
-        "fontWeight": 300,
-        "lineHeight": 1.2,
+        "fontWeight": "300",
+        "lineHeight": "1.2",
         "letterSpacing": "-0.00833em"
       }
     },
@@ -257,8 +257,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "3rem",
-        "fontWeight": 400,
-        "lineHeight": 1.167,
+        "fontWeight": "400",
+        "lineHeight": "1.167",
         "letterSpacing": "0em"
       }
     },
@@ -267,8 +267,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "2.125rem",
-        "fontWeight": 400,
-        "lineHeight": 1.235,
+        "fontWeight": "400",
+        "lineHeight": "1.235",
         "letterSpacing": "0.00735em"
       }
     },
@@ -277,8 +277,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "1.5rem",
-        "fontWeight": 400,
-        "lineHeight": 1.334,
+        "fontWeight": "400",
+        "lineHeight": "1.334",
         "letterSpacing": "0em"
       }
     },
@@ -287,8 +287,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "1.25rem",
-        "fontWeight": 500,
-        "lineHeight": 1.6,
+        "fontWeight": "500",
+        "lineHeight": "1.6",
         "letterSpacing": "0.0075em"
       }
     },
@@ -297,8 +297,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "1rem",
-        "fontWeight": 400,
-        "lineHeight": 1.75,
+        "fontWeight": "400",
+        "lineHeight": "1.75",
         "letterSpacing": "0.00938em"
       }
     },
@@ -307,8 +307,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "0.875rem",
-        "fontWeight": 500,
-        "lineHeight": 1.57,
+        "fontWeight": "500",
+        "lineHeight": "1.57",
         "letterSpacing": "0.00714em"
       }
     },
@@ -317,8 +317,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "1rem",
-        "fontWeight": 400,
-        "lineHeight": 1.5,
+        "fontWeight": "400",
+        "lineHeight": "1.5",
         "letterSpacing": "0.00938em"
       }
     },
@@ -327,8 +327,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "0.875rem",
-        "fontWeight": 400,
-        "lineHeight": 1.43,
+        "fontWeight": "400",
+        "lineHeight": "1.43",
         "letterSpacing": "0.01071em"
       }
     },
@@ -337,8 +337,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "0.875rem",
-        "fontWeight": 500,
-        "lineHeight": 1.75,
+        "fontWeight": "500",
+        "lineHeight": "1.75",
         "letterSpacing": "0.02857em",
         "textTransform": "uppercase"
       }
@@ -348,8 +348,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "0.75rem",
-        "fontWeight": 400,
-        "lineHeight": 1.66,
+        "fontWeight": "400",
+        "lineHeight": "1.66",
         "letterSpacing": "0.03333em"
       }
     },
@@ -358,8 +358,8 @@
       "$value": {
         "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "0.75rem",
-        "fontWeight": 400,
-        "lineHeight": 2.66,
+        "fontWeight": "400",
+        "lineHeight": "2.66",
         "letterSpacing": "0.08333em",
         "textTransform": "uppercase"
       }
@@ -373,8 +373,65 @@
         "lineHeight": "inherit",
         "letterSpacing": "inherit"
       }
+    },
+    "Padding": {
+      "Lg": {
+        "$type": "sizing",
+        "$value": "24px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Md": {
+        "$type": "sizing",
+        "$value": "16px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Sm": {
+        "$type": "sizing",
+        "$value": "8",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      }
+    },
+    "Margin": {
+      "Lg": {
+        "$type": "sizing",
+        "$value": "24px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Md": {
+        "$type": "sizing",
+        "$value": "16px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Sm": {
+        "$type": "sizing",
+        "$value": "8px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      }
+    },
+    "default": {
+      "$type": "borderRadius",
+      "$value": "4px",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "Roboto": {
+      "$type": "fontFamilies",
+      "$value": "Roboto",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "Bold": {
+      "$type": "fontWeights",
+      "$value": "Bold",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "ExampleCategory": {
+      "Hover": {
+        "$type": "opacity",
+        "$value": "0.5",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      }
     }
   },
+  "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
       "MUI"
