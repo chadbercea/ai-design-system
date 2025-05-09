@@ -1,18 +1,34 @@
 Input:
-Read MUI tokens from w3c-tokens.json.
+Read MUI tokens from w3c-tokens.json or mui-tokens-raw.json.
 Output:
 Write a new tokens-studio.json file with the following structure:
-Top-level key is "MUI".
-Categories are direct children of "MUI", camelCase, never pluralized or wrapped.
-Each token is a direct child of its category, with a semantic name.
-Each token object has at least $type and $value, and includes $description if present.
-No extra wrapping, no forced/empty categories, no arrays unless required by the spec.
-If a MUI token does not exist in the output structure, add it as a new token, following the same structure rules.
+
+- Top-level key is "MUI" (or other set name).
+- Categories are direct children of "MUI", camelCase, singular, never pluralized or wrapped.
+- Each token is a direct child of its category, with a semantic name.
+- Each token object has at least $type and $value, and includes $description if present.
+- No extra wrapping, no forced/empty categories, no arrays unless required by the spec.
+- If a MUI token does not exist in the output structure, add it as a new token, following the same structure rules.
+
 Rules:
-No wrappers, no pluralization, no extra nesting.
-$description is included if present.
-Set name is always "MUI".
-If in doubt, compare output to the structure reference file.
+1. No wrappers, no pluralization, no extra nesting.
+2. $description is included if present.
+3. Set name is always "MUI" (unless otherwise specified).
+4. Category names are camelCase, singular, and never pluralized.
+5. Token names are semantic and meaningful.
+6. $type must match the category (e.g., color, dimension, borderRadius, boxShadow, opacity, typography, etc.).
+7. Only include categories and tokens that are present and needed. Do not add empty categories or tokens.
+8. Use references with curly braces and dot notation if needed (e.g., {palette.primary.main}).
+9. Validate output against the structure reference file.
+
+Checklist for Script Validation:
+- [ ] All categories are direct children of the set.
+- [ ] All tokens are direct children of their category.
+- [ ] No extra wrappers, arrays, or pluralization.
+- [ ] All tokens have $type and $value.
+- [ ] $description is included if present.
+- [ ] No empty categories or tokens.
+- [ ] Output matches the latest structure reference.
 
 Action Plan
 Update the reference file to explicitly prohibit category nesting.
