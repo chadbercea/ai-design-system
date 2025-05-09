@@ -1,122 +1,135 @@
 const fs = require('fs');
 
-function buildTrueAtomicTokens(rawTokens) {
-  const atomic = {};
+function buildNestedTokens(rawTokens) {
+  const tokens = {
+    color: {},
+    typography: {},
+    spacing: {},
+    shape: {},
+    shadows: {},
+    transitions: {}
+  };
+
   // Colors
   const colors = rawTokens.base.color;
   Object.entries(colors).forEach(([key, value]) => {
-    const tokenName = key.replace(/^palette\./, '').replace(/\./g, '-');
-    atomic[`color-${tokenName}`] = {
+    const parts = key.split('.');
+    let current = tokens.color;
+    
+    // Build nested structure for colors
+    for (let i = 0; i < parts.length - 1; i++) {
+      if (!current[parts[i]]) {
+        current[parts[i]] = {};
+      }
+      current = current[parts[i]];
+    }
+    
+    current[parts[parts.length - 1]] = {
       "$type": "color",
       "$value": value
     };
   });
+
   // Typography
   if (rawTokens.base.typography?.typography) {
     const typographyStyles = rawTokens.base.typography.typography;
     Object.entries(typographyStyles).forEach(([styleKey, styleValue]) => {
       if (typeof styleValue === 'object') {
-        if (styleValue.fontFamily) {
-          atomic[`font-family-${styleKey}`] = {
-            "$type": "fontFamily",
-            "$value": styleValue.fontFamily
-          };
-        }
-        if (styleValue.fontSize) {
-          atomic[`font-size-${styleKey}`] = {
-            "$type": "dimension",
-            "$value": styleValue.fontSize
-          };
-        }
-        if (styleValue.fontWeight) {
-          atomic[`font-weight-${styleKey}`] = {
-            "$type": "fontWeight",
-            "$value": styleValue.fontWeight
-          };
-        }
-        if (styleValue.lineHeight) {
-          atomic[`line-height-${styleKey}`] = {
-            "$type": "dimension",
-            "$value": styleValue.lineHeight
-          };
-        }
-        if (styleValue.letterSpacing) {
-          atomic[`letter-spacing-${styleKey}`] = {
-            "$type": "dimension",
-            "$value": styleValue.letterSpacing
-          };
-        }
-        if (styleValue.textTransform) {
-          atomic[`text-case-${styleKey}`] = {
-            "$type": "textCase",
-            "$value": styleValue.textTransform
-          };
-        }
+        tokens.typography[styleKey] = {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": styleValue.fontFamily,
+            "fontSize": styleValue.fontSize,
+            "fontWeight": styleValue.fontWeight,
+            "lineHeight": styleValue.lineHeight,
+            "letterSpacing": styleValue.letterSpacing,
+            "textTransform": styleValue.textTransform
+          }
+        };
       }
     });
   }
+
   // Spacing
   if (rawTokens.base.spacing) {
     Object.entries(rawTokens.base.spacing).forEach(([key, value]) => {
-      atomic[`spacing-${key}`] = {
+      tokens.spacing[key] = {
         "$type": "dimension",
         "$value": value
       };
     });
   }
+
   // BorderRadius
   if (rawTokens.base.shape?.borderRadius) {
-    atomic['border-radius-default'] = {
+    tokens.shape.borderRadius = {
       "$type": "dimension",
       "$value": rawTokens.base.shape.borderRadius
     };
   }
+
   // Shadows
   if (rawTokens.base.shadows) {
     Object.entries(rawTokens.base.shadows).forEach(([key, value]) => {
-      atomic[`shadow-${key}`] = {
+      tokens.shadows[key] = {
         "$type": "shadow",
         "$value": value
       };
     });
   }
+
   // Transitions
   if (rawTokens.base.transitions) {
     const { duration, easing } = rawTokens.base.transitions;
+    tokens.transitions = {};
+    
     if (duration) {
+      tokens.transitions.duration = {};
       Object.entries(duration).forEach(([key, value]) => {
-        atomic[`duration-${key}`] = {
+        tokens.transitions.duration[key] = {
           "$type": "duration",
           "$value": `${value}ms`
         };
       });
     }
+    
     if (easing) {
+      tokens.transitions.easing = {};
       Object.entries(easing).forEach(([key, value]) => {
-        atomic[`easing-${key}`] = {
+        tokens.transitions.easing[key] = {
           "$type": "cubicBezier",
           "$value": value
         };
       });
     }
   }
-  return atomic;
+
+  return tokens;
 }
 
 try {
   const rawTokens = require('./mui-tokens-raw.json');
-  const atomic = buildTrueAtomicTokens(rawTokens);
+  const nestedTokens = buildNestedTokens(rawTokens);
+  
+  // Remove empty categories
+  Object.keys(nestedTokens).forEach(key => {
+    if (Object.keys(nestedTokens[key]).length === 0) {
+      delete nestedTokens[key];
+    }
+  });
+
   const output = {
-    MUI: atomic,
-    $metadata: {
-      tokenSetOrder: ["MUI"]
+    MUI: nestedTokens,
+    "$metadata": {
+      "tokenSetOrder": ["MUI"]
     }
   };
+
   fs.writeFileSync(
     'tokens-studio-format.json',
     JSON.stringify(output, null, 2)
   );
-  console.log('Successfully transformed tokens to true atomic Tokens.Studio format under MUI set');
+  console.log('Successfully transformed tokens to nested Tokens.Studio format');
 } catch (error) {
   console.error('Error transforming tokens:', error);
 }
