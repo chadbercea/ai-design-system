@@ -429,6 +429,47 @@
         "$value": "0.5",
         "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
       }
+    },
+    "border-goes-here": {
+      "$type": "border",
+      "$value": {
+        "color": "{palette.grey.300}",
+        "width": "1px",
+        "style": "solid"
+      },
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "line-height-example": {
+      "$type": "lineHeights",
+      "$value": "100%",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "font-size-example": {
+      "$type": "fontSizes",
+      "$value": "16",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "elevation-0": {
+      "$type": "boxShadow",
+      "$value": {
+        "x": "0",
+        "y": "0",
+        "blur": "0",
+        "spread": "0",
+        "color": "#000000",
+        "type": "dropShadow"
+      },
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "border-width-example": {
+      "$type": "borderWidth",
+      "$value": "1px",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "letter-spacing-example": {
+      "$type": "letterSpacing",
+      "$value": ".9",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
     }
   },
   "$themes": [],
