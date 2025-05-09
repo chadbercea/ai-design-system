@@ -199,7 +199,7 @@ function fillTemplateWithMui(template, muiTokens, primitives, pathArr = []) {
         // For hex values, find closest primitive
         const closest = findClosestPrimitive(newValue, primitives);
         if (closest) {
-          newValue = `{Primitives.${closest.colorFamily}.${closest.shade}}`;
+          newValue = `{${closest.colorFamily}.${closest.shade}}`;
         }
       }
     }

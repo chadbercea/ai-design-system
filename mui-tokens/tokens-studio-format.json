@@ -198,15 +198,15 @@
       "primary": {
         "main": {
           "$type": "color",
-          "$value": "{Primitives.blue.500}"
+          "$value": "{blue.500}"
         },
         "light": {
           "$type": "color",
-          "$value": "{Primitives.blue.300}"
+          "$value": "{blue.300}"
         },
         "dark": {
           "$type": "color",
-          "$value": "{Primitives.blue.700}"
+          "$value": "{blue.700}"
         },
         "contrastText": {
           "$type": "color",
@@ -216,15 +216,15 @@
       "secondary": {
         "main": {
           "$type": "color",
-          "$value": "{Primitives.purple.500}"
+          "$value": "{purple.500}"
         },
         "light": {
           "$type": "color",
-          "$value": "{Primitives.purple.300}"
+          "$value": "{purple.300}"
         },
         "dark": {
           "$type": "color",
-          "$value": "{Primitives.purple.700}"
+          "$value": "{purple.700}"
         },
         "contrastText": {
           "$type": "color",
@@ -234,15 +234,15 @@
       "error": {
         "main": {
           "$type": "color",
-          "$value": "{Primitives.red.500}"
+          "$value": "{red.500}"
         },
         "light": {
           "$type": "color",
-          "$value": "{Primitives.red.300}"
+          "$value": "{red.300}"
         },
         "dark": {
           "$type": "color",
-          "$value": "{Primitives.red.700}"
+          "$value": "{red.700}"
         },
         "contrastText": {
           "$type": "color",
@@ -252,15 +252,15 @@
       "warning": {
         "main": {
           "$type": "color",
-          "$value": "{Primitives.orange.500}"
+          "$value": "{orange.500}"
         },
         "light": {
           "$type": "color",
-          "$value": "{Primitives.orange.300}"
+          "$value": "{orange.300}"
         },
         "dark": {
           "$type": "color",
-          "$value": "{Primitives.orange.700}"
+          "$value": "{orange.700}"
         },
         "contrastText": {
           "$type": "color",
@@ -270,15 +270,15 @@
       "info": {
         "main": {
           "$type": "color",
-          "$value": "{Primitives.blue.400}"
+          "$value": "{blue.400}"
         },
         "light": {
           "$type": "color",
-          "$value": "{Primitives.blue.200}"
+          "$value": "{blue.200}"
         },
         "dark": {
           "$type": "color",
-          "$value": "{Primitives.blue.600}"
+          "$value": "{blue.600}"
         },
         "contrastText": {
           "$type": "color",
@@ -288,15 +288,15 @@
       "success": {
         "main": {
           "$type": "color",
-          "$value": "{Primitives.green.500}"
+          "$value": "{green.500}"
         },
         "light": {
           "$type": "color",
-          "$value": "{Primitives.green.300}"
+          "$value": "{green.300}"
         },
         "dark": {
           "$type": "color",
-          "$value": "{Primitives.green.700}"
+          "$value": "{green.700}"
         },
         "contrastText": {
           "$type": "color",
@@ -306,59 +306,59 @@
       "grey": {
         "50": {
           "$type": "color",
-          "$value": "{Primitives.grey.50}"
+          "$value": "{grey.50}"
         },
         "100": {
           "$type": "color",
-          "$value": "{Primitives.grey.100}"
+          "$value": "{grey.100}"
         },
         "200": {
           "$type": "color",
-          "$value": "{Primitives.grey.200}"
+          "$value": "{grey.200}"
         },
         "300": {
           "$type": "color",
-          "$value": "{Primitives.grey.300}"
+          "$value": "{grey.300}"
         },
         "400": {
           "$type": "color",
-          "$value": "{Primitives.grey.400}"
+          "$value": "{grey.400}"
         },
         "500": {
           "$type": "color",
-          "$value": "{Primitives.grey.500}"
+          "$value": "{grey.500}"
         },
         "600": {
           "$type": "color",
-          "$value": "{Primitives.grey.600}"
+          "$value": "{grey.600}"
         },
         "700": {
           "$type": "color",
-          "$value": "{Primitives.grey.700}"
+          "$value": "{grey.700}"
         },
         "800": {
           "$type": "color",
-          "$value": "{Primitives.grey.800}"
+          "$value": "{grey.800}"
         },
         "900": {
           "$type": "color",
-          "$value": "{Primitives.grey.900}"
+          "$value": "{grey.900}"
         },
         "A100": {
           "$type": "color",
-          "$value": "{Primitives.grey.100}"
+          "$value": "{grey.100}"
         },
         "A200": {
           "$type": "color",
-          "$value": "{Primitives.grey.200}"
+          "$value": "{grey.200}"
         },
         "A400": {
           "$type": "color",
-          "$value": "{Primitives.grey.400}"
+          "$value": "{grey.400}"
         },
         "A700": {
           "$type": "color",
-          "$value": "{Primitives.grey.700}"
+          "$value": "{grey.700}"
         }
       },
       "text": {
@@ -557,103 +557,6 @@
         "lineHeight": "inherit",
         "letterSpacing": "inherit"
       }
-    },
-    "Padding": {
-      "Lg": {
-        "$type": "sizing",
-        "$value": "24px",
-        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-      },
-      "Md": {
-        "$type": "sizing",
-        "$value": "16px",
-        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-      },
-      "Sm": {
-        "$type": "sizing",
-        "$value": "8",
-        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-      }
-    },
-    "Margin": {
-      "Lg": {
-        "$type": "sizing",
-        "$value": "24px",
-        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-      },
-      "Md": {
-        "$type": "sizing",
-        "$value": "16px",
-        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-      },
-      "Sm": {
-        "$type": "sizing",
-        "$value": "8px",
-        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-      }
-    },
-    "default": {
-      "$type": "borderRadius",
-      "$value": "4px",
-      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-    },
-    "Roboto": {
-      "$type": "fontFamilies",
-      "$value": "Roboto",
-      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-    },
-    "Bold": {
-      "$type": "fontWeights",
-      "$value": "Bold",
-      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-    },
-    "ExampleCategory": {
-      "Hover": {
-        "$type": "opacity",
-        "$value": "0.5",
-        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-      }
-    },
-    "border-goes-here": {
-      "$type": "border",
-      "$value": {
-        "color": "{palette.grey.300}",
-        "width": "1px",
-        "style": "solid"
-      },
-      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-    },
-    "line-height-example": {
-      "$type": "lineHeights",
-      "$value": "100%",
-      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-    },
-    "font-size-example": {
-      "$type": "fontSizes",
-      "$value": "16",
-      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-    },
-    "elevation-0": {
-      "$type": "boxShadow",
-      "$value": {
-        "x": "0",
-        "y": "0",
-        "blur": "0",
-        "spread": "0",
-        "color": "#000000",
-        "type": "dropShadow"
-      },
-      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-    },
-    "border-width-example": {
-      "$type": "borderWidth",
-      "$value": "1px",
-      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
-    },
-    "letter-spacing-example": {
-      "$type": "letterSpacing",
-      "$value": ".9",
-      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
     }
   },
   "$themes": [],
