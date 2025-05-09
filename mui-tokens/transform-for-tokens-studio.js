@@ -1,146 +1,77 @@
 const fs = require('fs');
+const path = require('path');
 
-function setNestedToken(obj, key, value) {
-  const parts = key.split('.');
-  let current = obj;
-  for (let i = 0; i < parts.length - 1; i++) {
-    if (!current[parts[i]]) current[parts[i]] = {};
-    current = current[parts[i]];
+function getMuiValueByPath(muiTokens, pathArr) {
+  // Try to find a value in muiTokens.base or muiTokens.other by path
+  let current = muiTokens.base;
+  for (let i = 0; i < pathArr.length; i++) {
+    if (current && typeof current === 'object' && pathArr[i] in current) {
+      current = current[pathArr[i]];
+    } else {
+      current = undefined;
+      break;
+    }
   }
-  current[parts[parts.length - 1]] = value;
+  if (current !== undefined) return current;
+  // Try dot notation in color
+  if (muiTokens.base.color) {
+    const dotKey = pathArr.join('.');
+    if (dotKey in muiTokens.base.color) return muiTokens.base.color[dotKey];
+  }
+  // Try in other
+  current = muiTokens.other;
+  for (let i = 0; i < pathArr.length; i++) {
+    if (current && typeof current === 'object' && pathArr[i] in current) {
+      current = current[pathArr[i]];
+    } else {
+      current = undefined;
+      break;
+    }
+  }
+  return current;
 }
 
-function buildTokens(rawTokens) {
-  const tokens = {};
-
-  // Colors
-  if (rawTokens.base.color) {
-    Object.entries(rawTokens.base.color).forEach(([key, value]) => {
-      setNestedToken(tokens, key, {
-        "$type": "color",
-        "$value": value
-      });
-    });
-  }
-
-  // Typography (composite)
-  if (rawTokens.base.typography?.typography) {
-    const typographyStyles = rawTokens.base.typography.typography;
-    Object.entries(typographyStyles).forEach(([styleKey, styleValue]) => {
-      if (typeof styleValue === 'object') {
-        tokens[styleKey] = {
-          "$type": "typography",
-          "$value": {
-            "fontFamily": styleValue.fontFamily,
-            "fontSize": styleValue.fontSize,
-            "fontWeight": styleValue.fontWeight,
-            "lineHeight": styleValue.lineHeight,
-            "letterSpacing": styleValue.letterSpacing,
-            ...(styleValue.textTransform && { "textTransform": styleValue.textTransform }),
-            ...(styleValue.paragraphSpacing && { "paragraphSpacing": styleValue.paragraphSpacing }),
-            ...(styleValue.paragraphIndent && { "paragraphIndent": styleValue.paragraphIndent }),
-            ...(styleValue.textDecoration && { "textDecoration": styleValue.textDecoration }),
-            ...(styleValue.textCase && { "textCase": styleValue.textCase })
-          },
-          ...(styleValue.$description && { "$description": styleValue.$description })
-        };
-      }
-    });
-  }
-
-  // Spacing, Sizing, Padding, Margin, BorderRadius, BoxShadow, Opacity, etc.
-  const otherTokenTypes = [
-    { key: 'spacing', type: 'dimension' },
-    { key: 'borderRadius', type: 'borderRadius' },
-    { key: 'boxShadow', type: 'boxShadow' },
-    { key: 'opacity', type: 'opacity' },
-    { key: 'borderWidth', type: 'borderWidth' },
-    { key: 'sizing', type: 'dimension' },
-    { key: 'zIndex', type: 'number' },
-    { key: 'breakpoints', type: 'dimension' },
-    { key: 'duration', type: 'duration' },
-    { key: 'easing', type: 'cubicBezier' }
-  ];
-
-  otherTokenTypes.forEach(({ key, type }) => {
-    if (rawTokens.base[key] && typeof rawTokens.base[key] === 'object') {
-      Object.entries(rawTokens.base[key]).forEach(([k, v]) => {
-        setNestedToken(tokens, `${key}.${k}`, {
-          "$type": type,
-          "$value": v
-        });
-      });
-    }
-    if (rawTokens.other && typeof rawTokens.other === 'object') {
-      Object.entries(rawTokens.other).forEach(([ok, ov]) => {
-        if (ok.startsWith(`${key}.`)) {
-          setNestedToken(tokens, ok, {
-            "$type": type,
-            "$value": ov
-          });
-        }
-      });
-    }
-  });
-
-  // Shadows/Elevation from array in 'other'
-  if (rawTokens.other?.shadows && Array.isArray(rawTokens.other.shadows)) {
-    rawTokens.other.shadows.forEach((value, idx) => {
-      setNestedToken(tokens, `boxShadow.elevation${idx}`, {
-        "$type": "boxShadow",
-        "$value": value
-      });
-    });
-  }
-
-  // Transitions (duration, easing) from 'other'
-  if (rawTokens.other && typeof rawTokens.other === 'object') {
-    Object.entries(rawTokens.other).forEach(([ok, ov]) => {
-      if (ok.startsWith('transitions.')) {
-        if (ok.includes('easing')) {
-          setNestedToken(tokens, ok, {
-            "$type": "cubicBezier",
-            "$value": ov
-          });
-        } else if (ok.includes('duration')) {
-          setNestedToken(tokens, ok, {
-            "$type": "duration",
-            "$value": `${ov}ms`
-          });
+function fillTemplateWithMui(template, muiTokens, pathArr = []) {
+  if (typeof template !== 'object' || template === null) return template;
+  if ('$type' in template && '$value' in template) {
+    // Try to fill $value from MUI tokens
+    const muiValue = getMuiValueByPath(muiTokens, [...pathArr]);
+    let newValue = muiValue !== undefined ? muiValue : template['$value'];
+    // If the template value is an object (e.g., border, boxShadow), try to map each property
+    if (typeof template['$value'] === 'object' && template['$value'] !== null) {
+      newValue = {};
+      for (const k in template['$value']) {
+        if (typeof template['$value'][k] === 'string') {
+          // Try to map each property from MUI
+          const propValue = getMuiValueByPath(muiTokens, [...pathArr, k]);
+          newValue[k] = propValue !== undefined ? propValue : template['$value'][k];
+        } else {
+          newValue[k] = template['$value'][k];
         }
       }
-    });
+    }
+    return {
+      ...template,
+      '$value': newValue
+    };
   }
-
-  // Direction, mode, etc. (as text or other)
-  if (rawTokens.other && typeof rawTokens.other === 'object') {
-    Object.entries(rawTokens.other).forEach(([ok, ov]) => {
-      if (typeof ov === 'string' && (ok === 'direction' || ok.endsWith('.mode'))) {
-        setNestedToken(tokens, ok, {
-          "$type": "text",
-          "$value": ov
-        });
-      }
-    });
+  // Recurse for nested objects
+  const out = Array.isArray(template) ? [] : {};
+  for (const k in template) {
+    out[k] = fillTemplateWithMui(template[k], muiTokens, [...pathArr, k]);
   }
-
-  return tokens;
+  return out;
 }
 
 try {
-  const rawTokens = require('./mui-tokens-raw.json');
-  const tokens = buildTokens(rawTokens);
-  const output = {
-    MUI: tokens,
-    "$metadata": {
-      "tokenSetOrder": ["MUI"]
-    }
-  };
+  const template = JSON.parse(fs.readFileSync(path.join(__dirname, 'tokens-studio-format.json'), 'utf8'));
+  const muiTokens = require('./mui-tokens-raw.json');
+  const filled = fillTemplateWithMui(template, muiTokens);
   fs.writeFileSync(
-    'tokens-studio-format.json',
-    JSON.stringify(output, null, 2)
+    'tokens-studio-mapped-from-mui.json',
+    JSON.stringify(filled, null, 2)
   );
-  console.log('Successfully transformed tokens to nested, spec-compliant Tokens.Studio format.');
+  console.log('Successfully mapped MUI tokens to the TS structure. Output: tokens-studio-mapped-from-mui.json');
 } catch (error) {
-  console.error('Error transforming tokens:', error);
+  console.error('Error mapping tokens:', error);
 }

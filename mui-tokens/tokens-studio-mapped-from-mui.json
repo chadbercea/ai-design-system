@@ -1,0 +1,481 @@
+{
+  "MUI": {
+    "palette": {
+      "common": {
+        "black": {
+          "$type": "color",
+          "$value": "#000"
+        },
+        "white": {
+          "$type": "color",
+          "$value": "#fff"
+        }
+      },
+      "primary": {
+        "main": {
+          "$type": "color",
+          "$value": "#1976d2"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "#42a5f5"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "#1565c0"
+        },
+        "contrastText": {
+          "$type": "color",
+          "$value": "#fff"
+        }
+      },
+      "secondary": {
+        "main": {
+          "$type": "color",
+          "$value": "#9c27b0"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "#ba68c8"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "#7b1fa2"
+        },
+        "contrastText": {
+          "$type": "color",
+          "$value": "#fff"
+        }
+      },
+      "error": {
+        "main": {
+          "$type": "color",
+          "$value": "#d32f2f"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "#ef5350"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "#c62828"
+        },
+        "contrastText": {
+          "$type": "color",
+          "$value": "#fff"
+        }
+      },
+      "warning": {
+        "main": {
+          "$type": "color",
+          "$value": "#ed6c02"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "#ff9800"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "#e65100"
+        },
+        "contrastText": {
+          "$type": "color",
+          "$value": "#fff"
+        }
+      },
+      "info": {
+        "main": {
+          "$type": "color",
+          "$value": "#0288d1"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "#03a9f4"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "#01579b"
+        },
+        "contrastText": {
+          "$type": "color",
+          "$value": "#fff"
+        }
+      },
+      "success": {
+        "main": {
+          "$type": "color",
+          "$value": "#2e7d32"
+        },
+        "light": {
+          "$type": "color",
+          "$value": "#4caf50"
+        },
+        "dark": {
+          "$type": "color",
+          "$value": "#1b5e20"
+        },
+        "contrastText": {
+          "$type": "color",
+          "$value": "#fff"
+        }
+      },
+      "grey": {
+        "50": {
+          "$type": "color",
+          "$value": "#fafafa"
+        },
+        "100": {
+          "$type": "color",
+          "$value": "#f5f5f5"
+        },
+        "200": {
+          "$type": "color",
+          "$value": "#eeeeee"
+        },
+        "300": {
+          "$type": "color",
+          "$value": "#e0e0e0"
+        },
+        "400": {
+          "$type": "color",
+          "$value": "#bdbdbd"
+        },
+        "500": {
+          "$type": "color",
+          "$value": "#9e9e9e"
+        },
+        "600": {
+          "$type": "color",
+          "$value": "#757575"
+        },
+        "700": {
+          "$type": "color",
+          "$value": "#616161"
+        },
+        "800": {
+          "$type": "color",
+          "$value": "#424242"
+        },
+        "900": {
+          "$type": "color",
+          "$value": "#212121"
+        },
+        "A100": {
+          "$type": "color",
+          "$value": "#f5f5f5"
+        },
+        "A200": {
+          "$type": "color",
+          "$value": "#eeeeee"
+        },
+        "A400": {
+          "$type": "color",
+          "$value": "#bdbdbd"
+        },
+        "A700": {
+          "$type": "color",
+          "$value": "#616161"
+        }
+      },
+      "text": {
+        "primary": {
+          "$type": "color",
+          "$value": "rgba(0, 0, 0, 0.87)"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "rgba(0, 0, 0, 0.6)"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "rgba(0, 0, 0, 0.38)"
+        }
+      },
+      "divider": {
+        "$type": "color",
+        "$value": "rgba(0, 0, 0, 0.12)"
+      },
+      "background": {
+        "paper": {
+          "$type": "color",
+          "$value": "#fff"
+        },
+        "default": {
+          "$type": "color",
+          "$value": "#fff"
+        }
+      },
+      "action": {
+        "active": {
+          "$type": "color",
+          "$value": "rgba(0, 0, 0, 0.54)"
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "rgba(0, 0, 0, 0.04)"
+        },
+        "selected": {
+          "$type": "color",
+          "$value": "rgba(0, 0, 0, 0.08)"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "rgba(0, 0, 0, 0.26)"
+        },
+        "disabledBackground": {
+          "$type": "color",
+          "$value": "rgba(0, 0, 0, 0.12)"
+        },
+        "focus": {
+          "$type": "color",
+          "$value": "rgba(0, 0, 0, 0.12)"
+        }
+      }
+    },
+    "h1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "6rem",
+        "fontWeight": "300",
+        "lineHeight": "1.167",
+        "letterSpacing": "-0.01562em"
+      }
+    },
+    "h2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "3.75rem",
+        "fontWeight": "300",
+        "lineHeight": "1.2",
+        "letterSpacing": "-0.00833em"
+      }
+    },
+    "h3": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "3rem",
+        "fontWeight": "400",
+        "lineHeight": "1.167",
+        "letterSpacing": "0em"
+      }
+    },
+    "h4": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "2.125rem",
+        "fontWeight": "400",
+        "lineHeight": "1.235",
+        "letterSpacing": "0.00735em"
+      }
+    },
+    "h5": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "1.5rem",
+        "fontWeight": "400",
+        "lineHeight": "1.334",
+        "letterSpacing": "0em"
+      }
+    },
+    "h6": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "1.25rem",
+        "fontWeight": "500",
+        "lineHeight": "1.6",
+        "letterSpacing": "0.0075em"
+      }
+    },
+    "subtitle1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "1rem",
+        "fontWeight": "400",
+        "lineHeight": "1.75",
+        "letterSpacing": "0.00938em"
+      }
+    },
+    "subtitle2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "0.875rem",
+        "fontWeight": "500",
+        "lineHeight": "1.57",
+        "letterSpacing": "0.00714em"
+      }
+    },
+    "body1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "1rem",
+        "fontWeight": "400",
+        "lineHeight": "1.5",
+        "letterSpacing": "0.00938em"
+      }
+    },
+    "body2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "0.875rem",
+        "fontWeight": "400",
+        "lineHeight": "1.43",
+        "letterSpacing": "0.01071em"
+      }
+    },
+    "button": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "0.875rem",
+        "fontWeight": "500",
+        "lineHeight": "1.75",
+        "letterSpacing": "0.02857em",
+        "textTransform": "uppercase"
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "0.75rem",
+        "fontWeight": "400",
+        "lineHeight": "1.66",
+        "letterSpacing": "0.03333em"
+      }
+    },
+    "overline": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSize": "0.75rem",
+        "fontWeight": "400",
+        "lineHeight": "2.66",
+        "letterSpacing": "0.08333em",
+        "textTransform": "uppercase"
+      }
+    },
+    "inherit": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "inherit",
+        "fontSize": "inherit",
+        "fontWeight": "inherit",
+        "lineHeight": "inherit",
+        "letterSpacing": "inherit"
+      }
+    },
+    "Padding": {
+      "Lg": {
+        "$type": "sizing",
+        "$value": "24px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Md": {
+        "$type": "sizing",
+        "$value": "16px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Sm": {
+        "$type": "sizing",
+        "$value": "8",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      }
+    },
+    "Margin": {
+      "Lg": {
+        "$type": "sizing",
+        "$value": "24px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Md": {
+        "$type": "sizing",
+        "$value": "16px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Sm": {
+        "$type": "sizing",
+        "$value": "8px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      }
+    },
+    "default": {
+      "$type": "borderRadius",
+      "$value": "4px",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "Roboto": {
+      "$type": "fontFamilies",
+      "$value": "Roboto",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "Bold": {
+      "$type": "fontWeights",
+      "$value": "Bold",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "ExampleCategory": {
+      "Hover": {
+        "$type": "opacity",
+        "$value": "0.5",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      }
+    },
+    "border-goes-here": {
+      "$type": "border",
+      "$value": {
+        "color": "{palette.grey.300}",
+        "width": "1px",
+        "style": "solid"
+      },
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "line-height-example": {
+      "$type": "lineHeights",
+      "$value": "100%",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "font-size-example": {
+      "$type": "fontSizes",
+      "$value": "16",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "elevation-0": {
+      "$type": "boxShadow",
+      "$value": {
+        "x": "0",
+        "y": "0",
+        "blur": "0",
+        "spread": "0",
+        "color": "#000000",
+        "type": "dropShadow"
+      },
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "border-width-example": {
+      "$type": "borderWidth",
+      "$value": "1px",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "letter-spacing-example": {
+      "$type": "letterSpacing",
+      "$value": ".9",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    }
+  },
+  "$themes": [],
+  "$metadata": {
+    "tokenSetOrder": [
+      "MUI"
+    ]
+  }
+}

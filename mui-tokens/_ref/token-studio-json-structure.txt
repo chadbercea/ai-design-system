@@ -148,3 +148,25 @@ Fake.Font.Token renders as:
         }
       }
     }
+```
+
+## Canonical Example Reference
+- The file `_ref/tokens-studio-canonical-example.json` is the golden source for all token structure, nesting, and $type usage.
+- **All scripts and outputs must match the structure and nesting of this file.**
+- Any changes to the output format must be reflected in this canonical file first.
+
+**Example snippet:**
+```
+"Padding": {
+  "Lg": {
+    "$type": "sizing",
+    "$value": "24px",
+    "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+  },
+  ...
+}
+```
+
+**Validation:**
+- Always compare script output to `_ref/tokens-studio-canonical-example.json` before using or committing.
+- If the output does not match, update the script (not the canonical file) unless you are intentionally changing the format.
