@@ -50,35 +50,39 @@ function main() {
         } else {
           name = tokenKey.toLowerCase();
         }
+        // Add color primitives as flat keys inside Primitives
+        const value = baseObj[tokenKey];
+        let type = getW3CType(tokenKey, w3c, baseKey) || getRelationshipType(tokenKey, relationships) || 'color';
+        let description = `${match ? match[1] : tokenKey} ${match ? match[2] : ''}`.trim();
+        primitives[name] = {
+          $value: value,
+          $type: type,
+          $description: description
+        };
       } else {
-        name = toPascalCase(tokenKey);
+        // Group non-color primitives by PascalCase category inside Primitives
+        const category = toPascalCase(baseKey);
+        const tokenName = toPascalCase(tokenKey);
+        const value = baseObj[tokenKey];
+        let type = getW3CType(tokenKey, w3c, baseKey) || getRelationshipType(tokenKey, relationships) || 'other';
+        let description = `${category} ${tokenName}`;
+        if (!primitives[category]) primitives[category] = {};
+        primitives[category][tokenName] = {
+          $value: value,
+          $type: type,
+          $description: description
+        };
       }
-      // Value
-      const value = baseObj[tokenKey];
-      // Type
-      let type = getW3CType(tokenKey, w3c, baseKey) || getRelationshipType(tokenKey, relationships) || 'other';
-      // Description
-      let description = '';
-      if (toPascalCase(baseKey) === 'Color') {
-        description = `${match ? match[1] : tokenKey} ${match ? match[2] : ''}`.trim();
-      } else {
-        description = `${toPascalCase(baseKey)} ${name}`;
-      }
-      // Add to primitives (no category wrapper!)
-      primitives[name] = {
-        $value: value,
-        $type: type,
-        $description: description
-      };
     }
   }
 
-  // Output only the primitives object, no $schema
+  // Output as a root object with 'Primitives' key, no $schema, no extra wrappers
+  const output = { Primitives: primitives };
   fs.writeFileSync(
     path.join(__dirname, 'primitives.json'),
-    JSON.stringify(primitives, null, 2)
+    JSON.stringify(output, null, 2)
   );
-  console.log('Generated primitives.json with all primitive tokens (no $schema, no category wrappers).');
+  console.log('Generated primitives.json with a Primitives set at the root (no $schema, no category wrappers for color).');
 }
 
 main();
