@@ -1,0 +1,90 @@
+# W3C & Tokens Studio Color Token Rules
+
+## 1. Flat Structure, No Category Wrappers
+- All color tokens must be direct children of their set (e.g., `Primitives`, `MUI`).
+- No extra nesting, arrays, or pluralization.
+
+**Example:**
+```
+"Primitives": {
+  "blue.500": { "$type": "color", "$value": "#2196f3" },
+  "red.900": { "$type": "color", "$value": "#b71c1c" }
+}
+```
+
+---
+
+## 2. Token Naming
+- Use dot notation for family and shade: `blue.500`, `red.A100`, `common.black`.
+- Semantic tokens (in `MUI`) use their full semantic path: `palette.primary.main`, `palette.text.primary`.
+
+---
+
+## 3. $type Property
+- Every color token must have `$type: "color"`.
+- This is how Tokens Studio and Figma know to treat the value as a color.
+
+---
+
+## 4. $value Property
+- The value must be a valid color string: hex (`#RRGGBB`), RGB, RGBA, or a reference (`{blue.500}`).
+- Primitives use direct color values.
+- Semantic tokens may use references to primitives.
+
+**Example:**
+```
+"palette.primary.main": { "$type": "color", "$value": "{blue.700}" }
+```
+
+---
+
+## 5. References
+- Use curly braces and dot notation for references: `{blue.500}`
+- References must point to a valid primitive token in the same or another set.
+
+---
+
+## 6. No Duplicates or Overlaps
+- Primitives should only contain atomic color values.
+- Semantic tokens should only appear in the semantic set (e.g., `MUI`).
+
+---
+
+## 7. Optional: $description
+- You may include a `$description` for documentation, but it is not required.
+
+---
+
+## 8. Validation
+- The output must match the canonical example and pass import in Tokens Studio and Figma without errors.
+
+---
+
+## Canonical Example
+```
+{
+  "Primitives": {
+    "blue.500": { "$type": "color", "$value": "#2196f3" },
+    "red.900": { "$type": "color", "$value": "#b71c1c" },
+    "common.black": { "$type": "color", "$value": "#000" }
+  },
+  "MUI": {
+    "palette.primary.main": { "$type": "color", "$value": "{blue.700}" },
+    "palette.text.primary": { "$type": "color", "$value": "rgba(0,0,0,0.87)" }
+  }
+}
+```
+
+---
+
+## Summary Table
+| Rule                | Requirement/Example                                 |
+|---------------------|----------------------------------------------------|
+| Structure           | Flat, no wrappers, direct children of set          |
+| Naming              | `blue.500`, `palette.primary.main`                 |
+| $type               | `"color"`                                          |
+| $value              | Hex, RGB, RGBA, or reference                       |
+| References          | `{blue.500}`                                       |
+| No Duplicates       | Primitives ≠ Semantics                             |
+| $description        | Optional                                           |
+| Validation          | Must import cleanly into Tokens Studio/Figma       |

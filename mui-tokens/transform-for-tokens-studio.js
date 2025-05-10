@@ -258,16 +258,95 @@ function flattenColorPrimitives(muiTokens) {
   return primitives;
 }
 
+function extractTypographyPrimitives(muiTokens) {
+  const primitives = {};
+  const typographyMap = muiTokens.base.typography?.typography || {};
+  
+  Object.entries(typographyMap).forEach(([key, value]) => {
+    if (typeof value !== 'object' || value === null) return; // Only process style objects (h1, h2, etc.)
+    // Font Family
+    if (value.fontFamily) {
+      primitives[`fontFamily.roboto`] = {
+        "$type": "fontFamily",
+        "$value": String(value.fontFamily)
+      };
+    }
+    // Font Size
+    if (value.fontSize) {
+      const fontSizeStr = String(value.fontSize);
+      const size = fontSizeStr.replace('rem', '');
+      const name = size === '6' ? '6xl' :
+                   size === '3.75' ? '5xl' :
+                   size === '3' ? '4xl' :
+                   size === '2.125' ? '3xl' :
+                   size === '1.5' ? '2xl' :
+                   size === '1.25' ? 'xl' :
+                   size === '1' ? 'base' :
+                   size === '0.875' ? 'sm' :
+                   size === '0.75' ? 'xs' : size;
+      primitives[`fontSize.${name}`] = {
+        "$type": "fontSize",
+        "$value": fontSizeStr
+      };
+    }
+    // Font Weight
+    if (value.fontWeight) {
+      const weightStr = String(value.fontWeight);
+      const name = weightStr === '300' ? 'light' :
+                   weightStr === '400' ? 'regular' :
+                   weightStr === '500' ? 'medium' : weightStr;
+      primitives[`fontWeight.${name}`] = {
+        "$type": "fontWeight",
+        "$value": weightStr
+      };
+    }
+    // Line Height
+    if (value.lineHeight) {
+      const lineHeightStr = String(value.lineHeight);
+      const name = lineHeightStr === '1.167' ? 'tight' :
+                   lineHeightStr === '1.2' ? 'snug' :
+                   lineHeightStr === '1.5' ? 'normal' :
+                   lineHeightStr === '1.75' ? 'relaxed' :
+                   lineHeightStr === '2.66' ? 'loose' : lineHeightStr;
+      primitives[`lineHeight.${name}`] = {
+        "$type": "lineHeight",
+        "$value": lineHeightStr
+      };
+    }
+    // Letter Spacing
+    if (value.letterSpacing) {
+      const spacingStr = String(value.letterSpacing);
+      const name = spacingStr === '-0.01562em' ? 'tighter' :
+                   spacingStr === '-0.00833em' ? 'tight' :
+                   spacingStr === '0em' ? 'normal' :
+                   spacingStr === '0.00938em' ? 'wide' :
+                   spacingStr === '0.02857em' ? 'wider' :
+                   spacingStr === '0.08333em' ? 'widest' : spacingStr;
+      primitives[`letterSpacing.${name}`] = {
+        "$type": "letterSpacing",
+        "$value": spacingStr
+      };
+    }
+  });
+  return primitives;
+}
+
 try {
   // Read input files
   const template = JSON.parse(fs.readFileSync(path.join(__dirname, 'tokens-studio-format.json'), 'utf8'));
   const muiTokens = require('./mui-tokens-raw.json');
   
-  // Flatten all color primitives
-  const primitives = flattenColorPrimitives(muiTokens);
+  // Extract both color and typography primitives
+  const colorPrimitives = flattenColorPrimitives(muiTokens);
+  const typographyPrimitives = extractTypographyPrimitives(muiTokens);
+  
+  // Combine primitives
+  const primitives = {
+    ...colorPrimitives,
+    ...typographyPrimitives
+  };
   
   // Use the existing logic for semantic tokens (MUI)
-  // (Assume fillTemplateWithMui and cleanupMuiTokens are already correct and flat)
   const semanticTokens = cleanupMuiTokens(fillTemplateWithMui(template.MUI, muiTokens, primitives));
   
   // Create final structure (flat, no wrappers)

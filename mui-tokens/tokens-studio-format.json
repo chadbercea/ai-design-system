@@ -1015,6 +1015,162 @@
     "common.white": {
       "$type": "color",
       "$value": "#fff"
+    },
+    "fontFamily.roboto": {
+      "$type": "fontFamily",
+      "$value": "inherit"
+    },
+    "fontSize.6xl": {
+      "$type": "fontSize",
+      "$value": "6rem"
+    },
+    "fontWeight.light": {
+      "$type": "fontWeight",
+      "$value": "300"
+    },
+    "lineHeight.tight": {
+      "$type": "lineHeight",
+      "$value": "1.167"
+    },
+    "letterSpacing.tighter": {
+      "$type": "letterSpacing",
+      "$value": "-0.01562em"
+    },
+    "fontSize.5xl": {
+      "$type": "fontSize",
+      "$value": "3.75rem"
+    },
+    "lineHeight.snug": {
+      "$type": "lineHeight",
+      "$value": "1.2"
+    },
+    "letterSpacing.tight": {
+      "$type": "letterSpacing",
+      "$value": "-0.00833em"
+    },
+    "fontSize.4xl": {
+      "$type": "fontSize",
+      "$value": "3rem"
+    },
+    "fontWeight.regular": {
+      "$type": "fontWeight",
+      "$value": "400"
+    },
+    "letterSpacing.normal": {
+      "$type": "letterSpacing",
+      "$value": "0em"
+    },
+    "fontSize.3xl": {
+      "$type": "fontSize",
+      "$value": "2.125rem"
+    },
+    "lineHeight.1.235": {
+      "$type": "lineHeight",
+      "$value": "1.235"
+    },
+    "letterSpacing.0.00735em": {
+      "$type": "letterSpacing",
+      "$value": "0.00735em"
+    },
+    "fontSize.2xl": {
+      "$type": "fontSize",
+      "$value": "1.5rem"
+    },
+    "lineHeight.1.334": {
+      "$type": "lineHeight",
+      "$value": "1.334"
+    },
+    "fontSize.xl": {
+      "$type": "fontSize",
+      "$value": "1.25rem"
+    },
+    "fontWeight.medium": {
+      "$type": "fontWeight",
+      "$value": "500"
+    },
+    "lineHeight.1.6": {
+      "$type": "lineHeight",
+      "$value": "1.6"
+    },
+    "letterSpacing.0.0075em": {
+      "$type": "letterSpacing",
+      "$value": "0.0075em"
+    },
+    "fontSize.base": {
+      "$type": "fontSize",
+      "$value": "1rem"
+    },
+    "lineHeight.relaxed": {
+      "$type": "lineHeight",
+      "$value": "1.75"
+    },
+    "letterSpacing.wide": {
+      "$type": "letterSpacing",
+      "$value": "0.00938em"
+    },
+    "fontSize.sm": {
+      "$type": "fontSize",
+      "$value": "0.875rem"
+    },
+    "lineHeight.1.57": {
+      "$type": "lineHeight",
+      "$value": "1.57"
+    },
+    "letterSpacing.0.00714em": {
+      "$type": "letterSpacing",
+      "$value": "0.00714em"
+    },
+    "lineHeight.normal": {
+      "$type": "lineHeight",
+      "$value": "1.5"
+    },
+    "lineHeight.1.43": {
+      "$type": "lineHeight",
+      "$value": "1.43"
+    },
+    "letterSpacing.0.01071em": {
+      "$type": "letterSpacing",
+      "$value": "0.01071em"
+    },
+    "letterSpacing.wider": {
+      "$type": "letterSpacing",
+      "$value": "0.02857em"
+    },
+    "fontSize.xs": {
+      "$type": "fontSize",
+      "$value": "0.75rem"
+    },
+    "lineHeight.1.66": {
+      "$type": "lineHeight",
+      "$value": "1.66"
+    },
+    "letterSpacing.0.03333em": {
+      "$type": "letterSpacing",
+      "$value": "0.03333em"
+    },
+    "lineHeight.loose": {
+      "$type": "lineHeight",
+      "$value": "2.66"
+    },
+    "letterSpacing.widest": {
+      "$type": "letterSpacing",
+      "$value": "0.08333em"
+    },
+    "fontSize.inherit": {
+      "$type": "fontSize",
+      "$value": "inherit"
+    },
+    "fontWeight.inherit": {
+      "$type": "fontWeight",
+      "$value": "inherit"
+    },
+    "lineHeight.inherit": {
+      "$type": "lineHeight",
+      "$value": "inherit"
+    },
+    "letterSpacing.inherit": {
+      "$type": "letterSpacing",
+      "$value": "inherit"
     }
   },
   "MUI": {
