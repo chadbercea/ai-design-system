@@ -1293,6 +1293,33 @@
         "$description": "Breakpoints BreakpointsUnit"
       }
     },
+    "Opacity": {
+      "PaletteActionHoverOpacity": {
+        "$value": 0.04,
+        "$type": "opacity",
+        "$description": "Opacity PaletteActionHoverOpacity"
+      },
+      "PaletteActionSelectedOpacity": {
+        "$value": 0.08,
+        "$type": "opacity",
+        "$description": "Opacity PaletteActionSelectedOpacity"
+      },
+      "PaletteActionDisabledOpacity": {
+        "$value": 0.38,
+        "$type": "opacity",
+        "$description": "Opacity PaletteActionDisabledOpacity"
+      },
+      "PaletteActionFocusOpacity": {
+        "$value": 0.12,
+        "$type": "opacity",
+        "$description": "Opacity PaletteActionFocusOpacity"
+      },
+      "PaletteActionActivatedOpacity": {
+        "$value": 0.12,
+        "$type": "opacity",
+        "$description": "Opacity PaletteActionActivatedOpacity"
+      }
+    },
     "BorderRadius": {
       "ShapeBorderRadius": {
         "$value": 4,
