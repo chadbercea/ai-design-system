@@ -1,4 +1,5 @@
 {
+  "$schema": "https://design-tokens.github.io/design-tokens/schema.json",
   "Primitives": {
     "blue.50": {
       "$value": "#e3f2fd",

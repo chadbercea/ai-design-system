@@ -148,12 +148,15 @@ function main() {
     console.warn('Skipped tokens due to unmapped category:', skipped);
   }
 
-  const output = { Primitives: primitives };
+  const output = {
+    $schema: "https://design-tokens.github.io/design-tokens/schema.json",
+    Primitives: primitives
+  };
   fs.writeFileSync(
     path.join(__dirname, 'primitives.json'),
     JSON.stringify(output, null, 2)
   );
-  console.log('Generated primitives.json with strict Tokens Studio/W3C compliance. Skipped tokens are logged.');
+  console.log('Generated primitives.json with strict Design Token Codex compliance. Skipped tokens are logged.');
 }
 
 main();
