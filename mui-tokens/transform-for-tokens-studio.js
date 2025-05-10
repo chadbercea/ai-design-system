@@ -8,10 +8,8 @@ function toPascalCase(str) {
 function buildColorPrimitives(raw) {
   const primitives = {};
   for (const [flatKey, value] of Object.entries(raw.base.color)) {
-    // e.g. blue.500 -> Blue500
     const [color, shade] = flatKey.split('.');
-    const tokenName = toPascalCase(color + (shade ? shade : ''));
-    primitives[tokenName] = {
+    primitives[flatKey] = {
       $value: value,
       $type: 'color',
       $description: `${color} ${shade}`
@@ -35,7 +33,7 @@ function main() {
     path.join(__dirname, 'tokens-studio-format.json'),
     JSON.stringify(output, null, 2)
   );
-  console.log('Generated tokens-studio-format.json with flat, un-nested primitives.');
+  console.log('Generated tokens-studio-format.json with flat primitives and descriptive $description.');
 }
 
 main();
