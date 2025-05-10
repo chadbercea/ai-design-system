@@ -185,7 +185,25 @@ function fillTemplateWithMui(template, muiTokens, primitives, pathArr = []) {
       }
     }
     
-    // If the template value is an object (e.g., border, boxShadow), try to map each property
+    // If this is a typography property, try to reference a primitive
+    if (['fontSize', 'fontWeight', 'lineHeight', 'letterSpacing'].includes(template.$type)) {
+      const valueStr = String(newValue);
+      let primitiveKey = '';
+      
+      // Find the matching primitive key
+      for (const key in primitives) {
+        if (key.startsWith(`${template.$type}.`) && primitives[key].$value === valueStr) {
+          primitiveKey = key;
+          break;
+        }
+      }
+      
+      if (primitiveKey) {
+        newValue = primitiveKey.split('.')[1]; // Use just the semantic name part
+      }
+    }
+    
+    // If the template value is an object (e.g., typography composite), try to map each property
     if (typeof template['$value'] === 'object' && template['$value'] !== null) {
       newValue = {};
       for (const k in template['$value']) {
@@ -242,17 +260,45 @@ function cleanupMuiTokens(tokens) {
   return result;
 }
 
+// Semantic mapping for color shades
+const colorShadeMap = {
+  '50': 'lightest',
+  '100': 'lighter',
+  '200': 'light',
+  '300': 'lighter-medium',
+  '400': 'medium-light',
+  '500': 'medium',
+  '600': 'medium-dark',
+  '700': 'dark',
+  '800': 'darker',
+  '900': 'darkest',
+  'A100': 'accent-light',
+  'A200': 'accent',
+  'A400': 'accent-dark',
+  'A700': 'accent-darkest',
+  'black': 'black',
+  'white': 'white'
+};
+
 function flattenColorPrimitives(muiTokens) {
-  // Flattens only true color primitives (e.g., blue.50, red.900, etc., and common.black/white)
+  // Flattens only true color primitives with semantic names
   const primitives = {};
   const colorMap = muiTokens.base.color || {};
   Object.entries(colorMap).forEach(([key, value]) => {
-    // Only include keys that match the color primitive pattern (e.g., blue.50, red.900, etc.) or common.black/white
-    if (/^[a-zA-Z]+\.(\d+|A\d+)$/.test(key) || key === 'common.black' || key === 'common.white') {
-      primitives[key] = {
-        "$type": "color",
-        "$value": value
-      };
+    // Match color primitive pattern (e.g., blue.50, red.900, etc.) or common.black/white
+    const match = key.match(/^([a-zA-Z]+)\.(\d+|A\d+)$/) || 
+                 (key === 'common.black' ? ['common.black', 'common', 'black'] : null) ||
+                 (key === 'common.white' ? ['common.white', 'common', 'white'] : null);
+    
+    if (match) {
+      const [_, colorFamily, shade] = match;
+      const semanticShade = colorShadeMap[shade];
+      if (semanticShade) {
+        primitives[`${colorFamily}.${semanticShade}`] = {
+          "$type": "color",
+          "$value": value
+        };
+      }
     }
   });
   return primitives;
@@ -364,6 +410,23 @@ function extractTypographyPrimitives(muiTokens) {
   return primitives;
 }
 
+// Validation: Ensure no duplicate or raw-value-named primitives
+function validatePrimitives(primitives) {
+  const seen = new Set();
+  for (const key in primitives) {
+    if (key.split('.').length !== 2) {
+      throw new Error(`Primitive key '${key}' must be in the form property.semanticName`);
+    }
+    if (seen.has(key)) {
+      throw new Error(`Duplicate primitive key: ${key}`);
+    }
+    seen.add(key);
+    if (/\d/.test(key.split('.')[1]) && !isNaN(Number(key.split('.')[1]))) {
+      throw new Error(`Primitive key '${key}' must not use a raw value as the semantic name`);
+    }
+  }
+}
+
 try {
   // Read input files
   const template = JSON.parse(fs.readFileSync(path.join(__dirname, 'tokens-studio-format.json'), 'utf8'));
@@ -378,6 +441,9 @@ try {
     ...colorPrimitives,
     ...typographyPrimitives
   };
+  
+  // Validate primitives
+  validatePrimitives(primitives);
   
   // Use the existing logic for semantic tokens (MUI)
   const semanticTokens = cleanupMuiTokens(fillTemplateWithMui(template.MUI, muiTokens, primitives));

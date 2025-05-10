@@ -1,0 +1,311 @@
+# W3C Design Tokens with Primitives/MUI Structure - Guide for Cursor.ai
+
+This guide explains how to structure W3C-compliant design tokens for use with Cursor.ai and Tokens Studio for Figma. The structure maintains a clear separation between primitive tokens and semantic (MUI) tokens within a single JSON file.
+
+## Core Structure
+
+The token system follows these key principles:
+
+1. **Single JSON File**: All tokens exist in one file with two top-level sets
+2. **Two Top-Level Sets**: 
+   - `Primitives`: Raw design values (colors, spacing, typography, etc.)
+   - `MUI`: Semantic tokens that reference primitives
+3. **W3C Compliance**: All tokens follow the W3C standard with `$type`, `$value`, and `$description`
+4. **Tokens Studio Compatibility**: Type naming follows the Tokens Studio taxonomy
+
+## JSON Structure
+
+```json
+{
+  "$schema": "https://design-tokens.github.io/design-tokens/schema.json",
+  "Primitives": {
+    // Primitive tokens grouped by category
+  },
+  "MUI": {
+    // Semantic tokens that reference primitives
+  }
+}
+```
+
+## Primitive Tokens
+
+Primitive tokens are organized by category within the `Primitives` set. Each category can contain multiple tokens.
+
+### Naming Conventions
+
+- Use **PascalCase** for category and token names (e.g., `FontSize.Xl`)
+- Use consistent naming across categories (e.g., `Xs`, `Sm`, `Md`, `Lg`, `Xl`)
+- Category names should be singular (e.g., `FontSize` not `FontSizes`)
+
+### Token Structure
+
+Each primitive token must include:
+
+- `$value`: The actual value (e.g., "24px", "#FF0000")
+- `$type`: The token type according to Tokens Studio taxonomy
+- `$description`: Clear description of the token's purpose
+
+### Example Primitive Tokens
+
+```json
+"Primitives": {
+  "FontSize": {
+    "Xl": {
+      "$value": "24px",
+      "$type": "fontSizes",
+      "$description": "Extra large font size for major headings"
+    },
+    "Lg": {
+      "$value": "20px",
+      "$type": "fontSizes",
+      "$description": "Large font size for headings"
+    }
+  },
+  "Spacing": {
+    "Xl": {
+      "$value": "32px",
+      "$type": "spacing",
+      "$description": "Extra large spacing"
+    },
+    "Lg": {
+      "$value": "24px",
+      "$type": "spacing",
+      "$description": "Large spacing"
+    }
+  },
+  "Color": {
+    "Blue500": {
+      "$value": "#2196F3",
+      "$type": "color",
+      "$description": "Primary blue, 500 weight"
+    }
+  }
+}
+```
+
+## Tokens Studio Type Taxonomy
+
+Use these specific types for compatibility with Tokens Studio:
+
+| Category | `$type` Value |
+|----------|--------------|
+| Font sizes | `fontSizes` |
+| Font weights | `fontWeights` |
+| Font families | `fontFamilies` |
+| Line heights | `lineHeights` |
+| Letter spacing | `letterSpacing` |
+| Colors | `color` |
+| Border radius | `borderRadius` |
+| Border width | `borderWidth` |
+| Spacing | `spacing` |
+| Sizing | `sizing` |
+| Opacity | `opacity` |
+| Typography | `typography` |
+| Shadow | `boxShadow` |
+
+## Semantic (MUI) Tokens
+
+Semantic tokens in the `MUI` set reference primitive tokens to create a semantic design language. They use the same structure as primitives but typically reference primitive tokens in their `$value`.
+
+### Token References
+
+Reference primitive tokens using the syntax: `{Primitives.Category.TokenName}`
+
+### Example Semantic Tokens
+
+```json
+"MUI": {
+  "Typography": {
+    "Heading": {
+      "H1": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{Primitives.FontFamily.Primary}",
+          "fontSize": "{Primitives.FontSize.Xl}",
+          "fontWeight": "{Primitives.FontWeight.Bold}",
+          "lineHeight": "{Primitives.LineHeight.Xl}"
+        },
+        "$description": "H1 heading style"
+      }
+    }
+  },
+  "Color": {
+    "Primary": {
+      "$type": "color",
+      "$value": "{Primitives.Color.Blue500}",
+      "$description": "Primary brand color"
+    }
+  },
+  "Spacing": {
+    "ButtonPadding": {
+      "$type": "spacing",
+      "$value": "{Primitives.Spacing.Md}",
+      "$description": "Standard padding for buttons"
+    }
+  }
+}
+```
+
+## Complete Example
+
+```json
+{
+  "$schema": "https://design-tokens.github.io/design-tokens/schema.json",
+  "Primitives": {
+    "FontSize": {
+      "Xl": {
+        "$value": "24px",
+        "$type": "fontSizes",
+        "$description": "Extra large font size for major headings"
+      },
+      "Lg": {
+        "$value": "20px",
+        "$type": "fontSizes",
+        "$description": "Large font size for headings"
+      }
+    },
+    "FontWeight": {
+      "Bold": {
+        "$value": "700",
+        "$type": "fontWeights",
+        "$description": "Bold font weight for strong emphasis"
+      }
+    },
+    "FontFamily": {
+      "Primary": {
+        "$value": "Inter, sans-serif",
+        "$type": "fontFamilies",
+        "$description": "Primary font for most UI elements"
+      }
+    },
+    "LineHeight": {
+      "Xl": {
+        "$value": "1.5",
+        "$type": "lineHeights",
+        "$description": "Extra large line height for headings"
+      }
+    },
+    "Spacing": {
+      "Md": {
+        "$value": "16px",
+        "$type": "spacing",
+        "$description": "Medium spacing"
+      }
+    },
+    "Color": {
+      "Blue500": {
+        "$value": "#2196F3",
+        "$type": "color",
+        "$description": "Primary blue, 500 weight"
+      }
+    }
+  },
+  "MUI": {
+    "Typography": {
+      "Heading": {
+        "H1": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{Primitives.FontFamily.Primary}",
+            "fontSize": "{Primitives.FontSize.Xl}",
+            "fontWeight": "{Primitives.FontWeight.Bold}",
+            "lineHeight": "{Primitives.LineHeight.Xl}"
+          },
+          "$description": "H1 heading style"
+        }
+      }
+    },
+    "Color": {
+      "Primary": {
+        "$type": "color",
+        "$value": "{Primitives.Color.Blue500}",
+        "$description": "Primary brand color"
+      }
+    },
+    "Spacing": {
+      "ButtonPadding": {
+        "$type": "spacing",
+        "$value": "{Primitives.Spacing.Md}",
+        "$description": "Standard padding for buttons"
+      }
+    }
+  }
+}
+```
+
+## Flattening Function for Cursor.ai
+
+If you're working with an existing nested token structure and need to convert it to this format, here's a simple function to help:
+
+```javascript
+function convertToTokensStudioFormat(tokens) {
+  const result = {
+    "$schema": "https://design-tokens.github.io/design-tokens/schema.json",
+    "Primitives": {},
+    "MUI": {}
+  };
+
+  // Function to process tokens and place them in the right category
+  function processTokens(tokenObj, parentKey, targetSet) {
+    for (const [key, value] of Object.entries(tokenObj)) {
+      // Skip schema
+      if (key === '$schema') continue;
+      
+      if (value && typeof value === 'object') {
+        // If it's a token with $value
+        if ('$value' in value && '$type' in value) {
+          // Create category if it doesn't exist
+          const category = parentKey || key;
+          if (!targetSet[category]) {
+            targetSet[category] = {};
+          }
+          
+          if (parentKey) {
+            // We're in a subcategory
+            targetSet[category][key] = {
+              $value: value.$value,
+              $type: value.$type,
+              $description: value.$description || `Token for ${category}.${key}`
+            };
+          } else {
+            // Top level token
+            targetSet[key] = {
+              $value: value.$value,
+              $type: value.$type,
+              $description: value.$description || `Token for ${key}`
+            };
+          }
+        } 
+        // If it's a nested object, recursively process it
+        else {
+          const newParent = parentKey ? `${parentKey}.${key}` : key;
+          processTokens(value, newParent, targetSet);
+        }
+      }
+    }
+  }
+
+  // Process Primitives and MUI separately 
+  if (tokens.Primitives) {
+    processTokens(tokens.Primitives, "", result.Primitives);
+  }
+  
+  if (tokens.MUI) {
+    processTokens(tokens.MUI, "", result.MUI);
+  }
+  
+  return result;
+}
+```
+
+## Best Practices
+
+1. **Consistent Naming**: Use consistent naming patterns across all categories
+2. **Clear Descriptions**: Write clear, detailed descriptions for every token
+3. **Proper Types**: Use the correct Tokens Studio type for each token 
+4. **Reference Primitives**: Semantic tokens should reference primitives to maintain a single source of truth
+5. **PascalCase**: Use PascalCase for all category and token names
+6. **Check References**: Ensure all references point to valid tokens that exist in the Primitives set
+7. **Validate JSON**: Ensure your JSON is valid before using it with Tokens Studio
+
+Following these guidelines ensures your design tokens are properly structured for use with Cursor.ai and Tokens Studio for Figma.

@@ -10,6 +10,7 @@ Write a new tokens-studio.json file with the following structure:
 - No extra wrapping, no forced/empty categories, no arrays unless required by the spec.
 - If a MUI token does not exist in the output structure, add it as a new token, following the same structure rules.
 - **All scripts and outputs must match the structure and nesting of _ref/tokens-studio-canonical-example.json.**
+- **Do not wrap primitives in a category with the same name as the $type (e.g., do not use 'lineHeight': { 'tight': { ... } }).**
 
 Rules:
 1. No wrappers, no pluralization, no extra nesting.
