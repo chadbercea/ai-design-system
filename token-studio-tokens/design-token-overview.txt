@@ -96,6 +96,37 @@ Each primitive token must include:
 }
 ```
 
+## Category Wrapping Rule
+
+> **Do not wrap tokens in a category object if the category and type are the same.**
+>
+> - If a primitive token's category (e.g., `Color`) and its `$type` (e.g., `color`) are the same (case-insensitive), place the token as a flat key under the `Primitives` set.
+> - If the category and type are different (e.g., category = `LineHeight`, type = `lineHeight`), group tokens under the PascalCase category.
+>
+> **Examples:**
+>
+> ```json
+> {
+>   "Primitives": {
+>     "blue.500": {
+>       "$value": "#2196f3",
+>       "$type": "color",
+>       "$description": "blue 500"
+>     },
+>     "LineHeight": {
+>       "Xl": {
+>         "$value": "24px",
+>         "$type": "lineHeight",
+>         "$description": "LineHeight Xl"
+>       }
+>     }
+>   }
+> }
+> ```
+>
+> - **Correct:** `"blue.500"` is a flat key because category = `Color` and `$type` = `color`.
+> - **Correct:** `"LineHeight"` is a category object because category = `LineHeight` and `$type` = `lineHeight`.
+
 ## Tokens Studio Type Taxonomy
 
 Use these specific types for compatibility with Tokens Studio:
@@ -327,3 +358,32 @@ Grouped by category in json does not mean wrap tokens. Evern. It never means thi
 Following these guidelines ensures your design tokens are properly structured for use with Cursor.ai and Tokens Studio for Figma.
 
 https://design-tokens.github.io/design-tokens/schema.json
+
+# Appendix: Nuance Rules & Best Practices
+
+## 1. Primitive vs. Semantic Token Distinction
+> Only tokens with a direct, raw value (string or number) and a distinct `$type` are considered primitives. Semantic tokens (tokens that reference other tokens or are composites) must not be included in the `Primitives` set.
+
+## 2. Allowed Value Types for Primitives
+> Only include tokens in `Primitives` whose `$value` is a string or number. Tokens with `$value` as an object, array, or reference (e.g., `{Primitives.Color.Blue500}`) are not primitives and must be excluded.
+
+## 3. Token Naming Conventions
+> - Primitive token names (within categories) must use PascalCase (e.g., `Xl`, `Md`, `Primary`).
+> - Semantic tokens use dot.case (e.g., `lineHeight.xl`).
+> - Color primitives use lowercase and dot notation (e.g., `blue.500`).
+
+## 4. Category Naming Conventions
+> - Categories must use PascalCase (e.g., `FontSize`, `LineHeight`, `FontWeight`).
+> - Do not invent or flatten categories (e.g., do not use "Other" unless it is a real category in the design system).
+
+## 5. Filtering Semantic Tokens
+> Exclude any token from `Primitives` whose key starts with known semantic prefixes (e.g., `palette.`, `common.`, `action.`, etc.), unless those are explicitly defined as primitives in the design system.
+
+## 6. $description Field
+> Every token must have a `$description`. If not provided in the source, auto-generate one using the pattern: `"<Category> <TokenName>"` (e.g., `"LineHeight Xl"`).
+
+## 7. W3C Compliance
+> All tokens must include `$value`, `$type`, and `$description` fields, and must conform to the W3C design tokens specification.
+
+## 8. Reference Canonical Example
+> When in doubt, refer to the canonical example in this file. Examples are for illustration only; rules above take precedence.

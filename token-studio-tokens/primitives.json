@@ -50,25 +50,25 @@
       "$type": "color",
       "$description": "color blue.900"
     },
-    "blue.a100": {
+    "blue.A100": {
       "$value": "#82b1ff",
       "$type": "color",
-      "$description": "color blue.a100"
+      "$description": "color blue.A100"
     },
-    "blue.a200": {
+    "blue.A200": {
       "$value": "#448aff",
       "$type": "color",
-      "$description": "color blue.a200"
+      "$description": "color blue.A200"
     },
-    "blue.a400": {
+    "blue.A400": {
       "$value": "#2979ff",
       "$type": "color",
-      "$description": "color blue.a400"
+      "$description": "color blue.A400"
     },
-    "blue.a700": {
+    "blue.A700": {
       "$value": "#2962ff",
       "$type": "color",
-      "$description": "color blue.a700"
+      "$description": "color blue.A700"
     },
     "red.50": {
       "$value": "#ffebee",
@@ -120,25 +120,25 @@
       "$type": "color",
       "$description": "color red.900"
     },
-    "red.a100": {
+    "red.A100": {
       "$value": "#ff8a80",
       "$type": "color",
-      "$description": "color red.a100"
+      "$description": "color red.A100"
     },
-    "red.a200": {
+    "red.A200": {
       "$value": "#ff5252",
       "$type": "color",
-      "$description": "color red.a200"
+      "$description": "color red.A200"
     },
-    "red.a400": {
+    "red.A400": {
       "$value": "#ff1744",
       "$type": "color",
-      "$description": "color red.a400"
+      "$description": "color red.A400"
     },
-    "red.a700": {
+    "red.A700": {
       "$value": "#d50000",
       "$type": "color",
-      "$description": "color red.a700"
+      "$description": "color red.A700"
     },
     "green.50": {
       "$value": "#e8f5e9",
@@ -190,25 +190,25 @@
       "$type": "color",
       "$description": "color green.900"
     },
-    "green.a100": {
+    "green.A100": {
       "$value": "#b9f6ca",
       "$type": "color",
-      "$description": "color green.a100"
+      "$description": "color green.A100"
     },
-    "green.a200": {
+    "green.A200": {
       "$value": "#69f0ae",
       "$type": "color",
-      "$description": "color green.a200"
+      "$description": "color green.A200"
     },
-    "green.a400": {
+    "green.A400": {
       "$value": "#00e676",
       "$type": "color",
-      "$description": "color green.a400"
+      "$description": "color green.A400"
     },
-    "green.a700": {
+    "green.A700": {
       "$value": "#00c853",
       "$type": "color",
-      "$description": "color green.a700"
+      "$description": "color green.A700"
     },
     "purple.50": {
       "$value": "#f3e5f5",
@@ -260,25 +260,25 @@
       "$type": "color",
       "$description": "color purple.900"
     },
-    "purple.a100": {
+    "purple.A100": {
       "$value": "#ea80fc",
       "$type": "color",
-      "$description": "color purple.a100"
+      "$description": "color purple.A100"
     },
-    "purple.a200": {
+    "purple.A200": {
       "$value": "#e040fb",
       "$type": "color",
-      "$description": "color purple.a200"
+      "$description": "color purple.A200"
     },
-    "purple.a400": {
+    "purple.A400": {
       "$value": "#d500f9",
       "$type": "color",
-      "$description": "color purple.a400"
+      "$description": "color purple.A400"
     },
-    "purple.a700": {
+    "purple.A700": {
       "$value": "#aa00ff",
       "$type": "color",
-      "$description": "color purple.a700"
+      "$description": "color purple.A700"
     },
     "orange.50": {
       "$value": "#fff3e0",
@@ -330,25 +330,25 @@
       "$type": "color",
       "$description": "color orange.900"
     },
-    "orange.a100": {
+    "orange.A100": {
       "$value": "#ffd180",
       "$type": "color",
-      "$description": "color orange.a100"
+      "$description": "color orange.A100"
     },
-    "orange.a200": {
+    "orange.A200": {
       "$value": "#ffab40",
       "$type": "color",
-      "$description": "color orange.a200"
+      "$description": "color orange.A200"
     },
-    "orange.a400": {
+    "orange.A400": {
       "$value": "#ff9100",
       "$type": "color",
-      "$description": "color orange.a400"
+      "$description": "color orange.A400"
     },
-    "orange.a700": {
+    "orange.A700": {
       "$value": "#ff6d00",
       "$type": "color",
-      "$description": "color orange.a700"
+      "$description": "color orange.A700"
     },
     "yellow.50": {
       "$value": "#fffde7",
@@ -400,25 +400,25 @@
       "$type": "color",
       "$description": "color yellow.900"
     },
-    "yellow.a100": {
+    "yellow.A100": {
       "$value": "#ffff8d",
       "$type": "color",
-      "$description": "color yellow.a100"
+      "$description": "color yellow.A100"
     },
-    "yellow.a200": {
+    "yellow.A200": {
       "$value": "#ffff00",
       "$type": "color",
-      "$description": "color yellow.a200"
+      "$description": "color yellow.A200"
     },
-    "yellow.a400": {
+    "yellow.A400": {
       "$value": "#ffea00",
       "$type": "color",
-      "$description": "color yellow.a400"
+      "$description": "color yellow.A400"
     },
-    "yellow.a700": {
+    "yellow.A700": {
       "$value": "#ffd600",
       "$type": "color",
-      "$description": "color yellow.a700"
+      "$description": "color yellow.A700"
     },
     "teal.50": {
       "$value": "#e0f2f1",
@@ -470,25 +470,25 @@
       "$type": "color",
       "$description": "color teal.900"
     },
-    "teal.a100": {
+    "teal.A100": {
       "$value": "#a7ffeb",
       "$type": "color",
-      "$description": "color teal.a100"
+      "$description": "color teal.A100"
     },
-    "teal.a200": {
+    "teal.A200": {
       "$value": "#64ffda",
       "$type": "color",
-      "$description": "color teal.a200"
+      "$description": "color teal.A200"
     },
-    "teal.a400": {
+    "teal.A400": {
       "$value": "#1de9b6",
       "$type": "color",
-      "$description": "color teal.a400"
+      "$description": "color teal.A400"
     },
-    "teal.a700": {
+    "teal.A700": {
       "$value": "#00bfa5",
       "$type": "color",
-      "$description": "color teal.a700"
+      "$description": "color teal.A700"
     },
     "pink.50": {
       "$value": "#fce4ec",
@@ -540,25 +540,25 @@
       "$type": "color",
       "$description": "color pink.900"
     },
-    "pink.a100": {
+    "pink.A100": {
       "$value": "#ff80ab",
       "$type": "color",
-      "$description": "color pink.a100"
+      "$description": "color pink.A100"
     },
-    "pink.a200": {
+    "pink.A200": {
       "$value": "#ff4081",
       "$type": "color",
-      "$description": "color pink.a200"
+      "$description": "color pink.A200"
     },
-    "pink.a400": {
+    "pink.A400": {
       "$value": "#f50057",
       "$type": "color",
-      "$description": "color pink.a400"
+      "$description": "color pink.A400"
     },
-    "pink.a700": {
+    "pink.A700": {
       "$value": "#c51162",
       "$type": "color",
-      "$description": "color pink.a700"
+      "$description": "color pink.A700"
     },
     "indigo.50": {
       "$value": "#e8eaf6",
@@ -610,305 +610,305 @@
       "$type": "color",
       "$description": "color indigo.900"
     },
-    "indigo.a100": {
+    "indigo.A100": {
       "$value": "#8c9eff",
       "$type": "color",
-      "$description": "color indigo.a100"
+      "$description": "color indigo.A100"
     },
-    "indigo.a200": {
+    "indigo.A200": {
       "$value": "#536dfe",
       "$type": "color",
-      "$description": "color indigo.a200"
+      "$description": "color indigo.A200"
     },
-    "indigo.a400": {
+    "indigo.A400": {
       "$value": "#3d5afe",
       "$type": "color",
-      "$description": "color indigo.a400"
+      "$description": "color indigo.A400"
     },
-    "indigo.a700": {
+    "indigo.A700": {
       "$value": "#304ffe",
       "$type": "color",
-      "$description": "color indigo.a700"
+      "$description": "color indigo.A700"
     },
-    "deep.orange.50": {
+    "deeporange.50": {
       "$value": "#fbe9e7",
       "$type": "color",
-      "$description": "color deep.orange.50"
+      "$description": "color deeporange.50"
     },
-    "deep.orange.100": {
+    "deeporange.100": {
       "$value": "#ffccbc",
       "$type": "color",
-      "$description": "color deep.orange.100"
+      "$description": "color deeporange.100"
     },
-    "deep.orange.200": {
+    "deeporange.200": {
       "$value": "#ffab91",
       "$type": "color",
-      "$description": "color deep.orange.200"
+      "$description": "color deeporange.200"
     },
-    "deep.orange.300": {
+    "deeporange.300": {
       "$value": "#ff8a65",
       "$type": "color",
-      "$description": "color deep.orange.300"
+      "$description": "color deeporange.300"
     },
-    "deep.orange.400": {
+    "deeporange.400": {
       "$value": "#ff7043",
       "$type": "color",
-      "$description": "color deep.orange.400"
+      "$description": "color deeporange.400"
     },
-    "deep.orange.500": {
+    "deeporange.500": {
       "$value": "#ff5722",
       "$type": "color",
-      "$description": "color deep.orange.500"
+      "$description": "color deeporange.500"
     },
-    "deep.orange.600": {
+    "deeporange.600": {
       "$value": "#f4511e",
       "$type": "color",
-      "$description": "color deep.orange.600"
+      "$description": "color deeporange.600"
     },
-    "deep.orange.700": {
+    "deeporange.700": {
       "$value": "#e64a19",
       "$type": "color",
-      "$description": "color deep.orange.700"
+      "$description": "color deeporange.700"
     },
-    "deep.orange.800": {
+    "deeporange.800": {
       "$value": "#d84315",
       "$type": "color",
-      "$description": "color deep.orange.800"
+      "$description": "color deeporange.800"
     },
-    "deep.orange.900": {
+    "deeporange.900": {
       "$value": "#bf360c",
       "$type": "color",
-      "$description": "color deep.orange.900"
+      "$description": "color deeporange.900"
     },
-    "deep.orange.a100": {
+    "deeporange.A100": {
       "$value": "#ff9e80",
       "$type": "color",
-      "$description": "color deep.orange.a100"
+      "$description": "color deeporange.A100"
     },
-    "deep.orange.a200": {
+    "deeporange.A200": {
       "$value": "#ff6e40",
       "$type": "color",
-      "$description": "color deep.orange.a200"
+      "$description": "color deeporange.A200"
     },
-    "deep.orange.a400": {
+    "deeporange.A400": {
       "$value": "#ff3d00",
       "$type": "color",
-      "$description": "color deep.orange.a400"
+      "$description": "color deeporange.A400"
     },
-    "deep.orange.a700": {
+    "deeporange.A700": {
       "$value": "#dd2c00",
       "$type": "color",
-      "$description": "color deep.orange.a700"
+      "$description": "color deeporange.A700"
     },
-    "deep.purple.50": {
+    "deeppurple.50": {
       "$value": "#ede7f6",
       "$type": "color",
-      "$description": "color deep.purple.50"
+      "$description": "color deeppurple.50"
     },
-    "deep.purple.100": {
+    "deeppurple.100": {
       "$value": "#d1c4e9",
       "$type": "color",
-      "$description": "color deep.purple.100"
+      "$description": "color deeppurple.100"
     },
-    "deep.purple.200": {
+    "deeppurple.200": {
       "$value": "#b39ddb",
       "$type": "color",
-      "$description": "color deep.purple.200"
+      "$description": "color deeppurple.200"
     },
-    "deep.purple.300": {
+    "deeppurple.300": {
       "$value": "#9575cd",
       "$type": "color",
-      "$description": "color deep.purple.300"
+      "$description": "color deeppurple.300"
     },
-    "deep.purple.400": {
+    "deeppurple.400": {
       "$value": "#7e57c2",
       "$type": "color",
-      "$description": "color deep.purple.400"
+      "$description": "color deeppurple.400"
     },
-    "deep.purple.500": {
+    "deeppurple.500": {
       "$value": "#673ab7",
       "$type": "color",
-      "$description": "color deep.purple.500"
+      "$description": "color deeppurple.500"
     },
-    "deep.purple.600": {
+    "deeppurple.600": {
       "$value": "#5e35b1",
       "$type": "color",
-      "$description": "color deep.purple.600"
+      "$description": "color deeppurple.600"
     },
-    "deep.purple.700": {
+    "deeppurple.700": {
       "$value": "#512da8",
       "$type": "color",
-      "$description": "color deep.purple.700"
+      "$description": "color deeppurple.700"
     },
-    "deep.purple.800": {
+    "deeppurple.800": {
       "$value": "#4527a0",
       "$type": "color",
-      "$description": "color deep.purple.800"
+      "$description": "color deeppurple.800"
     },
-    "deep.purple.900": {
+    "deeppurple.900": {
       "$value": "#311b92",
       "$type": "color",
-      "$description": "color deep.purple.900"
+      "$description": "color deeppurple.900"
     },
-    "deep.purple.a100": {
+    "deeppurple.A100": {
       "$value": "#b388ff",
       "$type": "color",
-      "$description": "color deep.purple.a100"
+      "$description": "color deeppurple.A100"
     },
-    "deep.purple.a200": {
+    "deeppurple.A200": {
       "$value": "#7c4dff",
       "$type": "color",
-      "$description": "color deep.purple.a200"
+      "$description": "color deeppurple.A200"
     },
-    "deep.purple.a400": {
+    "deeppurple.A400": {
       "$value": "#651fff",
       "$type": "color",
-      "$description": "color deep.purple.a400"
+      "$description": "color deeppurple.A400"
     },
-    "deep.purple.a700": {
+    "deeppurple.A700": {
       "$value": "#6200ea",
       "$type": "color",
-      "$description": "color deep.purple.a700"
+      "$description": "color deeppurple.A700"
     },
-    "light.blue.50": {
+    "lightblue.50": {
       "$value": "#e1f5fe",
       "$type": "color",
-      "$description": "color light.blue.50"
+      "$description": "color lightblue.50"
     },
-    "light.blue.100": {
+    "lightblue.100": {
       "$value": "#b3e5fc",
       "$type": "color",
-      "$description": "color light.blue.100"
+      "$description": "color lightblue.100"
     },
-    "light.blue.200": {
+    "lightblue.200": {
       "$value": "#81d4fa",
       "$type": "color",
-      "$description": "color light.blue.200"
+      "$description": "color lightblue.200"
     },
-    "light.blue.300": {
+    "lightblue.300": {
       "$value": "#4fc3f7",
       "$type": "color",
-      "$description": "color light.blue.300"
+      "$description": "color lightblue.300"
     },
-    "light.blue.400": {
+    "lightblue.400": {
       "$value": "#29b6f6",
       "$type": "color",
-      "$description": "color light.blue.400"
+      "$description": "color lightblue.400"
     },
-    "light.blue.500": {
+    "lightblue.500": {
       "$value": "#03a9f4",
       "$type": "color",
-      "$description": "color light.blue.500"
+      "$description": "color lightblue.500"
     },
-    "light.blue.600": {
+    "lightblue.600": {
       "$value": "#039be5",
       "$type": "color",
-      "$description": "color light.blue.600"
+      "$description": "color lightblue.600"
     },
-    "light.blue.700": {
+    "lightblue.700": {
       "$value": "#0288d1",
       "$type": "color",
-      "$description": "color light.blue.700"
+      "$description": "color lightblue.700"
     },
-    "light.blue.800": {
+    "lightblue.800": {
       "$value": "#0277bd",
       "$type": "color",
-      "$description": "color light.blue.800"
+      "$description": "color lightblue.800"
     },
-    "light.blue.900": {
+    "lightblue.900": {
       "$value": "#01579b",
       "$type": "color",
-      "$description": "color light.blue.900"
+      "$description": "color lightblue.900"
     },
-    "light.blue.a100": {
+    "lightblue.A100": {
       "$value": "#80d8ff",
       "$type": "color",
-      "$description": "color light.blue.a100"
+      "$description": "color lightblue.A100"
     },
-    "light.blue.a200": {
+    "lightblue.A200": {
       "$value": "#40c4ff",
       "$type": "color",
-      "$description": "color light.blue.a200"
+      "$description": "color lightblue.A200"
     },
-    "light.blue.a400": {
+    "lightblue.A400": {
       "$value": "#00b0ff",
       "$type": "color",
-      "$description": "color light.blue.a400"
+      "$description": "color lightblue.A400"
     },
-    "light.blue.a700": {
+    "lightblue.A700": {
       "$value": "#0091ea",
       "$type": "color",
-      "$description": "color light.blue.a700"
+      "$description": "color lightblue.A700"
     },
-    "light.green.50": {
+    "lightgreen.50": {
       "$value": "#f1f8e9",
       "$type": "color",
-      "$description": "color light.green.50"
+      "$description": "color lightgreen.50"
     },
-    "light.green.100": {
+    "lightgreen.100": {
       "$value": "#dcedc8",
       "$type": "color",
-      "$description": "color light.green.100"
+      "$description": "color lightgreen.100"
     },
-    "light.green.200": {
+    "lightgreen.200": {
       "$value": "#c5e1a5",
       "$type": "color",
-      "$description": "color light.green.200"
+      "$description": "color lightgreen.200"
     },
-    "light.green.300": {
+    "lightgreen.300": {
       "$value": "#aed581",
       "$type": "color",
-      "$description": "color light.green.300"
+      "$description": "color lightgreen.300"
     },
-    "light.green.400": {
+    "lightgreen.400": {
       "$value": "#9ccc65",
       "$type": "color",
-      "$description": "color light.green.400"
+      "$description": "color lightgreen.400"
     },
-    "light.green.500": {
+    "lightgreen.500": {
       "$value": "#8bc34a",
       "$type": "color",
-      "$description": "color light.green.500"
+      "$description": "color lightgreen.500"
     },
-    "light.green.600": {
+    "lightgreen.600": {
       "$value": "#7cb342",
       "$type": "color",
-      "$description": "color light.green.600"
+      "$description": "color lightgreen.600"
     },
-    "light.green.700": {
+    "lightgreen.700": {
       "$value": "#689f38",
       "$type": "color",
-      "$description": "color light.green.700"
+      "$description": "color lightgreen.700"
     },
-    "light.green.800": {
+    "lightgreen.800": {
       "$value": "#558b2f",
       "$type": "color",
-      "$description": "color light.green.800"
+      "$description": "color lightgreen.800"
     },
-    "light.green.900": {
+    "lightgreen.900": {
       "$value": "#33691e",
       "$type": "color",
-      "$description": "color light.green.900"
+      "$description": "color lightgreen.900"
     },
-    "light.green.a100": {
+    "lightgreen.A100": {
       "$value": "#ccff90",
       "$type": "color",
-      "$description": "color light.green.a100"
+      "$description": "color lightgreen.A100"
     },
-    "light.green.a200": {
+    "lightgreen.A200": {
       "$value": "#b2ff59",
       "$type": "color",
-      "$description": "color light.green.a200"
+      "$description": "color lightgreen.A200"
     },
-    "light.green.a400": {
+    "lightgreen.A400": {
       "$value": "#76ff03",
       "$type": "color",
-      "$description": "color light.green.a400"
+      "$description": "color lightgreen.A400"
     },
-    "light.green.a700": {
+    "lightgreen.A700": {
       "$value": "#64dd17",
       "$type": "color",
-      "$description": "color light.green.a700"
+      "$description": "color lightgreen.A700"
     },
     "amber.50": {
       "$value": "#fff8e1",
@@ -960,25 +960,25 @@
       "$type": "color",
       "$description": "color amber.900"
     },
-    "amber.a100": {
+    "amber.A100": {
       "$value": "#ffe57f",
       "$type": "color",
-      "$description": "color amber.a100"
+      "$description": "color amber.A100"
     },
-    "amber.a200": {
+    "amber.A200": {
       "$value": "#ffd740",
       "$type": "color",
-      "$description": "color amber.a200"
+      "$description": "color amber.A200"
     },
-    "amber.a400": {
+    "amber.A400": {
       "$value": "#ffc400",
       "$type": "color",
-      "$description": "color amber.a400"
+      "$description": "color amber.A400"
     },
-    "amber.a700": {
+    "amber.A700": {
       "$value": "#ffab00",
       "$type": "color",
-      "$description": "color amber.a700"
+      "$description": "color amber.A700"
     },
     "cyan.50": {
       "$value": "#e0f7fa",
@@ -1030,25 +1030,25 @@
       "$type": "color",
       "$description": "color cyan.900"
     },
-    "cyan.a100": {
+    "cyan.A100": {
       "$value": "#84ffff",
       "$type": "color",
-      "$description": "color cyan.a100"
+      "$description": "color cyan.A100"
     },
-    "cyan.a200": {
+    "cyan.A200": {
       "$value": "#18ffff",
       "$type": "color",
-      "$description": "color cyan.a200"
+      "$description": "color cyan.A200"
     },
-    "cyan.a400": {
+    "cyan.A400": {
       "$value": "#00e5ff",
       "$type": "color",
-      "$description": "color cyan.a400"
+      "$description": "color cyan.A400"
     },
-    "cyan.a700": {
+    "cyan.A700": {
       "$value": "#00b8d4",
       "$type": "color",
-      "$description": "color cyan.a700"
+      "$description": "color cyan.A700"
     },
     "lime.50": {
       "$value": "#f9fbe7",
@@ -1100,25 +1100,25 @@
       "$type": "color",
       "$description": "color lime.900"
     },
-    "lime.a100": {
+    "lime.A100": {
       "$value": "#f4ff81",
       "$type": "color",
-      "$description": "color lime.a100"
+      "$description": "color lime.A100"
     },
-    "lime.a200": {
+    "lime.A200": {
       "$value": "#eeff41",
       "$type": "color",
-      "$description": "color lime.a200"
+      "$description": "color lime.A200"
     },
-    "lime.a400": {
+    "lime.A400": {
       "$value": "#c6ff00",
       "$type": "color",
-      "$description": "color lime.a400"
+      "$description": "color lime.A400"
     },
-    "lime.a700": {
+    "lime.A700": {
       "$value": "#aeea00",
       "$type": "color",
-      "$description": "color lime.a700"
+      "$description": "color lime.A700"
     },
     "brown.50": {
       "$value": "#efebe9",
@@ -1170,25 +1170,25 @@
       "$type": "color",
       "$description": "color brown.900"
     },
-    "brown.a100": {
+    "brown.A100": {
       "$value": "#d7ccc8",
       "$type": "color",
-      "$description": "color brown.a100"
+      "$description": "color brown.A100"
     },
-    "brown.a200": {
+    "brown.A200": {
       "$value": "#bcaaa4",
       "$type": "color",
-      "$description": "color brown.a200"
+      "$description": "color brown.A200"
     },
-    "brown.a400": {
+    "brown.A400": {
       "$value": "#8d6e63",
       "$type": "color",
-      "$description": "color brown.a400"
+      "$description": "color brown.A400"
     },
-    "brown.a700": {
+    "brown.A700": {
       "$value": "#5d4037",
       "$type": "color",
-      "$description": "color brown.a700"
+      "$description": "color brown.A700"
     },
     "grey.50": {
       "$value": "#fafafa",
@@ -1240,485 +1240,167 @@
       "$type": "color",
       "$description": "color grey.900"
     },
-    "grey.a100": {
+    "grey.A100": {
       "$value": "#f5f5f5",
       "$type": "color",
-      "$description": "color grey.a100"
+      "$description": "color grey.A100"
     },
-    "grey.a200": {
+    "grey.A200": {
       "$value": "#eeeeee",
       "$type": "color",
-      "$description": "color grey.a200"
+      "$description": "color grey.A200"
     },
-    "grey.a400": {
+    "grey.A400": {
       "$value": "#bdbdbd",
       "$type": "color",
-      "$description": "color grey.a400"
+      "$description": "color grey.A400"
     },
-    "grey.a700": {
+    "grey.A700": {
       "$value": "#616161",
       "$type": "color",
-      "$description": "color grey.a700"
-    },
-    "common.black": {
-      "$value": "#000",
-      "$type": "color",
-      "$description": "color common.black"
-    },
-    "common.white": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "color common.white"
-    },
-    "palette.common.black": {
-      "$value": "#000",
-      "$type": "color",
-      "$description": "color palette.common.black"
-    },
-    "palette.common.white": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "color palette.common.white"
-    },
-    "palette.primary.main": {
-      "$value": "#1976d2",
-      "$type": "color",
-      "$description": "color palette.primary.main"
-    },
-    "palette.primary.light": {
-      "$value": "#42a5f5",
-      "$type": "color",
-      "$description": "color palette.primary.light"
-    },
-    "palette.primary.dark": {
-      "$value": "#1565c0",
-      "$type": "color",
-      "$description": "color palette.primary.dark"
-    },
-    "palette.primary.contrast.text": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "color palette.primary.contrast.text"
-    },
-    "palette.secondary.main": {
-      "$value": "#9c27b0",
-      "$type": "color",
-      "$description": "color palette.secondary.main"
-    },
-    "palette.secondary.light": {
-      "$value": "#ba68c8",
-      "$type": "color",
-      "$description": "color palette.secondary.light"
-    },
-    "palette.secondary.dark": {
-      "$value": "#7b1fa2",
-      "$type": "color",
-      "$description": "color palette.secondary.dark"
-    },
-    "palette.secondary.contrast.text": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "color palette.secondary.contrast.text"
-    },
-    "palette.error.main": {
-      "$value": "#d32f2f",
-      "$type": "color",
-      "$description": "color palette.error.main"
-    },
-    "palette.error.light": {
-      "$value": "#ef5350",
-      "$type": "color",
-      "$description": "color palette.error.light"
-    },
-    "palette.error.dark": {
-      "$value": "#c62828",
-      "$type": "color",
-      "$description": "color palette.error.dark"
-    },
-    "palette.error.contrast.text": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "color palette.error.contrast.text"
-    },
-    "palette.warning.main": {
-      "$value": "#ed6c02",
-      "$type": "color",
-      "$description": "color palette.warning.main"
-    },
-    "palette.warning.light": {
-      "$value": "#ff9800",
-      "$type": "color",
-      "$description": "color palette.warning.light"
-    },
-    "palette.warning.dark": {
-      "$value": "#e65100",
-      "$type": "color",
-      "$description": "color palette.warning.dark"
-    },
-    "palette.warning.contrast.text": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "color palette.warning.contrast.text"
-    },
-    "palette.info.main": {
-      "$value": "#0288d1",
-      "$type": "color",
-      "$description": "color palette.info.main"
-    },
-    "palette.info.light": {
-      "$value": "#03a9f4",
-      "$type": "color",
-      "$description": "color palette.info.light"
-    },
-    "palette.info.dark": {
-      "$value": "#01579b",
-      "$type": "color",
-      "$description": "color palette.info.dark"
-    },
-    "palette.info.contrast.text": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "color palette.info.contrast.text"
-    },
-    "palette.success.main": {
-      "$value": "#2e7d32",
-      "$type": "color",
-      "$description": "color palette.success.main"
-    },
-    "palette.success.light": {
-      "$value": "#4caf50",
-      "$type": "color",
-      "$description": "color palette.success.light"
-    },
-    "palette.success.dark": {
-      "$value": "#1b5e20",
-      "$type": "color",
-      "$description": "color palette.success.dark"
-    },
-    "palette.success.contrast.text": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "color palette.success.contrast.text"
-    },
-    "palette.grey.50": {
-      "$value": "#fafafa",
-      "$type": "color",
-      "$description": "color palette.grey.50"
-    },
-    "palette.grey.100": {
-      "$value": "#f5f5f5",
-      "$type": "color",
-      "$description": "color palette.grey.100"
-    },
-    "palette.grey.200": {
-      "$value": "#eeeeee",
-      "$type": "color",
-      "$description": "color palette.grey.200"
-    },
-    "palette.grey.300": {
-      "$value": "#e0e0e0",
-      "$type": "color",
-      "$description": "color palette.grey.300"
-    },
-    "palette.grey.400": {
-      "$value": "#bdbdbd",
-      "$type": "color",
-      "$description": "color palette.grey.400"
-    },
-    "palette.grey.500": {
-      "$value": "#9e9e9e",
-      "$type": "color",
-      "$description": "color palette.grey.500"
-    },
-    "palette.grey.600": {
-      "$value": "#757575",
-      "$type": "color",
-      "$description": "color palette.grey.600"
-    },
-    "palette.grey.700": {
-      "$value": "#616161",
-      "$type": "color",
-      "$description": "color palette.grey.700"
-    },
-    "palette.grey.800": {
-      "$value": "#424242",
-      "$type": "color",
-      "$description": "color palette.grey.800"
-    },
-    "palette.grey.900": {
-      "$value": "#212121",
-      "$type": "color",
-      "$description": "color palette.grey.900"
-    },
-    "palette.grey.a100": {
-      "$value": "#f5f5f5",
-      "$type": "color",
-      "$description": "color palette.grey.a100"
-    },
-    "palette.grey.a200": {
-      "$value": "#eeeeee",
-      "$type": "color",
-      "$description": "color palette.grey.a200"
-    },
-    "palette.grey.a400": {
-      "$value": "#bdbdbd",
-      "$type": "color",
-      "$description": "color palette.grey.a400"
-    },
-    "palette.grey.a700": {
-      "$value": "#616161",
-      "$type": "color",
-      "$description": "color palette.grey.a700"
-    },
-    "palette.text.primary": {
-      "$value": "rgba(0, 0, 0, 0.87)",
-      "$type": "color",
-      "$description": "color palette.text.primary"
-    },
-    "palette.text.secondary": {
-      "$value": "rgba(0, 0, 0, 0.6)",
-      "$type": "color",
-      "$description": "color palette.text.secondary"
-    },
-    "palette.text.disabled": {
-      "$value": "rgba(0, 0, 0, 0.38)",
-      "$type": "color",
-      "$description": "color palette.text.disabled"
-    },
-    "palette.divider": {
-      "$value": "rgba(0, 0, 0, 0.12)",
-      "$type": "color",
-      "$description": "color palette.divider"
-    },
-    "palette.background.paper": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "color palette.background.paper"
-    },
-    "palette.background.default": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "color palette.background.default"
-    },
-    "palette.action.active": {
-      "$value": "rgba(0, 0, 0, 0.54)",
-      "$type": "color",
-      "$description": "color palette.action.active"
-    },
-    "palette.action.hover": {
-      "$value": "rgba(0, 0, 0, 0.04)",
-      "$type": "color",
-      "$description": "color palette.action.hover"
-    },
-    "palette.action.selected": {
-      "$value": "rgba(0, 0, 0, 0.08)",
-      "$type": "color",
-      "$description": "color palette.action.selected"
-    },
-    "palette.action.disabled": {
-      "$value": "rgba(0, 0, 0, 0.26)",
-      "$type": "color",
-      "$description": "color palette.action.disabled"
-    },
-    "palette.action.disabled.background": {
-      "$value": "rgba(0, 0, 0, 0.12)",
-      "$type": "color",
-      "$description": "color palette.action.disabled.background"
-    },
-    "palette.action.focus": {
-      "$value": "rgba(0, 0, 0, 0.12)",
-      "$type": "color",
-      "$description": "color palette.action.focus"
-    },
-    "breakpoints.values.xs": {
-      "$value": 0,
-      "$type": "other",
-      "$description": "other breakpoints.values.xs"
-    },
-    "breakpoints.values.sm": {
-      "$value": 600,
-      "$type": "other",
-      "$description": "other breakpoints.values.sm"
-    },
-    "breakpoints.values.md": {
-      "$value": 900,
-      "$type": "other",
-      "$description": "other breakpoints.values.md"
-    },
-    "breakpoints.values.lg": {
-      "$value": 1200,
-      "$type": "other",
-      "$description": "other breakpoints.values.lg"
-    },
-    "breakpoints.values.xl": {
-      "$value": 1536,
-      "$type": "other",
-      "$description": "other breakpoints.values.xl"
-    },
-    "breakpoints.unit": {
-      "$value": "px",
-      "$type": "other",
-      "$description": "other breakpoints.unit"
-    },
-    "direction": {
-      "$value": "ltr",
-      "$type": "other",
-      "$description": "other direction"
-    },
-    "palette.mode": {
-      "$value": "light",
-      "$type": "other",
-      "$description": "other palette.mode"
-    },
-    "palette.contrast.threshold": {
-      "$value": 3,
-      "$type": "other",
-      "$description": "other palette.contrast.threshold"
-    },
-    "palette.tonal.offset": {
-      "$value": 0.2,
-      "$type": "other",
-      "$description": "other palette.tonal.offset"
-    },
-    "palette.action.hover.opacity": {
-      "$value": 0.04,
-      "$type": "other",
-      "$description": "other palette.action.hover.opacity"
-    },
-    "palette.action.selected.opacity": {
-      "$value": 0.08,
-      "$type": "other",
-      "$description": "other palette.action.selected.opacity"
-    },
-    "palette.action.disabled.opacity": {
-      "$value": 0.38,
-      "$type": "other",
-      "$description": "other palette.action.disabled.opacity"
-    },
-    "palette.action.focus.opacity": {
-      "$value": 0.12,
-      "$type": "other",
-      "$description": "other palette.action.focus.opacity"
-    },
-    "palette.action.activated.opacity": {
-      "$value": 0.12,
-      "$type": "other",
-      "$description": "other palette.action.activated.opacity"
-    },
-    "shape.border.radius": {
-      "$value": 4,
-      "$type": "other",
-      "$description": "other shape.border.radius"
-    },
-    "mixins.toolbar.min.height": {
-      "$value": 56,
-      "$type": "other",
-      "$description": "other mixins.toolbar.min.height"
-    },
-    "mixins.toolbar.@media.(min.width:0px).@media.(orientation:.landscape).min.height": {
-      "$value": 48,
-      "$type": "other",
-      "$description": "other mixins.toolbar.@media.(min.width:0px).@media.(orientation:.landscape).min.height"
-    },
-    "mixins.toolbar.@media.(min.width:600px).min.height": {
-      "$value": 64,
-      "$type": "other",
-      "$description": "other mixins.toolbar.@media.(min.width:600px).min.height"
-    },
-    "transitions.easing.ease.in.out": {
-      "$value": "cubic-bezier(0.4, 0, 0.2, 1)",
-      "$type": "other",
-      "$description": "other transitions.easing.ease.in.out"
-    },
-    "transitions.easing.ease.out": {
-      "$value": "cubic-bezier(0.0, 0, 0.2, 1)",
-      "$type": "other",
-      "$description": "other transitions.easing.ease.out"
-    },
-    "transitions.easing.ease.in": {
-      "$value": "cubic-bezier(0.4, 0, 1, 1)",
-      "$type": "other",
-      "$description": "other transitions.easing.ease.in"
-    },
-    "transitions.easing.sharp": {
-      "$value": "cubic-bezier(0.4, 0, 0.6, 1)",
-      "$type": "other",
-      "$description": "other transitions.easing.sharp"
-    },
-    "transitions.duration.shortest": {
-      "$value": 150,
-      "$type": "other",
-      "$description": "other transitions.duration.shortest"
-    },
-    "transitions.duration.shorter": {
-      "$value": 200,
-      "$type": "other",
-      "$description": "other transitions.duration.shorter"
-    },
-    "transitions.duration.short": {
-      "$value": 250,
-      "$type": "other",
-      "$description": "other transitions.duration.short"
-    },
-    "transitions.duration.standard": {
-      "$value": 300,
-      "$type": "other",
-      "$description": "other transitions.duration.standard"
-    },
-    "transitions.duration.complex": {
-      "$value": 375,
-      "$type": "other",
-      "$description": "other transitions.duration.complex"
-    },
-    "transitions.duration.entering.screen": {
-      "$value": 225,
-      "$type": "other",
-      "$description": "other transitions.duration.entering.screen"
-    },
-    "transitions.duration.leaving.screen": {
-      "$value": 195,
-      "$type": "other",
-      "$description": "other transitions.duration.leaving.screen"
-    },
-    "z.index.mobile.stepper": {
-      "$value": 1000,
-      "$type": "other",
-      "$description": "other z.index.mobile.stepper"
-    },
-    "z.index.fab": {
-      "$value": 1050,
-      "$type": "other",
-      "$description": "other z.index.fab"
-    },
-    "z.index.speed.dial": {
-      "$value": 1050,
-      "$type": "other",
-      "$description": "other z.index.speed.dial"
-    },
-    "z.index.app.bar": {
-      "$value": 1100,
-      "$type": "other",
-      "$description": "other z.index.app.bar"
-    },
-    "z.index.drawer": {
-      "$value": 1200,
-      "$type": "other",
-      "$description": "other z.index.drawer"
-    },
-    "z.index.modal": {
-      "$value": 1300,
-      "$type": "other",
-      "$description": "other z.index.modal"
-    },
-    "z.index.snackbar": {
-      "$value": 1400,
-      "$type": "other",
-      "$description": "other z.index.snackbar"
-    },
-    "z.index.tooltip": {
-      "$value": 1500,
-      "$type": "other",
-      "$description": "other z.index.tooltip"
+      "$description": "color grey.A700"
+    },
+    "Other": {
+      "Xs": {
+        "$value": 0,
+        "$type": "other",
+        "$description": "Other Xs"
+      },
+      "Sm": {
+        "$value": 600,
+        "$type": "other",
+        "$description": "Other Sm"
+      },
+      "Md": {
+        "$value": 900,
+        "$type": "other",
+        "$description": "Other Md"
+      },
+      "Lg": {
+        "$value": 1200,
+        "$type": "other",
+        "$description": "Other Lg"
+      },
+      "Xl": {
+        "$value": 1536,
+        "$type": "other",
+        "$description": "Other Xl"
+      },
+      "Unit": {
+        "$value": "px",
+        "$type": "other",
+        "$description": "Other Unit"
+      },
+      "Direction": {
+        "$value": "ltr",
+        "$type": "other",
+        "$description": "Other Direction"
+      },
+      "BorderRadius": {
+        "$value": 4,
+        "$type": "other",
+        "$description": "Other BorderRadius"
+      },
+      "MinHeight": {
+        "$value": 64,
+        "$type": "other",
+        "$description": "Other MinHeight"
+      },
+      "EaseInOut": {
+        "$value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "$type": "other",
+        "$description": "Other EaseInOut"
+      },
+      "EaseOut": {
+        "$value": "cubic-bezier(0.0, 0, 0.2, 1)",
+        "$type": "other",
+        "$description": "Other EaseOut"
+      },
+      "EaseIn": {
+        "$value": "cubic-bezier(0.4, 0, 1, 1)",
+        "$type": "other",
+        "$description": "Other EaseIn"
+      },
+      "Sharp": {
+        "$value": "cubic-bezier(0.4, 0, 0.6, 1)",
+        "$type": "other",
+        "$description": "Other Sharp"
+      },
+      "Shortest": {
+        "$value": 150,
+        "$type": "other",
+        "$description": "Other Shortest"
+      },
+      "Shorter": {
+        "$value": 200,
+        "$type": "other",
+        "$description": "Other Shorter"
+      },
+      "Short": {
+        "$value": 250,
+        "$type": "other",
+        "$description": "Other Short"
+      },
+      "Standard": {
+        "$value": 300,
+        "$type": "other",
+        "$description": "Other Standard"
+      },
+      "Complex": {
+        "$value": 375,
+        "$type": "other",
+        "$description": "Other Complex"
+      },
+      "EnteringScreen": {
+        "$value": 225,
+        "$type": "other",
+        "$description": "Other EnteringScreen"
+      },
+      "LeavingScreen": {
+        "$value": 195,
+        "$type": "other",
+        "$description": "Other LeavingScreen"
+      },
+      "MobileStepper": {
+        "$value": 1000,
+        "$type": "other",
+        "$description": "Other MobileStepper"
+      },
+      "Fab": {
+        "$value": 1050,
+        "$type": "other",
+        "$description": "Other Fab"
+      },
+      "SpeedDial": {
+        "$value": 1050,
+        "$type": "other",
+        "$description": "Other SpeedDial"
+      },
+      "AppBar": {
+        "$value": 1100,
+        "$type": "other",
+        "$description": "Other AppBar"
+      },
+      "Drawer": {
+        "$value": 1200,
+        "$type": "other",
+        "$description": "Other Drawer"
+      },
+      "Modal": {
+        "$value": 1300,
+        "$type": "other",
+        "$description": "Other Modal"
+      },
+      "Snackbar": {
+        "$value": 1400,
+        "$type": "other",
+        "$description": "Other Snackbar"
+      },
+      "Tooltip": {
+        "$value": 1500,
+        "$type": "other",
+        "$description": "Other Tooltip"
+      }
     }
   }
 }
