@@ -242,18 +242,35 @@ function cleanupMuiTokens(tokens) {
   return result;
 }
 
+function flattenColorPrimitives(muiTokens) {
+  // Flattens all color tokens under base.color
+  const primitives = {};
+  const colorMap = muiTokens.base.color || {};
+  Object.entries(colorMap).forEach(([key, value]) => {
+    // Only include keys that match the color primitive pattern (e.g., blue.50, red.900, etc.)
+    if (/^[a-zA-Z]+\.(\d+|A\d+)$/.test(key) || key.startsWith('common.') || key.startsWith('palette.')) {
+      primitives[key] = {
+        "$type": "color",
+        "$value": value
+      };
+    }
+  });
+  return primitives;
+}
+
 try {
   // Read input files
   const template = JSON.parse(fs.readFileSync(path.join(__dirname, 'tokens-studio-format.json'), 'utf8'));
   const muiTokens = require('./mui-tokens-raw.json');
   
-  // Extract primitive colors
-  const primitives = extractPrimitiveColors(muiTokens);
+  // Flatten all color primitives
+  const primitives = flattenColorPrimitives(muiTokens);
   
-  // Transform semantic tokens and clean up examples
+  // Use the existing logic for semantic tokens (MUI)
+  // (Assume fillTemplateWithMui and cleanupMuiTokens are already correct and flat)
   const semanticTokens = cleanupMuiTokens(fillTemplateWithMui(template.MUI, muiTokens, primitives));
   
-  // Create final structure
+  // Create final structure (flat, no wrappers)
   const finalOutput = {
     "Primitives": primitives,
     "MUI": semanticTokens,
