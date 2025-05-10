@@ -1260,279 +1260,306 @@
       "$value": "#616161",
       "$type": "color",
       "$description": "grey A700"
-    },
-    "common.black": {
-      "$value": "#000",
-      "$type": "color",
-      "$description": "common black"
-    },
-    "common.white": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "common white"
-    },
-    "palette.common.black": {
-      "$value": "#000",
-      "$type": "color",
-      "$description": "palette common"
-    },
-    "palette.common.white": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "palette common"
-    },
-    "palette.primary.main": {
-      "$value": "#1976d2",
-      "$type": "color",
-      "$description": "palette primary"
-    },
-    "palette.primary.light": {
-      "$value": "#42a5f5",
-      "$type": "color",
-      "$description": "palette primary"
-    },
-    "palette.primary.dark": {
-      "$value": "#1565c0",
-      "$type": "color",
-      "$description": "palette primary"
-    },
-    "palette.primary.contrastText": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "palette primary"
-    },
-    "palette.secondary.main": {
-      "$value": "#9c27b0",
-      "$type": "color",
-      "$description": "palette secondary"
-    },
-    "palette.secondary.light": {
-      "$value": "#ba68c8",
-      "$type": "color",
-      "$description": "palette secondary"
-    },
-    "palette.secondary.dark": {
-      "$value": "#7b1fa2",
-      "$type": "color",
-      "$description": "palette secondary"
-    },
-    "palette.secondary.contrastText": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "palette secondary"
-    },
-    "palette.error.main": {
-      "$value": "#d32f2f",
-      "$type": "color",
-      "$description": "palette error"
-    },
-    "palette.error.light": {
-      "$value": "#ef5350",
-      "$type": "color",
-      "$description": "palette error"
-    },
-    "palette.error.dark": {
-      "$value": "#c62828",
-      "$type": "color",
-      "$description": "palette error"
-    },
-    "palette.error.contrastText": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "palette error"
-    },
-    "palette.warning.main": {
-      "$value": "#ed6c02",
-      "$type": "color",
-      "$description": "palette warning"
-    },
-    "palette.warning.light": {
-      "$value": "#ff9800",
-      "$type": "color",
-      "$description": "palette warning"
-    },
-    "palette.warning.dark": {
-      "$value": "#e65100",
-      "$type": "color",
-      "$description": "palette warning"
-    },
-    "palette.warning.contrastText": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "palette warning"
-    },
-    "palette.info.main": {
-      "$value": "#0288d1",
-      "$type": "color",
-      "$description": "palette info"
-    },
-    "palette.info.light": {
-      "$value": "#03a9f4",
-      "$type": "color",
-      "$description": "palette info"
-    },
-    "palette.info.dark": {
-      "$value": "#01579b",
-      "$type": "color",
-      "$description": "palette info"
-    },
-    "palette.info.contrastText": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "palette info"
-    },
-    "palette.success.main": {
-      "$value": "#2e7d32",
-      "$type": "color",
-      "$description": "palette success"
-    },
-    "palette.success.light": {
-      "$value": "#4caf50",
-      "$type": "color",
-      "$description": "palette success"
-    },
-    "palette.success.dark": {
-      "$value": "#1b5e20",
-      "$type": "color",
-      "$description": "palette success"
-    },
-    "palette.success.contrastText": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "palette success"
-    },
-    "palette.grey.50": {
-      "$value": "#fafafa",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.100": {
-      "$value": "#f5f5f5",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.200": {
-      "$value": "#eeeeee",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.300": {
-      "$value": "#e0e0e0",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.400": {
-      "$value": "#bdbdbd",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.500": {
-      "$value": "#9e9e9e",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.600": {
-      "$value": "#757575",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.700": {
-      "$value": "#616161",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.800": {
-      "$value": "#424242",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.900": {
-      "$value": "#212121",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.A100": {
-      "$value": "#f5f5f5",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.A200": {
-      "$value": "#eeeeee",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.A400": {
-      "$value": "#bdbdbd",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.grey.A700": {
-      "$value": "#616161",
-      "$type": "color",
-      "$description": "palette grey"
-    },
-    "palette.text.primary": {
-      "$value": "rgba(0, 0, 0, 0.87)",
-      "$type": "color",
-      "$description": "palette text"
-    },
-    "palette.text.secondary": {
-      "$value": "rgba(0, 0, 0, 0.6)",
-      "$type": "color",
-      "$description": "palette text"
-    },
-    "palette.text.disabled": {
-      "$value": "rgba(0, 0, 0, 0.38)",
-      "$type": "color",
-      "$description": "palette text"
-    },
-    "palette.divider": {
-      "$value": "rgba(0, 0, 0, 0.12)",
-      "$type": "color",
-      "$description": "palette divider"
-    },
-    "palette.background.paper": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "palette background"
-    },
-    "palette.background.default": {
-      "$value": "#fff",
-      "$type": "color",
-      "$description": "palette background"
-    },
-    "palette.action.active": {
-      "$value": "rgba(0, 0, 0, 0.54)",
-      "$type": "color",
-      "$description": "palette action"
-    },
-    "palette.action.hover": {
-      "$value": "rgba(0, 0, 0, 0.04)",
-      "$type": "color",
-      "$description": "palette action"
-    },
-    "palette.action.selected": {
-      "$value": "rgba(0, 0, 0, 0.08)",
-      "$type": "color",
-      "$description": "palette action"
-    },
-    "palette.action.disabled": {
-      "$value": "rgba(0, 0, 0, 0.26)",
-      "$type": "color",
-      "$description": "palette action"
-    },
-    "palette.action.disabledBackground": {
-      "$value": "rgba(0, 0, 0, 0.12)",
-      "$type": "color",
-      "$description": "palette action"
-    },
-    "palette.action.focus": {
-      "$value": "rgba(0, 0, 0, 0.12)",
-      "$type": "color",
-      "$description": "palette action"
     }
   },
-  "MUI": {},
+  "MUI": {
+    "palette": {
+      "common": {
+        "black": {
+          "$value": "#000",
+          "$type": "color",
+          "$description": "MUI palette.common.black"
+        },
+        "white": {
+          "$value": "#fff",
+          "$type": "color",
+          "$description": "MUI palette.common.white"
+        }
+      },
+      "primary": {
+        "main": {
+          "$value": "#1976d2",
+          "$type": "color",
+          "$description": "MUI palette.primary.main"
+        },
+        "light": {
+          "$value": "#42a5f5",
+          "$type": "color",
+          "$description": "MUI palette.primary.light"
+        },
+        "dark": {
+          "$value": "#1565c0",
+          "$type": "color",
+          "$description": "MUI palette.primary.dark"
+        },
+        "contrastText": {
+          "$value": "#fff",
+          "$type": "color",
+          "$description": "MUI palette.primary.contrastText"
+        }
+      },
+      "secondary": {
+        "main": {
+          "$value": "#9c27b0",
+          "$type": "color",
+          "$description": "MUI palette.secondary.main"
+        },
+        "light": {
+          "$value": "#ba68c8",
+          "$type": "color",
+          "$description": "MUI palette.secondary.light"
+        },
+        "dark": {
+          "$value": "#7b1fa2",
+          "$type": "color",
+          "$description": "MUI palette.secondary.dark"
+        },
+        "contrastText": {
+          "$value": "#fff",
+          "$type": "color",
+          "$description": "MUI palette.secondary.contrastText"
+        }
+      },
+      "error": {
+        "main": {
+          "$value": "#d32f2f",
+          "$type": "color",
+          "$description": "MUI palette.error.main"
+        },
+        "light": {
+          "$value": "#ef5350",
+          "$type": "color",
+          "$description": "MUI palette.error.light"
+        },
+        "dark": {
+          "$value": "#c62828",
+          "$type": "color",
+          "$description": "MUI palette.error.dark"
+        },
+        "contrastText": {
+          "$value": "#fff",
+          "$type": "color",
+          "$description": "MUI palette.error.contrastText"
+        }
+      },
+      "warning": {
+        "main": {
+          "$value": "#ed6c02",
+          "$type": "color",
+          "$description": "MUI palette.warning.main"
+        },
+        "light": {
+          "$value": "#ff9800",
+          "$type": "color",
+          "$description": "MUI palette.warning.light"
+        },
+        "dark": {
+          "$value": "#e65100",
+          "$type": "color",
+          "$description": "MUI palette.warning.dark"
+        },
+        "contrastText": {
+          "$value": "#fff",
+          "$type": "color",
+          "$description": "MUI palette.warning.contrastText"
+        }
+      },
+      "info": {
+        "main": {
+          "$value": "#0288d1",
+          "$type": "color",
+          "$description": "MUI palette.info.main"
+        },
+        "light": {
+          "$value": "#03a9f4",
+          "$type": "color",
+          "$description": "MUI palette.info.light"
+        },
+        "dark": {
+          "$value": "#01579b",
+          "$type": "color",
+          "$description": "MUI palette.info.dark"
+        },
+        "contrastText": {
+          "$value": "#fff",
+          "$type": "color",
+          "$description": "MUI palette.info.contrastText"
+        }
+      },
+      "success": {
+        "main": {
+          "$value": "#2e7d32",
+          "$type": "color",
+          "$description": "MUI palette.success.main"
+        },
+        "light": {
+          "$value": "#4caf50",
+          "$type": "color",
+          "$description": "MUI palette.success.light"
+        },
+        "dark": {
+          "$value": "#1b5e20",
+          "$type": "color",
+          "$description": "MUI palette.success.dark"
+        },
+        "contrastText": {
+          "$value": "#fff",
+          "$type": "color",
+          "$description": "MUI palette.success.contrastText"
+        }
+      },
+      "grey": {
+        "50": {
+          "$value": "#fafafa",
+          "$type": "color",
+          "$description": "MUI palette.grey.50"
+        },
+        "100": {
+          "$value": "#f5f5f5",
+          "$type": "color",
+          "$description": "MUI palette.grey.100"
+        },
+        "200": {
+          "$value": "#eeeeee",
+          "$type": "color",
+          "$description": "MUI palette.grey.200"
+        },
+        "300": {
+          "$value": "#e0e0e0",
+          "$type": "color",
+          "$description": "MUI palette.grey.300"
+        },
+        "400": {
+          "$value": "#bdbdbd",
+          "$type": "color",
+          "$description": "MUI palette.grey.400"
+        },
+        "500": {
+          "$value": "#9e9e9e",
+          "$type": "color",
+          "$description": "MUI palette.grey.500"
+        },
+        "600": {
+          "$value": "#757575",
+          "$type": "color",
+          "$description": "MUI palette.grey.600"
+        },
+        "700": {
+          "$value": "#616161",
+          "$type": "color",
+          "$description": "MUI palette.grey.700"
+        },
+        "800": {
+          "$value": "#424242",
+          "$type": "color",
+          "$description": "MUI palette.grey.800"
+        },
+        "900": {
+          "$value": "#212121",
+          "$type": "color",
+          "$description": "MUI palette.grey.900"
+        },
+        "A100": {
+          "$value": "#f5f5f5",
+          "$type": "color",
+          "$description": "MUI palette.grey.A100"
+        },
+        "A200": {
+          "$value": "#eeeeee",
+          "$type": "color",
+          "$description": "MUI palette.grey.A200"
+        },
+        "A400": {
+          "$value": "#bdbdbd",
+          "$type": "color",
+          "$description": "MUI palette.grey.A400"
+        },
+        "A700": {
+          "$value": "#616161",
+          "$type": "color",
+          "$description": "MUI palette.grey.A700"
+        }
+      },
+      "text": {
+        "primary": {
+          "$value": "rgba(0, 0, 0, 0.87)",
+          "$type": "color",
+          "$description": "MUI palette.text.primary"
+        },
+        "secondary": {
+          "$value": "rgba(0, 0, 0, 0.6)",
+          "$type": "color",
+          "$description": "MUI palette.text.secondary"
+        },
+        "disabled": {
+          "$value": "rgba(0, 0, 0, 0.38)",
+          "$type": "color",
+          "$description": "MUI palette.text.disabled"
+        }
+      },
+      "divider": {
+        "$value": "rgba(0, 0, 0, 0.12)",
+        "$type": "color",
+        "$description": "MUI palette.divider"
+      },
+      "background": {
+        "paper": {
+          "$value": "#fff",
+          "$type": "color",
+          "$description": "MUI palette.background.paper"
+        },
+        "default": {
+          "$value": "#fff",
+          "$type": "color",
+          "$description": "MUI palette.background.default"
+        }
+      },
+      "action": {
+        "active": {
+          "$value": "rgba(0, 0, 0, 0.54)",
+          "$type": "color",
+          "$description": "MUI palette.action.active"
+        },
+        "hover": {
+          "$value": "rgba(0, 0, 0, 0.04)",
+          "$type": "color",
+          "$description": "MUI palette.action.hover"
+        },
+        "selected": {
+          "$value": "rgba(0, 0, 0, 0.08)",
+          "$type": "color",
+          "$description": "MUI palette.action.selected"
+        },
+        "disabled": {
+          "$value": "rgba(0, 0, 0, 0.26)",
+          "$type": "color",
+          "$description": "MUI palette.action.disabled"
+        },
+        "disabledBackground": {
+          "$value": "rgba(0, 0, 0, 0.12)",
+          "$type": "color",
+          "$description": "MUI palette.action.disabledBackground"
+        },
+        "focus": {
+          "$value": "rgba(0, 0, 0, 0.12)",
+          "$type": "color",
+          "$description": "MUI palette.action.focus"
+        }
+      }
+    },
+    "common": {
+      "black": {
+        "$value": "#000",
+        "$type": "color",
+        "$description": "MUI common.black"
+      },
+      "white": {
+        "$value": "#fff",
+        "$type": "color",
+        "$description": "MUI common.white"
+      }
+    }
+  },
   "$metadata": {
     "tokenSetOrder": [
       "Primitives",
