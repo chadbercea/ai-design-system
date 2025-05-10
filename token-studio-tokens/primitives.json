@@ -1262,88 +1262,85 @@
       "$description": "color grey.A700"
     },
     "Breakpoints": {
-      "$value": "px",
-      "$type": "breakpoints",
-      "$description": "Breakpoints Unit"
-    },
-    "Text": {
-      "Direction": {
-        "$value": "ltr",
-        "$type": "text",
-        "$description": "Text Direction"
+      "BreakpointsValuesXs": {
+        "$value": 0,
+        "$type": "breakpoints",
+        "$description": "Breakpoints BreakpointsValuesXs"
       },
-      "EaseInOut": {
-        "$value": "cubic-bezier(0.4, 0, 0.2, 1)",
-        "$type": "text",
-        "$description": "Text EaseInOut"
+      "BreakpointsValuesSm": {
+        "$value": 600,
+        "$type": "breakpoints",
+        "$description": "Breakpoints BreakpointsValuesSm"
       },
-      "EaseOut": {
-        "$value": "cubic-bezier(0.0, 0, 0.2, 1)",
-        "$type": "text",
-        "$description": "Text EaseOut"
+      "BreakpointsValuesMd": {
+        "$value": 900,
+        "$type": "breakpoints",
+        "$description": "Breakpoints BreakpointsValuesMd"
       },
-      "EaseIn": {
-        "$value": "cubic-bezier(0.4, 0, 1, 1)",
-        "$type": "text",
-        "$description": "Text EaseIn"
+      "BreakpointsValuesLg": {
+        "$value": 1200,
+        "$type": "breakpoints",
+        "$description": "Breakpoints BreakpointsValuesLg"
       },
-      "Sharp": {
-        "$value": "cubic-bezier(0.4, 0, 0.6, 1)",
-        "$type": "text",
-        "$description": "Text Sharp"
+      "BreakpointsValuesXl": {
+        "$value": 1536,
+        "$type": "breakpoints",
+        "$description": "Breakpoints BreakpointsValuesXl"
+      },
+      "BreakpointsUnit": {
+        "$value": "px",
+        "$type": "breakpoints",
+        "$description": "Breakpoints BreakpointsUnit"
       }
     },
     "BorderRadius": {
-      "$value": 4,
-      "$type": "borderRadius",
-      "$description": "BorderRadius BorderRadius"
-    },
-    "Number": {
-      "MinHeight": {
-        "$value": 64,
-        "$type": "number",
-        "$description": "Number MinHeight"
-      },
-      "Shortest": {
-        "$value": 150,
-        "$type": "number",
-        "$description": "Number Shortest"
-      },
-      "Shorter": {
-        "$value": 200,
-        "$type": "number",
-        "$description": "Number Shorter"
-      },
-      "Short": {
-        "$value": 250,
-        "$type": "number",
-        "$description": "Number Short"
-      },
-      "Standard": {
-        "$value": 300,
-        "$type": "number",
-        "$description": "Number Standard"
-      },
-      "Complex": {
-        "$value": 375,
-        "$type": "number",
-        "$description": "Number Complex"
-      },
-      "EnteringScreen": {
-        "$value": 225,
-        "$type": "number",
-        "$description": "Number EnteringScreen"
-      },
-      "LeavingScreen": {
-        "$value": 195,
-        "$type": "number",
-        "$description": "Number LeavingScreen"
+      "ShapeBorderRadius": {
+        "$value": 4,
+        "$type": "borderRadius",
+        "$description": "BorderRadius ShapeBorderRadius"
       }
     },
     "ZIndex": {
-      "$value": 1500,
-      "$type": "zIndex",
-      "$description": "ZIndex Tooltip"
+      "ZIndexMobileStepper": {
+        "$value": 1000,
+        "$type": "zIndex",
+        "$description": "ZIndex ZIndexMobileStepper"
+      },
+      "ZIndexFab": {
+        "$value": 1050,
+        "$type": "zIndex",
+        "$description": "ZIndex ZIndexFab"
+      },
+      "ZIndexSpeedDial": {
+        "$value": 1050,
+        "$type": "zIndex",
+        "$description": "ZIndex ZIndexSpeedDial"
+      },
+      "ZIndexAppBar": {
+        "$value": 1100,
+        "$type": "zIndex",
+        "$description": "ZIndex ZIndexAppBar"
+      },
+      "ZIndexDrawer": {
+        "$value": 1200,
+        "$type": "zIndex",
+        "$description": "ZIndex ZIndexDrawer"
+      },
+      "ZIndexModal": {
+        "$value": 1300,
+        "$type": "zIndex",
+        "$description": "ZIndex ZIndexModal"
+      },
+      "ZIndexSnackbar": {
+        "$value": 1400,
+        "$type": "zIndex",
+        "$description": "ZIndex ZIndexSnackbar"
+      },
+      "ZIndexTooltip": {
+        "$value": 1500,
+        "$type": "zIndex",
+        "$description": "ZIndex ZIndexTooltip"
+      }
     }
   }
 }

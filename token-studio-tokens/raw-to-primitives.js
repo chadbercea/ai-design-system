@@ -1,40 +1,33 @@
 const fs = require('fs');
 const path = require('path');
 
-// Canonical categories from the overview (PascalCase)
-const canonicalCategories = [
-  'Color', 'Sizing', 'Spacing', 'BorderRadius', 'BorderWidth', 'Border', 'Opacity', 'BoxShadow', 'Typography',
-  'FontFamily', 'FontWeight', 'LineHeight', 'FontSize', 'LetterSpacing', 'ParagraphSpacing', 'TextCase',
-  'TextDecoration', 'Composition', 'Assets', 'Dimension', 'Breakpoints', 'Boolean', 'Text', 'Number', 'ZIndex'
-];
-
-// Canonical type mapping for Tokens Studio
-const canonicalTypeMap = {
-  FontSize: 'fontSizes',
-  FontWeight: 'fontWeights',
-  FontFamily: 'fontFamilies',
-  LineHeight: 'lineHeights',
-  LetterSpacing: 'letterSpacing',
-  Color: 'color',
-  BorderRadius: 'borderRadius',
-  BorderWidth: 'borderWidth',
-  Spacing: 'spacing',
-  Sizing: 'sizing',
-  Opacity: 'opacity',
-  Typography: 'typography',
-  BoxShadow: 'boxShadow',
-  ZIndex: 'zIndex',
-  Breakpoints: 'breakpoints',
-  Boolean: 'boolean',
-  Text: 'text',
-  Number: 'number',
-  ParagraphSpacing: 'paragraphSpacing',
-  TextCase: 'textCase',
-  TextDecoration: 'textDecoration',
-  Composition: 'composition',
-  Assets: 'assets',
-  Dimension: 'dimension',
-  Border: 'border',
+// Tokens Studio $type to group mapping (PascalCase)
+const tsTypeToGroup = {
+  color: null, // special: flat keys
+  fontSizes: 'FontSize',
+  fontWeights: 'FontWeight',
+  fontFamilies: 'FontFamily',
+  lineHeights: 'LineHeight',
+  letterSpacing: 'LetterSpacing',
+  spacing: 'Spacing',
+  sizing: 'Sizing',
+  borderRadius: 'BorderRadius',
+  borderWidth: 'BorderWidth',
+  opacity: 'Opacity',
+  boxShadow: 'BoxShadow',
+  typography: 'Typography',
+  zIndex: 'ZIndex',
+  breakpoints: 'Breakpoints',
+  boolean: 'Boolean',
+  text: 'Text',
+  number: 'Number',
+  paragraphSpacing: 'ParagraphSpacing',
+  textCase: 'TextCase',
+  textDecoration: 'TextDecoration',
+  composition: 'Composition',
+  assets: 'Assets',
+  dimension: 'Dimension',
+  border: 'Border',
 };
 
 // Utility: PascalCase
@@ -53,21 +46,6 @@ const semanticPrefixes = [
   'palette.', 'common.', 'action.', 'background.', 'divider.', 'text.', 'primary.', 'secondary.', 'error.', 'warning.', 'info.', 'success.'
 ];
 
-function findCanonicalCategory(segments) {
-  for (const seg of segments) {
-    for (const cat of canonicalCategories) {
-      if (seg.toLowerCase() === cat.toLowerCase()) {
-        return cat;
-      }
-    }
-  }
-  return null;
-}
-
-function getTypeForCategory(category) {
-  return canonicalTypeMap[category] || category.toLowerCase();
-}
-
 function main() {
   const raw = JSON.parse(fs.readFileSync(path.join(__dirname, '../mui-tokens/mui-tokens-raw.json'), 'utf8'));
   const primitives = {};
@@ -79,11 +57,46 @@ function main() {
       if (semanticPrefixes.some(prefix => tokenKey.startsWith(prefix))) continue;
       const value = baseObj[tokenKey];
       if (typeof value !== 'string' && typeof value !== 'number') continue;
-      // Color tokens: use flat key logic, dot.case, no wrapping
+
+      // Guess $type from baseKey or tokenKey
+      let $type = null;
       if (baseKey.toLowerCase() === 'color') {
-        // Only allow dot.case color keys
+        $type = 'color';
+      } else {
+        // Try to infer from baseKey or tokenKey
+        const lowerBase = baseKey.toLowerCase();
+        for (const t of Object.keys(tsTypeToGroup)) {
+          if (lowerBase === t.toLowerCase()) {
+            $type = t;
+            break;
+          }
+        }
+        if (!$type) {
+          // Try from tokenKey
+          for (const t of Object.keys(tsTypeToGroup)) {
+            if (tokenKey.toLowerCase().includes(t.toLowerCase())) {
+              $type = t;
+              break;
+            }
+          }
+        }
+      }
+      if (!$type || !(($type === 'color') || tsTypeToGroup[$type])) {
+        skipped.push({ baseKey, tokenKey, value });
+        continue;
+      }
+
+      // $description
+      let $description = '';
+      if ($type === 'color') {
+        $description = `color ${tokenKey}`;
+      } else {
+        $description = `${tsTypeToGroup[$type] || $type} ${toPascalCase(tokenKey)}`;
+      }
+
+      // Color: flat key in dot.case
+      if ($type === 'color') {
         let name = tokenKey;
-        // Convert camelCase or PascalCase to dot.case
         if (!name.includes('.')) {
           name = name.replace(/([a-z])([A-Z])/g, '$1.$2').toLowerCase();
         }
@@ -91,61 +104,25 @@ function main() {
         primitives[name] = {
           $value: value,
           $type: 'color',
-          $description: `color ${name}`
+          $description
         };
         continue;
       }
-      // Dynamic category detection for all other tokens
-      const segments = tokenKey.split(/[.\-_ ]/);
-      const canonicalCategory = findCanonicalCategory(segments);
-      if (!canonicalCategory) {
-        // Fallback: if value is number or string, use Number/Text category
-        if (typeof value === 'number') {
-          if (!primitives['Number']) primitives['Number'] = {};
-          const tokenName = toPascalCase(segments[segments.length - 1]);
-          primitives['Number'][tokenName] = {
-            $value: value,
-            $type: 'number',
-            $description: `Number ${tokenName}`
-          };
-        } else if (typeof value === 'string') {
-          if (!primitives['Text']) primitives['Text'] = {};
-          const tokenName = toPascalCase(segments[segments.length - 1]);
-          primitives['Text'][tokenName] = {
-            $value: value,
-            $type: 'text',
-            $description: `Text ${tokenName}`
-          };
-        } else {
-          skipped.push({ baseKey, tokenKey, value });
-        }
-        continue;
-      }
-      const tokenName = toPascalCase(segments[segments.length - 1]);
-      const type = getTypeForCategory(canonicalCategory);
-      const description = `${canonicalCategory} ${tokenName}`;
-      // Category wrapping rule
-      if (canonicalCategory.toLowerCase() === type.toLowerCase()) {
-        // Flat key, always use the category name as the key
-        primitives[canonicalCategory] = {
-          $value: value,
-          $type: type,
-          $description: description
-        };
-      } else {
-        // Grouped under category
-        if (!primitives[canonicalCategory]) primitives[canonicalCategory] = {};
-        primitives[canonicalCategory][tokenName] = {
-          $value: value,
-          $type: type,
-          $description: description
-        };
-      }
+
+      // All other types: group by TS group name
+      const group = tsTypeToGroup[$type];
+      if (!primitives[group]) primitives[group] = {};
+      const tokenName = toPascalCase(tokenKey);
+      primitives[group][tokenName] = {
+        $value: value,
+        $type,
+        $description
+      };
     }
   }
 
   if (skipped.length > 0) {
-    console.warn('Skipped tokens due to unmapped category:', skipped);
+    console.warn('Skipped tokens due to unrecognized $type:', skipped);
   }
 
   const output = {
@@ -156,7 +133,7 @@ function main() {
     path.join(__dirname, 'primitives.json'),
     JSON.stringify(output, null, 2)
   );
-  console.log('Generated primitives.json with strict Design Token Codex compliance. Skipped tokens are logged.');
+  console.log('Generated primitives.json with dynamic TS group compliance. Skipped tokens are logged.');
 }
 
 main();
