@@ -387,3 +387,39 @@ https://design-tokens.github.io/design-tokens/schema.json
 
 ## 8. Reference Canonical Example
 > When in doubt, refer to the canonical example in this file. Examples are for illustration only; rules above take precedence.
+
+## Canonical Categories for Primitives
+
+> The following categories are standard and must be used for grouping primitives.  
+> **Tokens must be mapped to one of these categories.**  
+> If a token cannot be mapped, it must be flagged for review and omitted from the output—never assigned to "Other."
+>
+> - Color
+> - Sizing
+> - Spacing
+> - Border Radius
+> - Border Width
+> - Border
+> - Opacity
+> - Box Shadow
+> - Typography
+> - Font Family
+> - Font Weight
+> - Line Height
+> - Font Size
+> - Letter Spacing
+> - Paragraph Spacing
+> - Text Case
+> - Text Decoration
+> - Composition
+> - Assets
+> - Dimension
+> - Breakpoints
+> - Boolean
+> - Text
+> - Number
+>
+> **Note:**  
+> These categories are derived from Tokens Studio and W3C standards.  
+> Do not invent or use "Other" as a category.  
+> If a new category is needed, it must be added to this list and documented.

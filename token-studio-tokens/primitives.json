@@ -3,1403 +3,1609 @@
     "blue.50": {
       "$value": "#e3f2fd",
       "$type": "color",
-      "$description": "color blue.50"
+      "$description": "color blue.50",
+      "$primitive": "blue.50"
     },
     "blue.100": {
       "$value": "#bbdefb",
       "$type": "color",
-      "$description": "color blue.100"
+      "$description": "color blue.100",
+      "$primitive": "blue.100"
     },
     "blue.200": {
       "$value": "#90caf9",
       "$type": "color",
-      "$description": "color blue.200"
+      "$description": "color blue.200",
+      "$primitive": "blue.200"
     },
     "blue.300": {
       "$value": "#64b5f6",
       "$type": "color",
-      "$description": "color blue.300"
+      "$description": "color blue.300",
+      "$primitive": "blue.300"
     },
     "blue.400": {
       "$value": "#42a5f5",
       "$type": "color",
-      "$description": "color blue.400"
+      "$description": "color blue.400",
+      "$primitive": "blue.400"
     },
     "blue.500": {
       "$value": "#2196f3",
       "$type": "color",
-      "$description": "color blue.500"
+      "$description": "color blue.500",
+      "$primitive": "blue.500"
     },
     "blue.600": {
       "$value": "#1e88e5",
       "$type": "color",
-      "$description": "color blue.600"
+      "$description": "color blue.600",
+      "$primitive": "blue.600"
     },
     "blue.700": {
       "$value": "#1976d2",
       "$type": "color",
-      "$description": "color blue.700"
+      "$description": "color blue.700",
+      "$primitive": "blue.700"
     },
     "blue.800": {
       "$value": "#1565c0",
       "$type": "color",
-      "$description": "color blue.800"
+      "$description": "color blue.800",
+      "$primitive": "blue.800"
     },
     "blue.900": {
       "$value": "#0d47a1",
       "$type": "color",
-      "$description": "color blue.900"
+      "$description": "color blue.900",
+      "$primitive": "blue.900"
     },
     "blue.A100": {
       "$value": "#82b1ff",
       "$type": "color",
-      "$description": "color blue.A100"
+      "$description": "color blue.A100",
+      "$primitive": "blue.A100"
     },
     "blue.A200": {
       "$value": "#448aff",
       "$type": "color",
-      "$description": "color blue.A200"
+      "$description": "color blue.A200",
+      "$primitive": "blue.A200"
     },
     "blue.A400": {
       "$value": "#2979ff",
       "$type": "color",
-      "$description": "color blue.A400"
+      "$description": "color blue.A400",
+      "$primitive": "blue.A400"
     },
     "blue.A700": {
       "$value": "#2962ff",
       "$type": "color",
-      "$description": "color blue.A700"
+      "$description": "color blue.A700",
+      "$primitive": "blue.A700"
     },
     "red.50": {
       "$value": "#ffebee",
       "$type": "color",
-      "$description": "color red.50"
+      "$description": "color red.50",
+      "$primitive": "red.50"
     },
     "red.100": {
       "$value": "#ffcdd2",
       "$type": "color",
-      "$description": "color red.100"
+      "$description": "color red.100",
+      "$primitive": "red.100"
     },
     "red.200": {
       "$value": "#ef9a9a",
       "$type": "color",
-      "$description": "color red.200"
+      "$description": "color red.200",
+      "$primitive": "red.200"
     },
     "red.300": {
       "$value": "#e57373",
       "$type": "color",
-      "$description": "color red.300"
+      "$description": "color red.300",
+      "$primitive": "red.300"
     },
     "red.400": {
       "$value": "#ef5350",
       "$type": "color",
-      "$description": "color red.400"
+      "$description": "color red.400",
+      "$primitive": "red.400"
     },
     "red.500": {
       "$value": "#f44336",
       "$type": "color",
-      "$description": "color red.500"
+      "$description": "color red.500",
+      "$primitive": "red.500"
     },
     "red.600": {
       "$value": "#e53935",
       "$type": "color",
-      "$description": "color red.600"
+      "$description": "color red.600",
+      "$primitive": "red.600"
     },
     "red.700": {
       "$value": "#d32f2f",
       "$type": "color",
-      "$description": "color red.700"
+      "$description": "color red.700",
+      "$primitive": "red.700"
     },
     "red.800": {
       "$value": "#c62828",
       "$type": "color",
-      "$description": "color red.800"
+      "$description": "color red.800",
+      "$primitive": "red.800"
     },
     "red.900": {
       "$value": "#b71c1c",
       "$type": "color",
-      "$description": "color red.900"
+      "$description": "color red.900",
+      "$primitive": "red.900"
     },
     "red.A100": {
       "$value": "#ff8a80",
       "$type": "color",
-      "$description": "color red.A100"
+      "$description": "color red.A100",
+      "$primitive": "red.A100"
     },
     "red.A200": {
       "$value": "#ff5252",
       "$type": "color",
-      "$description": "color red.A200"
+      "$description": "color red.A200",
+      "$primitive": "red.A200"
     },
     "red.A400": {
       "$value": "#ff1744",
       "$type": "color",
-      "$description": "color red.A400"
+      "$description": "color red.A400",
+      "$primitive": "red.A400"
     },
     "red.A700": {
       "$value": "#d50000",
       "$type": "color",
-      "$description": "color red.A700"
+      "$description": "color red.A700",
+      "$primitive": "red.A700"
     },
     "green.50": {
       "$value": "#e8f5e9",
       "$type": "color",
-      "$description": "color green.50"
+      "$description": "color green.50",
+      "$primitive": "green.50"
     },
     "green.100": {
       "$value": "#c8e6c9",
       "$type": "color",
-      "$description": "color green.100"
+      "$description": "color green.100",
+      "$primitive": "green.100"
     },
     "green.200": {
       "$value": "#a5d6a7",
       "$type": "color",
-      "$description": "color green.200"
+      "$description": "color green.200",
+      "$primitive": "green.200"
     },
     "green.300": {
       "$value": "#81c784",
       "$type": "color",
-      "$description": "color green.300"
+      "$description": "color green.300",
+      "$primitive": "green.300"
     },
     "green.400": {
       "$value": "#66bb6a",
       "$type": "color",
-      "$description": "color green.400"
+      "$description": "color green.400",
+      "$primitive": "green.400"
     },
     "green.500": {
       "$value": "#4caf50",
       "$type": "color",
-      "$description": "color green.500"
+      "$description": "color green.500",
+      "$primitive": "green.500"
     },
     "green.600": {
       "$value": "#43a047",
       "$type": "color",
-      "$description": "color green.600"
+      "$description": "color green.600",
+      "$primitive": "green.600"
     },
     "green.700": {
       "$value": "#388e3c",
       "$type": "color",
-      "$description": "color green.700"
+      "$description": "color green.700",
+      "$primitive": "green.700"
     },
     "green.800": {
       "$value": "#2e7d32",
       "$type": "color",
-      "$description": "color green.800"
+      "$description": "color green.800",
+      "$primitive": "green.800"
     },
     "green.900": {
       "$value": "#1b5e20",
       "$type": "color",
-      "$description": "color green.900"
+      "$description": "color green.900",
+      "$primitive": "green.900"
     },
     "green.A100": {
       "$value": "#b9f6ca",
       "$type": "color",
-      "$description": "color green.A100"
+      "$description": "color green.A100",
+      "$primitive": "green.A100"
     },
     "green.A200": {
       "$value": "#69f0ae",
       "$type": "color",
-      "$description": "color green.A200"
+      "$description": "color green.A200",
+      "$primitive": "green.A200"
     },
     "green.A400": {
       "$value": "#00e676",
       "$type": "color",
-      "$description": "color green.A400"
+      "$description": "color green.A400",
+      "$primitive": "green.A400"
     },
     "green.A700": {
       "$value": "#00c853",
       "$type": "color",
-      "$description": "color green.A700"
+      "$description": "color green.A700",
+      "$primitive": "green.A700"
     },
     "purple.50": {
       "$value": "#f3e5f5",
       "$type": "color",
-      "$description": "color purple.50"
+      "$description": "color purple.50",
+      "$primitive": "purple.50"
     },
     "purple.100": {
       "$value": "#e1bee7",
       "$type": "color",
-      "$description": "color purple.100"
+      "$description": "color purple.100",
+      "$primitive": "purple.100"
     },
     "purple.200": {
       "$value": "#ce93d8",
       "$type": "color",
-      "$description": "color purple.200"
+      "$description": "color purple.200",
+      "$primitive": "purple.200"
     },
     "purple.300": {
       "$value": "#ba68c8",
       "$type": "color",
-      "$description": "color purple.300"
+      "$description": "color purple.300",
+      "$primitive": "purple.300"
     },
     "purple.400": {
       "$value": "#ab47bc",
       "$type": "color",
-      "$description": "color purple.400"
+      "$description": "color purple.400",
+      "$primitive": "purple.400"
     },
     "purple.500": {
       "$value": "#9c27b0",
       "$type": "color",
-      "$description": "color purple.500"
+      "$description": "color purple.500",
+      "$primitive": "purple.500"
     },
     "purple.600": {
       "$value": "#8e24aa",
       "$type": "color",
-      "$description": "color purple.600"
+      "$description": "color purple.600",
+      "$primitive": "purple.600"
     },
     "purple.700": {
       "$value": "#7b1fa2",
       "$type": "color",
-      "$description": "color purple.700"
+      "$description": "color purple.700",
+      "$primitive": "purple.700"
     },
     "purple.800": {
       "$value": "#6a1b9a",
       "$type": "color",
-      "$description": "color purple.800"
+      "$description": "color purple.800",
+      "$primitive": "purple.800"
     },
     "purple.900": {
       "$value": "#4a148c",
       "$type": "color",
-      "$description": "color purple.900"
+      "$description": "color purple.900",
+      "$primitive": "purple.900"
     },
     "purple.A100": {
       "$value": "#ea80fc",
       "$type": "color",
-      "$description": "color purple.A100"
+      "$description": "color purple.A100",
+      "$primitive": "purple.A100"
     },
     "purple.A200": {
       "$value": "#e040fb",
       "$type": "color",
-      "$description": "color purple.A200"
+      "$description": "color purple.A200",
+      "$primitive": "purple.A200"
     },
     "purple.A400": {
       "$value": "#d500f9",
       "$type": "color",
-      "$description": "color purple.A400"
+      "$description": "color purple.A400",
+      "$primitive": "purple.A400"
     },
     "purple.A700": {
       "$value": "#aa00ff",
       "$type": "color",
-      "$description": "color purple.A700"
+      "$description": "color purple.A700",
+      "$primitive": "purple.A700"
     },
     "orange.50": {
       "$value": "#fff3e0",
       "$type": "color",
-      "$description": "color orange.50"
+      "$description": "color orange.50",
+      "$primitive": "orange.50"
     },
     "orange.100": {
       "$value": "#ffe0b2",
       "$type": "color",
-      "$description": "color orange.100"
+      "$description": "color orange.100",
+      "$primitive": "orange.100"
     },
     "orange.200": {
       "$value": "#ffcc80",
       "$type": "color",
-      "$description": "color orange.200"
+      "$description": "color orange.200",
+      "$primitive": "orange.200"
     },
     "orange.300": {
       "$value": "#ffb74d",
       "$type": "color",
-      "$description": "color orange.300"
+      "$description": "color orange.300",
+      "$primitive": "orange.300"
     },
     "orange.400": {
       "$value": "#ffa726",
       "$type": "color",
-      "$description": "color orange.400"
+      "$description": "color orange.400",
+      "$primitive": "orange.400"
     },
     "orange.500": {
       "$value": "#ff9800",
       "$type": "color",
-      "$description": "color orange.500"
+      "$description": "color orange.500",
+      "$primitive": "orange.500"
     },
     "orange.600": {
       "$value": "#fb8c00",
       "$type": "color",
-      "$description": "color orange.600"
+      "$description": "color orange.600",
+      "$primitive": "orange.600"
     },
     "orange.700": {
       "$value": "#f57c00",
       "$type": "color",
-      "$description": "color orange.700"
+      "$description": "color orange.700",
+      "$primitive": "orange.700"
     },
     "orange.800": {
       "$value": "#ef6c00",
       "$type": "color",
-      "$description": "color orange.800"
+      "$description": "color orange.800",
+      "$primitive": "orange.800"
     },
     "orange.900": {
       "$value": "#e65100",
       "$type": "color",
-      "$description": "color orange.900"
+      "$description": "color orange.900",
+      "$primitive": "orange.900"
     },
     "orange.A100": {
       "$value": "#ffd180",
       "$type": "color",
-      "$description": "color orange.A100"
+      "$description": "color orange.A100",
+      "$primitive": "orange.A100"
     },
     "orange.A200": {
       "$value": "#ffab40",
       "$type": "color",
-      "$description": "color orange.A200"
+      "$description": "color orange.A200",
+      "$primitive": "orange.A200"
     },
     "orange.A400": {
       "$value": "#ff9100",
       "$type": "color",
-      "$description": "color orange.A400"
+      "$description": "color orange.A400",
+      "$primitive": "orange.A400"
     },
     "orange.A700": {
       "$value": "#ff6d00",
       "$type": "color",
-      "$description": "color orange.A700"
+      "$description": "color orange.A700",
+      "$primitive": "orange.A700"
     },
     "yellow.50": {
       "$value": "#fffde7",
       "$type": "color",
-      "$description": "color yellow.50"
+      "$description": "color yellow.50",
+      "$primitive": "yellow.50"
     },
     "yellow.100": {
       "$value": "#fff9c4",
       "$type": "color",
-      "$description": "color yellow.100"
+      "$description": "color yellow.100",
+      "$primitive": "yellow.100"
     },
     "yellow.200": {
       "$value": "#fff59d",
       "$type": "color",
-      "$description": "color yellow.200"
+      "$description": "color yellow.200",
+      "$primitive": "yellow.200"
     },
     "yellow.300": {
       "$value": "#fff176",
       "$type": "color",
-      "$description": "color yellow.300"
+      "$description": "color yellow.300",
+      "$primitive": "yellow.300"
     },
     "yellow.400": {
       "$value": "#ffee58",
       "$type": "color",
-      "$description": "color yellow.400"
+      "$description": "color yellow.400",
+      "$primitive": "yellow.400"
     },
     "yellow.500": {
       "$value": "#ffeb3b",
       "$type": "color",
-      "$description": "color yellow.500"
+      "$description": "color yellow.500",
+      "$primitive": "yellow.500"
     },
     "yellow.600": {
       "$value": "#fdd835",
       "$type": "color",
-      "$description": "color yellow.600"
+      "$description": "color yellow.600",
+      "$primitive": "yellow.600"
     },
     "yellow.700": {
       "$value": "#fbc02d",
       "$type": "color",
-      "$description": "color yellow.700"
+      "$description": "color yellow.700",
+      "$primitive": "yellow.700"
     },
     "yellow.800": {
       "$value": "#f9a825",
       "$type": "color",
-      "$description": "color yellow.800"
+      "$description": "color yellow.800",
+      "$primitive": "yellow.800"
     },
     "yellow.900": {
       "$value": "#f57f17",
       "$type": "color",
-      "$description": "color yellow.900"
+      "$description": "color yellow.900",
+      "$primitive": "yellow.900"
     },
     "yellow.A100": {
       "$value": "#ffff8d",
       "$type": "color",
-      "$description": "color yellow.A100"
+      "$description": "color yellow.A100",
+      "$primitive": "yellow.A100"
     },
     "yellow.A200": {
       "$value": "#ffff00",
       "$type": "color",
-      "$description": "color yellow.A200"
+      "$description": "color yellow.A200",
+      "$primitive": "yellow.A200"
     },
     "yellow.A400": {
       "$value": "#ffea00",
       "$type": "color",
-      "$description": "color yellow.A400"
+      "$description": "color yellow.A400",
+      "$primitive": "yellow.A400"
     },
     "yellow.A700": {
       "$value": "#ffd600",
       "$type": "color",
-      "$description": "color yellow.A700"
+      "$description": "color yellow.A700",
+      "$primitive": "yellow.A700"
     },
     "teal.50": {
       "$value": "#e0f2f1",
       "$type": "color",
-      "$description": "color teal.50"
+      "$description": "color teal.50",
+      "$primitive": "teal.50"
     },
     "teal.100": {
       "$value": "#b2dfdb",
       "$type": "color",
-      "$description": "color teal.100"
+      "$description": "color teal.100",
+      "$primitive": "teal.100"
     },
     "teal.200": {
       "$value": "#80cbc4",
       "$type": "color",
-      "$description": "color teal.200"
+      "$description": "color teal.200",
+      "$primitive": "teal.200"
     },
     "teal.300": {
       "$value": "#4db6ac",
       "$type": "color",
-      "$description": "color teal.300"
+      "$description": "color teal.300",
+      "$primitive": "teal.300"
     },
     "teal.400": {
       "$value": "#26a69a",
       "$type": "color",
-      "$description": "color teal.400"
+      "$description": "color teal.400",
+      "$primitive": "teal.400"
     },
     "teal.500": {
       "$value": "#009688",
       "$type": "color",
-      "$description": "color teal.500"
+      "$description": "color teal.500",
+      "$primitive": "teal.500"
     },
     "teal.600": {
       "$value": "#00897b",
       "$type": "color",
-      "$description": "color teal.600"
+      "$description": "color teal.600",
+      "$primitive": "teal.600"
     },
     "teal.700": {
       "$value": "#00796b",
       "$type": "color",
-      "$description": "color teal.700"
+      "$description": "color teal.700",
+      "$primitive": "teal.700"
     },
     "teal.800": {
       "$value": "#00695c",
       "$type": "color",
-      "$description": "color teal.800"
+      "$description": "color teal.800",
+      "$primitive": "teal.800"
     },
     "teal.900": {
       "$value": "#004d40",
       "$type": "color",
-      "$description": "color teal.900"
+      "$description": "color teal.900",
+      "$primitive": "teal.900"
     },
     "teal.A100": {
       "$value": "#a7ffeb",
       "$type": "color",
-      "$description": "color teal.A100"
+      "$description": "color teal.A100",
+      "$primitive": "teal.A100"
     },
     "teal.A200": {
       "$value": "#64ffda",
       "$type": "color",
-      "$description": "color teal.A200"
+      "$description": "color teal.A200",
+      "$primitive": "teal.A200"
     },
     "teal.A400": {
       "$value": "#1de9b6",
       "$type": "color",
-      "$description": "color teal.A400"
+      "$description": "color teal.A400",
+      "$primitive": "teal.A400"
     },
     "teal.A700": {
       "$value": "#00bfa5",
       "$type": "color",
-      "$description": "color teal.A700"
+      "$description": "color teal.A700",
+      "$primitive": "teal.A700"
     },
     "pink.50": {
       "$value": "#fce4ec",
       "$type": "color",
-      "$description": "color pink.50"
+      "$description": "color pink.50",
+      "$primitive": "pink.50"
     },
     "pink.100": {
       "$value": "#f8bbd0",
       "$type": "color",
-      "$description": "color pink.100"
+      "$description": "color pink.100",
+      "$primitive": "pink.100"
     },
     "pink.200": {
       "$value": "#f48fb1",
       "$type": "color",
-      "$description": "color pink.200"
+      "$description": "color pink.200",
+      "$primitive": "pink.200"
     },
     "pink.300": {
       "$value": "#f06292",
       "$type": "color",
-      "$description": "color pink.300"
+      "$description": "color pink.300",
+      "$primitive": "pink.300"
     },
     "pink.400": {
       "$value": "#ec407a",
       "$type": "color",
-      "$description": "color pink.400"
+      "$description": "color pink.400",
+      "$primitive": "pink.400"
     },
     "pink.500": {
       "$value": "#e91e63",
       "$type": "color",
-      "$description": "color pink.500"
+      "$description": "color pink.500",
+      "$primitive": "pink.500"
     },
     "pink.600": {
       "$value": "#d81b60",
       "$type": "color",
-      "$description": "color pink.600"
+      "$description": "color pink.600",
+      "$primitive": "pink.600"
     },
     "pink.700": {
       "$value": "#c2185b",
       "$type": "color",
-      "$description": "color pink.700"
+      "$description": "color pink.700",
+      "$primitive": "pink.700"
     },
     "pink.800": {
       "$value": "#ad1457",
       "$type": "color",
-      "$description": "color pink.800"
+      "$description": "color pink.800",
+      "$primitive": "pink.800"
     },
     "pink.900": {
       "$value": "#880e4f",
       "$type": "color",
-      "$description": "color pink.900"
+      "$description": "color pink.900",
+      "$primitive": "pink.900"
     },
     "pink.A100": {
       "$value": "#ff80ab",
       "$type": "color",
-      "$description": "color pink.A100"
+      "$description": "color pink.A100",
+      "$primitive": "pink.A100"
     },
     "pink.A200": {
       "$value": "#ff4081",
       "$type": "color",
-      "$description": "color pink.A200"
+      "$description": "color pink.A200",
+      "$primitive": "pink.A200"
     },
     "pink.A400": {
       "$value": "#f50057",
       "$type": "color",
-      "$description": "color pink.A400"
+      "$description": "color pink.A400",
+      "$primitive": "pink.A400"
     },
     "pink.A700": {
       "$value": "#c51162",
       "$type": "color",
-      "$description": "color pink.A700"
+      "$description": "color pink.A700",
+      "$primitive": "pink.A700"
     },
     "indigo.50": {
       "$value": "#e8eaf6",
       "$type": "color",
-      "$description": "color indigo.50"
+      "$description": "color indigo.50",
+      "$primitive": "indigo.50"
     },
     "indigo.100": {
       "$value": "#c5cae9",
       "$type": "color",
-      "$description": "color indigo.100"
+      "$description": "color indigo.100",
+      "$primitive": "indigo.100"
     },
     "indigo.200": {
       "$value": "#9fa8da",
       "$type": "color",
-      "$description": "color indigo.200"
+      "$description": "color indigo.200",
+      "$primitive": "indigo.200"
     },
     "indigo.300": {
       "$value": "#7986cb",
       "$type": "color",
-      "$description": "color indigo.300"
+      "$description": "color indigo.300",
+      "$primitive": "indigo.300"
     },
     "indigo.400": {
       "$value": "#5c6bc0",
       "$type": "color",
-      "$description": "color indigo.400"
+      "$description": "color indigo.400",
+      "$primitive": "indigo.400"
     },
     "indigo.500": {
       "$value": "#3f51b5",
       "$type": "color",
-      "$description": "color indigo.500"
+      "$description": "color indigo.500",
+      "$primitive": "indigo.500"
     },
     "indigo.600": {
       "$value": "#3949ab",
       "$type": "color",
-      "$description": "color indigo.600"
+      "$description": "color indigo.600",
+      "$primitive": "indigo.600"
     },
     "indigo.700": {
       "$value": "#303f9f",
       "$type": "color",
-      "$description": "color indigo.700"
+      "$description": "color indigo.700",
+      "$primitive": "indigo.700"
     },
     "indigo.800": {
       "$value": "#283593",
       "$type": "color",
-      "$description": "color indigo.800"
+      "$description": "color indigo.800",
+      "$primitive": "indigo.800"
     },
     "indigo.900": {
       "$value": "#1a237e",
       "$type": "color",
-      "$description": "color indigo.900"
+      "$description": "color indigo.900",
+      "$primitive": "indigo.900"
     },
     "indigo.A100": {
       "$value": "#8c9eff",
       "$type": "color",
-      "$description": "color indigo.A100"
+      "$description": "color indigo.A100",
+      "$primitive": "indigo.A100"
     },
     "indigo.A200": {
       "$value": "#536dfe",
       "$type": "color",
-      "$description": "color indigo.A200"
+      "$description": "color indigo.A200",
+      "$primitive": "indigo.A200"
     },
     "indigo.A400": {
       "$value": "#3d5afe",
       "$type": "color",
-      "$description": "color indigo.A400"
+      "$description": "color indigo.A400",
+      "$primitive": "indigo.A400"
     },
     "indigo.A700": {
       "$value": "#304ffe",
       "$type": "color",
-      "$description": "color indigo.A700"
+      "$description": "color indigo.A700",
+      "$primitive": "indigo.A700"
     },
     "deeporange.50": {
       "$value": "#fbe9e7",
       "$type": "color",
-      "$description": "color deeporange.50"
+      "$description": "color deeporange.50",
+      "$primitive": "deeporange.50"
     },
     "deeporange.100": {
       "$value": "#ffccbc",
       "$type": "color",
-      "$description": "color deeporange.100"
+      "$description": "color deeporange.100",
+      "$primitive": "deeporange.100"
     },
     "deeporange.200": {
       "$value": "#ffab91",
       "$type": "color",
-      "$description": "color deeporange.200"
+      "$description": "color deeporange.200",
+      "$primitive": "deeporange.200"
     },
     "deeporange.300": {
       "$value": "#ff8a65",
       "$type": "color",
-      "$description": "color deeporange.300"
+      "$description": "color deeporange.300",
+      "$primitive": "deeporange.300"
     },
     "deeporange.400": {
       "$value": "#ff7043",
       "$type": "color",
-      "$description": "color deeporange.400"
+      "$description": "color deeporange.400",
+      "$primitive": "deeporange.400"
     },
     "deeporange.500": {
       "$value": "#ff5722",
       "$type": "color",
-      "$description": "color deeporange.500"
+      "$description": "color deeporange.500",
+      "$primitive": "deeporange.500"
     },
     "deeporange.600": {
       "$value": "#f4511e",
       "$type": "color",
-      "$description": "color deeporange.600"
+      "$description": "color deeporange.600",
+      "$primitive": "deeporange.600"
     },
     "deeporange.700": {
       "$value": "#e64a19",
       "$type": "color",
-      "$description": "color deeporange.700"
+      "$description": "color deeporange.700",
+      "$primitive": "deeporange.700"
     },
     "deeporange.800": {
       "$value": "#d84315",
       "$type": "color",
-      "$description": "color deeporange.800"
+      "$description": "color deeporange.800",
+      "$primitive": "deeporange.800"
     },
     "deeporange.900": {
       "$value": "#bf360c",
       "$type": "color",
-      "$description": "color deeporange.900"
+      "$description": "color deeporange.900",
+      "$primitive": "deeporange.900"
     },
     "deeporange.A100": {
       "$value": "#ff9e80",
       "$type": "color",
-      "$description": "color deeporange.A100"
+      "$description": "color deeporange.A100",
+      "$primitive": "deeporange.A100"
     },
     "deeporange.A200": {
       "$value": "#ff6e40",
       "$type": "color",
-      "$description": "color deeporange.A200"
+      "$description": "color deeporange.A200",
+      "$primitive": "deeporange.A200"
     },
     "deeporange.A400": {
       "$value": "#ff3d00",
       "$type": "color",
-      "$description": "color deeporange.A400"
+      "$description": "color deeporange.A400",
+      "$primitive": "deeporange.A400"
     },
     "deeporange.A700": {
       "$value": "#dd2c00",
       "$type": "color",
-      "$description": "color deeporange.A700"
+      "$description": "color deeporange.A700",
+      "$primitive": "deeporange.A700"
     },
     "deeppurple.50": {
       "$value": "#ede7f6",
       "$type": "color",
-      "$description": "color deeppurple.50"
+      "$description": "color deeppurple.50",
+      "$primitive": "deeppurple.50"
     },
     "deeppurple.100": {
       "$value": "#d1c4e9",
       "$type": "color",
-      "$description": "color deeppurple.100"
+      "$description": "color deeppurple.100",
+      "$primitive": "deeppurple.100"
     },
     "deeppurple.200": {
       "$value": "#b39ddb",
       "$type": "color",
-      "$description": "color deeppurple.200"
+      "$description": "color deeppurple.200",
+      "$primitive": "deeppurple.200"
     },
     "deeppurple.300": {
       "$value": "#9575cd",
       "$type": "color",
-      "$description": "color deeppurple.300"
+      "$description": "color deeppurple.300",
+      "$primitive": "deeppurple.300"
     },
     "deeppurple.400": {
       "$value": "#7e57c2",
       "$type": "color",
-      "$description": "color deeppurple.400"
+      "$description": "color deeppurple.400",
+      "$primitive": "deeppurple.400"
     },
     "deeppurple.500": {
       "$value": "#673ab7",
       "$type": "color",
-      "$description": "color deeppurple.500"
+      "$description": "color deeppurple.500",
+      "$primitive": "deeppurple.500"
     },
     "deeppurple.600": {
       "$value": "#5e35b1",
       "$type": "color",
-      "$description": "color deeppurple.600"
+      "$description": "color deeppurple.600",
+      "$primitive": "deeppurple.600"
     },
     "deeppurple.700": {
       "$value": "#512da8",
       "$type": "color",
-      "$description": "color deeppurple.700"
+      "$description": "color deeppurple.700",
+      "$primitive": "deeppurple.700"
     },
     "deeppurple.800": {
       "$value": "#4527a0",
       "$type": "color",
-      "$description": "color deeppurple.800"
+      "$description": "color deeppurple.800",
+      "$primitive": "deeppurple.800"
     },
     "deeppurple.900": {
       "$value": "#311b92",
       "$type": "color",
-      "$description": "color deeppurple.900"
+      "$description": "color deeppurple.900",
+      "$primitive": "deeppurple.900"
     },
     "deeppurple.A100": {
       "$value": "#b388ff",
       "$type": "color",
-      "$description": "color deeppurple.A100"
+      "$description": "color deeppurple.A100",
+      "$primitive": "deeppurple.A100"
     },
     "deeppurple.A200": {
       "$value": "#7c4dff",
       "$type": "color",
-      "$description": "color deeppurple.A200"
+      "$description": "color deeppurple.A200",
+      "$primitive": "deeppurple.A200"
     },
     "deeppurple.A400": {
       "$value": "#651fff",
       "$type": "color",
-      "$description": "color deeppurple.A400"
+      "$description": "color deeppurple.A400",
+      "$primitive": "deeppurple.A400"
     },
     "deeppurple.A700": {
       "$value": "#6200ea",
       "$type": "color",
-      "$description": "color deeppurple.A700"
+      "$description": "color deeppurple.A700",
+      "$primitive": "deeppurple.A700"
     },
     "lightblue.50": {
       "$value": "#e1f5fe",
       "$type": "color",
-      "$description": "color lightblue.50"
+      "$description": "color lightblue.50",
+      "$primitive": "lightblue.50"
     },
     "lightblue.100": {
       "$value": "#b3e5fc",
       "$type": "color",
-      "$description": "color lightblue.100"
+      "$description": "color lightblue.100",
+      "$primitive": "lightblue.100"
     },
     "lightblue.200": {
       "$value": "#81d4fa",
       "$type": "color",
-      "$description": "color lightblue.200"
+      "$description": "color lightblue.200",
+      "$primitive": "lightblue.200"
     },
     "lightblue.300": {
       "$value": "#4fc3f7",
       "$type": "color",
-      "$description": "color lightblue.300"
+      "$description": "color lightblue.300",
+      "$primitive": "lightblue.300"
     },
     "lightblue.400": {
       "$value": "#29b6f6",
       "$type": "color",
-      "$description": "color lightblue.400"
+      "$description": "color lightblue.400",
+      "$primitive": "lightblue.400"
     },
     "lightblue.500": {
       "$value": "#03a9f4",
       "$type": "color",
-      "$description": "color lightblue.500"
+      "$description": "color lightblue.500",
+      "$primitive": "lightblue.500"
     },
     "lightblue.600": {
       "$value": "#039be5",
       "$type": "color",
-      "$description": "color lightblue.600"
+      "$description": "color lightblue.600",
+      "$primitive": "lightblue.600"
     },
     "lightblue.700": {
       "$value": "#0288d1",
       "$type": "color",
-      "$description": "color lightblue.700"
+      "$description": "color lightblue.700",
+      "$primitive": "lightblue.700"
     },
     "lightblue.800": {
       "$value": "#0277bd",
       "$type": "color",
-      "$description": "color lightblue.800"
+      "$description": "color lightblue.800",
+      "$primitive": "lightblue.800"
     },
     "lightblue.900": {
       "$value": "#01579b",
       "$type": "color",
-      "$description": "color lightblue.900"
+      "$description": "color lightblue.900",
+      "$primitive": "lightblue.900"
     },
     "lightblue.A100": {
       "$value": "#80d8ff",
       "$type": "color",
-      "$description": "color lightblue.A100"
+      "$description": "color lightblue.A100",
+      "$primitive": "lightblue.A100"
     },
     "lightblue.A200": {
       "$value": "#40c4ff",
       "$type": "color",
-      "$description": "color lightblue.A200"
+      "$description": "color lightblue.A200",
+      "$primitive": "lightblue.A200"
     },
     "lightblue.A400": {
       "$value": "#00b0ff",
       "$type": "color",
-      "$description": "color lightblue.A400"
+      "$description": "color lightblue.A400",
+      "$primitive": "lightblue.A400"
     },
     "lightblue.A700": {
       "$value": "#0091ea",
       "$type": "color",
-      "$description": "color lightblue.A700"
+      "$description": "color lightblue.A700",
+      "$primitive": "lightblue.A700"
     },
     "lightgreen.50": {
       "$value": "#f1f8e9",
       "$type": "color",
-      "$description": "color lightgreen.50"
+      "$description": "color lightgreen.50",
+      "$primitive": "lightgreen.50"
     },
     "lightgreen.100": {
       "$value": "#dcedc8",
       "$type": "color",
-      "$description": "color lightgreen.100"
+      "$description": "color lightgreen.100",
+      "$primitive": "lightgreen.100"
     },
     "lightgreen.200": {
       "$value": "#c5e1a5",
       "$type": "color",
-      "$description": "color lightgreen.200"
+      "$description": "color lightgreen.200",
+      "$primitive": "lightgreen.200"
     },
     "lightgreen.300": {
       "$value": "#aed581",
       "$type": "color",
-      "$description": "color lightgreen.300"
+      "$description": "color lightgreen.300",
+      "$primitive": "lightgreen.300"
     },
     "lightgreen.400": {
       "$value": "#9ccc65",
       "$type": "color",
-      "$description": "color lightgreen.400"
+      "$description": "color lightgreen.400",
+      "$primitive": "lightgreen.400"
     },
     "lightgreen.500": {
       "$value": "#8bc34a",
       "$type": "color",
-      "$description": "color lightgreen.500"
+      "$description": "color lightgreen.500",
+      "$primitive": "lightgreen.500"
     },
     "lightgreen.600": {
       "$value": "#7cb342",
       "$type": "color",
-      "$description": "color lightgreen.600"
+      "$description": "color lightgreen.600",
+      "$primitive": "lightgreen.600"
     },
     "lightgreen.700": {
       "$value": "#689f38",
       "$type": "color",
-      "$description": "color lightgreen.700"
+      "$description": "color lightgreen.700",
+      "$primitive": "lightgreen.700"
     },
     "lightgreen.800": {
       "$value": "#558b2f",
       "$type": "color",
-      "$description": "color lightgreen.800"
+      "$description": "color lightgreen.800",
+      "$primitive": "lightgreen.800"
     },
     "lightgreen.900": {
       "$value": "#33691e",
       "$type": "color",
-      "$description": "color lightgreen.900"
+      "$description": "color lightgreen.900",
+      "$primitive": "lightgreen.900"
     },
     "lightgreen.A100": {
       "$value": "#ccff90",
       "$type": "color",
-      "$description": "color lightgreen.A100"
+      "$description": "color lightgreen.A100",
+      "$primitive": "lightgreen.A100"
     },
     "lightgreen.A200": {
       "$value": "#b2ff59",
       "$type": "color",
-      "$description": "color lightgreen.A200"
+      "$description": "color lightgreen.A200",
+      "$primitive": "lightgreen.A200"
     },
     "lightgreen.A400": {
       "$value": "#76ff03",
       "$type": "color",
-      "$description": "color lightgreen.A400"
+      "$description": "color lightgreen.A400",
+      "$primitive": "lightgreen.A400"
     },
     "lightgreen.A700": {
       "$value": "#64dd17",
       "$type": "color",
-      "$description": "color lightgreen.A700"
+      "$description": "color lightgreen.A700",
+      "$primitive": "lightgreen.A700"
     },
     "amber.50": {
       "$value": "#fff8e1",
       "$type": "color",
-      "$description": "color amber.50"
+      "$description": "color amber.50",
+      "$primitive": "amber.50"
     },
     "amber.100": {
       "$value": "#ffecb3",
       "$type": "color",
-      "$description": "color amber.100"
+      "$description": "color amber.100",
+      "$primitive": "amber.100"
     },
     "amber.200": {
       "$value": "#ffe082",
       "$type": "color",
-      "$description": "color amber.200"
+      "$description": "color amber.200",
+      "$primitive": "amber.200"
     },
     "amber.300": {
       "$value": "#ffd54f",
       "$type": "color",
-      "$description": "color amber.300"
+      "$description": "color amber.300",
+      "$primitive": "amber.300"
     },
     "amber.400": {
       "$value": "#ffca28",
       "$type": "color",
-      "$description": "color amber.400"
+      "$description": "color amber.400",
+      "$primitive": "amber.400"
     },
     "amber.500": {
       "$value": "#ffc107",
       "$type": "color",
-      "$description": "color amber.500"
+      "$description": "color amber.500",
+      "$primitive": "amber.500"
     },
     "amber.600": {
       "$value": "#ffb300",
       "$type": "color",
-      "$description": "color amber.600"
+      "$description": "color amber.600",
+      "$primitive": "amber.600"
     },
     "amber.700": {
       "$value": "#ffa000",
       "$type": "color",
-      "$description": "color amber.700"
+      "$description": "color amber.700",
+      "$primitive": "amber.700"
     },
     "amber.800": {
       "$value": "#ff8f00",
       "$type": "color",
-      "$description": "color amber.800"
+      "$description": "color amber.800",
+      "$primitive": "amber.800"
     },
     "amber.900": {
       "$value": "#ff6f00",
       "$type": "color",
-      "$description": "color amber.900"
+      "$description": "color amber.900",
+      "$primitive": "amber.900"
     },
     "amber.A100": {
       "$value": "#ffe57f",
       "$type": "color",
-      "$description": "color amber.A100"
+      "$description": "color amber.A100",
+      "$primitive": "amber.A100"
     },
     "amber.A200": {
       "$value": "#ffd740",
       "$type": "color",
-      "$description": "color amber.A200"
+      "$description": "color amber.A200",
+      "$primitive": "amber.A200"
     },
     "amber.A400": {
       "$value": "#ffc400",
       "$type": "color",
-      "$description": "color amber.A400"
+      "$description": "color amber.A400",
+      "$primitive": "amber.A400"
     },
     "amber.A700": {
       "$value": "#ffab00",
       "$type": "color",
-      "$description": "color amber.A700"
+      "$description": "color amber.A700",
+      "$primitive": "amber.A700"
     },
     "cyan.50": {
       "$value": "#e0f7fa",
       "$type": "color",
-      "$description": "color cyan.50"
+      "$description": "color cyan.50",
+      "$primitive": "cyan.50"
     },
     "cyan.100": {
       "$value": "#b2ebf2",
       "$type": "color",
-      "$description": "color cyan.100"
+      "$description": "color cyan.100",
+      "$primitive": "cyan.100"
     },
     "cyan.200": {
       "$value": "#80deea",
       "$type": "color",
-      "$description": "color cyan.200"
+      "$description": "color cyan.200",
+      "$primitive": "cyan.200"
     },
     "cyan.300": {
       "$value": "#4dd0e1",
       "$type": "color",
-      "$description": "color cyan.300"
+      "$description": "color cyan.300",
+      "$primitive": "cyan.300"
     },
     "cyan.400": {
       "$value": "#26c6da",
       "$type": "color",
-      "$description": "color cyan.400"
+      "$description": "color cyan.400",
+      "$primitive": "cyan.400"
     },
     "cyan.500": {
       "$value": "#00bcd4",
       "$type": "color",
-      "$description": "color cyan.500"
+      "$description": "color cyan.500",
+      "$primitive": "cyan.500"
     },
     "cyan.600": {
       "$value": "#00acc1",
       "$type": "color",
-      "$description": "color cyan.600"
+      "$description": "color cyan.600",
+      "$primitive": "cyan.600"
     },
     "cyan.700": {
       "$value": "#0097a7",
       "$type": "color",
-      "$description": "color cyan.700"
+      "$description": "color cyan.700",
+      "$primitive": "cyan.700"
     },
     "cyan.800": {
       "$value": "#00838f",
       "$type": "color",
-      "$description": "color cyan.800"
+      "$description": "color cyan.800",
+      "$primitive": "cyan.800"
     },
     "cyan.900": {
       "$value": "#006064",
       "$type": "color",
-      "$description": "color cyan.900"
+      "$description": "color cyan.900",
+      "$primitive": "cyan.900"
     },
     "cyan.A100": {
       "$value": "#84ffff",
       "$type": "color",
-      "$description": "color cyan.A100"
+      "$description": "color cyan.A100",
+      "$primitive": "cyan.A100"
     },
     "cyan.A200": {
       "$value": "#18ffff",
       "$type": "color",
-      "$description": "color cyan.A200"
+      "$description": "color cyan.A200",
+      "$primitive": "cyan.A200"
     },
     "cyan.A400": {
       "$value": "#00e5ff",
       "$type": "color",
-      "$description": "color cyan.A400"
+      "$description": "color cyan.A400",
+      "$primitive": "cyan.A400"
     },
     "cyan.A700": {
       "$value": "#00b8d4",
       "$type": "color",
-      "$description": "color cyan.A700"
+      "$description": "color cyan.A700",
+      "$primitive": "cyan.A700"
     },
     "lime.50": {
       "$value": "#f9fbe7",
       "$type": "color",
-      "$description": "color lime.50"
+      "$description": "color lime.50",
+      "$primitive": "lime.50"
     },
     "lime.100": {
       "$value": "#f0f4c3",
       "$type": "color",
-      "$description": "color lime.100"
+      "$description": "color lime.100",
+      "$primitive": "lime.100"
     },
     "lime.200": {
       "$value": "#e6ee9c",
       "$type": "color",
-      "$description": "color lime.200"
+      "$description": "color lime.200",
+      "$primitive": "lime.200"
     },
     "lime.300": {
       "$value": "#dce775",
       "$type": "color",
-      "$description": "color lime.300"
+      "$description": "color lime.300",
+      "$primitive": "lime.300"
     },
     "lime.400": {
       "$value": "#d4e157",
       "$type": "color",
-      "$description": "color lime.400"
+      "$description": "color lime.400",
+      "$primitive": "lime.400"
     },
     "lime.500": {
       "$value": "#cddc39",
       "$type": "color",
-      "$description": "color lime.500"
+      "$description": "color lime.500",
+      "$primitive": "lime.500"
     },
     "lime.600": {
       "$value": "#c0ca33",
       "$type": "color",
-      "$description": "color lime.600"
+      "$description": "color lime.600",
+      "$primitive": "lime.600"
     },
     "lime.700": {
       "$value": "#afb42b",
       "$type": "color",
-      "$description": "color lime.700"
+      "$description": "color lime.700",
+      "$primitive": "lime.700"
     },
     "lime.800": {
       "$value": "#9e9d24",
       "$type": "color",
-      "$description": "color lime.800"
+      "$description": "color lime.800",
+      "$primitive": "lime.800"
     },
     "lime.900": {
       "$value": "#827717",
       "$type": "color",
-      "$description": "color lime.900"
+      "$description": "color lime.900",
+      "$primitive": "lime.900"
     },
     "lime.A100": {
       "$value": "#f4ff81",
       "$type": "color",
-      "$description": "color lime.A100"
+      "$description": "color lime.A100",
+      "$primitive": "lime.A100"
     },
     "lime.A200": {
       "$value": "#eeff41",
       "$type": "color",
-      "$description": "color lime.A200"
+      "$description": "color lime.A200",
+      "$primitive": "lime.A200"
     },
     "lime.A400": {
       "$value": "#c6ff00",
       "$type": "color",
-      "$description": "color lime.A400"
+      "$description": "color lime.A400",
+      "$primitive": "lime.A400"
     },
     "lime.A700": {
       "$value": "#aeea00",
       "$type": "color",
-      "$description": "color lime.A700"
+      "$description": "color lime.A700",
+      "$primitive": "lime.A700"
     },
     "brown.50": {
       "$value": "#efebe9",
       "$type": "color",
-      "$description": "color brown.50"
+      "$description": "color brown.50",
+      "$primitive": "brown.50"
     },
     "brown.100": {
       "$value": "#d7ccc8",
       "$type": "color",
-      "$description": "color brown.100"
+      "$description": "color brown.100",
+      "$primitive": "brown.100"
     },
     "brown.200": {
       "$value": "#bcaaa4",
       "$type": "color",
-      "$description": "color brown.200"
+      "$description": "color brown.200",
+      "$primitive": "brown.200"
     },
     "brown.300": {
       "$value": "#a1887f",
       "$type": "color",
-      "$description": "color brown.300"
+      "$description": "color brown.300",
+      "$primitive": "brown.300"
     },
     "brown.400": {
       "$value": "#8d6e63",
       "$type": "color",
-      "$description": "color brown.400"
+      "$description": "color brown.400",
+      "$primitive": "brown.400"
     },
     "brown.500": {
       "$value": "#795548",
       "$type": "color",
-      "$description": "color brown.500"
+      "$description": "color brown.500",
+      "$primitive": "brown.500"
     },
     "brown.600": {
       "$value": "#6d4c41",
       "$type": "color",
-      "$description": "color brown.600"
+      "$description": "color brown.600",
+      "$primitive": "brown.600"
     },
     "brown.700": {
       "$value": "#5d4037",
       "$type": "color",
-      "$description": "color brown.700"
+      "$description": "color brown.700",
+      "$primitive": "brown.700"
     },
     "brown.800": {
       "$value": "#4e342e",
       "$type": "color",
-      "$description": "color brown.800"
+      "$description": "color brown.800",
+      "$primitive": "brown.800"
     },
     "brown.900": {
       "$value": "#3e2723",
       "$type": "color",
-      "$description": "color brown.900"
+      "$description": "color brown.900",
+      "$primitive": "brown.900"
     },
     "brown.A100": {
       "$value": "#d7ccc8",
       "$type": "color",
-      "$description": "color brown.A100"
+      "$description": "color brown.A100",
+      "$primitive": "brown.A100"
     },
     "brown.A200": {
       "$value": "#bcaaa4",
       "$type": "color",
-      "$description": "color brown.A200"
+      "$description": "color brown.A200",
+      "$primitive": "brown.A200"
     },
     "brown.A400": {
       "$value": "#8d6e63",
       "$type": "color",
-      "$description": "color brown.A400"
+      "$description": "color brown.A400",
+      "$primitive": "brown.A400"
     },
     "brown.A700": {
       "$value": "#5d4037",
       "$type": "color",
-      "$description": "color brown.A700"
+      "$description": "color brown.A700",
+      "$primitive": "brown.A700"
     },
     "grey.50": {
       "$value": "#fafafa",
       "$type": "color",
-      "$description": "color grey.50"
+      "$description": "color grey.50",
+      "$primitive": "grey.50"
     },
     "grey.100": {
       "$value": "#f5f5f5",
       "$type": "color",
-      "$description": "color grey.100"
+      "$description": "color grey.100",
+      "$primitive": "grey.100"
     },
     "grey.200": {
       "$value": "#eeeeee",
       "$type": "color",
-      "$description": "color grey.200"
+      "$description": "color grey.200",
+      "$primitive": "grey.200"
     },
     "grey.300": {
       "$value": "#e0e0e0",
       "$type": "color",
-      "$description": "color grey.300"
+      "$description": "color grey.300",
+      "$primitive": "grey.300"
     },
     "grey.400": {
       "$value": "#bdbdbd",
       "$type": "color",
-      "$description": "color grey.400"
+      "$description": "color grey.400",
+      "$primitive": "grey.400"
     },
     "grey.500": {
       "$value": "#9e9e9e",
       "$type": "color",
-      "$description": "color grey.500"
+      "$description": "color grey.500",
+      "$primitive": "grey.500"
     },
     "grey.600": {
       "$value": "#757575",
       "$type": "color",
-      "$description": "color grey.600"
+      "$description": "color grey.600",
+      "$primitive": "grey.600"
     },
     "grey.700": {
       "$value": "#616161",
       "$type": "color",
-      "$description": "color grey.700"
+      "$description": "color grey.700",
+      "$primitive": "grey.700"
     },
     "grey.800": {
       "$value": "#424242",
       "$type": "color",
-      "$description": "color grey.800"
+      "$description": "color grey.800",
+      "$primitive": "grey.800"
     },
     "grey.900": {
       "$value": "#212121",
       "$type": "color",
-      "$description": "color grey.900"
+      "$description": "color grey.900",
+      "$primitive": "grey.900"
     },
     "grey.A100": {
       "$value": "#f5f5f5",
       "$type": "color",
-      "$description": "color grey.A100"
+      "$description": "color grey.A100",
+      "$primitive": "grey.A100"
     },
     "grey.A200": {
       "$value": "#eeeeee",
       "$type": "color",
-      "$description": "color grey.A200"
+      "$description": "color grey.A200",
+      "$primitive": "grey.A200"
     },
     "grey.A400": {
       "$value": "#bdbdbd",
       "$type": "color",
-      "$description": "color grey.A400"
+      "$description": "color grey.A400",
+      "$primitive": "grey.A400"
     },
     "grey.A700": {
       "$value": "#616161",
       "$type": "color",
-      "$description": "color grey.A700"
+      "$description": "color grey.A700",
+      "$primitive": "grey.A700"
     },
-    "Other": {
+    "Breakpoints": {
       "Xs": {
         "$value": 0,
-        "$type": "other",
-        "$description": "Other Xs"
+        "$type": "breakpoints",
+        "$description": "Breakpoints Xs",
+        "$primitive": "Xs"
       },
       "Sm": {
         "$value": 600,
-        "$type": "other",
-        "$description": "Other Sm"
+        "$type": "breakpoints",
+        "$description": "Breakpoints Sm",
+        "$primitive": "Sm"
       },
       "Md": {
         "$value": 900,
-        "$type": "other",
-        "$description": "Other Md"
+        "$type": "breakpoints",
+        "$description": "Breakpoints Md",
+        "$primitive": "Md"
       },
       "Lg": {
         "$value": 1200,
-        "$type": "other",
-        "$description": "Other Lg"
+        "$type": "breakpoints",
+        "$description": "Breakpoints Lg",
+        "$primitive": "Lg"
       },
       "Xl": {
         "$value": 1536,
-        "$type": "other",
-        "$description": "Other Xl"
+        "$type": "breakpoints",
+        "$description": "Breakpoints Xl",
+        "$primitive": "Xl"
       },
       "Unit": {
         "$value": "px",
-        "$type": "other",
-        "$description": "Other Unit"
-      },
-      "Direction": {
-        "$value": "ltr",
-        "$type": "other",
-        "$description": "Other Direction"
-      },
+        "$type": "breakpoints",
+        "$description": "Breakpoints Unit",
+        "$primitive": "Unit"
+      }
+    },
+    "BorderRadius": {
       "BorderRadius": {
         "$value": 4,
-        "$type": "other",
-        "$description": "Other BorderRadius"
-      },
-      "MinHeight": {
-        "$value": 64,
-        "$type": "other",
-        "$description": "Other MinHeight"
-      },
-      "EaseInOut": {
-        "$value": "cubic-bezier(0.4, 0, 0.2, 1)",
-        "$type": "other",
-        "$description": "Other EaseInOut"
-      },
-      "EaseOut": {
-        "$value": "cubic-bezier(0.0, 0, 0.2, 1)",
-        "$type": "other",
-        "$description": "Other EaseOut"
-      },
-      "EaseIn": {
-        "$value": "cubic-bezier(0.4, 0, 1, 1)",
-        "$type": "other",
-        "$description": "Other EaseIn"
-      },
-      "Sharp": {
-        "$value": "cubic-bezier(0.4, 0, 0.6, 1)",
-        "$type": "other",
-        "$description": "Other Sharp"
-      },
-      "Shortest": {
-        "$value": 150,
-        "$type": "other",
-        "$description": "Other Shortest"
-      },
-      "Shorter": {
-        "$value": 200,
-        "$type": "other",
-        "$description": "Other Shorter"
-      },
-      "Short": {
-        "$value": 250,
-        "$type": "other",
-        "$description": "Other Short"
-      },
-      "Standard": {
-        "$value": 300,
-        "$type": "other",
-        "$description": "Other Standard"
-      },
-      "Complex": {
-        "$value": 375,
-        "$type": "other",
-        "$description": "Other Complex"
-      },
-      "EnteringScreen": {
-        "$value": 225,
-        "$type": "other",
-        "$description": "Other EnteringScreen"
-      },
-      "LeavingScreen": {
-        "$value": 195,
-        "$type": "other",
-        "$description": "Other LeavingScreen"
-      },
+        "$type": "borderRadius",
+        "$description": "BorderRadius BorderRadius",
+        "$primitive": "BorderRadius"
+      }
+    },
+    "ZIndex": {
       "MobileStepper": {
         "$value": 1000,
-        "$type": "other",
-        "$description": "Other MobileStepper"
+        "$type": "zIndex",
+        "$description": "ZIndex MobileStepper",
+        "$primitive": "MobileStepper"
       },
       "Fab": {
         "$value": 1050,
-        "$type": "other",
-        "$description": "Other Fab"
+        "$type": "zIndex",
+        "$description": "ZIndex Fab",
+        "$primitive": "Fab"
       },
       "SpeedDial": {
         "$value": 1050,
-        "$type": "other",
-        "$description": "Other SpeedDial"
+        "$type": "zIndex",
+        "$description": "ZIndex SpeedDial",
+        "$primitive": "SpeedDial"
       },
       "AppBar": {
         "$value": 1100,
-        "$type": "other",
-        "$description": "Other AppBar"
+        "$type": "zIndex",
+        "$description": "ZIndex AppBar",
+        "$primitive": "AppBar"
       },
       "Drawer": {
         "$value": 1200,
-        "$type": "other",
-        "$description": "Other Drawer"
+        "$type": "zIndex",
+        "$description": "ZIndex Drawer",
+        "$primitive": "Drawer"
       },
       "Modal": {
         "$value": 1300,
-        "$type": "other",
-        "$description": "Other Modal"
+        "$type": "zIndex",
+        "$description": "ZIndex Modal",
+        "$primitive": "Modal"
       },
       "Snackbar": {
         "$value": 1400,
-        "$type": "other",
-        "$description": "Other Snackbar"
+        "$type": "zIndex",
+        "$description": "ZIndex Snackbar",
+        "$primitive": "Snackbar"
       },
       "Tooltip": {
         "$value": 1500,
-        "$type": "other",
-        "$description": "Other Tooltip"
+        "$type": "zIndex",
+        "$description": "ZIndex Tooltip",
+        "$primitive": "Tooltip"
       }
     }
   }
