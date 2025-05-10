@@ -1264,18 +1264,6 @@
   },
   "MUI": {
     "palette": {
-      "common": {
-        "black": {
-          "$value": "#000",
-          "$type": "color",
-          "$description": "MUI palette.common.black"
-        },
-        "white": {
-          "$value": "#fff",
-          "$type": "color",
-          "$description": "MUI palette.common.white"
-        }
-      },
       "primary": {
         "main": {
           "$value": "#1976d2",
@@ -1344,17 +1332,17 @@
       },
       "warning": {
         "main": {
-          "$value": "#ed6c02",
+          "$value": "#f57c00",
           "$type": "color",
           "$description": "MUI palette.warning.main"
         },
         "light": {
-          "$value": "#ff9800",
+          "$value": "#ffa726",
           "$type": "color",
           "$description": "MUI palette.warning.light"
         },
         "dark": {
-          "$value": "#e65100",
+          "$value": "#ef6c00",
           "$type": "color",
           "$description": "MUI palette.warning.dark"
         },
@@ -1371,12 +1359,12 @@
           "$description": "MUI palette.info.main"
         },
         "light": {
-          "$value": "#03a9f4",
+          "$value": "#29b6f6",
           "$type": "color",
           "$description": "MUI palette.info.light"
         },
         "dark": {
-          "$value": "#01579b",
+          "$value": "#0277bd",
           "$type": "color",
           "$description": "MUI palette.info.dark"
         },
@@ -1388,17 +1376,17 @@
       },
       "success": {
         "main": {
-          "$value": "#2e7d32",
+          "$value": "#388e3c",
           "$type": "color",
           "$description": "MUI palette.success.main"
         },
         "light": {
-          "$value": "#4caf50",
+          "$value": "#66bb6a",
           "$type": "color",
           "$description": "MUI palette.success.light"
         },
         "dark": {
-          "$value": "#1b5e20",
+          "$value": "#2e7d32",
           "$type": "color",
           "$description": "MUI palette.success.dark"
         },
@@ -1458,26 +1446,6 @@
           "$value": "#212121",
           "$type": "color",
           "$description": "MUI palette.grey.900"
-        },
-        "A100": {
-          "$value": "#f5f5f5",
-          "$type": "color",
-          "$description": "MUI palette.grey.A100"
-        },
-        "A200": {
-          "$value": "#eeeeee",
-          "$type": "color",
-          "$description": "MUI palette.grey.A200"
-        },
-        "A400": {
-          "$value": "#bdbdbd",
-          "$type": "color",
-          "$description": "MUI palette.grey.A400"
-        },
-        "A700": {
-          "$value": "#616161",
-          "$type": "color",
-          "$description": "MUI palette.grey.A700"
         }
       },
       "text": {
