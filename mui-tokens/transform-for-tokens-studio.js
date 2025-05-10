@@ -243,12 +243,12 @@ function cleanupMuiTokens(tokens) {
 }
 
 function flattenColorPrimitives(muiTokens) {
-  // Flattens all color tokens under base.color
+  // Flattens only true color primitives (e.g., blue.50, red.900, etc., and common.black/white)
   const primitives = {};
   const colorMap = muiTokens.base.color || {};
   Object.entries(colorMap).forEach(([key, value]) => {
-    // Only include keys that match the color primitive pattern (e.g., blue.50, red.900, etc.)
-    if (/^[a-zA-Z]+\.(\d+|A\d+)$/.test(key) || key.startsWith('common.') || key.startsWith('palette.')) {
+    // Only include keys that match the color primitive pattern (e.g., blue.50, red.900, etc.) or common.black/white
+    if (/^[a-zA-Z]+\.(\d+|A\d+)$/.test(key) || key === 'common.black' || key === 'common.white') {
       primitives[key] = {
         "$type": "color",
         "$value": value
