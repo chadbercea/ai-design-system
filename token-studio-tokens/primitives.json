@@ -1262,112 +1262,19 @@
       "$description": "color grey.A700"
     },
     "Breakpoints": {
-      "BreakpointsValuesXs": {
-        "$value": 0,
-        "$type": "breakpoints",
-        "$description": "Breakpoints BreakpointsValuesXs"
-      },
-      "BreakpointsValuesSm": {
-        "$value": 600,
-        "$type": "breakpoints",
-        "$description": "Breakpoints BreakpointsValuesSm"
-      },
-      "BreakpointsValuesMd": {
-        "$value": 900,
-        "$type": "breakpoints",
-        "$description": "Breakpoints BreakpointsValuesMd"
-      },
-      "BreakpointsValuesLg": {
-        "$value": 1200,
-        "$type": "breakpoints",
-        "$description": "Breakpoints BreakpointsValuesLg"
-      },
-      "BreakpointsValuesXl": {
-        "$value": 1536,
-        "$type": "breakpoints",
-        "$description": "Breakpoints BreakpointsValuesXl"
-      },
-      "BreakpointsUnit": {
-        "$value": "px",
-        "$type": "breakpoints",
-        "$description": "Breakpoints BreakpointsUnit"
-      }
-    },
-    "Opacity": {
-      "PaletteActionHoverOpacity": {
-        "$value": 0.04,
-        "$type": "opacity",
-        "$description": "Opacity PaletteActionHoverOpacity"
-      },
-      "PaletteActionSelectedOpacity": {
-        "$value": 0.08,
-        "$type": "opacity",
-        "$description": "Opacity PaletteActionSelectedOpacity"
-      },
-      "PaletteActionDisabledOpacity": {
-        "$value": 0.38,
-        "$type": "opacity",
-        "$description": "Opacity PaletteActionDisabledOpacity"
-      },
-      "PaletteActionFocusOpacity": {
-        "$value": 0.12,
-        "$type": "opacity",
-        "$description": "Opacity PaletteActionFocusOpacity"
-      },
-      "PaletteActionActivatedOpacity": {
-        "$value": 0.12,
-        "$type": "opacity",
-        "$description": "Opacity PaletteActionActivatedOpacity"
-      }
+      "$value": "px",
+      "$type": "breakpoints",
+      "$description": "Breakpoints"
     },
     "BorderRadius": {
-      "ShapeBorderRadius": {
-        "$value": 4,
-        "$type": "borderRadius",
-        "$description": "BorderRadius ShapeBorderRadius"
-      }
+      "$value": 4,
+      "$type": "borderRadius",
+      "$description": "BorderRadius"
     },
     "ZIndex": {
-      "ZIndexMobileStepper": {
-        "$value": 1000,
-        "$type": "zIndex",
-        "$description": "ZIndex ZIndexMobileStepper"
-      },
-      "ZIndexFab": {
-        "$value": 1050,
-        "$type": "zIndex",
-        "$description": "ZIndex ZIndexFab"
-      },
-      "ZIndexSpeedDial": {
-        "$value": 1050,
-        "$type": "zIndex",
-        "$description": "ZIndex ZIndexSpeedDial"
-      },
-      "ZIndexAppBar": {
-        "$value": 1100,
-        "$type": "zIndex",
-        "$description": "ZIndex ZIndexAppBar"
-      },
-      "ZIndexDrawer": {
-        "$value": 1200,
-        "$type": "zIndex",
-        "$description": "ZIndex ZIndexDrawer"
-      },
-      "ZIndexModal": {
-        "$value": 1300,
-        "$type": "zIndex",
-        "$description": "ZIndex ZIndexModal"
-      },
-      "ZIndexSnackbar": {
-        "$value": 1400,
-        "$type": "zIndex",
-        "$description": "ZIndex ZIndexSnackbar"
-      },
-      "ZIndexTooltip": {
-        "$value": 1500,
-        "$type": "zIndex",
-        "$description": "ZIndex ZIndexTooltip"
-      }
+      "$value": 1500,
+      "$type": "zIndex",
+      "$description": "ZIndex"
     }
   }
 }
