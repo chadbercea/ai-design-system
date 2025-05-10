@@ -73,16 +73,12 @@ function main() {
     }
   }
 
-  const output = {
-    "$schema": "https://design-tokens.github.io/design-tokens/schema.json",
-    Primitives: primitives
-  };
-
+  // Output only the primitives object, no $schema
   fs.writeFileSync(
     path.join(__dirname, 'primitives.json'),
-    JSON.stringify(output, null, 2)
+    JSON.stringify(primitives, null, 2)
   );
-  console.log('Generated primitives.json with all primitive tokens (no category wrappers).');
+  console.log('Generated primitives.json with all primitive tokens (no $schema, no category wrappers).');
 }
 
 main();

@@ -325,3 +325,5 @@ Grouped by category in json does not mean wrap tokens. Evern. It never means thi
 7. **Validate JSON**: Ensure your JSON is valid before using it with Tokens Studio
 
 Following these guidelines ensures your design tokens are properly structured for use with Cursor.ai and Tokens Studio for Figma.
+
+https://design-tokens.github.io/design-tokens/schema.json

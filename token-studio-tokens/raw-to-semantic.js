@@ -80,16 +80,12 @@ function main() {
     }
   }
 
-  const output = {
-    "$schema": "https://design-tokens.github.io/design-tokens/schema.json",
-    MUI: mui
-  };
-
+  // Output only the MUI object, no $schema
   fs.writeFileSync(
     path.join(__dirname, 'mui-semantic.json'),
-    JSON.stringify(output, null, 2)
+    JSON.stringify(mui, null, 2)
   );
-  console.log('Generated mui-semantic.json with all semantic tokens.');
+  console.log('Generated mui-semantic.json with all semantic tokens (no $schema).');
 }
 
 main();
