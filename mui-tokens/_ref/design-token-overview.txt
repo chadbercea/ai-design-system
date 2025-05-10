@@ -298,6 +298,9 @@ function convertToTokensStudioFormat(tokens) {
 }
 ```
 
+# Note
+Grouped by category in json does not mean wrap tokens. Evern. It never means this.
+
 ## Best Practices
 
 1. **Consistent Naming**: Use consistent naming patterns across all categories
