@@ -126,8 +126,8 @@ function main() {
       const description = `${canonicalCategory} ${tokenName}`;
       // Category wrapping rule
       if (canonicalCategory.toLowerCase() === type.toLowerCase()) {
-        // Flat key
-        primitives[tokenName] = {
+        // Flat key, always use the category name as the key
+        primitives[canonicalCategory] = {
           $value: value,
           $type: type,
           $description: description

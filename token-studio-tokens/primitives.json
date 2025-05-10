@@ -1260,32 +1260,7 @@
       "$type": "color",
       "$description": "color grey.A700"
     },
-    "Xs": {
-      "$value": 0,
-      "$type": "breakpoints",
-      "$description": "Breakpoints Xs"
-    },
-    "Sm": {
-      "$value": 600,
-      "$type": "breakpoints",
-      "$description": "Breakpoints Sm"
-    },
-    "Md": {
-      "$value": 900,
-      "$type": "breakpoints",
-      "$description": "Breakpoints Md"
-    },
-    "Lg": {
-      "$value": 1200,
-      "$type": "breakpoints",
-      "$description": "Breakpoints Lg"
-    },
-    "Xl": {
-      "$value": 1536,
-      "$type": "breakpoints",
-      "$description": "Breakpoints Xl"
-    },
-    "Unit": {
+    "Breakpoints": {
       "$value": "px",
       "$type": "breakpoints",
       "$description": "Breakpoints Unit"
@@ -1364,42 +1339,7 @@
         "$description": "Number LeavingScreen"
       }
     },
-    "MobileStepper": {
-      "$value": 1000,
-      "$type": "zIndex",
-      "$description": "ZIndex MobileStepper"
-    },
-    "Fab": {
-      "$value": 1050,
-      "$type": "zIndex",
-      "$description": "ZIndex Fab"
-    },
-    "SpeedDial": {
-      "$value": 1050,
-      "$type": "zIndex",
-      "$description": "ZIndex SpeedDial"
-    },
-    "AppBar": {
-      "$value": 1100,
-      "$type": "zIndex",
-      "$description": "ZIndex AppBar"
-    },
-    "Drawer": {
-      "$value": 1200,
-      "$type": "zIndex",
-      "$description": "ZIndex Drawer"
-    },
-    "Modal": {
-      "$value": 1300,
-      "$type": "zIndex",
-      "$description": "ZIndex Modal"
-    },
-    "Snackbar": {
-      "$value": 1400,
-      "$type": "zIndex",
-      "$description": "ZIndex Snackbar"
-    },
-    "Tooltip": {
+    "ZIndex": {
       "$value": 1500,
       "$type": "zIndex",
       "$description": "ZIndex Tooltip"
