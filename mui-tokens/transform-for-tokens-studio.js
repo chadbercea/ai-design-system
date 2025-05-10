@@ -258,6 +258,55 @@ function flattenColorPrimitives(muiTokens) {
   return primitives;
 }
 
+// Semantic mapping for typography values
+const fontSizeMap = {
+  '6rem': '6xl',
+  '3.75rem': '5xl',
+  '3rem': '4xl',
+  '2.125rem': '3xl',
+  '1.5rem': '2xl',
+  '1.25rem': 'xl',
+  '1rem': 'base',
+  '0.875rem': 'sm',
+  '0.75rem': 'xs',
+  'inherit': 'inherit'
+};
+const fontWeightMap = {
+  '300': 'light',
+  '400': 'regular',
+  '500': 'medium',
+  '700': 'bold',
+  'inherit': 'inherit'
+};
+const lineHeightMap = {
+  '1.167': 'tight',
+  '1.2': 'snug',
+  '1.5': 'normal',
+  '1.75': 'relaxed',
+  '2.66': 'loose',
+  '1.235': 'xl',
+  '1.334': 'lg',
+  '1.6': 'md',
+  '1.43': 'sm',
+  '1.57': 'xs',
+  '1.66': 'xxs',
+  'inherit': 'inherit'
+};
+const letterSpacingMap = {
+  '-0.01562em': 'tighter',
+  '-0.00833em': 'tight',
+  '0em': 'normal',
+  '0.00735em': 'wide',
+  '0.00938em': 'wider',
+  '0.02857em': 'widest',
+  '0.08333em': 'ultra',
+  '0.00714em': 'xl',
+  '0.01071em': 'lg',
+  '0.03333em': 'md',
+  '0.0075em': 'sm',
+  'inherit': 'inherit'
+};
+
 function extractTypographyPrimitives(muiTokens) {
   const primitives = {};
   const typographyMap = muiTokens.base.typography?.typography || {};
@@ -274,16 +323,8 @@ function extractTypographyPrimitives(muiTokens) {
     // Font Size
     if (value.fontSize) {
       const fontSizeStr = String(value.fontSize);
-      const size = fontSizeStr.replace('rem', '');
-      const name = size === '6' ? '6xl' :
-                   size === '3.75' ? '5xl' :
-                   size === '3' ? '4xl' :
-                   size === '2.125' ? '3xl' :
-                   size === '1.5' ? '2xl' :
-                   size === '1.25' ? 'xl' :
-                   size === '1' ? 'base' :
-                   size === '0.875' ? 'sm' :
-                   size === '0.75' ? 'xs' : size;
+      const name = fontSizeMap[fontSizeStr];
+      if (!name) throw new Error(`Unmapped fontSize value: ${fontSizeStr}`);
       primitives[`fontSize.${name}`] = {
         "$type": "fontSize",
         "$value": fontSizeStr
@@ -292,9 +333,8 @@ function extractTypographyPrimitives(muiTokens) {
     // Font Weight
     if (value.fontWeight) {
       const weightStr = String(value.fontWeight);
-      const name = weightStr === '300' ? 'light' :
-                   weightStr === '400' ? 'regular' :
-                   weightStr === '500' ? 'medium' : weightStr;
+      const name = fontWeightMap[weightStr];
+      if (!name) throw new Error(`Unmapped fontWeight value: ${weightStr}`);
       primitives[`fontWeight.${name}`] = {
         "$type": "fontWeight",
         "$value": weightStr
@@ -303,11 +343,8 @@ function extractTypographyPrimitives(muiTokens) {
     // Line Height
     if (value.lineHeight) {
       const lineHeightStr = String(value.lineHeight);
-      const name = lineHeightStr === '1.167' ? 'tight' :
-                   lineHeightStr === '1.2' ? 'snug' :
-                   lineHeightStr === '1.5' ? 'normal' :
-                   lineHeightStr === '1.75' ? 'relaxed' :
-                   lineHeightStr === '2.66' ? 'loose' : lineHeightStr;
+      const name = lineHeightMap[lineHeightStr];
+      if (!name) throw new Error(`Unmapped lineHeight value: ${lineHeightStr}`);
       primitives[`lineHeight.${name}`] = {
         "$type": "lineHeight",
         "$value": lineHeightStr
@@ -316,12 +353,8 @@ function extractTypographyPrimitives(muiTokens) {
     // Letter Spacing
     if (value.letterSpacing) {
       const spacingStr = String(value.letterSpacing);
-      const name = spacingStr === '-0.01562em' ? 'tighter' :
-                   spacingStr === '-0.00833em' ? 'tight' :
-                   spacingStr === '0em' ? 'normal' :
-                   spacingStr === '0.00938em' ? 'wide' :
-                   spacingStr === '0.02857em' ? 'wider' :
-                   spacingStr === '0.08333em' ? 'widest' : spacingStr;
+      const name = letterSpacingMap[spacingStr];
+      if (!name) throw new Error(`Unmapped letterSpacing value: ${spacingStr}`);
       primitives[`letterSpacing.${name}`] = {
         "$type": "letterSpacing",
         "$value": spacingStr

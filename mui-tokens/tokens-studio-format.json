@@ -1064,11 +1064,11 @@
       "$type": "fontSize",
       "$value": "2.125rem"
     },
-    "lineHeight.1.235": {
+    "lineHeight.xl": {
       "$type": "lineHeight",
       "$value": "1.235"
     },
-    "letterSpacing.0.00735em": {
+    "letterSpacing.wide": {
       "$type": "letterSpacing",
       "$value": "0.00735em"
     },
@@ -1076,7 +1076,7 @@
       "$type": "fontSize",
       "$value": "1.5rem"
     },
-    "lineHeight.1.334": {
+    "lineHeight.lg": {
       "$type": "lineHeight",
       "$value": "1.334"
     },
@@ -1088,11 +1088,11 @@
       "$type": "fontWeight",
       "$value": "500"
     },
-    "lineHeight.1.6": {
+    "lineHeight.md": {
       "$type": "lineHeight",
       "$value": "1.6"
     },
-    "letterSpacing.0.0075em": {
+    "letterSpacing.sm": {
       "$type": "letterSpacing",
       "$value": "0.0075em"
     },
@@ -1104,7 +1104,7 @@
       "$type": "lineHeight",
       "$value": "1.75"
     },
-    "letterSpacing.wide": {
+    "letterSpacing.wider": {
       "$type": "letterSpacing",
       "$value": "0.00938em"
     },
@@ -1112,11 +1112,11 @@
       "$type": "fontSize",
       "$value": "0.875rem"
     },
-    "lineHeight.1.57": {
+    "lineHeight.xs": {
       "$type": "lineHeight",
       "$value": "1.57"
     },
-    "letterSpacing.0.00714em": {
+    "letterSpacing.xl": {
       "$type": "letterSpacing",
       "$value": "0.00714em"
     },
@@ -1124,15 +1124,15 @@
       "$type": "lineHeight",
       "$value": "1.5"
     },
-    "lineHeight.1.43": {
+    "lineHeight.sm": {
       "$type": "lineHeight",
       "$value": "1.43"
     },
-    "letterSpacing.0.01071em": {
+    "letterSpacing.lg": {
       "$type": "letterSpacing",
       "$value": "0.01071em"
     },
-    "letterSpacing.wider": {
+    "letterSpacing.widest": {
       "$type": "letterSpacing",
       "$value": "0.02857em"
     },
@@ -1140,11 +1140,11 @@
       "$type": "fontSize",
       "$value": "0.75rem"
     },
-    "lineHeight.1.66": {
+    "lineHeight.xxs": {
       "$type": "lineHeight",
       "$value": "1.66"
     },
-    "letterSpacing.0.03333em": {
+    "letterSpacing.md": {
       "$type": "letterSpacing",
       "$value": "0.03333em"
     },
@@ -1152,7 +1152,7 @@
       "$type": "lineHeight",
       "$value": "2.66"
     },
-    "letterSpacing.widest": {
+    "letterSpacing.ultra": {
       "$type": "letterSpacing",
       "$value": "0.08333em"
     },
