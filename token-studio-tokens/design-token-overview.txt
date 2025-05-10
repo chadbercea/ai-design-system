@@ -83,6 +83,19 @@ Each primitive token must include:
 }
 ```
 
+## Color Token Naming (Special Rule)
+
+- Color primitives must use lowercase and dot notation, e.g., "blue.500", "red.A100".
+- Do not use PascalCase or wrap in a "Color" object.
+- Example:
+
+```json
+"Primitives": {
+  "blue.500": { "$value": "#2196f3", "$type": "color", "$description": "blue 500" },
+  "red.A100": { "$value": "#ff8a80", "$type": "color", "$description": "red A100" }
+}
+```
+
 ## Tokens Studio Type Taxonomy
 
 Use these specific types for compatibility with Tokens Studio:
