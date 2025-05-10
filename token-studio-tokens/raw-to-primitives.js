@@ -1,12 +1,41 @@
 const fs = require('fs');
 const path = require('path');
 
-// Canonical categories from the overview
+// Canonical categories from the overview (PascalCase)
 const canonicalCategories = [
   'Color', 'Sizing', 'Spacing', 'BorderRadius', 'BorderWidth', 'Border', 'Opacity', 'BoxShadow', 'Typography',
   'FontFamily', 'FontWeight', 'LineHeight', 'FontSize', 'LetterSpacing', 'ParagraphSpacing', 'TextCase',
   'TextDecoration', 'Composition', 'Assets', 'Dimension', 'Breakpoints', 'Boolean', 'Text', 'Number', 'ZIndex'
 ];
+
+// Canonical type mapping for Tokens Studio
+const canonicalTypeMap = {
+  FontSize: 'fontSizes',
+  FontWeight: 'fontWeights',
+  FontFamily: 'fontFamilies',
+  LineHeight: 'lineHeights',
+  LetterSpacing: 'letterSpacing',
+  Color: 'color',
+  BorderRadius: 'borderRadius',
+  BorderWidth: 'borderWidth',
+  Spacing: 'spacing',
+  Sizing: 'sizing',
+  Opacity: 'opacity',
+  Typography: 'typography',
+  BoxShadow: 'boxShadow',
+  ZIndex: 'zIndex',
+  Breakpoints: 'breakpoints',
+  Boolean: 'boolean',
+  Text: 'text',
+  Number: 'number',
+  ParagraphSpacing: 'paragraphSpacing',
+  TextCase: 'textCase',
+  TextDecoration: 'textDecoration',
+  Composition: 'composition',
+  Assets: 'assets',
+  Dimension: 'dimension',
+  Border: 'border',
+};
 
 // Utility: PascalCase
 function toPascalCase(str) {
@@ -35,6 +64,10 @@ function findCanonicalCategory(segments) {
   return null;
 }
 
+function getTypeForCategory(category) {
+  return canonicalTypeMap[category] || category.toLowerCase();
+}
+
 function main() {
   const raw = JSON.parse(fs.readFileSync(path.join(__dirname, '../mui-tokens/mui-tokens-raw.json'), 'utf8'));
   const primitives = {};
@@ -46,15 +79,19 @@ function main() {
       if (semanticPrefixes.some(prefix => tokenKey.startsWith(prefix))) continue;
       const value = baseObj[tokenKey];
       if (typeof value !== 'string' && typeof value !== 'number') continue;
-      // Color tokens: use baseKey and flat key logic
+      // Color tokens: use flat key logic, dot.case, no wrapping
       if (baseKey.toLowerCase() === 'color') {
-        const match = tokenKey.match(/^([a-zA-Z]+)[.\-]?([\w]+)$/);
-        let name = match ? `${match[1].toLowerCase()}.${match[2]}` : tokenKey.toLowerCase();
+        // Only allow dot.case color keys
+        let name = tokenKey;
+        // Convert camelCase or PascalCase to dot.case
+        if (!name.includes('.')) {
+          name = name.replace(/([a-z])([A-Z])/g, '$1.$2').toLowerCase();
+        }
+        name = name.replace(/_/g, '.');
         primitives[name] = {
           $value: value,
           $type: 'color',
-          $description: `color ${name}`,
-          $primitive: name
+          $description: `color ${name}`
         };
         continue;
       }
@@ -62,19 +99,48 @@ function main() {
       const segments = tokenKey.split(/[.\-_ ]/);
       const canonicalCategory = findCanonicalCategory(segments);
       if (!canonicalCategory) {
-        skipped.push({ baseKey, tokenKey, value });
+        // Fallback: if value is number or string, use Number/Text category
+        if (typeof value === 'number') {
+          if (!primitives['Number']) primitives['Number'] = {};
+          const tokenName = toPascalCase(segments[segments.length - 1]);
+          primitives['Number'][tokenName] = {
+            $value: value,
+            $type: 'number',
+            $description: `Number ${tokenName}`
+          };
+        } else if (typeof value === 'string') {
+          if (!primitives['Text']) primitives['Text'] = {};
+          const tokenName = toPascalCase(segments[segments.length - 1]);
+          primitives['Text'][tokenName] = {
+            $value: value,
+            $type: 'text',
+            $description: `Text ${tokenName}`
+          };
+        } else {
+          skipped.push({ baseKey, tokenKey, value });
+        }
         continue;
       }
       const tokenName = toPascalCase(segments[segments.length - 1]);
-      const type = canonicalCategory.charAt(0).toLowerCase() + canonicalCategory.slice(1);
+      const type = getTypeForCategory(canonicalCategory);
       const description = `${canonicalCategory} ${tokenName}`;
-      if (!primitives[canonicalCategory]) primitives[canonicalCategory] = {};
-      primitives[canonicalCategory][tokenName] = {
-        $value: value,
-        $type: type,
-        $description: description,
-        $primitive: tokenName
-      };
+      // Category wrapping rule
+      if (canonicalCategory.toLowerCase() === type.toLowerCase()) {
+        // Flat key
+        primitives[tokenName] = {
+          $value: value,
+          $type: type,
+          $description: description
+        };
+      } else {
+        // Grouped under category
+        if (!primitives[canonicalCategory]) primitives[canonicalCategory] = {};
+        primitives[canonicalCategory][tokenName] = {
+          $value: value,
+          $type: type,
+          $description: description
+        };
+      }
     }
   }
 
@@ -87,26 +153,7 @@ function main() {
     path.join(__dirname, 'primitives.json'),
     JSON.stringify(output, null, 2)
   );
-  console.log('Generated primitives.json with dynamic category detection, robust mapping, and all required fields. Skipped tokens are logged.');
-
-  /*
-  Skipped tokens due to unmapped category (for review):
-  - direction
-  - mixins.toolbar.minHeight
-  - mixins.toolbar.@media (min-width:0px).@media (orientation: landscape).minHeight
-  - mixins.toolbar.@media (min-width:600px).minHeight
-  - transitions.easing.easeInOut
-  - transitions.easing.easeOut
-  - transitions.easing.easeIn
-  - transitions.easing.sharp
-  - transitions.duration.shortest
-  - transitions.duration.shorter
-  - transitions.duration.short
-  - transitions.duration.standard
-  - transitions.duration.complex
-  - transitions.duration.enteringScreen
-  - transitions.duration.leavingScreen
-  */
+  console.log('Generated primitives.json with strict Tokens Studio/W3C compliance. Skipped tokens are logged.');
 }
 
 main();
