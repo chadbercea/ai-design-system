@@ -3,6 +3,12 @@ const path = require('path');
 
 const filePath = path.join(__dirname, '../token-studio-sync-provider/core.json');
 
+const CANONICAL_CATEGORIES = [
+  'color', 'fontSize', 'fontWeight', 'fontFamily', 'lineHeight', 'letterSpacing', 'borderRadius', 'borderWidth',
+  'spacing', 'sizing', 'opacity', 'boxShadow', 'typography', 'paragraphSpacing', 'textCase', 'textDecoration',
+  'composition', 'dimension', 'breakpoints', 'border', 'zIndex', 'duration', 'assets', 'boolean', 'text', 'number', 'other'
+];
+
 function fail(msg) {
   console.error('❌ Token validation failed:', msg);
   process.exit(1);
@@ -18,6 +24,31 @@ try {
   data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 } catch (e) {
   fail('core.json is not valid JSON.');
+}
+
+// Check for plural or non-canonical category keys
+function checkCategoryKeys(obj, keyPath = []) {
+  if (typeof obj !== 'object' || obj === null) return;
+  for (const key in obj) {
+    // Only check top-level and category keys (not tokens)
+    if (typeof obj[key] === 'object' && !('$value' in obj[key])) {
+      // Plural check
+      if (key.match(/s$/) && !['alias', 'other', 'borderRadius'].includes(key)) {
+        fail(`Category key should be singular at ${[...keyPath, key].join('.')}`);
+      }
+      // Canonical check
+      if (!CANONICAL_CATEGORIES.includes(key)) {
+        fail(`Category key '${key}' is not canonical at ${[...keyPath, key].join('.')}`);
+      }
+      // Double nesting check
+      for (const subkey in obj[key]) {
+        if (typeof obj[key][subkey] === 'object' && !('$value' in obj[key][subkey]) && !Array.isArray(obj[key][subkey])) {
+          fail(`Double nesting detected at ${[...keyPath, key, subkey].join('.')}`);
+        }
+      }
+      checkCategoryKeys(obj[key], [...keyPath, key]);
+    }
+  }
 }
 
 // Basic T-D-W-P checks
@@ -40,5 +71,6 @@ function checkToken(token, keyPath = []) {
   }
 }
 
+checkCategoryKeys(data);
 checkToken(data);
 pass(); 
