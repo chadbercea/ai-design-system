@@ -1,89 +1,25 @@
 {
-  "Dimension": {
-    "Scale": {
-      "$type": "dimension",
-      "$value": "2",
-      "$description": "Base scale factor"
-    },
-    "Xs": {
-      "$type": "dimension",
-      "$value": "4",
-      "$description": "Extra small dimension"
-    },
-    "Sm": {
-      "$type": "dimension",
-      "$value": "{Dimension.Xs} * {Dimension.Scale}",
-      "$description": "Small dimension value"
-    },
-    "Md": {
-      "$type": "dimension",
-      "$value": "{Dimension.Sm} * {Dimension.Scale}",
-      "$description": "Medium dimension value"
-    },
-    "Lg": {
-      "$type": "dimension",
-      "$value": "{Dimension.Md} * {Dimension.Scale}",
-      "$description": "Large dimension value"
-    },
-    "Xl": {
-      "$type": "dimension",
-      "$value": "{Dimension.Lg} * {Dimension.Scale}",
-      "$description": "Extra large dimension"
-    }
+  "dimension": {
+    "scale": { "$type": "dimension", "$value": "2", "$description": "Base scale factor" },
+    "xs": { "$type": "dimension", "$value": "4", "$description": "Extra small dimension" },
+    "sm": { "$type": "dimension", "$value": "{dimension.xs} * {dimension.scale}", "$description": "Small dimension value" },
+    "md": { "$type": "dimension", "$value": "{dimension.sm} * {dimension.scale}", "$description": "Medium dimension value" },
+    "lg": { "$type": "dimension", "$value": "{dimension.md} * {dimension.scale}", "$description": "Large dimension value" },
+    "xl": { "$type": "dimension", "$value": "{dimension.lg} * {dimension.scale}", "$description": "Extra large dimension" }
   },
-  "Spacing": {
-    "Xs": {
-      "$type": "spacing",
-      "$value": "{Dimension.Xs}",
-      "$description": "Extra small spacing"
-    },
-    "Sm": {
-      "$type": "spacing",
-      "$value": "{Dimension.Sm}",
-      "$description": "Small spacing value"
-    },
-    "Md": {
-      "$type": "spacing",
-      "$value": "{Dimension.Md}",
-      "$description": "Medium spacing value"
-    },
-    "Lg": {
-      "$type": "spacing",
-      "$value": "{Dimension.Lg}",
-      "$description": "Large spacing value"
-    },
-    "Xl": {
-      "$type": "spacing",
-      "$value": "{Dimension.Xl}",
-      "$description": "Extra large spacing"
-    },
-    "MultiValue": {
-      "$type": "spacing",
-      "$value": "{Dimension.Sm} {Dimension.Xl}",
-      "$description": "Multiple values in a single spacing token."
-    }
+  "spacing": {
+    "xs": { "$type": "spacing", "$value": "{dimension.xs}", "$description": "Extra small spacing" },
+    "sm": { "$type": "spacing", "$value": "{dimension.sm}", "$description": "Small spacing value" },
+    "md": { "$type": "spacing", "$value": "{dimension.md}", "$description": "Medium spacing value" },
+    "lg": { "$type": "spacing", "$value": "{dimension.lg}", "$description": "Large spacing value" },
+    "xl": { "$type": "spacing", "$value": "{dimension.xl}", "$description": "Extra large spacing" },
+    "multiValue": { "$type": "spacing", "$value": "{dimension.sm} {dimension.xl}", "$description": "Multiple values in a single spacing token." }
   },
-  "BorderRadius": {
-    "Sm": {
-      "$type": "borderRadius",
-      "$value": "4",
-      "$description": "Small border radius"
-    },
-    "Lg": {
-      "$type": "borderRadius",
-      "$value": "8",
-      "$description": "Large border radius"
-    },
-    "Xl": {
-      "$type": "borderRadius",
-      "$value": "16",
-      "$description": "Extra large border radius"
-    },
-    "MultiValue": {
-      "$type": "borderRadius",
-      "$value": "{BorderRadius.Sm} {BorderRadius.Lg}",
-      "$description": "Multiple values in a single radius token."
-    }
+  "borderRadius": {
+    "sm": { "$type": "borderRadius", "$value": "4", "$description": "Small border radius" },
+    "lg": { "$type": "borderRadius", "$value": "8", "$description": "Large border radius" },
+    "xl": { "$type": "borderRadius", "$value": "16", "$description": "Extra large border radius" },
+    "multiValue": { "$type": "borderRadius", "$value": "{borderRadius.sm} {borderRadius.lg}", "$description": "Multiple values in a single radius token." }
   },
   "color": {
     "black": {
@@ -346,126 +282,38 @@
     "$value": "90%",
     "$description": "High opacity value"
   },
-  "FontFamily": {
-    "Heading": {
-      "$type": "fontFamily",
-      "$value": "Inter",
-      "$description": "Heading font family"
-    },
-    "Body": {
-      "$type": "fontFamily",
-      "$value": "Roboto",
-      "$description": "Body font family"
-    }
+  "fontFamily": {
+    "heading": { "$type": "fontFamily", "$value": "Inter", "$description": "Heading font family" },
+    "body": { "$type": "fontFamily", "$value": "Roboto", "$description": "Body font family" }
   },
-  "LineHeight": {
-    "Heading": {
-      "$type": "lineHeight",
-      "$value": "110%",
-      "$description": "Heading line height"
-    },
-    "Body": {
-      "$type": "lineHeight",
-      "$value": "140%",
-      "$description": "Body line height"
-    }
+  "lineHeight": {
+    "heading": { "$type": "lineHeight", "$value": "110%", "$description": "Heading line height" },
+    "body": { "$type": "lineHeight", "$value": "140%", "$description": "Body line height" }
   },
-  "LetterSpacing": {
-    "Default": {
-      "$type": "letterSpacing",
-      "$value": "0",
-      "$description": "Default letter spacing"
-    },
-    "Increased": {
-      "$type": "letterSpacing",
-      "$value": "150%",
-      "$description": "Increased letter spacing"
-    },
-    "Decreased": {
-      "$type": "letterSpacing",
-      "$value": "-5%",
-      "$description": "Decreased letter spacing"
-    }
+  "letterSpacing": {
+    "default": { "$type": "letterSpacing", "$value": "0", "$description": "Default letter spacing" },
+    "increased": { "$type": "letterSpacing", "$value": "150%", "$description": "Increased letter spacing" },
+    "decreased": { "$type": "letterSpacing", "$value": "-5%", "$description": "Decreased letter spacing" }
   },
-  "ParagraphSpacing": {
-    "H1": {
-      "$type": "paragraphSpacing",
-      "$value": "32",
-      "$description": "Paragraph spacing for h1"
-    },
-    "H2": {
-      "$type": "paragraphSpacing",
-      "$value": "26",
-      "$description": "Paragraph spacing for h2"
-    }
+  "paragraphSpacing": {
+    "h1": { "$type": "paragraphSpacing", "$value": "32", "$description": "Paragraph spacing for h1" },
+    "h2": { "$type": "paragraphSpacing", "$value": "26", "$description": "Paragraph spacing for h2" }
   },
-  "FontWeight": {
-    "HeadingRegular": {
-      "$type": "fontWeight",
-      "$value": "Regular",
-      "$description": "Regular heading font weight"
-    },
-    "HeadingBold": {
-      "$type": "fontWeight",
-      "$value": "Bold",
-      "$description": "Bold heading font weight"
-    },
-    "BodyRegular": {
-      "$type": "fontWeight",
-      "$value": "Regular",
-      "$description": "Regular body font weight"
-    },
-    "BodyBold": {
-      "$type": "fontWeight",
-      "$value": "Bold",
-      "$description": "Bold body font weight"
-    }
+  "fontWeight": {
+    "headingRegular": { "$type": "fontWeight", "$value": "Regular", "$description": "Regular heading font weight" },
+    "headingBold": { "$type": "fontWeight", "$value": "Bold", "$description": "Bold heading font weight" },
+    "bodyRegular": { "$type": "fontWeight", "$value": "Regular", "$description": "Regular body font weight" },
+    "bodyBold": { "$type": "fontWeight", "$value": "Bold", "$description": "Bold body font weight" }
   },
-  "FontSize": {
-    "H1": {
-      "$type": "fontSize",
-      "$value": "roundTo({FontSize.Body}*1.25^5)",
-      "$description": "Font size for h1"
-    },
-    "H2": {
-      "$type": "fontSize",
-      "$value": "roundTo({FontSize.Body}*1.25^4)",
-      "$description": "Font size for h2"
-    },
-    "H3": {
-      "$type": "fontSize",
-      "$value": "roundTo({FontSize.Body}*1.25^3)",
-      "$description": "Font size for h3"
-    },
-    "H4": {
-      "$type": "fontSize",
-      "$value": "roundTo({FontSize.Body}*1.25^2)",
-      "$description": "Font size for h4"
-    },
-    "H5": {
-      "$type": "fontSize",
-      "$value": "roundTo({FontSize.Body}*1.25^1)",
-      "$description": "Font size for h5"
-    },
-    "H6": {
-      "$type": "fontSize",
-      "$value": "{FontSize.Body}",
-      "$description": "Font size for h6"
-    },
-    "Body": {
-      "$type": "fontSize",
-      "$value": "16",
-      "$description": "Body font size"
-    },
-    "Sm": {
-      "$type": "fontSize",
-      "$value": "{FontSize.Body} * 0.85",
-      "$description": "Small font size"
-    },
-    "Xs": {
-      "$type": "fontSize",
-      "$value": "{FontSize.Body} * 0.65",
-      "$description": "Extra small font size"
-    }
+  "fontSize": {
+    "h1": { "$type": "fontSize", "$value": "roundTo({fontSize.body}*1.25^5)", "$description": "Font size for h1" },
+    "h2": { "$type": "fontSize", "$value": "roundTo({fontSize.body}*1.25^4)", "$description": "Font size for h2" },
+    "h3": { "$type": "fontSize", "$value": "roundTo({fontSize.body}*1.25^3)", "$description": "Font size for h3" },
+    "h4": { "$type": "fontSize", "$value": "roundTo({fontSize.body}*1.25^2)", "$description": "Font size for h4" },
+    "h5": { "$type": "fontSize", "$value": "roundTo({fontSize.body}*1.25^1)", "$description": "Font size for h5" },
+    "h6": { "$type": "fontSize", "$value": "{fontSize.body}", "$description": "Font size for h6" },
+    "body": { "$type": "fontSize", "$value": "16", "$description": "Body font size" },
+    "sm": { "$type": "fontSize", "$value": "{fontSize.body} * 0.85", "$description": "Small font size" },
+    "xs": { "$type": "fontSize", "$value": "{fontSize.body} * 0.65", "$description": "Extra small font size" }
   }
 }
