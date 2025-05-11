@@ -1,0 +1,60 @@
+{
+  "MUI": {
+    "Padding": {
+      "Lg": {
+        "$type": "sizing",
+        "$value": "24px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Md": {
+        "$type": "sizing",
+        "$value": "16px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Sm": {
+        "$type": "sizing",
+        "$value": "8",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      }
+    },
+    "Margin": {
+      "Lg": {
+        "$type": "sizing",
+        "$value": "24px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Md": {
+        "$type": "sizing",
+        "$value": "16px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      },
+      "Sm": {
+        "$type": "sizing",
+        "$value": "8px",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      }
+    },
+    "default": {
+      "$type": "borderRadius",
+      "$value": "4px",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "Roboto": {
+      "$type": "fontFamilies",
+      "$value": "Roboto",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "Bold": {
+      "$type": "fontWeights",
+      "$value": "Bold",
+      "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+    },
+    "ExampleCategory": {
+      "Hover": {
+        "$type": "opacity",
+        "$value": "0.5",
+        "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
+      }
+    }
+  }
+} 

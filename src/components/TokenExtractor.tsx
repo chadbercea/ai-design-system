@@ -1,6 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { createTheme, Theme } from '@mui/material/styles';
 import { Button, Stack, Typography, Box } from '@mui/material';
+import blue from '@mui/material/colors/blue';
+import red from '@mui/material/colors/red';
+import green from '@mui/material/colors/green';
+import purple from '@mui/material/colors/purple';
+import orange from '@mui/material/colors/orange';
+import yellow from '@mui/material/colors/yellow';
+import teal from '@mui/material/colors/teal';
+import pink from '@mui/material/colors/pink';
+import indigo from '@mui/material/colors/indigo';
+import deepOrange from '@mui/material/colors/deepOrange';
+import deepPurple from '@mui/material/colors/deepPurple';
+import lightBlue from '@mui/material/colors/lightBlue';
+import lightGreen from '@mui/material/colors/lightGreen';
+import amber from '@mui/material/colors/amber';
+import cyan from '@mui/material/colors/cyan';
+import lime from '@mui/material/colors/lime';
+import brown from '@mui/material/colors/brown';
+import grey from '@mui/material/colors/grey';
+import common from '@mui/material/colors/common';
 
 interface TokenData {
   raw: {
@@ -49,6 +68,22 @@ interface TokenRelationship {
   type: string;
   children?: string[];
   value?: any;
+}
+
+const muiColorFamilies = {
+  blue, red, green, purple, orange, yellow, teal, pink, indigo,
+  deepOrange, deepPurple, lightBlue, lightGreen, amber, cyan, lime, brown, grey, common
+};
+
+function extractMuiColorPrimitives() {
+  const colorTokens: Record<string, string> = {};
+  Object.entries(muiColorFamilies).forEach(([family, shades]) => {
+    Object.entries(shades).forEach(([shade, value]) => {
+      // e.g., blue.50, red.900, etc.
+      colorTokens[`${family}.${shade}`] = value;
+    });
+  });
+  return colorTokens;
 }
 
 function isObject(item: unknown): item is Record<string, unknown> {
@@ -122,6 +157,10 @@ function extractTokens(obj: Record<string, unknown>, parentPath = ''): TokenCate
   Object.entries(obj).forEach(([key, value]) => {
     processValue(key, value, parentPath);
   });
+
+  // --- ADD ALL MUI COLOR PRIMITIVES ---
+  const muiPrimitives = extractMuiColorPrimitives();
+  tokens.color = { ...muiPrimitives, ...tokens.color };
 
   return tokens;
 }
