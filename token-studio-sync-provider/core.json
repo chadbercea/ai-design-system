@@ -1,319 +1,43 @@
 {
-  "dimension": {
-    "scale": { "$type": "dimension", "$value": "2", "$description": "Base scale factor" },
-    "xs": { "$type": "dimension", "$value": "4", "$description": "Extra small dimension" },
-    "sm": { "$type": "dimension", "$value": "{dimension.xs} * {dimension.scale}", "$description": "Small dimension value" },
-    "md": { "$type": "dimension", "$value": "{dimension.sm} * {dimension.scale}", "$description": "Medium dimension value" },
-    "lg": { "$type": "dimension", "$value": "{dimension.md} * {dimension.scale}", "$description": "Large dimension value" },
-    "xl": { "$type": "dimension", "$value": "{dimension.lg} * {dimension.scale}", "$description": "Extra large dimension" }
-  },
-  "spacing": {
-    "xs": { "$type": "spacing", "$value": "{dimension.xs}", "$description": "Extra small spacing" },
-    "sm": { "$type": "spacing", "$value": "{dimension.sm}", "$description": "Small spacing value" },
-    "md": { "$type": "spacing", "$value": "{dimension.md}", "$description": "Medium spacing value" },
-    "lg": { "$type": "spacing", "$value": "{dimension.lg}", "$description": "Large spacing value" },
-    "xl": { "$type": "spacing", "$value": "{dimension.xl}", "$description": "Extra large spacing" },
-    "multiValue": { "$type": "spacing", "$value": "{dimension.sm} {dimension.xl}", "$description": "Multiple values in a single spacing token." }
-  },
-  "borderRadius": {
-    "sm": { "$type": "borderRadius", "$value": "4", "$description": "Small border radius" },
-    "lg": { "$type": "borderRadius", "$value": "8", "$description": "Large border radius" },
-    "xl": { "$type": "borderRadius", "$value": "16", "$description": "Extra large border radius" },
-    "multiValue": { "$type": "borderRadius", "$value": "{borderRadius.sm} {borderRadius.lg}", "$description": "Multiple values in a single radius token." }
-  },
-  "color": {
-    "black": {
-      "$type": "color",
-      "$value": "#000000",
-      "$description": "Primary black color"
-    },
-    "white": {
-      "$type": "color",
-      "$value": "#ffffff",
-      "$description": "Primary white color"
-    },
-    "gray.100": {
-      "$type": "color",
-      "$value": "#f7fafc",
-      "$description": "Gray 100 color"
-    },
-    "gray.200": {
-      "$type": "color",
-      "$value": "#edf2f7",
-      "$description": "Gray 200 color"
-    },
-    "gray.300": {
-      "$type": "color",
-      "$value": "#e2e8f0",
-      "$description": "Gray 300 color"
-    },
-    "gray.400": {
-      "$type": "color",
-      "$value": "#cbd5e0",
-      "$description": "Gray 400 color"
-    },
-    "gray.500": {
-      "$type": "color",
-      "$value": "#a0aec0",
-      "$description": "Gray 500 color"
-    },
-    "gray.600": {
-      "$type": "color",
-      "$value": "#718096",
-      "$description": "Gray 600 color"
-    },
-    "gray.700": {
-      "$type": "color",
-      "$value": "#4a5568",
-      "$description": "Gray 700 color"
-    },
-    "gray.800": {
-      "$type": "color",
-      "$value": "#2d3748",
-      "$description": "Gray 800 color"
-    },
-    "gray.900": {
-      "$type": "color",
-      "$value": "#1a202c",
-      "$description": "Gray 900 color"
-    },
-    "red.100": {
-      "$type": "color",
-      "$value": "#fff5f5",
-      "$description": "Red 100 color"
-    },
-    "red.200": {
-      "$type": "color",
-      "$value": "#fed7d7",
-      "$description": "Red 200 color"
-    },
-    "red.300": {
-      "$type": "color",
-      "$value": "#feb2b2",
-      "$description": "Red 300 color"
-    },
-    "red.400": {
-      "$type": "color",
-      "$value": "#fc8181",
-      "$description": "Red 400 color"
-    },
-    "red.500": {
-      "$type": "color",
-      "$value": "#f56565",
-      "$description": "Red 500 color"
-    },
-    "red.600": {
-      "$type": "color",
-      "$value": "#e53e3e",
-      "$description": "Red 600 color"
-    },
-    "red.700": {
-      "$type": "color",
-      "$value": "#c53030",
-      "$description": "Red 700 color"
-    },
-    "red.800": {
-      "$type": "color",
-      "$value": "#9b2c2c",
-      "$description": "Red 800 color"
-    },
-    "red.900": {
-      "$type": "color",
-      "$value": "#742a2a",
-      "$description": "Red 900 color"
-    },
-    "orange.100": {
-      "$type": "color",
-      "$value": "#fffaf0",
-      "$description": "Orange 100 color"
-    },
-    "orange.200": {
-      "$type": "color",
-      "$value": "#feebc8",
-      "$description": "Orange 200 color"
-    },
-    "orange.300": {
-      "$type": "color",
-      "$value": "#fbd38d",
-      "$description": "Orange 300 color"
-    },
-    "orange.400": {
-      "$type": "color",
-      "$value": "#f6ad55",
-      "$description": "Orange 400 color"
-    },
-    "orange.500": {
-      "$type": "color",
-      "$value": "#ed8936",
-      "$description": "Orange 500 color"
-    },
-    "orange.600": {
-      "$type": "color",
-      "$value": "#dd6b20",
-      "$description": "Orange 600 color"
-    },
-    "orange.700": {
-      "$type": "color",
-      "$value": "#c05621",
-      "$description": "Orange 700 color"
-    },
-    "orange.800": {
-      "$type": "color",
-      "$value": "#9c4221",
-      "$description": "Orange 800 color"
-    },
-    "orange.900": {
-      "$type": "color",
-      "$value": "#7b341e",
-      "$description": "Orange 900 color"
-    },
-    "yellow.100": {
-      "$type": "color",
-      "$value": "#fffff0",
-      "$description": "Yellow 100 color"
-    },
-    "yellow.200": {
-      "$type": "color",
-      "$value": "#fefcbf",
-      "$description": "Yellow 200 color"
-    },
-    "yellow.300": {
-      "$type": "color",
-      "$value": "#faf089",
-      "$description": "Yellow 300 color"
-    },
-    "yellow.400": {
-      "$type": "color",
-      "$value": "#f6e05e",
-      "$description": "Yellow 400 color"
-    },
-    "yellow.500": {
-      "$type": "color",
-      "$value": "#ecc94b",
-      "$description": "Yellow 500 color"
-    },
-    "yellow.600": {
-      "$type": "color",
-      "$value": "#d69e2e",
-      "$description": "Yellow 600 color"
-    },
-    "yellow.700": {
-      "$type": "color",
-      "$value": "#b7791f",
-      "$description": "Yellow 700 color"
-    },
-    "yellow.800": {
-      "$type": "color",
-      "$value": "#975a16",
-      "$description": "Yellow 800 color"
-    },
-    "yellow.900": {
-      "$type": "color",
-      "$value": "#744210",
-      "$description": "Yellow 900 color"
-    },
-    "green.100": { "$type": "color", "$value": "#f0fff4", "$description": "Green 100 color" },
-    "green.200": { "$type": "color", "$value": "#c6f6d5", "$description": "Green 200 color" },
-    "green.300": { "$type": "color", "$value": "#9ae6b4", "$description": "Green 300 color" },
-    "green.400": { "$type": "color", "$value": "#68d391", "$description": "Green 400 color" },
-    "green.500": { "$type": "color", "$value": "#48bb78", "$description": "Green 500 color" },
-    "green.600": { "$type": "color", "$value": "#38a169", "$description": "Green 600 color" },
-    "green.700": { "$type": "color", "$value": "#2f855a", "$description": "Green 700 color" },
-    "green.800": { "$type": "color", "$value": "#276749", "$description": "Green 800 color" },
-    "green.900": { "$type": "color", "$value": "#22543d", "$description": "Green 900 color" },
-    "teal.100": { "$type": "color", "$value": "#e6fffa", "$description": "Teal 100 color" },
-    "teal.200": { "$type": "color", "$value": "#b2f5ea", "$description": "Teal 200 color" },
-    "teal.300": { "$type": "color", "$value": "#81e6d9", "$description": "Teal 300 color" },
-    "teal.400": { "$type": "color", "$value": "#4fd1c5", "$description": "Teal 400 color" },
-    "teal.500": { "$type": "color", "$value": "#38b2ac", "$description": "Teal 500 color" },
-    "teal.600": { "$type": "color", "$value": "#319795", "$description": "Teal 600 color" },
-    "teal.700": { "$type": "color", "$value": "#2c7a7b", "$description": "Teal 700 color" },
-    "teal.800": { "$type": "color", "$value": "#285e61", "$description": "Teal 800 color" },
-    "teal.900": { "$type": "color", "$value": "#234e52", "$description": "Teal 900 color" },
-    "blue.100": { "$type": "color", "$value": "#ebf8ff", "$description": "Blue 100 color" },
-    "blue.200": { "$type": "color", "$value": "#bee3f8", "$description": "Blue 200 color" },
-    "blue.300": { "$type": "color", "$value": "#90cdf4", "$description": "Blue 300 color" },
-    "blue.400": { "$type": "color", "$value": "#63b3ed", "$description": "Blue 400 color" },
-    "blue.500": { "$type": "color", "$value": "#4299e1", "$description": "Blue 500 color" },
-    "blue.600": { "$type": "color", "$value": "#3182ce", "$description": "Blue 600 color" },
-    "blue.700": { "$type": "color", "$value": "#2b6cb0", "$description": "Blue 700 color" },
-    "blue.800": { "$type": "color", "$value": "#2c5282", "$description": "Blue 800 color" },
-    "blue.900": { "$type": "color", "$value": "#2a4365", "$description": "Blue 900 color" },
-    "indigo.100": { "$type": "color", "$value": "#ebf4ff", "$description": "Indigo 100 color" },
-    "indigo.200": { "$type": "color", "$value": "#c3dafe", "$description": "Indigo 200 color" },
-    "indigo.300": { "$type": "color", "$value": "#a3bffa", "$description": "Indigo 300 color" },
-    "indigo.400": { "$type": "color", "$value": "#7f9cf5", "$description": "Indigo 400 color" },
-    "indigo.500": { "$type": "color", "$value": "#667eea", "$description": "Indigo 500 color" },
-    "indigo.600": { "$type": "color", "$value": "#5a67d8", "$description": "Indigo 600 color" },
-    "indigo.700": { "$type": "color", "$value": "#4c51bf", "$description": "Indigo 700 color" },
-    "indigo.800": { "$type": "color", "$value": "#434190", "$description": "Indigo 800 color" },
-    "indigo.900": { "$type": "color", "$value": "#3c366b", "$description": "Indigo 900 color" },
-    "purple.100": { "$type": "color", "$value": "#faf5ff", "$description": "Purple 100 color" },
-    "purple.200": { "$type": "color", "$value": "#e9d8fd", "$description": "Purple 200 color" },
-    "purple.300": { "$type": "color", "$value": "#d6bcfa", "$description": "Purple 300 color" },
-    "purple.400": { "$type": "color", "$value": "#b794f4", "$description": "Purple 400 color" },
-    "purple.500": { "$type": "color", "$value": "#9f7aea", "$description": "Purple 500 color" },
-    "purple.600": { "$type": "color", "$value": "#805ad5", "$description": "Purple 600 color" },
-    "purple.700": { "$type": "color", "$value": "#6b46c1", "$description": "Purple 700 color" },
-    "purple.800": { "$type": "color", "$value": "#553c9a", "$description": "Purple 800 color" },
-    "purple.900": { "$type": "color", "$value": "#44337a", "$description": "Purple 900 color" },
-    "pink.100": { "$type": "color", "$value": "#fff5f7", "$description": "Pink 100 color" },
-    "pink.200": { "$type": "color", "$value": "#fed7e2", "$description": "Pink 200 color" },
-    "pink.300": { "$type": "color", "$value": "#fbb6ce", "$description": "Pink 300 color" },
-    "pink.400": { "$type": "color", "$value": "#f687b3", "$description": "Pink 400 color" },
-    "pink.500": { "$type": "color", "$value": "#ed64a6", "$description": "Pink 500 color" },
-    "pink.600": { "$type": "color", "$value": "#d53f8c", "$description": "Pink 600 color" },
-    "pink.700": { "$type": "color", "$value": "#b83280", "$description": "Pink 700 color" },
-    "pink.800": { "$type": "color", "$value": "#97266d", "$description": "Pink 800 color" },
-    "pink.900": { "$type": "color", "$value": "#702459", "$description": "Pink 900 color" }
-  },
-  "opacityLow": {
-    "$type": "opacity",
-    "$value": "10%",
-    "$description": "Low opacity value"
-  },
-  "opacityMedium": {
-    "$type": "opacity",
-    "$value": "50%",
-    "$description": "Medium opacity value"
-  },
-  "opacityHigh": {
-    "$type": "opacity",
-    "$value": "90%",
-    "$description": "High opacity value"
-  },
-  "fontFamily": {
-    "heading": { "$type": "fontFamily", "$value": "Inter", "$description": "Heading font family" },
-    "body": { "$type": "fontFamily", "$value": "Roboto", "$description": "Body font family" }
-  },
-  "lineHeight": {
-    "heading": { "$type": "lineHeight", "$value": "110%", "$description": "Heading line height" },
-    "body": { "$type": "lineHeight", "$value": "140%", "$description": "Body line height" }
-  },
-  "letterSpacing": {
-    "default": { "$type": "letterSpacing", "$value": "0", "$description": "Default letter spacing" },
-    "increased": { "$type": "letterSpacing", "$value": "150%", "$description": "Increased letter spacing" },
-    "decreased": { "$type": "letterSpacing", "$value": "-5%", "$description": "Decreased letter spacing" }
-  },
-  "paragraphSpacing": {
-    "h1": { "$type": "paragraphSpacing", "$value": "32", "$description": "Paragraph spacing for h1" },
-    "h2": { "$type": "paragraphSpacing", "$value": "26", "$description": "Paragraph spacing for h2" }
-  },
-  "fontWeight": {
-    "headingRegular": { "$type": "fontWeight", "$value": "Regular", "$description": "Regular heading font weight" },
-    "headingBold": { "$type": "fontWeight", "$value": "Bold", "$description": "Bold heading font weight" },
-    "bodyRegular": { "$type": "fontWeight", "$value": "Regular", "$description": "Regular body font weight" },
-    "bodyBold": { "$type": "fontWeight", "$value": "Bold", "$description": "Bold body font weight" }
-  },
-  "fontSize": {
-    "h1": { "$type": "fontSize", "$value": "roundTo({fontSize.body}*1.25^5)", "$description": "Font size for h1" },
-    "h2": { "$type": "fontSize", "$value": "roundTo({fontSize.body}*1.25^4)", "$description": "Font size for h2" },
-    "h3": { "$type": "fontSize", "$value": "roundTo({fontSize.body}*1.25^3)", "$description": "Font size for h3" },
-    "h4": { "$type": "fontSize", "$value": "roundTo({fontSize.body}*1.25^2)", "$description": "Font size for h4" },
-    "h5": { "$type": "fontSize", "$value": "roundTo({fontSize.body}*1.25^1)", "$description": "Font size for h5" },
-    "h6": { "$type": "fontSize", "$value": "{fontSize.body}", "$description": "Font size for h6" },
-    "body": { "$type": "fontSize", "$value": "16", "$description": "Body font size" },
-    "sm": { "$type": "fontSize", "$value": "{fontSize.body} * 0.85", "$description": "Small font size" },
-    "xs": { "$type": "fontSize", "$value": "{fontSize.body} * 0.65", "$description": "Extra small font size" }
-  }
+  "h1": { "$type": "fontSize", "$value": "roundTo({body}*1.25^5)", "$description": "Font size for h1" },
+  "h2": { "$type": "fontSize", "$value": "roundTo({body}*1.25^4)", "$description": "Font size for h2" },
+  "h3": { "$type": "fontSize", "$value": "roundTo({body}*1.25^3)", "$description": "Font size for h3" },
+  "h4": { "$type": "fontSize", "$value": "roundTo({body}*1.25^2)", "$description": "Font size for h4" },
+  "h5": { "$type": "fontSize", "$value": "roundTo({body}*1.25^1)", "$description": "Font size for h5" },
+  "h6": { "$type": "fontSize", "$value": "{body}", "$description": "Font size for h6" },
+  "body": { "$type": "fontSize", "$value": "16", "$description": "Body font size" },
+  "sm": { "$type": "fontSize", "$value": "{body} * 0.85", "$description": "Small font size" },
+  "xs": { "$type": "fontSize", "$value": "{body} * 0.65", "$description": "Extra small font size" },
+  "scale": { "$type": "dimension", "$value": "2", "$description": "Base scale factor" },
+  "xs": { "$type": "dimension", "$value": "4", "$description": "Extra small dimension" },
+  "sm": { "$type": "dimension", "$value": "{xs} * {scale}", "$description": "Small dimension value" },
+  "md": { "$type": "dimension", "$value": "{sm} * {scale}", "$description": "Medium dimension value" },
+  "lg": { "$type": "dimension", "$value": "{md} * {scale}", "$description": "Large dimension value" },
+  "xl": { "$type": "dimension", "$value": "{lg} * {scale}", "$description": "Extra large dimension" },
+  "xsSpacing": { "$type": "spacing", "$value": "{xs}", "$description": "Extra small spacing" },
+  "smSpacing": { "$type": "spacing", "$value": "{sm}", "$description": "Small spacing value" },
+  "mdSpacing": { "$type": "spacing", "$value": "{md}", "$description": "Medium spacing value" },
+  "lgSpacing": { "$type": "spacing", "$value": "{lg}", "$description": "Large spacing value" },
+  "xlSpacing": { "$type": "spacing", "$value": "{xl}", "$description": "Extra large spacing" },
+  "multiValueSpacing": { "$type": "spacing", "$value": "{sm} {xl}", "$description": "Multiple values in a single spacing token." },
+  "opacityLow": { "$type": "opacity", "$value": "10%", "$description": "Low opacity value" },
+  "opacityMedium": { "$type": "opacity", "$value": "50%", "$description": "Medium opacity value" },
+  "opacityHigh": { "$type": "opacity", "$value": "90%", "$description": "High opacity value" },
+  "headingRegular": { "$type": "fontWeight", "$value": "Regular", "$description": "Regular heading font weight" },
+  "headingBold": { "$type": "fontWeight", "$value": "Bold", "$description": "Bold heading font weight" },
+  "bodyRegular": { "$type": "fontWeight", "$value": "Regular", "$description": "Regular body font weight" },
+  "bodyBold": { "$type": "fontWeight", "$value": "Bold", "$description": "Bold body font weight" },
+  "heading": { "$type": "fontFamily", "$value": "Inter", "$description": "Heading font family" },
+  "body": { "$type": "fontFamily", "$value": "Roboto", "$description": "Body font family" },
+  "headingLineHeight": { "$type": "lineHeight", "$value": "110%", "$description": "Heading line height" },
+  "bodyLineHeight": { "$type": "lineHeight", "$value": "140%", "$description": "Body line height" },
+  "defaultLetterSpacing": { "$type": "letterSpacing", "$value": "0", "$description": "Default letter spacing" },
+  "increasedLetterSpacing": { "$type": "letterSpacing", "$value": "150%", "$description": "Increased letter spacing" },
+  "decreasedLetterSpacing": { "$type": "letterSpacing", "$value": "-5%", "$description": "Decreased letter spacing" },
+  "h1ParagraphSpacing": { "$type": "paragraphSpacing", "$value": "32", "$description": "Paragraph spacing for h1" },
+  "h2ParagraphSpacing": { "$type": "paragraphSpacing", "$value": "26", "$description": "Paragraph spacing for h2" },
+  "smRadius": { "$type": "borderRadius", "$value": "4", "$description": "Small border radius" },
+  "lgRadius": { "$type": "borderRadius", "$value": "8", "$description": "Large border radius" },
+  "xlRadius": { "$type": "borderRadius", "$value": "16", "$description": "Extra large border radius" },
+  "multiValueRadius": { "$type": "borderRadius", "$value": "{smRadius} {lgRadius}", "$description": "Multiple values in a single radius token." }
 }
