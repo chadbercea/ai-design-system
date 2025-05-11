@@ -26,21 +26,26 @@ try {
   fail('core.json is not valid JSON.');
 }
 
-// Check for plural or non-canonical category keys
+// Accept PascalCase or canonical category names
+function isCanonicalCategory(key) {
+  const lower = key.charAt(0).toLowerCase() + key.slice(1);
+  return CANONICAL_CATEGORIES.includes(lower) || CANONICAL_CATEGORIES.includes(key);
+}
+
 function checkCategoryKeys(obj, keyPath = []) {
   if (typeof obj !== 'object' || obj === null) return;
   for (const key in obj) {
-    // Only check top-level and category keys (not tokens)
     if (typeof obj[key] === 'object' && !('$value' in obj[key])) {
-      // Plural check
-      if (key.match(/s$/) && !['alias', 'other', 'borderRadius'].includes(key)) {
+      // Improved plural check: only flag as plural if not in canonical list (case-insensitive)
+      const lowerKey = key.toLowerCase();
+      const canonicalLower = CANONICAL_CATEGORIES.map(c => c.toLowerCase());
+      if (key.match(/s$/) && !canonicalLower.includes(lowerKey)) {
         fail(`Category key should be singular at ${[...keyPath, key].join('.')}`);
       }
-      // Canonical check
-      if (!CANONICAL_CATEGORIES.includes(key)) {
-        fail(`Category key '${key}' is not canonical at ${[...keyPath, key].join('.')}`);
+      // Canonical or PascalCase check
+      if (!isCanonicalCategory(key)) {
+        fail(`Category key '${key}' is not canonical or PascalCase at ${[...keyPath, key].join('.')}`);
       }
-      // Double nesting check
       for (const subkey in obj[key]) {
         if (typeof obj[key][subkey] === 'object' && !('$value' in obj[key][subkey]) && !Array.isArray(obj[key][subkey])) {
           fail(`Double nesting detected at ${[...keyPath, key, subkey].join('.')}`);
