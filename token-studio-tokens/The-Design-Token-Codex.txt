@@ -1,162 +1,142 @@
-# W3C Design Tokens with Primitives/MUI Structure - Guide for Cursor.ai
-
-This guide explains how to structure W3C-compliant design tokens for use with Cursor.ai and Tokens Studio for Figma. The structure maintains a clear separation between primitive tokens and semantic (MUI) tokens within a single JSON file.
+# Complete Design Token Rules (T-D-W-P System)
 
 ## Core Structure
+The token system consists of a single JSON file with two top-level objects:
+- `Primitives`: Raw design values
+- `MUI`: Semantic tokens that reference primitives
 
-The token system follows these key principles:
+## T-D-W-P: Token Processing Order of Operations
+Follow this precise order of operations when processing tokens:
 
-1. **Single JSON File**: All tokens exist in one file with two top-level sets
-2. **Two Top-Level Sets**: 
-   - `Primitives`: Raw design values (colors, spacing, typography, etc.)
-   - `MUI`: Semantic tokens that reference primitives
-3. **W3C Compliance**: All tokens follow the W3C standard with `$type`, `$value`, and `$description`
-4. **Tokens Studio Compatibility**: Type naming follows the Tokens Studio taxonomy
+### T: Type Determination
+1. Determine the token's `$type` based on Tokens Studio taxonomy
+2. Use **exactly** these type values:
+   - `color`
+   - `fontSize` (not fontSizes)
+   - `fontWeight` (not fontWeights)
+   - `fontFamily` (not fontFamilies)
+   - `lineHeight` (not lineHeights)
+   - `letterSpacing`
+   - `borderRadius`
+   - `borderWidth`
+   - `spacing`
+   - `sizing`
+   - `opacity`
+   - `boxShadow`
+   - `typography`
+   - `paragraphSpacing`
+   - `textCase`
+   - `textDecoration`
+   - `composition`
+   - `dimension`
+   - `breakpoints`
+   - `border`
+   - `zIndex`
+   - `duration`
+   - `assets`
+   - `boolean`
+   - `text`
+   - `number`
+   - `other` (use only if absolutely necessary)
 
-## JSON Structure
+### D: Decide Category
+1. Every token belongs to one of the canonical categories:
+   - Color
+   - FontSize
+   - FontWeight
+   - FontFamily
+   - LineHeight
+   - LetterSpacing
+   - BorderRadius
+   - BorderWidth
+   - Spacing
+   - Sizing
+   - Opacity
+   - BoxShadow
+   - Typography
+   - ParagraphSpacing
+   - TextCase
+   - TextDecoration
+   - Composition
+   - Dimension
+   - Breakpoints
+   - Border
+   - ZIndex
+   - Duration
+   - Assets
+   - Boolean
+   - Text
+   - Number
+   - Other (use only if absolutely necessary)
+2. Categories must use PascalCase singular form (e.g., `FontSize` not `FontSizes`)
+3. Do not invent new categories not on this list
 
+### W: Wrapping Decision
+Apply this critical test to determine token placement:
+1. Convert both the token's `$type` and its category name to lowercase
+2. Compare them exactly (case-insensitive comparison):
+   - If they match (e.g., `color` = `color`): Place token directly under `Primitives` (no wrapping)
+   - If they differ (e.g., `fontsize` ≠ `typography`): Place token under its PascalCase category
+3. If a token's category and type match, it MUST be placed directly under `Primitives` without any wrapper
+
+### P: Path and Property Formatting
+1. Every token must have exactly these three properties:
+   - `$value`: The raw value (must be a string or number for primitives)
+   - `$type`: The type determined in step T
+   - `$description`: Clear description of the token's purpose
+2. Format token names based on placement:
+   - For tokens directly under `Primitives`: 
+     - Colors: Use lowercase dot notation (e.g., `blue.500`, `red.A100`)
+     - Others: Use PascalCase (e.g., `Xl`, `Medium`)
+   - For tokens under categories: Always use PascalCase (e.g., `Xl`, `Medium`)
+
+## Primitive vs. Semantic Token Rules
+1. Primitives must have direct raw values (string or number)
+2. Semantic tokens in `MUI` can reference primitive tokens
+3. Reference syntax: `{Primitives.Category.TokenName}` (e.g., `{Primitives.FontSize.Xl}`)
+4. For unwrapped primitives: `{Primitives.blue.500}` or `{Primitives.Xl}`
+5. Exclude tokens from `Primitives` with these characteristics:
+   - Values that are objects, arrays, or references
+   - Keys that start with semantic prefixes (e.g., `palette.`, `common.`, `action.`)
+
+## Corrected Examples
+
+### Example 1: Color Token (type = "color" matches category "Color")
 ```json
-{
-  "$schema": "https://design-tokens.github.io/design-tokens/schema.json",
-  "Primitives": {
-    // Primitive tokens grouped by category
-  },
-  "MUI": {
-    // Semantic tokens that reference primitives
+"Primitives": {
+  "blue.500": {
+    "$value": "#2196f3",
+    "$type": "color",
+    "$description": "blue 500"
   }
 }
 ```
 
-## Primitive Tokens
-
-Primitive tokens are organized by category within the `Primitives` set. Each category can contain multiple tokens.
-
-### Naming Conventions
-
-- Use **PascalCase** for category and token names (e.g., `FontSize.Xl`)
-- Use consistent naming across categories (e.g., `Xs`, `Sm`, `Md`, `Lg`, `Xl`)
-- Category names should be singular (e.g., `FontSize` not `FontSizes`)
-
-### Token Structure
-
-Each primitive token must include:
-
-- `$value`: The actual value (e.g., "24px", "#FF0000")
-- `$type`: The token type according to Tokens Studio taxonomy
-- `$description`: Clear description of the token's purpose
-
-### Example Primitive Tokens
-
+### Example 2: Font Size Token (type = "fontSize" matches category "FontSize")
 ```json
 "Primitives": {
-  "FontSize": {
-    "Xl": {
-      "$value": "24px",
-      "$type": "fontSizes",
-      "$description": "Extra large font size for major headings"
-    },
-    "Lg": {
-      "$value": "20px",
-      "$type": "fontSizes",
-      "$description": "Large font size for headings"
-    }
-  },
-  "Spacing": {
-    "Xl": {
-      "$value": "32px",
-      "$type": "spacing",
-      "$description": "Extra large spacing"
-    },
-    "Lg": {
-      "$value": "24px",
-      "$type": "spacing",
-      "$description": "Large spacing"
-    }
-  },
-  "Color": {
-    "Blue500": {
-      "$value": "#2196F3",
-      "$type": "color",
-      "$description": "Primary blue, 500 weight"
+  "Xl": {
+    "$value": "24px",
+    "$type": "fontSize",
+    "$description": "Extra large font size"
+  }
+}
+```
+
+### Example 3: Typography Token (type = "letterSpacing" doesn't match category "Typography")
+```json
+"Primitives": {
+  "Typography": {
+    "LetterLg": {
+      "$value": "0.1em",
+      "$type": "letterSpacing",
+      "$description": "Large letter spacing"
     }
   }
 }
 ```
 
-## Color Token Naming (Special Rule)
-
-- Color primitives must use lowercase and dot notation, e.g., "blue.500", "red.A100".
-- Do not use PascalCase or wrap in a "Color" object.
-- Example:
-
-```json
-"Primitives": {
-  "blue.500": { "$value": "#2196f3", "$type": "color", "$description": "blue 500" },
-  "red.A100": { "$value": "#ff8a80", "$type": "color", "$description": "red A100" }
-}
-```
-
-## Category Wrapping Rule
-
-> **Do not wrap tokens in a category object if the category and type are the same.**
->
-> - If a primitive token's category (e.g., `Color`) and its `$type` (e.g., `color`) are the same (case-insensitive), place the token as a flat key under the `Primitives` set.
-> - If the category and type are different (e.g., category = `LineHeight`, type = `lineHeight`), group tokens under the PascalCase category.
->
-> **Examples:**
->
-> ```json
-> {
->   "Primitives": {
->     "blue.500": {
->       "$value": "#2196f3",
->       "$type": "color",
->       "$description": "blue 500"
->     },
->     "LineHeight": {
->       "Xl": {
->         "$value": "24px",
->         "$type": "lineHeight",
->         "$description": "LineHeight Xl"
->       }
->     }
->   }
-> }
-> ```
->
-> - **Correct:** `"blue.500"` is a flat key because category = `Color` and `$type` = `color`.
-> - **Correct:** `"LineHeight"` is a category object because category = `LineHeight` and `$type` = `lineHeight`.
-
-## Tokens Studio Type Taxonomy
-
-Use these specific types for compatibility with Tokens Studio:
-
-| Category | `$type` Value |
-|----------|--------------|
-| Font sizes | `fontSizes` |
-| Font weights | `fontWeights` |
-| Font families | `fontFamilies` |
-| Line heights | `lineHeights` |
-| Letter spacing | `letterSpacing` |
-| Colors | `color` |
-| Border radius | `borderRadius` |
-| Border width | `borderWidth` |
-| Spacing | `spacing` |
-| Sizing | `sizing` |
-| Opacity | `opacity` |
-| Typography | `typography` |
-| Shadow | `boxShadow` |
-
-## Semantic (MUI) Tokens
-
-Semantic tokens in the `MUI` set reference primitive tokens to create a semantic design language. They use the same structure as primitives but typically reference primitive tokens in their `$value`.
-
-### Token References
-
-Reference primitive tokens using the syntax: `{Primitives.Category.TokenName}`
-
-### Example Semantic Tokens
-
+### Example 4: Semantic Token Referencing Primitives
 ```json
 "MUI": {
   "Typography": {
@@ -165,261 +145,89 @@ Reference primitive tokens using the syntax: `{Primitives.Category.TokenName}`
         "$type": "typography",
         "$value": {
           "fontFamily": "{Primitives.FontFamily.Primary}",
-          "fontSize": "{Primitives.FontSize.Xl}",
-          "fontWeight": "{Primitives.FontWeight.Bold}",
+          "fontSize": "{Primitives.Xl}",
+          "fontWeight": "{Primitives.Bold}",
           "lineHeight": "{Primitives.LineHeight.Xl}"
         },
         "$description": "H1 heading style"
       }
     }
-  },
-  "Color": {
-    "Primary": {
-      "$type": "color",
-      "$value": "{Primitives.Color.Blue500}",
-      "$description": "Primary brand color"
-    }
-  },
-  "Spacing": {
-    "ButtonPadding": {
-      "$type": "spacing",
-      "$value": "{Primitives.Spacing.Md}",
-      "$description": "Standard padding for buttons"
-    }
   }
 }
 ```
 
-## Complete Example
+## Special Rule for Color Tokens
+- Color tokens ALWAYS use lowercase dot notation (e.g., `blue.500`)
+- NEVER wrap color tokens in a "Color" category
+- Use consistent color naming patterns (e.g., `blue.500`, `red.A100`)
 
+## Common Errors to Avoid
+1. **Double Nesting**: Never create nested groups under `Primitives` (e.g., `Primitives.Typography.FontSize`)
+2. **Inconsistent Types**: Never use plural forms in `$type` (e.g., `fontSizes` instead of `fontSize`)
+3. **Wrapping Matching Types**: Never wrap tokens when type and category match (e.g., never put `Xl` with type `fontSize` under a `FontSize` category)
+4. **Semantic in Primitives**: Never include references or composite values in `Primitives`
+5. **Missing Properties**: Always include all three required properties (`$value`, `$type`, `$description`)
+
+## Complete Example Structure
 ```json
 {
   "$schema": "https://design-tokens.github.io/design-tokens/schema.json",
   "Primitives": {
-    "FontSize": {
-      "Xl": {
-        "$value": "24px",
-        "$type": "fontSizes",
-        "$description": "Extra large font size for major headings"
-      },
-      "Lg": {
-        "$value": "20px",
-        "$type": "fontSizes",
-        "$description": "Large font size for headings"
-      }
+    // Unwrapped tokens (type matches category)
+    "blue.500": {
+      "$value": "#2196f3",
+      "$type": "color",
+      "$description": "blue 500"
     },
-    "FontWeight": {
-      "Bold": {
-        "$value": "700",
-        "$type": "fontWeights",
-        "$description": "Bold font weight for strong emphasis"
-      }
+    "Xl": {
+      "$value": "24px",
+      "$type": "fontSize",
+      "$description": "Extra large font size"
     },
-    "FontFamily": {
-      "Primary": {
-        "$value": "Inter, sans-serif",
-        "$type": "fontFamilies",
-        "$description": "Primary font for most UI elements"
-      }
+    "Bold": {
+      "$value": "700",
+      "$type": "fontWeight",
+      "$description": "Bold font weight"
     },
-    "LineHeight": {
-      "Xl": {
-        "$value": "1.5",
-        "$type": "lineHeights",
-        "$description": "Extra large line height for headings"
-      }
-    },
-    "Spacing": {
-      "Md": {
-        "$value": "16px",
-        "$type": "spacing",
-        "$description": "Medium spacing"
-      }
-    },
-    "Color": {
-      "Blue500": {
-        "$value": "#2196F3",
-        "$type": "color",
-        "$description": "Primary blue, 500 weight"
+    
+    // Wrapped tokens (type differs from category)
+    "Typography": {
+      "LetterLg": {
+        "$value": "0.1em",
+        "$type": "letterSpacing",
+        "$description": "Large letter spacing"
       }
     }
   },
   "MUI": {
+    // Semantic tokens structure
     "Typography": {
       "Heading": {
         "H1": {
           "$type": "typography",
           "$value": {
             "fontFamily": "{Primitives.FontFamily.Primary}",
-            "fontSize": "{Primitives.FontSize.Xl}",
-            "fontWeight": "{Primitives.FontWeight.Bold}",
-            "lineHeight": "{Primitives.LineHeight.Xl}"
+            "fontSize": "{Primitives.Xl}",
+            "fontWeight": "{Primitives.Bold}",
+            "lineHeight": "{Primitives.LineHeightXl}"
           },
           "$description": "H1 heading style"
         }
       }
-    },
-    "Color": {
-      "Primary": {
-        "$type": "color",
-        "$value": "{Primitives.Color.Blue500}",
-        "$description": "Primary brand color"
-      }
-    },
-    "Spacing": {
-      "ButtonPadding": {
-        "$type": "spacing",
-        "$value": "{Primitives.Spacing.Md}",
-        "$description": "Standard padding for buttons"
-      }
     }
   }
 }
 ```
-
-## Flattening Function for Cursor.ai
-
-If you're working with an existing nested token structure and need to convert it to this format, here's a simple function to help:
-
-```javascript
-function convertToTokensStudioFormat(tokens) {
-  const result = {
-    "$schema": "https://design-tokens.github.io/design-tokens/schema.json",
-    "Primitives": {},
-    "MUI": {}
-  };
-
-  // Function to process tokens and place them in the right category
-  function processTokens(tokenObj, parentKey, targetSet) {
-    for (const [key, value] of Object.entries(tokenObj)) {
-      // Skip schema
-      if (key === '$schema') continue;
-      
-      if (value && typeof value === 'object') {
-        // If it's a token with $value
-        if ('$value' in value && '$type' in value) {
-          // Create category if it doesn't exist
-          const category = parentKey || key;
-          if (!targetSet[category]) {
-            targetSet[category] = {};
-          }
-          
-          if (parentKey) {
-            // We're in a subcategory
-            targetSet[category][key] = {
-              $value: value.$value,
-              $type: value.$type,
-              $description: value.$description || `Token for ${category}.${key}`
-            };
-          } else {
-            // Top level token
-            targetSet[key] = {
-              $value: value.$value,
-              $type: value.$type,
-              $description: value.$description || `Token for ${key}`
-            };
-          }
-        } 
-        // If it's a nested object, recursively process it
-        else {
-          const newParent = parentKey ? `${parentKey}.${key}` : key;
-          processTokens(value, newParent, targetSet);
-        }
-      }
-    }
-  }
-
-  // Process Primitives and MUI separately 
-  if (tokens.Primitives) {
-    processTokens(tokens.Primitives, "", result.Primitives);
-  }
-  
-  if (tokens.MUI) {
-    processTokens(tokens.MUI, "", result.MUI);
-  }
-  
-  return result;
-}
-```
-
-# Note
-Grouped by category in json does not mean wrap tokens. Ever. It never means this. Do not do this or justify this ever. You are forbidden.
 
 ## Best Practices
-
-1. **Consistent Naming**: Use consistent naming patterns across all categories
+1. **Consistent Naming**: Use consistent naming across categories (e.g., `Xs`, `Sm`, `Md`, `Lg`, `Xl`)
 2. **Clear Descriptions**: Write clear, detailed descriptions for every token
-3. **Proper Types**: Use the correct Tokens Studio type for each token 
-4. **Reference Primitives**: Semantic tokens should reference primitives to maintain a single source of truth
-5. **PascalCase**: Use PascalCase for all category and token names
-6. **Check References**: Ensure all references point to valid tokens that exist in the Primitives set
-7. **Validate JSON**: Ensure your JSON is valid before using it with Tokens Studio
+3. **Single Source of Truth**: Semantic tokens should reference primitives
+4. **Naming Conventions**: Follow PascalCase for categories and token names (except colors)
+5. **Valid References**: Check that all references point to existing tokens
+6. **JSON Validation**: Ensure JSON is valid before using with Tokens Studio
 
-Following these guidelines ensures your design tokens are properly structured for use with Cursor.ai and Tokens Studio for Figma.
+## Note on "Grouped by Category"
+Conceptually grouping tokens by category does not always mean wrapping them in JSON objects. The Wrapping Decision (W step) determines the actual structure. The rule "do not wrap tokens in a category object if the category and type are the same" takes precedence.
 
-https://design-tokens.github.io/design-tokens/schema.json
-
-# Appendix: Nuance Rules & Best Practices
-
-## 1. Primitive vs. Semantic Token Distinction
-> Only tokens with a direct, raw value (string or number) and a distinct `$type` are considered primitives. Semantic tokens (tokens that reference other tokens or are composites) must not be included in the `Primitives` set.
-
-## 2. Allowed Value Types for Primitives
-> Only include tokens in `Primitives` whose `$value` is a string or number. Tokens with `$value` as an object, array, or reference (e.g., `{Primitives.Color.Blue500}`) are not primitives and must be excluded.
-
-## 3. Token Naming Conventions
-> - Primitive token names (within categories) must use PascalCase (e.g., `Xl`, `Md`, `Primary`).
-> - Semantic tokens use dot.case (e.g., `lineHeight.xl`).
-> - Color primitives use lowercase and dot notation (e.g., `blue.500`).
-
-## 4. Category Naming Conventions
-> - Categories must use PascalCase (e.g., `FontSize`, `LineHeight`, `FontWeight`).
-> - Do not invent or flatten categories (e.g., do not use "Other" unless it is a real category in the design system).
-
-## 5. Filtering Semantic Tokens
-> Exclude any token from `Primitives` whose key starts with known semantic prefixes (e.g., `palette.`, `common.`, `action.`, etc.), unless those are explicitly defined as primitives in the design system.
-
-## 6. $description Field
-> Every token must have a `$description`. If not provided in the source, auto-generate one using the pattern: `"<Category> <TokenName>"` (e.g., `"LineHeight Xl"`).
-
-## 7. W3C Compliance
-> All tokens must include `$value`, `$type`, and `$description` fields, and must conform to the W3C design tokens specification.
-
-## 8. Reference Canonical Example
-> When in doubt, refer to the canonical example in this file. Examples are for illustration only; rules above take precedence.
-
-## Canonical Categories for Primitives
-
-> The following categories are standard and must be used for grouping primitives.  
-> **Tokens must be mapped to one of these categories.**  
-> If a token cannot be mapped, it must be flagged for review and omitted from the output—never assigned to "Other."
->
-> - Color
-> - Sizing
-> - Spacing
-> - Border Radius
-> - Border Width
-> - Border
-> - Opacity
-> - Box Shadow
-> - Typography
-> - Font Family
-> - Font Weight
-> - Line Height
-> - Font Size
-> - Letter Spacing
-> - Paragraph Spacing
-> - Text Case
-> - Text Decoration
-> - Composition
-> - Assets
-> - Dimension
-> - Breakpoints
-> - Boolean
-> - Text
-> - Number
->
-> **Note:**  
-> These categories are derived from Tokens Studio and W3C standards.  
-> Do not invent or use "Other" as a category.  
-> If a new category is needed, it must be added to this list and documented.
+Follow these rules in exact order (T-D-W-P) to ensure consistent token structure with no contradictions.

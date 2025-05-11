@@ -12,10 +12,10 @@ const canonicalCategoryTypeMap = {
   Opacity: 'opacity',
   BoxShadow: 'boxShadow',
   Typography: 'typography',
-  FontFamily: 'fontFamilies',
-  FontWeight: 'fontWeights',
-  LineHeight: 'lineHeights',
-  FontSize: 'fontSizes',
+  FontFamily: 'fontFamily',
+  FontWeight: 'fontWeight',
+  LineHeight: 'lineHeight',
+  FontSize: 'fontSize',
   LetterSpacing: 'letterSpacing',
   ParagraphSpacing: 'paragraphSpacing',
   TextCase: 'textCase',
@@ -69,16 +69,21 @@ function toPascalCase(str) {
     .replace(/^(.)/, (_, c) => c ? c.toUpperCase() : '');
 }
 
-function toColorDotCase(str) {
-  return str.replace(/([a-z])([A-Z])/g, '$1.$2').replace(/[-_ ]+/g, '.').toLowerCase();
-}
-
 function isReference(val) {
   return typeof val === 'string' && val.startsWith('{') && val.endsWith('}');
 }
 
 function isSemanticKey(key) {
   return semanticPatterns.some((pat) => pat.test(key));
+}
+
+function isInvalidKey(key) {
+  // Exclude ThemeKey, themeKey, unstable_sxConfig (case-insensitive)
+  return (
+    key === 'ThemeKey' ||
+    /themeKey/i.test(key) ||
+    /unstable_sxConfig/i.test(key)
+  );
 }
 
 function getCategoryAndType(key) {
@@ -104,61 +109,107 @@ function areCategoryAndTypeEquivalent(category, $type) {
   return canonicalCategoryTypeMap[category] && canonicalCategoryTypeMap[category].toLowerCase() === $type.toLowerCase();
 }
 
+function addPrimitive(primitives, { category, tokenName, value, $type }) {
+  primitives[tokenName] = {
+    $value: value,
+    $type,
+    $description: `${category} ${tokenName}`
+  };
+}
+
 function main() {
   const raw = JSON.parse(fs.readFileSync(path.join(__dirname, '../mui-tokens/mui-tokens-raw.json'), 'utf8'));
-  const relationships = JSON.parse(fs.readFileSync(path.join(__dirname, '../mui-tokens/mui-tokens-relationships.json'), 'utf8'));
   const primitives = {};
-  const skipped = [];
-  const semanticFound = [];
 
-  function addPrimitive({ category, tokenName, value, $type }) {
-    // If category and $type are canonically equivalent, flat key
-    if (areCategoryAndTypeEquivalent(category, $type) || (category === 'Color' && $type === 'color')) {
-      primitives[tokenName] = {
-        $value: value,
-        $type,
-        $description: `${category} ${tokenName}`
-      };
-      return;
-    }
-    // Otherwise, wrap in category object
-    if (!primitives[category]) primitives[category] = {};
-    primitives[category][tokenName] = {
-      $value: value,
-      $type,
-      $description: `${category} ${tokenName}`
-    };
+  // 1. Colors
+  const colorObj = raw.base && raw.base.color ? raw.base.color : {};
+  for (const [k, v] of Object.entries(colorObj)) {
+    if (/^(palette\.|common\.|action\.)/i.test(k)) continue;
+    addPrimitive(primitives, {
+      category: 'Color',
+      tokenName: k.toLowerCase().replace(/\.a/gi, '.a'),
+      value: v,
+      $type: 'color'
+    });
   }
 
-  // Only include primitives whose type is string or number and not semantic
-  for (const entry of relationships) {
-    if (!['color', 'number', 'string', 'boolean'].includes(entry.type)) continue;
-    if (isSemanticKey(entry.token)) {
-      semanticFound.push(entry.token);
-      continue;
-    }
-    let key = entry.token;
-    let value = entry.value !== undefined ? entry.value : raw.base?.[key.split('.')[0]]?.[key] || raw.base?.[key];
-    if (value === undefined) continue;
-    let parsed = getCategoryAndType(key);
-    if (parsed && canonicalCategories.includes(parsed.category)) {
-      addPrimitive({
-        category: parsed.category,
-        tokenName: parsed.tokenName,
-        value,
-        $type: parsed.type
-      });
-    } else {
-      skipped.push({ key, value });
-    }
+  // 2. Typography
+  const typography = raw.base && raw.base.typography ? raw.base.typography : {};
+  if (typography.fontFamily) {
+    addPrimitive(primitives, { category: 'FontFamily', tokenName: 'Primary', value: typography.fontFamily, $type: 'fontFamily' });
+  }
+  if (typography.fontWeightLight !== undefined) {
+    addPrimitive(primitives, { category: 'FontWeight', tokenName: 'Light', value: typography.fontWeightLight, $type: 'fontWeight' });
+  }
+  if (typography.fontWeightRegular !== undefined) {
+    addPrimitive(primitives, { category: 'FontWeight', tokenName: 'Regular', value: typography.fontWeightRegular, $type: 'fontWeight' });
+  }
+  if (typography.fontWeightMedium !== undefined) {
+    addPrimitive(primitives, { category: 'FontWeight', tokenName: 'Medium', value: typography.fontWeightMedium, $type: 'fontWeight' });
+  }
+  if (typography.fontWeightBold !== undefined) {
+    addPrimitive(primitives, { category: 'FontWeight', tokenName: 'Bold', value: typography.fontWeightBold, $type: 'fontWeight' });
+  }
+  // FontSize, LineHeight, LetterSpacing from h1-h6, subtitle1/2, body1/2, button, caption, overline
+  const typestyles = [
+    'h1','h2','h3','h4','h5','h6','subtitle1','subtitle2','body1','body2','button','caption','overline'
+  ];
+  typestyles.forEach(style => {
+    const t = typography[style];
+    if (!t) return;
+    if (t.fontSize) addPrimitive(primitives, { category: 'FontSize', tokenName: toPascalCase(style), value: t.fontSize, $type: 'fontSize' });
+    if (t.lineHeight) addPrimitive(primitives, { category: 'LineHeight', tokenName: toPascalCase(style), value: t.lineHeight, $type: 'lineHeight' });
+    if (t.letterSpacing) addPrimitive(primitives, { category: 'LetterSpacing', tokenName: toPascalCase(style), value: t.letterSpacing, $type: 'letterSpacing' });
+  });
+
+  // 3. ZIndex
+  const other = raw.base && raw.base.other ? raw.base.other : {};
+  const zIndexKeys = Object.keys(other).filter(k => k.startsWith('zIndex.'));
+  zIndexKeys.forEach(k => {
+    const name = k.replace('zIndex.', '');
+    addPrimitive(primitives, { category: 'ZIndex', tokenName: toPascalCase(name), value: other[k], $type: 'zIndex' });
+  });
+
+  // 4. BorderRadius
+  if (other['shape.borderRadius'] !== undefined) {
+    addPrimitive(primitives, { category: 'BorderRadius', tokenName: 'Base', value: other['shape.borderRadius'], $type: 'borderRadius' });
   }
 
-  if (semanticFound.length > 0) {
-    console.warn('Semantic tokens were found and excluded:', semanticFound);
+  // 5. Durations
+  Object.keys(other).filter(k => k.startsWith('transitions.duration.')).forEach(k => {
+    const name = k.replace('transitions.duration.', '');
+    addPrimitive(primitives, { category: 'Duration', tokenName: toPascalCase(name), value: other[k], $type: 'duration' });
+  });
+
+  // 6. Easing
+  Object.keys(other).filter(k => k.startsWith('transitions.easing.')).forEach(k => {
+    const name = k.replace('transitions.easing.', '');
+    addPrimitive(primitives, { category: 'Easing', tokenName: toPascalCase(name), value: other[k], $type: 'easing' });
+  });
+
+  // 7. BoxShadows
+  if (other.shadows && Array.isArray(other.shadows)) {
+    other.shadows.forEach((v, i) => {
+      addPrimitive(primitives, { category: 'BoxShadow', tokenName: `Level${i}`, value: v, $type: 'boxShadow' });
+    });
   }
-  if (skipped.length > 0) {
-    console.warn('Skipped tokens due to non-primitive, reference, or non-canonical category:', skipped);
-  }
+
+  // 8. Breakpoints
+  const breakpoints = ['xs','sm','md','lg','xl'];
+  breakpoints.forEach(bp => {
+    const val = other[`breakpoints.values.${bp}`];
+    if (val !== undefined) {
+      addPrimitive(primitives, { category: 'Breakpoints', tokenName: toPascalCase(bp), value: val, $type: 'breakpoints' });
+    }
+  });
+
+  // 9. Opacity
+  Object.keys(other).filter(k => k.endsWith('Opacity')).forEach(k => {
+    addPrimitive(primitives, { category: 'Opacity', tokenName: toPascalCase(k.replace(/.*\./,'')), value: other[k], $type: 'opacity' });
+  });
+
+  // 10. Spacing (if present)
+  // Add more extraction logic here if spacing primitives are present in your raw file
 
   const output = {
     $schema: "https://design-tokens.github.io/design-tokens/schema.json",
@@ -168,7 +219,7 @@ function main() {
     path.join(__dirname, 'primitives.json'),
     JSON.stringify(output, null, 2)
   );
-  console.log('Generated codex-compliant primitives.json. Semantic tokens are strictly excluded.');
+  console.log('Codex-compliant primitives.json generated.');
 }
 
 main();
