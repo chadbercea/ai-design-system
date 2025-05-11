@@ -39,5 +39,9 @@
   "smRadius": { "$type": "borderRadius", "$value": "4", "$description": "Small border radius" },
   "lgRadius": { "$type": "borderRadius", "$value": "8", "$description": "Large border radius" },
   "xlRadius": { "$type": "borderRadius", "$value": "16", "$description": "Extra large border radius" },
-  "multiValueRadius": { "$type": "borderRadius", "$value": "{smRadius} {lgRadius}", "$description": "Multiple values in a single radius token." }
+  "multiValueRadius": { "$type": "borderRadius", "$value": "{smRadius} {lgRadius}", "$description": "Multiple values in a single radius token." },
+  "black": { "$type": "color", "$value": "#000000", "$description": "Primary black color" },
+  "white": { "$type": "color", "$value": "#ffffff", "$description": "Primary white color" },
+  "gray.100": { "$type": "color", "$value": "#f7fafc", "$description": "Gray 100 color" },
+  "gray.200": { "$type": "color", "$value": "#edf2f7", "$description": "Gray 200 color" }
 }
