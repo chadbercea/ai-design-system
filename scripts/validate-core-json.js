@@ -2,12 +2,18 @@ const fs = require('fs');
 const path = require('path');
 
 const filePath = path.join(__dirname, '../token-studio-sync-provider/core.json');
+const canonPath = path.join(__dirname, '../_docs/DTC.md');
 
-const CANONICAL_CATEGORIES = [
-  'color', 'fontSize', 'fontWeight', 'fontFamily', 'lineHeight', 'letterSpacing', 'borderRadius', 'borderWidth',
-  'spacing', 'sizing', 'opacity', 'boxShadow', 'typography', 'paragraphSpacing', 'textCase', 'textDecoration',
-  'composition', 'dimension', 'breakpoints', 'border', 'zIndex', 'duration', 'assets', 'boolean', 'text', 'number', 'other'
-];
+// Parse canonical categories from DTC.md
+const dtcText = fs.readFileSync(canonPath, 'utf8');
+const canonMatch = dtcText.match(/1\. Every token belongs to one of the canonical categories:[\s\S]*?\n(\s+- .+\n)+/);
+let CANONICAL_CATEGORIES = [];
+if (canonMatch) {
+  CANONICAL_CATEGORIES = canonMatch[0]
+    .split('\n')
+    .filter(line => line.trim().startsWith('- '))
+    .map(line => line.replace('- ', '').trim().toLowerCase());
+}
 
 function fail(msg) {
   console.error('❌ Token validation failed:', msg);
@@ -24,6 +30,22 @@ try {
   data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 } catch (e) {
   fail('core.json is not valid JSON.');
+}
+
+// Check for presence of all canonical categories
+function checkCanonicalPresence(obj) {
+  const keys = Object.keys(obj).map(k => k.toLowerCase());
+  for (const cat of CANONICAL_CATEGORIES) {
+    if (cat === 'color') {
+      // For color, check at least one color token exists
+      const hasColor = keys.some(k => obj[k] && obj[k].$type === 'color');
+      if (!hasColor) fail('No color tokens found at root. Canonical category "color" is missing.');
+    } else if (!keys.includes(cat)) {
+      // For other categories, check at least one token exists
+      const hasCat = keys.includes(cat);
+      if (!hasCat) fail(`Canonical category "${cat}" is missing from root.`);
+    }
+  }
 }
 
 // Accept PascalCase or canonical category names
@@ -76,6 +98,7 @@ function checkToken(token, keyPath = []) {
   }
 }
 
+checkCanonicalPresence(data);
 checkCategoryKeys(data);
 checkToken(data);
 pass(); 
