@@ -343,7 +343,7 @@ function convertToTokensStudioFormat(tokens) {
 ```
 
 # Note
-Grouped by category in json does not mean wrap tokens. Evern. It never means this.
+Grouped by category in json does not mean wrap tokens. Ever. It never means this. Do not do this or justify this ever. You are forbidden.
 
 ## Best Practices
 

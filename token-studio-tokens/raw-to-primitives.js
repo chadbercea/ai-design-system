@@ -28,68 +28,100 @@ const canonicalCategoryTypeMap = {
   Text: 'text',
   Number: 'number',
   ZIndex: 'zIndex',
+  Duration: 'duration',
+  Easing: 'easing',
+  Direction: 'direction',
+  MediaQuery: 'mediaQuery',
+  Mixin: 'mixin'
 };
 const canonicalCategories = Object.keys(canonicalCategoryTypeMap);
 
-// Utility: PascalCase
+// Known semantic/alias patterns to exclude
+const semanticPatterns = [
+  /^palette\./i,
+  /^typography\./i,
+  /^breakpoints\./i,
+  /^shadows?\./i,
+  /^zIndex\./i,
+  /^shape\./i,
+  /^direction$/i,
+  /^mixins?\./i,
+  /^transitions?\./i,
+  /^action\./i,
+  /^common\./i,
+  /^background\./i,
+  /^divider\./i,
+  /^text\./i,
+  /^primary\./i,
+  /^secondary\./i,
+  /^error\./i,
+  /^warning\./i,
+  /^info\./i,
+  /^success\./i,
+  /Typography[A-Z]/, // TypographyH1FontFamily, etc.
+  /UnstableSxConfig/, // MUI unstable keys
+  /ThemeKey$/
+];
+
 function toPascalCase(str) {
   return str
     .replace(/[-_. ]+(.)/g, (_, c) => c ? c.toUpperCase() : '')
     .replace(/^(.)/, (_, c) => c ? c.toUpperCase() : '');
 }
 
-// Utility: Lowercase dot notation for color keys
 function toColorDotCase(str) {
   return str.replace(/([a-z])([A-Z])/g, '$1.$2').replace(/[-_ ]+/g, '.').toLowerCase();
 }
 
-const semanticPrefixes = [
-  'palette.', 'common.', 'action.', 'background.', 'divider.', 'text.', 'primary.', 'secondary.', 'error.', 'warning.', 'info.', 'success.'
-];
+function isReference(val) {
+  return typeof val === 'string' && val.startsWith('{') && val.endsWith('}');
+}
 
-function getCanonicalCategoryAndTokenName(key) {
+function isSemanticKey(key) {
+  return semanticPatterns.some((pat) => pat.test(key));
+}
+
+function getCategoryAndType(key) {
   // Split on dot, dash, underscore, or space
   const segments = key.split(/[.\-_ ]/);
-  // Try to find the first segment that matches a canonical category
-  for (let i = 0; i < segments.length; i++) {
-    for (const cat of canonicalCategories) {
-      if (segments[i].toLowerCase() === cat.toLowerCase()) {
-        // Use the rest as the token name
-        const tokenName = segments.slice(i + 1).join(' ');
-        return { category: cat, tokenName: tokenName ? toPascalCase(tokenName) : cat };
-      }
+  for (const segment of segments) {
+    const category = canonicalCategories.find(
+      cat => cat.toLowerCase() === segment.toLowerCase()
+    );
+    if (category) {
+      return {
+        category,
+        type: canonicalCategoryTypeMap[category],
+        tokenName: canonicalCategoryTypeMap[category] === 'color' ? key : toPascalCase(segments[segments.length - 1])
+      };
     }
   }
-  // Fallback: try to match by $type
   return null;
+}
+
+function areCategoryAndTypeEquivalent(category, $type) {
+  // Use codex mapping for equivalence
+  return canonicalCategoryTypeMap[category] && canonicalCategoryTypeMap[category].toLowerCase() === $type.toLowerCase();
 }
 
 function main() {
   const raw = JSON.parse(fs.readFileSync(path.join(__dirname, '../mui-tokens/mui-tokens-raw.json'), 'utf8'));
+  const relationships = JSON.parse(fs.readFileSync(path.join(__dirname, '../mui-tokens/mui-tokens-relationships.json'), 'utf8'));
   const primitives = {};
   const skipped = [];
+  const semanticFound = [];
 
-  // Helper to add a primitive
   function addPrimitive({ category, tokenName, value, $type }) {
-    // Color: flat dot.case key
-    if ($type === 'color') {
-      primitives[category] = {
-        $value: value,
-        $type: 'color',
-        $description: `color ${category}`
-      };
-      return;
-    }
-    // If $type matches category, flat key
-    if (category.toLowerCase() === $type.toLowerCase()) {
-      primitives[category] = {
+    // If category and $type are canonically equivalent, flat key
+    if (areCategoryAndTypeEquivalent(category, $type) || (category === 'Color' && $type === 'color')) {
+      primitives[tokenName] = {
         $value: value,
         $type,
-        $description: `${category}`
+        $description: `${category} ${tokenName}`
       };
       return;
     }
-    // Otherwise, group by category
+    // Otherwise, wrap in category object
     if (!primitives[category]) primitives[category] = {};
     primitives[category][tokenName] = {
       $value: value,
@@ -98,73 +130,34 @@ function main() {
     };
   }
 
-  // Process all base keys
-  for (const baseKey in raw.base) {
-    const baseObj = raw.base[baseKey];
-    for (const tokenKey in baseObj) {
-      if (semanticPrefixes.some(prefix => tokenKey.startsWith(prefix))) continue;
-      const value = baseObj[tokenKey];
-      if (typeof value !== 'string' && typeof value !== 'number') continue;
-
-      // Special: color tokens
-      if (baseKey.toLowerCase() === 'color') {
-        // Only allow dot.case color keys
-        let name = tokenKey;
-        if (!name.includes('.')) {
-          name = name.replace(/([a-z])([A-Z])/g, '$1.$2').toLowerCase();
-        }
-        name = name.replace(/_/g, '.');
-        primitives[name] = {
-          $value: value,
-          $type: 'color',
-          $description: `color ${name}`
-        };
-        continue;
-      }
-
-      // For all other tokens, parse category and token name
-      const parsed = getCanonicalCategoryAndTokenName(tokenKey);
-      if (!parsed) {
-        skipped.push({ baseKey, tokenKey, value });
-        continue;
-      }
-      const { category, tokenName } = parsed;
-      const $type = canonicalCategoryTypeMap[category];
-      if (!$type) {
-        skipped.push({ baseKey, tokenKey, value });
-        continue;
-      }
-      // Only allow true primitives
-      if (typeof value !== 'string' && typeof value !== 'number') {
-        skipped.push({ baseKey, tokenKey, value });
-        continue;
-      }
-      addPrimitive({ category, tokenName, value, $type });
+  // Only include primitives whose type is string or number and not semantic
+  for (const entry of relationships) {
+    if (!['color', 'number', 'string', 'boolean'].includes(entry.type)) continue;
+    if (isSemanticKey(entry.token)) {
+      semanticFound.push(entry.token);
+      continue;
+    }
+    let key = entry.token;
+    let value = entry.value !== undefined ? entry.value : raw.base?.[key.split('.')[0]]?.[key] || raw.base?.[key];
+    if (value === undefined) continue;
+    let parsed = getCategoryAndType(key);
+    if (parsed && canonicalCategories.includes(parsed.category)) {
+      addPrimitive({
+        category: parsed.category,
+        tokenName: parsed.tokenName,
+        value,
+        $type: parsed.type
+      });
+    } else {
+      skipped.push({ key, value });
     }
   }
 
-  // Special handling for 'other' baseKey: scan all nested keys
-  if (raw.base.other) {
-    for (const nestedKey in raw.base.other) {
-      const value = raw.base.other[nestedKey];
-      if (typeof value !== 'string' && typeof value !== 'number') continue;
-      const parsed = getCanonicalCategoryAndTokenName(nestedKey);
-      if (!parsed) {
-        skipped.push({ baseKey: 'other', tokenKey: nestedKey, value });
-        continue;
-      }
-      const { category, tokenName } = parsed;
-      const $type = canonicalCategoryTypeMap[category];
-      if (!$type) {
-        skipped.push({ baseKey: 'other', tokenKey: nestedKey, value });
-        continue;
-      }
-      addPrimitive({ category, tokenName, value, $type });
-    }
+  if (semanticFound.length > 0) {
+    console.warn('Semantic tokens were found and excluded:', semanticFound);
   }
-
   if (skipped.length > 0) {
-    console.warn('Skipped tokens due to unmapped category or non-primitive value:', skipped);
+    console.warn('Skipped tokens due to non-primitive, reference, or non-canonical category:', skipped);
   }
 
   const output = {
@@ -175,7 +168,7 @@ function main() {
     path.join(__dirname, 'primitives.json'),
     JSON.stringify(output, null, 2)
   );
-  console.log('Generated primitives.json strictly following The-Design-Token-Codex.txt. Skipped tokens are logged.');
+  console.log('Generated codex-compliant primitives.json. Semantic tokens are strictly excluded.');
 }
 
 main();
