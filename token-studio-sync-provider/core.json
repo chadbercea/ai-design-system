@@ -331,22 +331,20 @@
     "pink.800": { "$type": "color", "$value": "#97266d", "$description": "Pink 800 color" },
     "pink.900": { "$type": "color", "$value": "#702459", "$description": "Pink 900 color" }
   },
-  "opacity": {
-    "low": {
-      "$type": "opacity",
-      "$value": "10%",
-      "$description": "Low opacity value"
-    },
-    "md": {
-      "$type": "opacity",
-      "$value": "50%",
-      "$description": "Medium opacity value"
-    },
-    "high": {
-      "$type": "opacity",
-      "$value": "90%",
-      "$description": "High opacity value"
-    }
+  "opacityLow": {
+    "$type": "opacity",
+    "$value": "10%",
+    "$description": "Low opacity value"
+  },
+  "opacityMedium": {
+    "$type": "opacity",
+    "$value": "50%",
+    "$description": "Medium opacity value"
+  },
+  "opacityHigh": {
+    "$type": "opacity",
+    "$value": "90%",
+    "$description": "High opacity value"
   },
   "fontFamily": {
     "heading": {
