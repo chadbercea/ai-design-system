@@ -3,6 +3,14 @@ const path = require('path');
 const { createTheme } = require('@mui/material/styles');
 const colors = require('@mui/material/colors');
 
+// Helper function to convert string to PascalCase
+function toPascalCase(str) {
+  return str
+    .split(/[-_. ]/)
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('');
+}
+
 // Create the default MUI theme
 const theme = createTheme();
 
@@ -35,7 +43,8 @@ for (const colorName of colorNames) {
 primitives.Primitives.FontFamily = {
   Primary: {
     $type: 'fontFamily',
-    $value: theme.typography.fontFamily
+    $value: theme.typography.fontFamily,
+    $description: 'Primary font family'
   }
 };
 
@@ -43,19 +52,23 @@ primitives.Primitives.FontFamily = {
 primitives.Primitives.FontWeight = {
   Light: {
     $type: 'fontWeight',
-    $value: theme.typography.fontWeightLight.toString()
+    $value: theme.typography.fontWeightLight.toString(),
+    $description: 'Light font weight'
   },
   Regular: {
     $type: 'fontWeight',
-    $value: theme.typography.fontWeightRegular.toString()
+    $value: theme.typography.fontWeightRegular.toString(),
+    $description: 'Regular font weight'
   },
   Medium: {
     $type: 'fontWeight',
-    $value: theme.typography.fontWeightMedium.toString()
+    $value: theme.typography.fontWeightMedium.toString(),
+    $description: 'Medium font weight'
   },
   Bold: {
     $type: 'fontWeight',
-    $value: theme.typography.fontWeightBold.toString()
+    $value: theme.typography.fontWeightBold.toString(),
+    $description: 'Bold font weight'
   }
 };
 
@@ -63,53 +76,102 @@ primitives.Primitives.FontWeight = {
 primitives.Primitives.FontSize = {
   Base: {
     $type: 'fontSize',
-    $value: theme.typography.fontSize.toString()
+    $value: theme.typography.fontSize.toString(),
+    $description: 'Base font size'
   }
 };
 
 // Add per-style font sizes
-for (const key in theme.typography) {
-  if (
-    theme.typography[key] &&
-    typeof theme.typography[key] === 'object' &&
-    theme.typography[key].fontSize
-  ) {
-    primitives.Primitives.FontSize[key] = {
+const typographyStyles = [
+  'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+  'subtitle1', 'subtitle2',
+  'body1', 'body2',
+  'button', 'caption', 'overline'
+];
+
+typographyStyles.forEach(style => {
+  if (theme.typography[style]?.fontSize) {
+    primitives.Primitives.FontSize[toPascalCase(style)] = {
       $type: 'fontSize',
-      $value: theme.typography[key].fontSize.toString()
+      $value: theme.typography[style].fontSize.toString(),
+      $description: `${toPascalCase(style)} font size`
     };
   }
-}
+});
 
 // Line Heights
 primitives.Primitives.LineHeight = {};
-for (const key in theme.typography) {
-  if (
-    theme.typography[key] &&
-    typeof theme.typography[key] === 'object' &&
-    theme.typography[key].lineHeight
-  ) {
-    primitives.Primitives.LineHeight[key] = {
+typographyStyles.forEach(style => {
+  if (theme.typography[style]?.lineHeight) {
+    primitives.Primitives.LineHeight[toPascalCase(style)] = {
       $type: 'lineHeight',
-      $value: theme.typography[key].lineHeight.toString()
+      $value: theme.typography[style].lineHeight.toString(),
+      $description: `${toPascalCase(style)} line height`
     };
   }
-}
+});
 
 // Letter Spacing
-primitives.Primitives.LetterSpacing = {};
-for (const key in theme.typography) {
-  if (
-    theme.typography[key] &&
-    typeof theme.typography[key] === 'object' &&
-    theme.typography[key].letterSpacing
-  ) {
-    primitives.Primitives.LetterSpacing[key] = {
+primitives.Primitives.LetterSpacing = {
+  Base: {
+    $type: 'letterSpacing',
+    $value: theme.typography.letterSpacing.toString(),
+    $description: 'Base letter spacing'
+  }
+};
+
+typographyStyles.forEach(style => {
+  if (theme.typography[style]?.letterSpacing) {
+    primitives.Primitives.LetterSpacing[toPascalCase(style)] = {
       $type: 'letterSpacing',
-      $value: theme.typography[key].letterSpacing.toString()
+      $value: theme.typography[style].letterSpacing.toString(),
+      $description: `${toPascalCase(style)} letter spacing`
     };
   }
-}
+});
+
+// Text Case
+primitives.Primitives.TextCase = {
+  None: {
+    $type: 'textCase',
+    $value: 'none',
+    $description: 'No text case transformation'
+  },
+  Uppercase: {
+    $type: 'textCase',
+    $value: 'uppercase',
+    $description: 'Uppercase text transformation'
+  },
+  Lowercase: {
+    $type: 'textCase',
+    $value: 'lowercase',
+    $description: 'Lowercase text transformation'
+  },
+  Capitalize: {
+    $type: 'textCase',
+    $value: 'capitalize',
+    $description: 'Capitalize text transformation'
+  }
+};
+
+// Text Decoration
+primitives.Primitives.TextDecoration = {
+  None: {
+    $type: 'textDecoration',
+    $value: 'none',
+    $description: 'No text decoration'
+  },
+  Underline: {
+    $type: 'textDecoration',
+    $value: 'underline',
+    $description: 'Underline text decoration'
+  },
+  LineThrough: {
+    $type: 'textDecoration',
+    $value: 'line-through',
+    $description: 'Line through text decoration'
+  }
+};
 
 // 3. Extract Spacing
 primitives.Primitives.Spacing = {
