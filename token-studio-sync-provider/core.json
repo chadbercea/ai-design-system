@@ -1,123 +1,88 @@
 {
   "0": {
-    "$type": "sizing",
-    "$value": "0",
-    "$description": "Zero size"
+    "$type": "spacing",
+    "$value": 0,
+    "$description": "No spacing"
+  },
+  "none": {
+    "$type": "spacing",
+    "$value": 0,
+    "$description": "No spacing (alias)"
   },
   "1": {
-    "$type": "sizing",
-    "$value": "0.25rem",
-    "$description": "Extra small size"
+    "$type": "spacing",
+    "$value": 8,
+    "$description": "Spacing scale 1"
   },
   "2": {
-    "$type": "sizing",
-    "$value": "0.5rem",
-    "$description": "Small size"
+    "$type": "spacing",
+    "$value": 16,
+    "$description": "Spacing scale 2"
   },
   "3": {
-    "$type": "sizing",
-    "$value": "0.75rem",
-    "$description": "Medium small size"
+    "$type": "spacing",
+    "$value": 24,
+    "$description": "Spacing scale 3"
   },
   "4": {
-    "$type": "sizing",
-    "$value": "1rem",
-    "$description": "Medium size"
+    "$type": "spacing",
+    "$value": 32,
+    "$description": "Spacing scale 4"
   },
   "5": {
-    "$type": "sizing",
-    "$value": "1.25rem",
-    "$description": "Medium large size"
+    "$type": "spacing",
+    "$value": 40,
+    "$description": "Spacing scale 5"
   },
   "6": {
-    "$type": "sizing",
-    "$value": "1.5rem",
-    "$description": "Large size"
+    "$type": "spacing",
+    "$value": 48,
+    "$description": "Spacing scale 6"
+  },
+  "7": {
+    "$type": "spacing",
+    "$value": 56,
+    "$description": "Spacing scale 7"
   },
   "8": {
-    "$type": "sizing",
-    "$value": "2rem",
-    "$description": "Extra large size"
+    "$type": "spacing",
+    "$value": 64,
+    "$description": "Spacing scale 8"
+  },
+  "9": {
+    "$type": "spacing",
+    "$value": 72,
+    "$description": "Spacing scale 9"
   },
   "10": {
-    "$type": "sizing",
-    "$value": "2.5rem",
-    "$description": "2x large size"
+    "$type": "spacing",
+    "$value": 80,
+    "$description": "Spacing scale 10"
+  },
+  "11": {
+    "$type": "spacing",
+    "$value": 88,
+    "$description": "Spacing scale 11"
   },
   "12": {
-    "$type": "sizing",
-    "$value": "3rem",
-    "$description": "3x large size"
-  },
-  "15": {
-    "$type": "sizing",
-    "$value": "0.375rem",
-    "$description": "1.5x size"
-  },
-  "16": {
-    "$type": "sizing",
-    "$value": "4rem",
-    "$description": "4x large size"
-  },
-  "20": {
-    "$type": "sizing",
-    "$value": "5rem",
-    "$description": "5x large size"
-  },
-  "24": {
-    "$type": "sizing",
-    "$value": "6rem",
-    "$description": "6x large size"
-  },
-  "25": {
-    "$type": "sizing",
-    "$value": "0.625rem",
-    "$description": "2.5x size"
+    "$type": "spacing",
+    "$value": 96,
+    "$description": "Spacing scale 12"
   },
   "30": {
     "$type": "opacity",
     "$value": "30%",
     "$description": "30% opacity"
   },
-  "32": {
-    "$type": "sizing",
-    "$value": "8rem",
-    "$description": "8x large size"
-  },
-  "35": {
-    "$type": "sizing",
-    "$value": "0.875rem",
-    "$description": "3.5x size"
-  },
-  "40": {
-    "$type": "sizing",
-    "$value": "10rem",
-    "$description": "10x large size"
-  },
-  "48": {
-    "$type": "sizing",
-    "$value": "12rem",
-    "$description": "12x large size"
-  },
   "50": {
     "$type": "opacity",
     "$value": "50%",
     "$description": "50% opacity"
   },
-  "56": {
-    "$type": "sizing",
-    "$value": "14rem",
-    "$description": "14x large size"
-  },
   "60": {
     "$type": "opacity",
     "$value": "60%",
     "$description": "60% opacity"
-  },
-  "64": {
-    "$type": "sizing",
-    "$value": "16rem",
-    "$description": "16x large size"
   },
   "70": {
     "$type": "opacity",
@@ -724,11 +689,6 @@
     "$value": "800",
     "$description": "Extra bold font weight"
   },
-  "none": {
-    "$type": "borderWidth",
-    "$value": "0px",
-    "$description": "No border width"
-  },
   "tight": {
     "$type": "letterSpacing",
     "$value": "-0.025em",
@@ -779,49 +739,9 @@
     "$value": "26",
     "$description": "Spacing after H2 headings"
   },
-  "full": {
-    "$type": "sizing",
-    "$value": "100%",
-    "$description": "Full size"
-  },
   "thick": {
     "$type": "borderWidth",
     "$value": "4px",
     "$description": "Thick border width"
-  },
-  "auto": {
-    "$type": "sizing",
-    "$value": "auto",
-    "$description": "Automatic size"
-  },
-  "px": {
-    "$type": "sizing",
-    "$value": "1px",
-    "$description": "1 pixel size"
-  },
-  "05": {
-    "$type": "sizing",
-    "$value": "0.125rem",
-    "$description": "0.5x size"
-  },
-  "screen": {
-    "$type": "sizing",
-    "$value": "100vw",
-    "$description": "Screen width size"
-  },
-  "min": {
-    "$type": "sizing",
-    "$value": "min-content",
-    "$description": "Minimum content size"
-  },
-  "max": {
-    "$type": "sizing",
-    "$value": "max-content",
-    "$description": "Maximum content size"
-  },
-  "fit": {
-    "$type": "sizing",
-    "$value": "fit-content",
-    "$description": "Fit content size"
   }
 }
