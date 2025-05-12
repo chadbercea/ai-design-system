@@ -5,27 +5,27 @@ const { createTheme } = require('@mui/material/styles');
 // Create the default MUI theme
 const theme = createTheme();
 
-// Extract fontWeight tokens from typography
-const fontWeightTokens = {
+// Extract fontWeights tokens from typography
+const fontWeightsTokens = {
   'light': {
-    $type: 'fontWeight',
-    $value: theme.typography.fontWeightLight.toString()
+    $type: 'fontWeights',
+    $value: theme.typography.fontWeightsLight.toString()
   },
   'regular': {
-    $type: 'fontWeight',
-    $value: theme.typography.fontWeightRegular.toString()
+    $type: 'fontWeights',
+    $value: theme.typography.fontWeightsRegular.toString()
   },
   'medium': {
-    $type: 'fontWeight',
-    $value: theme.typography.fontWeightMedium.toString()
+    $type: 'fontWeights',
+    $value: theme.typography.fontWeightsMedium.toString()
   },
   'bold': {
-    $type: 'fontWeight',
-    $value: theme.typography.fontWeightBold.toString()
+    $type: 'fontWeights',
+    $value: theme.typography.fontWeightsBold.toString()
   }
 };
 
 // Write to JSON file
 const outPath = path.join(__dirname, 'mui-token-font-weight.json');
-fs.writeFileSync(outPath, JSON.stringify(fontWeightTokens, null, 2));
+fs.writeFileSync(outPath, JSON.stringify(fontWeightsTokens, null, 2));
 console.log(`MUI font weight tokens written to ${outPath}`);

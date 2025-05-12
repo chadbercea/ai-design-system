@@ -1173,19 +1173,19 @@
       "$value": "inherit"
     },
     "light": {
-      "$type": "fontWeight",
+      "$type": "fontWeights",
       "$value": "300"
     },
     "regular": {
-      "$type": "fontWeight",
+      "$type": "fontWeights",
       "$value": "400"
     },
     "medium": {
-      "$type": "fontWeight",
+      "$type": "fontWeights",
       "$value": "500"
     },
     "bold": {
-      "$type": "fontWeight",
+      "$type": "fontWeights",
       "$value": "700"
     },
     "hoverOpacity": {

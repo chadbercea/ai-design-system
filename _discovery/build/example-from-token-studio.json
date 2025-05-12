@@ -520,21 +520,21 @@
         "$value": "26"
       }
     },
-    "fontWeights": {
+    "fontWeightss": {
       "headingRegular": {
-        "$type": "fontWeights",
+        "$type": "fontWeightss",
         "$value": "Regular"
       },
       "headingBold": {
-        "$type": "fontWeights",
+        "$type": "fontWeightss",
         "$value": "Bold"
       },
       "bodyRegular": {
-        "$type": "fontWeights",
+        "$type": "fontWeightss",
         "$value": "Regular"
       },
       "bodyBold": {
-        "$type": "fontWeights",
+        "$type": "fontWeightss",
         "$value": "Bold"
       }
     },

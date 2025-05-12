@@ -13,8 +13,8 @@ Follow this precise order of operations when processing tokens:
 2. Use **exactly** these type values:
    - `color`
    - `fontSize` (not fontSizes)
-   - `fontWeight` (not fontWeights)
-   - `fontFamily` (not fontFamilies)
+   - `fontWeights` (not fontWeightss)
+   - `fontFamilies` (not fontFamilies)
    - `lineHeight` (not lineHeights)
    - `letterSpacing`
    - `borderRadius`
@@ -43,8 +43,8 @@ Follow this precise order of operations when processing tokens:
 1. Every token belongs to one of the canonical categories:
    - Color
    - FontSize
-   - FontWeight
-   - FontFamily
+   - fontWeights
+   - fontFamilies
    - LineHeight
    - LetterSpacing
    - BorderRadius
@@ -144,9 +144,9 @@ Apply this critical test to determine token placement:
       "H1": {
         "$type": "typography",
         "$value": {
-          "fontFamily": "{Primitives.FontFamily.Primary}",
+          "fontFamilies": "{Primitives.fontFamilies.Primary}",
           "fontSize": "{Primitives.Xl}",
-          "fontWeight": "{Primitives.Bold}",
+          "fontWeights": "{Primitives.Bold}",
           "lineHeight": "{Primitives.LineHeight.Xl}"
         },
         "$description": "H1 heading style"
@@ -186,7 +186,7 @@ Apply this critical test to determine token placement:
     },
     "Bold": {
       "$value": "700",
-      "$type": "fontWeight",
+      "$type": "fontWeights",
       "$description": "Bold font weight"
     },
     
@@ -206,9 +206,9 @@ Apply this critical test to determine token placement:
         "H1": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{Primitives.FontFamily.Primary}",
+            "fontFamilies": "{Primitives.fontFamilies.Primary}",
             "fontSize": "{Primitives.Xl}",
-            "fontWeight": "{Primitives.Bold}",
+            "fontWeights": "{Primitives.Bold}",
             "lineHeight": "{Primitives.LineHeightXl}"
           },
           "$description": "H1 heading style"

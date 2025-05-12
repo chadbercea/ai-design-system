@@ -673,10 +673,10 @@
       "maxHeight",
       "minHeight",
       "boxSizing",
-      "fontFamily",
+      "fontFamilies",
       "fontSize",
       "fontStyle",
-      "fontWeight",
+      "fontWeights",
       "letterSpacing",
       "textTransform",
       "lineHeight",
@@ -1678,14 +1678,14 @@
     "children": []
   },
   {
-    "token": "unstable_sxConfig.fontFamily",
+    "token": "unstable_sxConfig.fontFamilies",
     "type": "object",
     "children": [
       "themeKey"
     ]
   },
   {
-    "token": "unstable_sxConfig.fontFamily.themeKey",
+    "token": "unstable_sxConfig.fontFamilies.themeKey",
     "type": "string",
     "value": "typography"
   },
@@ -1714,14 +1714,14 @@
     "value": "typography"
   },
   {
-    "token": "unstable_sxConfig.fontWeight",
+    "token": "unstable_sxConfig.fontWeights",
     "type": "object",
     "children": [
       "themeKey"
     ]
   },
   {
-    "token": "unstable_sxConfig.fontWeight.themeKey",
+    "token": "unstable_sxConfig.fontWeights.themeKey",
     "type": "string",
     "value": "typography"
   },
@@ -1856,12 +1856,12 @@
     "children": [
       "htmlFontSize",
       "pxToRem",
-      "fontFamily",
+      "fontFamilies",
       "fontSize",
-      "fontWeightLight",
-      "fontWeightRegular",
-      "fontWeightMedium",
-      "fontWeightBold",
+      "fontWeightsLight",
+      "fontWeightsRegular",
+      "fontWeightsMedium",
+      "fontWeightsBold",
       "h1",
       "h2",
       "h3",
@@ -1888,7 +1888,7 @@
     "type": "other"
   },
   {
-    "token": "typography.fontFamily",
+    "token": "typography.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
@@ -1898,22 +1898,22 @@
     "value": 14
   },
   {
-    "token": "typography.fontWeightLight",
+    "token": "typography.fontWeightsLight",
     "type": "number",
     "value": 300
   },
   {
-    "token": "typography.fontWeightRegular",
+    "token": "typography.fontWeightsRegular",
     "type": "number",
     "value": 400
   },
   {
-    "token": "typography.fontWeightMedium",
+    "token": "typography.fontWeightsMedium",
     "type": "number",
     "value": 500
   },
   {
-    "token": "typography.fontWeightBold",
+    "token": "typography.fontWeightsBold",
     "type": "number",
     "value": 700
   },
@@ -1921,20 +1921,20 @@
     "token": "typography.h1",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.h1.fontFamily",
+    "token": "typography.h1.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.h1.fontWeight",
+    "token": "typography.h1.fontWeights",
     "type": "number",
     "value": 300
   },
@@ -1957,20 +1957,20 @@
     "token": "typography.h2",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.h2.fontFamily",
+    "token": "typography.h2.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.h2.fontWeight",
+    "token": "typography.h2.fontWeights",
     "type": "number",
     "value": 300
   },
@@ -1993,20 +1993,20 @@
     "token": "typography.h3",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.h3.fontFamily",
+    "token": "typography.h3.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.h3.fontWeight",
+    "token": "typography.h3.fontWeights",
     "type": "number",
     "value": 400
   },
@@ -2029,20 +2029,20 @@
     "token": "typography.h4",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.h4.fontFamily",
+    "token": "typography.h4.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.h4.fontWeight",
+    "token": "typography.h4.fontWeights",
     "type": "number",
     "value": 400
   },
@@ -2065,20 +2065,20 @@
     "token": "typography.h5",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.h5.fontFamily",
+    "token": "typography.h5.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.h5.fontWeight",
+    "token": "typography.h5.fontWeights",
     "type": "number",
     "value": 400
   },
@@ -2101,20 +2101,20 @@
     "token": "typography.h6",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.h6.fontFamily",
+    "token": "typography.h6.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.h6.fontWeight",
+    "token": "typography.h6.fontWeights",
     "type": "number",
     "value": 500
   },
@@ -2137,20 +2137,20 @@
     "token": "typography.subtitle1",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.subtitle1.fontFamily",
+    "token": "typography.subtitle1.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.subtitle1.fontWeight",
+    "token": "typography.subtitle1.fontWeights",
     "type": "number",
     "value": 400
   },
@@ -2173,20 +2173,20 @@
     "token": "typography.subtitle2",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.subtitle2.fontFamily",
+    "token": "typography.subtitle2.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.subtitle2.fontWeight",
+    "token": "typography.subtitle2.fontWeights",
     "type": "number",
     "value": 500
   },
@@ -2209,20 +2209,20 @@
     "token": "typography.body1",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.body1.fontFamily",
+    "token": "typography.body1.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.body1.fontWeight",
+    "token": "typography.body1.fontWeights",
     "type": "number",
     "value": 400
   },
@@ -2245,20 +2245,20 @@
     "token": "typography.body2",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.body2.fontFamily",
+    "token": "typography.body2.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.body2.fontWeight",
+    "token": "typography.body2.fontWeights",
     "type": "number",
     "value": 400
   },
@@ -2281,8 +2281,8 @@
     "token": "typography.button",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing",
@@ -2290,12 +2290,12 @@
     ]
   },
   {
-    "token": "typography.button.fontFamily",
+    "token": "typography.button.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.button.fontWeight",
+    "token": "typography.button.fontWeights",
     "type": "number",
     "value": 500
   },
@@ -2323,20 +2323,20 @@
     "token": "typography.caption",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.caption.fontFamily",
+    "token": "typography.caption.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.caption.fontWeight",
+    "token": "typography.caption.fontWeights",
     "type": "number",
     "value": 400
   },
@@ -2359,8 +2359,8 @@
     "token": "typography.overline",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing",
@@ -2368,12 +2368,12 @@
     ]
   },
   {
-    "token": "typography.overline.fontFamily",
+    "token": "typography.overline.fontFamilies",
     "type": "string",
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.overline.fontWeight",
+    "token": "typography.overline.fontWeights",
     "type": "number",
     "value": 400
   },
@@ -2401,20 +2401,20 @@
     "token": "typography.inherit",
     "type": "object",
     "children": [
-      "fontFamily",
-      "fontWeight",
+      "fontFamilies",
+      "fontWeights",
       "fontSize",
       "lineHeight",
       "letterSpacing"
     ]
   },
   {
-    "token": "typography.inherit.fontFamily",
+    "token": "typography.inherit.fontFamilies",
     "type": "string",
     "value": "inherit"
   },
   {
-    "token": "typography.inherit.fontWeight",
+    "token": "typography.inherit.fontWeights",
     "type": "string",
     "value": "inherit"
   },

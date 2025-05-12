@@ -8,8 +8,8 @@ The definitive order of operations for all token processing:
 2. Use **exactly** these type values:
    - `color`
    - `fontSize` (not fontSizes)
-   - `fontWeight` (not fontWeights)
-   - `fontFamily` (not fontFamilies)
+   - `fontWeights` (not fontWeightss)
+   - `fontFamilies` (not fontFamilies)
    - `lineHeight` (not lineHeights)
    - `letterSpacing`
    - `borderRadius`
@@ -38,8 +38,8 @@ The definitive order of operations for all token processing:
 1. Every token belongs to one of the canonical categories:
    - Color
    - FontSize
-   - FontWeight
-   - FontFamily
+   - fontWeights
+   - fontFamilies
    - LineHeight
    - LetterSpacing
    - BorderRadius

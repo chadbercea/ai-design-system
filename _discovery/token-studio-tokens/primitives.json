@@ -1536,32 +1536,32 @@
       "$type": "opacity",
       "$description": "Opacity ActivatedOpacity"
     },
-    "FontFamily": {
+    "fontFamilies": {
       "Primary": {
         "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$type": "fontFamily",
+        "$type": "fontFamilies",
         "$description": "Primary font family"
       }
     },
-    "FontWeight": {
+    "fontWeights": {
       "Light": {
         "$value": 300,
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$description": "Light font weight"
       },
       "Regular": {
         "$value": 400,
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$description": "Regular font weight"
       },
       "Medium": {
         "$value": 500,
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$description": "Medium font weight"
       },
       "Bold": {
         "$value": 700,
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$description": "Bold font weight"
       }
     },

@@ -10,8 +10,8 @@
           "enum": [
             "color",
             "fontSize",
-            "fontWeight",
-            "fontFamily",
+            "fontWeights",
+            "fontFamilies",
             "lineHeight",
             "letterSpacing",
             "borderRadius",

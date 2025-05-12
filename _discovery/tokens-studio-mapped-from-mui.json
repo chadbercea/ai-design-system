@@ -235,9 +235,9 @@
     "h1": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "6rem",
-        "fontWeight": "300",
+        "fontWeights": "300",
         "lineHeight": "1.167",
         "letterSpacing": "-0.01562em"
       }
@@ -245,9 +245,9 @@
     "h2": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "3.75rem",
-        "fontWeight": "300",
+        "fontWeights": "300",
         "lineHeight": "1.2",
         "letterSpacing": "-0.00833em"
       }
@@ -255,9 +255,9 @@
     "h3": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "3rem",
-        "fontWeight": "400",
+        "fontWeights": "400",
         "lineHeight": "1.167",
         "letterSpacing": "0em"
       }
@@ -265,9 +265,9 @@
     "h4": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "2.125rem",
-        "fontWeight": "400",
+        "fontWeights": "400",
         "lineHeight": "1.235",
         "letterSpacing": "0.00735em"
       }
@@ -275,9 +275,9 @@
     "h5": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "1.5rem",
-        "fontWeight": "400",
+        "fontWeights": "400",
         "lineHeight": "1.334",
         "letterSpacing": "0em"
       }
@@ -285,9 +285,9 @@
     "h6": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "1.25rem",
-        "fontWeight": "500",
+        "fontWeights": "500",
         "lineHeight": "1.6",
         "letterSpacing": "0.0075em"
       }
@@ -295,9 +295,9 @@
     "subtitle1": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "1rem",
-        "fontWeight": "400",
+        "fontWeights": "400",
         "lineHeight": "1.75",
         "letterSpacing": "0.00938em"
       }
@@ -305,9 +305,9 @@
     "subtitle2": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "0.875rem",
-        "fontWeight": "500",
+        "fontWeights": "500",
         "lineHeight": "1.57",
         "letterSpacing": "0.00714em"
       }
@@ -315,9 +315,9 @@
     "body1": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "1rem",
-        "fontWeight": "400",
+        "fontWeights": "400",
         "lineHeight": "1.5",
         "letterSpacing": "0.00938em"
       }
@@ -325,9 +325,9 @@
     "body2": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "0.875rem",
-        "fontWeight": "400",
+        "fontWeights": "400",
         "lineHeight": "1.43",
         "letterSpacing": "0.01071em"
       }
@@ -335,9 +335,9 @@
     "button": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "0.875rem",
-        "fontWeight": "500",
+        "fontWeights": "500",
         "lineHeight": "1.75",
         "letterSpacing": "0.02857em",
         "textTransform": "uppercase"
@@ -346,9 +346,9 @@
     "caption": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "0.75rem",
-        "fontWeight": "400",
+        "fontWeights": "400",
         "lineHeight": "1.66",
         "letterSpacing": "0.03333em"
       }
@@ -356,9 +356,9 @@
     "overline": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
         "fontSize": "0.75rem",
-        "fontWeight": "400",
+        "fontWeights": "400",
         "lineHeight": "2.66",
         "letterSpacing": "0.08333em",
         "textTransform": "uppercase"
@@ -367,9 +367,9 @@
     "inherit": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "inherit",
+        "fontFamilies": "inherit",
         "fontSize": "inherit",
-        "fontWeight": "inherit",
+        "fontWeights": "inherit",
         "lineHeight": "inherit",
         "letterSpacing": "inherit"
       }
@@ -419,7 +419,7 @@
       "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
     },
     "Bold": {
-      "$type": "fontWeights",
+      "$type": "fontWeightss",
       "$value": "Bold",
       "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
     },

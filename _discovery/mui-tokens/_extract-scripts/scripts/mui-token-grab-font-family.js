@@ -5,30 +5,30 @@ const { createTheme } = require('@mui/material/styles');
 // Create the default MUI theme
 const theme = createTheme();
 
-// Extract fontFamily tokens from typography
-const fontFamilyTokens = {};
+// Extract fontFamilies tokens from typography
+const fontFamiliesTokens = {};
 
-// MUI's typography object has a global fontFamily and per-style fontFamily overrides
-fontFamilyTokens['global'] = {
-  $type: 'fontFamily',
-  $value: theme.typography.fontFamily
+// MUI's typography object has a global fontFamilies and per-style fontFamilies overrides
+fontFamiliesTokens['global'] = {
+  $type: 'fontFamilies',
+  $value: theme.typography.fontFamilies
 };
 
-// Add per-style fontFamily overrides if they exist
+// Add per-style fontFamilies overrides if they exist
 for (const key in theme.typography) {
   if (
     theme.typography[key] &&
     typeof theme.typography[key] === 'object' &&
-    theme.typography[key].fontFamily
+    theme.typography[key].fontFamilies
   ) {
-    fontFamilyTokens[key] = {
-      $type: 'fontFamily',
-      $value: theme.typography[key].fontFamily
+    fontFamiliesTokens[key] = {
+      $type: 'fontFamilies',
+      $value: theme.typography[key].fontFamilies
     };
   }
 }
 
 // Write to JSON file
 const outPath = path.join(__dirname, 'mui-token-font-family.json');
-fs.writeFileSync(outPath, JSON.stringify(fontFamilyTokens, null, 2));
+fs.writeFileSync(outPath, JSON.stringify(fontFamiliesTokens, null, 2));
 console.log(`MUI font family tokens written to ${outPath}`);

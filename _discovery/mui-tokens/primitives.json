@@ -1103,27 +1103,27 @@
         "$value": "#455a64"
       }
     },
-    "FontFamily": {
+    "fontFamilies": {
       "Primary": {
-        "$type": "fontFamily",
+        "$type": "fontFamilies",
         "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
       }
     },
-    "FontWeight": {
+    "fontWeights": {
       "Light": {
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$value": "300"
       },
       "Regular": {
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$value": "400"
       },
       "Medium": {
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$value": "500"
       },
       "Bold": {
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$value": "700"
       }
     },

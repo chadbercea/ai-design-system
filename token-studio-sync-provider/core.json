@@ -605,12 +605,12 @@
     "$description": "Fully opaque"
   },
   "sans": {
-    "$type": "fontFamily",
+    "$type": "fontFamilies",
     "$value": "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
     "$description": "Primary sans-serif font family"
   },
   "mono": {
-    "$type": "fontFamily",
+    "$type": "fontFamilies",
     "$value": "Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
     "$description": "Monospace font family for code"
   },
@@ -660,42 +660,42 @@
     "$description": "5x large font size"
   },
   "thin": {
-    "$type": "fontWeight",
+    "$type": "fontWeights",
     "$value": "100",
     "$description": "Thin font weight"
   },
   "light": {
-    "$type": "fontWeight",
+    "$type": "fontWeights",
     "$value": "300",
     "$description": "Light font weight"
   },
   "normal": {
-    "$type": "fontWeight",
+    "$type": "fontWeights",
     "$value": "400",
     "$description": "Normal font weight"
   },
   "medium": {
-    "$type": "fontWeight",
+    "$type": "fontWeights",
     "$value": "500",
     "$description": "Medium font weight"
   },
   "semibold": {
-    "$type": "fontWeight",
+    "$type": "fontWeights",
     "$value": "600",
     "$description": "Semibold font weight"
   },
   "bold": {
-    "$type": "fontWeight",
+    "$type": "fontWeights",
     "$value": "700",
     "$description": "Bold font weight"
   },
   "extrabold": {
-    "$type": "fontWeight",
+    "$type": "fontWeights",
     "$value": "800",
     "$description": "Extra bold font weight"
   },
   "black": {
-    "$type": "fontWeight",
+    "$type": "fontWeights",
     "$value": "900",
     "$description": "Black font weight"
   },

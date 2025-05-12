@@ -174,13 +174,13 @@
     "loc": "legacy/styles/createPalette.js"
   },
   {
-    "path": "inherit.fontFamily",
+    "path": "inherit.fontFamilies",
     "value": "inherit",
     "isRaw": false,
     "loc": "legacy/styles/createTypography.js"
   },
   {
-    "path": "inherit.fontWeight",
+    "path": "inherit.fontWeights",
     "value": "inherit",
     "isRaw": false,
     "loc": "legacy/styles/createTypography.js"
@@ -378,13 +378,13 @@
     "loc": "modern/styles/createPalette.js"
   },
   {
-    "path": "inherit.fontFamily",
+    "path": "inherit.fontFamilies",
     "value": "inherit",
     "isRaw": false,
     "loc": "modern/styles/createTypography.js"
   },
   {
-    "path": "inherit.fontWeight",
+    "path": "inherit.fontWeights",
     "value": "inherit",
     "isRaw": false,
     "loc": "modern/styles/createTypography.js"
@@ -582,13 +582,13 @@
     "loc": "node/styles/createPalette.js"
   },
   {
-    "path": "inherit.fontFamily",
+    "path": "inherit.fontFamilies",
     "value": "inherit",
     "isRaw": false,
     "loc": "node/styles/createTypography.js"
   },
   {
-    "path": "inherit.fontWeight",
+    "path": "inherit.fontWeights",
     "value": "inherit",
     "isRaw": false,
     "loc": "node/styles/createTypography.js"
@@ -786,13 +786,13 @@
     "loc": "styles/createPalette.js"
   },
   {
-    "path": "inherit.fontFamily",
+    "path": "inherit.fontFamilies",
     "value": "inherit",
     "isRaw": false,
     "loc": "styles/createTypography.js"
   },
   {
-    "path": "inherit.fontWeight",
+    "path": "inherit.fontWeights",
     "value": "inherit",
     "isRaw": false,
     "loc": "styles/createTypography.js"
