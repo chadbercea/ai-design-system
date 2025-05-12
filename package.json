@@ -4,7 +4,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "test:tokens": "node scripts/validate-core-json.js"
     },
     "dependencies": {
         "@emotion/react": "^11.10.0",
@@ -20,6 +21,7 @@
     },
     "devDependencies": {
         "@vitejs/plugin-react": "^4.0.0",
+        "husky": "^9.1.7",
         "typescript": "^5.0.0",
         "vite": "^4.0.0"
     }

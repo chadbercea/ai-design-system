@@ -100,3 +100,27 @@ token-studio-sync-provider/
    - Update usage guidelines
    - Create contribution rules
    - Document best practices 
+
+   ////////////////////////////
+   New Problem Space
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+  "opacity": {
+    "low": {
+      "$type": "opacity",
+      "$value": "10%",
+      "$description": "Low opacity value"
+    },
+    "md": {
+      "$type": "opacity",
+      "$value": "50%",
+      "$description": "Medium opacity value"
+    },
+    "high": {
+      "$type": "opacity",
+      "$value": "90%",
+      "$description": "High opacity value"
+    }
+  }
+
+  This JSON is creating a double nested situation that means if the wrapper or the name should not == $value
