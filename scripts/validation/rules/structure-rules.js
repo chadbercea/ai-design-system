@@ -20,4 +20,8 @@ module.exports = {
     colorRules: {
       useDotNotation: true,
       lowercaseOnly: true,
+      noCategoryWrapping: true
+    }
+  }
+};
  
