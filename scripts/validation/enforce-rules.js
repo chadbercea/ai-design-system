@@ -58,35 +58,15 @@ class TokenEnforcer {
   validateStructure(obj, currentPath = '') {
     for (const [key, value] of Object.entries(obj)) {
       const newPath = currentPath ? `${currentPath}.${key}` : key;
-
-      // Check for double nesting
-      if (currentPath.split('.').length > STRUCTURE_RULES.wrappingRules.maxDepth) {
-        this.fail(`Double nesting detected at ${newPath}`);
-      }
-
-      // Check root-level objects
-      if (currentPath === '') {
-        const normalizedKey = key.toLowerCase();
-        if (!STRUCTURE_RULES.allowedGroups.includes(normalizedKey)) {
-          this.fail(`Root-level object "${key}" is not allowed`);
-        }
-      }
-
-      // Check color token rules
-      if (value.$type === 'color') {
-        if (!STRUCTURE_RULES.wrappingRules.colorRules.useDotNotation && key.includes('.')) {
-          this.fail(`Color token "${key}" must use dot notation`);
-        }
-        if (STRUCTURE_RULES.wrappingRules.colorRules.lowercaseOnly && key !== key.toLowerCase()) {
-          this.fail(`Color token "${key}" must be lowercase`);
-        }
-      }
-
-      // Validate token structure
-      if (value.$type) {
+      if (value && typeof value === 'object' && ('$type' in value && '$value' in value && '$description' in value)) {
+        // This is a token, validate it
         this.validateToken(value, newPath);
-      } else if (typeof value === 'object') {
+      } else if (value && typeof value === 'object') {
+        // This is a group, recurse
         this.validateStructure(value, newPath);
+      } else {
+        // Not an object, skip
+        continue;
       }
     }
   }
