@@ -1,1 +1,11 @@
-[]
+{
+  "$metadata": {
+    "tokenSetOrder": [
+      "core",
+      "light",
+      "dark",
+      "theme"
+    ]
+  },
+  "themeRelationships": {}
+}
