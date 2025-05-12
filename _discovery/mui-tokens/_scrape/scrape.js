@@ -49,8 +49,8 @@ function inferTypeFromPath(filepath) {
   if (name.includes('easing')) return 'easing';
   if (name.includes('grey')) return 'color';
   if (name.includes('common')) return 'color';
-  if (name.includes('fontweight')) return 'fontWeight';
-  if (name.includes('fontsize')) return 'fontSize';
+  if (name.includes('fontWeights')) return 'fontWeights';
+  if (name.includes('fontSizes')) return 'fontSizes';
   return 'to-sort';
 }
 

@@ -12,9 +12,9 @@ Follow this precise order of operations when processing tokens:
 1. Determine the token's `$type` based on Tokens Studio taxonomy
 2. Use **exactly** these type values:
    - `color`
-   - `fontSize` (not fontSizes)
-   - `fontWeight` (not fontWeights)
-   - `fontFamily` (not fontFamilies)
+   - `fontSizes` (not fontSizess)
+   - `fontWeights` (not fontWeightss)
+   - `fontFamilies` (not fontFamilies)
    - `lineHeight` (not lineHeights)
    - `letterSpacing`
    - `borderRadius`
@@ -42,9 +42,9 @@ Follow this precise order of operations when processing tokens:
 ### D: Decide Category
 1. Every token belongs to one of the canonical categories:
    - Color
-   - FontSize
-   - FontWeight
-   - FontFamily
+   - fontSizes
+   - fontWeights
+   - fontFamilies
    - LineHeight
    - LetterSpacing
    - BorderRadius
@@ -68,7 +68,7 @@ Follow this precise order of operations when processing tokens:
    - Text
    - Number
    - Other (use only if absolutely necessary)
-2. Categories must use PascalCase singular form (e.g., `FontSize` not `FontSizes`)
+2. Categories must use PascalCase singular form (e.g., `fontSizes` not `fontSizess`)
 3. Do not invent new categories not on this list
 
 ### W: Wrapping Decision
@@ -76,7 +76,7 @@ Apply this critical test to determine token placement:
 1. Convert both the token's `$type` and its category name to lowercase
 2. Compare them exactly (case-insensitive comparison):
    - If they match (e.g., `color` = `color`): Place token directly under `Primitives` (no wrapping)
-   - If they differ (e.g., `fontsize` ≠ `typography`): Place token under its PascalCase category
+   - If they differ (e.g., `fontSizes` ≠ `typography`): Place token under its PascalCase category
 3. If a token's category and type match, it MUST be placed directly under `Primitives` without any wrapper
 
 ### P: Path and Property Formatting
@@ -93,7 +93,7 @@ Apply this critical test to determine token placement:
 ## Primitive vs. Semantic Token Rules
 1. Primitives must have direct raw values (string or number)
 2. Semantic tokens in `MUI` can reference primitive tokens
-3. Reference syntax: `{Primitives.Category.TokenName}` (e.g., `{Primitives.FontSize.Xl}`)
+3. Reference syntax: `{Primitives.Category.TokenName}` (e.g., `{Primitives.fontSizes.Xl}`)
 4. For unwrapped primitives: `{Primitives.blue.500}` or `{Primitives.Xl}`
 5. Exclude tokens from `Primitives` with these characteristics:
    - Values that are objects, arrays, or references
@@ -112,12 +112,12 @@ Apply this critical test to determine token placement:
 }
 ```
 
-### Example 2: Font Size Token (type = "fontSize" matches category "FontSize")
+### Example 2: Font Size Token (type = "fontSizes" matches category "fontSizes")
 ```json
 "Primitives": {
   "Xl": {
     "$value": "24px",
-    "$type": "fontSize",
+    "$type": "fontSizes",
     "$description": "Extra large font size"
   }
 }
@@ -144,9 +144,9 @@ Apply this critical test to determine token placement:
       "H1": {
         "$type": "typography",
         "$value": {
-          "fontFamily": "{Primitives.FontFamily.Primary}",
-          "fontSize": "{Primitives.Xl}",
-          "fontWeight": "{Primitives.Bold}",
+          "fontFamilies": "{Primitives.fontFamilies.Primary}",
+          "fontSizes": "{Primitives.Xl}",
+          "fontWeights": "{Primitives.Bold}",
           "lineHeight": "{Primitives.LineHeight.Xl}"
         },
         "$description": "H1 heading style"
@@ -162,9 +162,9 @@ Apply this critical test to determine token placement:
 - Use consistent color naming patterns (e.g., `blue.500`, `red.A100`)
 
 ## Common Errors to Avoid
-1. **Double Nesting**: Never create nested groups under `Primitives` (e.g., `Primitives.Typography.FontSize`)
-2. **Inconsistent Types**: Never use plural forms in `$type` (e.g., `fontSizes` instead of `fontSize`)
-3. **Wrapping Matching Types**: Never wrap tokens when type and category match (e.g., never put `Xl` with type `fontSize` under a `FontSize` category)
+1. **Double Nesting**: Never create nested groups under `Primitives` (e.g., `Primitives.Typography.fontSizes`)
+2. **Inconsistent Types**: Never use plural forms in `$type` (e.g., `fontSizess` instead of `fontSizes`)
+3. **Wrapping Matching Types**: Never wrap tokens when type and category match (e.g., never put `Xl` with type `fontSizes` under a `fontSizes` category)
 4. **Semantic in Primitives**: Never include references or composite values in `Primitives`
 5. **Missing Properties**: Always include all three required properties (`$value`, `$type`, `$description`)
 
@@ -181,12 +181,12 @@ Apply this critical test to determine token placement:
     },
     "Xl": {
       "$value": "24px",
-      "$type": "fontSize",
+      "$type": "fontSizes",
       "$description": "Extra large font size"
     },
     "Bold": {
       "$value": "700",
-      "$type": "fontWeight",
+      "$type": "fontWeights",
       "$description": "Bold font weight"
     },
     
@@ -206,9 +206,9 @@ Apply this critical test to determine token placement:
         "H1": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{Primitives.FontFamily.Primary}",
-            "fontSize": "{Primitives.Xl}",
-            "fontWeight": "{Primitives.Bold}",
+            "fontFamilies": "{Primitives.fontFamilies.Primary}",
+            "fontSizes": "{Primitives.Xl}",
+            "fontWeights": "{Primitives.Bold}",
             "lineHeight": "{Primitives.LineHeightXl}"
           },
           "$description": "H1 heading style"

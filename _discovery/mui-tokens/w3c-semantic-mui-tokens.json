@@ -263,9 +263,9 @@
     "typography.h1": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "6rem",
-        "fontWeight": 300,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "6rem",
+        "fontWeights": 300,
         "lineHeight": 1.167,
         "letterSpacing": "-0.01562em"
       },
@@ -274,9 +274,9 @@
     "typography.h2": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "3.75rem",
-        "fontWeight": 300,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "3.75rem",
+        "fontWeights": 300,
         "lineHeight": 1.2,
         "letterSpacing": "-0.00833em"
       },
@@ -285,9 +285,9 @@
     "typography.h3": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "3rem",
-        "fontWeight": 400,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "3rem",
+        "fontWeights": 400,
         "lineHeight": 1.167,
         "letterSpacing": "0em"
       },
@@ -296,9 +296,9 @@
     "typography.h4": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "2.125rem",
-        "fontWeight": 400,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "2.125rem",
+        "fontWeights": 400,
         "lineHeight": 1.235,
         "letterSpacing": "0.00735em"
       },
@@ -307,9 +307,9 @@
     "typography.h5": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "1.5rem",
-        "fontWeight": 400,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "1.5rem",
+        "fontWeights": 400,
         "lineHeight": 1.334,
         "letterSpacing": "0em"
       },
@@ -318,9 +318,9 @@
     "typography.h6": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "1.25rem",
-        "fontWeight": 500,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "1.25rem",
+        "fontWeights": 500,
         "lineHeight": 1.6,
         "letterSpacing": "0.0075em"
       },
@@ -329,9 +329,9 @@
     "typography.subtitle1": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "1rem",
-        "fontWeight": 400,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "1rem",
+        "fontWeights": 400,
         "lineHeight": 1.75,
         "letterSpacing": "0.00938em"
       },
@@ -340,9 +340,9 @@
     "typography.subtitle2": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "0.875rem",
-        "fontWeight": 500,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "0.875rem",
+        "fontWeights": 500,
         "lineHeight": 1.57,
         "letterSpacing": "0.00714em"
       },
@@ -351,9 +351,9 @@
     "typography.body1": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "1rem",
-        "fontWeight": 400,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "1rem",
+        "fontWeights": 400,
         "lineHeight": 1.5,
         "letterSpacing": "0.00938em"
       },
@@ -362,9 +362,9 @@
     "typography.body2": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "0.875rem",
-        "fontWeight": 400,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "0.875rem",
+        "fontWeights": 400,
         "lineHeight": 1.43,
         "letterSpacing": "0.01071em"
       },
@@ -373,9 +373,9 @@
     "typography.button": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "0.875rem",
-        "fontWeight": 500,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "0.875rem",
+        "fontWeights": 500,
         "lineHeight": 1.75,
         "letterSpacing": "0.02857em",
         "textCase": "uppercase"
@@ -385,9 +385,9 @@
     "typography.caption": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "0.75rem",
-        "fontWeight": 400,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "0.75rem",
+        "fontWeights": 400,
         "lineHeight": 1.66,
         "letterSpacing": "0.03333em"
       },
@@ -396,9 +396,9 @@
     "typography.overline": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "0.75rem",
-        "fontWeight": 400,
+        "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+        "fontSizes": "0.75rem",
+        "fontWeights": 400,
         "lineHeight": 2.66,
         "letterSpacing": "0.08333em",
         "textCase": "uppercase"
@@ -408,9 +408,9 @@
     "typography.inherit": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "inherit",
-        "fontSize": "inherit",
-        "fontWeight": "inherit",
+        "fontFamilies": "inherit",
+        "fontSizes": "inherit",
+        "fontWeights": "inherit",
         "lineHeight": "inherit",
         "letterSpacing": "inherit"
       },

@@ -5,30 +5,30 @@ const { createTheme } = require('@mui/material/styles');
 // Create the default MUI theme
 const theme = createTheme();
 
-// Extract fontSize tokens from typography
-const fontSizeTokens = {};
+// Extract fontSizes tokens from typography
+const fontSizesTokens = {};
 
-// MUI's typography object has a global fontSize and per-style fontSize overrides
-fontSizeTokens['global'] = {
-  $type: 'fontSize',
-  $value: theme.typography.fontSize.toString()
+// MUI's typography object has a global fontSizes and per-style fontSizes overrides
+fontSizesTokens['global'] = {
+  $type: 'fontSizes',
+  $value: theme.typography.fontSizes.toString()
 };
 
-// Add per-style fontSize overrides if they exist
+// Add per-style fontSizes overrides if they exist
 for (const key in theme.typography) {
   if (
     theme.typography[key] &&
     typeof theme.typography[key] === 'object' &&
-    theme.typography[key].fontSize
+    theme.typography[key].fontSizes
   ) {
-    fontSizeTokens[key] = {
-      $type: 'fontSize',
-      $value: theme.typography[key].fontSize.toString()
+    fontSizesTokens[key] = {
+      $type: 'fontSizes',
+      $value: theme.typography[key].fontSizes.toString()
     };
   }
 }
 
 // Write to JSON file
 const outPath = path.join(__dirname, 'mui-token-font-size.json');
-fs.writeFileSync(outPath, JSON.stringify(fontSizeTokens, null, 2));
+fs.writeFileSync(outPath, JSON.stringify(fontSizesTokens, null, 2));
 console.log(`MUI font size tokens written to ${outPath}`);

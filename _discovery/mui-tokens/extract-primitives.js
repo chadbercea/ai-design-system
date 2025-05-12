@@ -40,43 +40,43 @@ for (const colorName of colorNames) {
 
 // 2. Extract Typography
 // Font Family
-primitives.Primitives.FontFamily = {
+primitives.Primitives.fontFamilies = {
   Primary: {
-    $type: 'fontFamily',
-    $value: theme.typography.fontFamily,
+    $type: 'fontFamilies',
+    $value: theme.typography.fontFamilies,
     $description: 'Primary font family'
   }
 };
 
 // Font Weights
-primitives.Primitives.FontWeight = {
+primitives.Primitives.fontWeights = {
   Light: {
-    $type: 'fontWeight',
-    $value: theme.typography.fontWeightLight.toString(),
+    $type: 'fontWeights',
+    $value: theme.typography.fontWeightsLight.toString(),
     $description: 'Light font weight'
   },
   Regular: {
-    $type: 'fontWeight',
-    $value: theme.typography.fontWeightRegular.toString(),
+    $type: 'fontWeights',
+    $value: theme.typography.fontWeightsRegular.toString(),
     $description: 'Regular font weight'
   },
   Medium: {
-    $type: 'fontWeight',
-    $value: theme.typography.fontWeightMedium.toString(),
+    $type: 'fontWeights',
+    $value: theme.typography.fontWeightsMedium.toString(),
     $description: 'Medium font weight'
   },
   Bold: {
-    $type: 'fontWeight',
-    $value: theme.typography.fontWeightBold.toString(),
+    $type: 'fontWeights',
+    $value: theme.typography.fontWeightsBold.toString(),
     $description: 'Bold font weight'
   }
 };
 
 // Font Sizes
-primitives.Primitives.FontSize = {
+primitives.Primitives.fontSizes = {
   Base: {
-    $type: 'fontSize',
-    $value: theme.typography.fontSize.toString(),
+    $type: 'fontSizes',
+    $value: theme.typography.fontSizes.toString(),
     $description: 'Base font size'
   }
 };
@@ -90,10 +90,10 @@ const typographyStyles = [
 ];
 
 typographyStyles.forEach(style => {
-  if (theme.typography[style]?.fontSize) {
-    primitives.Primitives.FontSize[toPascalCase(style)] = {
-      $type: 'fontSize',
-      $value: theme.typography[style].fontSize.toString(),
+  if (theme.typography[style]?.fontSizes) {
+    primitives.Primitives.fontSizes[toPascalCase(style)] = {
+      $type: 'fontSizes',
+      $value: theme.typography[style].fontSizes.toString(),
       $description: `${toPascalCase(style)} font size`
     };
   }

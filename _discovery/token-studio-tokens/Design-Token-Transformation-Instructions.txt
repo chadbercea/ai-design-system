@@ -17,12 +17,12 @@ Transform the provided JSON file containing MUI design tokens into a W3C/Tokens 
 ### 2. Token Properties
 For EACH token, include EXACTLY these three properties:
 - `$value`: The raw value (hex color, size in px/rem, etc.)
-- `$type`: The W3C type identifier (e.g., "color", "dimension", "fontWeight")
+- `$type`: The W3C type identifier (e.g., "color", "dimension", "fontWeights")
 - `$description`: Human-readable description derived from the token name
 
 ### 3. Token Name Derivation
 - Preserve the original token path as the token name
-- Use dot notation (e.g., `"blue.500"`, `"fontSize.sm"`)
+- Use dot notation (e.g., `"blue.500"`, `"fontSizes.sm"`)
 - NEVER create your own naming scheme
 
 ### 4. Token Value Processing
@@ -35,18 +35,18 @@ Determine `$type` by these exact rules:
 - If value is a hex code or rgb/rgba format → `$type`: `"color"`
 - If value has px, rem, em, % → `$type`: `"dimension"`
 - If value is a number with no unit → check context:
-  - If in a fontSize context → `$type`: `"dimension"`
-  - If in a fontWeight context → `$type`: `"fontWeight"`
+  - If in a fontSizes context → `$type`: `"dimension"`
+  - If in a fontWeights context → `$type`: `"fontWeights"`
   - If in a letterSpacing context → `$type`: `"dimension"`
   - If in a lineHeight context → `$type`: `"dimension"` (even if unitless)
   - If in an opacity context → `$type`: `"number"`
-- If value is a font name or comma-separated list → `$type`: `"fontFamily"`
+- If value is a font name or comma-separated list → `$type`: `"fontFamilies"`
 
 ### 6. Description Formatting
 - Format as lowercase space-separated words
 - Replace dots with spaces
 - Example: `"blue.500"` → `"blue 500"`
-- Example: `"fontSize.sm"` → `"font size sm"`
+- Example: `"fontSizes.sm"` → `"font size sm"`
 
 ## Example Transformation
 
@@ -57,7 +57,7 @@ INPUT:
     "blue": {
       "500": "#2196f3"
     },
-    "fontSize": {
+    "fontSizes": {
       "sm": "0.875rem"
     }
   }
@@ -73,7 +73,7 @@ OUTPUT:
       "$type": "color",
       "$description": "blue 500"
     },
-    "fontSize.sm": {
+    "fontSizes.sm": {
       "$value": "0.875rem",
       "$type": "dimension",
       "$description": "font size sm"

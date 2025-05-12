@@ -4976,7 +4976,7 @@
       "type": "function"
     }
   },
-  "legacy/styles/responsiveFontSizes.js": {
+  "legacy/styles/responsivefontSizess.js": {
     "default": {
       "type": "function"
     }
@@ -8303,7 +8303,7 @@
       "type": "function"
     }
   },
-  "modern/styles/responsiveFontSizes.js": {
+  "modern/styles/responsivefontSizess.js": {
     "default": {
       "type": "function"
     }
@@ -8747,7 +8747,7 @@
       "type": "function"
     }
   },
-  "styles/responsiveFontSizes.js": {
+  "styles/responsivefontSizess.js": {
     "default": {
       "type": "function"
     }

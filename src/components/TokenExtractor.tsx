@@ -102,7 +102,7 @@ function isSpacing(value: unknown): boolean {
 
 function isTypography(key: string, value: unknown): boolean {
   if (!isObject(value)) return false;
-  const typographyProps = ['fontFamily', 'fontSize', 'fontWeight', 'lineHeight', 'letterSpacing'];
+  const typographyProps = ['fontFamilies', 'fontSizes', 'fontWeights', 'lineHeight', 'letterSpacing'];
   return typographyProps.some(prop => prop in value);
 }
 

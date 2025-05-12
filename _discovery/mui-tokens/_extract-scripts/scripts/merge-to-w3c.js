@@ -8,9 +8,9 @@ const MUI_SET_FILE = path.join(TOKENS_DIR, '../build/mui-set.json');
 const FILE_TO_TYPE = {
   'mui-token-colors.json': 'color',
   'mui-token-border-radius.json': 'borderRadius',
-  'mui-token-font-family.json': 'fontFamily',
-  'mui-token-font-size.json': 'fontSize',
-  'mui-token-font-weight.json': 'fontWeight',
+  'mui-token-font-family.json': 'fontFamilies',
+  'mui-token-font-size.json': 'fontSizes',
+  'mui-token-font-weight.json': 'fontWeights',
   'mui-token-line-height.json': 'lineHeight',
   'mui-token-letter-spacing.json': 'letterSpacing',
   'mui-token-opacity.json': 'opacity',

@@ -1,137 +1,264 @@
 # Design Token Canon
 
+## Prime Directive
+Token names are canonical primitive identifiers. No wrappers. No prefixes. No plural forms.
+
+Tokens exist at root level. No exceptions. No folders. No containers. Tokens Studio patterns are the only valid nesting.
+
+$value must be static string or number. No aliases. No math. No references. Violations fail the build.
+
+## Architecture
+```
+token-studio-sync-provider/
+├── core.json          # Read-only outside CI. Direct edits fail.
+├── dark.json          # Dark overrides. Deep merge only.
+├── light.json         # Light overrides. Deep merge only.
+├── theme.json         # Semantic tokens. No primitives.
+├── $themes.json       # Theme relationships. Declarative.
+└── $metadata.json     # Schema version. Locked.
+```
+
+Enforcement:
+- core.json is read-only outside CI. Direct edits trigger failure.
+- All changes flow through schema validation and merge-approved pipelines.
+- No manual mutation of primitives. That's not a warning. That's policy.
+
 ## I. The T-D-W-P System
-The definitive order of operations for all token processing:
+The definitive order of operations. No exceptions.
 
 ### T: Type Determination
-1. Determine the token's `$type` based on Tokens Studio taxonomy
-2. Use **exactly** these type values:
-   - `color`
-   - `fontSize` (not fontSizes)
-   - `fontWeight` (not fontWeights)
-   - `fontFamily` (not fontFamilies)
-   - `lineHeight` (not lineHeights)
-   - `letterSpacing`
-   - `borderRadius`
-   - `borderWidth`
-   - `spacing`
-   - `sizing`
-   - `opacity`
-   - `boxShadow`
-   - `typography`
-   - `paragraphSpacing`
-   - `textCase`
-   - `textDecoration`
-   - `composition`
-   - `dimension`
-   - `breakpoints`
-   - `border`
-   - `zIndex`
-   - `duration`
-   - `assets`
-   - `boolean`
-   - `text`
-   - `number`
-   - `other` (use only if absolutely necessary)
+$type must match allowedTypes enum. Any deviation fails. No casing variations. No pluralization. No substitutions.
+
+```json
+{
+  "allowedTypes": [
+    "color",
+    "fontSizes",
+    "fontWeights",
+    "fontFamilies",
+    "lineHeights",
+    "letterSpacing",
+    "borderRadius",
+    "borderWidths",
+    "spacing",
+    "sizing",
+    "opacity",
+    "boxShadow",
+    "typography",
+    "paragraphSpacing",
+    "textCase",
+    "textDecoration",
+    "composition",
+    "dimension",
+    "breakpoints",
+    "border",
+    "zIndex",
+    "duration",
+    "assets",
+    "boolean",
+    "text",
+    "number",
+    "other"
+  ]
+}
+```
 
 ### D: Decide Category
-1. Every token belongs to one of the canonical categories:
-   - Color
-   - FontSize
-   - FontWeight
-   - FontFamily
-   - LineHeight
-   - LetterSpacing
-   - BorderRadius
-   - BorderWidth
-   - Spacing
-   - Sizing
-   - Opacity
-   - BoxShadow
-   - Typography
-   - ParagraphSpacing
-   - TextCase
-   - TextDecoration
-   - Composition
-   - Dimension
-   - Breakpoints
-   - Border
-   - ZIndex
-   - Duration
-   - Assets
-   - Boolean
-   - Text
-   - Number
-   - Other (use only if absolutely necessary)
-2. Categories must use PascalCase singular form
-3. Do not invent new categories not on this list
+Category must match allowedCategories enum. Any deviation fails. No exceptions.
+
+```json
+{
+  "allowedCategories": [
+    "Color",
+    "FontSize",
+    "FontWeight",
+    "FontFamily",
+    "LineHeight",
+    "LetterSpacing",
+    "BorderRadius",
+    "BorderWidth",
+    "Spacing",
+    "Sizing",
+    "Opacity",
+    "BoxShadow",
+    "Typography",
+    "ParagraphSpacing",
+    "TextCase",
+    "TextDecoration",
+    "Composition",
+    "Dimension",
+    "Breakpoints",
+    "Border",
+    "ZIndex",
+    "Duration",
+    "Assets",
+    "Boolean",
+    "Text",
+    "Number",
+    "Other"
+  ]
+}
+```
 
 ### W: Wrapping Decision
-Apply this critical test to determine token placement:
-1. Convert both the token's `$type` and its category name to lowercase
-2. Compare them exactly (case-insensitive comparison):
-   - If they match (e.g., `color` = `color`): Place token directly under `Primitives` (no wrapping)
-   - If they differ (e.g., `fontsize` ≠ `typography`): Place token under its PascalCase category
-3. If a token's category and type match, it MUST be placed directly under `Primitives` without any wrapper
+Wrapping key and $type must not match after lowercasing. Violation fails the build.
+
+Only fontSizes, fontFamilies, fontWeights, lineHeights may use category wrapping. All others are flat primitives.
 
 ### P: Path and Property Formatting
-1. Every token must have exactly these three properties:
-   - `$value`: The raw value (must be a string or number for primitives)
-   - `$type`: The type determined in step T
-   - `$description`: Clear description of the token's purpose
-2. Format token names based on placement:
-   - For tokens directly under `Primitives`: 
-     - Colors: Use lowercase dot notation (e.g., `blue.500`, `red.A100`)
-     - Others: Use PascalCase (e.g., `Xl`, `Medium`)
-   - For tokens under categories: Always use PascalCase (e.g., `Xl`, `Medium`)
+1. Root-level tokens use flat canonical names
+2. Required properties:
+   - $type: matches canonical type
+   - $value: raw string or number
+   - $description: sentence-length, human-readable. No placeholders. No TBD.
 
-## II. Core Rules
+## II. Format Rules
+1. Color tokens: lowercase dot notation (blue.500)
+2. Plural keys: forbidden except Tokens Studio 4
+3. Token keys: unique per file per $type
+4. Reused keys: must have distinct $type
 
-### 1. Primitive vs Semantic Law
-- Primitives must have direct raw values (string or number)
-- Semantic tokens can reference primitive tokens
-- Reference syntax: `{Primitives.Category.TokenName}`
-- For unwrapped primitives: `{Primitives.blue.500}` or `{Primitives.Xl}`
-- Exclude from `Primitives`:
-  - Values that are objects, arrays, or references
-  - Keys that start with semantic prefixes
+## III. Error Conditions
+These structures fail. No warnings. No exceptions.
 
-### 2. Special Rules
-- Color tokens ALWAYS use lowercase dot notation
-- NEVER wrap color tokens in a "Color" category
-- Use consistent color naming patterns
+1. Double nesting: parent key equals $type after normalization. Flatten and reject.
+2. Wrapping violation: wrapping key equals $type after lowercasing. Reject.
+3. Plural type: forbidden unless Tokens Studio pattern. Reject.
+4. Missing field: immediate rejection.
+5. Mixed units: blocked.
+6. {} in $value: rejected. Semantic leak.
+7. Semantic in primitive: rejected.
+8. Path violation: blocked.
 
-### 3. Key Reuse in Primitives
-- In the `Primitives` object, the same key (e.g., `md`) can be used multiple times
-- Each key must have a unique combination of `$type` and `$value`
-- Example of valid key reuse in `Primitives`:
-  ```json
-  {
-    "md": { "$type": "dimension", "$value": "8" },
-    "md": { "$type": "opacity", "$value": "50%" }
+## IV. Schema Versioning
+1. Schema Lock
+   - Version in $metadata.json
+   - Deviation blocks build
+   - Version bump required for changes
+
+2. Tokens Studio
+   - Validates against current schema
+   - Rejects unexpected $type
+   - Versions schema changes
+
+3. Design Tools
+   - Validates against Figma schema
+   - Matches Tokens Studio sync
+   - Blocks invalid exports
+
+## V. Theme Resolution
+1. Precedence (strict)
+   1. core.json (primitives)
+   2. theme.json (semantic)
+   3. light/dark.json (overrides)
+   4. $themes.json (relationships)
+   Collisions without disambiguation fail.
+
+2. Overrides
+   - Deep merge only
+   - Semantic required in theme.json
+   - No primitive references
+   - Collisions require disambiguation
+
+3. References
+   - Limited to theme.json and overrides
+   - Flattened at build
+   - Circulars rejected
+   - Invalid links crash
+
+## VI. Unit Normalization
+1. Legal Units
+   ```json
+   {
+     "opacity": "percent strings only (10%)",
+     "spacing": "numbers as px (10)",
+     "duration": "ms only (100ms)",
+     "fontSize": "px or rem (16px, 1rem)",
+     "lineHeight": "unitless (1.5)",
+     "borderRadius": "px or rem (4px, 0.25rem)",
+     "borderWidth": "px only (1px)",
+     "boxShadow": "px, color (0 2px 4px rgba(0,0,0,0.1))",
+     "zIndex": "integers (1)",
+     "color": "hex or rgba (#000000, rgba(0,0,0,0.5))"
+   }
+   ```
+
+2. Validation
+   - Type-specific unit validation
+   - Mixed units blocked
+   - Build-time conversion
+   - Invalid units rejected
+
+## VII. Schema Evolution
+1. Forward Compatibility
+   - Unknown keys rejected
+   - Reserved fields declared
+   - Deprecated fields marked
+
+2. Reserved Fields
+   ```json
+   {
+     "reservedFields": [
+       "$type",
+       "$value",
+       "$description",
+       "$category",
+       "$metadata",
+       "$version"
+     ]
+   }
+   ```
+
+3. Deprecation
+   - Fields marked deprecated
+   - One major version minimum
+   - Removal in major bump
+   - Migration guide required
+
+## VIII. Canonical Violation Examples
+
+### Invalid (Fails)
+```json
+{
+  "opacity": {
+    "low": {
+      "$type": "opacity",
+      "$value": "10%",
+      "$description": "Low opacity value"
+    }
   }
-  ```
-- This allows consistent naming patterns across different token types
-- The key's uniqueness is determined by its `$type`, not its name
-- DO NOT wrap these tokens in their type name - they belong directly in `Primitives`
+}
+```
 
-### 4. Common Errors to Avoid
-1. **Double Nesting**: Never create nested groups under `Primitives`
-2. **Inconsistent Types**: Never use plural forms in `$type`
-3. **Wrapping Matching Types**: Never wrap tokens when type and category match
-4. **Semantic in Primitives**: Never include references or composite values in `Primitives`
-5. **Missing Properties**: Always include all three required properties
-6. **Unnecessary Wrapping**: Never wrap a token in its type name when the type matches its category
+Fails:
+- opacity = wrapping key = $type
+- low should be root
+- Double nesting
+- Linter rejects
 
-## III. Best Practices
-1. **Consistent Naming**: Use consistent naming across categories
-2. **Clear Descriptions**: Write clear, detailed descriptions for every token
-3. **Single Source of Truth**: Semantic tokens should reference primitives
-4. **Naming Conventions**: Follow PascalCase for categories and token names (except colors)
-5. **Valid References**: Check that all references point to existing tokens
-6. **JSON Validation**: Ensure JSON is valid before using with Tokens Studio
+### Valid
+```json
+{
+  "low": {
+    "$type": "opacity",
+    "$value": "10%",
+    "$description": "Low opacity value"
+  }
+}
+```
 
-## IV. Note on "Grouped by Category"
-Conceptually grouping tokens by category does not always mean wrapping them in JSON objects. The Wrapping Decision (W step) determines the actual structure. The rule "do not wrap tokens in a category object if the category and type are the same" takes precedence.
+## IX. Next Actions
+1. JSON schema (blocks build)
+2. Linter (blocks commit)
+3. Flattener (fix + fail)
+4. Snapshots (strict mode)
+5. DTCG sync
+6. Docs
 
-Follow these rules in exact order (T-D-W-P) to ensure consistent token structure with no contradictions.
+## Summary
+System fails fast. No drift. No ambiguity. T-D-W-P is law.
+
+## Enforcement
+- core.json: validated, T-D-W-P compliant
+- Failures: block pipeline
+- No manual primitives. Policy.

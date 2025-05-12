@@ -12,10 +12,10 @@ const canonicalCategoryTypeMap = {
   Opacity: 'opacity',
   BoxShadow: 'boxShadow',
   Typography: 'typography',
-  FontFamily: 'fontFamily',
-  FontWeight: 'fontWeight',
+  fontFamilies: 'fontFamilies',
+  fontWeights: 'fontWeights',
   LineHeight: 'lineHeight',
-  FontSize: 'fontSize',
+  fontSizes: 'fontSizes',
   LetterSpacing: 'letterSpacing',
   ParagraphSpacing: 'paragraphSpacing',
   TextCase: 'textCase',
@@ -58,7 +58,7 @@ const semanticPatterns = [
   /^warning\./i,
   /^info\./i,
   /^success\./i,
-  /Typography[A-Z]/, // TypographyH1FontFamily, etc.
+  /Typography[A-Z]/, // TypographyH1fontFamilies, etc.
   /UnstableSxConfig/, // MUI unstable keys
   /ThemeKey$/
 ];
@@ -135,29 +135,29 @@ function main() {
 
   // 2. Typography
   const typography = raw.base && raw.base.typography ? raw.base.typography : {};
-  if (typography.fontFamily) {
-    addPrimitive(primitives, { category: 'FontFamily', tokenName: 'Primary', value: typography.fontFamily, $type: 'fontFamily' });
+  if (typography.fontFamilies) {
+    addPrimitive(primitives, { category: 'fontFamilies', tokenName: 'Primary', value: typography.fontFamilies, $type: 'fontFamilies' });
   }
-  if (typography.fontWeightLight !== undefined) {
-    addPrimitive(primitives, { category: 'FontWeight', tokenName: 'Light', value: typography.fontWeightLight, $type: 'fontWeight' });
+  if (typography.fontWeightsLight !== undefined) {
+    addPrimitive(primitives, { category: 'fontWeights', tokenName: 'Light', value: typography.fontWeightsLight, $type: 'fontWeights' });
   }
-  if (typography.fontWeightRegular !== undefined) {
-    addPrimitive(primitives, { category: 'FontWeight', tokenName: 'Regular', value: typography.fontWeightRegular, $type: 'fontWeight' });
+  if (typography.fontWeightsRegular !== undefined) {
+    addPrimitive(primitives, { category: 'fontWeights', tokenName: 'Regular', value: typography.fontWeightsRegular, $type: 'fontWeights' });
   }
-  if (typography.fontWeightMedium !== undefined) {
-    addPrimitive(primitives, { category: 'FontWeight', tokenName: 'Medium', value: typography.fontWeightMedium, $type: 'fontWeight' });
+  if (typography.fontWeightsMedium !== undefined) {
+    addPrimitive(primitives, { category: 'fontWeights', tokenName: 'Medium', value: typography.fontWeightsMedium, $type: 'fontWeights' });
   }
-  if (typography.fontWeightBold !== undefined) {
-    addPrimitive(primitives, { category: 'FontWeight', tokenName: 'Bold', value: typography.fontWeightBold, $type: 'fontWeight' });
+  if (typography.fontWeightsBold !== undefined) {
+    addPrimitive(primitives, { category: 'fontWeights', tokenName: 'Bold', value: typography.fontWeightsBold, $type: 'fontWeights' });
   }
-  // FontSize, LineHeight, LetterSpacing from h1-h6, subtitle1/2, body1/2, button, caption, overline
+  // fontSizes, LineHeight, LetterSpacing from h1-h6, subtitle1/2, body1/2, button, caption, overline
   const typestyles = [
     'h1','h2','h3','h4','h5','h6','subtitle1','subtitle2','body1','body2','button','caption','overline'
   ];
   typestyles.forEach(style => {
     const t = typography[style];
     if (!t) return;
-    if (t.fontSize) addPrimitive(primitives, { category: 'FontSize', tokenName: toPascalCase(style), value: t.fontSize, $type: 'fontSize' });
+    if (t.fontSizes) addPrimitive(primitives, { category: 'fontSizes', tokenName: toPascalCase(style), value: t.fontSizes, $type: 'fontSizes' });
     if (t.lineHeight) addPrimitive(primitives, { category: 'LineHeight', tokenName: toPascalCase(style), value: t.lineHeight, $type: 'lineHeight' });
     if (t.letterSpacing) addPrimitive(primitives, { category: 'LetterSpacing', tokenName: toPascalCase(style), value: t.letterSpacing, $type: 'letterSpacing' });
   });

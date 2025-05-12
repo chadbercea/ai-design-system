@@ -1536,104 +1536,104 @@
       "$type": "opacity",
       "$description": "Opacity ActivatedOpacity"
     },
-    "FontFamily": {
+    "fontFamilies": {
       "Primary": {
         "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "$type": "fontFamily",
+        "$type": "fontFamilies",
         "$description": "Primary font family"
       }
     },
-    "FontWeight": {
+    "fontWeights": {
       "Light": {
         "$value": 300,
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$description": "Light font weight"
       },
       "Regular": {
         "$value": 400,
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$description": "Regular font weight"
       },
       "Medium": {
         "$value": 500,
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$description": "Medium font weight"
       },
       "Bold": {
         "$value": 700,
-        "$type": "fontWeight",
+        "$type": "fontWeights",
         "$description": "Bold font weight"
       }
     },
-    "FontSize": {
+    "fontSizes": {
       "Base": {
         "$value": 14,
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "Base font size"
       },
       "H1": {
         "$value": "6rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "H1 font size"
       },
       "H2": {
         "$value": "3.75rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "H2 font size"
       },
       "H3": {
         "$value": "3rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "H3 font size"
       },
       "H4": {
         "$value": "2.125rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "H4 font size"
       },
       "H5": {
         "$value": "1.5rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "H5 font size"
       },
       "H6": {
         "$value": "1.25rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "H6 font size"
       },
       "Subtitle1": {
         "$value": "1rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "Subtitle1 font size"
       },
       "Subtitle2": {
         "$value": "0.875rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "Subtitle2 font size"
       },
       "Body1": {
         "$value": "1rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "Body1 font size"
       },
       "Body2": {
         "$value": "0.875rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "Body2 font size"
       },
       "Button": {
         "$value": "0.875rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "Button font size"
       },
       "Caption": {
         "$value": "0.75rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "Caption font size"
       },
       "Overline": {
         "$value": "0.75rem",
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$description": "Overline font size"
       }
     },

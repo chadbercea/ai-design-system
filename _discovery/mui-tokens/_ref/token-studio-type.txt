@@ -159,7 +159,7 @@ Property
 
 Each design decision that is a part of the Composite Token is referred to as a property of their respective Composite Token in our guides.
 
-For example, fontFamily and fontWeightare unofficial Tokens we created to independently define the properties that Compose a typography Token. 
+For example, fontFamilies and fontWeightsare unofficial Tokens we created to independently define the properties that Compose a typography Token. 
 
 They may be included in the DTCG Specifications in the future, in which case they would be official property Tokens.
 
@@ -167,7 +167,7 @@ Compatible
 
 A Token Type with properties that is compatible with another Token Type. 
 
-For example, the dimension Token Type is compatible with fontSize when referenced within a typography Composite Token.
+For example, the dimension Token Type is compatible with fontSizes when referenced within a typography Composite Token.
 
 Compatible Token Types are visible by default when defining Token Values which reference another Token in the plugin. This becomes important when creating and maintaining Tokens in the plugin.
 
@@ -233,11 +233,11 @@ Font Family Token
 
 Property of typography
 
-fontFamilies and fontFamily
+fontFamilies and fontFamilies
 
-fontFamily
+fontFamilies
 
-fontFamily
+fontFamilies
 
 Font Weight Token
 
@@ -245,11 +245,11 @@ Font Weight Token
 
 Property of typography
 
-fontWeights and fontWeight
+fontWeightss and fontWeights
 
-fontWeight
+fontWeights
 
-fontWeight
+fontWeights
 
 Font Size Token
 
@@ -257,11 +257,11 @@ Font Size Token
 
 Property of typography
 
-fontSizes and fontSize
+fontSizess and fontSizes
 
-fontSize
+fontSizes
 
-fontSize
+fontSizes
 
 Line Height Token
 
@@ -483,11 +483,11 @@ This file lists all supported $type values for Tokens Studio, with a brief descr
 | borderWidth     | Border width (unofficial, use dimension if possible)  |
 | sizing          | Sizing (unofficial, use dimension if possible)        |
 | spacing         | Spacing (unofficial, use dimension if possible)       |
-| dimension       | Numeric value with px/rem units (fontSize, spacing)   |
+| dimension       | Numeric value with px/rem units (fontSizes, spacing)   |
 | number          | Unitless numeric value                                |
-| fontFamily      | Font family (atomic, property of typography)          |
-| fontWeight      | Font weight (atomic, property of typography)          |
-| fontSize        | Font size (atomic, property of typography)            |
+| fontFamilies      | Font family (atomic, property of typography)          |
+| fontWeights      | Font weight (atomic, property of typography)          |
+| fontSizes        | Font size (atomic, property of typography)            |
 | lineHeight      | Line height (atomic, property of typography)          |
 | letterSpacing   | Letter spacing (atomic, property of typography)       |
 | paragraphSpacing| Paragraph spacing (atomic, property of typography)    |
@@ -504,7 +504,7 @@ This file lists all supported $type values for Tokens Studio, with a brief descr
 
 **Notes:**
 - Use the most specific $type available for each token.
-- For atomic typography, use fontFamily, fontWeight, fontSize, lineHeight, letterSpacing, etc.
+- For atomic typography, use fontFamilies, fontWeights, fontSizes, lineHeight, letterSpacing, etc.
 - For composite typography, use $type: "typography" and provide all properties in $value.
 - For spacing, sizing, borderRadius, etc., prefer $type: "dimension" unless otherwise required.
 - Always check the latest Tokens Studio and W3C DTCG documentation for updates.

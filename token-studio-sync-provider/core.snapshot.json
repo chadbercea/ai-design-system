@@ -131,12 +131,12 @@
       "$description": "High opacity value"
     },
     "heading": {
-      "$type": "fontFamily",
+      "$type": "fontFamilies",
       "$value": "Inter",
       "$description": "Heading font family"
     },
     "body": {
-      "$type": "fontSize",
+      "$type": "fontSizes",
       "$value": "16",
       "$description": "Body font size"
     },
@@ -166,22 +166,22 @@
       "$description": "H2 paragraph spacing"
     },
     "headingRegular": {
-      "$type": "fontWeight",
+      "$type": "fontWeights",
       "$value": "Regular",
       "$description": "Regular heading font weight"
     },
     "headingBold": {
-      "$type": "fontWeight",
+      "$type": "fontWeights",
       "$value": "Bold",
       "$description": "Bold heading font weight"
     },
     "bodyRegular": {
-      "$type": "fontWeight",
+      "$type": "fontWeights",
       "$value": "Regular",
       "$description": "Regular body font weight"
     },
     "bodyBold": {
-      "$type": "fontWeight",
+      "$type": "fontWeights",
       "$value": "Bold",
       "$description": "Bold body font weight"
     }

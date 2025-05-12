@@ -1,4 +1,7 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
 
-npm run test:tokens
+# Run strict token validation
+node scripts/validation/enforce-rules.js
+
+# Run type checking
+npm run type:check

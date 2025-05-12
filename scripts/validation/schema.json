@@ -9,9 +9,9 @@
           "type": "string",
           "enum": [
             "color",
-            "fontSize",
-            "fontWeight",
-            "fontFamily",
+            "fontSizes",
+            "fontWeights",
+            "fontFamilies",
             "lineHeight",
             "letterSpacing",
             "borderRadius",

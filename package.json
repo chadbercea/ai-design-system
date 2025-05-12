@@ -5,9 +5,11 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "test:tokens": "node scripts/validate-tokens.js",
+        "test:tokens": "node scripts/validation/validate-tokens.js",
         "test:tokens:watch": "node scripts/validate-tokens.js --watch",
-        "prepare": "husky"
+        "prepare": "husky",
+        "validate:dtc": "node scripts/validation/validate-dtc.js",
+        "type:check": "tsc --noEmit"
     },
     "dependencies": {
         "@emotion/react": "^11.10.0",
@@ -21,6 +23,7 @@
         "style-dictionary": "^4.4.0"
     },
     "devDependencies": {
+        "@types/react-dom": "^19.1.4",
         "@vitejs/plugin-react": "^4.0.0",
         "ajv": "^8.17.1",
         "chokidar": "^4.0.3",
