@@ -121,6 +121,13 @@ function validateFile(filePath) {
         if (currentPath.split('.').length > 1) {
           errors.push(`Double nesting detected at ${newPath}`);
         }
+        // Check if root-level object is a primitive or allowed group
+        if (currentPath === '') {
+          const isAllowedGroup = ['colors', 'fontSizes', 'fontWeights', 'fontFamilies', 'lineHeights', 'letterSpacing', 'borderRadius', 'borderWidths', 'spacing', 'sizing', 'opacity', 'boxShadow', 'typography', 'paragraphSpacing', 'textCase', 'textDecoration', 'composition', 'dimension', 'breakpoints', 'border', 'zIndex', 'duration', 'assets', 'boolean', 'text', 'number', 'other'].includes(key);
+          if (!isAllowedGroup) {
+            errors.push(`Root-level object "${key}" is not a primitive or allowed group. All root-level objects must be primitives or explicitly allowed groups.`);
+          }
+        }
         traverse(value, newPath);
       }
     }
