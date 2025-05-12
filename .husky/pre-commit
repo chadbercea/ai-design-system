@@ -1,4 +1,11 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Run token validation
 npm run test:tokens
+
+# Run DTC compliance check
+npm run validate:dtc
+
+# Run type checking
+npm run type:check
