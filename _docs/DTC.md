@@ -7,13 +7,13 @@ The definitive order of operations for all token processing:
 1. Determine the token's `$type` based on Tokens Studio taxonomy
 2. Use **exactly** these type values:
    - `color`
-   - `fontSize` (not fontSizes)
-   - `fontWeights` (not fontWeightss)
-   - `fontFamilies` (not fontFamilies)
-   - `lineHeight` (not lineHeights)
+   - `fontSizes`
+   - `fontWeights`
+   - `fontFamilies`
+   - `lineHeights`
    - `letterSpacing`
    - `borderRadius`
-   - `borderWidth`
+   - `borderWidths`
    - `spacing`
    - `sizing`
    - `opacity`
