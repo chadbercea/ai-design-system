@@ -5,7 +5,9 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "test:tokens": "node scripts/validate-core-json.js"
+        "test:tokens": "node scripts/validate-tokens.js",
+        "test:tokens:watch": "node scripts/validate-tokens.js --watch",
+        "prepare": "husky"
     },
     "dependencies": {
         "@emotion/react": "^11.10.0",
@@ -14,13 +16,15 @@
         "@tokens-studio/sd-transforms": "^1.3.0",
         "acorn": "^8.14.1",
         "acorn-walk": "^8.3.4",
-        "fast-deep-equal": "^3.1.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "style-dictionary": "^4.4.0"
     },
     "devDependencies": {
         "@vitejs/plugin-react": "^4.0.0",
+        "ajv": "^8.17.1",
+        "chokidar": "^4.0.3",
+        "fast-deep-equal": "^3.1.3",
         "husky": "^9.1.7",
         "typescript": "^5.0.0",
         "vite": "^4.0.0"
