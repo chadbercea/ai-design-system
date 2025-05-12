@@ -615,47 +615,47 @@
     "$description": "Monospace font family for code"
   },
   "xs": {
-    "$type": "fontSize",
+    "$type": "fontSizes",
     "$value": "0.75rem",
     "$description": "Extra small font size"
   },
   "sm": {
-    "$type": "fontSize",
+    "$type": "fontSizes",
     "$value": "0.875rem",
     "$description": "Small font size"
   },
   "md": {
-    "$type": "fontSize",
+    "$type": "fontSizes",
     "$value": "1rem",
     "$description": "Medium font size"
   },
   "lg": {
-    "$type": "fontSize",
+    "$type": "fontSizes",
     "$value": "1.125rem",
     "$description": "Large font size"
   },
   "xl": {
-    "$type": "fontSize",
+    "$type": "fontSizes",
     "$value": "1.25rem",
     "$description": "Extra large font size"
   },
   "2xl": {
-    "$type": "fontSize",
+    "$type": "fontSizes",
     "$value": "1.5rem",
     "$description": "2x large font size"
   },
   "3xl": {
-    "$type": "fontSize",
+    "$type": "fontSizes",
     "$value": "1.875rem",
     "$description": "3x large font size"
   },
   "4xl": {
-    "$type": "fontSize",
+    "$type": "fontSizes",
     "$value": "2.25rem",
     "$description": "4x large font size"
   },
   "5xl": {
-    "$type": "fontSize",
+    "$type": "fontSizes",
     "$value": "3rem",
     "$description": "5x large font size"
   },

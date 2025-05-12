@@ -1113,7 +1113,7 @@
       "$value": 4
     },
     "global": {
-      "$type": "fontSize",
+      "$type": "fontSizes",
       "$value": "14"
     },
     "h1": {

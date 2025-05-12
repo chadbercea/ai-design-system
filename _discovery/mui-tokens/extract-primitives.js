@@ -73,10 +73,10 @@ primitives.Primitives.fontWeights = {
 };
 
 // Font Sizes
-primitives.Primitives.FontSize = {
+primitives.Primitives.fontSizes = {
   Base: {
-    $type: 'fontSize',
-    $value: theme.typography.fontSize.toString(),
+    $type: 'fontSizes',
+    $value: theme.typography.fontSizes.toString(),
     $description: 'Base font size'
   }
 };
@@ -90,10 +90,10 @@ const typographyStyles = [
 ];
 
 typographyStyles.forEach(style => {
-  if (theme.typography[style]?.fontSize) {
-    primitives.Primitives.FontSize[toPascalCase(style)] = {
-      $type: 'fontSize',
-      $value: theme.typography[style].fontSize.toString(),
+  if (theme.typography[style]?.fontSizes) {
+    primitives.Primitives.fontSizes[toPascalCase(style)] = {
+      $type: 'fontSizes',
+      $value: theme.typography[style].fontSizes.toString(),
       $description: `${toPascalCase(style)} font size`
     };
   }

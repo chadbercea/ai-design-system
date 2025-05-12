@@ -264,7 +264,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "6rem",
+        "fontSizes": "6rem",
         "fontWeights": 300,
         "lineHeight": 1.167,
         "letterSpacing": "-0.01562em"
@@ -275,7 +275,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "3.75rem",
+        "fontSizes": "3.75rem",
         "fontWeights": 300,
         "lineHeight": 1.2,
         "letterSpacing": "-0.00833em"
@@ -286,7 +286,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "3rem",
+        "fontSizes": "3rem",
         "fontWeights": 400,
         "lineHeight": 1.167,
         "letterSpacing": "0em"
@@ -297,7 +297,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "2.125rem",
+        "fontSizes": "2.125rem",
         "fontWeights": 400,
         "lineHeight": 1.235,
         "letterSpacing": "0.00735em"
@@ -308,7 +308,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "1.5rem",
+        "fontSizes": "1.5rem",
         "fontWeights": 400,
         "lineHeight": 1.334,
         "letterSpacing": "0em"
@@ -319,7 +319,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "1.25rem",
+        "fontSizes": "1.25rem",
         "fontWeights": 500,
         "lineHeight": 1.6,
         "letterSpacing": "0.0075em"
@@ -330,7 +330,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "1rem",
+        "fontSizes": "1rem",
         "fontWeights": 400,
         "lineHeight": 1.75,
         "letterSpacing": "0.00938em"
@@ -341,7 +341,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "0.875rem",
+        "fontSizes": "0.875rem",
         "fontWeights": 500,
         "lineHeight": 1.57,
         "letterSpacing": "0.00714em"
@@ -352,7 +352,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "1rem",
+        "fontSizes": "1rem",
         "fontWeights": 400,
         "lineHeight": 1.5,
         "letterSpacing": "0.00938em"
@@ -363,7 +363,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "0.875rem",
+        "fontSizes": "0.875rem",
         "fontWeights": 400,
         "lineHeight": 1.43,
         "letterSpacing": "0.01071em"
@@ -374,7 +374,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "0.875rem",
+        "fontSizes": "0.875rem",
         "fontWeights": 500,
         "lineHeight": 1.75,
         "letterSpacing": "0.02857em",
@@ -386,7 +386,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "0.75rem",
+        "fontSizes": "0.75rem",
         "fontWeights": 400,
         "lineHeight": 1.66,
         "letterSpacing": "0.03333em"
@@ -397,7 +397,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": "0.75rem",
+        "fontSizes": "0.75rem",
         "fontWeights": 400,
         "lineHeight": 2.66,
         "letterSpacing": "0.08333em",
@@ -409,7 +409,7 @@
       "$type": "typography",
       "$value": {
         "fontFamilies": "inherit",
-        "fontSize": "inherit",
+        "fontSizes": "inherit",
         "fontWeights": "inherit",
         "lineHeight": "inherit",
         "letterSpacing": "inherit"

@@ -24,7 +24,7 @@ const validate = ajv.compile(schema);
 // Helper function to check for plural types
 function hasPluralTypes(obj) {
   const pluralTypes = [
-    'fontSizes', 'fontWeightss', 'fontFamilies', 'lineHeights',
+    'fontSizess', 'fontWeightss', 'fontFamilies', 'lineHeights',
     'letterSpacings', 'borderRadiuses', 'borderWidths', 'spacings',
     'sizings', 'opacities', 'boxShadows', 'typographies',
     'paragraphSpacings', 'textCases', 'textDecorations', 'compositions',

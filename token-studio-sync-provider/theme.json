@@ -64,7 +64,7 @@
           "fontFamilies": "{fontFamilies.heading}",
           "fontWeights": "{fontWeightss.headingBold}",
           "lineHeight": "{lineHeights.heading}",
-          "fontSize": "{fontSizes.h1}",
+          "fontSizes": "{fontSizess.h1}",
           "paragraphSpacing": "{paragraphSpacing.h1}",
           "letterSpacing": "{letterSpacing.decreased}"
         }
@@ -75,7 +75,7 @@
           "fontFamilies": "{fontFamilies.heading}",
           "fontWeights": "{fontWeightss.headingRegular}",
           "lineHeight": "{lineHeights.heading}",
-          "fontSize": "{fontSizes.h1}",
+          "fontSizes": "{fontSizess.h1}",
           "paragraphSpacing": "{paragraphSpacing.h1}",
           "letterSpacing": "{letterSpacing.decreased}"
         }
@@ -88,7 +88,7 @@
           "fontFamilies": "{fontFamilies.heading}",
           "fontWeights": "{fontWeightss.headingBold}",
           "lineHeight": "{lineHeights.heading}",
-          "fontSize": "{fontSizes.h2}",
+          "fontSizes": "{fontSizess.h2}",
           "paragraphSpacing": "{paragraphSpacing.h2}",
           "letterSpacing": "{letterSpacing.decreased}"
         }
@@ -99,7 +99,7 @@
           "fontFamilies": "{fontFamilies.heading}",
           "fontWeights": "{fontWeightss.headingRegular}",
           "lineHeight": "{lineHeights.heading}",
-          "fontSize": "{fontSizes.h2}",
+          "fontSizes": "{fontSizess.h2}",
           "paragraphSpacing": "{paragraphSpacing.h2}",
           "letterSpacing": "{letterSpacing.decreased}"
         }
@@ -111,7 +111,7 @@
         "fontFamilies": "{fontFamilies.body}",
         "fontWeights": "{fontWeightss.bodyRegular}",
         "lineHeight": "{lineHeights.heading}",
-        "fontSize": "{fontSizes.body}",
+        "fontSizes": "{fontSizess.body}",
         "paragraphSpacing": "{paragraphSpacing.h2}"
       }
     }

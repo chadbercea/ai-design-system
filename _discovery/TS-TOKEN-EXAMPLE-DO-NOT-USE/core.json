@@ -538,42 +538,42 @@
       "$value": "Bold"
     }
   },
-  "fontSizes": {
+  "fontSizess": {
     "h1": {
-      "$type": "fontSizes",
-      "$value": "roundTo({fontSizes.body}*1.25^5)"
+      "$type": "fontSizess",
+      "$value": "roundTo({fontSizess.body}*1.25^5)"
     },
     "h2": {
-      "$type": "fontSizes",
-      "$value": "roundTo({fontSizes.body}*1.25^4)"
+      "$type": "fontSizess",
+      "$value": "roundTo({fontSizess.body}*1.25^4)"
     },
     "h3": {
-      "$type": "fontSizes",
-      "$value": "roundTo({fontSizes.body}*1.25^3)"
+      "$type": "fontSizess",
+      "$value": "roundTo({fontSizess.body}*1.25^3)"
     },
     "h4": {
-      "$type": "fontSizes",
-      "$value": "roundTo({fontSizes.body}*1.25^2)"
+      "$type": "fontSizess",
+      "$value": "roundTo({fontSizess.body}*1.25^2)"
     },
     "h5": {
-      "$type": "fontSizes",
-      "$value": "roundTo({fontSizes.body}*1.25^1)"
+      "$type": "fontSizess",
+      "$value": "roundTo({fontSizess.body}*1.25^1)"
     },
     "h6": {
-      "$type": "fontSizes",
-      "$value": "{fontSizes.body}"
+      "$type": "fontSizess",
+      "$value": "{fontSizess.body}"
     },
     "body": {
-      "$type": "fontSizes",
+      "$type": "fontSizess",
       "$value": "16"
     },
     "sm": {
-      "$type": "fontSizes",
-      "$value": "{fontSizes.body} * 0.85"
+      "$type": "fontSizess",
+      "$value": "{fontSizess.body} * 0.85"
     },
     "xs": {
-      "$type": "fontSizes",
-      "$value": "{fontSizes.body} * 0.65"
+      "$type": "fontSizess",
+      "$value": "{fontSizess.body} * 0.65"
     }
   }
 }

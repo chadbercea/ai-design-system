@@ -136,7 +136,7 @@
       "$description": "Heading font family"
     },
     "body": {
-      "$type": "fontSize",
+      "$type": "fontSizes",
       "$value": "16",
       "$description": "Body font size"
     },

@@ -35,7 +35,7 @@ The design token system includes automated validation to ensure compliance with 
 
 ### Validation Rules
 - All tokens must have `$value`, `$type`, and `$description`
-- Types must be singular (e.g., `fontSize` not `fontSizes`)
+- Types must be singular (e.g., `fontSizes` not `fontSizess`)
 - No nested primitives allowed
 - Color tokens must use lowercase dot notation
 - All changes must be validated before commit

@@ -1372,7 +1372,7 @@
         "fontFamilies": {
           "themeKey": "typography"
         },
-        "fontSize": {
+        "fontSizes": {
           "themeKey": "typography"
         },
         "fontStyle": {
@@ -1394,9 +1394,9 @@
     },
     "typography": {
       "$value": {
-        "htmlFontSize": 16,
+        "htmlfontSizes": 16,
         "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
-        "fontSize": 14,
+        "fontSizes": 14,
         "fontWeightsLight": 300,
         "fontWeightsRegular": 400,
         "fontWeightsMedium": 500,
@@ -1404,77 +1404,77 @@
         "h1": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 300,
-          "fontSize": "6rem",
+          "fontSizes": "6rem",
           "lineHeight": 1.167,
           "letterSpacing": "-0.01562em"
         },
         "h2": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 300,
-          "fontSize": "3.75rem",
+          "fontSizes": "3.75rem",
           "lineHeight": 1.2,
           "letterSpacing": "-0.00833em"
         },
         "h3": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 400,
-          "fontSize": "3rem",
+          "fontSizes": "3rem",
           "lineHeight": 1.167,
           "letterSpacing": "0em"
         },
         "h4": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 400,
-          "fontSize": "2.125rem",
+          "fontSizes": "2.125rem",
           "lineHeight": 1.235,
           "letterSpacing": "0.00735em"
         },
         "h5": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 400,
-          "fontSize": "1.5rem",
+          "fontSizes": "1.5rem",
           "lineHeight": 1.334,
           "letterSpacing": "0em"
         },
         "h6": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 500,
-          "fontSize": "1.25rem",
+          "fontSizes": "1.25rem",
           "lineHeight": 1.6,
           "letterSpacing": "0.0075em"
         },
         "subtitle1": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 400,
-          "fontSize": "1rem",
+          "fontSizes": "1rem",
           "lineHeight": 1.75,
           "letterSpacing": "0.00938em"
         },
         "subtitle2": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 500,
-          "fontSize": "0.875rem",
+          "fontSizes": "0.875rem",
           "lineHeight": 1.57,
           "letterSpacing": "0.00714em"
         },
         "body1": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 400,
-          "fontSize": "1rem",
+          "fontSizes": "1rem",
           "lineHeight": 1.5,
           "letterSpacing": "0.00938em"
         },
         "body2": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 400,
-          "fontSize": "0.875rem",
+          "fontSizes": "0.875rem",
           "lineHeight": 1.43,
           "letterSpacing": "0.01071em"
         },
         "button": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 500,
-          "fontSize": "0.875rem",
+          "fontSizes": "0.875rem",
           "lineHeight": 1.75,
           "letterSpacing": "0.02857em",
           "textTransform": "uppercase"
@@ -1482,14 +1482,14 @@
         "caption": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 400,
-          "fontSize": "0.75rem",
+          "fontSizes": "0.75rem",
           "lineHeight": 1.66,
           "letterSpacing": "0.03333em"
         },
         "overline": {
           "fontFamilies": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
           "fontWeights": 400,
-          "fontSize": "0.75rem",
+          "fontSizes": "0.75rem",
           "lineHeight": 2.66,
           "letterSpacing": "0.08333em",
           "textTransform": "uppercase"
@@ -1497,7 +1497,7 @@
         "inherit": {
           "fontFamilies": "inherit",
           "fontWeights": "inherit",
-          "fontSize": "inherit",
+          "fontSizes": "inherit",
           "lineHeight": "inherit",
           "letterSpacing": "inherit"
         }

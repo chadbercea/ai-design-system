@@ -674,7 +674,7 @@
       "minHeight",
       "boxSizing",
       "fontFamilies",
-      "fontSize",
+      "fontSizes",
       "fontStyle",
       "fontWeights",
       "letterSpacing",
@@ -1690,14 +1690,14 @@
     "value": "typography"
   },
   {
-    "token": "unstable_sxConfig.fontSize",
+    "token": "unstable_sxConfig.fontSizes",
     "type": "object",
     "children": [
       "themeKey"
     ]
   },
   {
-    "token": "unstable_sxConfig.fontSize.themeKey",
+    "token": "unstable_sxConfig.fontSizes.themeKey",
     "type": "string",
     "value": "typography"
   },
@@ -1854,10 +1854,10 @@
     "token": "typography",
     "type": "object",
     "children": [
-      "htmlFontSize",
+      "htmlfontSizes",
       "pxToRem",
       "fontFamilies",
-      "fontSize",
+      "fontSizes",
       "fontWeightsLight",
       "fontWeightsRegular",
       "fontWeightsMedium",
@@ -1879,7 +1879,7 @@
     ]
   },
   {
-    "token": "typography.htmlFontSize",
+    "token": "typography.htmlfontSizes",
     "type": "number",
     "value": 16
   },
@@ -1893,7 +1893,7 @@
     "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
   },
   {
-    "token": "typography.fontSize",
+    "token": "typography.fontSizes",
     "type": "number",
     "value": 14
   },
@@ -1923,7 +1923,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -1939,7 +1939,7 @@
     "value": 300
   },
   {
-    "token": "typography.h1.fontSize",
+    "token": "typography.h1.fontSizes",
     "type": "spacing",
     "value": "6rem"
   },
@@ -1959,7 +1959,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -1975,7 +1975,7 @@
     "value": 300
   },
   {
-    "token": "typography.h2.fontSize",
+    "token": "typography.h2.fontSizes",
     "type": "spacing",
     "value": "3.75rem"
   },
@@ -1995,7 +1995,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -2011,7 +2011,7 @@
     "value": 400
   },
   {
-    "token": "typography.h3.fontSize",
+    "token": "typography.h3.fontSizes",
     "type": "spacing",
     "value": "3rem"
   },
@@ -2031,7 +2031,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -2047,7 +2047,7 @@
     "value": 400
   },
   {
-    "token": "typography.h4.fontSize",
+    "token": "typography.h4.fontSizes",
     "type": "spacing",
     "value": "2.125rem"
   },
@@ -2067,7 +2067,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -2083,7 +2083,7 @@
     "value": 400
   },
   {
-    "token": "typography.h5.fontSize",
+    "token": "typography.h5.fontSizes",
     "type": "spacing",
     "value": "1.5rem"
   },
@@ -2103,7 +2103,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -2119,7 +2119,7 @@
     "value": 500
   },
   {
-    "token": "typography.h6.fontSize",
+    "token": "typography.h6.fontSizes",
     "type": "spacing",
     "value": "1.25rem"
   },
@@ -2139,7 +2139,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -2155,7 +2155,7 @@
     "value": 400
   },
   {
-    "token": "typography.subtitle1.fontSize",
+    "token": "typography.subtitle1.fontSizes",
     "type": "spacing",
     "value": "1rem"
   },
@@ -2175,7 +2175,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -2191,7 +2191,7 @@
     "value": 500
   },
   {
-    "token": "typography.subtitle2.fontSize",
+    "token": "typography.subtitle2.fontSizes",
     "type": "spacing",
     "value": "0.875rem"
   },
@@ -2211,7 +2211,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -2227,7 +2227,7 @@
     "value": 400
   },
   {
-    "token": "typography.body1.fontSize",
+    "token": "typography.body1.fontSizes",
     "type": "spacing",
     "value": "1rem"
   },
@@ -2247,7 +2247,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -2263,7 +2263,7 @@
     "value": 400
   },
   {
-    "token": "typography.body2.fontSize",
+    "token": "typography.body2.fontSizes",
     "type": "spacing",
     "value": "0.875rem"
   },
@@ -2283,7 +2283,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing",
       "textTransform"
@@ -2300,7 +2300,7 @@
     "value": 500
   },
   {
-    "token": "typography.button.fontSize",
+    "token": "typography.button.fontSizes",
     "type": "spacing",
     "value": "0.875rem"
   },
@@ -2325,7 +2325,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -2341,7 +2341,7 @@
     "value": 400
   },
   {
-    "token": "typography.caption.fontSize",
+    "token": "typography.caption.fontSizes",
     "type": "spacing",
     "value": "0.75rem"
   },
@@ -2361,7 +2361,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing",
       "textTransform"
@@ -2378,7 +2378,7 @@
     "value": 400
   },
   {
-    "token": "typography.overline.fontSize",
+    "token": "typography.overline.fontSizes",
     "type": "spacing",
     "value": "0.75rem"
   },
@@ -2403,7 +2403,7 @@
     "children": [
       "fontFamilies",
       "fontWeights",
-      "fontSize",
+      "fontSizes",
       "lineHeight",
       "letterSpacing"
     ]
@@ -2419,7 +2419,7 @@
     "value": "inherit"
   },
   {
-    "token": "typography.inherit.fontSize",
+    "token": "typography.inherit.fontSizes",
     "type": "string",
     "value": "inherit"
   },

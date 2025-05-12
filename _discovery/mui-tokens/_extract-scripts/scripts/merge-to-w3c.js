@@ -9,7 +9,7 @@ const FILE_TO_TYPE = {
   'mui-token-colors.json': 'color',
   'mui-token-border-radius.json': 'borderRadius',
   'mui-token-font-family.json': 'fontFamilies',
-  'mui-token-font-size.json': 'fontSize',
+  'mui-token-font-size.json': 'fontSizes',
   'mui-token-font-weight.json': 'fontWeights',
   'mui-token-line-height.json': 'lineHeight',
   'mui-token-letter-spacing.json': 'letterSpacing',

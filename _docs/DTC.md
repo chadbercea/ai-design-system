@@ -7,7 +7,7 @@ The definitive order of operations for all token processing:
 1. Determine the token's `$type` based on Tokens Studio taxonomy
 2. Use **exactly** these type values:
    - `color`
-   - `fontSizes`
+   - `fontSizess`
    - `fontWeights`
    - `fontFamilies`
    - `lineHeights`
@@ -37,7 +37,7 @@ The definitive order of operations for all token processing:
 ### D: Decide Category
 1. Every token belongs to one of the canonical categories:
    - Color
-   - FontSize
+   - fontSizes
    - fontWeights
    - fontFamilies
    - LineHeight
@@ -71,7 +71,7 @@ Apply this critical test to determine token placement:
 1. Convert both the token's `$type` and its category name to lowercase
 2. Compare them exactly (case-insensitive comparison):
    - If they match (e.g., `color` = `color`): Place token directly under `Primitives` (no wrapping)
-   - If they differ (e.g., `fontsize` ≠ `typography`): Place token under its PascalCase category
+   - If they differ (e.g., `fontSizes` ≠ `typography`): Place token under its PascalCase category
 3. If a token's category and type match, it MUST be placed directly under `Primitives` without any wrapper
 
 ### P: Path and Property Formatting

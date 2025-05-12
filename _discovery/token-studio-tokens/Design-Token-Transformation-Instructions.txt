@@ -22,7 +22,7 @@ For EACH token, include EXACTLY these three properties:
 
 ### 3. Token Name Derivation
 - Preserve the original token path as the token name
-- Use dot notation (e.g., `"blue.500"`, `"fontSize.sm"`)
+- Use dot notation (e.g., `"blue.500"`, `"fontSizes.sm"`)
 - NEVER create your own naming scheme
 
 ### 4. Token Value Processing
@@ -35,7 +35,7 @@ Determine `$type` by these exact rules:
 - If value is a hex code or rgb/rgba format → `$type`: `"color"`
 - If value has px, rem, em, % → `$type`: `"dimension"`
 - If value is a number with no unit → check context:
-  - If in a fontSize context → `$type`: `"dimension"`
+  - If in a fontSizes context → `$type`: `"dimension"`
   - If in a fontWeights context → `$type`: `"fontWeights"`
   - If in a letterSpacing context → `$type`: `"dimension"`
   - If in a lineHeight context → `$type`: `"dimension"` (even if unitless)
@@ -46,7 +46,7 @@ Determine `$type` by these exact rules:
 - Format as lowercase space-separated words
 - Replace dots with spaces
 - Example: `"blue.500"` → `"blue 500"`
-- Example: `"fontSize.sm"` → `"font size sm"`
+- Example: `"fontSizes.sm"` → `"font size sm"`
 
 ## Example Transformation
 
@@ -57,7 +57,7 @@ INPUT:
     "blue": {
       "500": "#2196f3"
     },
-    "fontSize": {
+    "fontSizes": {
       "sm": "0.875rem"
     }
   }
@@ -73,7 +73,7 @@ OUTPUT:
       "$type": "color",
       "$description": "blue 500"
     },
-    "fontSize.sm": {
+    "fontSizes.sm": {
       "$value": "0.875rem",
       "$type": "dimension",
       "$description": "font size sm"

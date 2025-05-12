@@ -15,7 +15,7 @@ const canonicalCategoryTypeMap = {
   fontFamilies: 'fontFamilies',
   fontWeights: 'fontWeights',
   LineHeight: 'lineHeight',
-  FontSize: 'fontSize',
+  fontSizes: 'fontSizes',
   LetterSpacing: 'letterSpacing',
   ParagraphSpacing: 'paragraphSpacing',
   TextCase: 'textCase',
@@ -150,14 +150,14 @@ function main() {
   if (typography.fontWeightsBold !== undefined) {
     addPrimitive(primitives, { category: 'fontWeights', tokenName: 'Bold', value: typography.fontWeightsBold, $type: 'fontWeights' });
   }
-  // FontSize, LineHeight, LetterSpacing from h1-h6, subtitle1/2, body1/2, button, caption, overline
+  // fontSizes, LineHeight, LetterSpacing from h1-h6, subtitle1/2, body1/2, button, caption, overline
   const typestyles = [
     'h1','h2','h3','h4','h5','h6','subtitle1','subtitle2','body1','body2','button','caption','overline'
   ];
   typestyles.forEach(style => {
     const t = typography[style];
     if (!t) return;
-    if (t.fontSize) addPrimitive(primitives, { category: 'FontSize', tokenName: toPascalCase(style), value: t.fontSize, $type: 'fontSize' });
+    if (t.fontSizes) addPrimitive(primitives, { category: 'fontSizes', tokenName: toPascalCase(style), value: t.fontSizes, $type: 'fontSizes' });
     if (t.lineHeight) addPrimitive(primitives, { category: 'LineHeight', tokenName: toPascalCase(style), value: t.lineHeight, $type: 'lineHeight' });
     if (t.letterSpacing) addPrimitive(primitives, { category: 'LetterSpacing', tokenName: toPascalCase(style), value: t.letterSpacing, $type: 'letterSpacing' });
   });

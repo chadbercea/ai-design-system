@@ -37,7 +37,7 @@ token-studio-sync-provider/
 
 2. **Validation Requirements**:
    - Every token MUST have: `$value`, `$type`, `$description`
-   - Types MUST be singular (e.g., `fontSize` not `fontSizes`)
+   - Types MUST be singular (e.g., `fontSizes` not `fontSizess`)
    - Categories MUST be PascalCase singular
    - Color tokens MUST use lowercase dot notation
 

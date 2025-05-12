@@ -3,7 +3,7 @@ const path = require('path');
 
 const DTC_RULES = {
   types: [
-    'color', 'fontSize', 'fontWeights', 'fontFamilies', 'lineHeight',
+    'color', 'fontSizes', 'fontWeights', 'fontFamilies', 'lineHeight',
     'letterSpacing', 'borderRadius', 'borderWidth', 'spacing',
     'sizing', 'opacity', 'boxShadow', 'typography', 'paragraphSpacing',
     'textCase', 'textDecoration', 'composition', 'dimension',

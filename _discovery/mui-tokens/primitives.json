@@ -1127,65 +1127,65 @@
         "$value": "700"
       }
     },
-    "FontSize": {
+    "fontSizes": {
       "Base": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "14"
       },
       "h1": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "6rem"
       },
       "h2": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "3.75rem"
       },
       "h3": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "3rem"
       },
       "h4": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "2.125rem"
       },
       "h5": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "1.5rem"
       },
       "h6": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "1.25rem"
       },
       "subtitle1": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "1rem"
       },
       "subtitle2": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "0.875rem"
       },
       "body1": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "1rem"
       },
       "body2": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "0.875rem"
       },
       "button": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "0.875rem"
       },
       "caption": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "0.75rem"
       },
       "overline": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "0.75rem"
       },
       "inherit": {
-        "$type": "fontSize",
+        "$type": "fontSizes",
         "$value": "inherit"
       }
     },
