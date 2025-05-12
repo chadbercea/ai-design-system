@@ -2,82 +2,53 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "patternProperties": {
-    "^(sm|md|lg|xl)$": {
+    "^[a-zA-Z0-9.]+$": {
       "type": "object",
       "properties": {
-        "$type": { "type": "string", "enum": ["borderRadius", "dimension", "spacing"] },
-        "$value": { "type": ["string", "number"], "not": { "pattern": "[{}]" } },
-        "$description": { "type": "string" }
-      },
-      "required": ["$type", "$value", "$description"],
-      "additionalProperties": false
-    },
-    "^(black|white|gray100|gray200|gray300|gray400|gray500|gray600|gray700|gray800|gray900|red100|red200|red300|red400|red500|red600|red700|red800|red900)$": {
-      "type": "object",
-      "properties": {
-        "$type": { "type": "string", "enum": ["color"] },
-        "$value": { "type": "string" },
-        "$description": { "type": "string" }
-      },
-      "required": ["$type", "$value", "$description"],
-      "additionalProperties": false
-    },
-    "^(low|md|high)$": {
-      "type": "object",
-      "properties": {
-        "$type": { "type": "string", "enum": ["opacity"] },
-        "$value": { "type": "string" },
-        "$description": { "type": "string" }
-      },
-      "required": ["$type", "$value", "$description"],
-      "additionalProperties": false
-    },
-    "^(heading|body)$": {
-      "type": "object",
-      "properties": {
-        "$type": { "type": "string", "enum": ["fontFamily", "lineHeight"] },
-        "$value": { "type": "string" },
-        "$description": { "type": "string" }
-      },
-      "required": ["$type", "$value", "$description"],
-      "additionalProperties": false
-    },
-    "^(default|increased|decreased)$": {
-      "type": "object",
-      "properties": {
-        "$type": { "type": "string", "enum": ["letterSpacing"] },
-        "$value": { "type": "string" },
-        "$description": { "type": "string" }
-      },
-      "required": ["$type", "$value", "$description"],
-      "additionalProperties": false
-    },
-    "^(h1|h2)$": {
-      "type": "object",
-      "properties": {
-        "$type": { "type": "string", "enum": ["paragraphSpacing"] },
-        "$value": { "type": ["string", "number"] },
-        "$description": { "type": "string" }
-      },
-      "required": ["$type", "$value", "$description"],
-      "additionalProperties": false
-    },
-    "^(headingRegular|headingBold|bodyRegular|bodyBold)$": {
-      "type": "object",
-      "properties": {
-        "$type": { "type": "string", "enum": ["fontWeight"] },
-        "$value": { "type": "string" },
-        "$description": { "type": "string" }
-      },
-      "required": ["$type", "$value", "$description"],
-      "additionalProperties": false
-    },
-    "^(body)$": {
-      "type": "object",
-      "properties": {
-        "$type": { "type": "string", "enum": ["fontSize"] },
-        "$value": { "type": ["string", "number"] },
-        "$description": { "type": "string" }
+        "$type": {
+          "type": "string",
+          "enum": [
+            "color",
+            "fontSize",
+            "fontWeight",
+            "fontFamily",
+            "lineHeight",
+            "letterSpacing",
+            "borderRadius",
+            "borderWidth",
+            "spacing",
+            "sizing",
+            "opacity",
+            "boxShadow",
+            "typography",
+            "paragraphSpacing",
+            "textCase",
+            "textDecoration",
+            "composition",
+            "dimension",
+            "breakpoints",
+            "border",
+            "zIndex",
+            "duration",
+            "assets",
+            "boolean",
+            "text",
+            "number",
+            "other"
+          ]
+        },
+        "$value": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "number" }
+          ],
+          "not": {
+            "pattern": "[{}]"
+          }
+        },
+        "$description": {
+          "type": "string"
+        }
       },
       "required": ["$type", "$value", "$description"],
       "additionalProperties": false
