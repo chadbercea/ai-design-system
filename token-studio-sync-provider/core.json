@@ -1,8 +1,8 @@
 {
   "0": {
-    "$type": "invalidType",
+    "$type": "sizing",
     "$value": "0",
-    "$description": "No size"
+    "$description": "TBD"
   },
   "1": {
     "$type": "sizing",
