@@ -96,6 +96,36 @@ function validateTokenStructure(token, path = '') {
   return errors;
 }
 
+const allowedGroups = [
+  'colors',
+  'fontSizes',
+  'fontWeights',
+  'fontFamilies',
+  'lineHeights',
+  'letterSpacing',
+  'borderRadius',
+  'borderWidths',
+  'spacing',
+  'sizing',
+  'opacity',
+  'boxShadow',
+  'typography',
+  'paragraphSpacing',
+  'textCase',
+  'textDecoration',
+  'composition',
+  'dimension',
+  'breakpoints',
+  'border',
+  'zIndex',
+  'duration',
+  'assets',
+  'boolean',
+  'text',
+  'number',
+  'other'
+];
+
 function validateFile(filePath) {
   const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   const errors = [];
@@ -121,13 +151,33 @@ function validateFile(filePath) {
         if (currentPath.split('.').length > 1) {
           errors.push(`Double nesting detected at ${newPath}`);
         }
+        
         // Check if root-level object is a primitive or allowed group
         if (currentPath === '') {
-          const isAllowedGroup = ['colors', 'fontSizes', 'fontWeights', 'fontFamilies', 'lineHeights', 'letterSpacing', 'borderRadius', 'borderWidths', 'spacing', 'sizing', 'opacity', 'boxShadow', 'typography', 'paragraphSpacing', 'textCase', 'textDecoration', 'composition', 'dimension', 'breakpoints', 'border', 'zIndex', 'duration', 'assets', 'boolean', 'text', 'number', 'other'].includes(key);
+          const normalizedKey = key.toLowerCase();
+          const isAllowedGroup = allowedGroups.includes(normalizedKey);
           if (!isAllowedGroup) {
             errors.push(`Root-level object "${key}" is not a primitive or allowed group. All root-level objects must be primitives or explicitly allowed groups.`);
           }
         }
+
+        // Check for nested tokens that should be at root level
+        if (currentPath !== '') {
+          Object.entries(value).forEach(([nestedKey, nestedValue]) => {
+            if (nestedValue.$type) {
+              errors.push(`Token "${nestedKey}" should be at root level, not nested under "${key}". Move it to root level.`);
+            }
+          });
+        }
+
+        // Check for inconsistent type naming (e.g., lineHeight vs lineHeights)
+        if (value.$type) {
+          const normalizedType = value.$type.toLowerCase().replace(/s$/, '');
+          if (normalizedType !== value.$type.toLowerCase()) {
+            errors.push(`Inconsistent type naming at ${newPath}: "${value.$type}" should be "${normalizedType}"`);
+          }
+        }
+
         traverse(value, newPath);
       }
     }

@@ -76,7 +76,7 @@
   },
   "30": {
     "$type": "opacity",
-    "$value": "0.3",
+    "$value": "30%",
     "$description": "30% opacity"
   },
   "32": {
@@ -101,7 +101,7 @@
   },
   "50": {
     "$type": "opacity",
-    "$value": "0.5",
+    "$value": "50%",
     "$description": "50% opacity"
   },
   "56": {
@@ -111,7 +111,7 @@
   },
   "60": {
     "$type": "opacity",
-    "$value": "0.6",
+    "$value": "60%",
     "$description": "60% opacity"
   },
   "64": {
@@ -121,32 +121,32 @@
   },
   "70": {
     "$type": "opacity",
-    "$value": "0.7",
+    "$value": "70%",
     "$description": "70% opacity"
   },
   "75": {
     "$type": "opacity",
-    "$value": "0.75",
+    "$value": "75%",
     "$description": "75% opacity"
   },
   "80": {
     "$type": "opacity",
-    "$value": "0.8",
+    "$value": "80%",
     "$description": "80% opacity"
   },
   "90": {
     "$type": "opacity",
-    "$value": "0.9",
+    "$value": "90%",
     "$description": "90% opacity"
   },
   "95": {
     "$type": "opacity",
-    "$value": "0.95",
+    "$value": "95%",
     "$description": "95% opacity"
   },
   "100": {
     "$type": "opacity",
-    "$value": "1",
+    "$value": "100%",
     "$description": "Fully opaque"
   },
   "scale": {
@@ -700,9 +700,9 @@
     "$description": "Light font weight"
   },
   "normal": {
-    "$type": "letterSpacing",
-    "$value": "0",
-    "$description": "Normal letter spacing"
+    "$type": "lineHeights",
+    "$value": "100%",
+    "$description": "Normal line height"
   },
   "medium": {
     "$type": "borderWidth",
@@ -735,17 +735,17 @@
     "$description": "Tight letter spacing"
   },
   "snug": {
-    "$type": "lineHeight",
+    "$type": "lineHeights",
     "$value": "1.375",
     "$description": "Snug line height"
   },
   "relaxed": {
-    "$type": "lineHeight",
+    "$type": "lineHeights",
     "$value": "1.625",
     "$description": "Relaxed line height"
   },
   "loose": {
-    "$type": "lineHeight",
+    "$type": "lineHeights",
     "$value": "2",
     "$description": "Loose line height"
   },
@@ -823,12 +823,5 @@
     "$type": "sizing",
     "$value": "fit-content",
     "$description": "Fit content size"
-  },
-  "lineheight": {
-    "normal": {
-      "$type": "lineHeights",
-      "$value": "100%",
-      "$description": "This is a token I'm pushing from Figma that needs to be formatted "
-    }
   }
 }
