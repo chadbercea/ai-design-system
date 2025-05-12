@@ -3,6 +3,7 @@
     "core",
     "light",
     "dark",
-    "theme"
+    "theme",
+    "mui-w3c"
   ]
 }
