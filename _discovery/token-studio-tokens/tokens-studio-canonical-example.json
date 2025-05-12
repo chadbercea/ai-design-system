@@ -45,7 +45,7 @@
       "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
     },
     "Bold": {
-      "$type": "fontWeightss",
+      "$type": "fontWeights",
       "$value": "Bold",
       "$description": "This is a null token that is an example to correct Cursor and not to be used for real."
     },

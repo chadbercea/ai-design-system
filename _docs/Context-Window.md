@@ -1,146 +1,265 @@
 # Design Token System - Current State
 
 ## Prime Directive
-For every primitive token, follow the T-D-W-P system exactly:
-- The token name is the primitive's canonical name (e.g., sm, md, lg, xl for borderRadius), with no prefix, wrapper, or pluralization
-- The token is at the root of the JSON
-- The token object contains only $type (the singular, canonical type), $value (the direct, raw value), and $description (a concise, clear description)
-- There is no namespacing, no category or type prefix, no double nesting, and no pluralization
-- If a token cannot be expressed as a primitive (raw value), it is excluded
-- Repeat for every primitive type in the Canon
+Token names are canonical primitive identifiers. No wrappers. No prefixes. No plural forms.
 
-## Core System
-- T-D-W-P (Type, Decide, Wrap, Path) system
-- Tokens Studio sync provider
-- W3C DTCG-compliant structure
-- Production-ready token sets
+Tokens exist at root level. No exceptions. No folders. No containers. Tokens Studio patterns are the only valid nesting.
 
-## Current Architecture
+$value must be static string or number. No aliases. No math. No references. Violations fail the build.
+
+## Architecture
 ```
 token-studio-sync-provider/
-├── core.json          # Base token set
-├── dark.json          # Dark theme tokens
-├── light.json         # Light theme tokens
-├── theme.json         # Theme-specific tokens
-├── $themes.json       # Theme relationships
-└── $metadata.json     # Set configuration
+├── core.json          # Read-only outside CI. Direct edits fail.
+├── dark.json          # Dark overrides. Deep merge only.
+├── light.json         # Light overrides. Deep merge only.
+├── theme.json         # Semantic tokens. No primitives.
+├── $themes.json       # Theme relationships. Declarative.
+└── $metadata.json     # Schema version. Locked.
 ```
 
-## AI Assistant Guidelines
+Enforcement:
+- core.json is read-only outside CI. Direct edits trigger failure.
+- All changes flow through schema validation and merge-approved pipelines.
+- No manual mutation of primitives. That's not a warning. That's policy.
 
-### Token Processing Rules
-1. **Always follow T-D-W-P in order**:
-   - T: Determine type first
-   - D: Decide category second
-   - W: Apply wrapping rules third
-   - P: Format path and properties last
+## Validation and Enforcement Logic
 
-2. **Validation Requirements**:
-   - Every token MUST have: `$value`, `$type`, `$description`
-   - Types MUST be singular (e.g., `fontSizes` not `fontSizess`)
-   - Categories MUST be PascalCase singular
-   - Color tokens MUST use lowercase dot notation
+### T-D-W-P System
+1. Type
+   $type must match allowedTypes enum. Any deviation fails. No casing variations. No pluralization. No substitutions.
 
-3. **Error Conditions**:
-   - Double nesting under Primitives
-   - Plural forms in `$type`
-   - Wrapping when type matches category
-   - Semantic tokens in Primitives
-   - Missing required properties
+   ```json
+   {
+     "allowedTypes": [
+       "color",
+       "fontSizes",
+       "fontWeights",
+       "fontFamilies",
+       "lineHeights",
+       "letterSpacing",
+       "borderRadius",
+       "borderWidths",
+       "spacing",
+       "sizing",
+       "opacity",
+       "boxShadow",
+       "typography",
+       "paragraphSpacing",
+       "textCase",
+       "textDecoration",
+       "composition",
+       "dimension",
+       "breakpoints",
+       "border",
+       "zIndex",
+       "duration",
+       "assets",
+       "boolean",
+       "text",
+       "number",
+       "other"
+     ]
+   }
+   ```
 
-### AI Response Patterns
-1. **When Processing Tokens**:
-   - First, check against T-D-W-P system
-   - Second, validate against Canon rules
-   - Third, ensure W3C compliance
-   - Finally, verify Tokens Studio compatibility
+2. Category
+   Category must match allowedCategories enum. Any deviation fails. No exceptions.
 
-2. **When Suggesting Changes**:
-   - Maintain primitive/semantic separation
-   - Preserve existing references
-   - Follow established naming patterns
-   - Document all modifications
+   ```json
+   {
+     "allowedCategories": [
+       "Color",
+       "FontSize",
+       "FontWeight",
+       "FontFamily",
+       "LineHeight",
+       "LetterSpacing",
+       "BorderRadius",
+       "BorderWidth",
+       "Spacing",
+       "Sizing",
+       "Opacity",
+       "BoxShadow",
+       "Typography",
+       "ParagraphSpacing",
+       "TextCase",
+       "TextDecoration",
+       "Composition",
+       "Dimension",
+       "Breakpoints",
+       "Border",
+       "ZIndex",
+       "Duration",
+       "Assets",
+       "Boolean",
+       "Text",
+       "Number",
+       "Other"
+     ]
+   }
+   ```
 
-3. **When Validating Structure**:
-   - Check type determination
-   - Verify category assignment
-   - Confirm wrapping decisions
-   - Validate path formatting
+3. Wrapping
+   Wrapping key and $type must not match after lowercasing. Violation fails the build.
 
-### Reference Points
-1. **Primary Sources**:
-   - Design Token Canon for structure rules
-   - Tokens Studio documentation for type system
-   - W3C DTCG specification for compliance
+   Only fontSizes, fontFamilies, fontWeights, lineHeights may use category wrapping. All others are flat primitives.
 
-2. **Validation Steps**:
-   - Type matches Tokens Studio taxonomy
-   - Category follows PascalCase singular
-   - Wrapping follows type/category match rules
-   - Path follows placement rules
+4. Path
+   - Root-level tokens use flat canonical names
+   - Tokens Studio patterns use category wrappers
 
-3. **Error Prevention**:
-   - Flag any deviation from T-D-W-P
-   - Identify potential conflicts
-   - Suggest corrections
-   - Maintain consistency
+### Required Fields
+- $type: matches canonical type
+- $value: raw string or number
+- $description: sentence-length, human-readable. No placeholders. No TBD.
 
-## Next Steps
-1. **Enhance Token Governance**
-   - Implement automated validation
-   - Add drift detection
-   - Create decision support system
+### Format Rules
+- Color tokens: lowercase dot notation (blue.500)
+- Plural keys: forbidden except Tokens Studio 4
+- Token keys: unique per file per $type
+- Reused keys: must have distinct $type
 
-2. **Automated Local Regression Testing**
-   - Pre-merge validation pipeline
-   - T-D-W-P compliance checks
-   - Reference validation
-   - Type checking
-   - Structure verification
-   - Theme consistency
-   - No breaking changes to existing tokens
+### Error Conditions
+These structures fail. No warnings. No exceptions.
 
-3. **Expand Token Coverage**
-   - Add more component tokens
-   - Implement additional themes
-   - Create variant system
+1. Double nesting: parent key equals $type after normalization. Flatten and reject.
+2. Wrapping violation: wrapping key equals $type after lowercasing. Reject.
+3. Plural type: forbidden unless Tokens Studio pattern. Reject.
+4. Missing field: immediate rejection.
+5. Mixed units: blocked.
+6. {} in $value: rejected. Semantic leak.
+7. Semantic in primitive: rejected.
+8. Path violation: blocked.
 
-4. **Improve Documentation**
-   - Update usage guidelines
-   - Create contribution rules
-   - Document best practices 
+## Schema Versioning
+1. Schema Lock
+   - Version in $metadata.json
+   - Deviation blocks build
+   - Version bump required for changes
 
-   ////////////////////////////
-   New Problem Space
-   \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+2. Tokens Studio
+   - Validates against current schema
+   - Rejects unexpected $type
+   - Versions schema changes
 
+3. Design Tools
+   - Validates against Figma schema
+   - Matches Tokens Studio sync
+   - Blocks invalid exports
+
+## Theme Resolution
+1. Precedence (strict)
+   1. core.json (primitives)
+   2. theme.json (semantic)
+   3. light/dark.json (overrides)
+   4. $themes.json (relationships)
+   Collisions without disambiguation fail.
+
+2. Overrides
+   - Deep merge only
+   - Semantic required in theme.json
+   - No primitive references
+   - Collisions require disambiguation
+
+3. References
+   - Limited to theme.json and overrides
+   - Flattened at build
+   - Circulars rejected
+   - Invalid links crash
+
+## Unit Normalization
+1. Legal Units
+   ```json
+   {
+     "opacity": "percent strings only (10%)",
+     "spacing": "numbers as px (10)",
+     "duration": "ms only (100ms)",
+     "fontSize": "px or rem (16px, 1rem)",
+     "lineHeight": "unitless (1.5)",
+     "borderRadius": "px or rem (4px, 0.25rem)",
+     "borderWidth": "px only (1px)",
+     "boxShadow": "px, color (0 2px 4px rgba(0,0,0,0.1))",
+     "zIndex": "integers (1)",
+     "color": "hex or rgba (#000000, rgba(0,0,0,0.5))"
+   }
+   ```
+
+2. Validation
+   - Type-specific unit validation
+   - Mixed units blocked
+   - Build-time conversion
+   - Invalid units rejected
+
+## Schema Evolution
+1. Forward Compatibility
+   - Unknown keys rejected
+   - Reserved fields declared
+   - Deprecated fields marked
+
+2. Reserved Fields
+   ```json
+   {
+     "reservedFields": [
+       "$type",
+       "$value",
+       "$description",
+       "$category",
+       "$metadata",
+       "$version"
+     ]
+   }
+   ```
+
+3. Deprecation
+   - Fields marked deprecated
+   - One major version minimum
+   - Removal in major bump
+   - Migration guide required
+
+## Canonical Violation Example
+Invalid (Fails):
+```json
+{
   "opacity": {
     "low": {
       "$type": "opacity",
       "$value": "10%",
       "$description": "Low opacity value"
-    },
-    "md": {
-      "$type": "opacity",
-      "$value": "50%",
-      "$description": "Medium opacity value"
-    },
-    "high": {
-      "$type": "opacity",
-      "$value": "90%",
-      "$description": "High opacity value"
     }
   }
+}
+```
 
-  This JSON is creating a double nested situation that means if the wrapper or the name should not == $value
+Fails:
+- opacity = wrapping key = $type
+- low should be root
+- Double nesting
+- Linter rejects
 
-  I am frustrated so read this:
-  The Instruction That Will Guarantee DTC Compliance
-Instruction:
-> “For every primitive token, follow the T-D-W-P system exactly as described in DTC.md:
-> - The token name is the primitive's canonical name (e.g., sm, md, lg, xl for borderRadius), with no prefix, wrapper, or pluralization.
-> - The token is at the root of the JSON.
-> - The token object contains only $type (the singular, canonical type), $value (the direct, raw value), and $description (a concise, clear description).
-> - There is no namespacing, no category or type prefix, no double nesting, and no pluralization.
-> - If a token cannot be expressed as a primitive (raw value), it is excluded.
-> - Repeat for every primitive type in the Canon.”
+Valid:
+```json
+{
+  "low": {
+    "$type": "opacity",
+    "$value": "10%",
+    "$description": "Low opacity value"
+  }
+}
+```
+
+## Next Actions
+1. JSON schema (blocks build)
+2. Linter (blocks commit)
+3. Flattener (fix + fail)
+4. Snapshots (strict mode)
+5. DTCG sync
+6. Docs
+
+## Summary
+System fails fast. No drift. No ambiguity. T-D-W-P is law.
+
+## Enforcement
+- core.json: validated, T-D-W-P compliant
+- Failures: block pipeline
+- No manual primitives. Policy.
