@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "patternProperties": {
+    "^[a-zA-Z0-9.]+$": {
+      "type": "object",
+      "properties": {
+        "$type": {
+          "type": "string",
+          "enum": [
+            "color",
+            "fontSize",
+            "fontWeight",
+            "fontFamily",
+            "lineHeight",
+            "letterSpacing",
+            "borderRadius",
+            "borderWidth",
+            "spacing",
+            "sizing",
+            "opacity",
+            "boxShadow",
+            "typography",
+            "paragraphSpacing",
+            "textCase",
+            "textDecoration",
+            "composition",
+            "dimension",
+            "breakpoints",
+            "border",
+            "zIndex",
+            "duration",
+            "assets",
+            "boolean",
+            "text",
+            "number",
+            "other"
+          ]
+        },
+        "$value": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "number" }
+          ],
+          "not": {
+            "pattern": "[{}]"
+          }
+        },
+        "$description": {
+          "type": "string"
+        }
+      },
+      "required": ["$type", "$value", "$description"],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+} 

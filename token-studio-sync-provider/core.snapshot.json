@@ -1,0 +1,189 @@
+{
+  "Primitives": {
+    "sm": {
+      "$type": "dimension",
+      "$value": "4",
+      "$description": "Small dimension value"
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "8",
+      "$description": "Medium dimension value"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "16",
+      "$description": "Large dimension value"
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "32",
+      "$description": "Extra large dimension value"
+    },
+    "black": {
+      "$type": "color",
+      "$value": "#CDC50A",
+      "$description": "Black color token"
+    },
+    "white": {
+      "$type": "color",
+      "$value": "#ffffff",
+      "$description": "White color token"
+    },
+    "gray100": {
+      "$type": "color",
+      "$value": "#f7fafc",
+      "$description": "Gray 100 color token"
+    },
+    "gray200": {
+      "$type": "color",
+      "$value": "#edf2f7",
+      "$description": "Gray 200 color token"
+    },
+    "gray300": {
+      "$type": "color",
+      "$value": "#e2e8f0",
+      "$description": "Gray 300 color token"
+    },
+    "gray400": {
+      "$type": "color",
+      "$value": "#cbd5e0",
+      "$description": "Gray 400 color token"
+    },
+    "gray500": {
+      "$type": "color",
+      "$value": "#a0aec0",
+      "$description": "Gray 500 color token"
+    },
+    "gray600": {
+      "$type": "color",
+      "$value": "#718096",
+      "$description": "Gray 600 color token"
+    },
+    "gray700": {
+      "$type": "color",
+      "$value": "#4a5568",
+      "$description": "Gray 700 color token"
+    },
+    "gray800": {
+      "$type": "color",
+      "$value": "#2d3748",
+      "$description": "Gray 800 color token"
+    },
+    "gray900": {
+      "$type": "color",
+      "$value": "#1a202c",
+      "$description": "Gray 900 color token"
+    },
+    "red100": {
+      "$type": "color",
+      "$value": "#fff5f5",
+      "$description": "Red 100 color token"
+    },
+    "red200": {
+      "$type": "color",
+      "$value": "#fed7d7",
+      "$description": "Red 200 color token"
+    },
+    "red300": {
+      "$type": "color",
+      "$value": "#feb2b2",
+      "$description": "Red 300 color token"
+    },
+    "red400": {
+      "$type": "color",
+      "$value": "#fc8181",
+      "$description": "Red 400 color token"
+    },
+    "red500": {
+      "$type": "color",
+      "$value": "#f56565",
+      "$description": "Red 500 color token"
+    },
+    "red600": {
+      "$type": "color",
+      "$value": "#e53e3e",
+      "$description": "Red 600 color token"
+    },
+    "red700": {
+      "$type": "color",
+      "$value": "#c53030",
+      "$description": "Red 700 color token"
+    },
+    "red800": {
+      "$type": "color",
+      "$value": "#9b2c2c",
+      "$description": "Red 800 color token"
+    },
+    "red900": {
+      "$type": "color",
+      "$value": "#742a2a",
+      "$description": "Red 900 color token"
+    },
+    "low": {
+      "$type": "opacity",
+      "$value": "10%",
+      "$description": "Low opacity value"
+    },
+    "high": {
+      "$type": "opacity",
+      "$value": "90%",
+      "$description": "High opacity value"
+    },
+    "heading": {
+      "$type": "fontFamily",
+      "$value": "Inter",
+      "$description": "Heading font family"
+    },
+    "body": {
+      "$type": "fontSize",
+      "$value": "16",
+      "$description": "Body font size"
+    },
+    "default": {
+      "$type": "letterSpacing",
+      "$value": "0",
+      "$description": "Default letter spacing"
+    },
+    "increased": {
+      "$type": "letterSpacing",
+      "$value": "150%",
+      "$description": "Increased letter spacing"
+    },
+    "decreased": {
+      "$type": "letterSpacing",
+      "$value": "-5%",
+      "$description": "Decreased letter spacing"
+    },
+    "h1": {
+      "$type": "paragraphSpacing",
+      "$value": "32",
+      "$description": "H1 paragraph spacing"
+    },
+    "h2": {
+      "$type": "paragraphSpacing",
+      "$value": "26",
+      "$description": "H2 paragraph spacing"
+    },
+    "headingRegular": {
+      "$type": "fontWeight",
+      "$value": "Regular",
+      "$description": "Regular heading font weight"
+    },
+    "headingBold": {
+      "$type": "fontWeight",
+      "$value": "Bold",
+      "$description": "Bold heading font weight"
+    },
+    "bodyRegular": {
+      "$type": "fontWeight",
+      "$value": "Regular",
+      "$description": "Regular body font weight"
+    },
+    "bodyBold": {
+      "$type": "fontWeight",
+      "$value": "Bold",
+      "$description": "Bold body font weight"
+    }
+  }
+}

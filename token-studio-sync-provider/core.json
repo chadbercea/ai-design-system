@@ -74,8 +74,8 @@
   "colors": {
     "black": {
       "$type": "color",
-      "$value": "#000",
-      "$description": "Foundational Onyx."
+      "$value": "#000000",
+      "$description": "Onyx. Fixed."
     },
     "white": {
       "$type": "color",

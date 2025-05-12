@@ -101,12 +101,27 @@ Apply this critical test to determine token placement:
 - NEVER wrap color tokens in a "Color" category
 - Use consistent color naming patterns
 
-### 3. Common Errors to Avoid
+### 3. Key Reuse in Primitives
+- In the `Primitives` object, the same key (e.g., `md`) can be used multiple times
+- Each key must have a unique combination of `$type` and `$value`
+- Example of valid key reuse in `Primitives`:
+  ```json
+  {
+    "md": { "$type": "dimension", "$value": "8" },
+    "md": { "$type": "opacity", "$value": "50%" }
+  }
+  ```
+- This allows consistent naming patterns across different token types
+- The key's uniqueness is determined by its `$type`, not its name
+- DO NOT wrap these tokens in their type name - they belong directly in `Primitives`
+
+### 4. Common Errors to Avoid
 1. **Double Nesting**: Never create nested groups under `Primitives`
 2. **Inconsistent Types**: Never use plural forms in `$type`
 3. **Wrapping Matching Types**: Never wrap tokens when type and category match
 4. **Semantic in Primitives**: Never include references or composite values in `Primitives`
 5. **Missing Properties**: Always include all three required properties
+6. **Unnecessary Wrapping**: Never wrap a token in its type name when the type matches its category
 
 ## III. Best Practices
 1. **Consistent Naming**: Use consistent naming across categories

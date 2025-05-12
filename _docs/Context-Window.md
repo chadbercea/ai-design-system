@@ -124,3 +124,14 @@ token-studio-sync-provider/
   }
 
   This JSON is creating a double nested situation that means if the wrapper or the name should not == $value
+
+  I am frustrated so read this:
+  The Instruction That Will Guarantee DTC Compliance
+Instruction:
+> “For every primitive token, follow the T-D-W-P system exactly as described in DTC.md:
+> - The token name is the primitive’s canonical name (e.g., sm, md, lg, xl for borderRadius), with no prefix, wrapper, or pluralization.
+> - The token is at the root of the JSON.
+> - The token object contains only $type (the singular, canonical type), $value (the direct, raw value), and $description (a concise, clear description).
+> - There is no namespacing, no category or type prefix, no double nesting, and no pluralization.
+> - If a token cannot be expressed as a primitive (raw value), it is excluded.
+> - Repeat for every primitive type in the Canon.”
