@@ -176,4 +176,29 @@ class TokenEnforcer {
 }
 
 // Export the enforcer
-module.exports = TokenEnforcer; 
+module.exports = TokenEnforcer;
+
+// Run validation if this file is called directly
+if (require.main === module) {
+  const enforcer = new TokenEnforcer();
+  const tokenFiles = [
+    'token-studio-sync-provider/core.json',
+    'token-studio-sync-provider/dark.json',
+    'token-studio-sync-provider/light.json',
+    'token-studio-sync-provider/theme.json',
+    'token-studio-sync-provider/$themes.json'
+  ];
+
+  let hasErrors = false;
+  tokenFiles.forEach(file => {
+    if (fs.existsSync(file)) {
+      if (!enforcer.validateFile(file)) {
+        hasErrors = true;
+      }
+    }
+  });
+
+  if (hasErrors) {
+    process.exit(1);
+  }
+} 
