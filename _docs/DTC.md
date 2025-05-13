@@ -7,6 +7,14 @@ Tokens exist at root level. No exceptions. No folders. No containers. Tokens Stu
 
 $value must be static string or number. No aliases. No math. No references. Violations fail the build.
 
+## W3C Compliance
+For strict W3C Design Tokens Community Group (DTCG) compliance, only the following fields are required:
+- `$type` (required)
+- `$value` (required)
+- `$description` (recommended, not required by W3C)
+
+`$category` is **not** part of the W3C standard. It may be used internally for project-specific validation or organization, but is not required for W3C compliance.
+
 ## Architecture
 ```
 token-studio-sync-provider/
@@ -201,10 +209,7 @@ These structures fail. No warnings. No exceptions.
      "reservedFields": [
        "$type",
        "$value",
-       "$description",
-       "$category",
-       "$metadata",
-       "$version"
+       "$description"
      ]
    }
    ```

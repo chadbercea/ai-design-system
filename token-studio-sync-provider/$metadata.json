@@ -1,0 +1,11 @@
+{
+  "tokenSetOrder": [
+    "core",
+    "dark",
+    "light",
+    "theme",
+    "mui-tokens"
+  ],
+  "$schema": "https://design-tokens.github.io/design-tokens/schema.json",
+  "version": "1.0.0"
+} 
