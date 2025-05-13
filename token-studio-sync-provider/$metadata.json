@@ -3,8 +3,7 @@
     "core",
     "dark",
     "light",
-    "theme",
-    "mui-tokens"
+    "theme"
   ],
   "$schema": "https://design-tokens.github.io/design-tokens/schema.json",
   "version": "1.0.0"
