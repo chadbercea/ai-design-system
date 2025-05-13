@@ -791,47 +791,47 @@
           },
           "successHighEmphasis": {
             "$type": "color",
-            "$value": "{global.color.green.400}",
+            "$value": "{green.400}",
             "$description": "color for elements with success purpose of high emphasis"
           },
           "successLowEmphasis": {
             "$type": "color",
-            "$value": "{global.color.green.200}",
+            "$value": "{green.200}",
             "$description": "color for elements with success purpose of low emphasis"
           },
           "onSuccess": {
             "$type": "color",
-            "$value": "{global.color.green.800}",
+            "$value": "{green.800}",
             "$description": "color for elements placed on success purpose background"
           },
           "warningHighEmphasis": {
             "$type": "color",
-            "$value": "{global.color.yellow.200}",
+            "$value": "{yellow.200}",
             "$description": "color for elements with warning purpose of high emphasis"
           },
           "warningLowEmphasis": {
             "$type": "color",
-            "$value": "{global.color.yellow.400}",
+            "$value": "{yellow.400}",
             "$description": "color for elements with warning purpose of low emphasis"
           },
           "onWarning": {
             "$type": "color",
-            "$value": "{global.color.yellow.800}",
+            "$value": "{yellow.800}",
             "$description": "color for elements placed on warning purpose background"
           },
           "criticalHighEmphasis": {
             "$type": "color",
-            "$value": "{global.color.red.400}",
+            "$value": "{red.400}",
             "$description": "color for elements with critical purpose of high emphasis"
           },
           "criticalLowEmphasis": {
             "$type": "color",
-            "$value": "{global.color.red.500}",
+            "$value": "{red.500}",
             "$description": "color for elements with critical purpose of low emphasis"
           },
           "onCritical": {
             "$type": "color",
-            "$value": "{global.color.red.900}",
+            "$value": "{red.900}",
             "$description": "color for elements placed on critical purpose background"
           }
         },
@@ -966,7 +966,7 @@
           },
           "focusOutline": {
             "$type": "color",
-            "$value": "{global.color.blue.500}",
+            "$value": "{blue.500}",
             "$description": "color for default focus outline"
           }
         }
@@ -1021,47 +1021,47 @@
           },
           "successHighEmphasis": {
             "$type": "color",
-            "$value": "{global.color.green.400}",
+            "$value": "{green.400}",
             "$description": "color for elements with success purpose of high emphasis"
           },
           "successLowEmphasis": {
             "$type": "color",
-            "$value": "{global.color.green.200}",
+            "$value": "{green.200}",
             "$description": "color for elements with success purpose of low emphasis"
           },
           "onSuccess": {
             "$type": "color",
-            "$value": "{global.color.green.800}",
+            "$value": "{green.800}",
             "$description": "color for elements placed on success purpose background"
           },
           "warningHighEmphasis": {
             "$type": "color",
-            "$value": "{global.color.yellow.200}",
+            "$value": "{yellow.200}",
             "$description": "color for elements with warning purpose of high emphasis"
           },
           "warningLowEmphasis": {
             "$type": "color",
-            "$value": "{global.color.yellow.400}",
+            "$value": "{yellow.400}",
             "$description": "color for elements with warning purpose of low emphasis"
           },
           "onWarning": {
             "$type": "color",
-            "$value": "{global.color.yellow.800}",
+            "$value": "{yellow.800}",
             "$description": "color for elements placed on warning purpose background"
           },
           "criticalHighEmphasis": {
             "$type": "color",
-            "$value": "{global.color.red.400}",
+            "$value": "{red.400}",
             "$description": "color for elements with critical purpose of high emphasis"
           },
           "criticalLowEmphasis": {
             "$type": "color",
-            "$value": "{global.color.red.500}",
+            "$value": "{red.500}",
             "$description": "color for elements with critical purpose of low emphasis"
           },
           "onCritical": {
             "$type": "color",
-            "$value": "{global.color.red.900}",
+            "$value": "{red.900}",
             "$description": "color for elements placed on critical purpose background"
           }
         },
