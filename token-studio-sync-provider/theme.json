@@ -61,10 +61,10 @@
       "Bold": {
         "$type": "typography",
         "$value": {
-          "fontFamilies": "{fontFamilies.heading}",
-          "fontWeights": "{fontWeightss.headingBold}",
+          "fontFamily": "{fontFamilies.heading}",
+          "fontWeight": "{fontWeights.headingBold}",
           "lineHeight": "{lineHeights.heading}",
-          "fontSizes": "{fontSizess.h1}",
+          "fontSize": "{fontSizes.h1}",
           "paragraphSpacing": "{paragraphSpacing.h1}",
           "letterSpacing": "{letterSpacing.decreased}"
         }
@@ -72,10 +72,10 @@
       "Regular": {
         "$type": "typography",
         "$value": {
-          "fontFamilies": "{fontFamilies.heading}",
-          "fontWeights": "{fontWeightss.headingRegular}",
+          "fontFamily": "{fontFamilies.heading}",
+          "fontWeight": "{fontWeights.headingRegular}",
           "lineHeight": "{lineHeights.heading}",
-          "fontSizes": "{fontSizess.h1}",
+          "fontSize": "{fontSizes.h1}",
           "paragraphSpacing": "{paragraphSpacing.h1}",
           "letterSpacing": "{letterSpacing.decreased}"
         }
@@ -85,10 +85,10 @@
       "Bold": {
         "$type": "typography",
         "$value": {
-          "fontFamilies": "{fontFamilies.heading}",
-          "fontWeights": "{fontWeightss.headingBold}",
+          "fontFamily": "{fontFamilies.heading}",
+          "fontWeight": "{fontWeights.headingBold}",
           "lineHeight": "{lineHeights.heading}",
-          "fontSizes": "{fontSizess.h2}",
+          "fontSize": "{fontSizes.h2}",
           "paragraphSpacing": "{paragraphSpacing.h2}",
           "letterSpacing": "{letterSpacing.decreased}"
         }
@@ -96,10 +96,10 @@
       "Regular": {
         "$type": "typography",
         "$value": {
-          "fontFamilies": "{fontFamilies.heading}",
-          "fontWeights": "{fontWeightss.headingRegular}",
+          "fontFamily": "{fontFamilies.heading}",
+          "fontWeight": "{fontWeights.headingRegular}",
           "lineHeight": "{lineHeights.heading}",
-          "fontSizes": "{fontSizess.h2}",
+          "fontSize": "{fontSizes.h2}",
           "paragraphSpacing": "{paragraphSpacing.h2}",
           "letterSpacing": "{letterSpacing.decreased}"
         }
@@ -108,10 +108,10 @@
     "Body": {
       "$type": "typography",
       "$value": {
-        "fontFamilies": "{fontFamilies.body}",
-        "fontWeights": "{fontWeightss.bodyRegular}",
+        "fontFamily": "{fontFamilies.body}",
+        "fontWeight": "{fontWeights.bodyRegular}",
         "lineHeight": "{lineHeights.heading}",
-        "fontSizes": "{fontSizess.body}",
+        "fontSize": "{fontSizes.body}",
         "paragraphSpacing": "{paragraphSpacing.h2}"
       }
     }

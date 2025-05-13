@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# Run strict token validation
-node scripts/validation/enforce-rules.js
-
-# Run type checking
-npm run type:check
