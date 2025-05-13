@@ -1,1842 +1,1944 @@
 {
-  "blue.50": {
-    "$type": "color",
-    "$value": "#e3f2fd",
-    "$description": "Blue 50 color token."
-  },
-  "blue.100": {
-    "$type": "color",
-    "$value": "#bbdefb",
-    "$description": "Blue 100 color token."
-  },
-  "blue.200": {
-    "$type": "color",
-    "$value": "#90caf9",
-    "$description": "Blue 200 color token."
-  },
-  "blue.300": {
-    "$type": "color",
-    "$value": "#64b5f6",
-    "$description": "Blue 300 color token."
-  },
-  "blue.400": {
-    "$type": "color",
-    "$value": "#42a5f5",
-    "$description": "Blue 400 color token."
-  },
-  "blue.500": {
-    "$type": "color",
-    "$value": "#2196f3",
-    "$description": "Blue 500 color token."
-  },
-  "blue.600": {
-    "$type": "color",
-    "$value": "#1e88e5",
-    "$description": "Blue 600 color token."
-  },
-  "blue.700": {
-    "$type": "color",
-    "$value": "#1976d2",
-    "$description": "Blue 700 color token."
-  },
-  "blue.800": {
-    "$type": "color",
-    "$value": "#1565c0",
-    "$description": "Blue 800 color token."
-  },
-  "blue.900": {
-    "$type": "color",
-    "$value": "#0d47a1",
-    "$description": "Blue 900 color token."
-  },
-  "blue.A100": {
-    "$type": "color",
-    "$value": "#82b1ff",
-    "$description": "Blue A100 color token."
-  },
-  "blue.A200": {
-    "$type": "color",
-    "$value": "#448aff",
-    "$description": "Blue A200 color token."
-  },
-  "blue.A400": {
-    "$type": "color",
-    "$value": "#2979ff",
-    "$description": "Blue A400 color token."
-  },
-  "blue.A700": {
-    "$type": "color",
-    "$value": "#2962ff",
-    "$description": "Blue A700 color token."
-  },
-  "red.50": {
-    "$type": "color",
-    "$value": "#ffebee",
-    "$description": "Red 50 color token."
-  },
-  "red.100": {
-    "$type": "color",
-    "$value": "#ffcdd2",
-    "$description": "Red 100 color token."
-  },
-  "red.200": {
-    "$type": "color",
-    "$value": "#ef9a9a",
-    "$description": "Red 200 color token."
-  },
-  "red.300": {
-    "$type": "color",
-    "$value": "#e57373",
-    "$description": "Red 300 color token."
-  },
-  "red.400": {
-    "$type": "color",
-    "$value": "#ef5350",
-    "$description": "Red 400 color token."
-  },
-  "red.500": {
-    "$type": "color",
-    "$value": "#f44336",
-    "$description": "Red 500 color token."
-  },
-  "red.600": {
-    "$type": "color",
-    "$value": "#e53935",
-    "$description": "Red 600 color token."
-  },
-  "red.700": {
-    "$type": "color",
-    "$value": "#d32f2f",
-    "$description": "Red 700 color token."
-  },
-  "red.800": {
-    "$type": "color",
-    "$value": "#c62828",
-    "$description": "Red 800 color token."
-  },
-  "red.900": {
-    "$type": "color",
-    "$value": "#b71c1c",
-    "$description": "Red 900 color token."
-  },
-  "red.A100": {
-    "$type": "color",
-    "$value": "#ff8a80",
-    "$description": "Red A100 color token."
-  },
-  "red.A200": {
-    "$type": "color",
-    "$value": "#ff5252",
-    "$description": "Red A200 color token."
-  },
-  "red.A400": {
-    "$type": "color",
-    "$value": "#ff1744",
-    "$description": "Red A400 color token."
-  },
-  "red.A700": {
-    "$type": "color",
-    "$value": "#d50000",
-    "$description": "Red A700 color token."
-  },
-  "green.50": {
-    "$type": "color",
-    "$value": "#e8f5e9",
-    "$description": "Green 50 color token."
-  },
-  "green.100": {
-    "$type": "color",
-    "$value": "#c8e6c9",
-    "$description": "Green 100 color token."
-  },
-  "green.200": {
-    "$type": "color",
-    "$value": "#a5d6a7",
-    "$description": "Green 200 color token."
-  },
-  "green.300": {
-    "$type": "color",
-    "$value": "#81c784",
-    "$description": "Green 300 color token."
-  },
-  "green.400": {
-    "$type": "color",
-    "$value": "#66bb6a",
-    "$description": "Green 400 color token."
-  },
-  "green.500": {
-    "$type": "color",
-    "$value": "#4caf50",
-    "$description": "Green 500 color token."
-  },
-  "green.600": {
-    "$type": "color",
-    "$value": "#43a047",
-    "$description": "Green 600 color token."
-  },
-  "green.700": {
-    "$type": "color",
-    "$value": "#388e3c",
-    "$description": "Green 700 color token."
-  },
-  "green.800": {
-    "$type": "color",
-    "$value": "#2e7d32",
-    "$description": "Green 800 color token."
-  },
-  "green.900": {
-    "$type": "color",
-    "$value": "#1b5e20",
-    "$description": "Green 900 color token."
-  },
-  "green.A100": {
-    "$type": "color",
-    "$value": "#b9f6ca",
-    "$description": "Green A100 color token."
-  },
-  "green.A200": {
-    "$type": "color",
-    "$value": "#69f0ae",
-    "$description": "Green A200 color token."
-  },
-  "green.A400": {
-    "$type": "color",
-    "$value": "#00e676",
-    "$description": "Green A400 color token."
-  },
-  "green.A700": {
-    "$type": "color",
-    "$value": "#00c853",
-    "$description": "Green A700 color token."
-  },
-  "purple.50": {
-    "$type": "color",
-    "$value": "#f3e5f5",
-    "$description": "Purple 50 color token."
-  },
-  "purple.100": {
-    "$type": "color",
-    "$value": "#e1bee7",
-    "$description": "Purple 100 color token."
-  },
-  "purple.200": {
-    "$type": "color",
-    "$value": "#ce93d8",
-    "$description": "Purple 200 color token."
-  },
-  "purple.300": {
-    "$type": "color",
-    "$value": "#ba68c8",
-    "$description": "Purple 300 color token."
-  },
-  "purple.400": {
-    "$type": "color",
-    "$value": "#ab47bc",
-    "$description": "Purple 400 color token."
-  },
-  "purple.500": {
-    "$type": "color",
-    "$value": "#9c27b0",
-    "$description": "Purple 500 color token."
-  },
-  "purple.600": {
-    "$type": "color",
-    "$value": "#8e24aa",
-    "$description": "Purple 600 color token."
-  },
-  "purple.700": {
-    "$type": "color",
-    "$value": "#7b1fa2",
-    "$description": "Purple 700 color token."
-  },
-  "purple.800": {
-    "$type": "color",
-    "$value": "#6a1b9a",
-    "$description": "Purple 800 color token."
-  },
-  "purple.900": {
-    "$type": "color",
-    "$value": "#4a148c",
-    "$description": "Purple 900 color token."
-  },
-  "purple.A100": {
-    "$type": "color",
-    "$value": "#ea80fc",
-    "$description": "Purple A100 color token."
-  },
-  "purple.A200": {
-    "$type": "color",
-    "$value": "#e040fb",
-    "$description": "Purple A200 color token."
-  },
-  "purple.A400": {
-    "$type": "color",
-    "$value": "#d500f9",
-    "$description": "Purple A400 color token."
-  },
-  "purple.A700": {
-    "$type": "color",
-    "$value": "#aa00ff",
-    "$description": "Purple A700 color token."
-  },
-  "orange.50": {
-    "$type": "color",
-    "$value": "#fff3e0",
-    "$description": "Orange 50 color token."
-  },
-  "orange.100": {
-    "$type": "color",
-    "$value": "#ffe0b2",
-    "$description": "Orange 100 color token."
-  },
-  "orange.200": {
-    "$type": "color",
-    "$value": "#ffcc80",
-    "$description": "Orange 200 color token."
-  },
-  "orange.300": {
-    "$type": "color",
-    "$value": "#ffb74d",
-    "$description": "Orange 300 color token."
-  },
-  "orange.400": {
-    "$type": "color",
-    "$value": "#ffa726",
-    "$description": "Orange 400 color token."
-  },
-  "orange.500": {
-    "$type": "color",
-    "$value": "#ff9800",
-    "$description": "Orange 500 color token."
-  },
-  "orange.600": {
-    "$type": "color",
-    "$value": "#fb8c00",
-    "$description": "Orange 600 color token."
-  },
-  "orange.700": {
-    "$type": "color",
-    "$value": "#f57c00",
-    "$description": "Orange 700 color token."
-  },
-  "orange.800": {
-    "$type": "color",
-    "$value": "#ef6c00",
-    "$description": "Orange 800 color token."
-  },
-  "orange.900": {
-    "$type": "color",
-    "$value": "#e65100",
-    "$description": "Orange 900 color token."
-  },
-  "orange.A100": {
-    "$type": "color",
-    "$value": "#ffd180",
-    "$description": "Orange A100 color token."
-  },
-  "orange.A200": {
-    "$type": "color",
-    "$value": "#ffab40",
-    "$description": "Orange A200 color token."
-  },
-  "orange.A400": {
-    "$type": "color",
-    "$value": "#ff9100",
-    "$description": "Orange A400 color token."
-  },
-  "orange.A700": {
-    "$type": "color",
-    "$value": "#ff6d00",
-    "$description": "Orange A700 color token."
-  },
-  "yellow.50": {
-    "$type": "color",
-    "$value": "#fffde7",
-    "$description": "Yellow 50 color token."
-  },
-  "yellow.100": {
-    "$type": "color",
-    "$value": "#fff9c4",
-    "$description": "Yellow 100 color token."
-  },
-  "yellow.200": {
-    "$type": "color",
-    "$value": "#fff59d",
-    "$description": "Yellow 200 color token."
-  },
-  "yellow.300": {
-    "$type": "color",
-    "$value": "#fff176",
-    "$description": "Yellow 300 color token."
-  },
-  "yellow.400": {
-    "$type": "color",
-    "$value": "#ffee58",
-    "$description": "Yellow 400 color token."
-  },
-  "yellow.500": {
-    "$type": "color",
-    "$value": "#ffeb3b",
-    "$description": "Yellow 500 color token."
-  },
-  "yellow.600": {
-    "$type": "color",
-    "$value": "#fdd835",
-    "$description": "Yellow 600 color token."
-  },
-  "yellow.700": {
-    "$type": "color",
-    "$value": "#fbc02d",
-    "$description": "Yellow 700 color token."
-  },
-  "yellow.800": {
-    "$type": "color",
-    "$value": "#f9a825",
-    "$description": "Yellow 800 color token."
-  },
-  "yellow.900": {
-    "$type": "color",
-    "$value": "#f57f17",
-    "$description": "Yellow 900 color token."
-  },
-  "yellow.A100": {
-    "$type": "color",
-    "$value": "#ffff8d",
-    "$description": "Yellow A100 color token."
-  },
-  "yellow.A200": {
-    "$type": "color",
-    "$value": "#ffff00",
-    "$description": "Yellow A200 color token."
-  },
-  "yellow.A400": {
-    "$type": "color",
-    "$value": "#ffea00",
-    "$description": "Yellow A400 color token."
-  },
-  "yellow.A700": {
-    "$type": "color",
-    "$value": "#ffd600",
-    "$description": "Yellow A700 color token."
-  },
-  "teal.50": {
-    "$type": "color",
-    "$value": "#e0f2f1",
-    "$description": "Teal 50 color token."
-  },
-  "teal.100": {
-    "$type": "color",
-    "$value": "#b2dfdb",
-    "$description": "Teal 100 color token."
-  },
-  "teal.200": {
-    "$type": "color",
-    "$value": "#80cbc4",
-    "$description": "Teal 200 color token."
-  },
-  "teal.300": {
-    "$type": "color",
-    "$value": "#4db6ac",
-    "$description": "Teal 300 color token."
-  },
-  "teal.400": {
-    "$type": "color",
-    "$value": "#26a69a",
-    "$description": "Teal 400 color token."
-  },
-  "teal.500": {
-    "$type": "color",
-    "$value": "#009688",
-    "$description": "Teal 500 color token."
-  },
-  "teal.600": {
-    "$type": "color",
-    "$value": "#00897b",
-    "$description": "Teal 600 color token."
-  },
-  "teal.700": {
-    "$type": "color",
-    "$value": "#00796b",
-    "$description": "Teal 700 color token."
-  },
-  "teal.800": {
-    "$type": "color",
-    "$value": "#00695c",
-    "$description": "Teal 800 color token."
-  },
-  "teal.900": {
-    "$type": "color",
-    "$value": "#004d40",
-    "$description": "Teal 900 color token."
-  },
-  "teal.A100": {
-    "$type": "color",
-    "$value": "#a7ffeb",
-    "$description": "Teal A100 color token."
-  },
-  "teal.A200": {
-    "$type": "color",
-    "$value": "#64ffda",
-    "$description": "Teal A200 color token."
-  },
-  "teal.A400": {
-    "$type": "color",
-    "$value": "#1de9b6",
-    "$description": "Teal A400 color token."
-  },
-  "teal.A700": {
-    "$type": "color",
-    "$value": "#00bfa5",
-    "$description": "Teal A700 color token."
-  },
-  "pink.50": {
-    "$type": "color",
-    "$value": "#fce4ec",
-    "$description": "Pink 50 color token."
-  },
-  "pink.100": {
-    "$type": "color",
-    "$value": "#f8bbd0",
-    "$description": "Pink 100 color token."
-  },
-  "pink.200": {
-    "$type": "color",
-    "$value": "#f48fb1",
-    "$description": "Pink 200 color token."
-  },
-  "pink.300": {
-    "$type": "color",
-    "$value": "#f06292",
-    "$description": "Pink 300 color token."
-  },
-  "pink.400": {
-    "$type": "color",
-    "$value": "#ec407a",
-    "$description": "Pink 400 color token."
-  },
-  "pink.500": {
-    "$type": "color",
-    "$value": "#e91e63",
-    "$description": "Pink 500 color token."
-  },
-  "pink.600": {
-    "$type": "color",
-    "$value": "#d81b60",
-    "$description": "Pink 600 color token."
-  },
-  "pink.700": {
-    "$type": "color",
-    "$value": "#c2185b",
-    "$description": "Pink 700 color token."
-  },
-  "pink.800": {
-    "$type": "color",
-    "$value": "#ad1457",
-    "$description": "Pink 800 color token."
-  },
-  "pink.900": {
-    "$type": "color",
-    "$value": "#880e4f",
-    "$description": "Pink 900 color token."
-  },
-  "pink.A100": {
-    "$type": "color",
-    "$value": "#ff80ab",
-    "$description": "Pink A100 color token."
-  },
-  "pink.A200": {
-    "$type": "color",
-    "$value": "#ff4081",
-    "$description": "Pink A200 color token."
-  },
-  "pink.A400": {
-    "$type": "color",
-    "$value": "#f50057",
-    "$description": "Pink A400 color token."
-  },
-  "pink.A700": {
-    "$type": "color",
-    "$value": "#c51162",
-    "$description": "Pink A700 color token."
-  },
-  "indigo.50": {
-    "$type": "color",
-    "$value": "#e8eaf6",
-    "$description": "Indigo 50 color token."
-  },
-  "indigo.100": {
-    "$type": "color",
-    "$value": "#c5cae9",
-    "$description": "Indigo 100 color token."
-  },
-  "indigo.200": {
-    "$type": "color",
-    "$value": "#9fa8da",
-    "$description": "Indigo 200 color token."
-  },
-  "indigo.300": {
-    "$type": "color",
-    "$value": "#7986cb",
-    "$description": "Indigo 300 color token."
-  },
-  "indigo.400": {
-    "$type": "color",
-    "$value": "#5c6bc0",
-    "$description": "Indigo 400 color token."
-  },
-  "indigo.500": {
-    "$type": "color",
-    "$value": "#3f51b5",
-    "$description": "Indigo 500 color token."
-  },
-  "indigo.600": {
-    "$type": "color",
-    "$value": "#3949ab",
-    "$description": "Indigo 600 color token."
-  },
-  "indigo.700": {
-    "$type": "color",
-    "$value": "#303f9f",
-    "$description": "Indigo 700 color token."
-  },
-  "indigo.800": {
-    "$type": "color",
-    "$value": "#283593",
-    "$description": "Indigo 800 color token."
-  },
-  "indigo.900": {
-    "$type": "color",
-    "$value": "#1a237e",
-    "$description": "Indigo 900 color token."
-  },
-  "indigo.A100": {
-    "$type": "color",
-    "$value": "#8c9eff",
-    "$description": "Indigo A100 color token."
-  },
-  "indigo.A200": {
-    "$type": "color",
-    "$value": "#536dfe",
-    "$description": "Indigo A200 color token."
-  },
-  "indigo.A400": {
-    "$type": "color",
-    "$value": "#3d5afe",
-    "$description": "Indigo A400 color token."
-  },
-  "indigo.A700": {
-    "$type": "color",
-    "$value": "#304ffe",
-    "$description": "Indigo A700 color token."
-  },
-  "deepOrange.50": {
-    "$type": "color",
-    "$value": "#fbe9e7",
-    "$description": "DeepOrange 50 color token."
-  },
-  "deepOrange.100": {
-    "$type": "color",
-    "$value": "#ffccbc",
-    "$description": "DeepOrange 100 color token."
-  },
-  "deepOrange.200": {
-    "$type": "color",
-    "$value": "#ffab91",
-    "$description": "DeepOrange 200 color token."
-  },
-  "deepOrange.300": {
-    "$type": "color",
-    "$value": "#ff8a65",
-    "$description": "DeepOrange 300 color token."
-  },
-  "deepOrange.400": {
-    "$type": "color",
-    "$value": "#ff7043",
-    "$description": "DeepOrange 400 color token."
-  },
-  "deepOrange.500": {
-    "$type": "color",
-    "$value": "#ff5722",
-    "$description": "DeepOrange 500 color token."
-  },
-  "deepOrange.600": {
-    "$type": "color",
-    "$value": "#f4511e",
-    "$description": "DeepOrange 600 color token."
-  },
-  "deepOrange.700": {
-    "$type": "color",
-    "$value": "#e64a19",
-    "$description": "DeepOrange 700 color token."
-  },
-  "deepOrange.800": {
-    "$type": "color",
-    "$value": "#d84315",
-    "$description": "DeepOrange 800 color token."
-  },
-  "deepOrange.900": {
-    "$type": "color",
-    "$value": "#bf360c",
-    "$description": "DeepOrange 900 color token."
-  },
-  "deepOrange.A100": {
-    "$type": "color",
-    "$value": "#ff9e80",
-    "$description": "DeepOrange A100 color token."
-  },
-  "deepOrange.A200": {
-    "$type": "color",
-    "$value": "#ff6e40",
-    "$description": "DeepOrange A200 color token."
-  },
-  "deepOrange.A400": {
-    "$type": "color",
-    "$value": "#ff3d00",
-    "$description": "DeepOrange A400 color token."
-  },
-  "deepOrange.A700": {
-    "$type": "color",
-    "$value": "#dd2c00",
-    "$description": "DeepOrange A700 color token."
-  },
-  "deepPurple.50": {
-    "$type": "color",
-    "$value": "#ede7f6",
-    "$description": "DeepPurple 50 color token."
-  },
-  "deepPurple.100": {
-    "$type": "color",
-    "$value": "#d1c4e9",
-    "$description": "DeepPurple 100 color token."
-  },
-  "deepPurple.200": {
-    "$type": "color",
-    "$value": "#b39ddb",
-    "$description": "DeepPurple 200 color token."
-  },
-  "deepPurple.300": {
-    "$type": "color",
-    "$value": "#9575cd",
-    "$description": "DeepPurple 300 color token."
-  },
-  "deepPurple.400": {
-    "$type": "color",
-    "$value": "#7e57c2",
-    "$description": "DeepPurple 400 color token."
-  },
-  "deepPurple.500": {
-    "$type": "color",
-    "$value": "#673ab7",
-    "$description": "DeepPurple 500 color token."
-  },
-  "deepPurple.600": {
-    "$type": "color",
-    "$value": "#5e35b1",
-    "$description": "DeepPurple 600 color token."
-  },
-  "deepPurple.700": {
-    "$type": "color",
-    "$value": "#512da8",
-    "$description": "DeepPurple 700 color token."
-  },
-  "deepPurple.800": {
-    "$type": "color",
-    "$value": "#4527a0",
-    "$description": "DeepPurple 800 color token."
-  },
-  "deepPurple.900": {
-    "$type": "color",
-    "$value": "#311b92",
-    "$description": "DeepPurple 900 color token."
-  },
-  "deepPurple.A100": {
-    "$type": "color",
-    "$value": "#b388ff",
-    "$description": "DeepPurple A100 color token."
-  },
-  "deepPurple.A200": {
-    "$type": "color",
-    "$value": "#7c4dff",
-    "$description": "DeepPurple A200 color token."
-  },
-  "deepPurple.A400": {
-    "$type": "color",
-    "$value": "#651fff",
-    "$description": "DeepPurple A400 color token."
-  },
-  "deepPurple.A700": {
-    "$type": "color",
-    "$value": "#6200ea",
-    "$description": "DeepPurple A700 color token."
-  },
-  "lightBlue.50": {
-    "$type": "color",
-    "$value": "#e1f5fe",
-    "$description": "LightBlue 50 color token."
-  },
-  "lightBlue.100": {
-    "$type": "color",
-    "$value": "#b3e5fc",
-    "$description": "LightBlue 100 color token."
-  },
-  "lightBlue.200": {
-    "$type": "color",
-    "$value": "#81d4fa",
-    "$description": "LightBlue 200 color token."
-  },
-  "lightBlue.300": {
-    "$type": "color",
-    "$value": "#4fc3f7",
-    "$description": "LightBlue 300 color token."
-  },
-  "lightBlue.400": {
-    "$type": "color",
-    "$value": "#29b6f6",
-    "$description": "LightBlue 400 color token."
-  },
-  "lightBlue.500": {
-    "$type": "color",
-    "$value": "#03a9f4",
-    "$description": "LightBlue 500 color token."
-  },
-  "lightBlue.600": {
-    "$type": "color",
-    "$value": "#039be5",
-    "$description": "LightBlue 600 color token."
-  },
-  "lightBlue.700": {
-    "$type": "color",
-    "$value": "#0288d1",
-    "$description": "LightBlue 700 color token."
-  },
-  "lightBlue.800": {
-    "$type": "color",
-    "$value": "#0277bd",
-    "$description": "LightBlue 800 color token."
-  },
-  "lightBlue.900": {
-    "$type": "color",
-    "$value": "#01579b",
-    "$description": "LightBlue 900 color token."
-  },
-  "lightBlue.A100": {
-    "$type": "color",
-    "$value": "#80d8ff",
-    "$description": "LightBlue A100 color token."
-  },
-  "lightBlue.A200": {
-    "$type": "color",
-    "$value": "#40c4ff",
-    "$description": "LightBlue A200 color token."
-  },
-  "lightBlue.A400": {
-    "$type": "color",
-    "$value": "#00b0ff",
-    "$description": "LightBlue A400 color token."
-  },
-  "lightBlue.A700": {
-    "$type": "color",
-    "$value": "#0091ea",
-    "$description": "LightBlue A700 color token."
-  },
-  "lightGreen.50": {
-    "$type": "color",
-    "$value": "#f1f8e9",
-    "$description": "LightGreen 50 color token."
-  },
-  "lightGreen.100": {
-    "$type": "color",
-    "$value": "#dcedc8",
-    "$description": "LightGreen 100 color token."
-  },
-  "lightGreen.200": {
-    "$type": "color",
-    "$value": "#c5e1a5",
-    "$description": "LightGreen 200 color token."
-  },
-  "lightGreen.300": {
-    "$type": "color",
-    "$value": "#aed581",
-    "$description": "LightGreen 300 color token."
-  },
-  "lightGreen.400": {
-    "$type": "color",
-    "$value": "#9ccc65",
-    "$description": "LightGreen 400 color token."
-  },
-  "lightGreen.500": {
-    "$type": "color",
-    "$value": "#8bc34a",
-    "$description": "LightGreen 500 color token."
-  },
-  "lightGreen.600": {
-    "$type": "color",
-    "$value": "#7cb342",
-    "$description": "LightGreen 600 color token."
-  },
-  "lightGreen.700": {
-    "$type": "color",
-    "$value": "#689f38",
-    "$description": "LightGreen 700 color token."
-  },
-  "lightGreen.800": {
-    "$type": "color",
-    "$value": "#558b2f",
-    "$description": "LightGreen 800 color token."
-  },
-  "lightGreen.900": {
-    "$type": "color",
-    "$value": "#33691e",
-    "$description": "LightGreen 900 color token."
-  },
-  "lightGreen.A100": {
-    "$type": "color",
-    "$value": "#ccff90",
-    "$description": "LightGreen A100 color token."
-  },
-  "lightGreen.A200": {
-    "$type": "color",
-    "$value": "#b2ff59",
-    "$description": "LightGreen A200 color token."
-  },
-  "lightGreen.A400": {
-    "$type": "color",
-    "$value": "#76ff03",
-    "$description": "LightGreen A400 color token."
-  },
-  "lightGreen.A700": {
-    "$type": "color",
-    "$value": "#64dd17",
-    "$description": "LightGreen A700 color token."
-  },
-  "amber.50": {
-    "$type": "color",
-    "$value": "#fff8e1",
-    "$description": "Amber 50 color token."
-  },
-  "amber.100": {
-    "$type": "color",
-    "$value": "#ffecb3",
-    "$description": "Amber 100 color token."
-  },
-  "amber.200": {
-    "$type": "color",
-    "$value": "#ffe082",
-    "$description": "Amber 200 color token."
-  },
-  "amber.300": {
-    "$type": "color",
-    "$value": "#ffd54f",
-    "$description": "Amber 300 color token."
-  },
-  "amber.400": {
-    "$type": "color",
-    "$value": "#ffca28",
-    "$description": "Amber 400 color token."
-  },
-  "amber.500": {
-    "$type": "color",
-    "$value": "#ffc107",
-    "$description": "Amber 500 color token."
-  },
-  "amber.600": {
-    "$type": "color",
-    "$value": "#ffb300",
-    "$description": "Amber 600 color token."
-  },
-  "amber.700": {
-    "$type": "color",
-    "$value": "#ffa000",
-    "$description": "Amber 700 color token."
-  },
-  "amber.800": {
-    "$type": "color",
-    "$value": "#ff8f00",
-    "$description": "Amber 800 color token."
-  },
-  "amber.900": {
-    "$type": "color",
-    "$value": "#ff6f00",
-    "$description": "Amber 900 color token."
-  },
-  "amber.A100": {
-    "$type": "color",
-    "$value": "#ffe57f",
-    "$description": "Amber A100 color token."
-  },
-  "amber.A200": {
-    "$type": "color",
-    "$value": "#ffd740",
-    "$description": "Amber A200 color token."
-  },
-  "amber.A400": {
-    "$type": "color",
-    "$value": "#ffc400",
-    "$description": "Amber A400 color token."
-  },
-  "amber.A700": {
-    "$type": "color",
-    "$value": "#ffab00",
-    "$description": "Amber A700 color token."
-  },
-  "cyan.50": {
-    "$type": "color",
-    "$value": "#e0f7fa",
-    "$description": "Cyan 50 color token."
-  },
-  "cyan.100": {
-    "$type": "color",
-    "$value": "#b2ebf2",
-    "$description": "Cyan 100 color token."
-  },
-  "cyan.200": {
-    "$type": "color",
-    "$value": "#80deea",
-    "$description": "Cyan 200 color token."
-  },
-  "cyan.300": {
-    "$type": "color",
-    "$value": "#4dd0e1",
-    "$description": "Cyan 300 color token."
-  },
-  "cyan.400": {
-    "$type": "color",
-    "$value": "#26c6da",
-    "$description": "Cyan 400 color token."
-  },
-  "cyan.500": {
-    "$type": "color",
-    "$value": "#00bcd4",
-    "$description": "Cyan 500 color token."
-  },
-  "cyan.600": {
-    "$type": "color",
-    "$value": "#00acc1",
-    "$description": "Cyan 600 color token."
-  },
-  "cyan.700": {
-    "$type": "color",
-    "$value": "#0097a7",
-    "$description": "Cyan 700 color token."
-  },
-  "cyan.800": {
-    "$type": "color",
-    "$value": "#00838f",
-    "$description": "Cyan 800 color token."
-  },
-  "cyan.900": {
-    "$type": "color",
-    "$value": "#006064",
-    "$description": "Cyan 900 color token."
-  },
-  "cyan.A100": {
-    "$type": "color",
-    "$value": "#84ffff",
-    "$description": "Cyan A100 color token."
-  },
-  "cyan.A200": {
-    "$type": "color",
-    "$value": "#18ffff",
-    "$description": "Cyan A200 color token."
-  },
-  "cyan.A400": {
-    "$type": "color",
-    "$value": "#00e5ff",
-    "$description": "Cyan A400 color token."
-  },
-  "cyan.A700": {
-    "$type": "color",
-    "$value": "#00b8d4",
-    "$description": "Cyan A700 color token."
-  },
-  "lime.50": {
-    "$type": "color",
-    "$value": "#f9fbe7",
-    "$description": "Lime 50 color token."
-  },
-  "lime.100": {
-    "$type": "color",
-    "$value": "#f0f4c3",
-    "$description": "Lime 100 color token."
-  },
-  "lime.200": {
-    "$type": "color",
-    "$value": "#e6ee9c",
-    "$description": "Lime 200 color token."
-  },
-  "lime.300": {
-    "$type": "color",
-    "$value": "#dce775",
-    "$description": "Lime 300 color token."
-  },
-  "lime.400": {
-    "$type": "color",
-    "$value": "#d4e157",
-    "$description": "Lime 400 color token."
-  },
-  "lime.500": {
-    "$type": "color",
-    "$value": "#cddc39",
-    "$description": "Lime 500 color token."
-  },
-  "lime.600": {
-    "$type": "color",
-    "$value": "#c0ca33",
-    "$description": "Lime 600 color token."
-  },
-  "lime.700": {
-    "$type": "color",
-    "$value": "#afb42b",
-    "$description": "Lime 700 color token."
-  },
-  "lime.800": {
-    "$type": "color",
-    "$value": "#9e9d24",
-    "$description": "Lime 800 color token."
-  },
-  "lime.900": {
-    "$type": "color",
-    "$value": "#827717",
-    "$description": "Lime 900 color token."
-  },
-  "lime.A100": {
-    "$type": "color",
-    "$value": "#f4ff81",
-    "$description": "Lime A100 color token."
-  },
-  "lime.A200": {
-    "$type": "color",
-    "$value": "#eeff41",
-    "$description": "Lime A200 color token."
-  },
-  "lime.A400": {
-    "$type": "color",
-    "$value": "#c6ff00",
-    "$description": "Lime A400 color token."
-  },
-  "lime.A700": {
-    "$type": "color",
-    "$value": "#aeea00",
-    "$description": "Lime A700 color token."
-  },
-  "brown.50": {
-    "$type": "color",
-    "$value": "#efebe9",
-    "$description": "Brown 50 color token."
-  },
-  "brown.100": {
-    "$type": "color",
-    "$value": "#d7ccc8",
-    "$description": "Brown 100 color token."
-  },
-  "brown.200": {
-    "$type": "color",
-    "$value": "#bcaaa4",
-    "$description": "Brown 200 color token."
-  },
-  "brown.300": {
-    "$type": "color",
-    "$value": "#a1887f",
-    "$description": "Brown 300 color token."
-  },
-  "brown.400": {
-    "$type": "color",
-    "$value": "#8d6e63",
-    "$description": "Brown 400 color token."
-  },
-  "brown.500": {
-    "$type": "color",
-    "$value": "#795548",
-    "$description": "Brown 500 color token."
-  },
-  "brown.600": {
-    "$type": "color",
-    "$value": "#6d4c41",
-    "$description": "Brown 600 color token."
-  },
-  "brown.700": {
-    "$type": "color",
-    "$value": "#5d4037",
-    "$description": "Brown 700 color token."
-  },
-  "brown.800": {
-    "$type": "color",
-    "$value": "#4e342e",
-    "$description": "Brown 800 color token."
-  },
-  "brown.900": {
-    "$type": "color",
-    "$value": "#3e2723",
-    "$description": "Brown 900 color token."
-  },
-  "brown.A100": {
-    "$type": "color",
-    "$value": "#d7ccc8",
-    "$description": "Brown A100 color token."
-  },
-  "brown.A200": {
-    "$type": "color",
-    "$value": "#bcaaa4",
-    "$description": "Brown A200 color token."
-  },
-  "brown.A400": {
-    "$type": "color",
-    "$value": "#8d6e63",
-    "$description": "Brown A400 color token."
-  },
-  "brown.A700": {
-    "$type": "color",
-    "$value": "#5d4037",
-    "$description": "Brown A700 color token."
-  },
-  "grey.50": {
-    "$type": "color",
-    "$value": "#fafafa",
-    "$description": "Grey 50 color token."
-  },
-  "grey.100": {
-    "$type": "color",
-    "$value": "#f5f5f5",
-    "$description": "Grey 100 color token."
-  },
-  "grey.200": {
-    "$type": "color",
-    "$value": "#eeeeee",
-    "$description": "Grey 200 color token."
-  },
-  "grey.300": {
-    "$type": "color",
-    "$value": "#e0e0e0",
-    "$description": "Grey 300 color token."
-  },
-  "grey.400": {
-    "$type": "color",
-    "$value": "#bdbdbd",
-    "$description": "Grey 400 color token."
-  },
-  "grey.500": {
-    "$type": "color",
-    "$value": "#9e9e9e",
-    "$description": "Grey 500 color token."
-  },
-  "grey.600": {
-    "$type": "color",
-    "$value": "#757575",
-    "$description": "Grey 600 color token."
-  },
-  "grey.700": {
-    "$type": "color",
-    "$value": "#616161",
-    "$description": "Grey 700 color token."
-  },
-  "grey.800": {
-    "$type": "color",
-    "$value": "#424242",
-    "$description": "Grey 800 color token."
-  },
-  "grey.900": {
-    "$type": "color",
-    "$value": "#212121",
-    "$description": "Grey 900 color token."
-  },
-  "grey.A100": {
-    "$type": "color",
-    "$value": "#f5f5f5",
-    "$description": "Grey A100 color token."
-  },
-  "grey.A200": {
-    "$type": "color",
-    "$value": "#eeeeee",
-    "$description": "Grey A200 color token."
-  },
-  "grey.A400": {
-    "$type": "color",
-    "$value": "#bdbdbd",
-    "$description": "Grey A400 color token."
-  },
-  "grey.A700": {
-    "$type": "color",
-    "$value": "#616161",
-    "$description": "Grey A700 color token."
-  },
-  "common.black": {
-    "$type": "color",
-    "$value": "#000",
-    "$description": "Common Black color token."
-  },
-  "common.white": {
-    "$type": "color",
-    "$value": "#fff",
-    "$description": "Common White color token."
-  },
-  "primary.main": {
-    "$type": "color",
-    "$value": "#1976d2",
-    "$description": "Primary Main color token."
-  },
-  "primary.light": {
-    "$type": "color",
-    "$value": "#42a5f5",
-    "$description": "Primary Light color token."
-  },
-  "primary.dark": {
-    "$type": "color",
-    "$value": "#1565c0",
-    "$description": "Primary Dark color token."
-  },
-  "primary.contrastText": {
-    "$type": "color",
-    "$value": "#fff",
-    "$description": "Primary ContrastText color token."
-  },
-  "secondary.main": {
-    "$type": "color",
-    "$value": "#9c27b0",
-    "$description": "Secondary Main color token."
-  },
-  "secondary.light": {
-    "$type": "color",
-    "$value": "#ba68c8",
-    "$description": "Secondary Light color token."
-  },
-  "secondary.dark": {
-    "$type": "color",
-    "$value": "#7b1fa2",
-    "$description": "Secondary Dark color token."
-  },
-  "secondary.contrastText": {
-    "$type": "color",
-    "$value": "#fff",
-    "$description": "Secondary ContrastText color token."
-  },
-  "error.main": {
-    "$type": "color",
-    "$value": "#d32f2f",
-    "$description": "Error Main color token."
-  },
-  "error.light": {
-    "$type": "color",
-    "$value": "#ef5350",
-    "$description": "Error Light color token."
-  },
-  "error.dark": {
-    "$type": "color",
-    "$value": "#c62828",
-    "$description": "Error Dark color token."
-  },
-  "error.contrastText": {
-    "$type": "color",
-    "$value": "#fff",
-    "$description": "Error ContrastText color token."
-  },
-  "warning.main": {
-    "$type": "color",
-    "$value": "#ed6c02",
-    "$description": "Warning Main color token."
-  },
-  "warning.light": {
-    "$type": "color",
-    "$value": "#ff9800",
-    "$description": "Warning Light color token."
-  },
-  "warning.dark": {
-    "$type": "color",
-    "$value": "#e65100",
-    "$description": "Warning Dark color token."
-  },
-  "warning.contrastText": {
-    "$type": "color",
-    "$value": "#fff",
-    "$description": "Warning ContrastText color token."
-  },
-  "info.main": {
-    "$type": "color",
-    "$value": "#0288d1",
-    "$description": "Info Main color token."
-  },
-  "info.light": {
-    "$type": "color",
-    "$value": "#03a9f4",
-    "$description": "Info Light color token."
-  },
-  "info.dark": {
-    "$type": "color",
-    "$value": "#01579b",
-    "$description": "Info Dark color token."
-  },
-  "info.contrastText": {
-    "$type": "color",
-    "$value": "#fff",
-    "$description": "Info ContrastText color token."
-  },
-  "success.main": {
-    "$type": "color",
-    "$value": "#2e7d32",
-    "$description": "Success Main color token."
-  },
-  "success.light": {
-    "$type": "color",
-    "$value": "#4caf50",
-    "$description": "Success Light color token."
-  },
-  "success.dark": {
-    "$type": "color",
-    "$value": "#1b5e20",
-    "$description": "Success Dark color token."
-  },
-  "success.contrastText": {
-    "$type": "color",
-    "$value": "#fff",
-    "$description": "Success ContrastText color token."
-  },
-  "text.primary": {
-    "$type": "color",
-    "$value": "rgba(0, 0, 0, 0.87)",
-    "$description": "Text Primary color token."
-  },
-  "text.secondary": {
-    "$type": "color",
-    "$value": "rgba(0, 0, 0, 0.6)",
-    "$description": "Text Secondary color token."
-  },
-  "text.disabled": {
-    "$type": "color",
-    "$value": "rgba(0, 0, 0, 0.38)",
-    "$description": "Text Disabled color token."
-  },
-  "palette.divider": {
-    "$type": "color",
-    "$value": "rgba(0, 0, 0, 0.12)",
-    "$description": "Palette Divider color token."
-  },
-  "background.paper": {
-    "$type": "color",
-    "$value": "#fff",
-    "$description": "Background Paper color token."
-  },
-  "background.default": {
-    "$type": "color",
-    "$value": "#fff",
-    "$description": "Background Default color token."
-  },
-  "action.active": {
-    "$type": "color",
-    "$value": "rgba(0, 0, 0, 0.54)",
-    "$description": "Action Active color token."
-  },
-  "action.hover": {
-    "$type": "color",
-    "$value": "rgba(0, 0, 0, 0.04)",
-    "$description": "Action Hover color token."
-  },
-  "action.selected": {
-    "$type": "color",
-    "$value": "rgba(0, 0, 0, 0.08)",
-    "$description": "Action Selected color token."
-  },
-  "action.disabled": {
-    "$type": "color",
-    "$value": "rgba(0, 0, 0, 0.26)",
-    "$description": "Action Disabled color token."
-  },
-  "action.disabledBackground": {
-    "$type": "color",
-    "$value": "rgba(0, 0, 0, 0.12)",
-    "$description": "Action DisabledBackground color token."
-  },
-  "action.focus": {
-    "$type": "color",
-    "$value": "rgba(0, 0, 0, 0.12)",
-    "$description": "Action Focus color token."
-  },
-  "displayPrint.cssProperty": {
-    "$type": "boolean",
-    "$value": false,
-    "$description": "DisplayPrint CssProperty boolean token."
-  },
-  "typography.cssProperty": {
-    "$type": "boolean",
-    "$value": false,
-    "$description": "Typography CssProperty boolean token."
-  },
-  "typography.htmlfontSizes": {
-    "$type": "number",
-    "$value": 16,
-    "$description": "Typography HtmlfontSizes number token."
-  },
-  "typography.fontSizes": {
-    "$type": "number",
-    "$value": 14,
-    "$description": "Typography FontSizes number token."
-  },
-  "typography.fontWeightsLight": {
-    "$type": "number",
-    "$value": 300,
-    "$description": "Typography FontWeightsLight number token."
-  },
-  "typography.fontWeightsRegular": {
-    "$type": "number",
-    "$value": 400,
-    "$description": "Typography FontWeightsRegular number token."
-  },
-  "typography.fontWeightsMedium": {
-    "$type": "number",
-    "$value": 500,
-    "$description": "Typography FontWeightsMedium number token."
-  },
-  "typography.fontWeightsBold": {
-    "$type": "number",
-    "$value": 700,
-    "$description": "Typography FontWeightsBold number token."
-  },
-  "h1.fontWeights": {
-    "$type": "number",
-    "$value": 300,
-    "$description": "H1 FontWeights number token."
-  },
-  "h1.lineHeight": {
-    "$type": "number",
-    "$value": 1.167,
-    "$description": "H1 LineHeight number token."
-  },
-  "h1.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "-0.01562em",
-    "$description": "H1 LetterSpacing letterSpacing token."
-  },
-  "h2.fontWeights": {
-    "$type": "number",
-    "$value": 300,
-    "$description": "H2 FontWeights number token."
-  },
-  "h2.lineHeight": {
-    "$type": "number",
-    "$value": 1.2,
-    "$description": "H2 LineHeight number token."
-  },
-  "h2.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "-0.00833em",
-    "$description": "H2 LetterSpacing letterSpacing token."
-  },
-  "h3.fontWeights": {
-    "$type": "number",
-    "$value": 400,
-    "$description": "H3 FontWeights number token."
-  },
-  "h3.lineHeight": {
-    "$type": "number",
-    "$value": 1.167,
-    "$description": "H3 LineHeight number token."
-  },
-  "h3.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "0em",
-    "$description": "H3 LetterSpacing letterSpacing token."
-  },
-  "h4.fontWeights": {
-    "$type": "number",
-    "$value": 400,
-    "$description": "H4 FontWeights number token."
-  },
-  "h4.lineHeight": {
-    "$type": "number",
-    "$value": 1.235,
-    "$description": "H4 LineHeight number token."
-  },
-  "h4.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "0.00735em",
-    "$description": "H4 LetterSpacing letterSpacing token."
-  },
-  "h5.fontWeights": {
-    "$type": "number",
-    "$value": 400,
-    "$description": "H5 FontWeights number token."
-  },
-  "h5.lineHeight": {
-    "$type": "number",
-    "$value": 1.334,
-    "$description": "H5 LineHeight number token."
-  },
-  "h5.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "0em",
-    "$description": "H5 LetterSpacing letterSpacing token."
-  },
-  "h6.fontWeights": {
-    "$type": "number",
-    "$value": 500,
-    "$description": "H6 FontWeights number token."
-  },
-  "h6.lineHeight": {
-    "$type": "number",
-    "$value": 1.6,
-    "$description": "H6 LineHeight number token."
-  },
-  "h6.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "0.0075em",
-    "$description": "H6 LetterSpacing letterSpacing token."
-  },
-  "subtitle1.fontWeights": {
-    "$type": "number",
-    "$value": 400,
-    "$description": "Subtitle1 FontWeights number token."
-  },
-  "subtitle1.lineHeight": {
-    "$type": "number",
-    "$value": 1.75,
-    "$description": "Subtitle1 LineHeight number token."
-  },
-  "subtitle1.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "0.00938em",
-    "$description": "Subtitle1 LetterSpacing letterSpacing token."
-  },
-  "subtitle2.fontWeights": {
-    "$type": "number",
-    "$value": 500,
-    "$description": "Subtitle2 FontWeights number token."
-  },
-  "subtitle2.lineHeight": {
-    "$type": "number",
-    "$value": 1.57,
-    "$description": "Subtitle2 LineHeight number token."
-  },
-  "subtitle2.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "0.00714em",
-    "$description": "Subtitle2 LetterSpacing letterSpacing token."
-  },
-  "body1.fontWeights": {
-    "$type": "number",
-    "$value": 400,
-    "$description": "Body1 FontWeights number token."
-  },
-  "body1.lineHeight": {
-    "$type": "number",
-    "$value": 1.5,
-    "$description": "Body1 LineHeight number token."
-  },
-  "body1.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "0.00938em",
-    "$description": "Body1 LetterSpacing letterSpacing token."
-  },
-  "body2.fontWeights": {
-    "$type": "number",
-    "$value": 400,
-    "$description": "Body2 FontWeights number token."
-  },
-  "body2.lineHeight": {
-    "$type": "number",
-    "$value": 1.43,
-    "$description": "Body2 LineHeight number token."
-  },
-  "body2.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "0.01071em",
-    "$description": "Body2 LetterSpacing letterSpacing token."
-  },
-  "button.fontWeights": {
-    "$type": "number",
-    "$value": 500,
-    "$description": "Button FontWeights number token."
-  },
-  "button.lineHeight": {
-    "$type": "number",
-    "$value": 1.75,
-    "$description": "Button LineHeight number token."
-  },
-  "button.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "0.02857em",
-    "$description": "Button LetterSpacing letterSpacing token."
-  },
-  "caption.fontWeights": {
-    "$type": "number",
-    "$value": 400,
-    "$description": "Caption FontWeights number token."
-  },
-  "caption.lineHeight": {
-    "$type": "number",
-    "$value": 1.66,
-    "$description": "Caption LineHeight number token."
-  },
-  "caption.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "0.03333em",
-    "$description": "Caption LetterSpacing letterSpacing token."
-  },
-  "overline.fontWeights": {
-    "$type": "number",
-    "$value": 400,
-    "$description": "Overline FontWeights number token."
-  },
-  "overline.lineHeight": {
-    "$type": "number",
-    "$value": 2.66,
-    "$description": "Overline LineHeight number token."
-  },
-  "overline.letterSpacing": {
-    "$type": "letterSpacing",
-    "$value": "0.08333em",
-    "$description": "Overline LetterSpacing letterSpacing token."
-  },
-  "values.xs": {
-    "$type": "number",
-    "$value": 0,
-    "$description": "Values Xs number token."
-  },
-  "values.sm": {
-    "$type": "number",
-    "$value": 600,
-    "$description": "Values Sm number token."
-  },
-  "values.md": {
-    "$type": "number",
-    "$value": 900,
-    "$description": "Values Md number token."
-  },
-  "values.lg": {
-    "$type": "number",
-    "$value": 1200,
-    "$description": "Values Lg number token."
-  },
-  "values.xl": {
-    "$type": "number",
-    "$value": 1536,
-    "$description": "Values Xl number token."
-  },
-  "palette.contrastThreshold": {
-    "$type": "number",
-    "$value": 3,
-    "$description": "Palette ContrastThreshold number token."
-  },
-  "palette.tonalOffset": {
-    "$type": "number",
-    "$value": 0.2,
-    "$description": "Palette TonalOffset number token."
-  },
-  "action.hoverOpacity": {
-    "$type": "number",
-    "$value": 0.04,
-    "$description": "Action HoverOpacity number token."
-  },
-  "action.selectedOpacity": {
-    "$type": "number",
-    "$value": 0.08,
-    "$description": "Action SelectedOpacity number token."
-  },
-  "action.disabledOpacity": {
-    "$type": "number",
-    "$value": 0.38,
-    "$description": "Action DisabledOpacity number token."
-  },
-  "action.focusOpacity": {
-    "$type": "number",
-    "$value": 0.12,
-    "$description": "Action FocusOpacity number token."
-  },
-  "action.activatedOpacity": {
-    "$type": "number",
-    "$value": 0.12,
-    "$description": "Action ActivatedOpacity number token."
-  },
-  "shape.borderRadius": {
-    "$type": "number",
-    "$value": 4,
-    "$description": "Shape BorderRadius number token."
-  },
-  "toolbar.minHeight": {
-    "$type": "number",
-    "$value": 56,
-    "$description": "Toolbar MinHeight number token."
-  },
-  "@media (orientation: landscape).minHeight": {
-    "$type": "number",
-    "$value": 48,
-    "$description": "@Media (Orientation: Landscape) MinHeight number token."
-  },
-  "@media (min-width:600px).minHeight": {
-    "$type": "number",
-    "$value": 64,
-    "$description": "@Media (Min-Width:600px) MinHeight number token."
-  },
-  "duration.shortest": {
-    "$type": "number",
-    "$value": 150,
-    "$description": "Duration Shortest number token."
-  },
-  "duration.shorter": {
-    "$type": "number",
-    "$value": 200,
-    "$description": "Duration Shorter number token."
-  },
-  "duration.short": {
-    "$type": "number",
-    "$value": 250,
-    "$description": "Duration Short number token."
-  },
-  "duration.standard": {
-    "$type": "number",
-    "$value": 300,
-    "$description": "Duration Standard number token."
-  },
-  "duration.complex": {
-    "$type": "number",
-    "$value": 375,
-    "$description": "Duration Complex number token."
-  },
-  "duration.enteringScreen": {
-    "$type": "number",
-    "$value": 225,
-    "$description": "Duration EnteringScreen number token."
-  },
-  "duration.leavingScreen": {
-    "$type": "number",
-    "$value": 195,
-    "$description": "Duration LeavingScreen number token."
-  },
-  "zIndex.mobileStepper": {
-    "$type": "number",
-    "$value": 1000,
-    "$description": "ZIndex MobileStepper number token."
-  },
-  "zIndex.fab": {
-    "$type": "number",
-    "$value": 1050,
-    "$description": "ZIndex Fab number token."
-  },
-  "zIndex.speedDial": {
-    "$type": "number",
-    "$value": 1050,
-    "$description": "ZIndex SpeedDial number token."
-  },
-  "zIndex.appBar": {
-    "$type": "number",
-    "$value": 1100,
-    "$description": "ZIndex AppBar number token."
-  },
-  "zIndex.drawer": {
-    "$type": "number",
-    "$value": 1200,
-    "$description": "ZIndex Drawer number token."
-  },
-  "zIndex.modal": {
-    "$type": "number",
-    "$value": 1300,
-    "$description": "ZIndex Modal number token."
-  },
-  "zIndex.snackbar": {
-    "$type": "number",
-    "$value": 1400,
-    "$description": "ZIndex Snackbar number token."
-  },
-  "zIndex.tooltip": {
-    "$type": "number",
-    "$value": 1500,
-    "$description": "ZIndex Tooltip number token."
+  "blue": {
+    "50": {
+      "$type": "color",
+      "$value": "#e3f2fd",
+      "$description": "Blue 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#bbdefb",
+      "$description": "Blue 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#90caf9",
+      "$description": "Blue 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#64b5f6",
+      "$description": "Blue 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#42a5f5",
+      "$description": "Blue 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#2196f3",
+      "$description": "Blue 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#1e88e5",
+      "$description": "Blue 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#1976d2",
+      "$description": "Blue 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#1565c0",
+      "$description": "Blue 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#0d47a1",
+      "$description": "Blue 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#82b1ff",
+      "$description": "Blue A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#448aff",
+      "$description": "Blue A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#2979ff",
+      "$description": "Blue A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#2962ff",
+      "$description": "Blue A700 color token."
+    }
+  },
+  "red": {
+    "50": {
+      "$type": "color",
+      "$value": "#ffebee",
+      "$description": "Red 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#ffcdd2",
+      "$description": "Red 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#ef9a9a",
+      "$description": "Red 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#e57373",
+      "$description": "Red 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#ef5350",
+      "$description": "Red 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#f44336",
+      "$description": "Red 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#e53935",
+      "$description": "Red 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#d32f2f",
+      "$description": "Red 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#c62828",
+      "$description": "Red 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#b71c1c",
+      "$description": "Red 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#ff8a80",
+      "$description": "Red A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#ff5252",
+      "$description": "Red A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#ff1744",
+      "$description": "Red A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#d50000",
+      "$description": "Red A700 color token."
+    }
+  },
+  "green": {
+    "50": {
+      "$type": "color",
+      "$value": "#e8f5e9",
+      "$description": "Green 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#c8e6c9",
+      "$description": "Green 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#a5d6a7",
+      "$description": "Green 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#81c784",
+      "$description": "Green 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#66bb6a",
+      "$description": "Green 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#4caf50",
+      "$description": "Green 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#43a047",
+      "$description": "Green 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#388e3c",
+      "$description": "Green 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#2e7d32",
+      "$description": "Green 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#1b5e20",
+      "$description": "Green 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#b9f6ca",
+      "$description": "Green A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#69f0ae",
+      "$description": "Green A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#00e676",
+      "$description": "Green A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#00c853",
+      "$description": "Green A700 color token."
+    }
+  },
+  "purple": {
+    "50": {
+      "$type": "color",
+      "$value": "#f3e5f5",
+      "$description": "Purple 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#e1bee7",
+      "$description": "Purple 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#ce93d8",
+      "$description": "Purple 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#ba68c8",
+      "$description": "Purple 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#ab47bc",
+      "$description": "Purple 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#9c27b0",
+      "$description": "Purple 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#8e24aa",
+      "$description": "Purple 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#7b1fa2",
+      "$description": "Purple 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#6a1b9a",
+      "$description": "Purple 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#4a148c",
+      "$description": "Purple 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#ea80fc",
+      "$description": "Purple A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#e040fb",
+      "$description": "Purple A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#d500f9",
+      "$description": "Purple A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#aa00ff",
+      "$description": "Purple A700 color token."
+    }
+  },
+  "orange": {
+    "50": {
+      "$type": "color",
+      "$value": "#fff3e0",
+      "$description": "Orange 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#ffe0b2",
+      "$description": "Orange 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#ffcc80",
+      "$description": "Orange 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#ffb74d",
+      "$description": "Orange 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#ffa726",
+      "$description": "Orange 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#ff9800",
+      "$description": "Orange 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#fb8c00",
+      "$description": "Orange 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#f57c00",
+      "$description": "Orange 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#ef6c00",
+      "$description": "Orange 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#e65100",
+      "$description": "Orange 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#ffd180",
+      "$description": "Orange A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#ffab40",
+      "$description": "Orange A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#ff9100",
+      "$description": "Orange A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#ff6d00",
+      "$description": "Orange A700 color token."
+    }
+  },
+  "yellow": {
+    "50": {
+      "$type": "color",
+      "$value": "#fffde7",
+      "$description": "Yellow 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#fff9c4",
+      "$description": "Yellow 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#fff59d",
+      "$description": "Yellow 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#fff176",
+      "$description": "Yellow 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#ffee58",
+      "$description": "Yellow 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#ffeb3b",
+      "$description": "Yellow 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#fdd835",
+      "$description": "Yellow 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#fbc02d",
+      "$description": "Yellow 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#f9a825",
+      "$description": "Yellow 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#f57f17",
+      "$description": "Yellow 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#ffff8d",
+      "$description": "Yellow A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#ffff00",
+      "$description": "Yellow A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#ffea00",
+      "$description": "Yellow A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#ffd600",
+      "$description": "Yellow A700 color token."
+    }
+  },
+  "teal": {
+    "50": {
+      "$type": "color",
+      "$value": "#e0f2f1",
+      "$description": "Teal 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#b2dfdb",
+      "$description": "Teal 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#80cbc4",
+      "$description": "Teal 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#4db6ac",
+      "$description": "Teal 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#26a69a",
+      "$description": "Teal 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#009688",
+      "$description": "Teal 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#00897b",
+      "$description": "Teal 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#00796b",
+      "$description": "Teal 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#00695c",
+      "$description": "Teal 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#004d40",
+      "$description": "Teal 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#a7ffeb",
+      "$description": "Teal A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#64ffda",
+      "$description": "Teal A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#1de9b6",
+      "$description": "Teal A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#00bfa5",
+      "$description": "Teal A700 color token."
+    }
+  },
+  "pink": {
+    "50": {
+      "$type": "color",
+      "$value": "#fce4ec",
+      "$description": "Pink 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#f8bbd0",
+      "$description": "Pink 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#f48fb1",
+      "$description": "Pink 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#f06292",
+      "$description": "Pink 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#ec407a",
+      "$description": "Pink 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#e91e63",
+      "$description": "Pink 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#d81b60",
+      "$description": "Pink 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#c2185b",
+      "$description": "Pink 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#ad1457",
+      "$description": "Pink 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#880e4f",
+      "$description": "Pink 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#ff80ab",
+      "$description": "Pink A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#ff4081",
+      "$description": "Pink A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#f50057",
+      "$description": "Pink A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#c51162",
+      "$description": "Pink A700 color token."
+    }
+  },
+  "indigo": {
+    "50": {
+      "$type": "color",
+      "$value": "#e8eaf6",
+      "$description": "Indigo 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#c5cae9",
+      "$description": "Indigo 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#9fa8da",
+      "$description": "Indigo 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#7986cb",
+      "$description": "Indigo 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#5c6bc0",
+      "$description": "Indigo 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#3f51b5",
+      "$description": "Indigo 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#3949ab",
+      "$description": "Indigo 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#303f9f",
+      "$description": "Indigo 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#283593",
+      "$description": "Indigo 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#1a237e",
+      "$description": "Indigo 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#8c9eff",
+      "$description": "Indigo A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#536dfe",
+      "$description": "Indigo A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#3d5afe",
+      "$description": "Indigo A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#304ffe",
+      "$description": "Indigo A700 color token."
+    }
+  },
+  "deepOrange": {
+    "50": {
+      "$type": "color",
+      "$value": "#fbe9e7",
+      "$description": "DeepOrange 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#ffccbc",
+      "$description": "DeepOrange 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#ffab91",
+      "$description": "DeepOrange 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#ff8a65",
+      "$description": "DeepOrange 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#ff7043",
+      "$description": "DeepOrange 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#ff5722",
+      "$description": "DeepOrange 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#f4511e",
+      "$description": "DeepOrange 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#e64a19",
+      "$description": "DeepOrange 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#d84315",
+      "$description": "DeepOrange 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#bf360c",
+      "$description": "DeepOrange 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#ff9e80",
+      "$description": "DeepOrange A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#ff6e40",
+      "$description": "DeepOrange A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#ff3d00",
+      "$description": "DeepOrange A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#dd2c00",
+      "$description": "DeepOrange A700 color token."
+    }
+  },
+  "deepPurple": {
+    "50": {
+      "$type": "color",
+      "$value": "#ede7f6",
+      "$description": "DeepPurple 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#d1c4e9",
+      "$description": "DeepPurple 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#b39ddb",
+      "$description": "DeepPurple 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#9575cd",
+      "$description": "DeepPurple 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#7e57c2",
+      "$description": "DeepPurple 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#673ab7",
+      "$description": "DeepPurple 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#5e35b1",
+      "$description": "DeepPurple 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#512da8",
+      "$description": "DeepPurple 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#4527a0",
+      "$description": "DeepPurple 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#311b92",
+      "$description": "DeepPurple 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#b388ff",
+      "$description": "DeepPurple A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#7c4dff",
+      "$description": "DeepPurple A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#651fff",
+      "$description": "DeepPurple A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#6200ea",
+      "$description": "DeepPurple A700 color token."
+    }
+  },
+  "lightBlue": {
+    "50": {
+      "$type": "color",
+      "$value": "#e1f5fe",
+      "$description": "LightBlue 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#b3e5fc",
+      "$description": "LightBlue 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#81d4fa",
+      "$description": "LightBlue 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#4fc3f7",
+      "$description": "LightBlue 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#29b6f6",
+      "$description": "LightBlue 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#03a9f4",
+      "$description": "LightBlue 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#039be5",
+      "$description": "LightBlue 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#0288d1",
+      "$description": "LightBlue 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#0277bd",
+      "$description": "LightBlue 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#01579b",
+      "$description": "LightBlue 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#80d8ff",
+      "$description": "LightBlue A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#40c4ff",
+      "$description": "LightBlue A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#00b0ff",
+      "$description": "LightBlue A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#0091ea",
+      "$description": "LightBlue A700 color token."
+    }
+  },
+  "lightGreen": {
+    "50": {
+      "$type": "color",
+      "$value": "#f1f8e9",
+      "$description": "LightGreen 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#dcedc8",
+      "$description": "LightGreen 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#c5e1a5",
+      "$description": "LightGreen 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#aed581",
+      "$description": "LightGreen 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#9ccc65",
+      "$description": "LightGreen 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#8bc34a",
+      "$description": "LightGreen 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#7cb342",
+      "$description": "LightGreen 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#689f38",
+      "$description": "LightGreen 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#558b2f",
+      "$description": "LightGreen 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#33691e",
+      "$description": "LightGreen 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#ccff90",
+      "$description": "LightGreen A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#b2ff59",
+      "$description": "LightGreen A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#76ff03",
+      "$description": "LightGreen A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#64dd17",
+      "$description": "LightGreen A700 color token."
+    }
+  },
+  "amber": {
+    "50": {
+      "$type": "color",
+      "$value": "#fff8e1",
+      "$description": "Amber 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#ffecb3",
+      "$description": "Amber 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#ffe082",
+      "$description": "Amber 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#ffd54f",
+      "$description": "Amber 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#ffca28",
+      "$description": "Amber 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#ffc107",
+      "$description": "Amber 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#ffb300",
+      "$description": "Amber 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#ffa000",
+      "$description": "Amber 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#ff8f00",
+      "$description": "Amber 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#ff6f00",
+      "$description": "Amber 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#ffe57f",
+      "$description": "Amber A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#ffd740",
+      "$description": "Amber A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#ffc400",
+      "$description": "Amber A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#ffab00",
+      "$description": "Amber A700 color token."
+    }
+  },
+  "cyan": {
+    "50": {
+      "$type": "color",
+      "$value": "#e0f7fa",
+      "$description": "Cyan 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#b2ebf2",
+      "$description": "Cyan 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#80deea",
+      "$description": "Cyan 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#4dd0e1",
+      "$description": "Cyan 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#26c6da",
+      "$description": "Cyan 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#00bcd4",
+      "$description": "Cyan 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#00acc1",
+      "$description": "Cyan 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#0097a7",
+      "$description": "Cyan 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#00838f",
+      "$description": "Cyan 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#006064",
+      "$description": "Cyan 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#84ffff",
+      "$description": "Cyan A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#18ffff",
+      "$description": "Cyan A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#00e5ff",
+      "$description": "Cyan A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#00b8d4",
+      "$description": "Cyan A700 color token."
+    }
+  },
+  "lime": {
+    "50": {
+      "$type": "color",
+      "$value": "#f9fbe7",
+      "$description": "Lime 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#f0f4c3",
+      "$description": "Lime 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#e6ee9c",
+      "$description": "Lime 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#dce775",
+      "$description": "Lime 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#d4e157",
+      "$description": "Lime 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#cddc39",
+      "$description": "Lime 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#c0ca33",
+      "$description": "Lime 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#afb42b",
+      "$description": "Lime 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#9e9d24",
+      "$description": "Lime 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#827717",
+      "$description": "Lime 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#f4ff81",
+      "$description": "Lime A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#eeff41",
+      "$description": "Lime A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#c6ff00",
+      "$description": "Lime A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#aeea00",
+      "$description": "Lime A700 color token."
+    }
+  },
+  "brown": {
+    "50": {
+      "$type": "color",
+      "$value": "#efebe9",
+      "$description": "Brown 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#d7ccc8",
+      "$description": "Brown 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#bcaaa4",
+      "$description": "Brown 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#a1887f",
+      "$description": "Brown 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#8d6e63",
+      "$description": "Brown 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#795548",
+      "$description": "Brown 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#6d4c41",
+      "$description": "Brown 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#5d4037",
+      "$description": "Brown 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#4e342e",
+      "$description": "Brown 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#3e2723",
+      "$description": "Brown 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#d7ccc8",
+      "$description": "Brown A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#bcaaa4",
+      "$description": "Brown A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#8d6e63",
+      "$description": "Brown A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#5d4037",
+      "$description": "Brown A700 color token."
+    }
+  },
+  "grey": {
+    "50": {
+      "$type": "color",
+      "$value": "#fafafa",
+      "$description": "Grey 50 color token."
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#f5f5f5",
+      "$description": "Grey 100 color token."
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#eeeeee",
+      "$description": "Grey 200 color token."
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#e0e0e0",
+      "$description": "Grey 300 color token."
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#bdbdbd",
+      "$description": "Grey 400 color token."
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#9e9e9e",
+      "$description": "Grey 500 color token."
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#757575",
+      "$description": "Grey 600 color token."
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#616161",
+      "$description": "Grey 700 color token."
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#424242",
+      "$description": "Grey 800 color token."
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#212121",
+      "$description": "Grey 900 color token."
+    },
+    "A100": {
+      "$type": "color",
+      "$value": "#f5f5f5",
+      "$description": "Grey A100 color token."
+    },
+    "A200": {
+      "$type": "color",
+      "$value": "#eeeeee",
+      "$description": "Grey A200 color token."
+    },
+    "A400": {
+      "$type": "color",
+      "$value": "#bdbdbd",
+      "$description": "Grey A400 color token."
+    },
+    "A700": {
+      "$type": "color",
+      "$value": "#616161",
+      "$description": "Grey A700 color token."
+    }
+  },
+  "common": {
+    "black": {
+      "$type": "color",
+      "$value": "#000",
+      "$description": "Common Black color token."
+    },
+    "white": {
+      "$type": "color",
+      "$value": "#fff",
+      "$description": "Common White color token."
+    }
+  },
+  "primary": {
+    "main": {
+      "$type": "color",
+      "$value": "#1976d2",
+      "$description": "Primary Main color token."
+    },
+    "light": {
+      "$type": "color",
+      "$value": "#42a5f5",
+      "$description": "Primary Light color token."
+    },
+    "dark": {
+      "$type": "color",
+      "$value": "#1565c0",
+      "$description": "Primary Dark color token."
+    },
+    "contrastText": {
+      "$type": "color",
+      "$value": "#fff",
+      "$description": "Primary ContrastText color token."
+    }
+  },
+  "secondary": {
+    "main": {
+      "$type": "color",
+      "$value": "#9c27b0",
+      "$description": "Secondary Main color token."
+    },
+    "light": {
+      "$type": "color",
+      "$value": "#ba68c8",
+      "$description": "Secondary Light color token."
+    },
+    "dark": {
+      "$type": "color",
+      "$value": "#7b1fa2",
+      "$description": "Secondary Dark color token."
+    },
+    "contrastText": {
+      "$type": "color",
+      "$value": "#fff",
+      "$description": "Secondary ContrastText color token."
+    }
+  },
+  "error": {
+    "main": {
+      "$type": "color",
+      "$value": "#d32f2f",
+      "$description": "Error Main color token."
+    },
+    "light": {
+      "$type": "color",
+      "$value": "#ef5350",
+      "$description": "Error Light color token."
+    },
+    "dark": {
+      "$type": "color",
+      "$value": "#c62828",
+      "$description": "Error Dark color token."
+    },
+    "contrastText": {
+      "$type": "color",
+      "$value": "#fff",
+      "$description": "Error ContrastText color token."
+    }
+  },
+  "warning": {
+    "main": {
+      "$type": "color",
+      "$value": "#ed6c02",
+      "$description": "Warning Main color token."
+    },
+    "light": {
+      "$type": "color",
+      "$value": "#ff9800",
+      "$description": "Warning Light color token."
+    },
+    "dark": {
+      "$type": "color",
+      "$value": "#e65100",
+      "$description": "Warning Dark color token."
+    },
+    "contrastText": {
+      "$type": "color",
+      "$value": "#fff",
+      "$description": "Warning ContrastText color token."
+    }
+  },
+  "info": {
+    "main": {
+      "$type": "color",
+      "$value": "#0288d1",
+      "$description": "Info Main color token."
+    },
+    "light": {
+      "$type": "color",
+      "$value": "#03a9f4",
+      "$description": "Info Light color token."
+    },
+    "dark": {
+      "$type": "color",
+      "$value": "#01579b",
+      "$description": "Info Dark color token."
+    },
+    "contrastText": {
+      "$type": "color",
+      "$value": "#fff",
+      "$description": "Info ContrastText color token."
+    }
+  },
+  "success": {
+    "main": {
+      "$type": "color",
+      "$value": "#2e7d32",
+      "$description": "Success Main color token."
+    },
+    "light": {
+      "$type": "color",
+      "$value": "#4caf50",
+      "$description": "Success Light color token."
+    },
+    "dark": {
+      "$type": "color",
+      "$value": "#1b5e20",
+      "$description": "Success Dark color token."
+    },
+    "contrastText": {
+      "$type": "color",
+      "$value": "#fff",
+      "$description": "Success ContrastText color token."
+    }
+  },
+  "text": {
+    "primary": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.87)",
+      "$description": "Text Primary color token."
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.6)",
+      "$description": "Text Secondary color token."
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.38)",
+      "$description": "Text Disabled color token."
+    }
+  },
+  "palette": {
+    "divider": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.12)",
+      "$description": "Palette Divider color token."
+    },
+    "contrastThreshold": {
+      "$type": "number",
+      "$value": 3,
+      "$description": "Palette ContrastThreshold number token."
+    },
+    "tonalOffset": {
+      "$type": "number",
+      "$value": 0.2,
+      "$description": "Palette TonalOffset number token."
+    }
+  },
+  "background": {
+    "paper": {
+      "$type": "color",
+      "$value": "#fff",
+      "$description": "Background Paper color token."
+    },
+    "default": {
+      "$type": "color",
+      "$value": "#fff",
+      "$description": "Background Default color token."
+    }
+  },
+  "action": {
+    "active": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.54)",
+      "$description": "Action Active color token."
+    },
+    "hover": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.04)",
+      "$description": "Action Hover color token."
+    },
+    "selected": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.08)",
+      "$description": "Action Selected color token."
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.26)",
+      "$description": "Action Disabled color token."
+    },
+    "disabledBackground": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.12)",
+      "$description": "Action DisabledBackground color token."
+    },
+    "focus": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.12)",
+      "$description": "Action Focus color token."
+    },
+    "hoverOpacity": {
+      "$type": "number",
+      "$value": 0.04,
+      "$description": "Action HoverOpacity number token."
+    },
+    "selectedOpacity": {
+      "$type": "number",
+      "$value": 0.08,
+      "$description": "Action SelectedOpacity number token."
+    },
+    "disabledOpacity": {
+      "$type": "number",
+      "$value": 0.38,
+      "$description": "Action DisabledOpacity number token."
+    },
+    "focusOpacity": {
+      "$type": "number",
+      "$value": 0.12,
+      "$description": "Action FocusOpacity number token."
+    },
+    "activatedOpacity": {
+      "$type": "number",
+      "$value": 0.12,
+      "$description": "Action ActivatedOpacity number token."
+    }
+  },
+  "displayPrint": {
+    "cssProperty": {
+      "$type": "boolean",
+      "$value": false,
+      "$description": "DisplayPrint CssProperty boolean token."
+    }
+  },
+  "typography": {
+    "cssProperty": {
+      "$type": "boolean",
+      "$value": false,
+      "$description": "Typography CssProperty boolean token."
+    },
+    "htmlfontSizes": {
+      "$type": "number",
+      "$value": 16,
+      "$description": "Typography HtmlfontSizes number token."
+    },
+    "fontSizes": {
+      "$type": "number",
+      "$value": 14,
+      "$description": "Typography FontSizes number token."
+    },
+    "fontWeightsLight": {
+      "$type": "number",
+      "$value": 300,
+      "$description": "Typography FontWeightsLight number token."
+    },
+    "fontWeightsRegular": {
+      "$type": "number",
+      "$value": 400,
+      "$description": "Typography FontWeightsRegular number token."
+    },
+    "fontWeightsMedium": {
+      "$type": "number",
+      "$value": 500,
+      "$description": "Typography FontWeightsMedium number token."
+    },
+    "fontWeightsBold": {
+      "$type": "number",
+      "$value": 700,
+      "$description": "Typography FontWeightsBold number token."
+    }
+  },
+  "h1": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 300,
+      "$description": "H1 FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.167,
+      "$description": "H1 LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "-0.01562em",
+      "$description": "H1 LetterSpacing letterSpacing token."
+    }
+  },
+  "h2": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 300,
+      "$description": "H2 FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.2,
+      "$description": "H2 LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "-0.00833em",
+      "$description": "H2 LetterSpacing letterSpacing token."
+    }
+  },
+  "h3": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 400,
+      "$description": "H3 FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.167,
+      "$description": "H3 LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "0em",
+      "$description": "H3 LetterSpacing letterSpacing token."
+    }
+  },
+  "h4": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 400,
+      "$description": "H4 FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.235,
+      "$description": "H4 LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "0.00735em",
+      "$description": "H4 LetterSpacing letterSpacing token."
+    }
+  },
+  "h5": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 400,
+      "$description": "H5 FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.334,
+      "$description": "H5 LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "0em",
+      "$description": "H5 LetterSpacing letterSpacing token."
+    }
+  },
+  "h6": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 500,
+      "$description": "H6 FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.6,
+      "$description": "H6 LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "0.0075em",
+      "$description": "H6 LetterSpacing letterSpacing token."
+    }
+  },
+  "subtitle1": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 400,
+      "$description": "Subtitle1 FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.75,
+      "$description": "Subtitle1 LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "0.00938em",
+      "$description": "Subtitle1 LetterSpacing letterSpacing token."
+    }
+  },
+  "subtitle2": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 500,
+      "$description": "Subtitle2 FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.57,
+      "$description": "Subtitle2 LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "0.00714em",
+      "$description": "Subtitle2 LetterSpacing letterSpacing token."
+    }
+  },
+  "body1": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 400,
+      "$description": "Body1 FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.5,
+      "$description": "Body1 LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "0.00938em",
+      "$description": "Body1 LetterSpacing letterSpacing token."
+    }
+  },
+  "body2": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 400,
+      "$description": "Body2 FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.43,
+      "$description": "Body2 LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "0.01071em",
+      "$description": "Body2 LetterSpacing letterSpacing token."
+    }
+  },
+  "button": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 500,
+      "$description": "Button FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.75,
+      "$description": "Button LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "0.02857em",
+      "$description": "Button LetterSpacing letterSpacing token."
+    }
+  },
+  "caption": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 400,
+      "$description": "Caption FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 1.66,
+      "$description": "Caption LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "0.03333em",
+      "$description": "Caption LetterSpacing letterSpacing token."
+    }
+  },
+  "overline": {
+    "fontWeights": {
+      "$type": "number",
+      "$value": 400,
+      "$description": "Overline FontWeights number token."
+    },
+    "lineHeight": {
+      "$type": "number",
+      "$value": 2.66,
+      "$description": "Overline LineHeight number token."
+    },
+    "letterSpacing": {
+      "$type": "letterSpacing",
+      "$value": "0.08333em",
+      "$description": "Overline LetterSpacing letterSpacing token."
+    }
+  },
+  "values": {
+    "xs": {
+      "$type": "number",
+      "$value": 0,
+      "$description": "Values Xs number token."
+    },
+    "sm": {
+      "$type": "number",
+      "$value": 600,
+      "$description": "Values Sm number token."
+    },
+    "md": {
+      "$type": "number",
+      "$value": 900,
+      "$description": "Values Md number token."
+    },
+    "lg": {
+      "$type": "number",
+      "$value": 1200,
+      "$description": "Values Lg number token."
+    },
+    "xl": {
+      "$type": "number",
+      "$value": 1536,
+      "$description": "Values Xl number token."
+    }
+  },
+  "shape": {
+    "borderRadius": {
+      "$type": "number",
+      "$value": 4,
+      "$description": "Shape BorderRadius number token."
+    }
+  },
+  "toolbar": {
+    "minHeight": {
+      "$type": "number",
+      "$value": 56,
+      "$description": "Toolbar MinHeight number token."
+    }
+  },
+  "@media (orientation: landscape)": {
+    "minHeight": {
+      "$type": "number",
+      "$value": 48,
+      "$description": "@Media (Orientation: Landscape) MinHeight number token."
+    }
+  },
+  "@media (min-width:600px)": {
+    "minHeight": {
+      "$type": "number",
+      "$value": 64,
+      "$description": "@Media (Min-Width:600px) MinHeight number token."
+    }
+  },
+  "duration": {
+    "shortest": {
+      "$type": "number",
+      "$value": 150,
+      "$description": "Duration Shortest number token."
+    },
+    "shorter": {
+      "$type": "number",
+      "$value": 200,
+      "$description": "Duration Shorter number token."
+    },
+    "short": {
+      "$type": "number",
+      "$value": 250,
+      "$description": "Duration Short number token."
+    },
+    "standard": {
+      "$type": "number",
+      "$value": 300,
+      "$description": "Duration Standard number token."
+    },
+    "complex": {
+      "$type": "number",
+      "$value": 375,
+      "$description": "Duration Complex number token."
+    },
+    "enteringScreen": {
+      "$type": "number",
+      "$value": 225,
+      "$description": "Duration EnteringScreen number token."
+    },
+    "leavingScreen": {
+      "$type": "number",
+      "$value": 195,
+      "$description": "Duration LeavingScreen number token."
+    }
+  },
+  "zIndex": {
+    "mobileStepper": {
+      "$type": "number",
+      "$value": 1000,
+      "$description": "ZIndex MobileStepper number token."
+    },
+    "fab": {
+      "$type": "number",
+      "$value": 1050,
+      "$description": "ZIndex Fab number token."
+    },
+    "speedDial": {
+      "$type": "number",
+      "$value": 1050,
+      "$description": "ZIndex SpeedDial number token."
+    },
+    "appBar": {
+      "$type": "number",
+      "$value": 1100,
+      "$description": "ZIndex AppBar number token."
+    },
+    "drawer": {
+      "$type": "number",
+      "$value": 1200,
+      "$description": "ZIndex Drawer number token."
+    },
+    "modal": {
+      "$type": "number",
+      "$value": 1300,
+      "$description": "ZIndex Modal number token."
+    },
+    "snackbar": {
+      "$type": "number",
+      "$value": 1400,
+      "$description": "ZIndex Snackbar number token."
+    },
+    "tooltip": {
+      "$type": "number",
+      "$value": 1500,
+      "$description": "ZIndex Tooltip number token."
+    }
   }
 }

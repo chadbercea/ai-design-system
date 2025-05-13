@@ -74,8 +74,8 @@
   "colors": {
     "black": {
       "$type": "color",
-      "$value": "#000",
-      "$description": "I made it black"
+      "$value": "#000000",
+      "$description": "Let's change this color from black to Onyx."
     },
     "white": {
       "$type": "color",
