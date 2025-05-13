@@ -35,7 +35,8 @@
             "text",
             "number",
             "other"
-          ]
+          ],
+          "description": "Plural $type values (e.g., 'fontSizes', 'fontWeights', 'fontFamilies') are intentional and compliant with Tokens Studio and DTCG. Do not singularize these. Only the $type field may be plural for these categories; token keys themselves must remain flat and canonical."
         },
         "$value": {
           "oneOf": [

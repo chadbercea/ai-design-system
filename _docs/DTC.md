@@ -267,3 +267,8 @@ System fails fast. No drift. No ambiguity. T-D-W-P is law.
 - core.json: validated, T-D-W-P compliant
 - Failures: block pipeline
 - No manual primitives. Policy.
+
+## Plural $type Fields
+
+> **Note:**
+> Plural `$type` values (e.g., `"fontSizes"`, `"fontWeights"`, `"fontFamilies"`) are intentional and compliant with both Tokens Studio and W3C DTCG patterns. These plural forms are used for organizational grouping and interoperability with design tools. **Do not singularize these $type values.** Only the `$type` field may be plural for these categories; token keys themselves must remain flat and canonical.

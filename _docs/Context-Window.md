@@ -140,6 +140,11 @@ These structures fail. No warnings. No exceptions.
 7. Semantic in primitive: rejected.
 8. Path violation: blocked.
 
+## Plural $type Fields
+
+> **Note:**
+> Plural `$type` values (e.g., `"fontSizes"`, `"fontWeights"`, `"fontFamilies"`) are intentional and compliant with both Tokens Studio and W3C DTCG patterns. These plural forms are used for organizational grouping and interoperability with design tools. **Do not singularize these $type values.** Only the `$type` field may be plural for these categories; token keys themselves must remain flat and canonical.
+
 ## Schema Versioning
 1. Schema Lock
    - Version in $metadata.json
