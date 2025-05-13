@@ -3,8 +3,6 @@
     "core",
     "dark",
     "light",
-    "theme",
-    "mui-tokens",
-    "mui-set"
+    "theme"
   ]
 }
