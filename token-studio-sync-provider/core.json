@@ -75,7 +75,7 @@
     "black": {
       "$type": "color",
       "$value": "#000000",
-      "$description": "Actually... I liked black better than Onyx bro."
+      "$description": "Black."
     },
     "white": {
       "$type": "color",
