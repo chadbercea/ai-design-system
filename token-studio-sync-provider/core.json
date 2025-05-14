@@ -1513,5 +1513,10 @@
     "$type": "spacing",
     "$value": "8",
     "$description": "Base Spacing design token"
+  },
+  "earl.token": {
+    "$type": "color",
+    "$value": "#1E88E",
+    "$description": "Earl demo"
   }
 }
