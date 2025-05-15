@@ -1,0 +1,2247 @@
+{
+  "text.primary": {
+    "$type": "color",
+    "$value": "#000000de",
+    "$description": "Reflects the text.primary variable from the theme object"
+  },
+  "text.secondary": {
+    "$type": "color",
+    "$value": "#00000099",
+    "$description": "Reflects the text.secondary variable from the theme object"
+  },
+  "text.disabled": {
+    "$type": "color",
+    "$value": "#00000061",
+    "$description": "Reflects the text.disabled variable from the theme object"
+  },
+  "text._states.hover": {
+    "$type": "color",
+    "$value": "#0000000a",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "text._states.selected": {
+    "$type": "color",
+    "$value": "#00000014",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "text._states.focus": {
+    "$type": "color",
+    "$value": "#0000001f",
+    "$description": "Used for focus states. The token represents the value of action.focusOpacity (0.12 by default) of the main token."
+  },
+  "text._states.focusVisible": {
+    "$type": "color",
+    "$value": "#0000004d",
+    "$description": "Used for focus visible states. The token represents the value of focusVisibleOpacity (0.3 by default) of the main token."
+  },
+  "primary._states.hover": {
+    "$type": "color",
+    "$value": "#1976d20a",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "primary._states.selected": {
+    "$type": "color",
+    "$value": "#1976d214",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "primary._states.focus": {
+    "$type": "color",
+    "$value": "#1976d21f",
+    "$description": "Used for focus states. The token represents the value of action.focusOpacity (0.12 by default) of the main token."
+  },
+  "primary._states.focusVisible": {
+    "$type": "color",
+    "$value": "#1976d24d",
+    "$description": "No description provided."
+  },
+  "primary._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#1976d280",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "secondary.contrastText": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "No description provided."
+  },
+  "secondary._states.hover": {
+    "$type": "color",
+    "$value": "#9c27b00a",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "secondary._states.selected": {
+    "$type": "color",
+    "$value": "#9c27b014",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "secondary._states.focus": {
+    "$type": "color",
+    "$value": "#9c27b01f",
+    "$description": "Used for focus states. The token represents the value of action.focusOpacity (0.12 by default) of the main token."
+  },
+  "secondary._states.focusVisible": {
+    "$type": "color",
+    "$value": "#9c27b04d",
+    "$description": "No description provided."
+  },
+  "secondary._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#9c27b080",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "action.active": {
+    "$type": "color",
+    "$value": "#0000008f",
+    "$description": "No description provided."
+  },
+  "action.hover": {
+    "$type": "color",
+    "$value": "#0000000a",
+    "$description": "Reflects the action.hover variable from the theme object"
+  },
+  "action.selected": {
+    "$type": "color",
+    "$value": "#00000014",
+    "$description": "Reflects the action.selected variable from the theme object"
+  },
+  "action.disabledBackground": {
+    "$type": "color",
+    "$value": "#0000001f",
+    "$description": "Reflects the action.disabledBackground variable from the theme object"
+  },
+  "action.focus": {
+    "$type": "color",
+    "$value": "#0000001f",
+    "$description": "Reflects the action.focus variable from the theme object"
+  },
+  "action.disabled": {
+    "$type": "color",
+    "$value": "#00000061",
+    "$description": "Reflects the action.disabled variable from the theme object"
+  },
+  "error._states.hover": {
+    "$type": "color",
+    "$value": "#d32f2f0a",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "error._states.selected": {
+    "$type": "color",
+    "$value": "#d32f2f14",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "error._states.focusVisible": {
+    "$type": "color",
+    "$value": "#d32f2f4d",
+    "$description": "No description provided."
+  },
+  "error._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#d32f2f80",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "error.contrastText": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "No description provided."
+  },
+  "warning._states.hover": {
+    "$type": "color",
+    "$value": "#ef6c000a",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "warning._states.selected": {
+    "$type": "color",
+    "$value": "#ef6c0014",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "warning._states.focusVisible": {
+    "$type": "color",
+    "$value": "#ef6c004d",
+    "$description": "No description provided."
+  },
+  "warning._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#ef6c0080",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "warning.contrastText": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "No description provided."
+  },
+  "info._states.hover": {
+    "$type": "color",
+    "$value": "#0288d10a",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "info._states.selected": {
+    "$type": "color",
+    "$value": "#0288d114",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "info._states.focusVisible": {
+    "$type": "color",
+    "$value": "#0288d14d",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "info._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#0288d180",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "info.contrastText": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "No description provided."
+  },
+  "success.contrastText": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "No description provided."
+  },
+  "success._states.hover": {
+    "$type": "color",
+    "$value": "#2e7d320a",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "success._states.selected": {
+    "$type": "color",
+    "$value": "#2e7d3214",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "success._states.focusVisible": {
+    "$type": "color",
+    "$value": "#2e7d324d",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "success._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#2e7d3280",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "common.white_states.main": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "No description provided."
+  },
+  "common.white_states.hover": {
+    "$type": "color",
+    "$value": "#ffffff0a",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "common.white_states.selected": {
+    "$type": "color",
+    "$value": "#ffffff14",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "common.white_states.focus": {
+    "$type": "color",
+    "$value": "#ffffff1f",
+    "$description": "No description provided."
+  },
+  "common.white_states.focusVisible": {
+    "$type": "color",
+    "$value": "#ffffff4d",
+    "$description": "No description provided."
+  },
+  "common.white_states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#ffffff80",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "common.black_states.main": {
+    "$type": "color",
+    "$value": "#000000",
+    "$description": "No description provided."
+  },
+  "common.black_states.hover": {
+    "$type": "color",
+    "$value": "#0000000a",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "common.black_states.selected": {
+    "$type": "color",
+    "$value": "#00000014",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "common.black_states.focus": {
+    "$type": "color",
+    "$value": "#0000001f",
+    "$description": "No description provided."
+  },
+  "common.black_states.focusVisible": {
+    "$type": "color",
+    "$value": "#0000004d",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "common.black_states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#00000080",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "divider": {
+    "$type": "color",
+    "$value": "#0000001f",
+    "$description": "Reflects the divider variable from the theme object"
+  },
+  "_components.rating.enabledBorder": {
+    "$type": "color",
+    "$value": "#0000003b",
+    "$description": "No description provided."
+  },
+  "_components.rating.activeFill": {
+    "$type": "color",
+    "$value": "#ffb400",
+    "$description": "No description provided."
+  },
+  "_components.input.standard.enabledBorder": {
+    "$type": "color",
+    "$value": "#0000006b",
+    "$description": "No description provided."
+  },
+  "_components.input.standard.hoverBorder": {
+    "$type": "color",
+    "$value": "#000000",
+    "$description": "No description provided."
+  },
+  "_components.input.filled.enabledFill": {
+    "$type": "color",
+    "$value": "#0000000f",
+    "$description": "No description provided."
+  },
+  "_components.input.filled.hoverFill": {
+    "$type": "color",
+    "$value": "#00000017",
+    "$description": "No description provided."
+  },
+  "_components.input.outlined.enabledBorder": {
+    "$type": "color",
+    "$value": "#0000003b",
+    "$description": "No description provided."
+  },
+  "_components.input.outlined.hoverBorder": {
+    "$type": "color",
+    "$value": "#000000",
+    "$description": "No description provided."
+  },
+  "_components.switch.slideFill": {
+    "$type": "color",
+    "$value": "#000000",
+    "$description": "No description provided."
+  },
+  "_components.chip.defaultCloseFill": {
+    "$type": "color",
+    "$value": "#000000",
+    "$description": "No description provided."
+  },
+  "_components.chip.defaultHoverFill": {
+    "$type": "color",
+    "$value": "#0000001f",
+    "$description": "No description provided."
+  },
+  "_components.chip.defaultFocusFill": {
+    "$type": "color",
+    "$value": "#00000033",
+    "$description": "No description provided."
+  },
+  "_components.tooltip.fill": {
+    "$type": "color",
+    "$value": "#616161e6",
+    "$description": "No description provided."
+  },
+  "_components.backdrop.fill": {
+    "$type": "color",
+    "$value": "#00000080",
+    "$description": "No description provided."
+  },
+  "_components.alert.error.color": {
+    "$type": "color",
+    "$value": "#5f2120",
+    "$description": "No description provided."
+  },
+  "_components.alert.error.background": {
+    "$type": "color",
+    "$value": "#fdeded",
+    "$description": "No description provided."
+  },
+  "_components.alert.warning.color": {
+    "$type": "color",
+    "$value": "#663c00",
+    "$description": "No description provided."
+  },
+  "_components.alert.warning.background": {
+    "$type": "color",
+    "$value": "#fff4e5",
+    "$description": "No description provided."
+  },
+  "_components.alert.info.color": {
+    "$type": "color",
+    "$value": "#014361",
+    "$description": "No description provided."
+  },
+  "_components.alert.info.background": {
+    "$type": "color",
+    "$value": "#e5f6fd",
+    "$description": "No description provided."
+  },
+  "_components.alert.success.color": {
+    "$type": "color",
+    "$value": "#1e4620",
+    "$description": "No description provided."
+  },
+  "_components.alert.success.background": {
+    "$type": "color",
+    "$value": "#edf7ed",
+    "$description": "No description provided."
+  },
+  "_components.snackbar.fill": {
+    "$type": "color",
+    "$value": "#323232",
+    "$description": "No description provided."
+  },
+  "elevation.outlined": {
+    "$type": "color",
+    "$value": "#e0e0e0",
+    "$description": "No description provided."
+  },
+  "_native.1": {
+    "$type": "dimension",
+    "$value": "0.5rem",
+    "$description": "No description provided."
+  },
+  "_native.2": {
+    "$type": "dimension",
+    "$value": "1rem",
+    "$description": "No description provided."
+  },
+  "_native.3": {
+    "$type": "dimension",
+    "$value": "1.5rem",
+    "$description": "No description provided."
+  },
+  "_native.4": {
+    "$type": "dimension",
+    "$value": "2rem",
+    "$description": "No description provided."
+  },
+  "_native.5": {
+    "$type": "dimension",
+    "$value": "2.5rem",
+    "$description": "No description provided."
+  },
+  "_native.6": {
+    "$type": "dimension",
+    "$value": "3rem",
+    "$description": "No description provided."
+  },
+  "_native.7": {
+    "$type": "dimension",
+    "$value": "3.5rem",
+    "$description": "No description provided."
+  },
+  "_native.8": {
+    "$type": "dimension",
+    "$value": "4rem",
+    "$description": "No description provided."
+  },
+  "_native.9": {
+    "$type": "dimension",
+    "$value": "4.5rem",
+    "$description": "No description provided."
+  },
+  "_native.10": {
+    "$type": "dimension",
+    "$value": "5rem",
+    "$description": "No description provided."
+  },
+  "_native.11": {
+    "$type": "dimension",
+    "$value": "5.5rem",
+    "$description": "No description provided."
+  },
+  "_native.12": {
+    "$type": "dimension",
+    "$value": "6rem",
+    "$description": "No description provided."
+  },
+  "_native.text.secondary": {
+    "$type": "color",
+    "$value": "#ffffffb3",
+    "$description": "Reflects the text.secondary variable from the theme object"
+  },
+  "_native.text.disabled": {
+    "$type": "color",
+    "$value": "#ffffff61",
+    "$description": "Reflects the text.disabled variable from the theme object"
+  },
+  "_native.text._states.hover": {
+    "$type": "color",
+    "$value": "#ffffff14",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "_native.text._states.selected": {
+    "$type": "color",
+    "$value": "#ffffff29",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.text._states.focus": {
+    "$type": "color",
+    "$value": "#ffffff1f",
+    "$description": "Used for focus states. The token represents the value of action.focusOpacity (0.12 by default) of the main token."
+  },
+  "_native.text._states.focusVisible": {
+    "$type": "color",
+    "$value": "#ffffff4d",
+    "$description": "Used for focus visible states. The token represents the value of focusVisibleOpacity (0.3 by default) of the main token."
+  },
+  "_native.primary.contrastText": {
+    "$type": "color",
+    "$value": "#000000de",
+    "$description": "Reflects the primary.contrast variable from the theme object. Color that keeps a contrast ratio above AA when XX.main is used as a bg. color"
+  },
+  "_native.primary._states.hover": {
+    "$type": "color",
+    "$value": "#90caf914",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "_native.primary._states.selected": {
+    "$type": "color",
+    "$value": "#90caf929",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.primary._states.focus": {
+    "$type": "color",
+    "$value": "#90caf91f",
+    "$description": "Used for focus states. The token represents the value of action.focusOpacity (0.12 by default) of the main token."
+  },
+  "_native.primary._states.focusVisible": {
+    "$type": "color",
+    "$value": "#90caf94d",
+    "$description": "No description provided."
+  },
+  "_native.primary._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#90caf980",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "_native.secondary.contrastText": {
+    "$type": "color",
+    "$value": "#000000de",
+    "$description": "No description provided."
+  },
+  "_native.secondary._states.hover": {
+    "$type": "color",
+    "$value": "#ce93d814",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "_native.secondary._states.selected": {
+    "$type": "color",
+    "$value": "#ce93d829",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.secondary._states.focus": {
+    "$type": "color",
+    "$value": "#ce93d81f",
+    "$description": "Used for focus states. The token represents the value of action.focusOpacity (0.12 by default) of the main token."
+  },
+  "_native.secondary._states.focusVisible": {
+    "$type": "color",
+    "$value": "#ce93d84d",
+    "$description": "No description provided."
+  },
+  "_native.secondary._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#ce93d880",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "_native.action.active": {
+    "$type": "color",
+    "$value": "#ffffff8f",
+    "$description": "No description provided."
+  },
+  "_native.action.hover": {
+    "$type": "color",
+    "$value": "#ffffff14",
+    "$description": "Reflects the action.hover variable from the theme object"
+  },
+  "_native.action.selected": {
+    "$type": "color",
+    "$value": "#ffffff29",
+    "$description": "Reflects the action.selected variable from the theme object"
+  },
+  "_native.action.disabledBackground": {
+    "$type": "color",
+    "$value": "#ffffff1f",
+    "$description": "Reflects the action.disabledBackground variable from the theme object"
+  },
+  "_native.action.focus": {
+    "$type": "color",
+    "$value": "#ffffff1f",
+    "$description": "Reflects the action.focus variable from the theme object"
+  },
+  "_native.action.disabled": {
+    "$type": "color",
+    "$value": "#ffffff61",
+    "$description": "Reflects the action.disabled variable from the theme object"
+  },
+  "_native.error._states.hover": {
+    "$type": "color",
+    "$value": "#f4433614",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "_native.error._states.selected": {
+    "$type": "color",
+    "$value": "#f4433629",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.error._states.focusVisible": {
+    "$type": "color",
+    "$value": "#f443364d",
+    "$description": "No description provided."
+  },
+  "_native.error._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#f4433680",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "_native.error.contrastText": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "No description provided."
+  },
+  "_native.warning._states.hover": {
+    "$type": "color",
+    "$value": "#ffa72614",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "_native.warning._states.selected": {
+    "$type": "color",
+    "$value": "#ffa72629",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.warning._states.focusVisible": {
+    "$type": "color",
+    "$value": "#ffa7264d",
+    "$description": "No description provided."
+  },
+  "_native.warning._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#ffa72680",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "_native.warning.contrastText": {
+    "$type": "color",
+    "$value": "#000000de",
+    "$description": "No description provided."
+  },
+  "_native.info._states.hover": {
+    "$type": "color",
+    "$value": "#29b6f614",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "_native.info._states.selected": {
+    "$type": "color",
+    "$value": "#29b6f629",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.info._states.focusVisible": {
+    "$type": "color",
+    "$value": "#29b6f64d",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.info._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#29b6f680",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "_native.info.contrastText": {
+    "$type": "color",
+    "$value": "#000000de",
+    "$description": "No description provided."
+  },
+  "_native.success.contrastText": {
+    "$type": "color",
+    "$value": "#000000de",
+    "$description": "No description provided."
+  },
+  "_native.success._states.hover": {
+    "$type": "color",
+    "$value": "#66bb6a14",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "_native.success._states.selected": {
+    "$type": "color",
+    "$value": "#66bb6a29",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.success._states.focusVisible": {
+    "$type": "color",
+    "$value": "#66bb6a4d",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.success._states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#66bb6a80",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "_native.common.white_states.main": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "No description provided."
+  },
+  "_native.common.white_states.hover": {
+    "$type": "color",
+    "$value": "#ffffff14",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "_native.common.white_states.selected": {
+    "$type": "color",
+    "$value": "#ffffff29",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.common.white_states.focus": {
+    "$type": "color",
+    "$value": "#ffffff1f",
+    "$description": "No description provided."
+  },
+  "_native.common.white_states.focusVisible": {
+    "$type": "color",
+    "$value": "#ffffff4d",
+    "$description": "No description provided."
+  },
+  "_native.common.white_states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#ffffff80",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "_native.common.black_states.main": {
+    "$type": "color",
+    "$value": "#000000",
+    "$description": "No description provided."
+  },
+  "_native.common.black_states.hover": {
+    "$type": "color",
+    "$value": "#00000014",
+    "$description": "Used for hover states. The token represents the value of action.hoverOpacity (0.04 by default) of the main token."
+  },
+  "_native.common.black_states.selected": {
+    "$type": "color",
+    "$value": "#00000029",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.common.black_states.focus": {
+    "$type": "color",
+    "$value": "#0000001f",
+    "$description": "No description provided."
+  },
+  "_native.common.black_states.focusVisible": {
+    "$type": "color",
+    "$value": "#0000004d",
+    "$description": "Used for selected states. The token represents the value of action.selectedOpacity (0.08 by default) of the main token."
+  },
+  "_native.common.black_states.outlinedBorder": {
+    "$type": "color",
+    "$value": "#00000080",
+    "$description": "Used for enabled states (e.g Button outlined variant). The token represents the value of outlinedBorderOpacity (0.5 by default) of the main token."
+  },
+  "_native.divider": {
+    "$type": "color",
+    "$value": "#ffffff1f",
+    "$description": "Reflects the divider variable from the theme object"
+  },
+  "_native._components.rating.enabledBorder": {
+    "$type": "color",
+    "$value": "#ffffff3b",
+    "$description": "No description provided."
+  },
+  "_native._components.rating.activeFill": {
+    "$type": "color",
+    "$value": "#ffb400",
+    "$description": "No description provided."
+  },
+  "_native._components.input.standard.enabledBorder": {
+    "$type": "color",
+    "$value": "#ffffff6b",
+    "$description": "No description provided."
+  },
+  "_native._components.input.standard.hoverBorder": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "No description provided."
+  },
+  "_native._components.input.filled.enabledFill": {
+    "$type": "color",
+    "$value": "#ffffff17",
+    "$description": "No description provided."
+  },
+  "_native._components.input.filled.hoverFill": {
+    "$type": "color",
+    "$value": "#ffffff1f",
+    "$description": "No description provided."
+  },
+  "_native._components.input.outlined.enabledBorder": {
+    "$type": "color",
+    "$value": "#ffffff3b",
+    "$description": "No description provided."
+  },
+  "_native._components.input.outlined.hoverBorder": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "No description provided."
+  },
+  "_native._components.switch.slideFill": {
+    "$type": "color",
+    "$value": "#ffffff61",
+    "$description": "No description provided."
+  },
+  "_native._components.chip.defaultCloseFill": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "No description provided."
+  },
+  "_native._components.chip.defaultHoverFill": {
+    "$type": "color",
+    "$value": "#ffffff1f",
+    "$description": "No description provided."
+  },
+  "_native._components.chip.defaultFocusFill": {
+    "$type": "color",
+    "$value": "#ffffff33",
+    "$description": "No description provided."
+  },
+  "_native._components.tooltip.fill": {
+    "$type": "color",
+    "$value": "#616161e6",
+    "$description": "No description provided."
+  },
+  "_native._components.backdrop.fill": {
+    "$type": "color",
+    "$value": "#00000080",
+    "$description": "No description provided."
+  },
+  "_native._components.alert.error.color": {
+    "$type": "color",
+    "$value": "#f4c7c7",
+    "$description": "No description provided."
+  },
+  "_native._components.alert.error.background": {
+    "$type": "color",
+    "$value": "#160b0b",
+    "$description": "No description provided."
+  },
+  "_native._components.alert.warning.color": {
+    "$type": "color",
+    "$value": "#ffe2b7",
+    "$description": "No description provided."
+  },
+  "_native._components.alert.warning.background": {
+    "$type": "color",
+    "$value": "#191207",
+    "$description": "No description provided."
+  },
+  "_native._components.alert.info.color": {
+    "$type": "color",
+    "$value": "#b8e7fb",
+    "$description": "No description provided."
+  },
+  "_native._components.alert.info.background": {
+    "$type": "color",
+    "$value": "#071318",
+    "$description": "No description provided."
+  },
+  "_native._components.alert.success.color": {
+    "$type": "color",
+    "$value": "#cce8cd",
+    "$description": "No description provided."
+  },
+  "_native._components.alert.success.background": {
+    "$type": "color",
+    "$value": "#0c130d",
+    "$description": "No description provided."
+  },
+  "_native.grey.50": {
+    "$type": "color",
+    "$value": "#fafafa",
+    "$description": "No description provided."
+  },
+  "_native.grey.100": {
+    "$type": "color",
+    "$value": "#f5f5f5",
+    "$description": "No description provided."
+  },
+  "_native.grey.200": {
+    "$type": "color",
+    "$value": "#eeeeee",
+    "$description": "No description provided."
+  },
+  "_native.grey.300": {
+    "$type": "color",
+    "$value": "#e0e0e0",
+    "$description": "No description provided."
+  },
+  "_native.grey.400": {
+    "$type": "color",
+    "$value": "#bdbdbd",
+    "$description": "No description provided."
+  },
+  "_native.grey.500": {
+    "$type": "color",
+    "$value": "#9e9e9e",
+    "$description": "No description provided."
+  },
+  "_native.grey.600": {
+    "$type": "color",
+    "$value": "#757575",
+    "$description": "No description provided."
+  },
+  "_native.grey.700": {
+    "$type": "color",
+    "$value": "#616161",
+    "$description": "No description provided."
+  },
+  "_native.grey.800": {
+    "$type": "color",
+    "$value": "#424242",
+    "$description": "No description provided."
+  },
+  "_native.grey.900": {
+    "$type": "color",
+    "$value": "#212121",
+    "$description": "No description provided."
+  },
+  "_native.grey.A100": {
+    "$type": "color",
+    "$value": "#f5f5f5",
+    "$description": "No description provided."
+  },
+  "_native.grey.A200": {
+    "$type": "color",
+    "$value": "#eeeeee",
+    "$description": "No description provided."
+  },
+  "_native.grey.A400": {
+    "$type": "color",
+    "$value": "#bdbdbd",
+    "$description": "No description provided."
+  },
+  "_native.grey.A700": {
+    "$type": "color",
+    "$value": "#616161",
+    "$description": "No description provided."
+  },
+  "_native.blue.50": {
+    "$type": "color",
+    "$value": "#e3f2fd",
+    "$description": "No description provided."
+  },
+  "_native.blue.100": {
+    "$type": "color",
+    "$value": "#bbdefb",
+    "$description": "No description provided."
+  },
+  "_native.blue.200": {
+    "$type": "color",
+    "$value": "#90caf9",
+    "$description": "No description provided."
+  },
+  "_native.blue.300": {
+    "$type": "color",
+    "$value": "#64b5f6",
+    "$description": "No description provided."
+  },
+  "_native.blue.400": {
+    "$type": "color",
+    "$value": "#42a5f5",
+    "$description": "No description provided."
+  },
+  "_native.blue.500": {
+    "$type": "color",
+    "$value": "#2196f3",
+    "$description": "No description provided."
+  },
+  "_native.blue.600": {
+    "$type": "color",
+    "$value": "#1e88e5",
+    "$description": "No description provided."
+  },
+  "_native.blue.700": {
+    "$type": "color",
+    "$value": "#1976d2",
+    "$description": "No description provided."
+  },
+  "_native.blue.800": {
+    "$type": "color",
+    "$value": "#1565c0",
+    "$description": "No description provided."
+  },
+  "_native.blue.900": {
+    "$type": "color",
+    "$value": "#0d47a1",
+    "$description": "No description provided."
+  },
+  "_native.blue.A100": {
+    "$type": "color",
+    "$value": "#82b1ff",
+    "$description": "No description provided."
+  },
+  "_native.blue.A200": {
+    "$type": "color",
+    "$value": "#448aff",
+    "$description": "No description provided."
+  },
+  "_native.blue.A400": {
+    "$type": "color",
+    "$value": "#2979ff",
+    "$description": "No description provided."
+  },
+  "_native.blue.A700": {
+    "$type": "color",
+    "$value": "#2962ff",
+    "$description": "No description provided."
+  },
+  "_native.purple.50": {
+    "$type": "color",
+    "$value": "#f3e5f5",
+    "$description": "No description provided."
+  },
+  "_native.purple.100": {
+    "$type": "color",
+    "$value": "#e1bee7",
+    "$description": "No description provided."
+  },
+  "_native.purple.200": {
+    "$type": "color",
+    "$value": "#ce93d8",
+    "$description": "No description provided."
+  },
+  "_native.purple.300": {
+    "$type": "color",
+    "$value": "#ba68c8",
+    "$description": "No description provided."
+  },
+  "_native.purple.400": {
+    "$type": "color",
+    "$value": "#ab47bc",
+    "$description": "No description provided."
+  },
+  "_native.purple.500": {
+    "$type": "color",
+    "$value": "#9c27b0",
+    "$description": "No description provided."
+  },
+  "_native.purple.600": {
+    "$type": "color",
+    "$value": "#8e24aa",
+    "$description": "No description provided."
+  },
+  "_native.purple.700": {
+    "$type": "color",
+    "$value": "#7b1fa2",
+    "$description": "No description provided."
+  },
+  "_native.purple.800": {
+    "$type": "color",
+    "$value": "#6a1b9a",
+    "$description": "No description provided."
+  },
+  "_native.purple.900": {
+    "$type": "color",
+    "$value": "#4a148c",
+    "$description": "No description provided."
+  },
+  "_native.purple.A100": {
+    "$type": "color",
+    "$value": "#ea80fc",
+    "$description": "No description provided."
+  },
+  "_native.purple.A200": {
+    "$type": "color",
+    "$value": "#e040fb",
+    "$description": "No description provided."
+  },
+  "_native.purple.A400": {
+    "$type": "color",
+    "$value": "#d500f9",
+    "$description": "No description provided."
+  },
+  "_native.purple.A700": {
+    "$type": "color",
+    "$value": "#aa00ff",
+    "$description": "No description provided."
+  },
+  "_native.red.50": {
+    "$type": "color",
+    "$value": "#feebee",
+    "$description": "No description provided."
+  },
+  "_native.red.100": {
+    "$type": "color",
+    "$value": "#fecdd2",
+    "$description": "No description provided."
+  },
+  "_native.red.200": {
+    "$type": "color",
+    "$value": "#ef9a9a",
+    "$description": "No description provided."
+  },
+  "_native.red.300": {
+    "$type": "color",
+    "$value": "#e57373",
+    "$description": "No description provided."
+  },
+  "_native.red.400": {
+    "$type": "color",
+    "$value": "#ef5350",
+    "$description": "No description provided."
+  },
+  "_native.red.500": {
+    "$type": "color",
+    "$value": "#f44336",
+    "$description": "No description provided."
+  },
+  "_native.red.600": {
+    "$type": "color",
+    "$value": "#e53935",
+    "$description": "No description provided."
+  },
+  "_native.red.700": {
+    "$type": "color",
+    "$value": "#d32f2f",
+    "$description": "No description provided."
+  },
+  "_native.red.800": {
+    "$type": "color",
+    "$value": "#c62828",
+    "$description": "No description provided."
+  },
+  "_native.red.900": {
+    "$type": "color",
+    "$value": "#b71c1c",
+    "$description": "No description provided."
+  },
+  "_native.red.A100": {
+    "$type": "color",
+    "$value": "#ff8a80",
+    "$description": "No description provided."
+  },
+  "_native.red.A200": {
+    "$type": "color",
+    "$value": "#ff5252",
+    "$description": "No description provided."
+  },
+  "_native.red.A400": {
+    "$type": "color",
+    "$value": "#ff1744",
+    "$description": "No description provided."
+  },
+  "_native.red.A700": {
+    "$type": "color",
+    "$value": "#d50000",
+    "$description": "No description provided."
+  },
+  "_native.green.50": {
+    "$type": "color",
+    "$value": "#e8f5e9",
+    "$description": "No description provided."
+  },
+  "_native.green.100": {
+    "$type": "color",
+    "$value": "#c8e6c9",
+    "$description": "No description provided."
+  },
+  "_native.green.200": {
+    "$type": "color",
+    "$value": "#a5d6a7",
+    "$description": "No description provided."
+  },
+  "_native.green.300": {
+    "$type": "color",
+    "$value": "#81c784",
+    "$description": "No description provided."
+  },
+  "_native.green.400": {
+    "$type": "color",
+    "$value": "#66bb6a",
+    "$description": "No description provided."
+  },
+  "_native.green.500": {
+    "$type": "color",
+    "$value": "#4caf50",
+    "$description": "No description provided."
+  },
+  "_native.green.600": {
+    "$type": "color",
+    "$value": "#43a047",
+    "$description": "No description provided."
+  },
+  "_native.green.700": {
+    "$type": "color",
+    "$value": "#388e3c",
+    "$description": "No description provided."
+  },
+  "_native.green.800": {
+    "$type": "color",
+    "$value": "#2e7d32",
+    "$description": "No description provided."
+  },
+  "_native.green.900": {
+    "$type": "color",
+    "$value": "#1b5e20",
+    "$description": "No description provided."
+  },
+  "_native.green.A100": {
+    "$type": "color",
+    "$value": "#b9f6ca",
+    "$description": "No description provided."
+  },
+  "_native.green.A200": {
+    "$type": "color",
+    "$value": "#69f0ae",
+    "$description": "No description provided."
+  },
+  "_native.green.A400": {
+    "$type": "color",
+    "$value": "#00e676",
+    "$description": "No description provided."
+  },
+  "_native.green.A700": {
+    "$type": "color",
+    "$value": "#00c853",
+    "$description": "No description provided."
+  },
+  "_native.orange.50": {
+    "$type": "color",
+    "$value": "#fff3e0",
+    "$description": "No description provided."
+  },
+  "_native.orange.100": {
+    "$type": "color",
+    "$value": "#ffe0b2",
+    "$description": "No description provided."
+  },
+  "_native.orange.200": {
+    "$type": "color",
+    "$value": "#ffcc80",
+    "$description": "No description provided."
+  },
+  "_native.orange.300": {
+    "$type": "color",
+    "$value": "#ffb74d",
+    "$description": "No description provided."
+  },
+  "_native.orange.400": {
+    "$type": "color",
+    "$value": "#ffa726",
+    "$description": "No description provided."
+  },
+  "_native.orange.500": {
+    "$type": "color",
+    "$value": "#ff9800",
+    "$description": "No description provided."
+  },
+  "_native.orange.600": {
+    "$type": "color",
+    "$value": "#fb8c00",
+    "$description": "No description provided."
+  },
+  "_native.orange.700": {
+    "$type": "color",
+    "$value": "#f57c00",
+    "$description": "No description provided."
+  },
+  "_native.orange.800": {
+    "$type": "color",
+    "$value": "#ef6c00",
+    "$description": "No description provided."
+  },
+  "_native.orange.900": {
+    "$type": "color",
+    "$value": "#e65100",
+    "$description": "No description provided."
+  },
+  "_native.orange.A100": {
+    "$type": "color",
+    "$value": "#ffd180",
+    "$description": "No description provided."
+  },
+  "_native.orange.A200": {
+    "$type": "color",
+    "$value": "#ffab40",
+    "$description": "No description provided."
+  },
+  "_native.orange.A400": {
+    "$type": "color",
+    "$value": "#ff9100",
+    "$description": "No description provided."
+  },
+  "_native.orange.A700": {
+    "$type": "color",
+    "$value": "#ff6d00",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.50": {
+    "$type": "color",
+    "$value": "#e1f5fe",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.100": {
+    "$type": "color",
+    "$value": "#b3e5fc",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.200": {
+    "$type": "color",
+    "$value": "#81d4fa",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.300": {
+    "$type": "color",
+    "$value": "#4fc3f7",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.400": {
+    "$type": "color",
+    "$value": "#29b6f6",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.500": {
+    "$type": "color",
+    "$value": "#03a9f4",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.600": {
+    "$type": "color",
+    "$value": "#039be5",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.700": {
+    "$type": "color",
+    "$value": "#0288d1",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.800": {
+    "$type": "color",
+    "$value": "#0277bd",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.900": {
+    "$type": "color",
+    "$value": "#01579b",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.A100": {
+    "$type": "color",
+    "$value": "#80d8ff",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.A200": {
+    "$type": "color",
+    "$value": "#40c4ff",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.A400": {
+    "$type": "color",
+    "$value": "#00b0ff",
+    "$description": "No description provided."
+  },
+  "_native.lightBlue.A700": {
+    "$type": "color",
+    "$value": "#0091ea",
+    "$description": "No description provided."
+  },
+  "_native.indigo.50": {
+    "$type": "color",
+    "$value": "#e8eaf6",
+    "$description": "No description provided."
+  },
+  "_native.indigo.100": {
+    "$type": "color",
+    "$value": "#c5cae9",
+    "$description": "No description provided."
+  },
+  "_native.indigo.200": {
+    "$type": "color",
+    "$value": "#9fa8da",
+    "$description": "No description provided."
+  },
+  "_native.indigo.300": {
+    "$type": "color",
+    "$value": "#7986cb",
+    "$description": "No description provided."
+  },
+  "_native.indigo.400": {
+    "$type": "color",
+    "$value": "#5c6bc0",
+    "$description": "No description provided."
+  },
+  "_native.indigo.500": {
+    "$type": "color",
+    "$value": "#3f51b5",
+    "$description": "No description provided."
+  },
+  "_native.indigo.600": {
+    "$type": "color",
+    "$value": "#3949ab",
+    "$description": "No description provided."
+  },
+  "_native.indigo.700": {
+    "$type": "color",
+    "$value": "#303f9f",
+    "$description": "No description provided."
+  },
+  "_native.indigo.800": {
+    "$type": "color",
+    "$value": "#283593",
+    "$description": "No description provided."
+  },
+  "_native.indigo.900": {
+    "$type": "color",
+    "$value": "#1a237e",
+    "$description": "No description provided."
+  },
+  "_native.indigo.A100": {
+    "$type": "color",
+    "$value": "#8c9eff",
+    "$description": "No description provided."
+  },
+  "_native.indigo.A200": {
+    "$type": "color",
+    "$value": "#536dfe",
+    "$description": "No description provided."
+  },
+  "_native.indigo.A400": {
+    "$type": "color",
+    "$value": "#3d5afe",
+    "$description": "No description provided."
+  },
+  "_native.indigo.A700": {
+    "$type": "color",
+    "$value": "#304ffe",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.50": {
+    "$type": "color",
+    "$value": "#ede7f6",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.100": {
+    "$type": "color",
+    "$value": "#d1c4e9",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.200": {
+    "$type": "color",
+    "$value": "#b39ddb",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.300": {
+    "$type": "color",
+    "$value": "#9575cd",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.400": {
+    "$type": "color",
+    "$value": "#7e57c2",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.500": {
+    "$type": "color",
+    "$value": "#673ab7",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.600": {
+    "$type": "color",
+    "$value": "#5e35b1",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.700": {
+    "$type": "color",
+    "$value": "#512da8",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.800": {
+    "$type": "color",
+    "$value": "#4527a0",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.900": {
+    "$type": "color",
+    "$value": "#311b92",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.A100": {
+    "$type": "color",
+    "$value": "#b388ff",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.A200": {
+    "$type": "color",
+    "$value": "#7c4dff",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.A400": {
+    "$type": "color",
+    "$value": "#651fff",
+    "$description": "No description provided."
+  },
+  "_native.deepPurple.A700": {
+    "$type": "color",
+    "$value": "#6200ea",
+    "$description": "No description provided."
+  },
+  "_native.amber.50": {
+    "$type": "color",
+    "$value": "#fff8e1",
+    "$description": "No description provided."
+  },
+  "_native.amber.100": {
+    "$type": "color",
+    "$value": "#ffecb3",
+    "$description": "No description provided."
+  },
+  "_native.amber.200": {
+    "$type": "color",
+    "$value": "#ffe082",
+    "$description": "No description provided."
+  },
+  "_native.amber.300": {
+    "$type": "color",
+    "$value": "#ffd54f",
+    "$description": "No description provided."
+  },
+  "_native.amber.400": {
+    "$type": "color",
+    "$value": "#ffca28",
+    "$description": "No description provided."
+  },
+  "_native.amber.500": {
+    "$type": "color",
+    "$value": "#ffc107",
+    "$description": "No description provided."
+  },
+  "_native.amber.600": {
+    "$type": "color",
+    "$value": "#ffb300",
+    "$description": "No description provided."
+  },
+  "_native.amber.700": {
+    "$type": "color",
+    "$value": "#ffa000",
+    "$description": "No description provided."
+  },
+  "_native.amber.800": {
+    "$type": "color",
+    "$value": "#ff8f00",
+    "$description": "No description provided."
+  },
+  "_native.amber.900": {
+    "$type": "color",
+    "$value": "#ff6f00",
+    "$description": "No description provided."
+  },
+  "_native.amber.A100": {
+    "$type": "color",
+    "$value": "#ffe57f",
+    "$description": "No description provided."
+  },
+  "_native.amber.A200": {
+    "$type": "color",
+    "$value": "#ffd740",
+    "$description": "No description provided."
+  },
+  "_native.amber.A400": {
+    "$type": "color",
+    "$value": "#ffc400",
+    "$description": "No description provided."
+  },
+  "_native.amber.A700": {
+    "$type": "color",
+    "$value": "#ffab00",
+    "$description": "No description provided."
+  },
+  "_native.pink.50": {
+    "$type": "color",
+    "$value": "#fce4ec",
+    "$description": "No description provided."
+  },
+  "_native.pink.100": {
+    "$type": "color",
+    "$value": "#f8bbd0",
+    "$description": "No description provided."
+  },
+  "_native.pink.200": {
+    "$type": "color",
+    "$value": "#f48fb1",
+    "$description": "No description provided."
+  },
+  "_native.pink.300": {
+    "$type": "color",
+    "$value": "#f06292",
+    "$description": "No description provided."
+  },
+  "_native.pink.400": {
+    "$type": "color",
+    "$value": "#ec407a",
+    "$description": "No description provided."
+  },
+  "_native.pink.500": {
+    "$type": "color",
+    "$value": "#e91e63",
+    "$description": "No description provided."
+  },
+  "_native.pink.600": {
+    "$type": "color",
+    "$value": "#d81b60",
+    "$description": "No description provided."
+  },
+  "_native.pink.700": {
+    "$type": "color",
+    "$value": "#c2185b",
+    "$description": "No description provided."
+  },
+  "_native.pink.800": {
+    "$type": "color",
+    "$value": "#ad1457",
+    "$description": "No description provided."
+  },
+  "_native.pink.900": {
+    "$type": "color",
+    "$value": "#880e4f",
+    "$description": "No description provided."
+  },
+  "_native.pink.A100": {
+    "$type": "color",
+    "$value": "#ff80ab",
+    "$description": "No description provided."
+  },
+  "_native.pink.A200": {
+    "$type": "color",
+    "$value": "#ff4081",
+    "$description": "No description provided."
+  },
+  "_native.pink.A400": {
+    "$type": "color",
+    "$value": "#f50057",
+    "$description": "No description provided."
+  },
+  "_native.pink.A700": {
+    "$type": "color",
+    "$value": "#c51162",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.50": {
+    "$type": "color",
+    "$value": "#fbe9e7",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.100": {
+    "$type": "color",
+    "$value": "#ffccbc",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.200": {
+    "$type": "color",
+    "$value": "#ffab91",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.300": {
+    "$type": "color",
+    "$value": "#ff8a65",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.400": {
+    "$type": "color",
+    "$value": "#ff7043",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.500": {
+    "$type": "color",
+    "$value": "#ff5722",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.600": {
+    "$type": "color",
+    "$value": "#f4511e",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.700": {
+    "$type": "color",
+    "$value": "#e64a19",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.800": {
+    "$type": "color",
+    "$value": "#d84315",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.900": {
+    "$type": "color",
+    "$value": "#bf360c",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.A100": {
+    "$type": "color",
+    "$value": "#ff9e80",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.A200": {
+    "$type": "color",
+    "$value": "#ff6e40",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.A400": {
+    "$type": "color",
+    "$value": "#ff3d00",
+    "$description": "No description provided."
+  },
+  "_native.deepOrange.A700": {
+    "$type": "color",
+    "$value": "#dd2c00",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.50": {
+    "$type": "color",
+    "$value": "#f1f8e9",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.100": {
+    "$type": "color",
+    "$value": "#dcedc8",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.200": {
+    "$type": "color",
+    "$value": "#c5e1a5",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.300": {
+    "$type": "color",
+    "$value": "#aed581",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.400": {
+    "$type": "color",
+    "$value": "#8bc34a",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.500": {
+    "$type": "color",
+    "$value": "#8bc34a",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.600": {
+    "$type": "color",
+    "$value": "#7cb342",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.700": {
+    "$type": "color",
+    "$value": "#689f38",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.800": {
+    "$type": "color",
+    "$value": "#558b2f",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.900": {
+    "$type": "color",
+    "$value": "#33691e",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.A100": {
+    "$type": "color",
+    "$value": "#ccff90",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.A200": {
+    "$type": "color",
+    "$value": "#b2ff59",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.A400": {
+    "$type": "color",
+    "$value": "#76ff03",
+    "$description": "No description provided."
+  },
+  "_native.lightGreen.A700": {
+    "$type": "color",
+    "$value": "#64dd17",
+    "$description": "No description provided."
+  },
+  "_native.lime.50": {
+    "$type": "color",
+    "$value": "#f9fbe7",
+    "$description": "No description provided."
+  },
+  "_native.lime.100": {
+    "$type": "color",
+    "$value": "#f0f4c3",
+    "$description": "No description provided."
+  },
+  "_native.lime.200": {
+    "$type": "color",
+    "$value": "#e6ee9c",
+    "$description": "No description provided."
+  },
+  "_native.lime.300": {
+    "$type": "color",
+    "$value": "#dce775",
+    "$description": "No description provided."
+  },
+  "_native.lime.400": {
+    "$type": "color",
+    "$value": "#d4e157",
+    "$description": "No description provided."
+  },
+  "_native.lime.500": {
+    "$type": "color",
+    "$value": "#cddc39",
+    "$description": "No description provided."
+  },
+  "_native.lime.600": {
+    "$type": "color",
+    "$value": "#c0ca33",
+    "$description": "No description provided."
+  },
+  "_native.lime.700": {
+    "$type": "color",
+    "$value": "#afb42b",
+    "$description": "No description provided."
+  },
+  "_native.lime.800": {
+    "$type": "color",
+    "$value": "#9e9d24",
+    "$description": "No description provided."
+  },
+  "_native.lime.900": {
+    "$type": "color",
+    "$value": "#827717",
+    "$description": "No description provided."
+  },
+  "_native.lime.A100": {
+    "$type": "color",
+    "$value": "#f4ff81",
+    "$description": "No description provided."
+  },
+  "_native.lime.A200": {
+    "$type": "color",
+    "$value": "#eeff41",
+    "$description": "No description provided."
+  },
+  "_native.lime.A400": {
+    "$type": "color",
+    "$value": "#c6ff00",
+    "$description": "No description provided."
+  },
+  "_native.lime.A700": {
+    "$type": "color",
+    "$value": "#aeea00",
+    "$description": "No description provided."
+  },
+  "_native.yellow.50": {
+    "$type": "color",
+    "$value": "#fffde7",
+    "$description": "No description provided."
+  },
+  "_native.yellow.100": {
+    "$type": "color",
+    "$value": "#fff9c4",
+    "$description": "No description provided."
+  },
+  "_native.yellow.200": {
+    "$type": "color",
+    "$value": "#fff59d",
+    "$description": "No description provided."
+  },
+  "_native.yellow.300": {
+    "$type": "color",
+    "$value": "#fff176",
+    "$description": "No description provided."
+  },
+  "_native.yellow.400": {
+    "$type": "color",
+    "$value": "#ffee58",
+    "$description": "No description provided."
+  },
+  "_native.yellow.500": {
+    "$type": "color",
+    "$value": "#ffeb3b",
+    "$description": "No description provided."
+  },
+  "_native.yellow.600": {
+    "$type": "color",
+    "$value": "#fdd835",
+    "$description": "No description provided."
+  },
+  "_native.yellow.700": {
+    "$type": "color",
+    "$value": "#fbc02d",
+    "$description": "No description provided."
+  },
+  "_native.yellow.800": {
+    "$type": "color",
+    "$value": "#f9a825",
+    "$description": "No description provided."
+  },
+  "_native.yellow.900": {
+    "$type": "color",
+    "$value": "#f57f17",
+    "$description": "No description provided."
+  },
+  "_native.yellow.A100": {
+    "$type": "color",
+    "$value": "#ffff8d",
+    "$description": "No description provided."
+  },
+  "_native.yellow.A200": {
+    "$type": "color",
+    "$value": "#ffff00",
+    "$description": "No description provided."
+  },
+  "_native.yellow.A400": {
+    "$type": "color",
+    "$value": "#ffea00",
+    "$description": "No description provided."
+  },
+  "_native.yellow.A700": {
+    "$type": "color",
+    "$value": "#ffd600",
+    "$description": "No description provided."
+  },
+  "_native.cyan.50": {
+    "$type": "color",
+    "$value": "#e0f7fa",
+    "$description": "No description provided."
+  },
+  "_native.cyan.100": {
+    "$type": "color",
+    "$value": "#b2ebf2",
+    "$description": "No description provided."
+  },
+  "_native.cyan.200": {
+    "$type": "color",
+    "$value": "#80deea",
+    "$description": "No description provided."
+  },
+  "_native.cyan.300": {
+    "$type": "color",
+    "$value": "#4dd0e1",
+    "$description": "No description provided."
+  },
+  "_native.cyan.400": {
+    "$type": "color",
+    "$value": "#26c6da",
+    "$description": "No description provided."
+  },
+  "_native.cyan.500": {
+    "$type": "color",
+    "$value": "#00bcd4",
+    "$description": "No description provided."
+  },
+  "_native.cyan.600": {
+    "$type": "color",
+    "$value": "#00acc1",
+    "$description": "No description provided."
+  },
+  "_native.cyan.700": {
+    "$type": "color",
+    "$value": "#0097a7",
+    "$description": "No description provided."
+  },
+  "_native.cyan.800": {
+    "$type": "color",
+    "$value": "#00838f",
+    "$description": "No description provided."
+  },
+  "_native.cyan.900": {
+    "$type": "color",
+    "$value": "#006064",
+    "$description": "No description provided."
+  },
+  "_native.cyan.A100": {
+    "$type": "color",
+    "$value": "#84ffff",
+    "$description": "No description provided."
+  },
+  "_native.cyan.A200": {
+    "$type": "color",
+    "$value": "#18ffff",
+    "$description": "No description provided."
+  },
+  "_native.cyan.A400": {
+    "$type": "color",
+    "$value": "#00e5ff",
+    "$description": "No description provided."
+  },
+  "_native.cyan.A700": {
+    "$type": "color",
+    "$value": "#00b8d4",
+    "$description": "No description provided."
+  },
+  "_native.teal.50": {
+    "$type": "color",
+    "$value": "#e0f2f1",
+    "$description": "No description provided."
+  },
+  "_native.teal.100": {
+    "$type": "color",
+    "$value": "#b2dfdb",
+    "$description": "No description provided."
+  },
+  "_native.teal.200": {
+    "$type": "color",
+    "$value": "#80cbc4",
+    "$description": "No description provided."
+  },
+  "_native.teal.300": {
+    "$type": "color",
+    "$value": "#4db6ac",
+    "$description": "No description provided."
+  },
+  "_native.teal.400": {
+    "$type": "color",
+    "$value": "#26a69a",
+    "$description": "No description provided."
+  },
+  "_native.teal.500": {
+    "$type": "color",
+    "$value": "#009688",
+    "$description": "No description provided."
+  },
+  "_native.teal.600": {
+    "$type": "color",
+    "$value": "#00897b",
+    "$description": "No description provided."
+  },
+  "_native.teal.700": {
+    "$type": "color",
+    "$value": "#00796b",
+    "$description": "No description provided."
+  },
+  "_native.teal.800": {
+    "$type": "color",
+    "$value": "#00695c",
+    "$description": "No description provided."
+  },
+  "_native.teal.900": {
+    "$type": "color",
+    "$value": "#004d40",
+    "$description": "No description provided."
+  },
+  "_native.teal.A100": {
+    "$type": "color",
+    "$value": "#a7ffeb",
+    "$description": "No description provided."
+  },
+  "_native.teal.A200": {
+    "$type": "color",
+    "$value": "#64ffda",
+    "$description": "No description provided."
+  },
+  "_native.teal.A400": {
+    "$type": "color",
+    "$value": "#1de9b6",
+    "$description": "No description provided."
+  },
+  "_native.teal.A700": {
+    "$type": "color",
+    "$value": "#00bfa5",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.50": {
+    "$type": "color",
+    "$value": "#eceff1",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.100": {
+    "$type": "color",
+    "$value": "#cfd8dc",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.200": {
+    "$type": "color",
+    "$value": "#b0bec5",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.300": {
+    "$type": "color",
+    "$value": "#90a4ae",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.400": {
+    "$type": "color",
+    "$value": "#78909c",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.500": {
+    "$type": "color",
+    "$value": "#607d8b",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.600": {
+    "$type": "color",
+    "$value": "#546e7a",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.700": {
+    "$type": "color",
+    "$value": "#455a64",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.800": {
+    "$type": "color",
+    "$value": "#37474f",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.900": {
+    "$type": "color",
+    "$value": "#263238",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.A100": {
+    "$type": "color",
+    "$value": "#cfd8dc",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.A200": {
+    "$type": "color",
+    "$value": "#b0bec5",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.A400": {
+    "$type": "color",
+    "$value": "#78909c",
+    "$description": "No description provided."
+  },
+  "_native.blueGrey.A700": {
+    "$type": "color",
+    "$value": "#455a64",
+    "$description": "No description provided."
+  },
+  "_native.fontFamily": {
+    "$type": "text",
+    "$value": "Roboto",
+    "$description": "No description provided."
+  },
+  "_native.fontWeightLight": {
+    "$type": "dimension",
+    "$value": "18.75rem",
+    "$description": "No description provided."
+  },
+  "_native.fontWeightRegular": {
+    "$type": "dimension",
+    "$value": "25rem",
+    "$description": "No description provided."
+  },
+  "_native.fontWeightMedium": {
+    "$type": "dimension",
+    "$value": "31.25rem",
+    "$description": "No description provided."
+  },
+  "_native.fontWeightBold": {
+    "$type": "dimension",
+    "$value": "43.75rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.1rem": {
+    "$type": "dimension",
+    "$value": "1rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.0,75rem": {
+    "$type": "dimension",
+    "$value": "0.75rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.0,875rem": {
+    "$type": "dimension",
+    "$value": "0.875rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.1,25rem": {
+    "$type": "dimension",
+    "$value": "1.25rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.1,5rem": {
+    "$type": "dimension",
+    "$value": "1.5rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.2,125rem": {
+    "$type": "dimension",
+    "$value": "2.125rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.3rem": {
+    "$type": "dimension",
+    "$value": "3rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.3,75rem": {
+    "$type": "dimension",
+    "$value": "3.75rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.6rem": {
+    "$type": "dimension",
+    "$value": "6rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.0,625rem": {
+    "$type": "dimension",
+    "$value": "0.625rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.0,8125rem": {
+    "$type": "dimension",
+    "$value": "0.812rem",
+    "$description": "No description provided."
+  },
+  "_native._fontSize.0,9375rem": {
+    "$type": "dimension",
+    "$value": "0.938rem",
+    "$description": "No description provided."
+  },
+  "_native.fontWeightSemiBold": {
+    "$type": "dimension",
+    "$value": "37.5rem",
+    "$description": "No description provided."
+  },
+  "_native.xl": {
+    "$type": "dimension",
+    "$value": "96rem",
+    "$description": "No description provided."
+  },
+  "_native.lg": {
+    "$type": "dimension",
+    "$value": "75rem",
+    "$description": "No description provided."
+  },
+  "_native.md": {
+    "$type": "dimension",
+    "$value": "56.25rem",
+    "$description": "No description provided."
+  },
+  "_native.sm": {
+    "$type": "dimension",
+    "$value": "37.5rem",
+    "$description": "No description provided."
+  },
+  "_native.xs": {
+    "$type": "dimension",
+    "$value": "27.75rem",
+    "$description": "No description provided."
+  },
+  "_native.borderRadius": {
+    "$type": "dimension",
+    "$value": "0.25rem",
+    "$description": "No description provided."
+  },
+  "_native.none": {
+    "$type": "dimension",
+    "$value": "0rem",
+    "$description": "No description provided."
+  }
+}

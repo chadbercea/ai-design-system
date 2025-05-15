@@ -6,7 +6,22 @@ const structureRules = require('../_docs/structure-rules.js');
 const typeRules = require('../_docs/type-rules.js');
 
 const inputPath = path.join(__dirname, 'json-from-figma.json');
-const outputPath = path.join(__dirname, 'flat-primitives.json');
+const corePath = path.join(__dirname, 'core.json');
+const themePath = path.join(__dirname, 'theme.json');
+const trashPath = path.join(__dirname, 'trash.json');
+const warningsPath = path.join(__dirname, 'warnings.md');
+
+function isReference(val) {
+  return typeof val === 'string' && /^{[^{}]+}$/.test(val);
+}
+
+function isValidHex(val) {
+  return typeof val === 'string' && (/^#[0-9a-fA-F]{6}$/.test(val) || /^#[0-9a-fA-F]{8}$/.test(val));
+}
+
+function isValidRgba(val) {
+  return typeof val === 'string' && /^rgba\(\d+,\d+,\d+,\d+(\.\d+)?\)$/.test(val);
+}
 
 // Helper: Check if an object is a primitive (has type, value, description or not)
 function isPrimitive(obj) {
@@ -45,17 +60,71 @@ function inferDescription(key, type) {
 }
 
 // Helper: Validate a primitive against type rules
-function validatePrimitive(key, obj) {
+function validatePrimitive(key, obj, warnings) {
+  // $type
   if (!typeRules.validTypes.includes(obj.$type)) {
-    throw new Error(`Token ${key} has invalid $type: ${obj.$type}`);
+    warnings.push(`Token ${key} has invalid $type: ${obj.$type}`);
+    return false;
   }
+  // $value
   if (typeof obj.$value === 'object') {
-    throw new Error(`Token ${key} has object $value (semantic leak)`);
+    warnings.push(`Token ${key} has object $value (semantic leak)`);
+    return false;
   }
+  // $description
+  if (!obj.$description || typeof obj.$description !== 'string' || obj.$description.match(/no description provided/i)) {
+    warnings.push(`Token ${key} missing or placeholder $description`);
+    return false;
+  }
+  // Unit validation
+  const rule = typeRules.unitRules[obj.$type];
+  if (rule) {
+    if (rule.type && typeof obj.$value !== rule.type) {
+      warnings.push(`Token ${key} $value type mismatch: expected ${rule.type}`);
+      return false;
+    }
+    if (rule.pattern && !(new RegExp(rule.pattern).test(obj.$value))) {
+      warnings.push(`Token ${key} $value does not match pattern: ${rule.pattern}`);
+      return false;
+    }
+  }
+  // Color format
+  if (obj.$type === 'color' && !(isValidHex(obj.$value) || isValidRgba(obj.$value))) {
+    warnings.push(`Token ${key} has invalid color $value: ${obj.$value}`);
+    return false;
+  }
+  // No references in primitives
+  if (isReference(obj.$value)) {
+    warnings.push(`Token ${key} has reference in $value: ${obj.$value}`);
+    return false;
+  }
+  // No arrays
+  if (Array.isArray(obj)) {
+    warnings.push(`Token ${key} is an array`);
+    return false;
+  }
+  // No plural keys except allowed $type
+  if (key.match(/s$/) && !['fontSizes','fontWeights','fontFamilies','lineHeights'].includes(obj.$type)) {
+    warnings.push(`Token ${key} is a plural key not allowed`);
+    return false;
+  }
+  // No double nesting
+  if (key.toLowerCase() === obj.$type.toLowerCase()) {
+    warnings.push(`Token ${key} is double nested with $type`);
+    return false;
+  }
+  // No missing fields
+  for (const field of typeRules.requiredFields) {
+    if (!(field in obj)) {
+      warnings.push(`Token ${key} missing required field: ${field}`);
+      return false;
+    }
+  }
+  return true;
 }
 
 // Recursively flatten and convert primitives, using only the leaf key, and track the full path
-function flatten(obj, result = {}, pathArr = []) {
+function flatten(obj, result = {}, theme = {}, trash = {}, warnings = [], pathArr = []) {
   for (const key in obj) {
     if (!obj.hasOwnProperty(key)) continue;
     const value = obj[key];
@@ -70,21 +139,22 @@ function flatten(obj, result = {}, pathArr = []) {
         $value: value['value'],
         $description: description
       };
-      validatePrimitive(fullPath, primitive);
-      if (result[key]) {
-        if (!Array.isArray(result[key])) result[key] = [result[key]];
-        const exists = result[key].some(
-          t => t.$type === primitive.$type && t.$value === primitive.$value
-        );
-        if (!exists) result[key].push(primitive);
+      if (isReference(primitive.$value)) {
+        // Semantic token
+        theme[fullPath] = primitive;
+      } else if (validatePrimitive(fullPath, primitive, warnings)) {
+        result[fullPath] = primitive;
       } else {
-        result[key] = primitive;
+        trash[fullPath] = primitive;
       }
+    } else if (Array.isArray(value)) {
+      trash[fullPath] = value;
+      warnings.push(`Token ${fullPath} is an array, not allowed in primitives.`);
     } else if (typeof value === 'object' && value !== null) {
-      flatten(value, result, [...pathArr, key]);
+      flatten(value, result, theme, trash, warnings, [...pathArr, key]);
     }
   }
-  return result;
+  return { result, theme, trash, warnings };
 }
 
 function main() {
@@ -102,10 +172,15 @@ function main() {
     console.error('Invalid JSON in input file.');
     process.exit(1);
   }
-  const flat = flatten(data);
-  fs.writeFileSync(outputPath, JSON.stringify(flat, null, 2));
-  const count = Object.values(flat).reduce((acc, v) => acc + (Array.isArray(v) ? v.length : 1), 0);
-  console.log(`Flattened ${count} primitives to ${outputPath}`);
+  const { result, theme, trash, warnings } = flatten(data);
+  fs.writeFileSync(corePath, JSON.stringify(result, null, 2));
+  fs.writeFileSync(themePath, JSON.stringify(theme, null, 2));
+  fs.writeFileSync(trashPath, JSON.stringify(trash, null, 2));
+  fs.writeFileSync(warningsPath, warnings.map(w => `- ${w}`).join('\n'));
+  console.log(`core.json: ${Object.keys(result).length} tokens`);
+  console.log(`theme.json: ${Object.keys(theme).length} tokens`);
+  console.log(`trash.json: ${Object.keys(trash).length} tokens`);
+  console.log(`warnings.md: ${warnings.length} issues`);
 }
 
 main(); 

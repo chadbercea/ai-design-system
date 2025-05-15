@@ -1,0 +1,272 @@
+{
+  "primary.contrastText": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the primary.contrast variable from the theme object. Color that keeps a contrast ratio above AA when XX.main is used as a bg. color"
+  },
+  "background.default": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.default variable from the theme object"
+  },
+  "background.paper-elevation-0": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-1": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-2": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-3": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-4": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-5": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-6": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-7": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-8": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-9": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-10": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-11": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-12": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-13": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-14": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-15": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-16": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-17": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-18": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-19": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-20": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-21": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-22": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-23": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "background.paper-elevation-24": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.text.primary": {
+    "$type": "color",
+    "$value": "#ffffff",
+    "$description": "Reflects the text.primary variable from the theme object"
+  },
+  "_native.background.default": {
+    "$type": "color",
+    "$value": "#121212",
+    "$description": "Reflects the background.default variable from the theme object"
+  },
+  "_native.background.paper-elevation-0": {
+    "$type": "color",
+    "$value": "#121212",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-1": {
+    "$type": "color",
+    "$value": "#1e1e1e",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-2": {
+    "$type": "color",
+    "$value": "#232323",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-3": {
+    "$type": "color",
+    "$value": "#252525",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-4": {
+    "$type": "color",
+    "$value": "#272727",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-5": {
+    "$type": "color",
+    "$value": "#2a2a2a",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-6": {
+    "$type": "color",
+    "$value": "#2c2c2c",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-7": {
+    "$type": "color",
+    "$value": "#2c2c2c",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-8": {
+    "$type": "color",
+    "$value": "#2e2e2e",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-9": {
+    "$type": "color",
+    "$value": "#2e2e2e",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-10": {
+    "$type": "color",
+    "$value": "#313131",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-11": {
+    "$type": "color",
+    "$value": "#313131",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-12": {
+    "$type": "color",
+    "$value": "#333333",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-13": {
+    "$type": "color",
+    "$value": "#333333",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-14": {
+    "$type": "color",
+    "$value": "#333333",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-15": {
+    "$type": "color",
+    "$value": "#333333",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-16": {
+    "$type": "color",
+    "$value": "#363636",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-17": {
+    "$type": "color",
+    "$value": "#363636",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-18": {
+    "$type": "color",
+    "$value": "#363636",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-19": {
+    "$type": "color",
+    "$value": "#363636",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-20": {
+    "$type": "color",
+    "$value": "#383838",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-21": {
+    "$type": "color",
+    "$value": "#383838",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-22": {
+    "$type": "color",
+    "$value": "#383838",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-23": {
+    "$type": "color",
+    "$value": "#383838",
+    "$description": "Reflects the background.paper variable from the theme object"
+  },
+  "_native.background.paper-elevation-24": {
+    "$type": "color",
+    "$value": "#383838",
+    "$description": "Reflects the background.paper variable from the theme object"
+  }
+}
