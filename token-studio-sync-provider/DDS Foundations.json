@@ -1362,7 +1362,7 @@
       "$value": "Inter",
       "$description": "Inter font family"
     },
-    "roboto-mono": {
+    "robotoMono": {
       "$type": "fontFamilies",
       "$value": "Roboto Mono",
       "$description": "Roboto Mono font family"
