@@ -1,56 +1,56 @@
 {
   "borderRadius": {
     "sm": {
-      "$type": "borderRadius",
+      "$type": "borderRadii",
       "$value": "4px",
       "$description": "Default border radius"
     },
     "md": {
-      "$type": "borderRadius",
+      "$type": "borderRadii",
       "$value": "8px",
       "$description": "Medium border radius"
     },
     "lg": {
-      "$type": "borderRadius",
+      "$type": "borderRadii",
       "$value": "16px",
       "$description": "Large border radius"
     },
     "xl": {
-      "$type": "borderRadius",
+      "$type": "borderRadii",
       "$value": "24px",
       "$description": "Extra large border radius"
     },
     "none": {
-      "$type": "borderRadius",
+      "$type": "borderRadii",
       "$value": "0px",
       "$description": "No border radius"
     }
   },
-  "breakpoints": {
+  "breakpoint": {
     "xl": {
       "$type": "breakpoints",
-      "$description": "Extra large breakpoint, large screens like desktop monitors",
-      "$value": "1536px"
+      "value": 1536,
+      "$description": "Extra large breakpoint, large screens like desktop monitors"
     },
     "lg": {
       "$type": "breakpoints",
-      "$description": "Large breakpoint, large screens like laptops",
-      "$value": "1200px"
+      "value": 1200,
+      "$description": "Large breakpoint, large screens like laptops"
     },
     "md": {
       "$type": "breakpoints",
-      "$description": "Medium breakpoint, medium screens like tablets",
-      "$value": "900px"
+      "value": 900,
+      "$description": "Medium breakpoint, medium screens like tablets"
     },
     "sm": {
       "$type": "breakpoints",
-      "$description": "Small breakpoint, small screens like phones",
-      "$value": "600px"
+      "value": 600,
+      "$description": "Small breakpoint, small screens like phones"
     },
     "xs": {
       "$type": "breakpoints",
-      "$description": "Extra small breakpoint, small screens like watches",
-      "$value": "444px"
+      "value": 444,
+      "$description": "Extra small breakpoint, small screens like watches"
     }
   },
   "color": {
@@ -1351,7 +1351,7 @@
       }
     }
   },
-  "fontFamilies": {
+  "fontFamily": {
     "poppins": {
       "$type": "fontFamilies",
       "$value": "Poppins",
@@ -1362,7 +1362,7 @@
       "$value": "Inter",
       "$description": "Inter font family"
     },
-    "robotoMono": {
+    "roboto-mono": {
       "$type": "fontFamilies",
       "$value": "Roboto Mono",
       "$description": "Roboto Mono font family"
@@ -1373,7 +1373,7 @@
       "$description": "Roboto font family"
     }
   },
-  "fontSizes": {
+  "fontSize": {
     "10": {
       "$type": "fontSizes",
       "$value": "10px",
@@ -1425,7 +1425,7 @@
       "$description": "Font size 48px (Material.io: Headline 1)"
     }
   },
-  "fontWeights": {
+  "fontWeight": {
     "400": {
       "$type": "fontWeights",
       "$value": "400",
@@ -1447,74 +1447,74 @@
       "$description": "Font weight 900 (Black)"
     }
   },
-  "spacings": {
+  "spacing": {
     "0": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "0px",
       "$description": "0px spacing"
     },
     "1": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "8px",
       "$description": "8px spacing"
     },
     "2": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "16px",
       "$description": "16px spacing"
     },
     "3": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "24px",
       "$description": "24px spacing"
     },
     "4": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "32px",
       "$description": "32px spacing"
     },
     "5": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "40px",
       "$description": "40px spacing"
     },
     "6": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "48px",
       "$description": "48px spacing"
     },
     "7": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "56px",
       "$description": "56px spacing"
     },
     "8": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "64px",
       "$description": "64px spacing"
     },
     "9": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "72px",
       "$description": "72px spacing"
     },
     "10": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "80px",
       "$description": "80px spacing"
     },
     "11": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "88px",
       "$description": "88px spacing"
     },
     "12": {
-      "$type": "spacing",
+      "$type": "spacings",
       "$value": "96px",
       "$description": "96px spacing"
     }
   },
-  "lineHeights": {
+  "lineHeight": {
     "100": {
       "$type": "lineHeights",
       "$value": "100%",
@@ -1522,54 +1522,54 @@
     }
   },
   "paragraphSpacing": {
-    "0": {
-      "$type": "paragraphSpacing",
+    "none": {
+      "$type": "paragraphSpacings",
       "$value": "0",
       "$description": "Paragraph spacing 0"
     }
   },
   "letterSpacing": {
     "default": {
-      "$type": "letterSpacing",
+      "$type": "letterSpacings",
       "$value": "0%",
-      "$description": "Default letter spacing"
-    },
-    "tight": {
-      "$type": "letterSpacing",
-      "$value": "1.5%",
-      "$description": "Tight letter spacing"
+      "$description": "Letter spacing 0%"
     },
     "wide": {
-      "$type": "letterSpacing",
+      "$type": "letterSpacings",
       "$value": "2%",
-      "$description": "Wide letter spacing"
+      "$description": "Letter spacing 2%"
+    },
+    "tight": {
+      "$type": "letterSpacings",
+      "$value": "1.5%",
+      "$description": "Letter spacing 1.5%"
     }
   },
   "textCase": {
     "capitalize": {
-      "$type": "textCase",
+      "$type": "textCases",
       "$value": "capitalize",
       "$description": "Text case capitalize"
     },
     "none": {
-      "$type": "textCase",
+      "$type": "textCases",
       "$value": "none",
       "$description": "Text case none"
     },
     "uppercase": {
-      "$type": "textCase",
+      "$type": "textCases",
       "$value": "uppercase",
       "$description": "Text case uppercase"
     }
   },
   "textDecoration": {
     "none": {
-      "$type": "textDecoration",
+      "$type": "textDecorations",
       "$value": "none",
       "$description": "Text decoration none"
     },
     "underline": {
-      "$type": "textDecoration",
+      "$type": "textDecorations",
       "$value": "underline",
       "$description": "Text decoration underline"
     }
