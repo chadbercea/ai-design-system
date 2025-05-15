@@ -4,23 +4,37 @@ const path = require('path');
 const jsonDir = path.resolve(__dirname, '../_json');
 const outFile = path.join(jsonDir, 'DDS Foundations.json');
 
-// Explicit mapping for top-level keys and $type plural values
+// Mapping for $type display names for Tokens Studio
+const typeDisplayMap = {
+  borderRadius: 'Border Radius',
+  breakpoint: 'Breakpoint',
+  color: 'Color',
+  fontFamily: 'Font Family',
+  fontSize: 'Font Size',
+  fontWeight: 'Font Weight',
+  spacing: 'Spacing',
+  lineHeight: 'Line Height',
+  paragraphSpacing: 'Paragraph Spacing',
+  letterSpacing: 'Letter Spacing',
+  textCase: 'Text Case',
+  textDecoration: 'Text Decoration'
+};
+
 const files = [
-  { file: 'border-radius.generated.json', key: 'borderRadius', outKey: 'borderRadius', typePlural: 'borderRadii' },
-  { file: 'breakpoints.generated.json', key: 'breakpoints', outKey: 'breakpoint', typePlural: 'breakpoints', isBreakpoint: true },
-  { file: 'colors.nested.generated.json', key: 'color', outKey: 'color', typePlural: 'colors', isColor: true },
-  { file: 'font-families.generated.json', key: 'fontFamilies', outKey: 'fontFamily', typePlural: 'fontFamilies' },
-  { file: 'font-sizes.generated.json', key: 'fontSizes', outKey: 'fontSize', typePlural: 'fontSizes' },
-  { file: 'font-weights.generated.json', key: 'fontWeights', outKey: 'fontWeight', typePlural: 'fontWeights' },
-  { file: 'spacings.generated.json', key: 'spacings', outKey: 'spacing', typePlural: 'spacings' },
-  { file: 'line-heights.generated.json', key: 'lineHeights', outKey: 'lineHeight', typePlural: 'lineHeights' },
-  { file: 'paragraph-spacing.generated.json', key: 'paragraphSpacing', outKey: 'paragraphSpacing', typePlural: 'paragraphSpacings', isParagraphSpacing: true },
-  { file: 'letter-spacing.generated.json', key: 'letterSpacing', outKey: 'letterSpacing', typePlural: 'letterSpacings', isLetterSpacing: true },
-  { file: 'text-case.generated.json', key: 'textCase', outKey: 'textCase', typePlural: 'textCases' },
-  { file: 'text-decoration.generated.json', key: 'textDecoration', outKey: 'textDecoration', typePlural: 'textDecorations' },
+  { file: 'border-radius.generated.json', key: 'borderRadius', outKey: 'borderRadius' },
+  { file: 'breakpoints.generated.json', key: 'breakpoints', outKey: 'breakpoint' },
+  { file: 'colors.nested.generated.json', key: 'color', outKey: 'color', isColor: true },
+  { file: 'font-families.generated.json', key: 'fontFamilies', outKey: 'fontFamily' },
+  { file: 'font-sizes.generated.json', key: 'fontSizes', outKey: 'fontSize' },
+  { file: 'font-weights.generated.json', key: 'fontWeights', outKey: 'fontWeight' },
+  { file: 'spacings.generated.json', key: 'spacings', outKey: 'spacing' },
+  { file: 'line-heights.generated.json', key: 'lineHeights', outKey: 'lineHeight' },
+  { file: 'paragraph-spacing.generated.json', key: 'paragraphSpacing', outKey: 'paragraphSpacing', isParagraphSpacing: true },
+  { file: 'letter-spacing.generated.json', key: 'letterSpacing', outKey: 'letterSpacing', isLetterSpacing: true },
+  { file: 'text-case.generated.json', key: 'textCase', outKey: 'textCase' },
+  { file: 'text-decoration.generated.json', key: 'textDecoration', outKey: 'textDecoration' },
 ];
 
-// Atomic key mapping for letterSpacing and paragraphSpacing
 const letterSpacingKeyMap = {
   '0': 'default',
   '1.5': 'tight',
@@ -32,7 +46,7 @@ const paragraphSpacingKeyMap = {
 
 const result = {};
 
-files.forEach(({ file, key, outKey, typePlural, isColor, isLetterSpacing, isParagraphSpacing, isBreakpoint }) => {
+files.forEach(({ file, key, outKey, isColor, isLetterSpacing, isParagraphSpacing }) => {
   const filePath = path.join(jsonDir, file);
   if (!fs.existsSync(filePath)) {
     console.warn(`File not found: ${file}`);
@@ -41,26 +55,28 @@ files.forEach(({ file, key, outKey, typePlural, isColor, isLetterSpacing, isPara
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   let primitives = data[key] || data;
   if (isColor) {
-    result[outKey] = primitives;
+    // Flatten color tokens: color.family.scale -> color-family-scale
+    Object.keys(primitives).forEach(family => {
+      Object.keys(primitives[family]).forEach(scale => {
+        const flatKey = `${family}-${scale}`;
+        result[flatKey] = {
+          ...primitives[family][scale],
+          $type: typeDisplayMap['color']
+        };
+      });
+    });
     return;
   }
-  const fixed = {};
   Object.keys(primitives).forEach(k => {
     let newKey = k;
-    let primitive = { ...primitives[k], $type: typePlural };
     if (isLetterSpacing) newKey = letterSpacingKeyMap[k] || k;
     if (isParagraphSpacing) newKey = paragraphSpacingKeyMap[k] || k;
-    if (isBreakpoint) {
-      // Remove 'value', add $value as string with px
-      if (primitive.value !== undefined) {
-        primitive.$value = `${primitive.value}px`;
-        delete primitive.value;
-      }
-    }
-    fixed[newKey] = primitive;
+    result[newKey] = {
+      ...primitives[k],
+      $type: typeDisplayMap[outKey]
+    };
   });
-  result[outKey] = fixed;
 });
 
 fs.writeFileSync(outFile, JSON.stringify(result, null, 2));
-console.log('DDS Foundations.json created with canonical singular keys, DTCG/TS plural $type, atomic keys for letterSpacing/paragraphSpacing, and px string $value for breakpoints.'); 
+console.log('DDS Foundations.json created as a flat object with Tokens Studio display $type and atomic keys.'); 
