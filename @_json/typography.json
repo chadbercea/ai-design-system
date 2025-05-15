@@ -1,0 +1,178 @@
+{
+  "marketing-1": {
+    "fontFamily": "Poppins",
+    "fontWeight": 900,
+    "fontSize": "48px",
+    "textTransform": "title",
+    "letterSpacing": "0%",
+    "rem": "3.4rem"
+  },
+  "marketing-2": {
+    "fontFamily": "Poppins",
+    "fontWeight": 900,
+    "fontSize": "40px",
+    "textTransform": "title",
+    "letterSpacing": "0%",
+    "rem": "2.9rem"
+  },
+  "marketing-3": {
+    "fontFamily": "Poppins",
+    "fontWeight": 700,
+    "fontSize": "32px",
+    "textTransform": "title",
+    "letterSpacing": "0%",
+    "rem": "1.5rem"
+  },
+  "marketing-4": {
+    "fontFamily": "Poppins",
+    "fontWeight": 700,
+    "fontSize": "24px",
+    "textTransform": "title",
+    "letterSpacing": "0%",
+    "rem": "1.2857rem"
+  },
+  "product-1": {
+    "fontFamily": "Inter",
+    "fontWeight": 900,
+    "fontSize": "18px",
+    "textTransform": "title",
+    "letterSpacing": "0%",
+    "rem": "1.5rem"
+  },
+  "product-2": {
+    "fontFamily": "Inter",
+    "fontWeight": 900,
+    "fontSize": "16px",
+    "textTransform": "title",
+    "letterSpacing": "0%",
+    "rem": "1.2857rem"
+  },
+  "subtitle-1": {
+    "fontFamily": "Inter",
+    "fontWeight": 700,
+    "fontSize": "16px",
+    "textTransform": "sentence",
+    "letterSpacing": "0%",
+    "rem": "1.1429rem"
+  },
+  "subtitle-2": {
+    "fontFamily": "Inter",
+    "fontWeight": 600,
+    "fontSize": "16px",
+    "textTransform": "sentence",
+    "letterSpacing": "0%",
+    "rem": "1.1429rem"
+  },
+  "code": {
+    "fontFamily": "Roboto Mono",
+    "fontWeight": 400,
+    "fontSize": "14px",
+    "textTransform": "sentence",
+    "letterSpacing": "2% (0.02em)",
+    "rem": "1rem"
+  },
+  "code-strong": {
+    "fontFamily": "Roboto Mono",
+    "fontWeight": 700,
+    "fontSize": "14px",
+    "textTransform": "sentence",
+    "letterSpacing": "2% (0.02em)",
+    "rem": "1rem"
+  },
+  "code-small": {
+    "fontFamily": "Roboto Mono",
+    "fontWeight": 400,
+    "fontSize": "12px",
+    "textTransform": "sentence",
+    "letterSpacing": "2% (0.02em)",
+    "rem": "1rem"
+  },
+  "code-small-strong": {
+    "fontFamily": "Roboto Mono",
+    "fontWeight": 700,
+    "fontSize": "12px",
+    "textTransform": "sentence",
+    "letterSpacing": "2% (0.02em)",
+    "rem": "1rem"
+  },
+  "body": {
+    "fontFamily": "Inter",
+    "fontWeight": 400,
+    "fontSize": "14px",
+    "textTransform": "sentence",
+    "letterSpacing": "0%",
+    "rem": "1rem"
+  },
+  "body-strong": {
+    "fontFamily": "Inter",
+    "fontWeight": 700,
+    "fontSize": "14px",
+    "textTransform": "sentence",
+    "letterSpacing": "0%",
+    "rem": "1rem"
+  },
+  "body-small": {
+    "fontFamily": "Inter",
+    "fontWeight": 400,
+    "fontSize": "12px",
+    "textTransform": "sentence",
+    "letterSpacing": "0%",
+    "rem": "0.857rem"
+  },
+  "body-small-strong": {
+    "fontFamily": "Inter",
+    "fontWeight": 700,
+    "fontSize": "12px",
+    "textTransform": "sentence",
+    "letterSpacing": "0%",
+    "rem": "0.857rem"
+  },
+  "link": {
+    "fontFamily": "Inter",
+    "fontWeight": 400,
+    "fontSize": "14px",
+    "textTransform": "sentence",
+    "letterSpacing": "0%",
+    "rem": "1rem"
+  },
+  "link-strong": {
+    "fontFamily": "Inter",
+    "fontWeight": 700,
+    "fontSize": "14px",
+    "textTransform": "sentence",
+    "letterSpacing": "0%",
+    "rem": "1rem"
+  },
+  "link-small": {
+    "fontFamily": "Inter",
+    "fontWeight": 400,
+    "fontSize": "12px",
+    "textTransform": "sentence",
+    "letterSpacing": "0%",
+    "rem": "0.857rem"
+  },
+  "link-small-strong": {
+    "fontFamily": "Inter",
+    "fontWeight": 700,
+    "fontSize": "12px",
+    "textTransform": "sentence",
+    "letterSpacing": "0%",
+    "rem": "0.857rem"
+  },
+  "chip": {
+    "fontFamily": "Inter",
+    "fontWeight": 700,
+    "fontSize": "12px",
+    "textTransform": "all caps",
+    "letterSpacing": "1.5% (0.015em)",
+    "rem": "0.714rem"
+  },
+  "caption": {
+    "fontFamily": "Inter",
+    "fontWeight": 600,
+    "fontSize": "10px",
+    "textTransform": "sentence",
+    "letterSpacing": "1.5% (0.015em)",
+    "rem": "0.714rem"
+  }
+} 
