@@ -1,0 +1,1 @@
+// Canonical Opacity primitives will be documented or exported here. 

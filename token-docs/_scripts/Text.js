@@ -1,0 +1,1 @@
+// Canonical Text primitives will be documented or exported here. 

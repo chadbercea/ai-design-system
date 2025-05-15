@@ -1,0 +1,92 @@
+{
+  "primary.main": {
+    "$type": "color",
+    "$value": "{blue.700}",
+    "$description": "Reflects the primary.main variable from the theme object"
+  },
+  "primary.dark": {
+    "$type": "color",
+    "$value": "{blue.800}",
+    "$description": "Used for hover states. Reflects the primary.dark variable from the theme object"
+  },
+  "primary.light": {
+    "$type": "color",
+    "$value": "{blue.400}",
+    "$description": "Reflects the primary.light variable from the theme object"
+  },
+  "secondary.main": {
+    "$type": "color",
+    "$value": "{purple.500}",
+    "$description": "No description provided."
+  },
+  "secondary.dark": {
+    "$type": "color",
+    "$value": "{purple.700}",
+    "$description": "No description provided."
+  },
+  "secondary.light": {
+    "$type": "color",
+    "$value": "{purple.300}",
+    "$description": "No description provided."
+  },
+  "error.main": {
+    "$type": "color",
+    "$value": "{red.700}",
+    "$description": "No description provided."
+  },
+  "error.dark": {
+    "$type": "color",
+    "$value": "{red.800}",
+    "$description": "No description provided."
+  },
+  "error.light": {
+    "$type": "color",
+    "$value": "{red.400}",
+    "$description": "No description provided."
+  },
+  "warning.main": {
+    "$type": "color",
+    "$value": "{orange.800}",
+    "$description": "No description provided."
+  },
+  "warning.dark": {
+    "$type": "color",
+    "$value": "{orange.900}",
+    "$description": "No description provided."
+  },
+  "warning.light": {
+    "$type": "color",
+    "$value": "{orange.500}",
+    "$description": "No description provided."
+  },
+  "info.main": {
+    "$type": "color",
+    "$value": "{lightBlue.700}",
+    "$description": "No description provided."
+  },
+  "info.dark": {
+    "$type": "color",
+    "$value": "{lightBlue.900}",
+    "$description": "No description provided."
+  },
+  "info.light": {
+    "$type": "color",
+    "$value": "{lightBlue.500}",
+    "$description": "No description provided."
+  },
+  "success.main": {
+    "$type": "color",
+    "$value": "{green.800}",
+    "$description": "No description provided."
+  },
+  "success.dark": {
+    "$type": "color",
+    "$value": "{green.900}",
+    "$description": "No description provided."
+  },
+  "success.light": {
+    "$type": "color",
+    "$value": "{green.500}",
+    "$description": "No description provided."
+  }
+}
