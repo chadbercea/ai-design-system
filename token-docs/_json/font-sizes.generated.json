@@ -1,0 +1,54 @@
+{
+  "fontSizes": {
+    "10": {
+      "$type": "fontSizes",
+      "$value": "10px",
+      "$description": "Font size 10px (Material.io: Caption)"
+    },
+    "12": {
+      "$type": "fontSizes",
+      "$value": "12px",
+      "$description": "Font size 12px (Material.io: Body 2)"
+    },
+    "14": {
+      "$type": "fontSizes",
+      "$value": "14px",
+      "$description": "Font size 14px (Material.io: Body 1)"
+    },
+    "16": {
+      "$type": "fontSizes",
+      "$value": "16px",
+      "$description": "Font size 16px (Material.io: Subtitle 1)"
+    },
+    "18": {
+      "$type": "fontSizes",
+      "$value": "18px",
+      "$description": "Font size 18px (Material.io: Headline 4)"
+    },
+    "21": {
+      "$type": "fontSizes",
+      "$value": "21px",
+      "$description": "Font size 21px (Material.io: Headline 3)"
+    },
+    "24": {
+      "$type": "fontSizes",
+      "$value": "24px",
+      "$description": "Font size 24px (Material.io: Headline 6)"
+    },
+    "32": {
+      "$type": "fontSizes",
+      "$value": "32px",
+      "$description": "Font size 32px (Material.io: Headline 5)"
+    },
+    "40": {
+      "$type": "fontSizes",
+      "$value": "40px",
+      "$description": "Font size 40px (Material.io: Headline 2)"
+    },
+    "48": {
+      "$type": "fontSizes",
+      "$value": "48px",
+      "$description": "Font size 48px (Material.io: Headline 1)"
+    }
+  }
+}

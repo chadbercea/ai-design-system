@@ -1,44 +1,33 @@
 const fs = require('fs');
 const path = require('path');
 
-const inputPath = path.resolve(__dirname, '../../token-studio-sync-provider/json-from-figma.json');
-const outputPath = path.resolve(__dirname, '../_json/FontSize.json');
+const outputPath = path.resolve(__dirname, '../_json/font-sizes.generated.json');
 
-function isPrimitiveFontSizeToken(key, value) {
-  // Only allow direct font size values (not references, not semantic, not aliases)
-  return (
-    typeof value === 'object' &&
-    value.type === 'fontSize' &&
-    typeof value.value === 'string' &&
-    !value.value.startsWith('{') &&
-    !key.startsWith('_')
-  );
-}
+// Mapping from Figma image: font size px -> Material.io counterpart
+const materialMap = {
+  "48": "Headline 1",
+  "40": "Headline 2",
+  "32": "Headline 5",
+  "24": "Headline 6",
+  "21": "Headline 3",
+  "18": "Headline 4",
+  "16": "Subtitle 1",
+  "14": "Body 1",
+  "12": "Body 2",
+  "10": "Caption"
+};
 
-function flatten(obj, prefix = '', result = {}) {
-  for (const k in obj) {
-    if (!Object.prototype.hasOwnProperty.call(obj, k)) continue;
-    const v = obj[k];
-    const dotKey = prefix ? `${prefix}.${k}` : k;
-    if (isPrimitiveFontSizeToken(dotKey, v)) {
-      result[dotKey] = {
-        $type: 'fontSize',
-        $value: v.value,
-        $description: v.description || dotKey
-      };
-    } else if (typeof v === 'object' && v !== null && !Array.isArray(v)) {
-      flatten(v, dotKey, result);
-    }
-  }
-  return result;
-}
+const fontSizes = {};
+["48", "40", "32", "24", "21", "18", "16", "14", "12", "10"].forEach(size => {
+  fontSizes[size] = {
+    "$type": "fontSizes",
+    "$value": `${size}px`,
+    "$description": `Font size ${size}px (Material.io: ${materialMap[size]})`
+  };
+});
 
-function main() {
-  const raw = fs.readFileSync(inputPath, 'utf8');
-  const json = JSON.parse(raw);
-  const flat = flatten(json);
-  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  fs.writeFileSync(outputPath, JSON.stringify(flat, null, 2));
-}
+const output = { fontSizes };
 
-main(); 
+fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
+console.log(`Font size tokens written to ${outputPath}`); 

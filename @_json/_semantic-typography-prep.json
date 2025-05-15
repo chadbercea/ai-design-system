@@ -1,0 +1,310 @@
+{
+  "marketing-1": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 900,
+      "fontSize": "48px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "capitalize",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for marketing-1"
+  },
+  "marketing-2": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 900,
+      "fontSize": "40px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "capitalize",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for marketing-2"
+  },
+  "marketing-3": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 700,
+      "fontSize": "32px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "capitalize",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for marketing-3"
+  },
+  "marketing-4": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Poppins",
+      "fontWeight": 700,
+      "fontSize": "24px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "capitalize",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for marketing-4"
+  },
+  "product-1": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 900,
+      "fontSize": "21px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "capitalize",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for product-1"
+  },
+  "product-2": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 900,
+      "fontSize": "18px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "capitalize",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for product-2"
+  },
+  "subtitle-1": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 700,
+      "fontSize": "16px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for subtitle-1"
+  },
+  "subtitle-2": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 500,
+      "fontSize": "16px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for subtitle-2"
+  },
+  "code": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Roboto Mono",
+      "fontWeight": 400,
+      "fontSize": "14px",
+      "lineHeight": "100%",
+      "letterSpacing": "2%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for code"
+  },
+  "code/strong": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Roboto Mono",
+      "fontWeight": 700,
+      "fontSize": "14px",
+      "lineHeight": "100%",
+      "letterSpacing": "2%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for code/strong"
+  },
+  "code-small": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Roboto Mono",
+      "fontWeight": 400,
+      "fontSize": "12px",
+      "lineHeight": "100%",
+      "letterSpacing": "2%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for code-small"
+  },
+  "code-small/strong": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Roboto Mono",
+      "fontWeight": 700,
+      "fontSize": "12px",
+      "lineHeight": "100%",
+      "letterSpacing": "2%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for code-small/strong"
+  },
+  "body": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 400,
+      "fontSize": "14px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for body"
+  },
+  "body/strong": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 700,
+      "fontSize": "14px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for body/strong"
+  },
+  "body-small": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 400,
+      "fontSize": "12px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for body-small"
+  },
+  "body-small/strong": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 700,
+      "fontSize": "12px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for body-small/strong"
+  },
+  "link": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 400,
+      "fontSize": "14px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "underline"
+    },
+    "$description": "Typography style for link"
+  },
+  "link/strong": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 700,
+      "fontSize": "14px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "underline"
+    },
+    "$description": "Typography style for link/strong"
+  },
+  "link-small": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 400,
+      "fontSize": "12px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "underline"
+    },
+    "$description": "Typography style for link-small"
+  },
+  "link-small/strong": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 700,
+      "fontSize": "12px",
+      "lineHeight": "100%",
+      "letterSpacing": "0%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "underline"
+    },
+    "$description": "Typography style for link-small/strong"
+  },
+  "chip": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 500,
+      "fontSize": "10px",
+      "lineHeight": "100%",
+      "letterSpacing": "1.5%",
+      "paragraphSpacing": "0",
+      "textCase": "uppercase",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for chip"
+  },
+  "caption": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "Inter",
+      "fontWeight": 500,
+      "fontSize": "10px",
+      "lineHeight": "100%",
+      "letterSpacing": "1.5%",
+      "paragraphSpacing": "0",
+      "textCase": "none",
+      "textDecoration": "none"
+    },
+    "$description": "Typography style for caption"
+  }
+} 

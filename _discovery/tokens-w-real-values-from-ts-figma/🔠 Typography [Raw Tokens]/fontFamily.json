@@ -1,0 +1,80 @@
+{
+  "Font Family": {
+    "Product": {
+      "value": "Inter",
+      "type": "text"
+    },
+    "Code": {
+      "value": "Roboto Mono",
+      "type": "text"
+    },
+    "Marketing": {
+      "value": "Poppins",
+      "type": "text"
+    }
+  },
+  "Font Size": {
+    "Marketing-1": {
+      "value": "3rem",
+      "type": "dimension"
+    },
+    "Marketing-2": {
+      "value": "2.5rem",
+      "type": "dimension"
+    },
+    "Product-1": {
+      "value": "1.312rem",
+      "type": "dimension"
+    },
+    "Product-2": {
+      "value": "1.125rem",
+      "type": "dimension"
+    },
+    "Subtitle": {
+      "value": "1rem",
+      "type": "dimension"
+    },
+    "Body-1": {
+      "value": "0.875rem",
+      "type": "dimension"
+    },
+    "Body-2": {
+      "value": "0.75rem",
+      "type": "dimension"
+    },
+    "Chip": {
+      "value": "0.625rem",
+      "type": "dimension"
+    },
+    "Marketing-3": {
+      "value": "2rem",
+      "type": "dimension"
+    },
+    "Marketing-4": {
+      "value": "1.5rem",
+      "type": "dimension"
+    }
+  },
+  "Font Weight": {
+    "Light": {
+      "value": "18.75rem",
+      "type": "dimension"
+    },
+    "Regular": {
+      "value": "25rem",
+      "type": "dimension"
+    },
+    "Semibold": {
+      "value": "31.25rem",
+      "type": "dimension"
+    },
+    "Black": {
+      "value": "56.25rem",
+      "type": "dimension"
+    },
+    "Bold": {
+      "value": "43.75rem",
+      "type": "dimension"
+    }
+  }
+}

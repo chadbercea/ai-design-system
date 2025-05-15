@@ -1,0 +1,114 @@
+{
+  "button.primary": {
+    "$type": "color",
+    "$value": "{color.primary}",
+    "$description": "Primary button color"
+  },
+  "button.secondary": {
+    "$type": "color",
+    "$value": "{color.secondary}",
+    "$description": "Secondary button color"
+  },
+  "button.hover": {
+    "$type": "color",
+    "$value": "{color.primary}",
+    "$description": "Button hover color"
+  },
+  "button.disabled": {
+    "$type": "color",
+    "$value": "{color.primary}",
+    "$description": "Button disabled color"
+  },
+  "card.padding": {
+    "$type": "spacing",
+    "$value": "{spacing.medium}",
+    "$description": "Card padding"
+  },
+  "card.borderRadius": {
+    "$type": "borderRadius",
+    "$value": "{borderRadius.medium}",
+    "$description": "Card border radius"
+  },
+  "card.shadow": {
+    "$type": "boxShadow",
+    "$value": "0 2px 4px rgba(0, 0, 0, 0.1)",
+    "$description": "Card shadow"
+  },
+  "typography.heading": {
+    "$type": "typography",
+    "$value": {
+      "fontSize": "{fontSize.large}",
+      "fontWeight": "{fontWeight.bold}",
+      "lineHeight": "{lineHeight.tight}"
+    },
+    "$description": "Heading typography"
+  },
+  "typography.body": {
+    "$type": "typography",
+    "$value": {
+      "fontSize": "{fontSize.medium}",
+      "fontWeight": "{fontWeight.normal}",
+      "lineHeight": "{lineHeight.normal}"
+    },
+    "$description": "Body typography"
+  },
+  "typography.small": {
+    "$type": "typography",
+    "$value": {
+      "fontSize": "{fontSize.small}",
+      "fontWeight": "{fontWeight.normal}",
+      "lineHeight": "{lineHeight.normal}"
+    },
+    "$description": "Small text typography"
+  },
+  "input.padding": {
+    "$type": "spacing",
+    "$value": "{spacing.small}",
+    "$description": "Input padding"
+  },
+  "input.borderRadius": {
+    "$type": "borderRadius",
+    "$value": "{borderRadius.small}",
+    "$description": "Input border radius"
+  },
+  "input.borderWidth": {
+    "$type": "borderWidth",
+    "$value": "{borderWidth.thin}",
+    "$description": "Input border width"
+  },
+  "modal.padding": {
+    "$type": "spacing",
+    "$value": "{spacing.large}",
+    "$description": "Modal padding"
+  },
+  "modal.borderRadius": {
+    "$type": "borderRadius",
+    "$value": "{borderRadius.medium}",
+    "$description": "Modal border radius"
+  },
+  "modal.shadow": {
+    "$type": "boxShadow",
+    "$value": "0 4px 8px rgba(0, 0, 0, 0.2)",
+    "$description": "Modal shadow"
+  },
+  "animation.fast": {
+    "$type": "duration",
+    "$value": "{duration.fast}",
+    "$description": "Fast animation duration"
+  },
+  "animation.slow": {
+    "$type": "duration",
+    "$value": "{duration.slow}",
+    "$description": "Slow animation duration"
+  },
+  "overlay.background": {
+    "$type": "color",
+    "$value": "rgba(0, 0, 0, 0.5)",
+    "$description": "Overlay background color"
+  },
+  "overlay.opacity": {
+    "$type": "opacity",
+    "$value": "{opacity.half}",
+    "$description": "Overlay opacity"
+  }
+} 

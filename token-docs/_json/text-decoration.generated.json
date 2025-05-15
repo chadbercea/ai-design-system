@@ -1,0 +1,14 @@
+{
+  "textDecoration": {
+    "none": {
+      "$type": "textDecoration",
+      "$value": "none",
+      "$description": "Text decoration none"
+    },
+    "underline": {
+      "$type": "textDecoration",
+      "$value": "underline",
+      "$description": "Text decoration underline"
+    }
+  }
+}
