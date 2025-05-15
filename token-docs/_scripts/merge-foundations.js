@@ -55,28 +55,32 @@ files.forEach(({ file, key, outKey, isColor, isLetterSpacing, isParagraphSpacing
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   let primitives = data[key] || data;
   if (isColor) {
-    // Flatten color tokens: color.family.scale -> color-family-scale
+    // Preserve nested color structure, but update $type
+    const colorGroup = {};
     Object.keys(primitives).forEach(family => {
+      colorGroup[family] = {};
       Object.keys(primitives[family]).forEach(scale => {
-        const flatKey = `${family}-${scale}`;
-        result[flatKey] = {
+        colorGroup[family][scale] = {
           ...primitives[family][scale],
           $type: typeDisplayMap['color']
         };
       });
     });
+    result[outKey] = colorGroup;
     return;
   }
+  const group = {};
   Object.keys(primitives).forEach(k => {
     let newKey = k;
     if (isLetterSpacing) newKey = letterSpacingKeyMap[k] || k;
     if (isParagraphSpacing) newKey = paragraphSpacingKeyMap[k] || k;
-    result[newKey] = {
+    group[newKey] = {
       ...primitives[k],
       $type: typeDisplayMap[outKey]
     };
   });
+  result[outKey] = group;
 });
 
 fs.writeFileSync(outFile, JSON.stringify(result, null, 2));
-console.log('DDS Foundations.json created as a flat object with Tokens Studio display $type and atomic keys.'); 
+console.log('DDS Foundations.json created as grouped object with Tokens Studio display $type and atomic keys.'); 
