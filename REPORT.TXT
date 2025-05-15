@@ -37,6 +37,7 @@ Normalize a hybrid MUI-style JSON token set into a W3C-compliant, T-D-W-P-aligne
 
 ✅ Acceptance Criteria
 ID
+
 Requirement
 AC1
 All tokens in core.json must have: a valid $value (hex or static), and $type
