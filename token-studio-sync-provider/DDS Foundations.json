@@ -29,28 +29,28 @@
   "breakpoint": {
     "xl": {
       "$type": "breakpoints",
-      "value": 1536,
-      "$description": "Extra large breakpoint, large screens like desktop monitors"
+      "$description": "Extra large breakpoint, large screens like desktop monitors",
+      "$value": "1536px"
     },
     "lg": {
       "$type": "breakpoints",
-      "value": 1200,
-      "$description": "Large breakpoint, large screens like laptops"
+      "$description": "Large breakpoint, large screens like laptops",
+      "$value": "1200px"
     },
     "md": {
       "$type": "breakpoints",
-      "value": 900,
-      "$description": "Medium breakpoint, medium screens like tablets"
+      "$description": "Medium breakpoint, medium screens like tablets",
+      "$value": "900px"
     },
     "sm": {
       "$type": "breakpoints",
-      "value": 600,
-      "$description": "Small breakpoint, small screens like phones"
+      "$description": "Small breakpoint, small screens like phones",
+      "$value": "600px"
     },
     "xs": {
       "$type": "breakpoints",
-      "value": 444,
-      "$description": "Extra small breakpoint, small screens like watches"
+      "$description": "Extra small breakpoint, small screens like watches",
+      "$value": "444px"
     }
   },
   "color": {

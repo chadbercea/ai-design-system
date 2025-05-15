@@ -7,7 +7,7 @@ const outFile = path.join(jsonDir, 'DDS Foundations.json');
 // Explicit mapping for top-level keys and $type plural values
 const files = [
   { file: 'border-radius.generated.json', key: 'borderRadius', outKey: 'borderRadius', typePlural: 'borderRadii' },
-  { file: 'breakpoints.generated.json', key: 'breakpoints', outKey: 'breakpoint', typePlural: 'breakpoints' },
+  { file: 'breakpoints.generated.json', key: 'breakpoints', outKey: 'breakpoint', typePlural: 'breakpoints', isBreakpoint: true },
   { file: 'colors.nested.generated.json', key: 'color', outKey: 'color', typePlural: 'colors', isColor: true },
   { file: 'font-families.generated.json', key: 'fontFamilies', outKey: 'fontFamily', typePlural: 'fontFamilies' },
   { file: 'font-sizes.generated.json', key: 'fontSizes', outKey: 'fontSize', typePlural: 'fontSizes' },
@@ -32,7 +32,7 @@ const paragraphSpacingKeyMap = {
 
 const result = {};
 
-files.forEach(({ file, key, outKey, typePlural, isColor, isLetterSpacing, isParagraphSpacing }) => {
+files.forEach(({ file, key, outKey, typePlural, isColor, isLetterSpacing, isParagraphSpacing, isBreakpoint }) => {
   const filePath = path.join(jsonDir, file);
   if (!fs.existsSync(filePath)) {
     console.warn(`File not found: ${file}`);
@@ -47,12 +47,20 @@ files.forEach(({ file, key, outKey, typePlural, isColor, isLetterSpacing, isPara
   const fixed = {};
   Object.keys(primitives).forEach(k => {
     let newKey = k;
+    let primitive = { ...primitives[k], $type: typePlural };
     if (isLetterSpacing) newKey = letterSpacingKeyMap[k] || k;
     if (isParagraphSpacing) newKey = paragraphSpacingKeyMap[k] || k;
-    fixed[newKey] = { ...primitives[k], $type: typePlural };
+    if (isBreakpoint) {
+      // Remove 'value', add $value as string with px
+      if (primitive.value !== undefined) {
+        primitive.$value = `${primitive.value}px`;
+        delete primitive.value;
+      }
+    }
+    fixed[newKey] = primitive;
   });
   result[outKey] = fixed;
 });
 
 fs.writeFileSync(outFile, JSON.stringify(result, null, 2));
-console.log('DDS Foundations.json created with canonical singular keys, DTCG/TS plural $type, and atomic keys for letterSpacing/paragraphSpacing.'); 
+console.log('DDS Foundations.json created with canonical singular keys, DTCG/TS plural $type, atomic keys for letterSpacing/paragraphSpacing, and px string $value for breakpoints.'); 
