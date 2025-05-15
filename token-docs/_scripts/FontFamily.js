@@ -7,19 +7,24 @@ const outputPath = path.resolve(__dirname, '../_json/font-families.generated.jso
 
 const fontFamilies = {
   "poppins": {
-    "$type": "fontFamilies",
+    "$type": "Font Family",
     "$value": "Poppins",
-    "$description": "Poppins font family"
+    "$description": "Primary display font for marketing and headings"
   },
   "inter": {
-    "$type": "fontFamilies",
+    "$type": "Font Family",
     "$value": "Inter",
-    "$description": "Inter font family"
+    "$description": "Primary UI font for body text and interface elements"
   },
-  "roboto-mono": {
-    "$type": "fontFamilies",
+  "roboto": {
+    "$type": "Font Family",
+    "$value": "Roboto",
+    "$description": "Primary system font for fallback and legacy support"
+  },
+  "robotoMono": {
+    "$type": "Font Family",
     "$value": "Roboto Mono",
-    "$description": "Roboto Mono font family"
+    "$description": "Monospace font for code and technical content"
   }
 };
 
