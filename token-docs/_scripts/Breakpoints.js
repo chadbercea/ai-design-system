@@ -14,10 +14,19 @@ function extractBreakpoints(json) {
   const out = {};
   for (const key in json) {
     const value = json[key].value;
+    const description = json[key].description || '';
     if (typeof value === 'string' && value.endsWith('rem')) {
+      const px = remToPx(value.replace('rem', ''));
       out[key] = {
         $type: 'breakpoints',
-        value: remToPx(value.replace('rem', ''))
+        $value: `${px}px`,
+        $description: description || `${px}px breakpoint`
+      };
+    } else if (!isNaN(value)) {
+      out[key] = {
+        $type: 'breakpoints',
+        $value: `${value}px`,
+        $description: description || `${value}px breakpoint`
       };
     }
   }
@@ -26,10 +35,10 @@ function extractBreakpoints(json) {
 
 function main() {
   const breakpoints = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
-  const primitives = extractBreakpoints(breakpoints);
+  const extracted = extractBreakpoints(breakpoints);
   fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(outFile, JSON.stringify({ breakpoints: primitives }, null, 2));
-  console.log(`Canonical breakpoints exported to ${outFile}`);
+  fs.writeFileSync(outFile, JSON.stringify({ breakpoints: extracted }, null, 2));
+  console.log('breakpoints.generated.json updated with $value as string with px units.');
 }
 
 main(); 
