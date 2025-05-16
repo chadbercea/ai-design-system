@@ -389,9 +389,9 @@
     "0": { "$type": "paragraphSpacings", "$value": "0", "$description": "Paragraph spacing 0" }
   },
   "letterSpacings": {
-    "0": { "$type": "letterSpacings", "$value": "0%", "$description": "Letter spacing 0%" },
-    "2": { "$type": "letterSpacings", "$value": "2%", "$description": "Letter spacing 2%" },
-    "1.5": { "$type": "letterSpacings", "$value": "1.5%", "$description": "Letter spacing 1.5%" }
+    "default": { "$type": "letterSpacings", "$value": "0%", "$description": "Default letter spacing" },
+    "wide": { "$type": "letterSpacings", "$value": "2%", "$description": "Wide letter spacing" },
+    "tight": { "$type": "letterSpacings", "$value": "1.5%", "$description": "Tight letter spacing" }
   },
   "textCases": {
     "capitalize": { "$type": "textCases", "$value": "capitalize", "$description": "Text case capitalize" },
