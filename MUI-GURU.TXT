@@ -1,0 +1,62 @@
+# DDS Token to MUI Theme Pipeline
+
+## Objective
+Transform `DDS Foundations.json` (DTCG primitives only) into a valid MUI `createTheme()` object using Style Dictionary and an adapter layer.
+
+---
+
+## Dev Review Plan
+
+### ✅ Current State
+- We have a valid `DDS Foundations.json` file in DTCG format
+- Primitives are correctly structured with `$value`, `$type`, etc.
+- No semantic or theme overrides yet
+
+---
+
+## 🔧 Required Implementation Steps
+
+### 1. **Transform Layer** (Style Dictionary)
+- [ ] Set up Style Dictionary with `@tokens-studio/sd-transforms`
+- [ ] Create `config/config.json` with transform group: `tokens-studio`
+- [ ] Create `build-tokens.js` to register transform and build output
+- [ ] Output file should be: `build/tokens.js` (or `.json` if preferred)
+- [ ] Confirm that output is flattened and usable (e.g., `.value` extracted)
+
+### 2. **Adapter Layer** (JS → MUI Theme)
+- [ ] Create `theme/adapter.js`
+- [ ] Write `mapTokensToMuiTheme(tokens)` to:
+  - Map `tokens.color.*` → `theme.palette.*`
+  - Map `tokens.font.*` → `theme.typography.*`
+  - Build `spacing(factor)` using `tokens.spacing.*`
+- [ ] Ensure output matches the shape expected by MUI `createTheme()`
+
+### 3. **Consumption Layer**
+- [ ] Use `createTheme(mapTokensToMuiTheme(tokens))` in app setup
+- [ ] Wrap app in `ThemeProvider` with the generated theme
+
+### 4. **Manual QA**
+- [ ] Verify tokens are resolving into actual theme values in the UI
+- [ ] Spot check primary color, base font family, spacing scale
+
+---
+
+## 🧪 Success Criteria
+- Style Dictionary builds without error
+- Output file has flattened usable tokens (no `$ref` or `$value` wrapping)
+- MUI theme compiles and renders as expected
+- No manual token duplication in application code
+
+---
+
+## 🛑 Out of Scope for This Phase
+- Semantic token layer
+- Light/dark theme structure
+- Theme switching logic
+- CI/CD integration
+- Multi-platform outputs (CSS, iOS, Android)
+
+---
+
+## Summary
+This phase is focused entirely on transforming raw primitives into a functional MUI theme. Once we have confidence in the pipeline, we can expand into semantics, theming, and automation.
