@@ -1,0 +1,63 @@
+{
+  "color": {
+    "base": {
+      "primary": {
+        "$value": "#007AFF",
+        "$type": "color",
+        "$description": "Primary brand color"
+      },
+      "secondary": {
+        "$value": "#5856D6",
+        "$type": "color",
+        "$description": "Secondary brand color"
+      },
+      "neutral": {
+        "100": {
+          "$value": "#FFFFFF",
+          "$type": "color",
+          "$description": "Lightest neutral color"
+        },
+        "200": {
+          "$value": "#F2F2F7",
+          "$type": "color",
+          "$description": "Light neutral color"
+        },
+        "300": {
+          "$value": "#E5E5EA",
+          "$type": "color",
+          "$description": "Medium light neutral color"
+        },
+        "400": {
+          "$value": "#D1D1D6",
+          "$type": "color",
+          "$description": "Medium neutral color"
+        },
+        "500": {
+          "$value": "#C7C7CC",
+          "$type": "color",
+          "$description": "Medium dark neutral color"
+        },
+        "600": {
+          "$value": "#8E8E93",
+          "$type": "color",
+          "$description": "Dark neutral color"
+        },
+        "700": {
+          "$value": "#636366",
+          "$type": "color",
+          "$description": "Darker neutral color"
+        },
+        "800": {
+          "$value": "#48484A",
+          "$type": "color",
+          "$description": "Very dark neutral color"
+        },
+        "900": {
+          "$value": "#3A3A3C",
+          "$type": "color",
+          "$description": "Darkest neutral color"
+        }
+      }
+    }
+  }
+} 
