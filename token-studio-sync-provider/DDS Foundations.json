@@ -1,10 +1,4 @@
 {
-  "Amanda": {
-    "sm": {
-      "$type": "borderRadius",
-      "$value": "4000px",
-      "$description": "This is a demo."
-    },
   "borderRadius": {
     "sm": {
       "$type": "borderRadius",
