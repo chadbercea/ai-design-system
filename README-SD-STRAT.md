@@ -10,12 +10,18 @@
   mapTokensToMuiTheme.js
   mapTokensToTailwindConfig.js
   mapTokensToV0Theme.js
+  __tests__/
+    mapTokensToMuiTheme.test.js
+    mapTokensToTailwindConfig.test.js
+    mapTokensToV0Theme.test.js
 /scripts/
   build-mui-theme.js
   build-tailwind-theme.js
+  build-v0-theme.js
 /build/
   mui/theme.js
   tailwind/theme.js
+  v0/theme.js
 ```
 
 ---
@@ -46,6 +52,17 @@
 - Apps should only import from `/build/`, never from `/tokens/` or `/adapters/`.
 - Document each mapping function and its intended consumer.
 - Automate the pipeline with scripts and CI/CD as needed.
+
+---
+
+## Testing
+- **Jest is configured for ESM.**
+- To run all tests:
+  ```bash
+  node --experimental-vm-modules node_modules/.bin/jest
+  ```
+- All mapping functions are covered by unit tests in `adapters/__tests__/`.
+- Tests use ESM `import/export` syntax throughout the codebase.
 
 ---
 

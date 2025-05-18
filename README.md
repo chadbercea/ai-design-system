@@ -93,15 +93,15 @@ Automated validation ensures all tokens are DTCG-compliant and follow project ru
 
 ---
 
-## Warning
-⚠️ Always validate JSON after using AI tools. These tools may silently modify token structure, remove descriptions, or break references.
+## Testing
 
----
-
-## References
-- [W3C DTCG](https://design-tokens.github.io/community-group/)
-- [Style Dictionary](https://amzn.github.io/style-dictionary/#/)
-- [MUI Theming](https://mui.com/material-ui/customization/theming/)
+- **Jest is configured for ESM.**
+- To run all tests:
+  ```bash
+  node --experimental-vm-modules node_modules/.bin/jest
+  ```
+- All mapping functions are covered by unit tests in `adapters/__tests__/`.
+- Tests use ESM `import/export` syntax throughout the codebase.
 
 ---
 
@@ -120,3 +120,66 @@ The mapping function (e.g., `mapTokensToMuiTheme`) is a custom JavaScript functi
 
 ### 4. Consumer (Library/Framework)
 The consumer is the end system that uses the mapped theme or config (e.g., MUI, Tailwind, Radix, etc.). Its purpose is to use the mapped theme/config to style your application or components. The consumer imports the generated theme/config and applies it using its own API (for example, `createTheme` for MUI).
+
+---
+
+## Warning
+⚠️ Always validate JSON after using AI tools. These tools may silently modify token structure, remove descriptions, or break references.
+
+---
+
+## References
+- [W3C DTCG](https://design-tokens.github.io/community-group/)
+- [Style Dictionary](https://amzn.github.io/style-dictionary/#/)
+- [MUI Theming](https://mui.com/material-ui/customization/theming/)
+
+## Future Enhancements
+
+### High Priority
+- Integration testing suite
+  - Cross-framework compatibility testing
+  - Build system validation
+  - Token transformation testing
+  - Adapter testing (MUI, Tailwind, V0)
+  - Visual consistency checks
+
+### Medium Priority
+- Additional build targets
+  - More framework adapters
+  - Additional output formats
+  - Custom build configurations
+- Adapter customization guidelines
+  - Documentation for creating new adapters
+  - Best practices for token mapping
+  - Performance optimization tips
+
+### Lower Priority
+- Visual regression testing
+  - Automated screenshot comparison
+  - Component-level visual testing
+  - Cross-browser testing
+- Community feedback mechanisms
+  - Issue templates
+  - Contribution guidelines
+  - User feedback collection
+- Additional framework adapters
+  - Vue.js
+  - Angular
+  - Svelte
+  - Other popular frameworks
+
+### Performance Optimizations
+- Build system improvements
+  - Parallel processing
+  - Incremental builds
+  - Better error handling
+- Cache system enhancements
+  - Distributed caching
+  - Cache compression
+  - Cache analytics
+
+### Documentation
+- Interactive examples
+- API documentation
+- Migration guides
+- Troubleshooting guides

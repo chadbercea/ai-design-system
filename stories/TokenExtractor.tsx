@@ -79,7 +79,6 @@ function extractMuiColorPrimitives() {
   const colorTokens: Record<string, string> = {};
   Object.entries(muiColorFamilies).forEach(([family, shades]) => {
     Object.entries(shades).forEach(([shade, value]) => {
-      // e.g., blue.50, red.900, etc.
       colorTokens[`${family}.${shade}`] = value;
     });
   });
@@ -158,7 +157,6 @@ function extractTokens(obj: Record<string, unknown>, parentPath = ''): TokenCate
     processValue(key, value, parentPath);
   });
 
-  // --- ADD ALL MUI COLOR PRIMITIVES ---
   const muiPrimitives = extractMuiColorPrimitives();
   tokens.color = { ...muiPrimitives, ...tokens.color };
 
@@ -246,13 +244,11 @@ export default function TokenExtractor() {
   const [tokenData, setTokenData] = useState<TokenData | null>(null);
 
   useEffect(() => {
-    // Create theme and extract tokens
     const theme = createTheme();
     const baseTokens = extractTokens(theme as unknown as Record<string, unknown>);
     const componentTokens = extractComponentTokens(theme);
     const relationships = generateRelationships(theme as unknown as Record<string, unknown>);
 
-    // Generate token data
     const data: TokenData = {
       raw: {
         base: baseTokens,
@@ -263,11 +259,7 @@ export default function TokenExtractor() {
     };
 
     setTokenData(data);
-    
-    // Save to localStorage
     localStorage.setItem('mui-tokens', JSON.stringify(data, null, 2));
-    
-    // Log to console
     console.log('MUI Tokens extracted:', data);
   }, []);
 
