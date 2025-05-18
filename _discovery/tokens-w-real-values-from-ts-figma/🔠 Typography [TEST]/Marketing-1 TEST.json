@@ -1,0 +1,28 @@
+{
+  "Font Family": {
+    "value": "{Font Family.Marketing}",
+    "type": "text"
+  },
+  "Marketing-1 TEST 2": {
+    "Font Family": {
+      "value": "{Font Family.Marketing}",
+      "type": "text"
+    },
+    "Font Size": {
+      "value": "{Font Size.Marketing-1}",
+      "type": "dimension"
+    },
+    "Font Weight": {
+      "value": "{Font Weight.Bold}",
+      "type": "dimension"
+    }
+  },
+  "Font Size": {
+    "value": "{Font Size.Marketing-1}",
+    "type": "dimension"
+  },
+  "Font Weight": {
+    "value": "{Font Weight.Black}",
+    "type": "dimension"
+  }
+}

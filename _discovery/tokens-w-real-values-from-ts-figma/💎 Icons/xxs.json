@@ -1,0 +1,14 @@
+{
+  "Stroke": {
+    "value": "0.078rem",
+    "type": "dimension"
+  },
+  "Size": {
+    "value": "0.75rem",
+    "type": "dimension"
+  },
+  "Spacing": {
+    "value": "0.125rem",
+    "type": "dimension"
+  }
+}

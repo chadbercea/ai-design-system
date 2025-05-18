@@ -1,0 +1,24 @@
+{
+  "fontWeights": {
+    "regular": {
+      "$type": "fontWeights",
+      "$value": "400",
+      "$description": "Font weight 400 (Regular)"
+    },
+    "semibold": {
+      "$type": "fontWeights",
+      "$value": "500",
+      "$description": "Font weight 500 (Semibold)"
+    },
+    "bold": {
+      "$type": "fontWeights",
+      "$value": "700",
+      "$description": "Font weight 700 (Bold)"
+    },
+    "black": {
+      "$type": "fontWeights",
+      "$value": "900",
+      "$description": "Font weight 900 (Black)"
+    }
+  }
+}

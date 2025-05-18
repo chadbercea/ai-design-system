@@ -1,0 +1,628 @@
+# Design System ESM Architecture Decision Record
+
+## Decision
+The project will maintain ESM (ECMAScript Modules) as the module system, with `"type": "module"` in package.json. All tools and libraries must be configured to use their ESM-compatible APIs rather than falling back to CommonJS.
+
+## Justification
+1. ESM is the modern JavaScript standard and future of module systems
+2. The project is already correctly configured with `"type": "module"` in package.json
+3. All major tools (Style Dictionary v5, Storybook) support ESM natively
+4. Switching to CommonJS would introduce unnecessary complexity and potential issues
+
+## Implementation Requirements
+
+### Core Dependencies (Latest LTS)
+- style-dictionary: ^5.0.0
+- @mui/material: ^5.15.0
+- react: ^18.2.0
+- storybook: ^8.6.14
+
+### Build Tools Configuration
+1. Style Dictionary v5
+   ```javascript
+   const SD = StyleDictionary.extend(config);
+   await SD.buildAllPlatforms();
+   ```
+
+2. Storybook 8
+   - Uses webpack5 with SWC compiler
+   - Configured for ESM in .storybook/
+
+### TypeScript Configuration
+- module: "ESNext"
+- moduleResolution: "Node"
+- esModuleInterop: true
+- All TypeScript files use ESM imports/exports
+
+### Project Structure
+- src/: Main source code (ESM)
+- scripts/: Build and utility scripts (.mjs)
+- tokens/: Design token definitions
+- build/: Generated token outputs
+- stories/: Storybook stories
+- config/: Build configurations
+
+### File Extensions
+- .mjs: Explicit ESM files (build scripts)
+- .ts/.tsx: TypeScript files (ESM)
+- .js: JavaScript files (ESM)
+
+## Impact
+- Ensures consistency across the project
+- Maintains future compatibility
+- Prevents unnecessary module system switching
+- Requires correct API mapping for each tool rather than system changes
+
+## Notes
+- When encountering ESM-related issues, focus on mapping the correct ESM API for each tool
+- Do not attempt to switch to CommonJS as a workaround
+- Document any ESM-specific configurations or requirements for each tool
+
+## Dependencies
+All dependencies must be ESM-compatible. Current stack:
+- React 18
+- Material-UI 5
+- Style Dictionary 5
+- Storybook 8
+- TypeScript 5
+
+## Build Process
+1. Token Generation (ESM)
+   ```bash
+   npm run build:tokens.mjs
+   ```
+
+2. Storybook (ESM)
+   ```bash
+   npm run storybook
+   ```
+
+## Build Order Dependencies
+1. Token Pipeline
+   ```mermaid
+   graph TD
+   A[Token Definitions] --> B[Style Dictionary Build]
+   B --> C[Token Validation]
+   C --> D[MUI Theme Generation]
+   D --> E[Storybook Build]
+   ```
+
+2. Required Build Sequence
+   - Token definitions must be built first
+   - Token validation must pass before theme generation
+   - Theme must be generated before Storybook build
+   - All builds must maintain ESM compatibility
+
+## Complete Style Dictionary Configuration
+1. Format Registration
+   ```javascript
+   StyleDictionary.registerFormat({
+     name: 'javascript/module',
+     formatter: function(dictionary, config) {
+       return `export default ${JSON.stringify(dictionary.allProperties, null, 2)};`;
+     }
+   });
+   ```
+
+2. Transform Registration
+   ```javascript
+   StyleDictionary.registerTransform({
+     name: 'size/rem',
+     type: 'value',
+     matcher: prop => prop.attributes.category === 'size',
+     transformer: prop => `${prop.value}rem`
+   });
+   ```
+
+3. Platform Configuration
+   ```javascript
+   const config = {
+     source: ['tokens/**/*.json'],
+     platforms: {
+       js: {
+         transformGroup: 'js',
+         buildPath: 'build/',
+         files: [{
+           destination: 'tokens.js',
+           format: 'javascript/module'
+         }]
+       }
+     }
+   };
+   ```
+
+## Environment Requirements
+1. System Dependencies
+   - Node.js >= 23.11.0
+   - npm >= 9.0.0
+   - Git >= 2.0.0
+   - Sufficient disk space for build artifacts
+
+2. Environment Variables
+   ```bash
+   NODE_ENV=development
+   NODE_OPTIONS="--experimental-modules"
+   ```
+
+3. Cross-Platform Considerations
+   - Use path.join() for file paths
+   - Use ESM-compatible file system operations
+   - Handle line endings consistently
+   - Use platform-agnostic glob patterns
+
+## Error Recovery Procedures
+1. Build Failure Recovery
+   ```bash
+   # 1. Clear build artifacts
+   rm -rf build/
+   
+   # 2. Clear cache
+   rm -rf .cache/
+   
+   # 3. Rebuild tokens
+   npm run build:tokens
+   
+   # 4. Validate tokens
+   npm run test:tokens
+   
+   # 5. Rebuild theme
+   npm run build:theme
+   ```
+
+2. State Recovery
+   - Maintain backup of last known good build
+   - Implement build artifact versioning
+   - Use Git for state tracking
+   - Document recovery procedures
+
+3. Rollback Procedures
+   ```bash
+   # 1. Checkout last known good state
+   git checkout <last-known-good-commit>
+   
+   # 2. Clear all generated files
+   rm -rf build/ .cache/ node_modules/
+   
+   # 3. Reinstall dependencies
+   npm install
+   
+   # 4. Rebuild from clean state
+   npm run build:tokens
+   ```
+
+## Error Handling
+If a tool or dependency doesn't support ESM:
+1. Check for ESM-compatible alternatives
+2. Use dynamic imports if necessary
+3. Never fall back to CommonJS
+4. Document the issue and workaround in this file
+
+## Critical Nuances
+
+### Build Cache System
+```javascript
+class BuildCache {
+  constructor(options = {}) {
+    this.cacheDir = options.cacheDir || '.cache';
+    this.maxAge = options.maxAge || 24 * 60 * 60 * 1000; // 24 hours
+    this.cache = new Map();
+  }
+
+  async get(key) {
+    const cached = this.cache.get(key);
+    if (!cached) return null;
+    if (Date.now() - cached.timestamp > this.maxAge) {
+      this.cache.delete(key);
+      return null;
+    }
+    return cached.data;
+  }
+
+  async set(key, data) {
+    this.cache.set(key, {
+      data,
+      timestamp: Date.now()
+    });
+  }
+
+  async invalidate(pattern) {
+    for (const key of this.cache.keys()) {
+      if (key.match(pattern)) {
+        this.cache.delete(key);
+      }
+    }
+  }
+
+  async clear() {
+    this.cache.clear();
+  }
+}
+```
+
+### Storybook Configuration
+- Configuration files use TypeScript (`.ts` extension)
+- ESM settings required in `.storybook/main.ts`:
+  ```typescript
+  import type { StorybookConfig } from "@storybook/react-webpack5";
+  
+  const config: StorybookConfig = {
+    framework: {
+      name: "@storybook/react-webpack5",
+      options: {}
+    }
+  };
+  
+  export default config;
+  ```
+
+### Style Dictionary Transforms
+- Transform groups must be registered before use:
+  ```javascript
+  StyleDictionary.registerTransformGroup({
+    name: 'js',
+    transforms: ['attribute/cti', 'name/cti/camel', 'color/hex', 'size/rem']
+  });
+  ```
+- All transforms must be ESM-compatible
+- Transform registration must happen before build
+
+### Path Resolution
+- TypeScript path aliases must be ESM-compatible:
+  ```json
+  {
+    "paths": {
+      "@/*": ["src/*"],
+      "@tokens/*": ["build/*"]
+    }
+  }
+  ```
+- All imports must use these aliases consistently
+
+## Error Prevention
+1. Always use ESM-compatible glob patterns
+2. Register Style Dictionary transforms before use
+3. Use TypeScript for configuration files
+4. Maintain consistent path aliases
+5. Never mix CommonJS and ESM patterns
+
+## Validation Requirements
+1. ESM Compatibility Checks
+   - Run `node --check` on all .mjs files
+   - Verify all imports use ESM syntax
+   - Check for CommonJS patterns in dependencies
+   - Validate dynamic imports
+
+2. Testing Requirements
+   - All tests must run in ESM context
+   - Jest configuration must support ESM
+   - Test files must use .mjs extension
+   - Mock implementations must be ESM-compatible
+
+## Debugging ESM Issues
+1. Common Problems
+   - Import/export syntax errors
+   - Module resolution failures
+   - Dynamic import issues
+   - Package.json configuration
+
+2. Debug Tools
+   - Node.js --trace-warnings
+   - Import map validation
+   - Module resolution tracing
+   - Package.json exports verification
+
+## Dynamic Imports
+1. Usage Requirements
+   ```javascript
+   const module = await import('./module.js');
+   ```
+2. Error Handling
+   ```javascript
+   try {
+     const module = await import('./module.js');
+   } catch (error) {
+     console.error('Dynamic import failed:', error);
+   }
+   ```
+
+## Node.js Requirements
+- Minimum version: 23.11.0
+- Required flags: --experimental-modules
+- Package manager: npm >= 9.0.0
+- Build tools: Latest LTS versions
+
+## Complete Style Dictionary Transforms
+```javascript
+// Required transform groups
+StyleDictionary.registerTransformGroup({
+  name: 'js',
+  transforms: [
+    'attribute/cti',
+    'name/cti/camel',
+    'color/hex',
+    'size/rem',
+    'time/seconds',
+    'content/icon',
+    'asset/base64'
+  ]
+});
+
+StyleDictionary.registerTransformGroup({
+  name: 'css',
+  transforms: [
+    'attribute/cti',
+    'name/cti/kebab',
+    'color/css',
+    'size/rem',
+    'time/seconds',
+    'content/icon',
+    'asset/base64'
+  ]
+});
+
+StyleDictionary.registerTransformGroup({
+  name: 'scss',
+  transforms: [
+    'attribute/cti',
+    'name/cti/kebab',
+    'color/hex',
+    'size/rem',
+    'time/seconds',
+    'content/icon',
+    'asset/base64'
+  ]
+});
+```
+
+## Testing Strategy
+1. ESM Test Environment
+   ```javascript
+   // jest.config.mjs
+   export default {
+     transform: {
+       '^.+\\.m?js$': 'babel-jest',
+       '^.+\\.tsx?$': 'ts-jest'
+     },
+     moduleFileExtensions: ['mjs', 'js', 'ts', 'tsx'],
+     testEnvironment: 'node',
+     extensionsToTreatAsEsm: ['.mjs', '.ts'],
+     moduleNameMapper: {
+       '^@/(.*)$': '<rootDir>/src/$1',
+       '^@tokens/(.*)$': '<rootDir>/build/$1'
+     }
+   };
+   ```
+
+2. Test Coverage Requirements
+   - Minimum 80% coverage for token transformations
+   - 100% coverage for critical build paths
+   - All ESM imports must be tested
+   - All dynamic imports must have error handling tests
+
+3. ESM-Specific Test Patterns
+   ```javascript
+   // Example test for ESM dynamic import
+   describe('Dynamic Import', () => {
+     it('should handle import errors', async () => {
+       await expect(import('./nonexistent.js')).rejects.toThrow();
+     });
+   });
+   ```
+
+## Performance Considerations
+1. Build Optimization
+   - Use SWC for faster TypeScript compilation
+   - Implement incremental builds
+   - Cache token transformations
+   - Parallel processing for independent tasks
+
+2. Memory Management
+   ```javascript
+   // Memory-efficient token processing
+   const processTokens = async (tokens) => {
+     const chunkSize = 1000;
+     for (let i = 0; i < tokens.length; i += chunkSize) {
+       const chunk = tokens.slice(i, i + chunkSize);
+       await processChunk(chunk);
+     }
+   };
+   ```
+
+3. Caching Strategy
+   - Cache token validation results
+   - Cache build artifacts
+   - Implement stale-while-revalidate pattern
+   - Use content-based cache keys
+
+4. Resource Requirements
+   - Minimum 4GB RAM for development
+   - 8GB RAM recommended for production builds
+   - SSD storage recommended
+   - Multi-core CPU for parallel processing
+
+## Security Considerations
+1. ESM-Specific Security
+   - Validate all dynamic imports
+   - Sanitize import paths
+   - Prevent directory traversal
+   - Implement import maps for controlled resolution
+
+2. Dependency Security
+   ```javascript
+   // package.json
+   {
+     "overrides": {
+       "style-dictionary": "^5.0.0",
+       "@mui/material": "^5.15.0"
+     },
+     "resolutions": {
+       "**/glob": "^10.0.0"
+     }
+   }
+   ```
+
+3. Access Controls
+   - Restrict file system access
+   - Implement read-only token definitions
+   - Control build artifact access
+   - Secure cache storage
+
+4. Validation Requirements
+   - Validate all token inputs
+   - Sanitize build outputs
+   - Verify file integrity
+   - Implement checksums for artifacts
+
+## Version Compatibility Matrix
+1. Core Dependencies
+   ```
+   Node.js 23.11.0
+   ├── style-dictionary 5.0.0
+   │   ├── @mui/material 5.15.0
+   │   └── react 18.2.0
+   ├── storybook 8.6.14
+   └── typescript 5.0.0
+   ```
+
+2. Build Tools
+   ```
+   npm 9.x.x
+   ├── jest 29.x.x
+   ├── babel-jest 29.x.x
+   └── ts-jest 29.x.x
+   ```
+
+3. Known Working Combinations
+   - Node.js 23.11.0 + style-dictionary 5.0.0 + @mui/material 5.15.0
+   - Node.js 23.11.0 + storybook 8.6.14 + typescript 5.0.0
+   - Node.js 23.11.0 + jest 29.x.x + babel-jest 29.x.x
+
+## Build Pipeline Documentation
+1. Build Triggers
+   - Token file changes
+   - Style Dictionary config changes
+   - Transform registration changes
+   - Platform configuration changes
+
+2. Partial Builds
+   ```javascript
+   // Example of partial build configuration
+   const buildConfig = {
+     platforms: {
+       js: {
+         // Only rebuild JS platform
+         transformGroup: 'js',
+         buildPath: 'build/',
+         files: [{
+           destination: 'tokens.js',
+           format: 'javascript/module'
+         }]
+       }
+     }
+   };
+   const SD = StyleDictionary.extend(buildConfig);
+   await SD.buildAllPlatforms();
+   ```
+
+3. Build Conditions
+   - Full build: All token files changed
+   - Partial build: Only specific platform files changed
+   - No build: No relevant files changed
+   - Forced build: Manual trigger with --force flag
+
+4. Build State Management
+   ```javascript
+   // Build state tracking
+   const buildState = {
+     lastBuild: Date.now(),
+     changedFiles: new Set(),
+     buildType: 'full' | 'partial' | 'none',
+     platforms: new Set(['js', 'css', 'scss'])
+   };
+   ```
+
+## Migration Guide
+1. CommonJS to ESM Conversion
+   ```javascript
+   // Before (CommonJS)
+   const StyleDictionary = require('style-dictionary');
+   module.exports = { ... };
+
+   // After (ESM)
+   import StyleDictionary from 'style-dictionary';
+   export default { ... };
+   ```
+
+2. Import/Export Patterns
+   ```javascript
+   // Named exports
+   export const transform = { ... };
+   export const format = { ... };
+
+   // Default exports
+   export default { ... };
+
+   // Dynamic imports
+   const module = await import('./module.js');
+   ```
+
+3. File Extension Changes
+   - .js → .mjs (for explicit ESM)
+   - .js → .ts (for TypeScript)
+   - .jsx → .tsx (for TypeScript React)
+
+4. Package.json Updates
+   ```json
+   {
+     "type": "module",
+     "exports": {
+       ".": {
+         "import": "./dist/index.mjs",
+         "require": "./dist/index.cjs"
+       }
+     }
+   }
+   ```
+
+## Error Message Documentation
+1. Common ESM Errors
+   ```
+   Error: Cannot use import statement outside a module
+   Solution: Add "type": "module" to package.json or use .mjs extension
+
+   Error: Cannot find module 'X' imported from 'Y'
+   Solution: Check file extension and path resolution
+
+   Error: Dynamic import() is not supported
+   Solution: Update Node.js version or use static imports
+   ```
+
+2. Build Pipeline Errors
+   ```
+   Error: Transform group 'X' not found
+   Solution: Register transform group before use
+
+   Error: Invalid token format
+   Solution: Check token structure and validation
+
+   Error: Cache invalidation failed
+   Solution: Clear cache and rebuild
+   ```
+
+3. TypeScript Errors
+   ```
+   Error: TS2307: Cannot find module 'X' or its corresponding type declarations
+   Solution: Add type declarations or update tsconfig.json
+
+   Error: TS1371: This import is never used as a value
+   Solution: Use type-only imports for types
+   ```
+
+4. Storybook Errors
+   ```
+   Error: Failed to load .storybook/main.js
+   Solution: Convert to .ts and use ESM syntax
+
+   Error: Module not found: Error: Can't resolve 'X'
+   Solution: Check path aliases and module resolution
+   ```

@@ -1,0 +1,19 @@
+{
+  "textCase": {
+    "capitalize": {
+      "$type": "textCase",
+      "$value": "capitalize",
+      "$description": "Text case capitalize"
+    },
+    "none": {
+      "$type": "textCase",
+      "$value": "none",
+      "$description": "Text case none"
+    },
+    "uppercase": {
+      "$type": "textCase",
+      "$value": "uppercase",
+      "$description": "Text case uppercase"
+    }
+  }
+}

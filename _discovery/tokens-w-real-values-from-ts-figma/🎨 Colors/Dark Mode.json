@@ -1,0 +1,986 @@
+{
+  "Grey": {
+    "50": {
+      "value": "#0f121b",
+      "type": "color"
+    },
+    "100": {
+      "value": "#1e2129",
+      "type": "color"
+    },
+    "200": {
+      "value": "#2c333f",
+      "type": "color"
+    },
+    "300": {
+      "value": "#434c5f",
+      "type": "color"
+    },
+    "400": {
+      "value": "#566581",
+      "type": "color"
+    },
+    "500": {
+      "value": "#6c7e9d",
+      "type": "color"
+    },
+    "600": {
+      "value": "#8b99b2",
+      "type": "color"
+    },
+    "700": {
+      "value": "#a9b4c6",
+      "type": "color"
+    },
+    "800": {
+      "value": "#c8cfda",
+      "type": "color"
+    },
+    "900": {
+      "value": "#e7eaef",
+      "type": "color"
+    },
+    "950": {
+      "value": "#f9fafb",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "#6c7e9d1f",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "#6c7e9d29",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "#6c7e9d3d",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "#6c7e9d52",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "#6c7e9d8f",
+      "type": "color"
+    }
+  },
+  "Green": {
+    "50": {
+      "value": "#11371a",
+      "type": "color"
+    },
+    "100": {
+      "value": "#174b32",
+      "type": "color"
+    },
+    "200": {
+      "value": "#216e4b",
+      "type": "color"
+    },
+    "300": {
+      "value": "#2d9568",
+      "type": "color"
+    },
+    "400": {
+      "value": "#38bd7d",
+      "type": "color"
+    },
+    "500": {
+      "value": "#5ace8c",
+      "type": "color"
+    },
+    "600": {
+      "value": "#81d9a2",
+      "type": "color"
+    },
+    "700": {
+      "value": "#a9e5bd",
+      "type": "color"
+    },
+    "800": {
+      "value": "#d0f1d7",
+      "type": "color"
+    },
+    "900": {
+      "value": "#ebf9ee",
+      "type": "color"
+    },
+    "950": {
+      "value": "#f5fcf7",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "#38bd7d1f",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "#38bd7d29",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "#38bd7d3d",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "#38bd7d52",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "#38bd7d8f",
+      "type": "color"
+    }
+  },
+  "Blue": {
+    "50": {
+      "value": "#001847",
+      "type": "color"
+    },
+    "100": {
+      "value": "#001d56",
+      "type": "color"
+    },
+    "200": {
+      "value": "#002978",
+      "type": "color"
+    },
+    "300": {
+      "value": "#003db5",
+      "type": "color"
+    },
+    "400": {
+      "value": "#0d4df2",
+      "type": "color"
+    },
+    "500": {
+      "value": "#2560ff",
+      "type": "color"
+    },
+    "600": {
+      "value": "#4b83f1",
+      "type": "color"
+    },
+    "700": {
+      "value": "#7ba4f4",
+      "type": "color"
+    },
+    "800": {
+      "value": "#aac4f8",
+      "type": "color"
+    },
+    "900": {
+      "value": "#d9e5fc",
+      "type": "color"
+    },
+    "950": {
+      "value": "#f6f8fe",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "#2560ff1f",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "#2560ff29",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "#2560ff3d",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "#2560ff52",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "#2560ff8f",
+      "type": "color"
+    }
+  },
+  "Violet": {
+    "50": {
+      "value": "#250050",
+      "type": "color"
+    },
+    "100": {
+      "value": "#370076",
+      "type": "color"
+    },
+    "200": {
+      "value": "#450093",
+      "type": "color"
+    },
+    "300": {
+      "value": "#5700bb",
+      "type": "color"
+    },
+    "400": {
+      "value": "#6d00eb",
+      "type": "color"
+    },
+    "500": {
+      "value": "#7d2eff",
+      "type": "color"
+    },
+    "600": {
+      "value": "#9860ff",
+      "type": "color"
+    },
+    "700": {
+      "value": "#ae82ff",
+      "type": "color"
+    },
+    "800": {
+      "value": "#d3b7ff",
+      "type": "color"
+    },
+    "900": {
+      "value": "#efe0ff",
+      "type": "color"
+    },
+    "950": {
+      "value": "#fcf9ff",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "#7d2eff1f",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "#7d2eff29",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "#7d2eff3d",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "#7d2eff52",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "#7d2eff8f",
+      "type": "color"
+    }
+  },
+  "Pink": {
+    "50": {
+      "value": "#550033",
+      "type": "color"
+    },
+    "100": {
+      "value": "#6d0051",
+      "type": "color"
+    },
+    "200": {
+      "value": "#830069",
+      "type": "color"
+    },
+    "300": {
+      "value": "#ab0089",
+      "type": "color"
+    },
+    "400": {
+      "value": "#c918ab",
+      "type": "color"
+    },
+    "500": {
+      "value": "#ed49c7",
+      "type": "color"
+    },
+    "600": {
+      "value": "#fc71dc",
+      "type": "color"
+    },
+    "700": {
+      "value": "#ffa6f0",
+      "type": "color"
+    },
+    "800": {
+      "value": "#ffc9f6",
+      "type": "color"
+    },
+    "900": {
+      "value": "#ffe6fb",
+      "type": "color"
+    },
+    "950": {
+      "value": "#fff7fe",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "#c918ab1f",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "#c918ab29",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "#c918ab3d",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "#c918ab52",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "#c918ab8f",
+      "type": "color"
+    }
+  },
+  "Red": {
+    "50": {
+      "value": "#6e0000",
+      "type": "color"
+    },
+    "100": {
+      "value": "#890000",
+      "type": "color"
+    },
+    "200": {
+      "value": "#b30909",
+      "type": "color"
+    },
+    "300": {
+      "value": "#e40c2c",
+      "type": "color"
+    },
+    "400": {
+      "value": "#f42f39",
+      "type": "color"
+    },
+    "500": {
+      "value": "#ff5757",
+      "type": "color"
+    },
+    "600": {
+      "value": "#ff7575",
+      "type": "color"
+    },
+    "700": {
+      "value": "#ffa8a8",
+      "type": "color"
+    },
+    "800": {
+      "value": "#ffc2c2",
+      "type": "color"
+    },
+    "900": {
+      "value": "#ffdfdf",
+      "type": "color"
+    },
+    "950": {
+      "value": "#fff5f5",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "#f42f391f",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "#f42f3929",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "#f42f393d",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "#f42f3952",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "#f42f398f",
+      "type": "color"
+    }
+  },
+  "Yellow": {
+    "50": {
+      "value": "#643700",
+      "type": "color"
+    },
+    "100": {
+      "value": "#854900",
+      "type": "color"
+    },
+    "200": {
+      "value": "#b86e00",
+      "type": "color"
+    },
+    "300": {
+      "value": "#eb9c00",
+      "type": "color"
+    },
+    "400": {
+      "value": "#f8b60f",
+      "type": "color"
+    },
+    "500": {
+      "value": "#ffcc48",
+      "type": "color"
+    },
+    "600": {
+      "value": "#ffda7a",
+      "type": "color"
+    },
+    "700": {
+      "value": "#ffe8ad",
+      "type": "color"
+    },
+    "800": {
+      "value": "#fff1cc",
+      "type": "color"
+    },
+    "900": {
+      "value": "#fff5db",
+      "type": "color"
+    },
+    "950": {
+      "value": "#fffbf0",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "#eb9c001f",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "#eb9c0029",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "#eb9c001f",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "#eb9c0052",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "#eb9c008f",
+      "type": "color"
+    }
+  },
+  "Background": {
+    "Primary": {
+      "value": "{Grey.50}",
+      "type": "color"
+    },
+    "Secondary": {
+      "value": "{Black.Main}",
+      "type": "color"
+    },
+    "paper-elevation-0": {
+      "value": "{Grey.50}",
+      "type": "color"
+    },
+    "paper-elevation-1": {
+      "value": "#13191f",
+      "type": "color"
+    },
+    "paper-elevation-2": {
+      "value": "#161c24",
+      "type": "color"
+    },
+    "paper-elevation-4": {
+      "value": "#23272d",
+      "type": "color"
+    },
+    "paper-elevation-3": {
+      "value": "{Grey.100}",
+      "type": "color"
+    },
+    "Paper": {
+      "value": "{Grey.50}",
+      "type": "color"
+    }
+  },
+  "White": {
+    "Main": {
+      "value": "{White.100%}",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "{White.24%}",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "{White.12%}",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "{White.32%}",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "{White.16%}",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "{White.56%}",
+      "type": "color"
+    },
+    "Disabled": {
+      "value": "{White.32%}",
+      "type": "color"
+    },
+    "100%": {
+      "value": "#ffffff",
+      "type": "color"
+    },
+    "80%": {
+      "value": "#ffffffcc",
+      "type": "color"
+    },
+    "64%": {
+      "value": "#ffffffa3",
+      "type": "color"
+    },
+    "56%": {
+      "value": "#ffffff8f",
+      "type": "color"
+    },
+    "40%": {
+      "value": "#ffffff66",
+      "type": "color"
+    },
+    "32%": {
+      "value": "#ffffff52",
+      "type": "color"
+    },
+    "24%": {
+      "value": "#ffffff3d",
+      "type": "color"
+    },
+    "8%": {
+      "value": "#ffffff14",
+      "type": "color"
+    },
+    "4%": {
+      "value": "#ffffff0a",
+      "type": "color"
+    },
+    "12%": {
+      "value": "#ffffff1f",
+      "type": "color"
+    },
+    "16%": {
+      "value": "#ffffff29",
+      "type": "color"
+    }
+  },
+  "Black": {
+    "Main": {
+      "value": "{Black.100%}",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "{Black.12%}",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "{Black.16%}",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "{Black.12%}",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "{Black.32%}",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "{Black.56%}",
+      "type": "color"
+    },
+    "Disabled": {
+      "value": "{Black.32%}",
+      "type": "color"
+    },
+    "100%": {
+      "value": "#000000",
+      "type": "color"
+    },
+    "80%": {
+      "value": "#000000cc",
+      "type": "color"
+    },
+    "64%": {
+      "value": "#000000a3",
+      "type": "color"
+    },
+    "56%": {
+      "value": "#0000008f",
+      "type": "color"
+    },
+    "40%": {
+      "value": "#00000066",
+      "type": "color"
+    },
+    "32%": {
+      "value": "#00000052",
+      "type": "color"
+    },
+    "24%": {
+      "value": "#0000003d",
+      "type": "color"
+    },
+    "16%": {
+      "value": "#00000029",
+      "type": "color"
+    },
+    "12%": {
+      "value": "#0000001f",
+      "type": "color"
+    },
+    "8%": {
+      "value": "#00000014",
+      "type": "color"
+    },
+    "4%": {
+      "value": "#0000000a",
+      "type": "color"
+    }
+  },
+  "Black↔White Swap": {
+    "Main": {
+      "value": "{White.Main}",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "{White.Hover}",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "{White.Selected}",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "{White.Focus}",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "{White.FocusVisible}",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "{White.56%}",
+      "type": "color"
+    },
+    "Disabled": {
+      "value": "{White.32%}",
+      "type": "color"
+    },
+    "100%": {
+      "value": "{White.100%}",
+      "type": "color"
+    },
+    "80%": {
+      "value": "{White.80%}",
+      "type": "color"
+    },
+    "64%": {
+      "value": "{White.64%}",
+      "type": "color"
+    },
+    "56%": {
+      "value": "{White.56%}",
+      "type": "color"
+    },
+    "40%": {
+      "value": "{White.40%}",
+      "type": "color"
+    },
+    "32%": {
+      "value": "{White.32%}",
+      "type": "color"
+    },
+    "24%": {
+      "value": "{White.24%}",
+      "type": "color"
+    },
+    "16%": {
+      "value": "{White.16%}",
+      "type": "color"
+    },
+    "12%": {
+      "value": "{White.12%}",
+      "type": "color"
+    },
+    "8%": {
+      "value": "{White.8%}",
+      "type": "color"
+    },
+    "4%": {
+      "value": "{White.4%}",
+      "type": "color"
+    }
+  },
+  "White↔Black Swap": {
+    "Main": {
+      "value": "{Black.Main}",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "{Black.Hover}",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "{Black.Selected}",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "{Black.Focus}",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "{Black.FocusVisible}",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "{Black.OutlinedBorder}",
+      "type": "color"
+    },
+    "Disabled": {
+      "value": "{Black.Disabled}",
+      "type": "color"
+    },
+    "100%": {
+      "value": "{Black.100%}",
+      "type": "color"
+    },
+    "80%": {
+      "value": "{Black.80%}",
+      "type": "color"
+    },
+    "64%": {
+      "value": "{Black.64%}",
+      "type": "color"
+    },
+    "56%": {
+      "value": "{Black.56%}",
+      "type": "color"
+    },
+    "40%": {
+      "value": "{Black.40%}",
+      "type": "color"
+    },
+    "32%": {
+      "value": "{Black.32%}",
+      "type": "color"
+    },
+    "24%": {
+      "value": "{Black.24%}",
+      "type": "color"
+    },
+    "16%": {
+      "value": "{Black.16%}",
+      "type": "color"
+    },
+    "12%": {
+      "value": "{Black.12%}",
+      "type": "color"
+    },
+    "8%": {
+      "value": "{Black.8%}",
+      "type": "color"
+    },
+    "4%": {
+      "value": "{Black.4%}",
+      "type": "color"
+    }
+  },
+  "Components": {
+    "Tooltip": {
+      "Tooltip": {
+        "value": "{Grey.300}",
+        "type": "color"
+      }
+    },
+    "Vulnerability Chip": {
+      "Critical": {
+        "value": "{Red.200}",
+        "type": "color"
+      },
+      "High": {
+        "value": "{Orange.300}",
+        "type": "color"
+      },
+      "Medium": {
+        "value": "{Yellow.400}",
+        "type": "color"
+      },
+      "Low": {
+        "value": "{Yellow.600}",
+        "type": "color"
+      },
+      "Unspecified": {
+        "value": "{Grey.200}",
+        "type": "color"
+      }
+    },
+    "Button": {
+      "Primary": {
+        "value": "{Blue.400}",
+        "type": "color"
+      },
+      "Secondary": {
+        "value": "{Grey.400}",
+        "type": "color"
+      },
+      "Error": {
+        "value": "{Red.400}",
+        "type": "color"
+      },
+      "Premium": {
+        "value": "{Violet.400}",
+        "type": "color"
+      },
+      "White": {
+        "value": "{White.Main}",
+        "type": "color"
+      },
+      "Warning": {
+        "value": "{Yellow.200}",
+        "type": "color"
+      },
+      "Success": {
+        "value": "{Green.300}",
+        "type": "color"
+      }
+    }
+  },
+  "Teal": {
+    "50": {
+      "value": "#093d3d",
+      "type": "color"
+    },
+    "100": {
+      "value": "#125555",
+      "type": "color"
+    },
+    "200": {
+      "value": "#187473",
+      "type": "color"
+    },
+    "300": {
+      "value": "#2c9ea0",
+      "type": "color"
+    },
+    "400": {
+      "value": "#1bbdbf",
+      "type": "color"
+    },
+    "500": {
+      "value": "#2fd0d2",
+      "type": "color"
+    },
+    "600": {
+      "value": "#6adcde",
+      "type": "color"
+    },
+    "700": {
+      "value": "#a0e5e8",
+      "type": "color"
+    },
+    "800": {
+      "value": "#c3f0f1",
+      "type": "color"
+    },
+    "900": {
+      "value": "#dff6f6",
+      "type": "color"
+    },
+    "950": {
+      "value": "#f3fcfc",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "#1bbdbf1f",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "#1bbdbf29",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "#1bbdbf3d",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "#1bbdbf52",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "#1bbdbf8f",
+      "type": "color"
+    }
+  },
+  "Orange": {
+    "50": {
+      "value": "#5e2800",
+      "type": "color"
+    },
+    "100": {
+      "value": "#893a01",
+      "type": "color"
+    },
+    "200": {
+      "value": "#ad4800",
+      "type": "color"
+    },
+    "300": {
+      "value": "#da5c00",
+      "type": "color"
+    },
+    "400": {
+      "value": "#ff6b00",
+      "type": "color"
+    },
+    "500": {
+      "value": "#ff8731",
+      "type": "color"
+    },
+    "600": {
+      "value": "#ffa96b",
+      "type": "color"
+    },
+    "700": {
+      "value": "#ffc499",
+      "type": "color"
+    },
+    "800": {
+      "value": "#ffd8bb",
+      "type": "color"
+    },
+    "900": {
+      "value": "#ffe9d9",
+      "type": "color"
+    },
+    "950": {
+      "value": "#fff9f5",
+      "type": "color"
+    },
+    "Hover": {
+      "value": "#ff6b001f",
+      "type": "color"
+    },
+    "Selected": {
+      "value": "#ff6b0029",
+      "type": "color"
+    },
+    "Focus": {
+      "value": "#ff6b001f",
+      "type": "color"
+    },
+    "FocusVisible": {
+      "value": "#ff6b0052",
+      "type": "color"
+    },
+    "OutlinedBorder": {
+      "value": "#ff6b008f",
+      "type": "color"
+    }
+  }
+}

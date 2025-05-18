@@ -1,0 +1,97 @@
+{
+  "color.primary": {
+    "$type": "color",
+    "$value": "#ff0000",
+    "$description": "Primary brand color"
+  },
+  "color.secondary": {
+    "$type": "color",
+    "$value": "#00ff00",
+    "$description": "Secondary brand color"
+  },
+  "spacing.small": {
+    "$type": "spacing",
+    "$value": "8px",
+    "$description": "Small spacing value"
+  },
+  "spacing.medium": {
+    "$type": "spacing",
+    "$value": "16px",
+    "$description": "Medium spacing value"
+  },
+  "spacing.large": {
+    "$type": "spacing",
+    "$value": "24px",
+    "$description": "Large spacing value"
+  },
+  "fontSize.small": {
+    "$type": "fontSizes",
+    "$value": "12px",
+    "$description": "Small font size"
+  },
+  "fontSize.medium": {
+    "$type": "fontSizes",
+    "$value": "16px",
+    "$description": "Medium font size"
+  },
+  "fontSize.large": {
+    "$type": "fontSizes",
+    "$value": "24px",
+    "$description": "Large font size"
+  },
+  "fontWeight.normal": {
+    "$type": "fontWeights",
+    "$value": "400",
+    "$description": "Normal font weight"
+  },
+  "fontWeight.bold": {
+    "$type": "fontWeights",
+    "$value": "700",
+    "$description": "Bold font weight"
+  },
+  "lineHeight.normal": {
+    "$type": "lineHeight",
+    "$value": "1.5",
+    "$description": "Normal line height"
+  },
+  "lineHeight.tight": {
+    "$type": "lineHeight",
+    "$value": "1.2",
+    "$description": "Tight line height"
+  },
+  "borderRadius.small": {
+    "$type": "borderRadius",
+    "$value": "4px",
+    "$description": "Small border radius"
+  },
+  "borderRadius.medium": {
+    "$type": "borderRadius",
+    "$value": "8px",
+    "$description": "Medium border radius"
+  },
+  "borderWidth.thin": {
+    "$type": "borderWidth",
+    "$value": "1px",
+    "$description": "Thin border width"
+  },
+  "borderWidth.thick": {
+    "$type": "borderWidth",
+    "$value": "2px",
+    "$description": "Thick border width"
+  },
+  "opacity.half": {
+    "$type": "opacity",
+    "$value": "50%",
+    "$description": "50% opacity"
+  },
+  "duration.fast": {
+    "$type": "duration",
+    "$value": "200ms",
+    "$description": "Fast animation duration"
+  },
+  "duration.slow": {
+    "$type": "duration",
+    "$value": "400ms",
+    "$description": "Slow animation duration"
+  }
+} 

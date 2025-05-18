@@ -1,0 +1,24 @@
+{
+  "fontFamilies": {
+    "poppins": {
+      "$type": "fontFamilies",
+      "$value": "Poppins",
+      "$description": "Poppins font family"
+    },
+    "inter": {
+      "$type": "fontFamilies",
+      "$value": "Inter",
+      "$description": "Inter font family"
+    },
+    "roboto-mono": {
+      "$type": "fontFamilies",
+      "$value": "Roboto Mono",
+      "$description": "Roboto Mono font family"
+    },
+    "roboto": {
+      "$type": "fontFamilies",
+      "$value": "Roboto",
+      "$description": "Roboto font family"
+    }
+  }
+}
