@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Link, Typography, Box } from '@mui/material';
+import type { LinkProps } from '@mui/material';
 
 const meta = {
   title: 'MUI/Navigation/Link',
@@ -45,7 +46,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const LinkWrapper = (args: any) => (
+const LinkWrapper = (args: LinkProps) => (
   <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
     <Link href="#" {...args}>
       Link

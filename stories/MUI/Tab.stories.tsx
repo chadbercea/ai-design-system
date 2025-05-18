@@ -11,6 +11,7 @@ import {
   Favorite as FavoriteIcon,
   PersonPin as PersonPinIcon,
 } from '@mui/icons-material';
+import type { TabProps } from '@mui/material';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -94,7 +95,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TabWrapper = (args: any) => {
+const TabWrapper = (args: TabProps) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {

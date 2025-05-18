@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Box, Typography, Paper } from '@mui/material';
 import type { Meta, StoryObj } from '@storybook/react';
+import type { GridProps } from '@mui/material';
 
 const meta = {
   title: 'MUI/Layout/Grid',
@@ -43,7 +44,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const GridDemo = (args: any) => (
+const GridDemo = (args: GridProps) => (
   <Grid container spacing={2} {...args}>
     <Grid item xs={6}>
       <Box sx={{ bgcolor: 'primary.main', color: '#fff', p: 2 }}>
@@ -58,7 +59,7 @@ const GridDemo = (args: any) => (
   </Grid>
 );
 
-const GridWrapper = (args: any) => (
+const GridWrapper = (args: GridProps) => (
   <Box sx={{ flexGrow: 1, width: '100%', maxWidth: 800 }}>
     <Grid {...args}>
       {[0, 1, 2, 3, 4, 5].map((value) => (

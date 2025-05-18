@@ -11,6 +11,7 @@ import {
   Divider,
   Box,
 } from '@mui/material';
+import type { ListProps } from '@mui/material';
 import {
   Inbox as InboxIcon,
   Drafts as DraftsIcon,
@@ -59,7 +60,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const ListWrapper = (args: any) => (
+const ListWrapper = (args: ListProps) => (
   <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
     <List {...args}>
       <ListItem disablePadding>
