@@ -13,6 +13,7 @@ import {
   Checkbox,
   Box,
 } from '@mui/material';
+import type { TablePaginationProps } from '@mui/material';
 
 interface Data {
   id: number;
@@ -287,7 +288,7 @@ const PaginatedTableWrapper = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
-  const handleChangePage = (event: unknown, newPage: number) => {
+  const handleChangePage = (event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
     setPage(newPage);
   };
 

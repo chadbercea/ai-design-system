@@ -82,17 +82,17 @@ const BadgeWrapper = (args: BadgeProps) => (
 
 const IconBadgesDemo = () => (
   <Stack direction="row" spacing={2}>
-    <IconButton size="large">
+    <IconButton size="large" onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}>
       <Badge badgeContent={4} color="primary">
         <MailIcon />
       </Badge>
     </IconButton>
-    <IconButton size="large">
+    <IconButton size="large" onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}>
       <Badge badgeContent={4} color="secondary">
         <NotificationsIcon />
       </Badge>
     </IconButton>
-    <IconButton size="large">
+    <IconButton size="large" onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}>
       <Badge badgeContent={4} color="error">
         <ShoppingCartIcon />
       </Badge>
