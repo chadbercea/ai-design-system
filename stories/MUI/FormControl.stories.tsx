@@ -11,6 +11,7 @@ import {
   Box,
   Stack,
 } from '@mui/material';
+import type { FormControlProps, SelectChangeEvent } from '@mui/material';
 
 const meta = {
   title: 'MUI/Inputs/FormControl',
@@ -75,7 +76,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const FormControlWrapper = (args: any) => (
+const FormControlWrapper = (args: FormControlProps) => (
   <Box sx={{ width: '100%', maxWidth: 360 }}>
     <FormControl {...args}>
       <FormLabel>Form Control</FormLabel>
@@ -133,7 +134,7 @@ const StatesDemo = () => (
 const SelectControlDemo = () => {
   const [age, setAge] = React.useState('');
 
-  const handleChange = (event: any) => {
+  const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value);
   };
 

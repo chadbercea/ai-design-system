@@ -10,6 +10,7 @@ import {
   Radio,
   FormControlLabel,
 } from '@mui/material';
+import type { FormLabelProps } from '@mui/material';
 
 const meta = {
   title: 'MUI/Inputs/FormLabel',
@@ -66,7 +67,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const FormLabelWrapper = (args: any) => (
+const FormLabelWrapper = (args: FormLabelProps) => (
   <Box sx={{ width: '100%', maxWidth: 360 }}>
     <FormControl>
       <FormLabel {...args}>Form Label</FormLabel>

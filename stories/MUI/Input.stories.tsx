@@ -9,6 +9,7 @@ import {
   Box,
   Stack,
 } from '@mui/material';
+import type { InputProps } from '@mui/material';
 import { Search, AccountCircle } from '@mui/icons-material';
 
 const meta = {
@@ -67,7 +68,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const InputWrapper = (args: any) => (
+const InputWrapper = (args: InputProps) => (
   <Box sx={{ width: '100%', maxWidth: 360 }}>
     <FormControl fullWidth>
       <FormLabel>Input</FormLabel>

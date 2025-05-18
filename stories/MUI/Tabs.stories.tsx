@@ -6,6 +6,7 @@ import {
   Box,
   Typography,
 } from '@mui/material';
+import type { TabsProps } from '@mui/material';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -105,7 +106,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TabsWrapper = (args: any) => {
+const TabsWrapper = (args: TabsProps) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {

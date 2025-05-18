@@ -7,6 +7,7 @@ import {
   Box,
   Stack,
 } from '@mui/material';
+import type { InputLabelProps } from '@mui/material';
 
 const meta = {
   title: 'MUI/Inputs/InputLabel',
@@ -71,7 +72,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const InputLabelWrapper = (args: any) => (
+const InputLabelWrapper = (args: InputLabelProps) => (
   <Box sx={{ width: '100%', maxWidth: 360 }}>
     <FormControl>
       <InputLabel {...args}>Input Label</InputLabel>

@@ -1,10 +1,10 @@
-Jira Story 1
-Title: Eliminate any Typing in Wrapper Components
+Jira Story 2
+Title: Tighten Typing for Event Handlers in Storybook Stories
 Description:
-Audit all wrapper components used in Storybook stories and replace any any typings with accurate, component-specific types. This includes props interfaces, children types, and composition patterns where generics can be applied for precision.
+Review all event handlers (e.g. onClick, onChange, onSubmit) in Storybook stories and assign the appropriate DOM or MUI event types. Replace implicit or incorrect typings with exact handler signatures for better IntelliSense and error detection.
 
 Acceptance Criteria:
-	•	All wrapper components have explicit TypeScript types
-	•	No any types are present in props, state, or return values
-	•	Type coverage verified by IDE and tsc --noEmit
-	•	No regression in Storybook rendering or interactivity
+	•	All event handlers have proper TypeScript typing (e.g. React.ChangeEvent<HTMLInputElement>)
+	•	No functions use implicit any or broad Function types
+	•	Confirm that event handlers are correctly typed in both story props and component definitions
+	•	Story functionality remains unchanged

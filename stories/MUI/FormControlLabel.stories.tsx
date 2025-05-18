@@ -11,6 +11,7 @@ import {
   FormLabel,
   FormGroup,
 } from '@mui/material';
+import type { FormControlLabelProps } from '@mui/material';
 
 const meta = {
   title: 'MUI/Inputs/FormControlLabel',
@@ -54,12 +55,12 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const FormControlLabelWrapper = (args: any) => (
+const FormControlLabelWrapper = (args: FormControlLabelProps) => (
   <Box sx={{ width: '100%', maxWidth: 360 }}>
     <FormControlLabel
-      control={<Checkbox />}
-      label="Form Control Label"
-      {...args}
+      control={args.control}
+      label={args.label}
+      {...(Object.fromEntries(Object.entries(args).filter(([key]) => key !== 'control' && key !== 'label')))}
     />
   </Box>
 );

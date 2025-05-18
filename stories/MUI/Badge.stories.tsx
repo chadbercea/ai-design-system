@@ -8,6 +8,7 @@ import {
   Avatar,
   Typography,
 } from '@mui/material';
+import type { BadgeProps } from '@mui/material';
 import {
   Mail as MailIcon,
   Notifications as NotificationsIcon,
@@ -71,7 +72,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const BadgeWrapper = (args: any) => (
+const BadgeWrapper = (args: BadgeProps) => (
   <Box sx={{ display: 'flex', gap: 2 }}>
     <Badge {...args}>
       <MailIcon />

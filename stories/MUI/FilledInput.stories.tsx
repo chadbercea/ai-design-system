@@ -10,6 +10,7 @@ import {
   Stack,
 } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import type { FilledInputProps } from '@mui/material';
 
 const meta = {
   title: 'MUI/Inputs/FilledInput',
@@ -67,7 +68,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const FilledInputWrapper = (args: any) => (
+const FilledInputWrapper = (args: FilledInputProps) => (
   <Box sx={{ width: '100%', maxWidth: 360 }}>
     <FormControl fullWidth>
       <InputLabel>Filled Input</InputLabel>

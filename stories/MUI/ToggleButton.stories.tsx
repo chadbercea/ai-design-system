@@ -6,6 +6,7 @@ import {
   Box,
   Stack,
 } from '@mui/material';
+import type { ToggleButtonProps } from '@mui/material';
 import {
   FormatBold,
   FormatItalic,
@@ -65,18 +66,18 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const ToggleButtonWrapper = (args: any) => {
+const ToggleButtonWrapper = (args: ToggleButtonProps) => {
   const [selected, setSelected] = React.useState(false);
 
   return (
     <Box>
       <ToggleButton
-        value="check"
+        value={args.value}
         selected={selected}
         onChange={() => {
           setSelected(!selected);
         }}
-        {...args}
+        {...(Object.fromEntries(Object.entries(args).filter(([key]) => key !== 'value')))}
       >
         <FormatBold />
       </ToggleButton>

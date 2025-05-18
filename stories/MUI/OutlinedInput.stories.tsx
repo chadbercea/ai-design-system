@@ -10,6 +10,7 @@ import {
   Stack,
 } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import type { OutlinedInputProps } from '@mui/material';
 
 const meta = {
   title: 'MUI/Inputs/OutlinedInput',
@@ -67,7 +68,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const OutlinedInputWrapper = (args: any) => (
+const OutlinedInputWrapper = (args: OutlinedInputProps) => (
   <Box sx={{ width: '100%', maxWidth: 360 }}>
     <FormControl fullWidth>
       <InputLabel>Outlined Input</InputLabel>

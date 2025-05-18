@@ -9,6 +9,7 @@ import {
   ListItemText,
   Divider,
 } from '@mui/material';
+import type { MenuProps } from '@mui/material';
 import {
   ContentCut,
   ContentCopy,
@@ -50,7 +51,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const MenuWrapper = (args: any) => {
+const MenuWrapper = (args: MenuProps) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -81,7 +82,7 @@ const MenuWrapper = (args: any) => {
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
-        {...args}
+        {...(Object.fromEntries(Object.entries(args).filter(([key]) => key !== 'open')))}
       >
         <MenuItem onClick={handleClose}>Profile</MenuItem>
         <MenuItem onClick={handleClose}>My account</MenuItem>

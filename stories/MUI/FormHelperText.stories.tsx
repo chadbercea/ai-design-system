@@ -7,6 +7,7 @@ import {
   Box,
   Stack,
 } from '@mui/material';
+import type { FormHelperTextProps } from '@mui/material';
 
 const meta = {
   title: 'MUI/Inputs/FormHelperText',
@@ -56,7 +57,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const FormHelperTextWrapper = (args: any) => (
+const FormHelperTextWrapper = (args: FormHelperTextProps) => (
   <Box sx={{ width: '100%', maxWidth: 360 }}>
     <FormControl>
       <Input />

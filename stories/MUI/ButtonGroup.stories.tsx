@@ -6,6 +6,7 @@ import {
   Box,
   Stack,
 } from '@mui/material';
+import type { ButtonGroupProps } from '@mui/material';
 import {
   FormatBold,
   FormatItalic,
@@ -74,7 +75,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const ButtonGroupWrapper = (args: any) => {
+const ButtonGroupWrapper = (args: ButtonGroupProps) => {
   return (
     <Box>
       <ButtonGroup {...args}>
