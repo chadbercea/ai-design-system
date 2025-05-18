@@ -12,7 +12,7 @@ export default {
   invalidation: {
     // Invalidate cache when these files change
     watchFiles: [
-      'tokens/**/*.json',
+      'token-studio-sync-provider/DDS Foundations.json',
       'adapters/**/*.js',
       'scripts/**/*.js'
     ],
@@ -29,7 +29,7 @@ export default {
     // Token processing cache
     tokens: {
       key: 'tokens',
-      files: ['tokens/**/*.json'],
+      files: ['token-studio-sync-provider/DDS Foundations.json'],
       maxAge: 12 * 60 * 60 * 1000 // 12 hours
     },
     
@@ -37,7 +37,7 @@ export default {
     muiTheme: {
       key: 'mui-theme',
       files: [
-        'tokens/**/*.json',
+        'token-studio-sync-provider/DDS Foundations.json',
         'adapters/mapTokensToMuiTheme.js'
       ],
       maxAge: 24 * 60 * 60 * 1000 // 24 hours
@@ -47,7 +47,7 @@ export default {
     tailwindConfig: {
       key: 'tailwind-config',
       files: [
-        'tokens/**/*.json',
+        'token-studio-sync-provider/DDS Foundations.json',
         'adapters/mapTokensToTailwindConfig.js'
       ],
       maxAge: 24 * 60 * 60 * 1000 // 24 hours
@@ -57,7 +57,7 @@ export default {
     v0Theme: {
       key: 'v0-theme',
       files: [
-        'tokens/**/*.json',
+        'token-studio-sync-provider/DDS Foundations.json',
         'adapters/mapTokensToV0Theme.js'
       ],
       maxAge: 24 * 60 * 60 * 1000 // 24 hours
@@ -82,7 +82,7 @@ export default {
   // Debug settings
   debug: {
     // Enable debug logging
-    enabled: false,
+    enabled: true,
     
     // Log cache hits
     logHits: true,

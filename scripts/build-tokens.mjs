@@ -1,8 +1,12 @@
-import StyleDictionary from 'style-dictionary';
+const SDModule = await import('style-dictionary');
+console.log('SDModule:', SDModule);
+const StyleDictionary = SDModule.default;
+console.log('StyleDictionary:', StyleDictionary);
 import BuildCache from './build-cache.js';
 import cacheConfig from '../config/build-cache.config.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import config from '../config/style-dictionary.config.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,49 +14,9 @@ const __dirname = path.dirname(__filename);
 // Initialize build cache
 const buildCache = new BuildCache(cacheConfig);
 
-// Configure Style Dictionary (use create for ESM)
-const StyleDictionaryExtended = StyleDictionary.create({
-  source: ['tokens/**/*.json'],
-  platforms: {
-    js: {
-      transformGroup: 'js',
-      buildPath: 'build/',
-      files: [{
-        destination: 'tokens.js',
-        format: 'javascript/module',
-        options: {
-          showFileHeader: true
-        }
-      }]
-    },
-    css: {
-      transformGroup: 'css',
-      buildPath: 'build/css/',
-      files: [{
-        destination: 'variables.css',
-        format: 'css/variables',
-        options: {
-          showFileHeader: true
-        }
-      }]
-    },
-    scss: {
-      transformGroup: 'scss',
-      buildPath: 'build/scss/',
-      files: [{
-        destination: '_variables.scss',
-        format: 'scss/variables',
-        options: {
-          showFileHeader: true
-        }
-      }]
-    }
-  }
-});
-
 // Function to check if cache is valid
 function isCacheValid() {
-  const cacheKey = buildCache.generateCacheKey(cacheConfig.groups.tokens.files);
+  const cacheKey = buildCache.generateCacheKey(config.source);
   const cachedResult = buildCache.get(cacheKey);
   
   if (cachedResult) {
@@ -65,7 +29,7 @@ function isCacheValid() {
 
 // Function to save build result to cache
 function saveToCache(result) {
-  const cacheKey = buildCache.generateCacheKey(cacheConfig.groups.tokens.files);
+  const cacheKey = buildCache.generateCacheKey(config.source);
   buildCache.set(cacheKey, result);
 }
 
@@ -78,16 +42,75 @@ async function build() {
     }
     
     console.log('Building tokens...');
+    console.log('Source files:', config.source);
+    console.log('Build path:', config.platforms.js.buildPath);
+    console.log('Config:', JSON.stringify(config, null, 2));
     
-    // Build tokens
-    const result = await StyleDictionaryExtended.buildAllPlatforms();
+    // Register format BEFORE extending
+    StyleDictionary.registerFormat({
+      name: 'javascript/mui',
+      format: function({ dictionary, file, options }) {
+        return `export default ${JSON.stringify(dictionary.tokens, null, 2)}`;
+      }
+    });
     
-    // Save to cache
-    saveToCache(result);
+    // Instantiate with config (ESM v5 requirement)
+    const sd = new StyleDictionary(config);
+    console.log('Style Dictionary instantiated with config');
+    
+    // Register only the custom CTI transform
+    sd.registerTransform({
+      name: 'attribute/cti',
+      type: 'attribute',
+      transform: (token) => {
+        const [category, type, item] = token.path;
+        return {
+          category,
+          type,
+          item
+        };
+      }
+    });
+
+    // Use the built-in 'js' transform group in the platform definition
+    // No custom transform group registration needed
+    
+    // Diagnostic step: Log raw tokens from the instance
+    const rawTokens = sd.tokens;
+    console.log('Raw tokens:', rawTokens);
+    
+    // Diagnostic step: Log token collisions and missing references
+    const collisions = Object.entries(rawTokens).filter(([key, token]) => token.original?.collision);
+    const missingRefs = Object.entries(rawTokens).filter(([key, token]) => token.original?.missingRef);
+    console.log('Token collisions:', collisions.map(([key]) => key));
+    console.log('Missing references:', missingRefs.map(([key]) => key));
+    
+    // Build AFTER instantiation
+    try {
+      console.log('Starting buildAllPlatforms()');
+      await sd.buildAllPlatforms();
+      console.log('buildAllPlatforms() completed');
+    } catch (sdError) {
+      console.error('Error during buildAllPlatforms:', sdError);
+      throw sdError;
+    }
+    
+    // Verify the output file exists
+    const outputPath = path.join(process.cwd(), config.platforms.js.buildPath, config.platforms.js.files[0].destination);
+    const fs = await import('fs/promises');
+    
+    try {
+      await fs.access(outputPath);
+      console.log('Output file created successfully:', outputPath);
+    } catch (error) {
+      console.error('Output file not found:', outputPath);
+      process.exit(1);
+    }
     
     console.log('Build complete!');
   } catch (error) {
     console.error('Build failed:', error);
+    console.error('Error stack:', error.stack);
     process.exit(1);
   }
 }
@@ -96,8 +119,9 @@ async function build() {
 if (process.argv.includes('--watch')) {
   console.log('Watch mode enabled');
   
-  // Watch token files
-  StyleDictionaryExtended.watchAllPlatforms();
+  // Use the same instance for watch mode
+  const sd = new StyleDictionary(config);
+  sd.watchAllPlatforms();
   
   // Watch adapter files
   const chokidar = await import('chokidar');
@@ -113,5 +137,5 @@ if (process.argv.includes('--watch')) {
   });
 } else {
   // One-time build
-  build();
+  if (process.argv[1] === fileURLToPath(import.meta.url)) await build();
 } 

@@ -1,15 +1,18 @@
 export default {
-  source: ['tokens/**/*.json'],
+  source: ['token-studio-sync-provider/DDS Foundations.json'],
   platforms: {
     js: {
-      transformGroup: 'js', // Use 'tokens-studio' if available
+      transformGroup: 'js',
       buildPath: 'build/',
-      files: [
-        {
-          destination: 'tokens.js',
-          format: 'javascript/es6',
-        },
-      ],
-    },
+      files: [{
+        destination: 'tokens.js',
+        format: 'javascript/mui'
+      }]
+    }
   },
+  transform: {
+    'attribute/cti': {
+      'type': 'attribute'
+    }
+  }
 }; 
