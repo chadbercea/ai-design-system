@@ -765,14 +765,14 @@ export default {
       "700": {
         "key": "{color.blue.700}",
         "$type": "color",
-        "$value": "#1976d2",
-        "$description": "Blue 700",
+        "$value": "#8d9f5e",
+        "$description": "Blue 700 - MUI Primary change this back bro #1976d2",
         "filePath": "token-studio-sync-provider/DDS Foundations.json",
         "isSource": true,
         "original": {
           "$type": "color",
-          "$value": "#1976d2",
-          "$description": "Blue 700",
+          "$value": "#8d9f5e",
+          "$description": "Blue 700 - MUI Primary change this back bro #1976d2",
           "key": "{color.blue.700}"
         },
         "name": "ColorBlue700",
