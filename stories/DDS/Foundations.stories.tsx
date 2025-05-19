@@ -1,13 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { 
-  Box, 
-  Typography, 
-  Grid,
-  Paper,
-  useTheme,
-  Divider
-} from '@mui/material';
+import { Box, Typography, Grid, Paper } from '@mui/material';
+import tokens from '../../build/tokens.js'; // Adjust path if needed
 
 const meta: Meta = {
   title: 'DDS/Foundations',
@@ -20,331 +14,243 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+// Helper to recursively extract color tokens with $value
+function extractColorTokens(obj: any, path: string[] = ['color']): { name: string; value: string }[] {
+  let result: { name: string; value: string }[] = [];
+  for (const [key, value] of Object.entries(obj)) {
+    if (
+      value &&
+      typeof value === 'object' &&
+      '$value' in value &&
+      typeof (value as any).$value === 'string' &&
+      ((value as any).$type === 'color' || (value as any).$value.match(/^#|rgb|hsl|^var\(/))
+    ) {
+      result.push({ name: [...path, key].join('.'), value: (value as any).$value });
+    } else if (value && typeof value === 'object') {
+      result = result.concat(extractColorTokens(value, [...path, key]));
+    }
+  }
+  return result;
+}
+
+// Helper to recursively extract all tokens with $value property
+function extractPrimitiveTokens(obj: any, path: string[] = [], typeOverride?: string): { name: string; value: string | number; type?: string }[] {
+  let result: { name: string; value: string | number; type?: string }[] = [];
+  for (const [key, value] of Object.entries(obj)) {
+    if (
+      value &&
+      typeof value === 'object' &&
+      '$value' in value &&
+      (typeof (value as any).$value === 'string' || typeof (value as any).$value === 'number')
+    ) {
+      result.push({ name: [...path, key].join('.'), value: (value as any).$value, type: typeOverride || (value as any).$type });
+    } else if (value && typeof value === 'object') {
+      result = result.concat(extractPrimitiveTokens(value, [...path, key], typeOverride));
+    }
+  }
+  return result;
+}
+
 const ColorSwatch = ({ name, value }: { name: string; value: string }) => {
-  const theme = useTheme();
-  return (
-    <Paper 
-      elevation={0} 
-      sx={{ 
-        p: 2, 
-        display: 'flex', 
-        flexDirection: 'column',
-        gap: 1,
-        border: `1px solid ${theme.palette.divider}`
-      }}
-    >
-      <Box 
-        sx={{ 
-          height: 100, 
-          bgcolor: value,
-          borderRadius: 1,
-          border: `1px solid ${theme.palette.divider}`
-        }} 
-      />
-      <Typography variant="subtitle2">{name}</Typography>
-      <Typography variant="caption" color="text.secondary">{value}</Typography>
-    </Paper>
-  );
-};
+  const [hover, setHover] = useState(false);
+  const [copied, setCopied] = useState(false);
 
-const ColorSection = ({ title, colors }: { title: string; colors: Record<string, string> }) => {
-  return (
-    <Box sx={{ mb: 4 }}>
-      <Typography variant="h3" gutterBottom>
-        {title}
-      </Typography>
-      <Grid container spacing={2}>
-        {Object.entries(colors).map(([key, value]) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={key}>
-            <ColorSwatch name={key} value={value} />
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
-  );
-};
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1000);
+    } catch (e) {
+      // ignore
+    }
+  };
 
-const SpacingSwatch = ({ name, value }: { name: string; value: string }) => {
-  const theme = useTheme();
   return (
-    <Paper 
-      elevation={0} 
-      sx={{ 
-        p: 2, 
-        display: 'flex', 
-        flexDirection: 'column',
-        gap: 1,
-        border: `1px solid ${theme.palette.divider}`
+    <Paper
+      elevation={hover ? 10 : 0}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      onClick={handleCopy}
+      sx={{
+        cursor: 'pointer',
+        transition: 'box-shadow 0.2s',
       }}
+      title={copied ? 'Copied!' : 'Click to copy hex'}
     >
-      <Box 
-        sx={{ 
-          height: 40,
-          display: 'flex',
-          alignItems: 'center',
-          gap: 1
-        }}
-      >
-        <Box 
-          sx={{ 
-            width: value,
-            height: 20,
-            bgcolor: 'primary.main',
-            borderRadius: 1
-          }} 
-        />
-        <Typography variant="caption">{value}</Typography>
+      <Box height={120} bgcolor={value} />
+      <Box height={40} display="flex" alignItems="center" justifyContent="center">
+        <Typography variant="subtitle1" fontWeight="bold">
+          {copied ? 'Copied!' : name}
+        </Typography>
       </Box>
-      <Typography variant="subtitle2">{name}</Typography>
     </Paper>
   );
 };
 
-const TypographySwatch = ({ variant, text }: { variant: string; text: string }) => {
-  return (
-    <Paper 
-      elevation={0} 
-      sx={{ 
-        p: 2, 
-        display: 'flex', 
-        flexDirection: 'column',
-        gap: 1,
-        border: '1px solid',
-        borderColor: 'divider'
-      }}
-    >
-      <Typography variant={variant as any}>{text}</Typography>
-      <Typography variant="caption" color="text.secondary">{variant}</Typography>
-    </Paper>
-  );
-};
+const SpacingSwatch = ({ name, value }: { name: string; value: string | number }) => (
+  <Paper elevation={1}>
+    <Box height={40} display="flex" alignItems="center">
+      <Box width={typeof value === 'number' ? `${value}px` : value} height={16} bgcolor="primary.main" mr={2} />
+      <Typography variant="subtitle1">{name}: {value}</Typography>
+    </Box>
+  </Paper>
+);
 
-const ElevationSwatch = ({ level }: { level: number }) => {
-  return (
-    <Paper 
-      elevation={level}
-      sx={{ 
-        p: 2, 
-        height: 100,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}
-    >
-      <Typography>Elevation {level}</Typography>
-    </Paper>
-  );
-};
+const RadiusSwatch = ({ name, value }: { name: string; value: string | number }) => (
+  <Paper elevation={1}>
+    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" py={2}>
+      <Box width={48} height={48} bgcolor="primary.main" borderRadius={typeof value === 'number' ? `${value}px` : value} mb={1} />
+      <Typography variant="subtitle1">{name}: {value}</Typography>
+    </Box>
+  </Paper>
+);
 
-const ZIndexSwatch = ({ name, value }: { name: string; value: number }) => {
+const FontSizeSwatch = ({ name, value }: { name: string; value: string | number }) => (
+  <Paper elevation={1}>
+    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" py={2}>
+      <Typography style={{ fontSize: typeof value === 'number' ? `${value}px` : value }}>
+        The quick brown fox
+      </Typography>
+      <Typography variant="subtitle1">{name}: {value}</Typography>
+    </Box>
+  </Paper>
+);
+
+const FontFamilySwatch = ({ name, value }: { name: string; value: string | number }) => (
+  <Paper elevation={1}>
+    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" py={2}>
+      <Typography style={{ fontFamily: String(value) }}>
+        The quick brown fox
+      </Typography>
+      <Typography variant="subtitle1">{name}: {value}</Typography>
+    </Box>
+  </Paper>
+);
+
+const GenericSwatch = ({ name, value }: { name: string; value: string | number }) => (
+  <Paper elevation={1}>
+    <Box height={40} display="flex" alignItems="center" justifyContent="center">
+      <Typography variant="subtitle1">{name}: {value}</Typography>
+    </Box>
+  </Paper>
+);
+
+const BreakpointSwatch = ({ name, value }: { name: string; value: string | number }) => {
+  const px = typeof value === 'number' ? value : parseInt(String(value), 10);
   return (
-    <Paper 
-      elevation={0} 
-      sx={{ 
-        p: 2, 
-        display: 'flex', 
-        flexDirection: 'column',
-        gap: 1,
-        border: '1px solid',
-        borderColor: 'divider'
-      }}
-    >
-      <Typography variant="subtitle2">{name}</Typography>
-      <Typography variant="caption" color="text.secondary">{value}</Typography>
+    <Paper elevation={1} sx={{ width: px ? Math.min(px, 400) : '100%', maxWidth: '100%', ml: 0, textAlign: 'left', mb: 0 }}>
+      <Box height={40} display="flex" alignItems="center" pl={2}>
+        <Typography variant="subtitle1">{name}: {value}px</Typography>
+      </Box>
     </Paper>
   );
 };
 
 export const Foundations: Story = {
   render: () => {
-    const theme = useTheme();
-    
-    // Group colors by their base name
-    const colorGroups = Object.entries(theme.palette).reduce((acc, [key, value]) => {
-      if (typeof value === 'string' && value.startsWith('#')) {
-        const baseName = key.split('.')[0];
-        if (!acc[baseName]) {
-          acc[baseName] = {};
-        }
-        acc[baseName][key] = value;
-      }
-      return acc;
-    }, {} as Record<string, Record<string, string>>);
-    
+    // Extract all tokens with $value
+    const allTokens = extractPrimitiveTokens(tokens);
+    // Group tokens by top-level type
+    const groups: Record<string, { name: string; value: string | number; type?: string }[]> = {};
+    allTokens.forEach(token => {
+      const topLevel = token.name.split('.')[0];
+      if (!groups[topLevel]) groups[topLevel] = [];
+      groups[topLevel].push(token);
+    });
     return (
-      <Box sx={{ p: 4, maxWidth: 1200, mx: 'auto' }}>
-        <Typography variant="h1" gutterBottom>
-          DDS Foundations
-        </Typography>
-        
-        {/* Colors */}
-        <Box sx={{ mb: 6 }}>
-          <Typography variant="h2" gutterBottom>
-            Colors
-          </Typography>
-          {Object.entries(colorGroups).map(([groupName, colors]) => (
-            <ColorSection key={groupName} title={groupName} colors={colors} />
-          ))}
-        </Box>
-
-        {/* Typography */}
-        <Box sx={{ mb: 6 }}>
-          <Typography variant="h2" gutterBottom>
-            Typography
-          </Typography>
-          <Grid container spacing={2}>
-            {['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'button', 'caption', 'overline'].map((variant) => (
-              <Grid item xs={12} key={variant}>
-                <TypographySwatch 
-                  variant={variant} 
-                  text={`${variant.charAt(0).toUpperCase() + variant.slice(1)} - The quick brown fox jumps over the lazy dog`} 
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-
+      <Box>
+        <Typography variant="h1" gutterBottom>DDS Foundations</Typography>
         {/* Spacing */}
-        <Box sx={{ mb: 6 }}>
-          <Typography variant="h2" gutterBottom>
-            Spacing
-          </Typography>
-          <Grid container spacing={2}>
-            {[0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24].map((value) => (
-              <Grid item xs={12} sm={6} md={4} lg={3} key={value}>
-                <SpacingSwatch 
-                  name={`Spacing ${value}`} 
-                  value={`${value * 8}px`} 
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-
+        {groups.spacings && (
+          <>
+            <Typography variant="h2" gutterBottom mt={6}>Spacing</Typography>
+            <Grid container spacing={2}>
+              {groups.spacings.map(({ name, value }) => (
+                <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                  <SpacingSwatch name={name} value={value} />
+                </Grid>
+              ))}
+            </Grid>
+          </>
+        )}
         {/* Border Radius */}
-        <Box sx={{ mb: 6 }}>
-          <Typography variant="h2" gutterBottom>
-            Border Radius
-          </Typography>
-          <Grid container spacing={2}>
-            {Object.entries(theme.shape).map(([key, value]) => (
-              <Grid item xs={12} sm={6} md={4} lg={3} key={key}>
-                <Paper 
-                  elevation={0} 
-                  sx={{ 
-                    p: 2, 
-                    display: 'flex', 
-                    flexDirection: 'column',
-                    gap: 1,
-                    border: '1px solid',
-                    borderColor: 'divider'
-                  }}
-                >
-                  <Box 
-                    sx={{ 
-                      height: 100,
-                      bgcolor: 'primary.main',
-                      borderRadius: value,
-                      opacity: 0.1
-                    }} 
-                  />
-                  <Typography variant="subtitle2">{key}</Typography>
-                  <Typography variant="caption" color="text.secondary">{value}</Typography>
-                </Paper>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-
-        {/* Elevation */}
-        <Box sx={{ mb: 6 }}>
-          <Typography variant="h2" gutterBottom>
-            Elevation
-          </Typography>
-          <Grid container spacing={2}>
-            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24].map((level) => (
-              <Grid item xs={12} sm={6} md={4} lg={3} key={level}>
-                <ElevationSwatch level={level} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-
-        {/* Z-Index */}
-        <Box sx={{ mb: 6 }}>
-          <Typography variant="h2" gutterBottom>
-            Z-Index
-          </Typography>
-          <Grid container spacing={2}>
-            {Object.entries(theme.zIndex).map(([key, value]) => (
-              <Grid item xs={12} sm={6} md={4} lg={3} key={key}>
-                <ZIndexSwatch name={key} value={value} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-
-        {/* Transitions */}
-        <Box sx={{ mb: 6 }}>
-          <Typography variant="h2" gutterBottom>
-            Transitions
-          </Typography>
-          <Grid container spacing={2}>
-            {Object.entries(theme.transitions).map(([key, value]) => (
-              <Grid item xs={12} key={key}>
-                <Paper 
-                  elevation={0} 
-                  sx={{ 
-                    p: 2, 
-                    display: 'flex', 
-                    flexDirection: 'column',
-                    gap: 1,
-                    border: '1px solid',
-                    borderColor: 'divider'
-                  }}
-                >
-                  <Typography variant="subtitle2">{key}</Typography>
-                  {typeof value === 'string' || typeof value === 'number' ? (
-                    <Typography variant="caption" color="text.secondary">{value}</Typography>
-                  ) : (
-                    Object.entries(value).map(([subKey, subValue]) => (
-                      <Typography key={subKey} variant="caption" color="text.secondary">
-                        {subKey}: {String(subValue)}
-                      </Typography>
-                    ))
-                  )}
-                </Paper>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-
+        {groups.borderRadius && (
+          <>
+            <Typography variant="h2" gutterBottom mt={6}>Border Radius</Typography>
+            <Grid container spacing={2}>
+              {groups.borderRadius.map(({ name, value }) => (
+                <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                  <RadiusSwatch name={name} value={value} />
+                </Grid>
+              ))}
+            </Grid>
+          </>
+        )}
+        {/* Font Sizes */}
+        {groups.fontSizes && (
+          <>
+            <Typography variant="h2" gutterBottom mt={6}>Font Sizes</Typography>
+            <Grid container spacing={2}>
+              {groups.fontSizes.map(({ name, value }) => (
+                <Grid item xs={12} key={name}>
+                  <FontSizeSwatch name={name} value={value} />
+                </Grid>
+              ))}
+            </Grid>
+          </>
+        )}
+        {/* Font Families */}
+        {groups.fontFamilies && (
+          <>
+            <Typography variant="h2" gutterBottom mt={6}>Font Families</Typography>
+            <Grid container spacing={2}>
+              {groups.fontFamilies.map(({ name, value }) => (
+                <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                  <FontFamilySwatch name={name} value={value} />
+                </Grid>
+              ))}
+            </Grid>
+          </>
+        )}
+        {/* All other primitives */}
+        {Object.entries(groups).filter(([k]) => !['color','spacings','borderRadius','fontSizes','fontFamilies','breakpoints'].includes(k)).map(([group, tokens]) => (
+          <React.Fragment key={group}>
+            <Typography variant="h2" gutterBottom mt={6}>{group.charAt(0).toUpperCase() + group.slice(1)}</Typography>
+            <Grid container spacing={2}>
+              {tokens.map(({ name, value }) => (
+                <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                  <GenericSwatch name={name} value={value} />
+                </Grid>
+              ))}
+            </Grid>
+          </React.Fragment>
+        ))}
         {/* Breakpoints */}
-        <Box sx={{ mb: 6 }}>
-          <Typography variant="h2" gutterBottom>
-            Breakpoints
-          </Typography>
-          <Grid container spacing={2}>
-            {Object.entries(theme.breakpoints.values).map(([key, value]) => (
-              <Grid item xs={12} sm={6} md={4} lg={3} key={key}>
-                <Paper 
-                  elevation={0} 
-                  sx={{ 
-                    p: 2, 
-                    display: 'flex', 
-                    flexDirection: 'column',
-                    gap: 1,
-                    border: '1px solid',
-                    borderColor: 'divider'
-                  }}
-                >
-                  <Typography variant="subtitle2">{key}</Typography>
-                  <Typography variant="caption" color="text.secondary">{value}px</Typography>
-                </Paper>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+        {groups.breakpoints && (
+          <>
+            <Typography variant="h2" gutterBottom mt={6}>Breakpoints</Typography>
+            <Grid container spacing={0} direction="column">
+              {groups.breakpoints.map(({ name, value }) => (
+                <Grid item xs={12} key={name} sx={{ mb: 3 }}>
+                  <BreakpointSwatch name={name} value={value} />
+                </Grid>
+              ))}
+            </Grid>
+          </>
+        )}
+        {/* Colors (moved to bottom) */}
+        {groups.color && (
+          <>
+            <Typography variant="h2" gutterBottom mt={6}>Colors</Typography>
+            <Grid container spacing={2}>
+              {groups.color.filter(t => t.type === 'color').map(({ name, value }) => (
+                <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                  <ColorSwatch name={name} value={String(value)} />
+                </Grid>
+              ))}
+            </Grid>
+          </>
+        )}
       </Box>
     );
   },
