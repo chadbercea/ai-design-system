@@ -154,8 +154,8 @@
       },
       "500": {
         "$type": "color",
-        "$value": "#2196f3",
-        "$description": "Blue 500"
+        "$value": "#9ebc21",
+        "$description": "Blue 500 real hex 2196f3"
       },
       "600": {
         "$type": "color",
