@@ -1,9 +1,9 @@
 {
   "tokenSetOrder": [
+    "DDS Foundations",
     "core",
     "dark",
     "light",
-    "theme",
-    "DDS Foundations"
+    "theme"
   ]
 }

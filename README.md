@@ -1,185 +1,90 @@
-# ai-design-system
+# For Docker Eyeholes Only
 
-## Design Token Pipeline: Modern Paradigm
+**🚨 WARNING: This repo is not a drop-in Docker image. If you're looking for a one-command container, you're in the wrong multiverse. This is a design system pipeline, not a Mr. Meeseeks box. Proceed only if you're ready to dive in! 🚨**
 
-This project implements a scalable, industry-standard design token pipeline for multi-platform theming. The canonical model is:
+# AI Design System
 
-**Tokens → Style Dictionary → Mapping Function → Consumer**
+## Overview
+This project uses Style Dictionary to generate design tokens from a stable, validated source (`token-studio-sync-provider/DDS Foundations.json`). The tokens are then converted into an MUI theme using a mapping function (`adapter.js`).
 
-- **Tokens:** Source-of-truth, DTCG-compliant design tokens (e.g., DDS Foundations.json)
-- **Style Dictionary:** Transforms tokens into consumable JS/JSON/CSS/etc. (agnostic to consumer schema)
-- **Mapping Function:** Custom adapter that maps SD output to the exact schema required by each consumer (e.g., MUI theme, Tailwind config)
-- **Consumer:** The library or platform that uses the mapped theme/config (MUI, Tailwind, Radix, etc.)
+## Current Status
+- **Token Source:** Locked to `token-studio-sync-provider/DDS Foundations.json` for a stable, collision-free build.
+- **Build Pipeline:** Style Dictionary generates tokens, which are then mapped to an MUI theme.
+- **Automation:** The entire conversion process is automated, with no manual intervention required.
 
----
-
-## Pipeline Overview
-
-1. **Edit tokens in `tokens/`** (DTCG-compliant JSON)
-2. **Run Style Dictionary** to generate `build/tokens.js`
-3. **Run the mapping script** to generate a consumer-ready theme/config (e.g., `build/mui/theme.js`)
-4. **Import the generated theme/config** in your app or library
-
----
-
-## Setup
-
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-2. **Build tokens with Style Dictionary:**
-   ```bash
-   npx style-dictionary build --config config/style-dictionary.config.mjs
-   ```
-3. **Generate MUI theme:**
-   ```bash
-   node scripts/build-mui-theme.js
-   ```
-
----
-
-## Usage Example (MUI)
-
-```js
-import { createTheme } from '@mui/material/styles';
-import theme from '../build/mui/theme.js';
-const muiTheme = createTheme(theme);
+## Expected Token Structure
+Tokens in `DDS Foundations.json` should follow this format:
+```json
+{
+  "color": {
+    "blue": {
+      "500": {
+        "$type": "color",
+        "$value": "#0070f3",
+        "$description": "Primary blue color"
+      }
+    }
+  }
+}
 ```
+Each token must include `$value`, `$type`, and (optionally) `$description`. The path hierarchy should be clear and consistent.
 
----
+## MUI Theme Mapping Example
+The `adapter.js` function maps tokens to MUI theme properties. For example:
+```js
+// Example mapping in adapter.js
+theme.palette.primary.main = tokens.color.blue[500].value;
+```
+This bridges the output of Style Dictionary to the real UI theming system. See `mapTokensToMuiTheme()` for the full mapping logic.
 
-## Extending to Other Consumers
+## Troubleshooting
+**Common build errors and what they mean:**
+- **"No tokens for tokens.js"**: The glob pattern didn't match any files. Check your `source` config.
+- **"Token collisions detected"**: The flattening process is using non-CTI naming, or there are duplicate token names.
+- **"Reference Errors"**: Some token references could not be found. Check for typos or missing tokens.
 
-- **Add a new mapping function** (e.g., `mapTokensToTailwindConfig.js`)
-- **Create a build script** for the new consumer
-- **Document the mapping and usage**
+## How to Extend
+- Add new token files one at a time.
+- Validate each file for DTCG compliance before including it in the build.
+- Token files can be modular or flat, but must follow the expected structure.
+- In the future, tokens may be grouped by Foundations, Themes, or Components for better organization and scalability.
+- After adding a new file, run the build and check for errors before merging.
 
----
+## CI/CD Status and Intended Workflow
+- The token build pipeline is intended to run on every PR and merge to `main`.
+- Output (`build/tokens.js`) is intended for local consumption and can be published as an NPM package for broader use.
+- Future automation will include validation and theme generation as part of CI, ensuring only valid tokens and themes are published.
 
-## Token Validation System
+## Consuming the Tokens
+The generated `build/tokens.js` file is imported and mapped to an MUI theme using `mapTokensToMuiTheme`, then passed to MUI's `createTheme`:
+```js
+import tokens from '../build/tokens.js';
+import mapTokensToMuiTheme from '../src/theme/adapter.js';
+import { createTheme } from '@mui/material/styles';
 
-Automated validation ensures all tokens are DTCG-compliant and follow project rules.
+const muiTheme = createTheme(mapTokensToMuiTheme(tokens));
+```
+This enables seamless integration of your design tokens into your application's UI theme.
 
-### Validation Features
-- Schema validation for required fields (`$value`, `$type`, `$description`)
-- Plural type name detection
-- Nested primitive detection
-- Snapshot testing for structural integrity
-- Pre-commit hooks to prevent invalid commits
-- File watching for real-time validation
+## Future Steps
+- Incrementally add and validate additional token files as they become ready.
+- Implement validation scripts and error handling for theme generation.
+- Reorganize files to match the prescribed project structure.
+- Integrate BuildCache into theme generation for consistent caching.
 
-### Usage
-
-1. **Manual Validation**
+## Getting Started
+1. Ensure `token-studio-sync-provider/DDS Foundations.json` is present and valid.
+2. Run the build script:
    ```bash
-   npm run test:tokens
+   node scripts/build-tokens.mjs
    ```
-2. **Watch Mode** (for development)
-   ```bash
-   npm run test:tokens:watch
-   ```
-3. **Strict Mode**
-   ```bash
-   STRICT=true npm run test:tokens
-   ```
+3. The output file (`build/tokens.js`) will be generated and can be used by the theme adapter.
+4. **Verify a successful build:** Check that `build/tokens.js` exists and contains your exported tokens in the expected structure.
 
-### Validation Rules
-- All tokens must have `$value`, `$type`, and `$description`
-- Types must be singular (e.g., `fontSize` not `fontSizes`)
-- No nested primitives allowed
-- Color tokens must use lowercase dot notation
-- All changes must be validated before commit
+## Project Structure
+- `config/style-dictionary.config.mjs`: Configuration for Style Dictionary.
+- `scripts/build-tokens.mjs`: Script to build tokens using Style Dictionary.
+- `src/theme/adapter.js`: Mapping function to convert tokens into an MUI theme.
 
----
-
-## Testing
-
-- **Jest is configured for ESM.**
-- To run all tests:
-  ```bash
-  node --experimental-vm-modules node_modules/.bin/jest
-  ```
-- All mapping functions are covered by unit tests in `adapters/__tests__/`.
-- Tests use ESM `import/export` syntax throughout the codebase.
-
----
-
-## How This Works
-
-This section explains each stage of the design token pipeline and how they work together:
-
-### 1. Tokens (Source-of-Truth)
-Tokens are DTCG-compliant JSON files in the `tokens/` directory (e.g., colors, spacing, typography). They serve as the single source of truth for all design decisions. These files are human-editable, and each token includes a `$value`, `$type`, and (optionally) `$description`.
-
-### 2. Style Dictionary (Transformation Engine)
-Style Dictionary is an open-source tool that reads your tokens and outputs them in various formats (JS, JSON, CSS, etc.). Its purpose is to transform raw tokens into files consumable by different platforms. It reads all token files, applies transforms, and outputs a flat JS file (e.g., `build/tokens.js`) with named exports. The configuration is managed via `config/style-dictionary.config.mjs`.
-
-### 3. Mapping Function (Adapter Layer)
-The mapping function (e.g., `mapTokensToMuiTheme`) is a custom JavaScript function that takes the Style Dictionary output and produces an object in the exact shape required by your consumer (such as an MUI theme). This function bridges the gap between generic tokens and the specific schema your consumer expects. It imports all named exports from `build/tokens.js` and maps each token to the correct key in the consumer's schema. This function is custom for each consumer.
-
-### 4. Consumer (Library/Framework)
-The consumer is the end system that uses the mapped theme or config (e.g., MUI, Tailwind, Radix, etc.). Its purpose is to use the mapped theme/config to style your application or components. The consumer imports the generated theme/config and applies it using its own API (for example, `createTheme` for MUI).
-
----
-
-## Warning
-⚠️ Always validate JSON after using AI tools. These tools may silently modify token structure, remove descriptions, or break references.
-
----
-
-## References
-- [W3C DTCG](https://design-tokens.github.io/community-group/)
-- [Style Dictionary](https://amzn.github.io/style-dictionary/#/)
-- [MUI Theming](https://mui.com/material-ui/customization/theming/)
-
-## Future Enhancements
-
-### High Priority
-- Integration testing suite
-  - Cross-framework compatibility testing
-  - Build system validation
-  - Token transformation testing
-  - Adapter testing (MUI, Tailwind, V0)
-  - Visual consistency checks
-
-### Medium Priority
-- Additional build targets
-  - More framework adapters
-  - Additional output formats
-  - Custom build configurations
-- Adapter customization guidelines
-  - Documentation for creating new adapters
-  - Best practices for token mapping
-  - Performance optimization tips
-
-### Lower Priority
-- Visual regression testing
-  - Automated screenshot comparison
-  - Component-level visual testing
-  - Cross-browser testing
-- Community feedback mechanisms
-  - Issue templates
-  - Contribution guidelines
-  - User feedback collection
-- Additional framework adapters
-  - Vue.js
-  - Angular
-  - Svelte
-  - Other popular frameworks
-
-### Performance Optimizations
-- Build system improvements
-  - Parallel processing
-  - Incremental builds
-  - Better error handling
-- Cache system enhancements
-  - Distributed caching
-  - Cache compression
-  - Cache analytics
-
-### Documentation
-- Interactive examples
-- API documentation
-- Migration guides
-- Troubleshooting guides
+## Contributing
+Please follow the project guidelines for file organization, validation, and error handling.
