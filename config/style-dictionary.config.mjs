@@ -5,14 +5,9 @@ export default {
       transformGroup: 'js',
       buildPath: 'build/',
       files: [{
-        destination: 'tokens.js',
-        format: 'javascript/mui'
+        destination: 'tokens.mjs',
+        format: 'javascript/es6'
       }]
-    }
-  },
-  transform: {
-    'attribute/cti': {
-      'type': 'attribute'
     }
   }
 }; 

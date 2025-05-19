@@ -1,0 +1,45 @@
+Foundations page:
+
+Top-level structure (sections on the page):
+	1.	Miscellaneous
+	•	Any token that doesn’t match a recognized prefix for Dimension, Typography, or Color
+	•	This ensures 100% token coverage and flags anything drifting from convention
+	2.	Dimension
+	•	Includes tokens with names starting with:
+	•	spacing
+	•	borderRadius
+	•	grid
+	•	layout
+	•	sizing
+	•	stack
+	•	breakpoints
+	3.	Typography
+	•	Includes tokens with names starting with:
+	•	fontSizes
+	•	fontFamilies
+	•	fontWeights
+	•	lineHeights
+	•	letterSpacing
+	•	typography.*
+	4.	Colors
+	•	Includes tokens where type === 'color'
+	•	Within Colors, group tokens by their second segment (e.g. color.blue.500)
+	•	Render each color group (e.g. blue, grey, red) as a horizontal swatch section
+
+⸻
+
+Swatch rendering logic
+	•	Grid layout: use <Grid container spacing={2}> for all sections
+	•	Paper component: continue using existing swatch components like SpacingSwatch, FontSizeSwatch, etc.
+	•	Generic fallback: for unknown types, use GenericSwatch
+
+⸻
+
+Token grouping logic in code
+
+Instead of dynamically grouping by top-level key, explicitly build arrays:
+	•	const dimensionTokens = allTokens.filter(...)
+	•	const typographyTokens = allTokens.filter(...)
+	•	const colorTokens = allTokens.filter(t => t.type === 'color')
+	•	const miscTokens = allTokens.filter(...)
+Where misc = anything not in the above three

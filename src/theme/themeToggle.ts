@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material';
 import { mapTokensToMuiTheme } from './mapTokensToMuiTheme';
-import tokens from '../../build/tokens.js';
+import tokens from '../../build/tokens.mjs';
 
 // Define theme keys as a const to ensure type safety
 export const THEME_KEYS = {

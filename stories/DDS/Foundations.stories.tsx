@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Box, Typography, Grid, Paper } from '@mui/material';
-import tokens from '../../build/tokens.js'; // Adjust path if needed
+import categorizedTokens from '../../build/primprep.mjs';
 
 const meta: Meta = {
   title: 'DDS/Foundations',
@@ -13,6 +13,12 @@ const meta: Meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+type Token = {
+  name: string;
+  value: string | number;
+  type: 'color' | 'typography' | 'dimension' | 'misc';
+};
 
 // Helper to recursively extract color tokens with $value
 function extractColorTokens(obj: any, path: string[] = ['color']): { name: string; value: string }[] {
@@ -33,22 +39,45 @@ function extractColorTokens(obj: any, path: string[] = ['color']): { name: strin
   return result;
 }
 
-// Helper to recursively extract all tokens with $value property
-function extractPrimitiveTokens(obj: any, path: string[] = [], typeOverride?: string): { name: string; value: string | number; type?: string }[] {
-  let result: { name: string; value: string | number; type?: string }[] = [];
-  for (const [key, value] of Object.entries(obj)) {
-    if (
-      value &&
-      typeof value === 'object' &&
-      '$value' in value &&
-      (typeof (value as any).$value === 'string' || typeof (value as any).$value === 'number')
-    ) {
-      result.push({ name: [...path, key].join('.'), value: (value as any).$value, type: typeOverride || (value as any).$type });
-    } else if (value && typeof value === 'object') {
-      result = result.concat(extractPrimitiveTokens(value, [...path, key], typeOverride));
+// Helper to extract tokens from flat object structure
+function extractPrimitiveTokens(obj: Record<string, string | number>): { name: string; value: string | number; type?: string }[] {
+  return Object.entries(obj).map(([key, value]) => {
+    let type;
+    // Color tokens: PascalCase "Color"
+    if (key.startsWith("Color")) {
+      type = "color";
     }
-  }
-  return result;
+    // Typography tokens: FontSizes, FontFamilies, FontWeights, LineHeights, LetterSpacings, TextCases, TextDecorations
+    else if (
+      key.startsWith("FontSizes") ||
+      key.startsWith("FontFamilies") ||
+      key.startsWith("FontWeights") ||
+      key.startsWith("LineHeights") ||
+      key.startsWith("LetterSpacings") ||
+      key.startsWith("TextCases") ||
+      key.startsWith("TextDecorations")
+    ) {
+      type = "typography";
+    }
+    // Dimension tokens: Spacings, BorderRadius, Breakpoints, Grid, Layout, Sizing, Stack, ParagraphSpacings
+    else if (
+      key.startsWith("Spacings") ||
+      key.startsWith("BorderRadius") ||
+      key.startsWith("Breakpoints") ||
+      key.startsWith("Grid") ||
+      key.startsWith("Layout") ||
+      key.startsWith("Sizing") ||
+      key.startsWith("Stack") ||
+      key.startsWith("ParagraphSpacings")
+    ) {
+      type = "dimension";
+    }
+    return {
+      name: key,
+      value,
+      type
+    };
+  });
 }
 
 const ColorSwatch = ({ name, value }: { name: string; value: string }) => {
@@ -148,102 +177,99 @@ const BreakpointSwatch = ({ name, value }: { name: string; value: string | numbe
 
 export const Foundations: Story = {
   render: () => {
-    // Extract all tokens with $value
-    const allTokens = extractPrimitiveTokens(tokens);
-    // Group tokens by top-level type
-    const groups: Record<string, { name: string; value: string | number; type?: string }[]> = {};
-    allTokens.forEach(token => {
-      const topLevel = token.name.split('.')[0];
-      if (!groups[topLevel]) groups[topLevel] = [];
-      groups[topLevel].push(token);
-    });
+    const { dimensions, typography, color, misc } = categorizedTokens;
+
     return (
       <Box>
         <Typography variant="h1" gutterBottom>DDS Foundations</Typography>
-        {/* Spacing */}
-        {groups.spacings && (
+
+        {/* Typography */}
+        {typography.length > 0 && (
           <>
-            <Typography variant="h2" gutterBottom mt={6}>Spacing</Typography>
+            <Typography variant="h2" gutterBottom mt={6}>Typography</Typography>
             <Grid container spacing={2}>
-              {groups.spacings.map(({ name, value }) => (
-                <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
-                  <SpacingSwatch name={name} value={value} />
-                </Grid>
-              ))}
+              {typography.map(({ name, value }: Token) => {
+                if (name.startsWith('FontSizes')) {
+                  return (
+                    <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                      <FontSizeSwatch name={name} value={value} />
+                    </Grid>
+                  );
+                }
+                if (name.startsWith('FontFamilies')) {
+                  return (
+                    <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                      <FontFamilySwatch name={name} value={value} />
+                    </Grid>
+                  );
+                }
+                return (
+                  <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                    <GenericSwatch name={name} value={value} />
+                  </Grid>
+                );
+              })}
             </Grid>
           </>
         )}
-        {/* Border Radius */}
-        {groups.borderRadius && (
+
+        {/* Dimensions */}
+        {dimensions.length > 0 && (
           <>
-            <Typography variant="h2" gutterBottom mt={6}>Border Radius</Typography>
+            <Typography variant="h2" gutterBottom mt={6}>Dimensions</Typography>
             <Grid container spacing={2}>
-              {groups.borderRadius.map(({ name, value }) => (
-                <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
-                  <RadiusSwatch name={name} value={value} />
-                </Grid>
-              ))}
+              {dimensions.map(({ name, value }: Token) => {
+                if (name.startsWith('Spacings')) {
+                  return (
+                    <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                      <SpacingSwatch name={name} value={value} />
+                    </Grid>
+                  );
+                }
+                if (name.startsWith('BorderRadius')) {
+                  return (
+                    <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                      <RadiusSwatch name={name} value={value} />
+                    </Grid>
+                  );
+                }
+                if (name.startsWith('Breakpoints')) {
+                  return (
+                    <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                      <BreakpointSwatch name={name} value={value} />
+                    </Grid>
+                  );
+                }
+                return (
+                  <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                    <GenericSwatch name={name} value={value} />
+                  </Grid>
+                );
+              })}
             </Grid>
           </>
         )}
-        {/* Font Sizes */}
-        {groups.fontSizes && (
+
+        {/* Miscellaneous */}
+        {misc.length > 0 && (
           <>
-            <Typography variant="h2" gutterBottom mt={6}>Font Sizes</Typography>
+            <Typography variant="h2" gutterBottom mt={6}>Miscellaneous</Typography>
             <Grid container spacing={2}>
-              {groups.fontSizes.map(({ name, value }) => (
-                <Grid item xs={12} key={name}>
-                  <FontSizeSwatch name={name} value={value} />
-                </Grid>
-              ))}
-            </Grid>
-          </>
-        )}
-        {/* Font Families */}
-        {groups.fontFamilies && (
-          <>
-            <Typography variant="h2" gutterBottom mt={6}>Font Families</Typography>
-            <Grid container spacing={2}>
-              {groups.fontFamilies.map(({ name, value }) => (
-                <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
-                  <FontFamilySwatch name={name} value={value} />
-                </Grid>
-              ))}
-            </Grid>
-          </>
-        )}
-        {/* All other primitives */}
-        {Object.entries(groups).filter(([k]) => !['color','spacings','borderRadius','fontSizes','fontFamilies','breakpoints'].includes(k)).map(([group, tokens]) => (
-          <React.Fragment key={group}>
-            <Typography variant="h2" gutterBottom mt={6}>{group.charAt(0).toUpperCase() + group.slice(1)}</Typography>
-            <Grid container spacing={2}>
-              {tokens.map(({ name, value }) => (
+              {misc.map(({ name, value }: Token) => (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
                   <GenericSwatch name={name} value={value} />
                 </Grid>
               ))}
             </Grid>
-          </React.Fragment>
-        ))}
-        {/* Breakpoints */}
-        {groups.breakpoints && (
-          <>
-            <Typography variant="h2" gutterBottom mt={6}>Breakpoints</Typography>
-            <Grid container spacing={0} direction="column">
-              {groups.breakpoints.map(({ name, value }) => (
-                <Grid item xs={12} key={name} sx={{ mb: 3 }}>
-                  <BreakpointSwatch name={name} value={value} />
-                </Grid>
-              ))}
-            </Grid>
           </>
         )}
-        {/* Colors (moved to bottom) */}
-        {groups.color && (
+
+        {/* Colors */}
+        {color.length > 0 && (
           <>
             <Typography variant="h2" gutterBottom mt={6}>Colors</Typography>
             <Grid container spacing={2}>
-              {groups.color.filter(t => t.type === 'color').map(({ name, value }) => (
+              {color.map(({ name, value }: Token) => (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
                   <ColorSwatch name={name} value={String(value)} />
                 </Grid>
@@ -254,4 +280,4 @@ export const Foundations: Story = {
       </Box>
     );
   },
-}; 
+};
