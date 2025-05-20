@@ -28,9 +28,9 @@ export default {
   "ColorBlue200": "#90caf9",
   "ColorBlue300": "#64b5f6",
   "ColorBlue400": "#42a5f5",
-  "ColorBlue500": "#9ebc21",
+  "ColorBlue500": "#2196f3",
   "ColorBlue600": "#1e88e5",
-  "ColorBlue700": "#1976d2",
+  "ColorBlue700": "#b7db42",
   "ColorBlue800": "#1565c0",
   "ColorBlue900": "#0d47a1",
   "ColorBlueA100": "#82b1ff",
@@ -302,5 +302,5 @@ export default {
   "TextCasesUppercase": "uppercase",
   "TextDecorationsNone": "none",
   "TextDecorationsUnderline": "underline",
-  "VarunToken": "#9ebc21"
+  "VarunToken": "#2196f3"
 };
