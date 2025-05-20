@@ -76,7 +76,7 @@ This document lists the MUI theme keys that currently have no DDS token mapping.
 1. High priority items affect core UI elements and should be addressed first
 2. Medium priority items affect typography and basic shape, which are important for consistency
 3. Low priority items are either system-level concerns or have sensible defaults
-4. All gaps should be documented with their intended DDS token mapping before implementation
+4. All gaps should be documented with their intended DDS token mapping before implementation 
 
 # Token Mapping Gaps
 
