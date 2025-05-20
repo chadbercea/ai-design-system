@@ -1,5 +1,12 @@
 import { createTheme } from '@mui/material/styles';
 import * as tokens from '../../build/tokens.mjs';
+import { createTypographyFromTokens } from './typography';
+
+console.log('Creating theme with tokens:', {
+  fontFamily: tokens.fontFamiliesRoboto,
+  fontSize: tokens.fontSizes14,
+  fontWeight: tokens.fontWeightsRegular,
+});
 
 // Map our flat tokens to MUI's theme structure
 const theme = createTheme({
@@ -67,68 +74,7 @@ const theme = createTheme({
       paper: '#fff',
     },
   },
-  typography: {
-    fontFamily: tokens.fontFamiliesRoboto,
-    fontSize: parseInt(tokens.fontSizes14),
-    fontWeightLight: 300,
-    fontWeightRegular: parseInt(tokens.fontWeightsRegular),
-    fontWeightMedium: parseInt(tokens.fontWeightsSemibold),
-    fontWeightBold: parseInt(tokens.fontWeightsBold),
-    h1: {
-      fontSize: tokens.fontSizes48,
-      fontWeight: parseInt(tokens.fontWeightsBold),
-      lineHeight: tokens.lineHeights100,
-      letterSpacing: tokens.letterSpacingsDefault,
-    },
-    h2: {
-      fontSize: tokens.fontSizes40,
-      fontWeight: parseInt(tokens.fontWeightsBold),
-      lineHeight: tokens.lineHeights100,
-      letterSpacing: tokens.letterSpacingsDefault,
-    },
-    h3: {
-      fontSize: tokens.fontSizes32,
-      fontWeight: parseInt(tokens.fontWeightsBold),
-      lineHeight: tokens.lineHeights100,
-      letterSpacing: tokens.letterSpacingsDefault,
-    },
-    h4: {
-      fontSize: tokens.fontSizes24,
-      fontWeight: parseInt(tokens.fontWeightsSemibold),
-      lineHeight: tokens.lineHeights100,
-      letterSpacing: tokens.letterSpacingsDefault,
-    },
-    h5: {
-      fontSize: tokens.fontSizes21,
-      fontWeight: parseInt(tokens.fontWeightsSemibold),
-      lineHeight: tokens.lineHeights100,
-      letterSpacing: tokens.letterSpacingsDefault,
-    },
-    h6: {
-      fontSize: tokens.fontSizes18,
-      fontWeight: parseInt(tokens.fontWeightsSemibold),
-      lineHeight: tokens.lineHeights100,
-      letterSpacing: tokens.letterSpacingsDefault,
-    },
-    body1: {
-      fontSize: tokens.fontSizes16,
-      fontWeight: parseInt(tokens.fontWeightsRegular),
-      lineHeight: tokens.lineHeights100,
-      letterSpacing: tokens.letterSpacingsDefault,
-    },
-    body2: {
-      fontSize: tokens.fontSizes14,
-      fontWeight: parseInt(tokens.fontWeightsRegular),
-      lineHeight: tokens.lineHeights100,
-      letterSpacing: tokens.letterSpacingsDefault,
-    },
-    caption: {
-      fontSize: tokens.fontSizes12,
-      fontWeight: parseInt(tokens.fontWeightsRegular),
-      lineHeight: tokens.lineHeights100,
-      letterSpacing: tokens.letterSpacingsDefault,
-    },
-  },
+  typography: createTypographyFromTokens(),
   shape: {
     borderRadius: parseInt(tokens.borderRadiusMd),
   },
@@ -169,5 +115,7 @@ const theme = createTheme({
     tooltip: 1500,
   },
 });
+
+console.log('Created theme typography:', theme.typography);
 
 export default theme; 
