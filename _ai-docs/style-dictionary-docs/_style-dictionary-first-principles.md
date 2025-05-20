@@ -3,9 +3,14 @@
 ## Overview
 Style Dictionary is a build system that allows you to define styles once, in a way for any platform or language to consume. It provides a single source of truth for your design tokens.
 
+## Toolchain
+```
+DDS Foundations.json → Style Dictionary → tokens.mjs → createTheme.js → MUI Theme
+```
+
 ## Installation
 ```bash
-npm install style-dictionary --save-dev
+npm install style-dictionary @tokens-studio/sd-transforms --save-dev
 ```
 
 ## Core Concepts
@@ -29,59 +34,44 @@ Tokens are organized in a hierarchical structure:
 ### 2. Build Process
 ```mermaid
 flowchart LR
-    subgraph global
-        direction TB
-        Z[Config] -->|Parse config| X
-        X["Parsed Config (1)"] -->|Run| A
-        A["Token Files (2)"] -->|Parsers| B
-        B["JavaScript Objects (3)"] -->|Combine| C
-        C["Dictionary (4)"] -->|Preprocessors| C
-    end
-
-    subgraph platform
-        direction TB
-        D["Dictionary (5)"] -->|Preprocessors| D
-        D -->|Transforms| E
-        E["Transformed Dictionary (6)"] -->|Resolve references| F
-        F["Resolved Dictionary (7)"] -->|Transitive transforms| E
-    end
-
-    subgraph files
-        direction TB
-        G[Resolved Dictionary] --> |Filters| H
-        H[Filtered Dictionary] --> |Formats| I
-        H[Filtered Dictionary] --> |File headers| I
-        I["Platform output (8)"] --> |Actions| J["Actions output (9)"]
-    end
-    global --> platform --> files
+    A[DDS Foundations.json] -->|Style Dictionary| B[tokens.mjs]
+    B -->|createTheme.js| C[MUI Theme]
 ```
 
 ## Configuration
 
 ### Basic Configuration
-Create a `config.json`:
-```json
-{
-  "source": ["tokens/**/*.json"],
-  "platforms": {
-    "scss": {
-      "transformGroup": "scss",
-      "buildPath": "build/scss/",
-      "files": [{
-        "destination": "_variables.scss",
-        "format": "scss/variables"
+Create `config/style-dictionary.config.mjs`:
+```javascript
+import StyleDictionary from 'style-dictionary';
+import { register } from '@tokens-studio/sd-transforms';
+
+register(StyleDictionary);
+
+export default {
+  source: ['token-studio-sync-provider/DDS Foundations.json'],
+  platforms: {
+    js: {
+      transformGroup: 'tokens-studio',
+      buildPath: 'build/',
+      files: [{
+        destination: 'tokens.mjs',
+        format: 'javascript/es6',
+        options: {
+          showFileHeader: true
+        }
       }]
     }
   }
-}
+};
 ```
 
 ### Key Configuration Options
-- `source`: Array of paths to token files
-- `platforms`: Output configurations for different platforms
+- `source`: Path to DDS Foundations.json
+- `platforms`: Output configurations
 - `transformGroup`: Set of transforms to apply
 - `buildPath`: Output directory
-- `files`: Array of output file configurations
+- `files`: Output file configurations
 
 ## Token Types and Formats
 
@@ -104,54 +94,13 @@ Create a `config.json`:
 
 ## Platform-Specific Output
 
-### CSS/SCSS
-```scss
-$color-base-gray-light: #CCCCCC;
-$color-base-gray-medium: #999999;
-$color-base-gray-dark: #111111;
-```
-
-### JavaScript
+### JavaScript/ES6 Module
 ```javascript
-module.exports = {
-  color: {
-    base: {
-      gray: {
-        light: '#CCCCCC',
-        medium: '#999999',
-        dark: '#111111'
-      }
-    }
-  }
-}
-```
-
-## Customization
-
-### Custom Transforms
-```javascript
-StyleDictionary.registerTransform({
-  name: 'size/px',
-  type: 'value',
-  matcher: function(prop) {
-    return prop.attributes.category === 'size';
-  },
-  transformer: function(prop) {
-    return `${prop.value}px`;
-  }
-});
-```
-
-### Custom Formats
-```javascript
-StyleDictionary.registerFormat({
-  name: 'custom/format',
-  formatter: function(dictionary, config) {
-    return dictionary.allProperties
-      .map(prop => `${prop.name}: ${prop.value}`)
-      .join('\n');
-  }
-});
+// build/tokens.mjs
+export const colorBlue500 = '#1976d2';
+export const colorBlue300 = '#42a5f5';
+export const colorBlue700 = '#1565c0';
+// ... other tokens
 ```
 
 ## Integration Steps
@@ -159,27 +108,31 @@ StyleDictionary.registerFormat({
 1. **Setup Project Structure**
    ```
    project/
-   ├── tokens/
-   │   ├── colors.json
-   │   ├── typography.json
-   │   └── spacing.json
-   ├── config.json
+   ├── token-studio-sync-provider/
+   │   └── DDS Foundations.json
+   ├── config/
+   │   └── style-dictionary.config.mjs
+   ├── src/
+   │   └── theme/
+   │       ├── createTheme.js
+   │       └── ThemeProvider.js
    └── build/
+       └── tokens.mjs
    ```
 
 2. **Define Tokens**
-   - Create token files in JSON format
-   - Use proper structure and naming conventions
+   - Use DDS Foundations.json as source
+   - Follow DTCG format
    - Include necessary metadata
 
 3. **Configure Build**
-   - Set up platform-specific configurations
-   - Define output formats
+   - Set up Style Dictionary config
+   - Define output format
    - Configure transforms
 
 4. **Build Process**
    ```bash
-   style-dictionary build
+   npm run build:tokens
    ```
 
 ## Best Practices
@@ -189,15 +142,20 @@ StyleDictionary.registerFormat({
    - Group related tokens
    - Maintain consistent structure
 
-2. **Value Management**
-   - Use references for shared values
-   - Keep values platform-agnostic
-   - Use appropriate units
+2. **Build Process**
+   - Watch for token changes
+   - Validate output formats
+   - Generate type definitions
 
-3. **Build Optimization**
-   - Use filters to reduce output
-   - Implement proper transforms
-   - Cache builds when possible
+3. **Platform Integration**
+   - Test output
+   - Verify token usage
+   - Document requirements
+
+4. **Maintenance**
+   - Version control
+   - Document changes
+   - Maintain compatibility
 
 ## Common Issues and Solutions
 

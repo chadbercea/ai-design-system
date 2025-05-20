@@ -1,306 +1,308 @@
-export default {
-  "BorderRadiusSm": 4,
-  "BorderRadiusMd": 8,
-  "BorderRadiusLg": 16,
-  "BorderRadiusXl": 24,
-  "BorderRadiusNone": 0,
-  "BreakpointsXl": 1536,
-  "BreakpointsLg": 1200,
-  "BreakpointsMd": 900,
-  "BreakpointsSm": 600,
-  "BreakpointsXs": 444,
-  "ColorGrey50": "#fafafa",
-  "ColorGrey100": "#f5f5f5",
-  "ColorGrey200": "#eeeeee",
-  "ColorGrey300": "#e0e0e0",
-  "ColorGrey400": "#bdbdbd",
-  "ColorGrey500": "#9e9e9e",
-  "ColorGrey600": "#757575",
-  "ColorGrey700": "#616161",
-  "ColorGrey800": "#424242",
-  "ColorGrey900": "#212121",
-  "ColorGreyA100": "#f5f5f5",
-  "ColorGreyA200": "#eeeeee",
-  "ColorGreyA400": "#bdbdbd",
-  "ColorGreyA700": "#616161",
-  "ColorBlue50": "#e3f2fd",
-  "ColorBlue100": "#bbdefb",
-  "ColorBlue200": "#90caf9",
-  "ColorBlue300": "#64b5f6",
-  "ColorBlue400": "#42a5f5",
-  "ColorBlue500": "#2196f3",
-  "ColorBlue600": "#1e88e5",
-  "ColorBlue700": "#1976d2",
-  "ColorBlue800": "#1565c0",
-  "ColorBlue900": "#0d47a1",
-  "ColorBlueA100": "#82b1ff",
-  "ColorBlueA200": "#448aff",
-  "ColorBlueA400": "#2979ff",
-  "ColorBlueA700": "#2962ff",
-  "ColorPurple50": "#f3e5f5",
-  "ColorPurple100": "#e1bee7",
-  "ColorPurple200": "#ce93d8",
-  "ColorPurple300": "#ba68c8",
-  "ColorPurple400": "#ab47bc",
-  "ColorPurple500": "#9c27b0",
-  "ColorPurple600": "#8e24aa",
-  "ColorPurple700": "#7b1fa2",
-  "ColorPurple800": "#6a1b9a",
-  "ColorPurple900": "#4a148c",
-  "ColorPurpleA100": "#ea80fc",
-  "ColorPurpleA200": "#e040fb",
-  "ColorPurpleA400": "#d500f9",
-  "ColorPurpleA700": "#aa00ff",
-  "ColorRed50": "#feebee",
-  "ColorRed100": "#fecdd2",
-  "ColorRed200": "#ef9a9a",
-  "ColorRed300": "#e57373",
-  "ColorRed400": "#ef5350",
-  "ColorRed500": "#f44336",
-  "ColorRed600": "#e53935",
-  "ColorRed700": "#d32f2f",
-  "ColorRed800": "#c62828",
-  "ColorRed900": "#b71c1c",
-  "ColorRedA100": "#ff8a80",
-  "ColorRedA200": "#ff5252",
-  "ColorRedA400": "#ff1744",
-  "ColorRedA700": "#d50000",
-  "ColorGreen50": "#e8f5e9",
-  "ColorGreen100": "#c8e6c9",
-  "ColorGreen200": "#a5d6a7",
-  "ColorGreen300": "#81c784",
-  "ColorGreen400": "#66bb6a",
-  "ColorGreen500": "#4caf50",
-  "ColorGreen600": "#43a047",
-  "ColorGreen700": "#388e3c",
-  "ColorGreen800": "#2e7d32",
-  "ColorGreen900": "#1b5e20",
-  "ColorGreenA100": "#b9f6ca",
-  "ColorGreenA200": "#69f0ae",
-  "ColorGreenA400": "#00e676",
-  "ColorGreenA700": "#00c853",
-  "ColorOrange50": "#fff3e0",
-  "ColorOrange100": "#ffe0b2",
-  "ColorOrange200": "#ffcc80",
-  "ColorOrange300": "#ffb74d",
-  "ColorOrange400": "#ffa726",
-  "ColorOrange500": "#ff9800",
-  "ColorOrange600": "#fb8c00",
-  "ColorOrange700": "#f57c00",
-  "ColorOrange800": "#ef6c00",
-  "ColorOrange900": "#e65100",
-  "ColorOrangeA100": "#ffd180",
-  "ColorOrangeA200": "#ffab40",
-  "ColorOrangeA400": "#ff9100",
-  "ColorOrangeA700": "#ff6d00",
-  "ColorLightblue50": "#e1f5fe",
-  "ColorLightblue100": "#b3e5fc",
-  "ColorLightblue200": "#81d4fa",
-  "ColorLightblue300": "#4fc3f7",
-  "ColorLightblue400": "#29b6f6",
-  "ColorLightblue500": "#03a9f4",
-  "ColorLightblue600": "#039be5",
-  "ColorLightblue700": "#0288d1",
-  "ColorLightblue800": "#0277bd",
-  "ColorLightblue900": "#01579b",
-  "ColorLightblueA100": "#80d8ff",
-  "ColorLightblueA200": "#40c4ff",
-  "ColorLightblueA400": "#00b0ff",
-  "ColorLightblueA700": "#0091ea",
-  "ColorIndigo50": "#e8eaf6",
-  "ColorIndigo100": "#c5cae9",
-  "ColorIndigo200": "#9fa8da",
-  "ColorIndigo300": "#7986cb",
-  "ColorIndigo400": "#5c6bc0",
-  "ColorIndigo500": "#3f51b5",
-  "ColorIndigo600": "#3949ab",
-  "ColorIndigo700": "#303f9f",
-  "ColorIndigo800": "#283593",
-  "ColorIndigo900": "#1a237e",
-  "ColorIndigoA100": "#8c9eff",
-  "ColorIndigoA200": "#536dfe",
-  "ColorIndigoA400": "#3d5afe",
-  "ColorIndigoA700": "#304ffe",
-  "ColorDeeppurple50": "#ede7f6",
-  "ColorDeeppurple100": "#d1c4e9",
-  "ColorDeeppurple200": "#b39ddb",
-  "ColorDeeppurple300": "#9575cd",
-  "ColorDeeppurple400": "#7e57c2",
-  "ColorDeeppurple500": "#673ab7",
-  "ColorDeeppurple600": "#5e35b1",
-  "ColorDeeppurple700": "#512da8",
-  "ColorDeeppurple800": "#4527a0",
-  "ColorDeeppurple900": "#311b92",
-  "ColorDeeppurpleA100": "#b388ff",
-  "ColorDeeppurpleA200": "#7c4dff",
-  "ColorDeeppurpleA400": "#651fff",
-  "ColorDeeppurpleA700": "#6200ea",
-  "ColorAmber50": "#fff8e1",
-  "ColorAmber100": "#ffecb3",
-  "ColorAmber200": "#ffe082",
-  "ColorAmber300": "#ffd54f",
-  "ColorAmber400": "#ffca28",
-  "ColorAmber500": "#ffc107",
-  "ColorAmber600": "#ffb300",
-  "ColorAmber700": "#ffa000",
-  "ColorAmber800": "#ff8f00",
-  "ColorAmber900": "#ff6f00",
-  "ColorAmberA100": "#ffe57f",
-  "ColorAmberA200": "#ffd740",
-  "ColorAmberA400": "#ffc400",
-  "ColorAmberA700": "#ffab00",
-  "ColorPink50": "#fce4ec",
-  "ColorPink100": "#f8bbd0",
-  "ColorPink200": "#f48fb1",
-  "ColorPink300": "#f06292",
-  "ColorPink400": "#ec407a",
-  "ColorPink500": "#e91e63",
-  "ColorPink600": "#d81b60",
-  "ColorPink700": "#c2185b",
-  "ColorPink800": "#ad1457",
-  "ColorPink900": "#880e4f",
-  "ColorPinkA100": "#ff80ab",
-  "ColorPinkA200": "#ff4081",
-  "ColorPinkA400": "#f50057",
-  "ColorPinkA700": "#c51162",
-  "ColorDeeporange50": "#fbe9e7",
-  "ColorDeeporange100": "#ffccbc",
-  "ColorDeeporange200": "#ffab91",
-  "ColorDeeporange300": "#ff8a65",
-  "ColorDeeporange400": "#ff7043",
-  "ColorDeeporange500": "#ff5722",
-  "ColorDeeporange600": "#f4511e",
-  "ColorDeeporange700": "#e64a19",
-  "ColorDeeporange800": "#d84315",
-  "ColorDeeporange900": "#bf360c",
-  "ColorDeeporangeA100": "#ff9e80",
-  "ColorDeeporangeA200": "#ff6e40",
-  "ColorDeeporangeA400": "#ff3d00",
-  "ColorDeeporangeA700": "#dd2c00",
-  "ColorLightgreen50": "#f1f8e9",
-  "ColorLightgreen100": "#dcedc8",
-  "ColorLightgreen200": "#c5e1a5",
-  "ColorLightgreen300": "#aed581",
-  "ColorLightgreen400": "#8bc34a",
-  "ColorLightgreen500": "#8bc34a",
-  "ColorLightgreen600": "#7cb342",
-  "ColorLightgreen700": "#689f38",
-  "ColorLightgreen800": "#558b2f",
-  "ColorLightgreen900": "#33691e",
-  "ColorLightgreenA100": "#ccff90",
-  "ColorLightgreenA200": "#b2ff59",
-  "ColorLightgreenA400": "#76ff03",
-  "ColorLightgreenA700": "#64dd17",
-  "ColorLime50": "#f9fbe7",
-  "ColorLime100": "#f0f4c3",
-  "ColorLime200": "#e6ee9c",
-  "ColorLime300": "#dce775",
-  "ColorLime400": "#d4e157",
-  "ColorLime500": "#cddc39",
-  "ColorLime600": "#c0ca33",
-  "ColorLime700": "#afb42b",
-  "ColorLime800": "#9e9d24",
-  "ColorLime900": "#827717",
-  "ColorLimeA100": "#f4ff81",
-  "ColorLimeA200": "#eeff41",
-  "ColorLimeA400": "#c6ff00",
-  "ColorLimeA700": "#aeea00",
-  "ColorYellow50": "#fffde7",
-  "ColorYellow100": "#fff9c4",
-  "ColorYellow200": "#fff59d",
-  "ColorYellow300": "#fff176",
-  "ColorYellow400": "#ffee58",
-  "ColorYellow500": "#ffeb3b",
-  "ColorYellow600": "#fdd835",
-  "ColorYellow700": "#fbc02d",
-  "ColorYellow800": "#f9a825",
-  "ColorYellow900": "#f57f17",
-  "ColorYellowA100": "#ffff8d",
-  "ColorYellowA200": "#ffff00",
-  "ColorYellowA400": "#ffea00",
-  "ColorYellowA700": "#ffd600",
-  "ColorCyan50": "#e0f7fa",
-  "ColorCyan100": "#b2ebf2",
-  "ColorCyan200": "#80deea",
-  "ColorCyan300": "#4dd0e1",
-  "ColorCyan400": "#26c6da",
-  "ColorCyan500": "#00bcd4",
-  "ColorCyan600": "#00acc1",
-  "ColorCyan700": "#0097a7",
-  "ColorCyan800": "#00838f",
-  "ColorCyan900": "#006064",
-  "ColorCyanA100": "#84ffff",
-  "ColorCyanA200": "#18ffff",
-  "ColorCyanA400": "#00e5ff",
-  "ColorCyanA700": "#00b8d4",
-  "ColorTeal50": "#e0f2f1",
-  "ColorTeal100": "#b2dfdb",
-  "ColorTeal200": "#80cbc4",
-  "ColorTeal300": "#4db6ac",
-  "ColorTeal400": "#26a69a",
-  "ColorTeal500": "#009688",
-  "ColorTeal600": "#00897b",
-  "ColorTeal700": "#00796b",
-  "ColorTeal800": "#00695c",
-  "ColorTeal900": "#004d40",
-  "ColorTealA100": "#a7ffeb",
-  "ColorTealA200": "#64ffda",
-  "ColorTealA400": "#1de9b6",
-  "ColorTealA700": "#00bfa5",
-  "ColorBluegrey50": "#eceff1",
-  "ColorBluegrey100": "#cfd8dc",
-  "ColorBluegrey200": "#b0bec5",
-  "ColorBluegrey300": "#90a4ae",
-  "ColorBluegrey400": "#78909c",
-  "ColorBluegrey500": "#607d8b",
-  "ColorBluegrey600": "#546e7a",
-  "ColorBluegrey700": "#455a64",
-  "ColorBluegrey800": "#37474f",
-  "ColorBluegrey900": "#263238",
-  "ColorBluegreyA100": "#cfd8dc",
-  "ColorBluegreyA200": "#b0bec5",
-  "ColorBluegreyA400": "#78909c",
-  "ColorBluegreyA700": "#455a64",
-  "FontFamiliesPoppins": "Poppins",
-  "FontFamiliesInter": "Inter",
-  "FontFamiliesRoboto-mono": "Roboto Mono",
-  "FontFamiliesRoboto": "Roboto",
-  "FontSizes10": 10,
-  "FontSizes12": 12,
-  "FontSizes14": 14,
-  "FontSizes16": 16,
-  "FontSizes18": 18,
-  "FontSizes21": 21,
-  "FontSizes24": 24,
-  "FontSizes32": 32,
-  "FontSizes40": 40,
-  "FontSizes48": 48,
-  "FontWeightsRegular": "400",
-  "FontWeightsSemibold": "500",
-  "FontWeightsBold": "700",
-  "FontWeightsBlack": "900",
-  "Spacings0": 0,
-  "Spacings1": 8,
-  "Spacings2": 16,
-  "Spacings3": 24,
-  "Spacings4": 32,
-  "Spacings5": 40,
-  "Spacings6": 48,
-  "Spacings7": 56,
-  "Spacings8": 64,
-  "Spacings9": 72,
-  "Spacings10": 80,
-  "Spacings11": 88,
-  "Spacings12": 96,
-  "LineHeights100": 1,
-  "ParagraphSpacings0": "0",
-  "LetterSpacingsDefault": "0%",
-  "LetterSpacingsWide": "2%",
-  "LetterSpacingsTight": "1.5%",
-  "TextCasesCapitalize": "capitalize",
-  "TextCasesNone": "none",
-  "TextCasesUppercase": "uppercase",
-  "TextDecorationsNone": "none",
-  "TextDecorationsUnderline": "underline",
-  "VarunToken": "#2196f3",
-};
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+export const borderRadiusSm = "4px"; // Default border radius
+export const borderRadiusMd = "8px"; // Medium border radius
+export const borderRadiusLg = "16px"; // Large border radius
+export const borderRadiusXl = "24px"; // Extra large border radius
+export const borderRadiusNone = "0px"; // No border radius
+export const breakpointsXl = 1536; // Extra large breakpoint, large screens like desktop monitors
+export const breakpointsLg = 1200; // Large breakpoint, large screens like laptops
+export const breakpointsMd = 900; // Medium breakpoint, medium screens like tablets
+export const breakpointsSm = 600; // Small breakpoint, small screens like phones
+export const breakpointsXs = 444; // Extra small breakpoint, small screens like watches
+export const colorGrey50 = "#fafafa"; // Amanda demo - Grey 50
+export const colorGrey100 = "#f5f5f5"; // Grey 100
+export const colorGrey200 = "#eeeeee"; // Grey 200
+export const colorGrey300 = "#e0e0e0"; // Grey 300
+export const colorGrey400 = "#bdbdbd"; // Grey 400
+export const colorGrey500 = "#9e9e9e"; // Grey 500
+export const colorGrey600 = "#757575"; // Grey 600
+export const colorGrey700 = "#616161"; // Grey 700
+export const colorGrey800 = "#424242"; // Grey 800
+export const colorGrey900 = "#212121"; // Grey 900
+export const colorGreyA100 = "#f5f5f5"; // Grey A100
+export const colorGreyA200 = "#eeeeee"; // Grey A200
+export const colorGreyA400 = "#bdbdbd"; // Grey A400
+export const colorGreyA700 = "#616161"; // Grey A700
+export const colorBlue50 = "#e3f2fd"; // Blue 50
+export const colorBlue100 = "#bbdefb"; // Blue 100
+export const colorBlue200 = "#90caf9"; // Blue 200
+export const colorBlue300 = "#64b5f6"; // Blue 300
+export const colorBlue400 = "#42a5f5"; // Blue 400
+export const colorBlue500 = "#2196f3"; // Blue 500
+export const colorBlue600 = "#1e88e5"; // Blue 600
+export const colorBlue700 = "#1976d2"; // Blue 700 - Fixed
+export const colorBlue800 = "#1565c0"; // Blue 800
+export const colorBlue900 = "#0d47a1"; // Blue 900
+export const colorBlueA100 = "#82b1ff"; // Blue A100
+export const colorBlueA200 = "#448aff"; // Blue A200
+export const colorBlueA400 = "#2979ff"; // Blue A400
+export const colorBlueA700 = "#2962ff"; // Blue A700
+export const colorPurple50 = "#f3e5f5"; // Purple 50
+export const colorPurple100 = "#e1bee7"; // Purple 100
+export const colorPurple200 = "#ce93d8"; // Purple 200
+export const colorPurple300 = "#ba68c8"; // Purple 300
+export const colorPurple400 = "#ab47bc"; // Purple 400
+export const colorPurple500 = "#9c27b0"; // Purple 500
+export const colorPurple600 = "#8e24aa"; // Purple 600
+export const colorPurple700 = "#7b1fa2"; // Purple 700
+export const colorPurple800 = "#6a1b9a"; // Purple 800
+export const colorPurple900 = "#4a148c"; // Purple 900
+export const colorPurpleA100 = "#ea80fc"; // Purple A100
+export const colorPurpleA200 = "#e040fb"; // Purple A200
+export const colorPurpleA400 = "#d500f9"; // Purple A400
+export const colorPurpleA700 = "#aa00ff"; // Purple A700
+export const colorRed50 = "#feebee"; // Red 50
+export const colorRed100 = "#fecdd2"; // Red 100
+export const colorRed200 = "#ef9a9a"; // Red 200
+export const colorRed300 = "#e57373"; // Red 300
+export const colorRed400 = "#ef5350"; // Red 400
+export const colorRed500 = "#f44336"; // Red 500
+export const colorRed600 = "#e53935"; // Red 600
+export const colorRed700 = "#d32f2f"; // Red 700
+export const colorRed800 = "#c62828"; // Red 800
+export const colorRed900 = "#b71c1c"; // Red 900
+export const colorRedA100 = "#ff8a80"; // Red A100
+export const colorRedA200 = "#ff5252"; // Red A200
+export const colorRedA400 = "#ff1744"; // Red A400
+export const colorRedA700 = "#d50000"; // Red A700
+export const colorGreen50 = "#e8f5e9"; // Green 50
+export const colorGreen100 = "#c8e6c9"; // Green 100
+export const colorGreen200 = "#a5d6a7"; // Green 200
+export const colorGreen300 = "#81c784"; // Green 300
+export const colorGreen400 = "#66bb6a"; // Green 400
+export const colorGreen500 = "#4caf50"; // Green 500
+export const colorGreen600 = "#43a047"; // Green 600
+export const colorGreen700 = "#388e3c"; // Green 700
+export const colorGreen800 = "#2e7d32"; // Green 800
+export const colorGreen900 = "#1b5e20"; // Green 900
+export const colorGreenA100 = "#b9f6ca"; // Green A100
+export const colorGreenA200 = "#69f0ae"; // Green A200
+export const colorGreenA400 = "#00e676"; // Green A400
+export const colorGreenA700 = "#00c853"; // Green A700
+export const colorOrange50 = "#fff3e0"; // Orange 50
+export const colorOrange100 = "#ffe0b2"; // Orange 100
+export const colorOrange200 = "#ffcc80"; // Orange 200
+export const colorOrange300 = "#ffb74d"; // Orange 300
+export const colorOrange400 = "#ffa726"; // Orange 400
+export const colorOrange500 = "#ff9800"; // Orange 500
+export const colorOrange600 = "#fb8c00"; // Orange 600
+export const colorOrange700 = "#f57c00"; // Orange 700
+export const colorOrange800 = "#ef6c00"; // Orange 800
+export const colorOrange900 = "#e65100"; // Orange 900
+export const colorOrangeA100 = "#ffd180"; // Orange A100
+export const colorOrangeA200 = "#ffab40"; // Orange A200
+export const colorOrangeA400 = "#ff9100"; // Orange A400
+export const colorOrangeA700 = "#ff6d00"; // Orange A700
+export const colorLightblue50 = "#e1f5fe"; // Light Blue 50
+export const colorLightblue100 = "#b3e5fc"; // Light Blue 100
+export const colorLightblue200 = "#81d4fa"; // Light Blue 200
+export const colorLightblue300 = "#4fc3f7"; // Light Blue 300
+export const colorLightblue400 = "#29b6f6"; // Light Blue 400
+export const colorLightblue500 = "#03a9f4"; // Light Blue 500
+export const colorLightblue600 = "#039be5"; // Light Blue 600
+export const colorLightblue700 = "#0288d1"; // Light Blue 700
+export const colorLightblue800 = "#0277bd"; // Light Blue 800
+export const colorLightblue900 = "#01579b"; // Light Blue 900
+export const colorLightblueA100 = "#80d8ff"; // Light Blue A100
+export const colorLightblueA200 = "#40c4ff"; // Light Blue A200
+export const colorLightblueA400 = "#00b0ff"; // Light Blue A400
+export const colorLightblueA700 = "#0091ea"; // Light Blue A700
+export const colorIndigo50 = "#e8eaf6"; // Indigo 50
+export const colorIndigo100 = "#c5cae9"; // Indigo 100
+export const colorIndigo200 = "#9fa8da"; // Indigo 200
+export const colorIndigo300 = "#7986cb"; // Indigo 300
+export const colorIndigo400 = "#5c6bc0"; // Indigo 400
+export const colorIndigo500 = "#3f51b5"; // Indigo 500
+export const colorIndigo600 = "#3949ab"; // Indigo 600
+export const colorIndigo700 = "#303f9f"; // Indigo 700
+export const colorIndigo800 = "#283593"; // Indigo 800
+export const colorIndigo900 = "#1a237e"; // Indigo 900
+export const colorIndigoA100 = "#8c9eff"; // Indigo A100
+export const colorIndigoA200 = "#536dfe"; // Indigo A200
+export const colorIndigoA400 = "#3d5afe"; // Indigo A400
+export const colorIndigoA700 = "#304ffe"; // Indigo A700
+export const colorDeeppurple50 = "#ede7f6"; // Deep Purple 50
+export const colorDeeppurple100 = "#d1c4e9"; // Deep Purple 100
+export const colorDeeppurple200 = "#b39ddb"; // Deep Purple 200
+export const colorDeeppurple300 = "#9575cd"; // Deep Purple 300
+export const colorDeeppurple400 = "#7e57c2"; // Deep Purple 400
+export const colorDeeppurple500 = "#673ab7"; // Deep Purple 500
+export const colorDeeppurple600 = "#5e35b1"; // Deep Purple 600
+export const colorDeeppurple700 = "#512da8"; // Deep Purple 700
+export const colorDeeppurple800 = "#4527a0"; // Deep Purple 800
+export const colorDeeppurple900 = "#311b92"; // Deep Purple 900
+export const colorDeeppurpleA100 = "#b388ff"; // Deep Purple A100
+export const colorDeeppurpleA200 = "#7c4dff"; // Deep Purple A200
+export const colorDeeppurpleA400 = "#651fff"; // Deep Purple A400
+export const colorDeeppurpleA700 = "#6200ea"; // Deep Purple A700
+export const colorAmber50 = "#fff8e1"; // Amber 50
+export const colorAmber100 = "#ffecb3"; // Amber 100
+export const colorAmber200 = "#ffe082"; // Amber 200
+export const colorAmber300 = "#ffd54f"; // Amber 300
+export const colorAmber400 = "#ffca28"; // Amber 400
+export const colorAmber500 = "#ffc107"; // Amber 500
+export const colorAmber600 = "#ffb300"; // Amber 600
+export const colorAmber700 = "#ffa000"; // Amber 700
+export const colorAmber800 = "#ff8f00"; // Amber 800
+export const colorAmber900 = "#ff6f00"; // Amber 900
+export const colorAmberA100 = "#ffe57f"; // Amber A100
+export const colorAmberA200 = "#ffd740"; // Amber A200
+export const colorAmberA400 = "#ffc400"; // Amber A400
+export const colorAmberA700 = "#ffab00"; // Amber A700
+export const colorPink50 = "#fce4ec"; // Pink 50
+export const colorPink100 = "#f8bbd0"; // Pink 100
+export const colorPink200 = "#f48fb1"; // Pink 200
+export const colorPink300 = "#f06292"; // Pink 300
+export const colorPink400 = "#ec407a"; // Pink 400
+export const colorPink500 = "#e91e63"; // Pink 500
+export const colorPink600 = "#d81b60"; // Pink 600
+export const colorPink700 = "#c2185b"; // Pink 700
+export const colorPink800 = "#ad1457"; // Pink 800
+export const colorPink900 = "#880e4f"; // Pink 900
+export const colorPinkA100 = "#ff80ab"; // Pink A100
+export const colorPinkA200 = "#ff4081"; // Pink A200
+export const colorPinkA400 = "#f50057"; // Pink A400
+export const colorPinkA700 = "#c51162"; // Pink A700
+export const colorDeeporange50 = "#fbe9e7"; // Deep Orange 50
+export const colorDeeporange100 = "#ffccbc"; // Deep Orange 100
+export const colorDeeporange200 = "#ffab91"; // Deep Orange 200
+export const colorDeeporange300 = "#ff8a65"; // Deep Orange 300
+export const colorDeeporange400 = "#ff7043"; // Deep Orange 400
+export const colorDeeporange500 = "#ff5722"; // Deep Orange 500
+export const colorDeeporange600 = "#f4511e"; // Deep Orange 600
+export const colorDeeporange700 = "#e64a19"; // Deep Orange 700
+export const colorDeeporange800 = "#d84315"; // Deep Orange 800
+export const colorDeeporange900 = "#bf360c"; // Deep Orange 900
+export const colorDeeporangeA100 = "#ff9e80"; // Deep Orange A100
+export const colorDeeporangeA200 = "#ff6e40"; // Deep Orange A200
+export const colorDeeporangeA400 = "#ff3d00"; // Deep Orange A400
+export const colorDeeporangeA700 = "#dd2c00"; // Deep Orange A700
+export const colorLightgreen50 = "#f1f8e9"; // Light Green 50
+export const colorLightgreen100 = "#dcedc8"; // Light Green 100
+export const colorLightgreen200 = "#c5e1a5"; // Light Green 200
+export const colorLightgreen300 = "#aed581"; // Light Green 300
+export const colorLightgreen400 = "#8bc34a"; // Light Green 400
+export const colorLightgreen500 = "#8bc34a"; // Light Green 500
+export const colorLightgreen600 = "#7cb342"; // Light Green 600
+export const colorLightgreen700 = "#689f38"; // Light Green 700
+export const colorLightgreen800 = "#558b2f"; // Light Green 800
+export const colorLightgreen900 = "#33691e"; // Light Green 900
+export const colorLightgreenA100 = "#ccff90"; // Light Green A100
+export const colorLightgreenA200 = "#b2ff59"; // Light Green A200
+export const colorLightgreenA400 = "#76ff03"; // Light Green A400
+export const colorLightgreenA700 = "#64dd17"; // Light Green A700
+export const colorLime50 = "#f9fbe7"; // Lime 50
+export const colorLime100 = "#f0f4c3"; // Lime 100
+export const colorLime200 = "#e6ee9c"; // Lime 200
+export const colorLime300 = "#dce775"; // Lime 300
+export const colorLime400 = "#d4e157"; // Lime 400
+export const colorLime500 = "#cddc39"; // Lime 500
+export const colorLime600 = "#c0ca33"; // Lime 600
+export const colorLime700 = "#afb42b"; // Lime 700
+export const colorLime800 = "#9e9d24"; // Lime 800
+export const colorLime900 = "#827717"; // Lime 900
+export const colorLimeA100 = "#f4ff81"; // Lime A100
+export const colorLimeA200 = "#eeff41"; // Lime A200
+export const colorLimeA400 = "#c6ff00"; // Lime A400
+export const colorLimeA700 = "#aeea00"; // Lime A700
+export const colorYellow50 = "#fffde7"; // Yellow 50
+export const colorYellow100 = "#fff9c4"; // Yellow 100
+export const colorYellow200 = "#fff59d"; // Yellow 200
+export const colorYellow300 = "#fff176"; // Yellow 300
+export const colorYellow400 = "#ffee58"; // Yellow 400
+export const colorYellow500 = "#ffeb3b"; // Yellow 500
+export const colorYellow600 = "#fdd835"; // Yellow 600
+export const colorYellow700 = "#fbc02d"; // Yellow 700
+export const colorYellow800 = "#f9a825"; // Yellow 800
+export const colorYellow900 = "#f57f17"; // Yellow 900
+export const colorYellowA100 = "#ffff8d"; // Yellow A100
+export const colorYellowA200 = "#ffff00"; // Yellow A200
+export const colorYellowA400 = "#ffea00"; // Yellow A400
+export const colorYellowA700 = "#ffd600"; // Yellow A700
+export const colorCyan50 = "#e0f7fa"; // Cyan 50
+export const colorCyan100 = "#b2ebf2"; // Cyan 100
+export const colorCyan200 = "#80deea"; // Cyan 200
+export const colorCyan300 = "#4dd0e1"; // Cyan 300
+export const colorCyan400 = "#26c6da"; // Cyan 400
+export const colorCyan500 = "#00bcd4"; // Cyan 500
+export const colorCyan600 = "#00acc1"; // Cyan 600
+export const colorCyan700 = "#0097a7"; // Cyan 700
+export const colorCyan800 = "#00838f"; // Cyan 800
+export const colorCyan900 = "#006064"; // Cyan 900
+export const colorCyanA100 = "#84ffff"; // Cyan A100
+export const colorCyanA200 = "#18ffff"; // Cyan A200
+export const colorCyanA400 = "#00e5ff"; // Cyan A400
+export const colorCyanA700 = "#00b8d4"; // Cyan A700
+export const colorTeal50 = "#e0f2f1"; // Teal 50
+export const colorTeal100 = "#b2dfdb"; // Teal 100
+export const colorTeal200 = "#80cbc4"; // Teal 200
+export const colorTeal300 = "#4db6ac"; // Teal 300
+export const colorTeal400 = "#26a69a"; // Teal 400
+export const colorTeal500 = "#009688"; // Teal 500
+export const colorTeal600 = "#00897b"; // Teal 600
+export const colorTeal700 = "#00796b"; // Teal 700
+export const colorTeal800 = "#00695c"; // Teal 800
+export const colorTeal900 = "#004d40"; // Teal 900
+export const colorTealA100 = "#a7ffeb"; // Teal A100
+export const colorTealA200 = "#64ffda"; // Teal A200
+export const colorTealA400 = "#1de9b6"; // Teal A400
+export const colorTealA700 = "#00bfa5"; // Teal A700
+export const colorBluegrey50 = "#eceff1"; // Blue Grey 50
+export const colorBluegrey100 = "#cfd8dc"; // Blue Grey 100
+export const colorBluegrey200 = "#b0bec5"; // Blue Grey 200
+export const colorBluegrey300 = "#90a4ae"; // Blue Grey 300
+export const colorBluegrey400 = "#78909c"; // Blue Grey 400
+export const colorBluegrey500 = "#607d8b"; // Blue Grey 500
+export const colorBluegrey600 = "#546e7a"; // Blue Grey 600
+export const colorBluegrey700 = "#455a64"; // Blue Grey 700
+export const colorBluegrey800 = "#37474f"; // Blue Grey 800
+export const colorBluegrey900 = "#263238"; // Blue Grey 900
+export const colorBluegreyA100 = "#cfd8dc"; // Blue Grey A100
+export const colorBluegreyA200 = "#b0bec5"; // Blue Grey A200
+export const colorBluegreyA400 = "#78909c"; // Blue Grey A400
+export const colorBluegreyA700 = "#455a64"; // Blue Grey A700
+export const fontFamiliesPoppins = "Poppins"; // Poppins font family
+export const fontFamiliesInter = "Inter"; // Inter font family
+export const fontFamiliesRobotoMono = "Roboto Mono"; // Roboto Mono font family
+export const fontFamiliesRoboto = "Roboto"; // Roboto font family
+export const fontSizes10 = "10px"; // Font size 10px (Material.io: Caption)
+export const fontSizes12 = "12px"; // Font size 12px (Material.io: Body 2)
+export const fontSizes14 = "14px"; // Font size 14px (Material.io: Body 1)
+export const fontSizes16 = "16px"; // Font size 16px (Material.io: Subtitle 1)
+export const fontSizes18 = "18px"; // Font size 18px (Material.io: Headline 4)
+export const fontSizes21 = "21px"; // Font size 21px (Material.io: Headline 3)
+export const fontSizes24 = "24px"; // Font size 24px (Material.io: Headline 6)
+export const fontSizes32 = "32px"; // Font size 32px (Material.io: Headline 5)
+export const fontSizes40 = "40px"; // Font size 40px (Material.io: Headline 2)
+export const fontSizes48 = "48px"; // Font size 48px (Material.io: Headline 1)
+export const fontWeightsRegular = "400"; // Font weight 400 (Regular)
+export const fontWeightsSemibold = "500"; // Font weight 500 (Semibold)
+export const fontWeightsBold = "700"; // Font weight 700 (Bold)
+export const fontWeightsBlack = "900"; // Font weight 900 (Black)
+export const spacings0 = 0; // 0px spacing
+export const spacings1 = 8; // 8px spacing
+export const spacings2 = 16; // 16px spacing
+export const spacings3 = 24; // 24px spacing
+export const spacings4 = 32; // 32px spacing
+export const spacings5 = 40; // 40px spacing
+export const spacings6 = 48; // 48px spacing
+export const spacings7 = 56; // 56px spacing
+export const spacings8 = 64; // 64px spacing
+export const spacings9 = 72; // 72px spacing
+export const spacings10 = 80; // 80px spacing
+export const spacings11 = 88; // 88px spacing
+export const spacings12 = 96; // 96px spacing
+export const lineHeights100 = 1; // Line height 100%
+export const paragraphSpacings0 = "0"; // Paragraph spacing 0
+export const letterSpacingsDefault = "0%"; // Default letter spacing
+export const letterSpacingsWide = "2%"; // Wide letter spacing
+export const letterSpacingsTight = "1.5%"; // Tight letter spacing
+export const textCasesCapitalize = "capitalize"; // Text case capitalize
+export const textCasesNone = "none"; // Text case none
+export const textCasesUppercase = "uppercase"; // Text case uppercase
+export const textDecorationsNone = "none"; // Text decoration none
+export const textDecorationsUnderline = "underline"; // Text decoration underline
+export const varunToken = "#2196f3"; // THIS IS WRONG YOU'RE BAD AT YOUR JOB

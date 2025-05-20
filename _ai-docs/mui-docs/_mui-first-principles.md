@@ -28,31 +28,33 @@
 - Accessibility through theme configuration
 - Performance through optimized theming
 
-## Fundamental Concepts
+## Toolchain
+```
+DDS Foundations.json → Style Dictionary → tokens.mjs → createTheme.js → MUI Theme
+```
 
-### 1. Theme Structure
-- Centralized configuration
-- Categorized tokens
-- Hierarchical organization
-- Extensible design
+1. **Source**: `token-studio-sync-provider/DDS Foundations.json`
+   - Single source of truth for design tokens
+   - Follows DTCG format
+   - Contains all design system values
 
-### 2. Token Categories
-- Visual tokens (colors, typography)
-- Layout tokens (spacing, breakpoints)
-- Interaction tokens (transitions, animations)
-- Component tokens (variants, states)
+2. **Style Dictionary** (`config/style-dictionary.config.mjs`)
+   - Processes JSON tokens
+   - Uses `@tokens-studio/sd-transforms`
+   - Flattens and transforms tokens
+   - Outputs ES6 module format
 
-### 3. Theme Distribution
-- Theme provider pattern
-- Context-based distribution
-- Nested theme support
-- Theme switching capability
+3. **Output**: `build/tokens.mjs`
+   - Flat, camelCase tokens
+   - All values resolved
+   - Ready for JavaScript/TypeScript import
+   - Example: `colorBlue500`, `fontSizes14`, etc.
 
-### 4. Design System Integration
-- Token-based styling
-- Component theming
-- Theme customization
-- Design system consistency
+4. **Theme Creation**: `src/theme/createTheme.js`
+   - Imports tokens from `tokens.mjs`
+   - Maps them to MUI's theme structure
+   - Creates a complete MUI theme
+   - Used by `themeToggle.ts` for theme switching
 
 ## Core Principles
 

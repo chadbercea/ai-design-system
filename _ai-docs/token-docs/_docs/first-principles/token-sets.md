@@ -1,3 +1,130 @@
+# Token Sets Documentation
+
+## Overview
+This document outlines the token sets used in our design system and how they flow through our toolchain.
+
+## Toolchain
+```
+DDS Foundations.json → Style Dictionary → tokens.mjs → createTheme.js → MUI Theme
+```
+
+## Token Sets Structure
+
+### 1. DDS Foundations.json
+The single source of truth for all design tokens, located in `token-studio-sync-provider/DDS Foundations.json`.
+
+### 2. Token Categories
+
+#### Colors
+```json
+{
+  "color": {
+    "primary": {
+      "main": { "$value": "#1976d2" },
+      "light": { "$value": "#42a5f5" },
+      "dark": { "$value": "#1565c0" }
+    }
+  }
+}
+```
+
+#### Typography
+```json
+{
+  "typography": {
+    "h1": {
+      "fontSize": { "$value": "2.5rem" },
+      "fontWeight": { "$value": 500 }
+    }
+  }
+}
+```
+
+#### Spacing
+```json
+{
+  "spacing": {
+    "unit": { "$value": 8 },
+    "xs": { "$value": "4px" },
+    "sm": { "$value": "8px" }
+  }
+}
+```
+
+## Token Processing
+
+### 1. Style Dictionary Processing
+- Reads DDS Foundations.json
+- Applies transforms
+- Generates tokens.mjs
+
+### 2. Theme Creation
+- Imports tokens from tokens.mjs
+- Maps to MUI theme structure
+- Creates theme object
+
+## Best Practices
+
+### 1. Token Organization
+- Use semantic naming
+- Group related tokens
+- Follow DTCG format
+
+### 2. Value Management
+- Use references for shared values
+- Keep values platform-agnostic
+- Use appropriate units
+
+### 3. Maintenance
+- Version control
+- Document changes
+- Maintain compatibility
+
+## Integration Guidelines
+
+### 1. Adding New Tokens
+1. Add to DDS Foundations.json
+2. Follow naming conventions
+3. Include metadata
+4. Test build process
+
+### 2. Modifying Existing Tokens
+1. Update DDS Foundations.json
+2. Verify dependencies
+3. Test changes
+4. Update documentation
+
+### 3. Token Usage
+1. Import from tokens.mjs
+2. Use in createTheme.js
+3. Apply in components
+
+## Validation
+
+### 1. Token Validation
+- Check format
+- Verify references
+- Test transformations
+
+### 2. Theme Validation
+- Verify mapping
+- Test components
+- Check accessibility
+
+## Troubleshooting
+
+### Common Issues
+1. Token not found
+2. Invalid reference
+3. Build errors
+4. Theme mapping issues
+
+### Solutions
+1. Check token path
+2. Verify references
+3. Review build config
+4. Test theme mapping
+
 # Token Sets: Governance & Best Practices
 
 ## 1. Token Sets Are Organizational, Not Structural
