@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material';
-import { mapTokensToMuiTheme } from './mapTokensToMuiTheme';
+import { resolveTheme } from './resolveTheme';
 import tokens from '../../build/tokens.mjs';
 
 // Define theme keys as a const to ensure type safety
@@ -12,10 +12,12 @@ export const THEME_KEYS = {
 export type ThemeKey = typeof THEME_KEYS[keyof typeof THEME_KEYS];
 
 // Export the themes map with consistent keys
-export const themes = {
-  [THEME_KEYS.MUI_DEFAULT]: createTheme(),
-  [THEME_KEYS.DDS_FOUNDATIONS]: createTheme(mapTokensToMuiTheme(tokens))
-} as const;
+export function getTheme(key: ThemeKey) {
+  if (key === THEME_KEYS.DDS_FOUNDATIONS) {
+    return createTheme(resolveTheme(tokens));
+  }
+  return createTheme();
+}
 
 // Type guard to check if a string is a valid theme key
 export const isValidThemeKey = (key: string): key is ThemeKey => {
