@@ -1,41 +1,51 @@
 import { ThemeOptions } from '@mui/material';
 
 export function mapTokensToMuiTheme(tokens: any): ThemeOptions {
-  return {
+  console.log('Received tokens:', tokens);
+  console.log('Attempting to access tokens:', {
+    primary: tokens["ColorBlue500"],
+    background: tokens["ColorGrey50"],
+    text: tokens["ColorGrey900"]
+  });
+
+  const theme = {
     palette: {
       primary: {
-        main: tokens["color.blue.500"] || "#2196f3"
+        main: tokens["ColorBlue500"] || "#2196f3"
       },
       background: {
-        default: tokens["color.grey.50"] || "#f5f5f5",
-        paper: tokens["color.grey.100"] || "#ffffff"
+        default: tokens["ColorGrey50"] || "#f5f5f5",
+        paper: tokens["ColorGrey100"] || "#ffffff"
       },
       text: {
-        primary: tokens["color.grey.900"] || "#000000",
-        secondary: tokens["color.grey.700"] || "#666666"
+        primary: tokens["ColorGrey900"] || "#000000",
+        secondary: tokens["ColorGrey700"] || "#666666"
       }
     },
     typography: {
-      fontFamily: tokens["typography.family.base"] || "'Roboto', sans-serif",
-      fontSize: parseInt(tokens["typography.size.base"]) || 14,
-      fontWeightRegular: parseInt(tokens["typography.weight.regular"]) || 400,
-      fontWeightBold: parseInt(tokens["typography.weight.bold"]) || 700
+      fontFamily: tokens["TypographyFamilyBase"] || "'Roboto', sans-serif",
+      fontSize: parseInt(tokens["TypographySizeBase"]) || 14,
+      fontWeightRegular: parseInt(tokens["TypographyWeightRegular"]) || 400,
+      fontWeightBold: parseInt(tokens["TypographyWeightBold"]) || 700
     },
     shape: {
-      borderRadius: parseInt(tokens["borderRadius.md"]) || 4
+      borderRadius: parseInt(tokens["BorderRadiusMd"]) || 4
     },
     spacing: (factor: number) => {
-      const base = parseInt(tokens["spacing.base"]) || 8
+      const base = parseInt(tokens["SpacingBase"]) || 8
       return base * factor
     },
     breakpoints: {
       values: {
-        xs: parseInt(tokens["breakpoints.xs"]) || 0,
-        sm: parseInt(tokens["breakpoints.sm"]) || 600,
-        md: parseInt(tokens["breakpoints.md"]) || 900,
-        lg: parseInt(tokens["breakpoints.lg"]) || 1200,
-        xl: parseInt(tokens["breakpoints.xl"]) || 1536
+        xs: parseInt(tokens["BreakpointsXs"]) || 0,
+        sm: parseInt(tokens["BreakpointsSm"]) || 600,
+        md: parseInt(tokens["BreakpointsMd"]) || 900,
+        lg: parseInt(tokens["BreakpointsLg"]) || 1200,
+        xl: parseInt(tokens["BreakpointsXl"]) || 1536
       }
     }
-  }
+  };
+
+  console.log('Generated theme:', theme);
+  return theme;
 } 

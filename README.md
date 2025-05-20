@@ -5,7 +5,7 @@
 # AI Design System
 
 ## Overview
-This project uses Style Dictionary to generate design tokens from a stable, validated source (`token-studio-sync-provider/DDS Foundations.json`). The tokens are then converted into an MUI theme using a mapping function (`adapter.js`).
+This project uses Style Dictionary to generate design tokens from a stable, validated source (`token-studio-sync-provider/DDS Foundations.json`). The tokens are then converted into an MUI theme using a mapping function (`mapTokensToMuiTheme.ts`).
 
 ## Current Status
 - **Token Source:** Locked to `token-studio-sync-provider/DDS Foundations.json` for a stable, collision-free build.
@@ -30,9 +30,9 @@ Tokens in `DDS Foundations.json` should follow this format:
 Each token must include `$value`, `$type`, and (optionally) `$description`. The path hierarchy should be clear and consistent.
 
 ## MUI Theme Mapping Example
-The `adapter.js` function maps tokens to MUI theme properties. For example:
+The `mapTokensToMuiTheme.ts` function maps tokens to MUI theme properties. For example:
 ```js
-// Example mapping in adapter.js
+// Example mapping in mapTokensToMuiTheme.ts
 theme.palette.primary.main = tokens.color.blue[500].value;
 ```
 This bridges the output of Style Dictionary to the real UI theming system. See `mapTokensToMuiTheme()` for the full mapping logic.
@@ -56,10 +56,10 @@ This bridges the output of Style Dictionary to the real UI theming system. See `
 - Future automation will include validation and theme generation as part of CI, ensuring only valid tokens and themes are published.
 
 ## Consuming the Tokens
-The generated `build/tokens.js` file is imported and mapped to an MUI theme using `mapTokensToMuiTheme`, then passed to MUI's `createTheme`:
+The generated `build/tokens.mjs` file is imported and mapped to an MUI theme using `mapTokensToMuiTheme`, then passed to MUI's `createTheme`:
 ```js
-import tokens from '../build/tokens.js';
-import mapTokensToMuiTheme from '../src/theme/adapter.js';
+import tokens from '../build/tokens.mjs';
+import { mapTokensToMuiTheme } from '../src/theme/mapTokensToMuiTheme';
 import { createTheme } from '@mui/material/styles';
 
 const muiTheme = createTheme(mapTokensToMuiTheme(tokens));
@@ -84,7 +84,7 @@ This enables seamless integration of your design tokens into your application's 
 ## Project Structure
 - `config/style-dictionary.config.mjs`: Configuration for Style Dictionary.
 - `scripts/build-tokens.mjs`: Script to build tokens using Style Dictionary.
-- `src/theme/adapter.js`: Mapping function to convert tokens into an MUI theme.
+- `src/theme/mapTokensToMuiTheme.ts`: Mapping function to convert tokens into an MUI theme.
 
 ## Contributing
-Please follow the project guidelines for file organization, validation, and error handling.
+Please follow the project guidelines for file organization, validation, and error handling. Holler at yer boi @ChadBercea with any questions, comments, or snide remarks.

@@ -164,7 +164,7 @@
       },
       "700": {
         "$type": "color",
-        "$value": "#7f9152",
+        "$value": "#b7db42",
         "$description": "Blue 700 - MUI Primary change this back bro #1976d2"
       },
       "800": {

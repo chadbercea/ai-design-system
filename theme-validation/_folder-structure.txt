@@ -1,0 +1,6 @@
+/theme-validation
+├── validate-theme-mapping.js          # Main entry point
+├── mapping-table.json                 # Canonical MUI → DDS token map
+├── token-loader.js                    # Loads and normalizes tokens.mjs
+├── validator.js                       # Core logic to compare mapping vs tokens
+├── report.js                          # Formats and outputs validation results

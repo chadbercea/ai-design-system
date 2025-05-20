@@ -66,6 +66,11 @@ declare namespace DesignTokens {
   }
 }
 
+declare module '../../build/tokens.mjs' {
+  const tokens: { [key: string]: string };
+  export default tokens;
+}
+
 declare module '*/tokens.json' {
   const tokens: DesignTokens.Tokens;
   export default tokens;
