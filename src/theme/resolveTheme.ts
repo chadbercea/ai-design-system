@@ -13,10 +13,8 @@ type MappingTable = {
  * @returns MUI ThemeOptions object
  */
 export function resolveTheme(tokens: any): ThemeOptions {
-  // Create a flat object of resolved values
   const flatTheme: Record<string, any> = {};
 
-  // Resolve each MUI key from the mapping table
   for (const muiKey of Object.keys(mappingTable)) {
     const ddsKey = (mappingTable as MappingTable)[muiKey];
     if (ddsKey && tokens[ddsKey] !== undefined) {
@@ -39,7 +37,11 @@ export function resolveTheme(tokens: any): ThemeOptions {
     current[parts[parts.length - 1]] = value;
   }
 
-  // Live verification: print the resolved primary color
+  // Live verification: print the resolved typography values
+  if (theme.typography) {
+    console.log('DDS THEME typography.h1.fontSize:', theme.typography.h1?.fontSize);
+    console.log('DDS THEME typography.fontFamily:', theme.typography.fontFamily);
+  }
   if (theme.palette && theme.palette.primary) {
     console.log('DDS THEME primary.main:', theme.palette.primary.main);
   } else {

@@ -14,7 +14,11 @@ export type ThemeKey = typeof THEME_KEYS[keyof typeof THEME_KEYS];
 // Export the themes map with consistent keys
 export function getTheme(key: ThemeKey) {
   if (key === THEME_KEYS.DDS_FOUNDATIONS) {
-    return createTheme(resolveTheme(tokens));
+    const ddsTheme = resolveTheme(tokens);
+    console.log('RESOLVED DDS THEME:', ddsTheme);
+    const muiTheme = createTheme(ddsTheme);
+    console.log('MUI THEME AFTER createTheme:', muiTheme);
+    return muiTheme;
   }
   return createTheme();
 }

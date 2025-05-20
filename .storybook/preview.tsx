@@ -25,6 +25,10 @@ const preview: Preview = {
       const validThemeKey = isValidThemeKey(themeKey) ? themeKey : THEME_KEYS.MUI_DEFAULT;
       const theme = getTheme(validThemeKey);
       // Log for live verification
+      console.log('STORYBOOK THEME KEY:', validThemeKey);
+      if (theme.typography) {
+        console.log('STORYBOOK THEME typography:', theme.typography);
+      }
       if (theme.palette && theme.palette.primary) {
         // eslint-disable-next-line no-console
         console.log('STORYBOOK THEME primary.main:', theme.palette.primary.main);
