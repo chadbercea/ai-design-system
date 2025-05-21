@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material';
-import theme from './createTheme';
+import createDDSTheme from './createTheme';
 
 // Define theme keys as a const to ensure type safety
 export const THEME_KEYS = {
@@ -14,9 +14,18 @@ export type ThemeKey = typeof THEME_KEYS[keyof typeof THEME_KEYS];
 export function getTheme(key: ThemeKey) {
   if (key === THEME_KEYS.DDS_FOUNDATIONS) {
     console.log('Using DDS Foundations theme');
-    return theme;
+    return createDDSTheme();
   }
-  return createTheme();
+  return createTheme({
+    palette: {
+      tertiary: {
+        main: '#00bcd4', // Cyan
+        light: '#b2ebf2',
+        dark: '#00838f',
+        contrastText: '#fff',
+      },
+    },
+  });
 }
 
 // Type guard to check if a string is a valid theme key

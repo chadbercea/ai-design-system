@@ -198,20 +198,6 @@ export const Foundations: Story = {
       <Box>
         <Typography variant="h1" gutterBottom>DDS Foundations</Typography>
 
-        {/* Colors */}
-        {color.length > 0 && (
-          <>
-            <Typography variant="h2" gutterBottom mt={6}>Colors</Typography>
-            <Grid container spacing={2}>
-              {color.map(({ name, value }) => (
-                <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
-                  <ColorSwatch name={name} value={String(value)} />
-                </Grid>
-              ))}
-            </Grid>
-          </>
-        )}
-
         {/* Typography */}
         {typography.length > 0 && (
           <>
@@ -294,6 +280,20 @@ export const Foundations: Story = {
               {misc.map(({ name, value }) => (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
                   <GenericSwatch name={name} value={value} />
+                </Grid>
+              ))}
+            </Grid>
+          </>
+        )}
+
+        {/* Colors */}
+        {color.length > 0 && (
+          <>
+            <Typography variant="h2" gutterBottom mt={6}>Colors</Typography>
+            <Grid container spacing={2}>
+              {color.map(({ name, value }) => (
+                <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                  <ColorSwatch name={name} value={String(value)} />
                 </Grid>
               ))}
             </Grid>
