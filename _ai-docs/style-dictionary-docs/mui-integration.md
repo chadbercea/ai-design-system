@@ -1,138 +1,86 @@
-# Style Dictionary to MUI Theme Integration
+# MUI Integration with Style Dictionary
 
-## Required Configuration
-
-### 1. Style Dictionary Format
-```javascript
-StyleDictionary.registerFormat({
-  name: 'javascript/mui-theme',
-  formatter: function(dictionary, config) {
-    return `module.exports = ${JSON.stringify({
-      palette: {
-        primary: {
-          main: dictionary.properties.color.primary.main.value,
-          light: dictionary.properties.color.primary.light.value,
-          dark: dictionary.properties.color.primary.dark.value,
-          contrastText: dictionary.properties.color.primary.contrastText.value
-        },
-        // ... other color tokens
-      },
-      typography: {
-        fontFamily: dictionary.properties.typography.fontFamily.value,
-        fontSize: dictionary.properties.typography.fontSize.value,
-        fontWeightLight: dictionary.properties.typography.fontWeight.light.value,
-        fontWeightRegular: dictionary.properties.typography.fontWeight.regular.value,
-        fontWeightMedium: dictionary.properties.typography.fontWeight.medium.value,
-        fontWeightBold: dictionary.properties.typography.fontWeight.bold.value,
-        // ... other typography tokens
-      },
-      spacing: dictionary.properties.spacing.base.value,
-      breakpoints: {
-        values: {
-          xs: dictionary.properties.breakpoint.xs.value,
-          sm: dictionary.properties.breakpoint.sm.value,
-          md: dictionary.properties.breakpoint.md.value,
-          lg: dictionary.properties.breakpoint.lg.value,
-          xl: dictionary.properties.breakpoint.xl.value
-        }
-      },
-      shape: {
-        borderRadius: dictionary.properties.shape.borderRadius.value
-      },
-      transitions: {
-        duration: {
-          shortest: dictionary.properties.transition.duration.shortest.value,
-          shorter: dictionary.properties.transition.duration.shorter.value,
-          short: dictionary.properties.transition.duration.short.value,
-          standard: dictionary.properties.transition.duration.standard.value,
-          complex: dictionary.properties.transition.duration.complex.value,
-          enteringScreen: dictionary.properties.transition.duration.enteringScreen.value,
-          leavingScreen: dictionary.properties.transition.duration.leavingScreen.value
-        },
-        easing: {
-          easeInOut: dictionary.properties.transition.easing.easeInOut.value,
-          easeOut: dictionary.properties.transition.easing.easeOut.value,
-          easeIn: dictionary.properties.transition.easing.easeIn.value,
-          sharp: dictionary.properties.transition.easing.sharp.value
-        }
-      },
-      zIndex: {
-        mobileStepper: dictionary.properties.zIndex.mobileStepper.value,
-        speedDial: dictionary.properties.zIndex.speedDial.value,
-        appBar: dictionary.properties.zIndex.appBar.value,
-        drawer: dictionary.properties.zIndex.drawer.value,
-        modal: dictionary.properties.zIndex.modal.value,
-        snackbar: dictionary.properties.zIndex.snackbar.value,
-        tooltip: dictionary.properties.zIndex.tooltip.value
-      }
-    }, null, 2)};`;
-  }
-});
+## Toolchain Overview
+```
+DDS Foundations.json → Style Dictionary → tokens.mjs → createTheme.js → MUI Theme
 ```
 
-### 2. Style Dictionary Config
+## Configuration
+
+### 1. Style Dictionary Config
 ```javascript
-module.exports = {
-  source: ['tokens/**/*.json'],
+// config/style-dictionary.config.mjs
+import StyleDictionary from 'style-dictionary';
+import { register } from '@tokens-studio/sd-transforms';
+
+register(StyleDictionary);
+
+export default {
+  source: ['token-studio-sync-provider/DDS Foundations.json'],
   platforms: {
-    mui: {
-      transformGroup: 'js',
-      buildPath: 'build/mui/',
+    js: {
+      transformGroup: 'tokens-studio',
+      buildPath: 'build/',
       files: [{
-        destination: 'theme.js',
-        format: 'javascript/mui-theme'
+        destination: 'tokens.mjs',
+        format: 'javascript/es6',
+        options: {
+          showFileHeader: true
+        }
       }]
     }
   }
 };
 ```
 
-### 3. Token Structure
-```json
-{
-  "color": {
-    "primary": {
-      "main": { "value": "#1976d2" },
-      "light": { "value": "#42a5f5" },
-      "dark": { "value": "#1565c0" },
-      "contrastText": { "value": "#fff" }
-    }
+### 2. Theme Creation
+```javascript
+// src/theme/createTheme.js
+import { createTheme } from '@mui/material/styles';
+import * as tokens from '../../build/tokens.mjs';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: tokens.colorBlue500,
+      light: tokens.colorBlue300,
+      dark: tokens.colorBlue700,
+      contrastText: '#fff',
+    },
+    // ... other palette configurations
   },
-  "typography": {
-    "fontFamily": { "value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif" },
-    "fontSize": { "value": 14 },
-    "fontWeight": {
-      "light": { "value": 300 },
-      "regular": { "value": 400 },
-      "medium": { "value": 500 },
-      "bold": { "value": 700 }
-    }
+  typography: {
+    fontFamily: tokens.fontFamiliesRoboto,
+    fontSize: parseInt(tokens.fontSizes14),
+    // ... other typography configurations
   },
-  "spacing": {
-    "base": { "value": 8 }
-  },
-  "breakpoint": {
-    "xs": { "value": 0 },
-    "sm": { "value": 600 },
-    "md": { "value": 900 },
-    "lg": { "value": 1200 },
-    "xl": { "value": 1536 }
-  }
-}
+  // ... other theme configurations
+});
+
+export default theme;
 ```
 
-### 4. Usage in MUI
+### 3. Theme Usage
 ```javascript
-import { createTheme } from '@mui/material/styles';
-import theme from './build/mui/theme';
+// src/theme/ThemeProvider.js
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material/CssBaseline';
+import theme from './createTheme';
 
-const muiTheme = createTheme(theme);
+export function ThemeProvider({ children }) {
+  return (
+    <MuiThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </MuiThemeProvider>
+  );
+}
 ```
 
 ## Best Practices
 
 1. **Token Organization**
-   - Match MUI's theme structure in your tokens
+   - Keep primitive tokens in DDS Foundations.json
    - Use consistent naming conventions
    - Group related tokens together
 

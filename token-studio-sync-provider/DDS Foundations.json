@@ -154,8 +154,8 @@
       },
       "500": {
         "$type": "color",
-        "$value": "#2196f3",
-        "$description": "Blue 500"
+        "$value": "#2560FF",
+        "$description": "DDS Blue #2560FF"
       },
       "600": {
         "$type": "color",

@@ -69,6 +69,38 @@ declare namespace DesignTokens {
 declare module '../../build/tokens.mjs' {
   const tokens: { [key: string]: string };
   export default tokens;
+
+  // Font families
+  export const fontFamiliesPoppins: string;
+  export const fontFamiliesInter: string;
+  export const fontFamiliesRobotoMono: string;
+  export const fontFamiliesRoboto: string;
+
+  // Font sizes
+  export const fontSizes10: string;
+  export const fontSizes12: string;
+  export const fontSizes14: string;
+  export const fontSizes16: string;
+  export const fontSizes18: string;
+  export const fontSizes21: string;
+  export const fontSizes24: string;
+  export const fontSizes32: string;
+  export const fontSizes40: string;
+  export const fontSizes48: string;
+
+  // Font weights
+  export const fontWeightsRegular: string;
+  export const fontWeightsSemibold: string;
+  export const fontWeightsBold: string;
+  export const fontWeightsBlack: string;
+
+  // Line heights
+  export const lineHeights100: number;
+
+  // Letter spacing
+  export const letterSpacingsDefault: string;
+  export const letterSpacingsWide: string;
+  export const letterSpacingsTight: string;
 }
 
 declare module '*/tokens.json' {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Box, Typography, Grid, Paper } from '@mui/material';
-import categorizedTokens from '../../build/primprep.mjs';
+import * as tokens from '../../build/tokens.mjs';
 
 const meta: Meta = {
   title: 'DDS/Foundations',
@@ -20,64 +20,42 @@ type Token = {
   type: 'color' | 'typography' | 'dimension' | 'misc';
 };
 
-// Helper to recursively extract color tokens with $value
-function extractColorTokens(obj: any, path: string[] = ['color']): { name: string; value: string }[] {
-  let result: { name: string; value: string }[] = [];
-  for (const [key, value] of Object.entries(obj)) {
-    if (
-      value &&
-      typeof value === 'object' &&
-      '$value' in value &&
-      typeof (value as any).$value === 'string' &&
-      ((value as any).$type === 'color' || (value as any).$value.match(/^#|rgb|hsl|^var\(/))
-    ) {
-      result.push({ name: [...path, key].join('.'), value: (value as any).$value });
-    } else if (value && typeof value === 'object') {
-      result = result.concat(extractColorTokens(value, [...path, key]));
-    }
-  }
-  return result;
-}
+// Helper to categorize tokens from flat structure
+function categorizeTokens(tokens: Record<string, any>): { dimensions: Token[], typography: Token[], color: Token[], misc: Token[] } {
+  const result = {
+    dimensions: [] as Token[],
+    typography: [] as Token[],
+    color: [] as Token[],
+    misc: [] as Token[]
+  };
 
-// Helper to extract tokens from flat object structure
-function extractPrimitiveTokens(obj: Record<string, string | number>): { name: string; value: string | number; type?: string }[] {
-  return Object.entries(obj).map(([key, value]) => {
-    let type;
-    // Color tokens: PascalCase "Color"
-    if (key.startsWith("Color")) {
-      type = "color";
-    }
-    // Typography tokens: FontSizes, FontFamilies, FontWeights, LineHeights, LetterSpacings, TextCases, TextDecorations
-    else if (
-      key.startsWith("FontSizes") ||
-      key.startsWith("FontFamilies") ||
-      key.startsWith("FontWeights") ||
-      key.startsWith("LineHeights") ||
-      key.startsWith("LetterSpacings") ||
-      key.startsWith("TextCases") ||
-      key.startsWith("TextDecorations")
+  Object.entries(tokens).forEach(([key, value]) => {
+    const token: Token = { name: key, value, type: 'misc' };
+
+    if (key.startsWith('color')) {
+      token.type = 'color';
+      result.color.push(token);
+    } else if (
+      key.startsWith('font') ||
+      key.startsWith('letterSpacing') ||
+      key.startsWith('lineHeight') ||
+      key.startsWith('text')
     ) {
-      type = "typography";
-    }
-    // Dimension tokens: Spacings, BorderRadius, Breakpoints, Grid, Layout, Sizing, Stack, ParagraphSpacings
-    else if (
-      key.startsWith("Spacings") ||
-      key.startsWith("BorderRadius") ||
-      key.startsWith("Breakpoints") ||
-      key.startsWith("Grid") ||
-      key.startsWith("Layout") ||
-      key.startsWith("Sizing") ||
-      key.startsWith("Stack") ||
-      key.startsWith("ParagraphSpacings")
+      token.type = 'typography';
+      result.typography.push(token);
+    } else if (
+      key.startsWith('spacing') ||
+      key.startsWith('borderRadius') ||
+      key.startsWith('breakpoints')
     ) {
-      type = "dimension";
+      token.type = 'dimension';
+      result.dimensions.push(token);
+    } else {
+      result.misc.push(token);
     }
-    return {
-      name: key,
-      value,
-      type
-    };
   });
+
+  return result;
 }
 
 const ColorSwatch = ({ name, value }: { name: string; value: string }) => {
@@ -137,10 +115,18 @@ const RadiusSwatch = ({ name, value }: { name: string; value: string | number })
 const FontSizeSwatch = ({ name, value }: { name: string; value: string | number }) => (
   <Paper elevation={1}>
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" py={2}>
-      <Typography style={{ fontSize: typeof value === 'number' ? `${value}px` : value }}>
+      <Typography 
+        style={{ 
+          fontSize: typeof value === 'number' ? `${value}px` : value,
+          lineHeight: tokens.lineHeights100,
+          letterSpacing: tokens.letterSpacingsDefault
+        }}
+      >
         The quick brown fox
       </Typography>
-      <Typography variant="subtitle1">{name}: {value}</Typography>
+      <Typography variant="subtitle1" mt={1}>
+        {name}: {value}
+      </Typography>
     </Box>
   </Paper>
 );
@@ -148,10 +134,39 @@ const FontSizeSwatch = ({ name, value }: { name: string; value: string | number 
 const FontFamilySwatch = ({ name, value }: { name: string; value: string | number }) => (
   <Paper elevation={1}>
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" py={2}>
-      <Typography style={{ fontFamily: String(value) }}>
+      <Typography 
+        style={{ 
+          fontFamily: String(value),
+          fontSize: tokens.fontSizes16,
+          lineHeight: tokens.lineHeights100,
+          letterSpacing: tokens.letterSpacingsDefault
+        }}
+      >
         The quick brown fox
       </Typography>
-      <Typography variant="subtitle1">{name}: {value}</Typography>
+      <Typography variant="subtitle1" mt={1}>
+        {name}: {value}
+      </Typography>
+    </Box>
+  </Paper>
+);
+
+const FontWeightSwatch = ({ name, value }: { name: string; value: string | number }) => (
+  <Paper elevation={1}>
+    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" py={2}>
+      <Typography 
+        style={{ 
+          fontWeight: typeof value === 'number' ? value : parseInt(String(value), 10),
+          fontSize: tokens.fontSizes16,
+          lineHeight: tokens.lineHeights100,
+          letterSpacing: tokens.letterSpacingsDefault
+        }}
+      >
+        The quick brown fox
+      </Typography>
+      <Typography variant="subtitle1" mt={1}>
+        {name}: {value}
+      </Typography>
     </Box>
   </Paper>
 );
@@ -177,7 +192,7 @@ const BreakpointSwatch = ({ name, value }: { name: string; value: string | numbe
 
 export const Foundations: Story = {
   render: () => {
-    const { dimensions, typography, color, misc } = categorizedTokens;
+    const { dimensions, typography, color, misc } = categorizeTokens(tokens);
 
     return (
       <Box>
@@ -188,18 +203,25 @@ export const Foundations: Story = {
           <>
             <Typography variant="h2" gutterBottom mt={6}>Typography</Typography>
             <Grid container spacing={2}>
-              {typography.map(({ name, value }: Token) => {
-                if (name.startsWith('FontSizes')) {
+              {typography.map(({ name, value }) => {
+                if (name.startsWith('fontSizes')) {
                   return (
                     <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
                       <FontSizeSwatch name={name} value={value} />
                     </Grid>
                   );
                 }
-                if (name.startsWith('FontFamilies')) {
+                if (name.startsWith('fontFamilies')) {
                   return (
                     <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
                       <FontFamilySwatch name={name} value={value} />
+                    </Grid>
+                  );
+                }
+                if (name.startsWith('fontWeights')) {
+                  return (
+                    <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
+                      <FontWeightSwatch name={name} value={value} />
                     </Grid>
                   );
                 }
@@ -218,22 +240,22 @@ export const Foundations: Story = {
           <>
             <Typography variant="h2" gutterBottom mt={6}>Dimensions</Typography>
             <Grid container spacing={2}>
-              {dimensions.map(({ name, value }: Token) => {
-                if (name.startsWith('Spacings')) {
+              {dimensions.map(({ name, value }) => {
+                if (name.startsWith('spacing')) {
                   return (
                     <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
                       <SpacingSwatch name={name} value={value} />
                     </Grid>
                   );
                 }
-                if (name.startsWith('BorderRadius')) {
+                if (name.startsWith('borderRadius')) {
                   return (
                     <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
                       <RadiusSwatch name={name} value={value} />
                     </Grid>
                   );
                 }
-                if (name.startsWith('Breakpoints')) {
+                if (name.startsWith('breakpoints')) {
                   return (
                     <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
                       <BreakpointSwatch name={name} value={value} />
@@ -250,12 +272,12 @@ export const Foundations: Story = {
           </>
         )}
 
-        {/* Miscellaneous */}
+        {/* Misc */}
         {misc.length > 0 && (
           <>
             <Typography variant="h2" gutterBottom mt={6}>Miscellaneous</Typography>
             <Grid container spacing={2}>
-              {misc.map(({ name, value }: Token) => (
+              {misc.map(({ name, value }) => (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
                   <GenericSwatch name={name} value={value} />
                 </Grid>
@@ -269,7 +291,7 @@ export const Foundations: Story = {
           <>
             <Typography variant="h2" gutterBottom mt={6}>Colors</Typography>
             <Grid container spacing={2}>
-              {color.map(({ name, value }: Token) => (
+              {color.map(({ name, value }) => (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={name}>
                   <ColorSwatch name={name} value={String(value)} />
                 </Grid>

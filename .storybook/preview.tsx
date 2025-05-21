@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react';
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider, CssBaseline } from '@mui/material';
 import { getTheme, THEME_KEYS, isValidThemeKey } from '../src/theme/themeToggle';
 import React from 'react';
 
@@ -35,6 +35,7 @@ const preview: Preview = {
       }
       return (
         <ThemeProvider theme={theme}>
+          <CssBaseline />
           <Story />
         </ThemeProvider>
       );

@@ -1,62 +1,46 @@
 import StyleDictionary from 'style-dictionary';
+import { register } from '@tokens-studio/sd-transforms';
 
-// Register fontSize/number transform
-StyleDictionary.registerTransform({
-  name: 'fontSize/number',
-  type: 'value',
-  matcher: (prop) => prop.attributes.category === 'fontSizes' || prop.path.includes('fontSize'),
-  transform: (prop) => {
-    const value = prop.$value || prop.value;
-    if (typeof value === 'string' && value.endsWith('px')) {
-      return parseFloat(value);
-    }
-    return value;
-  }
-});
+// Register the sd-transforms with Style Dictionary
+// This adds all the necessary transforms for Tokens Studio compatibility
+register(StyleDictionary);
 
-// Register custom format for valid JS identifiers
-StyleDictionary.registerFormat({
-  name: 'custom/es6-flat',
-  format: function({ dictionary }) {
-    function makeIdentifier(token) {
-      return token.path.map((part, i) => {
-        // Handle 'a' + digits (e.g., a50) for alpha colors
-        if (/^a\d+$/i.test(part)) {
-          return 'A' + part.slice(1);
-        }
-        // Just digits: use as-is (Blue50, not BlueValue50)
-        if (/^\d+$/.test(part)) {
-          return part;
-        }
-        // PascalCase everything else
-        return part.charAt(0).toUpperCase() + part.slice(1);
-      }).join('');
-    }
-
-    let lines = ['export default {'];
-    dictionary.allTokens.forEach(token => {
-      const key = makeIdentifier(token);
-      const value = JSON.stringify(token.$value);
-      lines.push(`  "${key}": ${value},`);
-    });
-    lines.push('};');
-    return lines.join('\n');
-  }
-});
-
-// Export Style Dictionary config
 export default {
+  // Source files to process
+  // In this case, we're using the DDS Foundations tokens
   source: ['token-studio-sync-provider/DDS Foundations.json'],
+
+  // Platform-specific configurations
   platforms: {
+    // JavaScript platform configuration
     js: {
-      transformGroup: 'js',
-      transforms: ['attribute/cti', 'fontSize/number'],
+      // Use the tokens-studio transform group
+      // This includes all necessary transforms for Tokens Studio compatibility:
+      // - Flattens nested structures
+      // - Converts names to camelCase
+      // - Handles proper type conversions
+      // - Resolves references
+      transformGroup: 'tokens-studio',
+
+      // Where to output the built files
       buildPath: 'build/',
+
+      // File configuration
       files: [{
+        // Output file name
         destination: 'tokens.mjs',
-        format: 'custom/es6-flat',
+
+        // Use the ES6 module format
+        // This will:
+        // - Create a flat object of token values
+        // - Export as an ES6 module
+        // - Include comments from the source
+        format: 'javascript/es6',
+
+        // Additional options
         options: {
-          outputReferences: false
+          // Include a file header comment
+          showFileHeader: true
         }
       }]
     }
