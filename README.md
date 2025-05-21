@@ -7,9 +7,29 @@
 ## Overview
 This project uses Style Dictionary to generate design tokens from a stable, validated source (`DDS Foundations.json`). The tokens are then converted into an MUI theme using our streamlined toolchain.
 
+---
+
+## Storybook & Theme Showcase
+
+This project includes a **MUI Masonry Dashboard** in Storybook, demonstrating a modern, Pinterest-style grid of responsive cards using only out-of-the-box MUI components and props.
+
+- **Location:** `stories/MUI/Theme.stories.tsx`
+- **Features:**
+  - Uses MUI's Masonry component for a true bento/masonry layout
+  - All cards are built with MUI Card, elevation, hover, and action buttons
+  - No custom CSS or overrides—100% MUI props and sx
+  - Cards showcase Typography, Buttons, Text Fields, Elevation, and more
+- **How to run:**
+  ```bash
+  npm run storybook
+  ```
+  Then visit [http://localhost:6006/](http://localhost:6006/) in your browser.
+
+---
+
 ## Toolchain
 ```
-DDS Foundations.json → Style Dictionary → tokens.mjs → createTheme.js → MUI Theme
+DDS Foundations.json → Style Dictionary → tokens.mjs → createTheme.js → MUI Theme → Storybook Masonry Dashboard
 ```
 
 1. **Source**: `token-studio-sync-provider/DDS Foundations.json`
@@ -91,6 +111,11 @@ const App = () => (
    ```
 3. The output file (`build/tokens.mjs`) will be generated and can be used by the theme system.
 4. **Verify a successful build:** Check that `build/tokens.mjs` exists and contains your exported tokens in the expected structure.
+5. To view the MUI Masonry Dashboard, run Storybook:
+   ```bash
+   npm run storybook
+   ```
+   and open [http://localhost:6006/](http://localhost:6006/).
 
 ## Project Structure
 - `config/style-dictionary.config.mjs`: Configuration for Style Dictionary
