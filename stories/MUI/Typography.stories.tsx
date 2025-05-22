@@ -1,8 +1,9 @@
 import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
 import { Typography, Box } from '@mui/material';
+import type { TypographyProps } from '@mui/material';
+import type { Meta, StoryObj } from '@storybook/react';
 
-const meta = {
+const meta: Meta<TypographyProps> = {
   title: 'MUI/Data display/Typography',
   component: Typography,
   parameters: {
@@ -14,72 +15,9 @@ const meta = {
     },
   },
   tags: ['autodocs'],
-  argTypes: {
-    variant: {
-      control: 'select',
-      options: [
-        'h1',
-        'h2',
-        'h3',
-        'h4',
-        'h5',
-        'h6',
-        'subtitle1',
-        'subtitle2',
-        'body1',
-        'body2',
-        'button',
-        'caption',
-        'overline',
-      ],
-      description: 'Applies the theme typography styles.',
-      table: {
-        defaultValue: { summary: 'body1' },
-      },
-    },
-    color: {
-      control: 'select',
-      options: [
-        'primary',
-        'secondary',
-        'error',
-        'warning',
-        'info',
-        'success',
-        'inherit',
-      ],
-      description: 'The color of the component.',
-      table: {
-        defaultValue: { summary: 'inherit' },
-      },
-    },
-    align: {
-      control: 'select',
-      options: ['inherit', 'left', 'center', 'right', 'justify'],
-      description: 'Set the text-align on the component.',
-      table: {
-        defaultValue: { summary: 'inherit' },
-      },
-    },
-    gutterBottom: {
-      control: 'boolean',
-      description: 'If true, the text will have a bottom margin.',
-      table: {
-        defaultValue: { summary: 'false' },
-      },
-    },
-    noWrap: {
-      control: 'boolean',
-      description: 'If true, the text will not wrap, but instead will truncate with a text overflow ellipsis.',
-      table: {
-        defaultValue: { summary: 'false' },
-      },
-    },
-  },
-} satisfies Meta<typeof Typography>;
-
+};
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<TypographyProps>;
 
 const TypographyWrapper = (args: any) => (
   <Box sx={{ width: '100%', maxWidth: 500 }}>

@@ -1,57 +1,46 @@
 import { createTheme } from '@mui/material/styles';
 import * as tokens from '../../build/tokens.mjs';
-import { createTypographyFromTokens } from './typography';
+import { typography } from './typography';
 
-console.log('Creating theme with tokens:', {
-  fontFamily: tokens.fontFamiliesRoboto,
-  fontSize: tokens.fontSizes14,
-  fontWeight: tokens.fontWeightsRegular,
-});
-
-// Map our flat tokens to MUI's theme structure
-export default function createDDSTheme() {
+// Create a complete MUI theme with all required properties
+const createDDSTheme = (mode = 'light') => {
   return createTheme({
     palette: {
+      mode,
       primary: {
         main: tokens.colorBlue500,
-        light: tokens.colorBlue300,
-        dark: tokens.colorBlue700,
+        light: tokens.colorBlue100,
+        dark: tokens.colorBlue900,
         contrastText: '#fff',
       },
       secondary: {
-        main: tokens.colorBlue500,
-        light: tokens.colorBlue300,
-        dark: tokens.colorBlue700,
-        contrastText: '#fff',
-      },
-      tertiary: {
-        main: tokens.colorGreen500,
-        light: tokens.colorGreen300,
-        dark: tokens.colorGreen700,
+        main: tokens.colorPurple500,
+        light: tokens.colorPurple100,
+        dark: tokens.colorPurple900,
         contrastText: '#fff',
       },
       error: {
         main: tokens.colorRed500,
-        light: tokens.colorRed300,
-        dark: tokens.colorRed700,
+        light: tokens.colorRed100,
+        dark: tokens.colorRed900,
         contrastText: '#fff',
       },
       warning: {
         main: tokens.colorOrange500,
-        light: tokens.colorOrange300,
-        dark: tokens.colorOrange700,
-        contrastText: 'rgba(0, 0, 0, 0.87)',
+        light: tokens.colorOrange100,
+        dark: tokens.colorOrange900,
+        contrastText: '#fff',
       },
       info: {
-        main: tokens.colorLightblue500,
-        light: tokens.colorLightblue300,
-        dark: tokens.colorLightblue700,
+        main: tokens.colorCyan500,
+        light: tokens.colorCyan100,
+        dark: tokens.colorCyan900,
         contrastText: '#fff',
       },
       success: {
         main: tokens.colorGreen500,
-        light: tokens.colorGreen300,
-        dark: tokens.colorGreen700,
+        light: tokens.colorGreen100,
+        dark: tokens.colorGreen900,
         contrastText: '#fff',
       },
       grey: {
@@ -69,24 +58,21 @@ export default function createDDSTheme() {
         A200: tokens.colorGreyA200,
         A400: tokens.colorGreyA400,
         A700: tokens.colorGreyA700,
-        contrastText: '#fff',
       },
       text: {
-        primary: tokens.colorGrey900,
-        secondary: tokens.colorGrey700,
-        disabled: tokens.colorGrey400,
+        primary: mode === 'light' ? 'rgba(0, 0, 0, 0.87)' : 'rgba(255, 255, 255, 0.87)',
+        secondary: mode === 'light' ? 'rgba(0, 0, 0, 0.6)' : 'rgba(255, 255, 255, 0.6)',
+        disabled: mode === 'light' ? 'rgba(0, 0, 0, 0.38)' : 'rgba(255, 255, 255, 0.38)',
       },
-      divider: tokens.colorGrey200,
       background: {
-        default: '#fff',
-        paper: '#fff',
+        default: mode === 'light' ? '#fff' : '#121212',
+        paper: mode === 'light' ? '#fff' : '#1e1e1e',
       },
     },
-    typography: createTypographyFromTokens(),
+    typography: typography,
     shape: {
       borderRadius: parseInt(tokens.borderRadiusMd),
     },
-    spacing: (factor) => tokens[`spacings${factor}`] || factor * 8,
     breakpoints: {
       values: {
         xs: tokens.breakpointsXs,
@@ -95,6 +81,17 @@ export default function createDDSTheme() {
         lg: tokens.breakpointsLg,
         xl: tokens.breakpointsXl,
       },
+    },
+    spacing: 8, // MUI's default spacing unit
+    zIndex: {
+      mobileStepper: 1000,
+      fab: 1050,
+      speedDial: 1050,
+      appBar: 1100,
+      drawer: 1200,
+      modal: 1300,
+      snackbar: 1400,
+      tooltip: 1500,
     },
     transitions: {
       duration: {
@@ -113,30 +110,7 @@ export default function createDDSTheme() {
         sharp: 'cubic-bezier(0.4, 0, 0.6, 1)',
       },
     },
-    zIndex: {
-      mobileStepper: 1000,
-      speedDial: 1050,
-      appBar: 1100,
-      drawer: 1200,
-      modal: 1300,
-      snackbar: 1400,
-      tooltip: 1500,
-    },
-    components: {
-      MuiButton: {
-        styleOverrides: {
-          outlinedSecondary: {
-            color: tokens.colorBlue500,
-            borderColor: tokens.colorBlue500,
-            backgroundColor: 'transparent',
-            '&:hover': {
-              borderColor: tokens.colorBlue700,
-              color: tokens.colorBlue700,
-              backgroundColor: 'rgba(33, 150, 243, 0.04)',
-            },
-          },
-        },
-      },
-    },
   });
-} 
+};
+
+export default createDDSTheme; 

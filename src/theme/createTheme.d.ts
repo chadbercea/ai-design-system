@@ -9,5 +9,5 @@ declare module '@mui/material/styles' {
   }
 }
 
-declare function createDDSTheme(): Theme;
+declare function createDDSTheme(mode?: 'light' | 'dark'): Theme;
 export default createDDSTheme; 

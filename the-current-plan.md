@@ -1,3 +1,19 @@
+/**
+ * Architectural Guideline for MUI Masonry and Theme Switching
+ *
+ * 1. We generate both light and dark themes at Storybook boot time using createTheme.
+ * 2. Both theme objects are stored and referenced statically in memory. Do not re-instantiate them on toggle.
+ * 3. On theme change, we directly switch the active ThemeProvider to use the prebuilt theme object.
+ * 4. Masonry must be wrapped in a container that is keyed by the theme mode string. This forces a full React remount.
+ * 5. Do not rely on context-only updates or passive re-renders. Masonry's internal ResizeObserver will not reflow unless it sees a remount or layout shift.
+ * 6. Do not attempt DOM-based resize workarounds. They are ignored by Masonry unless the layout box model actually changes.
+ * 7. The theme switch logic must be synchronous and driven by a real key change and static theme object swap.
+ * 8. This pattern avoids persistent layout drift and guarantees Masonry will rebuild correctly on theme mode transitions.
+ *
+ * Ensure any decorator or story logic complies with this structure. If component reflows are still broken after this,
+ * verify that the theme key passed to Masonry actually changes and that the parent container fully remounts it.
+ */
+
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import {
@@ -34,8 +50,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const ThemeShowcase: Story = {
-  render: ({ modeSelect = 'light' }) => (
-    <Box key={modeSelect} sx={{ width: '100%', minHeight: '100vh', p: 4, bgcolor: 'background.default' }}>
+  render: () => (
+    <Box sx={{ width: '100%', minHeight: '100vh', p: 4, bgcolor: 'background.default' }}>
       <Masonry 
         columns={{ xs: 1, sm: 2, md: 3, lg: 4 }} 
         spacing={3}
