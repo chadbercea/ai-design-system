@@ -3,6 +3,11 @@ import { ThemeProvider, CssBaseline, Button, ButtonGroup, Switch, FormControlLab
 import TokenExtractor from './components/TokenExtractor';
 import { getTheme, THEME_KEYS, ThemeKey } from './theme/themeToggle';
 
+/**
+ * Renders the main application interface with dynamic theme and color mode switching.
+ *
+ * Provides controls for selecting between "MUI Default" and "DDS Foundations" themes, as well as toggling between light and dark modes. The selected theme and mode are applied globally using Material-UI's ThemeProvider. Also renders the {@link TokenExtractor} component below the theme controls.
+ */
 export default function App() {
   // State for theme key and mode
   const [themeKey, setThemeKey] = React.useState<ThemeKey>(THEME_KEYS.MUI_DEFAULT);

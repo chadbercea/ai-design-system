@@ -21,7 +21,18 @@ export const dispatchThemeModeChange = (mode: 'light' | 'dark') => {
   window.dispatchEvent(new Event('resize'));
 };
 
-// Export the themes map with consistent keys
+/**
+ * Returns a theme object based on the specified theme key and mode.
+ *
+ * If the key is {@link THEME_KEYS.DDS_FOUNDATIONS}, returns a DDS Foundations theme for the given mode.
+ * Otherwise, returns the default Material-UI theme with the specified palette mode.
+ *
+ * @param key - The theme identifier to select the theme variant.
+ * @param mode - The color mode, either 'light' or 'dark'. Defaults to 'light'.
+ * @returns The corresponding theme object for use with Material-UI components.
+ *
+ * @remark Logs a message to the console when the DDS Foundations theme is selected.
+ */
 export function getTheme(key: ThemeKey, mode: 'light' | 'dark' = 'light') {
   if (key === THEME_KEYS.DDS_FOUNDATIONS) {
     console.log('Using DDS Foundations theme');
