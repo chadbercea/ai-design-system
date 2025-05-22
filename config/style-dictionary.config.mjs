@@ -43,6 +43,20 @@ export default {
           showFileHeader: true
         }
       }]
+    },
+    // Add a CSS variables platform for global tokens
+    css: {
+      transformGroup: 'tokens-studio',
+      buildPath: 'build/css/',
+      files: [
+        {
+          destination: 'variables.css',
+          format: 'css/variables',
+          options: {
+            showFileHeader: true
+          }
+        }
+      ]
     }
   }
 }; 
