@@ -1,114 +1,127 @@
-declare namespace DesignTokens {
-  interface ColorToken {
-    $value: string;
-    $type: 'color';
-    $description: string;
-  }
-
-  interface DimensionToken {
-    $value: string;
-    $type: 'dimension';
-    $description: string;
-  }
-
-  interface TypographyToken {
-    $value: string;
-    $type: 'typography';
-    $description: string;
-  }
-
-  interface ColorTokens {
-    base: {
-      primary: ColorToken;
-      secondary: ColorToken;
-      neutral: {
-        '100': ColorToken;
-        '200': ColorToken;
-        '300': ColorToken;
-        '400': ColorToken;
-        '500': ColorToken;
-        '600': ColorToken;
-        '700': ColorToken;
-        '800': ColorToken;
-        '900': ColorToken;
-      };
-    };
-  }
-
-  interface TypographyTokens {
-    base: {
-      family: {
-        base: string;
-        heading: string;
-      };
-      size: {
-        base: string;
-      };
-      weight: {
-        normal: string;
-        medium: string;
-        semibold: string;
-        bold: string;
-      };
-    };
-  }
-
-  interface SpacingTokens {
-    base: {
-      '4': DimensionToken;
-    };
-  }
-
-  interface Tokens {
-    color: ColorTokens;
-    typography: TypographyTokens;
-    spacing: SpacingTokens;
-  }
-}
-
+// Type declarations for tokens.mjs
 declare module '../../build/tokens.mjs' {
-  const tokens: { [key: string]: string };
-  export default tokens;
-
-  // Font families
-  export const fontFamiliesPoppins: string;
-  export const fontFamiliesInter: string;
-  export const fontFamiliesRobotoMono: string;
   export const fontFamiliesRoboto: string;
-
-  // Font sizes
-  export const fontSizes10: string;
-  export const fontSizes12: string;
-  export const fontSizes14: string;
-  export const fontSizes16: string;
-  export const fontSizes18: string;
-  export const fontSizes21: string;
-  export const fontSizes24: string;
-  export const fontSizes32: string;
-  export const fontSizes40: string;
   export const fontSizes48: string;
-
-  // Font weights
-  export const fontWeightsRegular: string;
-  export const fontWeightsSemibold: string;
+  export const fontSizes40: string;
+  export const fontSizes32: string;
+  export const fontSizes24: string;
+  export const fontSizes21: string;
+  export const fontSizes18: string;
+  export const fontSizes16: string;
+  export const fontSizes14: string;
+  export const fontSizes12: string;
   export const fontWeightsBold: string;
-  export const fontWeightsBlack: string;
-
-  // Line heights
+  export const fontWeightsSemibold: string;
+  export const fontWeightsMedium: string;
+  export const fontWeightsRegular: string;
   export const lineHeights100: number;
-
-  // Letter spacing
   export const letterSpacingsDefault: string;
-  export const letterSpacingsWide: string;
-  export const letterSpacingsTight: string;
+  export const borderRadiusSm: string;
+  export const borderRadiusMd: string;
+  export const borderRadiusLg: string;
+  export const borderRadiusXl: string;
+  export const borderRadiusNone: string;
+  export const breakpointsXs: number;
+  export const breakpointsSm: number;
+  export const breakpointsMd: number;
+  export const breakpointsLg: number;
+  export const breakpointsXl: number;
+  export const colorGrey50: string;
+  export const colorGrey100: string;
+  export const colorGrey200: string;
+  export const colorGrey300: string;
+  export const colorGrey400: string;
+  export const colorGrey500: string;
+  export const colorGrey600: string;
+  export const colorGrey700: string;
+  export const colorGrey800: string;
+  export const colorGrey900: string;
+  export const colorGreyA100: string;
+  export const colorGreyA200: string;
+  export const colorGreyA400: string;
+  export const colorGreyA700: string;
+  export const colorBlue50: string;
+  export const colorBlue100: string;
+  export const colorBlue200: string;
+  export const colorBlue300: string;
+  export const colorBlue400: string;
+  export const colorBlue500: string;
+  export const colorBlue600: string;
+  export const colorBlue700: string;
+  export const colorBlue800: string;
+  export const colorBlue900: string;
+  export const colorBlueA100: string;
+  export const colorBlueA200: string;
+  export const colorBlueA400: string;
+  export const colorBlueA700: string;
+  export const colorPurple50: string;
+  export const colorPurple100: string;
+  export const colorPurple200: string;
+  export const colorPurple300: string;
+  export const colorPurple400: string;
+  export const colorPurple500: string;
+  export const colorPurple600: string;
+  export const colorPurple700: string;
+  export const colorPurple800: string;
+  export const colorPurple900: string;
+  export const colorPurpleA100: string;
+  export const colorPurpleA200: string;
+  export const colorPurpleA400: string;
+  export const colorPurpleA700: string;
+  export const colorRed50: string;
+  export const colorRed100: string;
+  export const colorRed200: string;
+  export const colorRed300: string;
+  export const colorRed400: string;
+  export const colorRed500: string;
+  export const colorRed600: string;
+  export const colorRed700: string;
+  export const colorRed800: string;
+  export const colorRed900: string;
+  export const colorRedA100: string;
+  export const colorRedA200: string;
+  export const colorRedA400: string;
+  export const colorRedA700: string;
+  export const colorGreen50: string;
+  export const colorGreen100: string;
+  export const colorGreen200: string;
+  export const colorGreen300: string;
+  export const colorGreen400: string;
+  export const colorGreen500: string;
+  export const colorGreen600: string;
+  export const colorGreen700: string;
+  export const colorGreen800: string;
+  export const colorGreen900: string;
+  export const colorGreenA100: string;
+  export const colorGreenA200: string;
+  export const colorGreenA400: string;
+  export const colorGreenA700: string;
+  export const colorOrange50: string;
+  export const colorOrange100: string;
+  export const colorOrange200: string;
+  export const colorOrange300: string;
+  export const colorOrange400: string;
+  export const colorOrange500: string;
+  export const colorOrange600: string;
+  export const colorOrange700: string;
+  export const colorOrange800: string;
+  export const colorOrange900: string;
+  export const colorOrangeA100: string;
+  export const colorOrangeA200: string;
+  export const colorOrangeA400: string;
+  export const colorOrangeA700: string;
+  export const colorCyan50: string;
+  export const colorCyan100: string;
+  export const colorCyan200: string;
+  export const colorCyan300: string;
+  export const colorCyan400: string;
+  export const colorCyan500: string;
+  export const colorCyan600: string;
+  export const colorCyan700: string;
+  export const colorCyan800: string;
+  export const colorCyan900: string;
+  export const colorCyanA100: string;
+  export const colorCyanA200: string;
+  export const colorCyanA400: string;
+  export const colorCyanA700: string;
 }
-
-declare module '*/tokens.json' {
-  const tokens: DesignTokens.Tokens;
-  export default tokens;
-}
-
-declare module '*/tokens.js' {
-  const tokens: DesignTokens.Tokens;
-  export default tokens;
-} 

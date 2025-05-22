@@ -9,12 +9,11 @@ This document outlines the steps to implement theme toggling in Storybook, allow
 ```typescript
 // src/theme/themeToggle.ts
 import { createTheme } from '@mui/material';
-import { mapTokensToMuiTheme } from './mapTokensToMuiTheme';
-import tokens from '../build/tokens.js';
+import createDDSTheme from './createTheme';
 
 export const themes = {
   'MUI Default': createTheme(),
-  'DDS Foundations': createTheme(mapTokensToMuiTheme(tokens))
+  'DDS Foundations': createDDSTheme()
 };
 
 export type ThemeKey = keyof typeof themes;
@@ -127,7 +126,7 @@ npm run storybook
 - Define and export a map of named themes
 - Use consistent keys for ‘MUI Default’ and ‘DDS Foundations’
 - Ensure both themes are built using MUI’s createTheme
-- Use your mapped DDS theme as the second entry
+- Use your DDS theme creation function `createDDSTheme` as the second entry
 
 ## Step 2
 - Update the Storybook preview configuration

@@ -7,25 +7,28 @@ export const THEME_KEYS = {
   DDS_FOUNDATIONS: 'DDS Foundations'
 } as const;
 
+// Theme change event name
+export const THEME_MODE_CHANGE_EVENT = 'theme-mode-change';
+
 // Create a type from the theme keys
 export type ThemeKey = typeof THEME_KEYS[keyof typeof THEME_KEYS];
 
+// Event dispatcher for theme mode changes
+export const dispatchThemeModeChange = (mode: 'light' | 'dark') => {
+  const event = new CustomEvent(THEME_MODE_CHANGE_EVENT, { detail: { mode } });
+  window.dispatchEvent(event);
+  // Force Masonry to recalculate
+  window.dispatchEvent(new Event('resize'));
+};
+
 // Export the themes map with consistent keys
-export function getTheme(key: ThemeKey) {
+export function getTheme(key: ThemeKey, mode: 'light' | 'dark' = 'light') {
   if (key === THEME_KEYS.DDS_FOUNDATIONS) {
     console.log('Using DDS Foundations theme');
-    return createDDSTheme();
+    return createDDSTheme(mode);
   }
-  return createTheme({
-    palette: {
-      tertiary: {
-        main: '#00bcd4', // Cyan
-        light: '#b2ebf2',
-        dark: '#00838f',
-        contrastText: '#fff',
-      },
-    },
-  });
+  // Return a pure, untouched MUI default theme
+  return createTheme({ palette: { mode } });
 }
 
 // Type guard to check if a string is a valid theme key
