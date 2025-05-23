@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material';
-import createDDSTheme from './createTheme';
+import createDDSTheme from './createMuiTheme';
 
 // Define theme keys as a const to ensure type safety
 export const THEME_KEYS = {

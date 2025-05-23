@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material';
-import createDDSTheme from '../createTheme';
+import createDDSTheme from '../createMuiTheme';
 
 describe('createDDSTheme', () => {
   it('creates a valid MUI theme with all required properties', () => {

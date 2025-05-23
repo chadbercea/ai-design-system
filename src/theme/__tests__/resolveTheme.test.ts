@@ -1,4 +1,4 @@
-import createDDSTheme from '../createTheme';
+import createDDSTheme from '../createMuiTheme';
 
 describe('createDDSTheme', () => {
   it('creates a theme with correct color values', () => {

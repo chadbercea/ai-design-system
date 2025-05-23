@@ -5,6 +5,17 @@ import { register } from '@tokens-studio/sd-transforms';
 // This adds all the necessary transforms for Tokens Studio compatibility
 register(StyleDictionary);
 
+// Register custom transforms
+StyleDictionary.registerTransform({
+  name: 'color/hsl',
+  type: 'value',
+  matcher: (prop) => prop.$type === 'color',
+  transform: (token) => {
+    const [h, s, l] = token.value.split(' ').map(Number);
+    return `${h} ${s}% ${l}%`;
+  }
+});
+
 export default {
   // Source files to process
   // In this case, we're using the DDS Foundations tokens
@@ -43,6 +54,38 @@ export default {
           showFileHeader: true
         }
       }]
+    },
+    // Add a CSS variables platform for global tokens
+    css: {
+      transformGroup: 'tokens-studio',
+      buildPath: 'build/css/',
+      files: [
+        {
+          destination: 'variables.css',
+          format: 'css/variables',
+          options: {
+            showFileHeader: true
+          }
+        }
+      ]
+    },
+    shadcn: {
+      transformGroup: 'tokens-studio',
+      buildPath: 'build/css/',
+      transforms: ['color/hsl', 'size/rem'],
+      files: [
+        {
+          destination: 'shadcn-variables.css',
+          format: 'css/variables',
+          options: {
+            showFileHeader: true,
+            selector: ':root',
+            outputReferences: true,
+            outputFormat: 'css',
+            prefix: '--'
+          }
+        }
+      ]
     }
   }
 }; 
