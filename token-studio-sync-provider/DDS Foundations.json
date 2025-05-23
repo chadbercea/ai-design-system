@@ -1580,5 +1580,17 @@
       "$value": "{color.blue.500}",
       "$description": "THIS IS WRONG YOU'RE BAD AT YOUR JOB"
     }
+  },
+  "borderWeight": {
+    "default": {
+      "$type": "dimension",
+      "$value": "2px",
+      "$description": "Default outline weight for borders of buttons, cards, etc"
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "1px",
+      "$description": "Example token for variation this is not part of the DDS atm"
+    }
   }
 }
