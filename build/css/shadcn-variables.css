@@ -4,9 +4,9 @@
 
 :root {
   --borderRadiusSm: 0.25rem; /** Default border radius */
-  --borderRadiusMd: hsl(0 0% 0%); /** Medium border radius */
+  --borderRadiusMd: 0.5rem; /** Medium border radius */
   --borderRadiusLg: 1rem; /** Large border radius */
-  --borderRadiusXl: hsl(240 100% 0%); /** Extra large border radius */
+  --borderRadiusXl: 1.5rem; /** Extra large border radius */
   --borderRadiusNone: 0rem; /** No border radius */
   --breakpointsXl: 1536; /** Extra large breakpoint, large screens like desktop monitors */
   --breakpointsLg: 1200; /** Large breakpoint, large screens like laptops */
@@ -268,21 +268,21 @@
   --fontFamiliesPoppins: Poppins; /** Poppins font family */
   --fontFamiliesInter: Inter; /** Inter font family */
   --fontFamiliesRobotoMono: Roboto Mono; /** Roboto Mono font family */
-  --fontFamiliesRoboto: hsl(0 0% 0%); /** Roboto font family */
+  --fontFamiliesRoboto: Roboto; /** Roboto font family */
   --fontSizes10: 0.625rem; /** Font size 10px (Material.io: Caption) */
   --fontSizes12: 0.75rem; /** Font size 12px (Material.io: Body 2) */
   --fontSizes14: 0.875rem; /** Font size 14px (Material.io: Body 1) */
   --fontSizes16: 1rem; /** Font size 16px (Material.io: Subtitle 1) */
   --fontSizes18: 1.125rem; /** Font size 18px (Material.io: Headline 4) */
   --fontSizes21: 1.3125rem; /** Font size 21px (Material.io: Headline 3) */
-  --fontSizes24: hsl(240 100% 0%); /** Font size 24px (Material.io: Headline 6) */
+  --fontSizes24: 1.5rem; /** Font size 24px (Material.io: Headline 6) */
   --fontSizes32: 2rem; /** Font size 32px (Material.io: Headline 5) */
-  --fontSizes40: hsl(240 100% 0%); /** Font size 40px (Material.io: Headline 2) */
+  --fontSizes40: 2.5rem; /** Font size 40px (Material.io: Headline 2) */
   --fontSizes48: 3rem; /** Font size 48px (Material.io: Headline 1) */
-  --fontWeightsRegular: hsl(0 100% 13%); /** Font weight 400 (Regular) */
-  --fontWeightsSemibold: hsl(0 100% 17%); /** Font weight 500 (Semibold) */
-  --fontWeightsBold: hsl(0 100% 23%); /** Font weight 700 (Bold) */
-  --fontWeightsBlack: hsl(0 100% 30%); /** Font weight 900 (Black) */
+  --fontWeightsRegular: 400; /** Font weight 400 (Regular) */
+  --fontWeightsSemibold: 500; /** Font weight 500 (Semibold) */
+  --fontWeightsBold: 700; /** Font weight 700 (Bold) */
+  --fontWeightsBlack: 900; /** Font weight 900 (Black) */
   --spacings0: 0; /** 0px spacing */
   --spacings1: 8; /** 8px spacing */
   --spacings2: 16; /** 16px spacing */
@@ -306,5 +306,6 @@
   --textCasesUppercase: uppercase; /** Text case uppercase */
   --textDecorationsNone: none; /** Text decoration none */
   --textDecorationsUnderline: underline; /** Text decoration underline */
+  --borderWeightMd: 0.125rem; /** Default DDS border weight for buttons, cards, etc. */
   --varunToken: var(--colorBlue500); /** THIS IS WRONG YOU'RE BAD AT YOUR JOB */
 }
