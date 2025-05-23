@@ -1,4 +1,4 @@
-import * as tokens from '../build/tokens.js';
+import * as tokens from '../build/tokens.mjs';
 import { mapTokensToV0Theme } from '../adapters/mapTokensToV0Theme.js';
 import fs from 'fs';
 
