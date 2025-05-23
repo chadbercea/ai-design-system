@@ -125,3 +125,25 @@ const App = () => (
 
 ## Contributing
 Please follow the project guidelines for file organization, validation, and error handling. Holler at yer boi @ChadBercea with any questions, comments, or snide remarks.
+
+---
+
+## Known Issues
+
+### HSL Color Output with Style Dictionary and @tokens-studio/sd-transforms
+
+Currently, the `ts/color/modifiers` transform from `@tokens-studio/sd-transforms` only outputs HSL color values if your color tokens include the `$extensions.studio.tokens.modify` property with `space: "hsl"`.
+**By default, primitive color tokens do not have this property.**
+There is no built-in transform to automatically add this extension to all color tokens.
+
+**Long-term solution:**
+Add the `$extensions.studio.tokens.modify` property to your color tokens in your source token files or preprocess them before running Style Dictionary.
+
+**MVP workaround:**
+For now, a custom Style Dictionary transform should be used to convert hex color values to HSL in the output.
+
+For more details and up-to-date instructions on color conversion (including hex to HSL), see the official documentation:
+
+https://www.npmjs.com/package/@tokens-studio/sd-transforms
+
+- **PX to REM Conversion**: Style Dictionary does not natively support converting px values to rem. A custom transform (`custom/pxToRem`) is used as a temporary workaround. This should be removed once upstream or token source supports rem output natively.
