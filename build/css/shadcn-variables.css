@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: undefined;
+    --foreground: undefined;
+    --card: undefined;
+    --popover: undefined;
+    --primary: undefined;
+    --secondary: undefined;
+    --muted: undefined;
+    --accent: undefined;
+    --destructive: undefined;
+    --border: undefined;
+    --input: undefined;
+    --ring: undefined;
+    --radius: undefined;
+  }
+
+  .dark {
+
+  }
+}
