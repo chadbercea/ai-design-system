@@ -1,27 +1,27 @@
 {
   "borderRadius": {
     "sm": {
-      "$type": "borderRadius",
+      "$type": "Dimension",
       "$value": "4px",
       "$description": "Default border radius"
     },
     "md": {
-      "$type": "borderRadius",
+      "$type": "Dimension",
       "$value": "8px",
       "$description": "Medium border radius"
     },
     "lg": {
-      "$type": "borderRadius",
+      "$type": "Dimension",
       "$value": "16px",
       "$description": "Large border radius"
     },
     "xl": {
-      "$type": "borderRadius",
+      "$type": "Dimension",
       "$value": "24px",
       "$description": "Extra large border radius"
     },
     "none": {
-      "$type": "borderRadius",
+      "$type": "Dimension",
       "$value": "0px",
       "$description": "No border radius"
     }
