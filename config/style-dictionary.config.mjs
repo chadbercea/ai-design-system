@@ -78,6 +78,14 @@ StyleDictionary.registerTransform({
   transform: token => token.$value
 });
 
+// Register a custom transform for font weights
+StyleDictionary.registerTransform({
+  name: 'custom/fontWeight/value',
+  type: 'value',
+  matcher: token => token.$type === 'fontWeights',
+  transform: token => token.$value
+});
+
 // Register a custom transform group for shadcn that includes the hexToHSL and pxToRem transforms
 // This is a TEMPORARY workaround to ensure the shadcn platform uses the custom transforms.
 // Remove this when upstream or token source supports the required output formats natively.
@@ -93,6 +101,7 @@ StyleDictionary.registerTransformGroup({
     // Then apply dimension and other transforms
     'custom/size/pxToRem',
     'custom/value/keepOriginal',
+    'custom/fontWeight/value',
     'ts/opacity',
     'ts/size/lineheight',
     'ts/typography/fontWeight',
