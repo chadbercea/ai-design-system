@@ -1424,7 +1424,7 @@
   },
   "default": {
     "$type": "borderRadius",
-    "$value": 4,
+    "$value": "4",
     "$description": "Default Border Radiu design token"
   },
   "global": {

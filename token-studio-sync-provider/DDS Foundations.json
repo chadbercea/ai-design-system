@@ -1,27 +1,27 @@
 {
   "borderRadius": {
     "sm": {
-      "$type": "Dimension",
+      "$type": "dimension",
       "$value": "4px",
       "$description": "Default border radius"
     },
     "md": {
-      "$type": "Dimension",
+      "$type": "dimension",
       "$value": "8px",
       "$description": "Medium border radius"
     },
     "lg": {
-      "$type": "Dimension",
+      "$type": "dimension",
       "$value": "16px",
       "$description": "Large border radius"
     },
     "xl": {
-      "$type": "Dimension",
+      "$type": "dimension",
       "$value": "24px",
       "$description": "Extra large border radius"
     },
     "none": {
-      "$type": "Dimension",
+      "$type": "dimension",
       "$value": "0px",
       "$description": "No border radius"
     }
@@ -29,27 +29,27 @@
   "breakpoints": {
     "xl": {
       "$type": "breakpoint",
-      "$value": 1536,
+      "$value": "1536",
       "$description": "Extra large breakpoint, large screens like desktop monitors"
     },
     "lg": {
       "$type": "breakpoint",
-      "$value": 1200,
+      "$value": "1200",
       "$description": "Large breakpoint, large screens like laptops"
     },
     "md": {
       "$type": "breakpoint",
-      "$value": 900,
+      "$value": "900",
       "$description": "Medium breakpoint, medium screens like tablets"
     },
     "sm": {
       "$type": "breakpoint",
-      "$value": 600,
+      "$value": "600",
       "$description": "Small breakpoint, small screens like phones"
     },
     "xs": {
       "$type": "breakpoint",
-      "$value": 444,
+      "$value": "444",
       "$description": "Extra small breakpoint, small screens like watches"
     }
   },
@@ -1450,74 +1450,74 @@
   "spacings": {
     "0": {
       "$type": "spacings",
-      "$value": 0,
+      "$value": "0",
       "$description": "0px spacing"
     },
     "1": {
       "$type": "spacings",
-      "$value": 8,
+      "$value": "8",
       "$description": "8px spacing"
     },
     "2": {
       "$type": "spacings",
-      "$value": 16,
+      "$value": "16",
       "$description": "16px spacing"
     },
     "3": {
       "$type": "spacings",
-      "$value": 24,
+      "$value": "24",
       "$description": "24px spacing"
     },
     "4": {
       "$type": "spacings",
-      "$value": 32,
+      "$value": "32",
       "$description": "32px spacing"
     },
     "5": {
       "$type": "spacings",
-      "$value": 40,
+      "$value": "40",
       "$description": "40px spacing"
     },
     "6": {
       "$type": "spacings",
-      "$value": 48,
+      "$value": "48",
       "$description": "48px spacing"
     },
     "7": {
       "$type": "spacings",
-      "$value": 56,
+      "$value": "56",
       "$description": "56px spacing"
     },
     "8": {
       "$type": "spacings",
-      "$value": 64,
+      "$value": "64",
       "$description": "64px spacing"
     },
     "9": {
       "$type": "spacings",
-      "$value": 72,
+      "$value": "72",
       "$description": "72px spacing"
     },
     "10": {
       "$type": "spacings",
-      "$value": 80,
+      "$value": "80",
       "$description": "80px spacing"
     },
     "11": {
       "$type": "spacings",
-      "$value": 88,
+      "$value": "88",
       "$description": "88px spacing"
     },
     "12": {
       "$type": "spacings",
-      "$value": 96,
+      "$value": "96",
       "$description": "96px spacing"
     }
   },
   "lineHeights": {
     "100": {
       "$type": "lineHeights",
-      "$value": 1,
+      "$value": "1",
       "$description": "Line height 100%"
     }
   },
@@ -1579,6 +1579,13 @@
       "$type": "color",
       "$value": "{color.blue.500}",
       "$description": "THIS IS WRONG YOU'RE BAD AT YOUR JOB"
+    }
+  },
+  "borderWeight": {
+    "md": {
+      "$type": "dimension",
+      "$value": "2px",
+      "$description": "Default DDS border weight for buttons, cards, etc."
     }
   }
 }

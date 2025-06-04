@@ -8,69 +8,64 @@
 //
 // Make sure to import 'build/css/variables.css' in your main CSS entry (e.g. index.css or App.css).
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   theme: {
-    colors: {
-      primary: 'var(--colorBlue500)',
-      secondary: 'var(--colorPurple500)',
-      error: 'var(--colorRed500)',
-      warning: 'var(--colorOrange500)',
-      info: 'var(--colorCyan500)',
-      success: 'var(--colorGreen500)',
-      gray: {
-        50: 'var(--colorGrey50)',
-        100: 'var(--colorGrey100)',
-        200: 'var(--colorGrey200)',
-        300: 'var(--colorGrey300)',
-        400: 'var(--colorGrey400)',
-        500: 'var(--colorGrey500)',
-        600: 'var(--colorGrey600)',
-        700: 'var(--colorGrey700)',
-        800: 'var(--colorGrey800)',
-        900: 'var(--colorGrey900)',
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
       },
     },
-    borderRadius: {
-      sm: 'var(--borderRadiusSm)',
-      md: 'var(--borderRadiusMd)',
-      lg: 'var(--borderRadiusLg)',
-      xl: 'var(--borderRadiusXl)',
-      none: 'var(--borderRadiusNone)',
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)"],
+        mono: ["var(--font-mono)"],
+        display: ["var(--font-display)"],
+        body: ["var(--font-body)"],
+      },
     },
-    fontFamily: {
-      poppins: 'var(--fontFamiliesPoppins), sans-serif',
-      inter: 'var(--fontFamiliesInter), sans-serif',
-      roboto: 'var(--fontFamiliesRoboto), sans-serif',
-      mono: 'var(--fontFamiliesRobotoMono), monospace',
-    },
-    fontSize: {
-      xs: 'var(--fontSizes10)',
-      sm: 'var(--fontSizes12)',
-      base: 'var(--fontSizes14)',
-      lg: 'var(--fontSizes16)',
-      xl: 'var(--fontSizes18)',
-      '2xl': 'var(--fontSizes21)',
-      '3xl': 'var(--fontSizes24)',
-      '4xl': 'var(--fontSizes32)',
-      '5xl': 'var(--fontSizes40)',
-      '6xl': 'var(--fontSizes48)',
-    },
-    spacing: {
-      0: 'var(--spacings0)',
-      1: 'var(--spacings1)',
-      2: 'var(--spacings2)',
-      3: 'var(--spacings3)',
-      4: 'var(--spacings4)',
-      5: 'var(--spacings5)',
-      6: 'var(--spacings6)',
-      7: 'var(--spacings7)',
-      8: 'var(--spacings8)',
-      9: 'var(--spacings9)',
-      10: 'var(--spacings10)',
-      11: 'var(--spacings11)',
-      12: 'var(--spacings12)',
-    },
-    // Add other theme keys as needed
   },
-  // ...rest of your Tailwind config (content, plugins, etc.)
-}; 
+} 

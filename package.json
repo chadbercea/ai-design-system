@@ -17,7 +17,8 @@
     "type:check": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "jest"
+    "test": "jest",
+    "style-dictionary": "style-dictionary build --config config/style-dictionary.config.mjs && node -e \"import('./build/v0/theme.js').then(m => require('fs').writeFileSync('./build/v0/globals.css', m.default.globalCss))\""
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",

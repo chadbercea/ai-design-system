@@ -307,4 +307,5 @@
   --textDecorationsNone: none; /** Text decoration none */
   --textDecorationsUnderline: underline; /** Text decoration underline */
   --varunToken: #2560ff; /** THIS IS WRONG YOU'RE BAD AT YOUR JOB */
+  --borderWeightMd: 2px; /** Default DDS border weight for buttons, cards, etc. */
 }
