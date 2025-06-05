@@ -1,4 +1,9 @@
 {
+  "0": {
+    "value": "0%",
+    "type": "letterSpacing",
+    "description": "Default letter spacing."
+  },
   "10": {
     "value": "10",
     "type": "fontSizes"
@@ -620,8 +625,9 @@
     }
   },
   "rounded": {
-    "value": "8",
-    "type": "borderRadius"
+    "value": "8px",
+    "type": "borderRadius",
+    "description": "Border radius default."
   },
   "extrabold": {
     "value": "900",
@@ -656,22 +662,20 @@
     "type": "fontFamilies"
   },
   "pill": {
-    "value": "200",
-    "type": "borderRadius"
+    "value": "200px",
+    "type": "borderRadius",
+    "description": "For completely rounded border radius."
   },
   "auto": {
     "value": "auto",
     "type": "lineHeights"
   },
-  "0%": {
-    "value": "0",
-    "type": "letterSpacing"
-  },
   "Align": {
     "left": {
       "value": "left",
       "type": "text",
-      "descriptoin": "Align text left."
+      "descriptoin": "Align text left.",
+      "description": "Alight text left."
     },
     "center": {
       "value": "center",
@@ -685,8 +689,9 @@
     }
   },
   "xs": {
-    "value": "4",
-    "type": "spacing"
+    "value": "4px",
+    "type": "spacing",
+    "description": "Extra-small spacing."
   },
   "lg": {
     "value": "1.5px",
@@ -731,8 +736,9 @@
     }
   },
   "None": {
-    "value": "0",
-    "type": "paragraphSpacing"
+    "value": "0%",
+    "type": "paragraphSpacing",
+    "description": "Default paragraph spacing."
   },
   "hover": {
     "value": "12%",
@@ -751,7 +757,7 @@
     "type": "opacity"
   },
   "outlinedBorder": {
-    "value": "56",
+    "value": "56%",
     "type": "opacity"
   },
   "active": {
