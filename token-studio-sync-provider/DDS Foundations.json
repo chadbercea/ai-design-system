@@ -735,10 +735,12 @@
       "description": "Large icon size."
     }
   },
-  "None": {
-    "value": "0%",
-    "type": "paragraphSpacing",
-    "description": "Default paragraph spacing."
+  "spacing": {
+    "none": {
+      "value": "0%",
+      "type": "paragraphSpacing",
+      "description": "Default paragraph spacing."
+    }
   },
   "hover": {
     "value": "12%",
