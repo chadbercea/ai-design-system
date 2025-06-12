@@ -1,0 +1,179 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --0: 0em; /** Default letter spacing. */
+  --10: 10px;
+  --12: 12px;
+  --14: 14px;
+  --16: 16px;
+  --18: 18px;
+  --21: 21px;
+  --24: 24px;
+  --32: 32px;
+  --40: 40px;
+  --48: 48px;
+  --sm: 1px; /** Small border width. */
+  --md: 1.25px; /** Medium border width. */
+  --elevation1: 0 2px 4px 4px #00000026;
+  --elevation2: 0 4px 8px 4px #00000033;
+  --elevation3: 0 4px 12px 4px #00000033;
+  --elevation4: 0 4px 16px 4px #00000033;
+  --none: none; /** Text decoration none */
+  --uppercase: uppercase; /** Uppercase text decoration. */
+  --underline: underline; /** Text decoration: underline */
+  --italic: italic; /** Text decoration: italic */
+  --white100: #ffffff;
+  --white80: rgba(255, 255, 255, 0.8);
+  --white64: rgba(255, 255, 255, 0.64);
+  --white56: rgba(255, 255, 255, 0.56);
+  --white40: rgba(255, 255, 255, 0.4);
+  --white32: rgba(255, 255, 255, 0.32);
+  --white24: rgba(255, 255, 255, 0.24);
+  --white16: rgba(255, 255, 255, 0.16);
+  --white12: rgba(255, 255, 255, 0.12);
+  --white8: rgba(255, 255, 255, 0.08);
+  --white4: rgba(255, 255, 255, 0.04);
+  --black100: #000000;
+  --black80: rgba(0, 0, 0, 0.8);
+  --black64: rgba(0, 0, 0, 0.64);
+  --black56: rgba(0, 0, 0, 0.56);
+  --black40: rgba(0, 0, 0, 0.4);
+  --black32: rgba(0, 0, 0, 0.32);
+  --black24: rgba(0, 0, 0, 0.24);
+  --black16: rgba(0, 0, 0, 0.16);
+  --black12: rgba(0, 0, 0, 0.12);
+  --black8: rgba(0, 0, 0, 0.08);
+  --black4: rgba(0, 0, 0, 0.04);
+  --grey50: #f9fafb;
+  --grey100: #e7eaef;
+  --grey200: #c8cfda;
+  --grey300: #a9b4c6;
+  --grey400: #8b99b2;
+  --grey500: #6c7e9d;
+  --grey600: #566581;
+  --grey700: #434c5f;
+  --grey800: #2c333f;
+  --grey900: #1e2129;
+  --grey950: #0f121b;
+  --green50: #f5fcf7;
+  --green100: #ebf9ee;
+  --green200: #d0f1d7;
+  --green300: #a9e5bd;
+  --green400: #81d9a2;
+  --green500: #5ace8c;
+  --green600: #38bd7d;
+  --green700: #2d9568;
+  --green800: #216e4b;
+  --green900: #174b32;
+  --green950: #11371a;
+  --teal50: #f3fcfc;
+  --teal100: #dff6f6;
+  --teal200: #c3f0f1;
+  --teal300: #a0e5e8;
+  --teal400: #6adcde;
+  --teal500: #2fd0d2;
+  --teal600: #1bbdbf;
+  --teal700: #2c9ea0;
+  --teal800: #187473;
+  --teal900: #125555;
+  --teal950: #093d3d;
+  --blue50: #e3f2fd;
+  --blue100: #bbdefb;
+  --blue200: #aac4f8;
+  --blue300: #7ba4f4;
+  --blue400: #4b83f1;
+  --blue500: #2560ff;
+  --blue600: #0d4df2;
+  --blue700: #003db5;
+  --blue800: #002978;
+  --blue900: #001d56;
+  --blue950: #00153c;
+  --violet50: #fcf9ff;
+  --violet100: #efe0ff;
+  --violet200: #d3b7ff;
+  --violet300: #ae82ff;
+  --violet400: #9860ff;
+  --violet500: #7d2eff;
+  --violet600: #6d00eb;
+  --violet700: #5700bb;
+  --violet800: #450093;
+  --violet900: #370076;
+  --violet950: #250050;
+  --pink50: #fff7fe;
+  --pink100: #ffe6fb;
+  --pink200: #ffc9f6;
+  --pink300: #ffa6f0;
+  --pink400: #fc71dc;
+  --pink500: #ed49c7;
+  --pink600: #c918ab;
+  --pink700: #ab0089;
+  --pink800: #830069;
+  --pink900: #880e4f;
+  --pink950: #550033;
+  --red50: #fff5f5;
+  --red100: #ffdfdf;
+  --red200: #ffc2c2;
+  --red300: #ffa8a8;
+  --red400: #ff7575;
+  --red500: #ff5757;
+  --red600: #f42f39;
+  --red700: #e40c2c;
+  --red800: #b30909;
+  --red900: #890000;
+  --red950: #6e0000;
+  --orange50: #fff9f5;
+  --orange100: #ffe9d9;
+  --orange200: #ffd8bb;
+  --orange300: #ffc499;
+  --orange400: #ffa96b;
+  --orange500: #ff8731;
+  --orange600: #ff6b00;
+  --orange700: #da5c00;
+  --orange800: #ad4800;
+  --orange900: #893a01;
+  --orange950: #5e2800;
+  --yellow50: #fffbf0;
+  --yellow100: #fff5db;
+  --yellow200: #fff1cc;
+  --yellow300: #ffe8ad;
+  --yellow400: #ffda7a;
+  --yellow500: #ffcc48;
+  --yellow600: #f8b60f;
+  --yellow700: #eb9c00;
+  --yellow800: #b86e00;
+  --yellow900: #854900;
+  --yellow950: #643700;
+  --rounded: 8px; /** Border radius default. */
+  --extrabold: 900;
+  --bold: 700;
+  --semibold: 500;
+  --regular: 400;
+  --light: 300;
+  --marketing: Poppins;
+  --product: Inter;
+  --code: 'Roboto Mono';
+  --pill: 200px; /** For completely rounded border radius. */
+  --auto: auto;
+  --alignLeft: left; /** Alight text left. */
+  --alignCenter: center; /** Align text center */
+  --alignRight: right; /** Align text right */
+  --xs: 4px; /** Extra-small spacing. */
+  --lg: 1.5px; /** Large border width. */
+  --xl: 2px; /** Extra-large border width. */
+  --xxl: 2.5px; /** Extra-extra-large border width. */
+  --iconXxs: 12px; /** Extra-extra-small icon. */
+  --iconXs: 16px; /** Extra-small icon size. */
+  --iconSm: 21px; /** Small icon size. */
+  --iconMd: 24px; /** Medium icon size. */
+  --iconLg: 32px; /** Large icon size. */
+  --spacingNone: 0%; /** Default paragraph spacing. */
+  --hover: 0.12;
+  --selected: 0.16;
+  --focus: 0.24;
+  --focusVisible: 0.32;
+  --outlinedBorder: 0.56;
+  --active: 1;
+  --disabled: 0.32;
+}
