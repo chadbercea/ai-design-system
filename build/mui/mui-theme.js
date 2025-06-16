@@ -1,128 +1,209 @@
-export const theme = {
-  "palette": {
-    "White.100%": "#ffffff",
-    "White.80%": "rgba(255, 255, 255, 0.8)",
-    "White.64%": "rgba(255, 255, 255, 0.64)",
-    "White.56%": "rgba(255, 255, 255, 0.56)",
-    "White.40%": "rgba(255, 255, 255, 0.4)",
-    "White.32%": "rgba(255, 255, 255, 0.32)",
-    "White.24%": "rgba(255, 255, 255, 0.24)",
-    "White.16%": "rgba(255, 255, 255, 0.16)",
-    "White.12%": "rgba(255, 255, 255, 0.12)",
-    "White.8%": "rgba(255, 255, 255, 0.08)",
-    "White.4%": "rgba(255, 255, 255, 0.04)",
-    "Black.100%": "#000000",
-    "Black.80%": "rgba(0, 0, 0, 0.8)",
-    "Black.64%": "rgba(0, 0, 0, 0.64)",
-    "Black.56%": "rgba(0, 0, 0, 0.56)",
-    "Black.40%": "rgba(0, 0, 0, 0.4)",
-    "Black.32%": "rgba(0, 0, 0, 0.32)",
-    "Black.24%": "rgba(0, 0, 0, 0.24)",
-    "Black.16%": "rgba(0, 0, 0, 0.16)",
-    "Black.12%": "rgba(0, 0, 0, 0.12)",
-    "Black.8%": "rgba(0, 0, 0, 0.08)",
-    "Black.4%": "rgba(0, 0, 0, 0.04)",
-    "Grey.50": "#f9fafb",
-    "Grey.100": "#e7eaef",
-    "Grey.200": "#c8cfda",
-    "Grey.300": "#a9b4c6",
-    "Grey.400": "#8b99b2",
-    "Grey.500": "#6c7e9d",
-    "Grey.600": "#566581",
-    "Grey.700": "#434c5f",
-    "Grey.800": "#2c333f",
-    "Grey.900": "#1e2129",
-    "Grey.950": "#0f121b",
-    "Green.50": "#f5fcf7",
-    "Green.100": "#ebf9ee",
-    "Green.200": "#d0f1d7",
-    "Green.300": "#a9e5bd",
-    "Green.400": "#81d9a2",
-    "Green.500": "#5ace8c",
-    "Green.600": "#38bd7d",
-    "Green.700": "#2d9568",
-    "Green.800": "#216e4b",
-    "Green.900": "#174b32",
-    "Green.950": "#11371a",
-    "Teal.50": "#f3fcfc",
-    "Teal.100": "#dff6f6",
-    "Teal.200": "#c3f0f1",
-    "Teal.300": "#a0e5e8",
-    "Teal.400": "#6adcde",
-    "Teal.500": "#2fd0d2",
-    "Teal.600": "#1bbdbf",
-    "Teal.700": "#2c9ea0",
-    "Teal.800": "#187473",
-    "Teal.900": "#125555",
-    "Teal.950": "#093d3d",
-    "Blue.50": "#e3f2fd",
-    "Blue.100": "#bbdefb",
-    "Blue.200": "#aac4f8",
-    "Blue.300": "#7ba4f4",
-    "Blue.400": "#4b83f1",
-    "Blue.500": "#2560ff",
-    "Blue.600": "#0d4df2",
-    "Blue.700": "#003db5",
-    "Blue.800": "#002978",
-    "Blue.900": "#001d56",
-    "Blue.950": "#00153c",
-    "Violet.50": "#fcf9ff",
-    "Violet.100": "#efe0ff",
-    "Violet.200": "#d3b7ff",
-    "Violet.300": "#ae82ff",
-    "Violet.400": "#9860ff",
-    "Violet.500": "#7d2eff",
-    "Violet.600": "#6d00eb",
-    "Violet.700": "#5700bb",
-    "Violet.800": "#450093",
-    "Violet.900": "#370076",
-    "Violet.950": "#250050",
-    "Pink.50": "#fff7fe",
-    "Pink.100": "#ffe6fb",
-    "Pink.200": "#ffc9f6",
-    "Pink.300": "#ffa6f0",
-    "Pink.400": "#fc71dc",
-    "Pink.500": "#ed49c7",
-    "Pink.600": "#c918ab",
-    "Pink.700": "#ab0089",
-    "Pink.800": "#830069",
-    "Pink.900": "#880e4f",
-    "Pink.950": "#550033",
-    "Red.50": "#fff5f5",
-    "Red.100": "#ffdfdf",
-    "Red.200": "#ffc2c2",
-    "Red.300": "#ffa8a8",
-    "Red.400": "#ff7575",
-    "Red.500": "#ff5757",
-    "Red.600": "#f42f39",
-    "Red.700": "#e40c2c",
-    "Red.800": "#b30909",
-    "Red.900": "#890000",
-    "Red.950": "#6e0000",
-    "Orange.50": "#fff9f5",
-    "Orange.100": "#ffe9d9",
-    "Orange.200": "#ffd8bb",
-    "Orange.300": "#ffc499",
-    "Orange.400": "#ffa96b",
-    "Orange.500": "#ff8731",
-    "Orange.600": "#ff6b00",
-    "Orange.700": "#da5c00",
-    "Orange.800": "#ad4800",
-    "Orange.900": "#893a01",
-    "Orange.950": "#5e2800",
-    "Yellow.50": "#fffbf0",
-    "Yellow.100": "#fff5db",
-    "Yellow.200": "#fff1cc",
-    "Yellow.300": "#ffe8ad",
-    "Yellow.400": "#ffda7a",
-    "Yellow.500": "#ffcc48",
-    "Yellow.600": "#f8b60f",
-    "Yellow.700": "#eb9c00",
-    "Yellow.800": "#b86e00",
-    "Yellow.900": "#854900",
-    "Yellow.950": "#643700"
+import { createTheme } from '@mui/material/styles';
+
+export const theme = createTheme({
+  "typography": {
+    "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+    "fontSize": 14,
+    "fontWeightLight": 300,
+    "fontWeightRegular": 400,
+    "fontWeightMedium": 500,
+    "fontWeightBold": 700,
+    "h1": {
+      "fontFamily": "",
+      "fontWeight": 300,
+      "fontSize": "",
+      "lineHeight": 1.167,
+      "letterSpacing": "-0.01562em"
+    },
+    "h2": {
+      "fontFamily": "",
+      "fontWeight": 300,
+      "fontSize": "",
+      "lineHeight": 1.2,
+      "letterSpacing": "-0.00833em"
+    },
+    "h3": {
+      "fontFamily": "",
+      "fontWeight": 400,
+      "fontSize": "",
+      "lineHeight": 1.167,
+      "letterSpacing": "0em"
+    },
+    "h4": {
+      "fontFamily": "",
+      "fontWeight": 400,
+      "fontSize": "",
+      "lineHeight": 1.235,
+      "letterSpacing": "0.00735em"
+    },
+    "h5": {
+      "fontFamily": "",
+      "fontWeight": 400,
+      "fontSize": "",
+      "lineHeight": 1.334,
+      "letterSpacing": "0em"
+    },
+    "h6": {
+      "fontFamily": "",
+      "fontWeight": 500,
+      "fontSize": "",
+      "lineHeight": 1.6,
+      "letterSpacing": "0.0075em"
+    },
+    "subtitle1": {
+      "fontFamily": "",
+      "fontWeight": 400,
+      "fontSize": "",
+      "lineHeight": 1.75,
+      "letterSpacing": "0.00938em"
+    },
+    "subtitle2": {
+      "fontFamily": "",
+      "fontWeight": 500,
+      "fontSize": "",
+      "lineHeight": 1.57,
+      "letterSpacing": "0.00714em"
+    },
+    "body1": {
+      "fontFamily": "",
+      "fontWeight": 400,
+      "fontSize": "",
+      "lineHeight": 1.5,
+      "letterSpacing": "0.00938em"
+    },
+    "body2": {
+      "fontFamily": "",
+      "fontWeight": 400,
+      "fontSize": "",
+      "lineHeight": 1.43,
+      "letterSpacing": "0.01071em"
+    },
+    "button": {
+      "fontFamily": "",
+      "fontWeight": 500,
+      "fontSize": "",
+      "lineHeight": 1.75,
+      "letterSpacing": "0.02857em",
+      "textTransform": "uppercase"
+    },
+    "caption": {
+      "fontFamily": "",
+      "fontWeight": 400,
+      "fontSize": "",
+      "lineHeight": 1.66,
+      "letterSpacing": "0.03333em"
+    },
+    "overline": {
+      "fontFamily": "",
+      "fontWeight": 400,
+      "fontSize": "",
+      "lineHeight": 2.66,
+      "letterSpacing": "0.08333em",
+      "textTransform": "uppercase"
+    }
   },
-  "spacing": {
-    "xs": "4px"
+  "palette": {
+    "mode": "light",
+    "primary": {
+      "main": "",
+      "light": "",
+      "dark": "",
+      "contrastText": "#fff"
+    },
+    "secondary": {
+      "main": "",
+      "light": "",
+      "dark": "",
+      "contrastText": "#fff"
+    },
+    "error": {
+      "main": "",
+      "light": "",
+      "dark": "",
+      "contrastText": "#fff"
+    },
+    "warning": {
+      "main": "",
+      "light": "",
+      "dark": "",
+      "contrastText": "#fff"
+    },
+    "info": {
+      "main": "",
+      "light": "",
+      "dark": "",
+      "contrastText": "#fff"
+    },
+    "success": {
+      "main": "",
+      "light": "",
+      "dark": "",
+      "contrastText": "#fff"
+    },
+    "grey": {
+      "50": "#fafafa",
+      "100": "#f5f5f5",
+      "200": "#eeeeee",
+      "300": "#e0e0e0",
+      "400": "#bdbdbd",
+      "500": "#9e9e9e",
+      "600": "#757575",
+      "700": "#616161",
+      "800": "#424242",
+      "900": "#212121"
+    },
+    "text": {
+      "primary": "rgba(0, 0, 0, 0.87)",
+      "secondary": "rgba(0, 0, 0, 0.6)",
+      "disabled": "rgba(0, 0, 0, 0.38)"
+    },
+    "divider": "rgba(0, 0, 0, 0.12)",
+    "background": {
+      "default": "#fff",
+      "paper": "#fff"
+    },
+    "common": {
+      "black": "#000000",
+      "white": "#ffffff"
+    }
+  },
+  "shape": {
+    "borderRadius": 200
+  },
+  "spacing": 4,
+  "breakpoints": {
+    "values": {
+      "xs": 0,
+      "sm": 600,
+      "md": 900,
+      "lg": 1200,
+      "xl": 1536
+    }
+  },
+  "transitions": {
+    "duration": {
+      "shortest": 150,
+      "shorter": 200,
+      "short": 250,
+      "standard": 300,
+      "complex": 375,
+      "enteringScreen": 225,
+      "leavingScreen": 195
+    },
+    "easing": {
+      "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+      "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+      "sharp": "cubic-bezier(0.4, 0, 0.6, 1)"
+    }
+  },
+  "zIndex": {
+    "mobileStepper": 1000,
+    "speedDial": 1050,
+    "appBar": 1100,
+    "drawer": 1200,
+    "modal": 1300,
+    "snackbar": 1400,
+    "tooltip": 1500
   }
-};
+});
