@@ -1,7 +1,0 @@
-{
-  "background": { "$value": "{color.grey.50}", "$type": "color" },
-  "foreground": { "$value": "{color.grey.900}", "$type": "color" },
-  "primary": { "$value": "{color.blue.500}", "$type": "color" },
-  "primary-foreground": { "$value": "{color.grey.50}", "$type": "color" },
-  "radius": { "$value": "{borderRadius.md}", "$type": "borderRadius" }
-} 
