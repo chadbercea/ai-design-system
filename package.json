@@ -21,7 +21,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:tokens": "style-dictionary build --config config/style-dictionary.config.mjs",
-    "watch:tokens": "style-dictionary build --config config/style-dictionary.config.mjs --watch"
+    "watch:tokens": "style-dictionary build --config config/style-dictionary.config.mjs --watch",
+    "validate:theme": "node build/mui/validate-theme-mapping.js"
   },
   "eslintConfig": {
     "extends": [
