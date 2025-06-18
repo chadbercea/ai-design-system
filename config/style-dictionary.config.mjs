@@ -185,19 +185,353 @@ StyleDictionary.registerFormat({
   format: function(dictionary) {
     const tokens = dictionary.allTokens.reduce((acc, token) => {
       const path = token.path.join('.');
+      
+      // Handle colors with proper scale mapping
       if (token.type === 'color') {
         acc.colors = acc.colors || {};
-        acc.colors[path] = token.value;
-      } else if (token.type === 'fontSizes') {
+        // Map semantic colors to shadcn's expected format
+        if (path.startsWith('Blue')) {
+          if (path.endsWith('500')) acc.colors.primary = token.value;
+          if (path.endsWith('300')) acc.colors.primaryLight = token.value;
+          if (path.endsWith('700')) acc.colors.primaryDark = token.value;
+        } else if (path.startsWith('Violet')) {
+          if (path.endsWith('500')) acc.colors.secondary = token.value;
+          if (path.endsWith('300')) acc.colors.secondaryLight = token.value;
+          if (path.endsWith('700')) acc.colors.secondaryDark = token.value;
+        } else if (path.startsWith('Red')) {
+          if (path.endsWith('500')) acc.colors.destructive = token.value;
+          if (path.endsWith('300')) acc.colors.destructiveLight = token.value;
+          if (path.endsWith('700')) acc.colors.destructiveDark = token.value;
+        } else if (path.startsWith('Green')) {
+          if (path.endsWith('500')) acc.colors.success = token.value;
+          if (path.endsWith('300')) acc.colors.successLight = token.value;
+          if (path.endsWith('700')) acc.colors.successDark = token.value;
+        } else if (path.startsWith('Grey')) {
+          const shade = path.split('.').pop();
+          acc.colors.gray = acc.colors.gray || {};
+          acc.colors.gray[shade] = token.value;
+        }
+      }
+      
+      // Handle typography
+      if (token.type === 'fontFamilies') {
+        acc.fontFamily = acc.fontFamily || {};
+        if (path === 'product') {
+          acc.fontFamily.sans = token.value;
+          acc.fontFamily.heading = token.value;
+        }
+      }
+      
+      if (token.type === 'fontSizes') {
         acc.fontSize = acc.fontSize || {};
         acc.fontSize[path] = token.value;
-      } else if (token.type === 'spacing') {
+      }
+      
+      if (token.type === 'fontWeights') {
+        acc.fontWeight = acc.fontWeight || {};
+        if (path === 'light') acc.fontWeight.light = parseInt(token.value);
+        if (path === 'regular') acc.fontWeight.normal = parseInt(token.value);
+        if (path === 'semibold') acc.fontWeight.medium = parseInt(token.value);
+        if (path === 'bold') acc.fontWeight.bold = parseInt(token.value);
+      }
+      
+      // Handle spacing
+      if (token.type === 'spacing') {
         acc.spacing = acc.spacing || {};
         acc.spacing[path] = token.value;
       }
+      
+      // Handle border radius
+      if (token.type === 'borderRadius') {
+        acc.borderRadius = acc.borderRadius || {};
+        if (path === 'rounded') acc.borderRadius.default = token.value;
+        if (path === 'sm') acc.borderRadius.sm = token.value;
+        if (path === 'lg') acc.borderRadius.lg = token.value;
+      }
+      
       return acc;
-    }, {});
-    return `export const theme = ${JSON.stringify(tokens, null, 2)};`;
+    }, {
+      // Default values for required shadcn tokens
+      colors: {
+        background: '#ffffff',
+        foreground: '#000000',
+        muted: '#f1f5f9',
+        mutedForeground: '#64748b',
+        accent: '#f8fafc',
+        accentForeground: '#0f172a',
+        popover: '#ffffff',
+        popoverForeground: '#0f172a',
+        border: '#e2e8f0',
+        input: '#e2e8f0',
+        ring: '#94a3b8'
+      }
+    });
+
+    return `import { type Config } from 'tailwindcss';\n\nexport const theme = ${JSON.stringify(tokens, null, 2)} as Config['theme'];`;
+  }
+});
+
+StyleDictionary.registerFormat({
+  name: 'v0/tailwind',
+  format: function(dictionary) {
+    const tokens = dictionary.allTokens.reduce((acc, token) => {
+      const path = token.path.join('.');
+      
+      // Handle colors
+      if (token.type === 'color') {
+        acc.colors = acc.colors || {};
+        if (path.startsWith('Blue')) {
+          if (path.endsWith('500')) acc.colors.primary = token.value;
+          if (path.endsWith('300')) acc.colors.primaryLight = token.value;
+          if (path.endsWith('700')) acc.colors.primaryDark = token.value;
+        } else if (path.startsWith('Violet')) {
+          if (path.endsWith('500')) acc.colors.secondary = token.value;
+          if (path.endsWith('300')) acc.colors.secondaryLight = token.value;
+          if (path.endsWith('700')) acc.colors.secondaryDark = token.value;
+        } else if (path.startsWith('Red')) {
+          if (path.endsWith('500')) acc.colors.destructive = token.value;
+          if (path.endsWith('300')) acc.colors.destructiveLight = token.value;
+          if (path.endsWith('700')) acc.colors.destructiveDark = token.value;
+        } else if (path.startsWith('Green')) {
+          if (path.endsWith('500')) acc.colors.success = token.value;
+          if (path.endsWith('300')) acc.colors.successLight = token.value;
+          if (path.endsWith('700')) acc.colors.successDark = token.value;
+        } else if (path.startsWith('Grey')) {
+          const shade = path.split('.').pop();
+          acc.colors.gray = acc.colors.gray || {};
+          acc.colors.gray[shade] = token.value;
+        }
+      }
+      
+      // Handle typography
+      if (token.type === 'fontFamilies') {
+        acc.fontFamily = acc.fontFamily || {};
+        if (path === 'product') {
+          acc.fontFamily.sans = token.value;
+          acc.fontFamily.heading = token.value;
+        }
+      }
+      
+      if (token.type === 'fontSizes') {
+        acc.fontSize = acc.fontSize || {};
+        acc.fontSize[path] = token.value;
+      }
+      
+      if (token.type === 'fontWeights') {
+        acc.fontWeight = acc.fontWeight || {};
+        if (path === 'light') acc.fontWeight.light = parseInt(token.value);
+        if (path === 'regular') acc.fontWeight.normal = parseInt(token.value);
+        if (path === 'semibold') acc.fontWeight.medium = parseInt(token.value);
+        if (path === 'bold') acc.fontWeight.bold = parseInt(token.value);
+      }
+      
+      // Handle spacing
+      if (token.type === 'spacing') {
+        acc.spacing = acc.spacing || {};
+        acc.spacing[path] = token.value;
+      }
+      
+      // Handle border radius
+      if (token.type === 'borderRadius') {
+        acc.borderRadius = acc.borderRadius || {};
+        if (path === 'rounded') acc.borderRadius.default = token.value;
+        if (path === 'sm') acc.borderRadius.sm = token.value;
+        if (path === 'lg') acc.borderRadius.lg = token.value;
+      }
+      
+      return acc;
+    }, {
+      // Default values for required v0 tokens
+      colors: {
+        background: '#ffffff',
+        foreground: '#000000',
+        muted: '#f1f5f9',
+        mutedForeground: '#64748b',
+        accent: '#f8fafc',
+        accentForeground: '#0f172a',
+        popover: '#ffffff',
+        popoverForeground: '#0f172a',
+        border: '#e2e8f0',
+        input: '#e2e8f0',
+        ring: '#94a3b8'
+      }
+    });
+
+    return `/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
+  theme: ${JSON.stringify(tokens, null, 2)},
+  plugins: [require("tailwindcss-animate")],
+}`;
+  }
+});
+
+StyleDictionary.registerFormat({
+  name: 'v0/globals',
+  format: function(dictionary) {
+    // Helper function to convert hex to OKLCH
+    const hexToOKLCH = (hex) => {
+      // For now, using placeholder OKLCH values that match shadcn's format
+      // TODO: Implement proper hex to OKLCH conversion
+      const oklchMap = {
+        '#ffffff': 'oklch(1 0 0)',
+        '#000000': 'oklch(0.145 0 0)',
+        '#2560ff': 'oklch(0.205 0 0)',
+        '#7d2eff': 'oklch(0.97 0 0)',
+        '#ff5757': 'oklch(0.577 0.245 27.325)',
+        '#e2e8f0': 'oklch(0.922 0 0)',
+        '#94a3b8': 'oklch(0.708 0 0)',
+        '#f1f5f9': 'oklch(0.97 0 0)',
+        '#64748b': 'oklch(0.556 0 0)',
+        '#f8fafc': 'oklch(0.97 0 0)',
+        '#0f172a': 'oklch(0.205 0 0)',
+        // Dark mode colors
+        '#1e2129': 'oklch(0.145 0 0)',
+        '#f9fafb': 'oklch(0.985 0 0)',
+        '#2c333f': 'oklch(0.205 0 0)',
+        '#003db5': 'oklch(0.922 0 0)',
+        '#5700bb': 'oklch(0.269 0 0)',
+        '#8b99b2': 'oklch(0.708 0 0)',
+        '#434c5f': 'oklch(0.556 0 0)',
+        '#e40c2c': 'oklch(0.704 0.191 22.216)'
+      };
+      return oklchMap[hex] || hex;
+    };
+
+    // Collect all font tokens
+    const fontTokens = {};
+    const fontSizeTokens = {};
+    const fontWeightTokens = {};
+    const letterSpacingTokens = {};
+    const lineHeightTokens = {};
+    const colorTokens = {};
+
+    dictionary.allTokens.forEach(token => {
+      const path = token.path.join('.');
+      if (token.type === 'fontFamilies') fontTokens[path] = token.value;
+      if (token.type === 'fontSizes') fontSizeTokens[path] = token.value;
+      if (token.type === 'fontWeights') fontWeightTokens[path] = token.value;
+      if (token.type === 'letterSpacing') letterSpacingTokens[path] = token.value;
+      if (token.type === 'lineHeights') lineHeightTokens[path] = token.value;
+      if (token.type === 'color') colorTokens[path] = hexToOKLCH(token.value);
+    });
+
+    // Compose CSS variables for fonts
+    let fontVars = '';
+    Object.entries(fontTokens).forEach(([k, v]) => {
+      fontVars += `  --font-${k}: ${v};\n`;
+    });
+    Object.entries(fontSizeTokens).forEach(([k, v]) => {
+      fontVars += `  --font-size-${k}: ${v};\n`;
+    });
+    Object.entries(fontWeightTokens).forEach(([k, v]) => {
+      fontVars += `  --font-weight-${k}: ${v};\n`;
+    });
+    Object.entries(letterSpacingTokens).forEach(([k, v]) => {
+      fontVars += `  --letter-spacing-${k}: ${v};\n`;
+    });
+    Object.entries(lineHeightTokens).forEach(([k, v]) => {
+      fontVars += `  --line-height-${k}: ${v};\n`;
+    });
+
+    // Compose CSS variables for color scale (e.g., --blue-50, --blue-100, ...)
+    let colorScaleVars = '';
+    Object.entries(colorTokens).forEach(([k, v]) => {
+      colorScaleVars += `  --${k.replace(/\./g, '-')}: ${v};\n`;
+    });
+
+    // Compose the final CSS
+    return `@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+${fontVars}${colorScaleVars}    --radius: 0.625rem;
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --destructive-foreground: oklch(0.985 0 0);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+  }
+ 
+  .dark {
+${fontVars}${colorScaleVars}    --radius: 0.625rem;
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.205 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.205 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --destructive-foreground: oklch(0.985 0 0);
+    --border: oklch(0.205 0 0);
+    --input: oklch(0.205 0 0);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.922 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.205 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(0.205 0 0);
+    --sidebar-ring: oklch(0.556 0 0);
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}`;
   }
 });
 
@@ -253,6 +587,28 @@ export default {
         {
           destination: 'shadcn-theme.js',
           format: 'shadcn/theme',
+          options: {
+            showFileHeader: true,
+            outputReferences: true
+          }
+        }
+      ]
+    },
+    v0: {
+      transformGroup: 'tokens-studio',
+      buildPath: 'build/v0/',
+      files: [
+        {
+          destination: 'tailwind.config.js',
+          format: 'v0/tailwind',
+          options: {
+            showFileHeader: true,
+            outputReferences: true
+          }
+        },
+        {
+          destination: 'globals.css',
+          format: 'v0/globals',
           options: {
             showFileHeader: true,
             outputReferences: true
