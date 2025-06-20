@@ -32,7 +32,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:tokens": "style-dictionary build --config config/style-dictionary.config.mjs && node scripts/generate-shadcn-fonts.js && node build/mui/validate-theme-mapping.js",
+    "build:tokens": "style-dictionary build --config config/style-dictionary.config.mjs && node scripts/generate-shadcn-fonts.js && node scripts/generate-shadcn-globals.js && node build/mui/validate-theme-mapping.js",
     "watch:tokens": "style-dictionary build --config config/style-dictionary.config.mjs --watch",
     "validate:theme": "node build/mui/validate-theme-mapping.js",
     "storybook": "storybook dev -p 6006",

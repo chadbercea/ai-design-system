@@ -155,8 +155,9 @@ ${otherVars}
 }`;
 
 // Tailwind config (reference CSS vars)
-const tailwindConfig = `/** @type {import('tailwindcss').Config} */
-module.exports = {
+const tailwindConfig = `import type { Config } from 'tailwindcss'
+
+const config: Config = {
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -195,22 +196,43 @@ module.exports = {
         },
       },
       borderRadius: {
+        DEFAULT: 'var(--border-radius)',
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['var(--font-product)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-marketing)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-code)', 'monospace'],
+        sans: ['var(--font-family-sans)'],
+        heading: ['var(--font-family-heading)'],
+        mono: ['var(--font-family-mono)'],
+      },
+      fontSize: {
+        '10': 'calc(var(--font-10) * 1px)',
+        '12': 'calc(var(--font-12) * 1px)',
+        '14': 'calc(var(--font-14) * 1px)',
+        '16': 'calc(var(--font-16) * 1px)',
+        '18': 'calc(var(--font-18) * 1px)',
+        '21': 'calc(var(--font-21) * 1px)',
+        '24': 'calc(var(--font-24) * 1px)',
+        '32': 'calc(var(--font-32) * 1px)',
+        '40': 'calc(var(--font-40) * 1px)',
+        '48': 'calc(var(--font-48) * 1px)',
+      },
+      fontWeight: {
+        'light': 'var(--font-light)',
+        'regular': 'var(--font-regular)',
+        'semibold': 'var(--font-semibold)',
+        'bold': 'var(--font-bold)',
+        'extrabold': 'var(--font-extrabold)',
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
-`;
+}
+
+export default config`;
 
 fs.writeFileSync(path.join(__dirname, '../build/v0/globals.css'), globalsCss);
-fs.writeFileSync(path.join(__dirname, '../build/v0/tailwind.config.js'), tailwindConfig);
+fs.writeFileSync(path.join(__dirname, '../build/v0/tailwind.config.ts'), tailwindConfig);
 
-console.log('✅ globals.css and tailwind.config.js generated successfully!'); 
+console.log('✅ globals.css and tailwind.config.ts generated successfully!'); 

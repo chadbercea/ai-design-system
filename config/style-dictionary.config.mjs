@@ -303,26 +303,35 @@ StyleDictionary.registerFormat({
         }
       }
       
-      // Handle typography
+      // Handle typography - Fix font family mapping
       if (token.type === 'fontFamilies') {
         acc.fontFamily = acc.fontFamily || {};
         if (path === 'product') {
-          acc.fontFamily.sans = token.value;
-          acc.fontFamily.heading = token.value;
+          acc.fontFamily.sans = ['var(--font-family-sans)'];
+          acc.fontFamily.heading = ['var(--font-family-heading)'];
+        }
+        if (path === 'marketing') {
+          acc.fontFamily.heading = ['var(--font-family-heading)'];
+        }
+        if (path === 'code') {
+          acc.fontFamily.mono = ['var(--font-family-mono)'];
         }
       }
       
+      // Handle font sizes with calc() for proper pixel values
       if (token.type === 'fontSizes') {
         acc.fontSize = acc.fontSize || {};
-        acc.fontSize[path] = token.value;
+        acc.fontSize[path] = `calc(var(--font-${path}) * 1px)`;
       }
       
+      // Handle font weights
       if (token.type === 'fontWeights') {
         acc.fontWeight = acc.fontWeight || {};
-        if (path === 'light') acc.fontWeight.light = parseInt(token.value);
-        if (path === 'regular') acc.fontWeight.normal = parseInt(token.value);
-        if (path === 'semibold') acc.fontWeight.medium = parseInt(token.value);
-        if (path === 'bold') acc.fontWeight.bold = parseInt(token.value);
+        if (path === 'light') acc.fontWeight.light = 'var(--font-light)';
+        if (path === 'regular') acc.fontWeight.regular = 'var(--font-regular)';
+        if (path === 'semibold') acc.fontWeight.semibold = 'var(--font-semibold)';
+        if (path === 'bold') acc.fontWeight.bold = 'var(--font-bold)';
+        if (path === 'extrabold') acc.fontWeight.extrabold = 'var(--font-extrabold)';
       }
       
       // Handle spacing
@@ -331,10 +340,10 @@ StyleDictionary.registerFormat({
         acc.spacing[path] = token.value;
       }
       
-      // Handle border radius
+      // Handle border radius with DDS token integration
       if (token.type === 'borderRadius') {
         acc.borderRadius = acc.borderRadius || {};
-        if (path === 'rounded') acc.borderRadius.default = token.value;
+        if (path === 'rounded') acc.borderRadius.DEFAULT = 'var(--border-radius)';
         if (path === 'sm') acc.borderRadius.sm = token.value;
         if (path === 'lg') acc.borderRadius.lg = token.value;
       }
@@ -343,22 +352,61 @@ StyleDictionary.registerFormat({
     }, {
       // Default values for required v0 tokens
       colors: {
-        background: '#ffffff',
-        foreground: '#000000',
-        muted: '#f1f5f9',
-        mutedForeground: '#64748b',
-        accent: '#f8fafc',
-        accentForeground: '#0f172a',
-        popover: '#ffffff',
-        popoverForeground: '#0f172a',
-        border: '#e2e8f0',
-        input: '#e2e8f0',
-        ring: '#94a3b8'
-      }
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))" },
+        secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
+        destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
+        muted: { DEFAULT: "hsl(var(--muted))", foreground: "hsl(var(--muted-foreground))" },
+        accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
+        popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
+        card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
+      },
+      borderRadius: {
+        DEFAULT: 'var(--border-radius)',
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ['var(--font-family-sans)'],
+        heading: ['var(--font-family-heading)'],
+        mono: ['var(--font-family-mono)'],
+      },
+      fontSize: {
+        '10': 'calc(var(--font-10) * 1px)',
+        '12': 'calc(var(--font-12) * 1px)',
+        '14': 'calc(var(--font-14) * 1px)',
+        '16': 'calc(var(--font-16) * 1px)',
+        '18': 'calc(var(--font-18) * 1px)',
+        '21': 'calc(var(--font-21) * 1px)',
+        '24': 'calc(var(--font-24) * 1px)',
+        '32': 'calc(var(--font-32) * 1px)',
+        '40': 'calc(var(--font-40) * 1px)',
+        '48': 'calc(var(--font-48) * 1px)',
+      },
+      fontWeight: {
+        'light': 'var(--font-light)',
+        'regular': 'var(--font-regular)',
+        'semibold': 'var(--font-semibold)',
+        'bold': 'var(--font-bold)',
+        'extrabold': 'var(--font-extrabold)',
+      },
     });
 
-    return `/** @type {import('tailwindcss').Config} */
-module.exports = {
+    return `import type { Config } from 'tailwindcss'
+
+const config: Config = {
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -366,9 +414,20 @@ module.exports = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
-  theme: ${JSON.stringify(tokens, null, 2)},
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: ${JSON.stringify(tokens, null, 2)},
+  },
   plugins: [require("tailwindcss-animate")],
-}`;
+}
+
+export default config`;
   }
 });
 
@@ -599,7 +658,7 @@ export default {
       buildPath: 'build/v0/',
       files: [
         {
-          destination: 'tailwind.config.js',
+          destination: 'tailwind.config.ts',
           format: 'v0/tailwind',
           options: {
             showFileHeader: true,
