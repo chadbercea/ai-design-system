@@ -101,9 +101,9 @@
   --sidebar-accent-foreground: hsl(220.7 17.3% 31.8%);
   --sidebar-border: hsl(216.7 19.6% 82%);
   --sidebar-ring: hsl(219.7 84.6% 72%);
-    --font-family-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-family-heading: Poppins, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-family-mono: Roboto Mono, ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    --font-family-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-family-heading: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-family-mono: "Roboto Mono", ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
     --border-width: 1px;
     --border-radius: 8px;
     --font-10: 10;
@@ -173,9 +173,9 @@
   --sidebar-accent-foreground: hsl(220.7 17.3% 31.8%);
   --sidebar-border: hsl(216.7 19.6% 82%);
   --sidebar-ring: hsl(219.7 84.6% 72%);
-    --font-family-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-family-heading: Poppins, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-family-mono: Roboto Mono, ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    --font-family-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-family-heading: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-family-mono: "Roboto Mono", ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
     --border-width: 1px;
     --border-radius: 8px;
     --font-10: 10;

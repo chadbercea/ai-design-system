@@ -221,9 +221,9 @@ function generateFontVariables(tokens) {
   const product = tokens['product']?.$value || 'Inter';
   const code = tokens['code']?.$value || 'Roboto Mono';
   
-  return `    --font-family-sans: ${product}, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-family-heading: ${marketing}, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-family-mono: ${code}, ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;`;
+  return `    --font-family-sans: "${product}", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-family-heading: "${marketing}", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-family-mono: "${code}", ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;`;
 }
 
 function generateBorderVariables(tokens) {
