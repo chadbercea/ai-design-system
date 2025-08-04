@@ -1,5 +1,3 @@
-import { type Config } from 'tailwindcss';
-
 export const theme = {
   "colors": {
     "background": "#ffffff",
@@ -67,4 +65,4 @@ export const theme = {
   "spacing": {
     "xs": "4px"
   }
-} as Config['theme'];
+};

@@ -267,7 +267,7 @@ StyleDictionary.registerFormat({
       }
     });
 
-    return `import { type Config } from 'tailwindcss';\n\nexport const theme = ${JSON.stringify(tokens, null, 2)} as Config['theme'];`;
+    return `export const theme = ${JSON.stringify(tokens, null, 2)};`;
   }
 });
 
