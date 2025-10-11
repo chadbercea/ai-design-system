@@ -57,18 +57,19 @@ const MUISection = ({ useDDS }) => {
   );
 };
 
-// Tailwind Section Component (styled with inline styles for now)
+// Tailwind Section Component (styled with inline styles)
 const TailwindSection = ({ useDDS }) => {
   
   const buttonStyle = useDDS ? {
     backgroundColor: tailwindTheme.colors.primary,
     color: '#ffffff',
-    padding: '8px 16px',
+    padding: tailwindTheme.spacing[2] + ' ' + tailwindTheme.spacing[4],
     borderRadius: '4px',
     border: 'none',
     cursor: 'pointer',
     marginRight: '8px',
-    fontSize: tailwindTheme.fontSize.base
+    fontSize: tailwindTheme.fontSize.base,
+    fontWeight: tailwindTheme.fontWeight.medium
   } : {
     backgroundColor: '#3b82f6',
     color: '#ffffff',
@@ -76,26 +77,88 @@ const TailwindSection = ({ useDDS }) => {
     borderRadius: '4px',
     border: 'none',
     cursor: 'pointer',
-    marginRight: '8px'
+    marginRight: '8px',
+    fontSize: '14px',
+    fontWeight: '500'
   };
   
   const secondaryButtonStyle = useDDS ? {
     backgroundColor: tailwindTheme.colors.secondary,
     color: '#ffffff',
-    padding: '8px 16px',
+    padding: tailwindTheme.spacing[2] + ' ' + tailwindTheme.spacing[4],
     borderRadius: '4px',
     border: 'none',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    fontSize: tailwindTheme.fontSize.base,
+    fontWeight: tailwindTheme.fontWeight.medium
   } : {
     backgroundColor: '#6b7280',
     color: '#ffffff',
     padding: '8px 16px',
     borderRadius: '4px',
     border: 'none',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    fontSize: '14px',
+    fontWeight: '500'
   };
   
-  const cardStyle = {
+  const h3Style = useDDS ? {
+    marginTop: 0,
+    fontSize: tailwindTheme.fontSize['2xl'],
+    fontWeight: tailwindTheme.fontWeight.semibold
+  } : {
+    marginTop: 0,
+    fontSize: '24px',
+    fontWeight: '600'
+  };
+  
+  const h4Style = useDDS ? {
+    marginTop: 0,
+    fontSize: tailwindTheme.fontSize.xl,
+    fontWeight: tailwindTheme.fontWeight.semibold
+  } : {
+    marginTop: 0,
+    fontSize: '20px',
+    fontWeight: '600'
+  };
+  
+  const h5Style = useDDS ? {
+    marginTop: 0,
+    fontSize: tailwindTheme.fontSize.lg,
+    fontWeight: tailwindTheme.fontWeight.medium
+  } : {
+    marginTop: 0,
+    fontSize: '18px',
+    fontWeight: '500'
+  };
+  
+  const bodyStyle = useDDS ? {
+    fontSize: tailwindTheme.fontSize.md,
+    fontWeight: tailwindTheme.fontWeight.normal
+  } : {
+    fontSize: '16px',
+    fontWeight: '400'
+  };
+  
+  const captionStyle = useDDS ? {
+    fontSize: tailwindTheme.fontSize.sm,
+    color: tailwindTheme.colors.grey[600],
+    margin: 0,
+    fontWeight: tailwindTheme.fontWeight.normal
+  } : {
+    fontSize: '12px',
+    color: '#6b7280',
+    margin: 0,
+    fontWeight: '400'
+  };
+  
+  const cardStyle = useDDS ? {
+    border: `1px solid ${tailwindTheme.colors.grey[200]}`,
+    borderRadius: '8px',
+    padding: tailwindTheme.spacing[4],
+    marginBottom: tailwindTheme.spacing[4],
+    backgroundColor: tailwindTheme.colors.white
+  } : {
     border: '1px solid #e5e7eb',
     borderRadius: '8px',
     padding: '16px',
@@ -105,7 +168,7 @@ const TailwindSection = ({ useDDS }) => {
   
   return (
     <div style={{ padding: '20px', border: '1px solid #e0e0e0' }}>
-      <h3 style={{ marginTop: 0 }}>Tailwind Components</h3>
+      <h3 style={h3Style}>Tailwind Components</h3>
       <p style={{ fontSize: '14px', color: '#666' }}>
         {useDDS ? 'Using DDS Theme' : 'Stock Tailwind Theme'}
       </p>
@@ -120,16 +183,16 @@ const TailwindSection = ({ useDDS }) => {
       </div>
       
       <div style={cardStyle}>
-        <h4 style={{ marginTop: 0, fontSize: '20px' }}>Card Title</h4>
-        <p style={{ fontSize: '14px', color: '#6b7280', margin: 0 }}>
+        <h4 style={h4Style}>Card Title</h4>
+        <p style={{ ...bodyStyle, color: useDDS ? tailwindTheme.colors.grey[700] : '#6b7280', margin: 0 }}>
           This card demonstrates how Tailwind components look with {useDDS ? 'your design system' : 'stock Tailwind defaults'}.
         </p>
       </div>
       
       <div>
-        <h5 style={{ marginTop: 0 }}>Typography</h5>
-        <p style={{ marginBottom: '8px' }}>Body text example</p>
-        <p style={{ fontSize: '12px', color: '#6b7280', margin: 0 }}>
+        <h5 style={h5Style}>Typography</h5>
+        <p style={{ ...bodyStyle, marginBottom: '8px' }}>Body text example</p>
+        <p style={captionStyle}>
           Caption text
         </p>
       </div>
@@ -137,17 +200,18 @@ const TailwindSection = ({ useDDS }) => {
   );
 };
 
-// Shadcn Section Component (placeholder with similar structure)
+// Shadcn Section Component (using DDS tokens)
 const ShadcnSection = ({ useDDS }) => {
   const buttonStyle = useDDS ? {
-    backgroundColor: '#2560ff',
-    color: '#ffffff',
-    padding: '8px 16px',
+    backgroundColor: tailwindTheme.colors.primary,
+    color: tailwindTheme.colors.white,
+    padding: tailwindTheme.spacing[2] + ' ' + tailwindTheme.spacing[4],
     borderRadius: '6px',
     border: 'none',
     cursor: 'pointer',
     marginRight: '8px',
-    fontWeight: '500'
+    fontSize: tailwindTheme.fontSize.base,
+    fontWeight: tailwindTheme.fontWeight.medium
   } : {
     backgroundColor: '#09090b',
     color: '#ffffff',
@@ -155,26 +219,88 @@ const ShadcnSection = ({ useDDS }) => {
     borderRadius: '6px',
     border: 'none',
     cursor: 'pointer',
-    marginRight: '8px'
+    marginRight: '8px',
+    fontSize: '14px',
+    fontWeight: '500'
   };
   
   const secondaryButtonStyle = useDDS ? {
-    backgroundColor: '#6c7e9d',
-    color: '#ffffff',
-    padding: '8px 16px',
+    backgroundColor: tailwindTheme.colors.secondary,
+    color: tailwindTheme.colors.white,
+    padding: tailwindTheme.spacing[2] + ' ' + tailwindTheme.spacing[4],
     borderRadius: '6px',
     border: 'none',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    fontSize: tailwindTheme.fontSize.base,
+    fontWeight: tailwindTheme.fontWeight.medium
   } : {
     backgroundColor: '#71717a',
     color: '#ffffff',
     padding: '8px 16px',
     borderRadius: '6px',
     border: 'none',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    fontSize: '14px',
+    fontWeight: '500'
   };
   
-  const cardStyle = {
+  const h3Style = useDDS ? {
+    marginTop: 0,
+    fontSize: tailwindTheme.fontSize['2xl'],
+    fontWeight: tailwindTheme.fontWeight.semibold
+  } : {
+    marginTop: 0,
+    fontSize: '24px',
+    fontWeight: '600'
+  };
+  
+  const h4Style = useDDS ? {
+    marginTop: 0,
+    fontSize: tailwindTheme.fontSize.xl,
+    fontWeight: tailwindTheme.fontWeight.semibold
+  } : {
+    marginTop: 0,
+    fontSize: '20px',
+    fontWeight: '600'
+  };
+  
+  const h5Style = useDDS ? {
+    marginTop: 0,
+    fontSize: tailwindTheme.fontSize.lg,
+    fontWeight: tailwindTheme.fontWeight.medium
+  } : {
+    marginTop: 0,
+    fontSize: '18px',
+    fontWeight: '500'
+  };
+  
+  const bodyStyle = useDDS ? {
+    fontSize: tailwindTheme.fontSize.md,
+    fontWeight: tailwindTheme.fontWeight.normal
+  } : {
+    fontSize: '16px',
+    fontWeight: '400'
+  };
+  
+  const captionStyle = useDDS ? {
+    fontSize: tailwindTheme.fontSize.sm,
+    color: tailwindTheme.colors.grey[600],
+    margin: 0,
+    fontWeight: tailwindTheme.fontWeight.normal
+  } : {
+    fontSize: '12px',
+    color: '#71717a',
+    margin: 0,
+    fontWeight: '400'
+  };
+  
+  const cardStyle = useDDS ? {
+    border: `1px solid ${tailwindTheme.colors.grey[200]}`,
+    borderRadius: '8px',
+    padding: tailwindTheme.spacing[4],
+    marginBottom: tailwindTheme.spacing[4],
+    backgroundColor: tailwindTheme.colors.white
+  } : {
     border: '1px solid #e4e4e7',
     borderRadius: '8px',
     padding: '16px',
@@ -184,7 +310,7 @@ const ShadcnSection = ({ useDDS }) => {
   
   return (
     <div style={{ padding: '20px', border: '1px solid #e0e0e0' }}>
-      <h3 style={{ marginTop: 0 }}>Shadcn Components</h3>
+      <h3 style={h3Style}>Shadcn Components</h3>
       <p style={{ fontSize: '14px', color: '#666' }}>
         {useDDS ? 'Using DDS Theme' : 'Stock Shadcn Theme'}
       </p>
@@ -199,16 +325,16 @@ const ShadcnSection = ({ useDDS }) => {
       </div>
       
       <div style={cardStyle}>
-        <h4 style={{ marginTop: 0, fontSize: '20px' }}>Card Title</h4>
-        <p style={{ fontSize: '14px', color: '#71717a', margin: 0 }}>
+        <h4 style={h4Style}>Card Title</h4>
+        <p style={{ ...bodyStyle, color: useDDS ? tailwindTheme.colors.grey[700] : '#71717a', margin: 0 }}>
           This card demonstrates how Shadcn components look with {useDDS ? 'your design system' : 'stock Shadcn defaults'}.
         </p>
       </div>
       
       <div>
-        <h5 style={{ marginTop: 0 }}>Typography</h5>
-        <p style={{ marginBottom: '8px' }}>Body text example</p>
-        <p style={{ fontSize: '12px', color: '#71717a', margin: 0 }}>
+        <h5 style={h5Style}>Typography</h5>
+        <p style={{ ...bodyStyle, marginBottom: '8px' }}>Body text example</p>
+        <p style={captionStyle}>
           Caption text
         </p>
       </div>
