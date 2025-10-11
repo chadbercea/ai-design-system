@@ -2,6 +2,7 @@
   "name": "ai-design-system",
   "version": "0.1.0",
   "private": true,
+  "description": "Design token transformation pipeline - Figma → Style Dictionary → Framework Themes",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
@@ -12,20 +13,8 @@
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "^9.0.10",
-    "@storybook/addon-onboarding": "^9.0.10",
-    "@storybook/builder-webpack5": "^9.0.10",
-    "@storybook/preset-create-react-app": "^9.0.10",
-    "@storybook/react": "^9.0.10",
-    "@storybook/react-webpack5": "^9.0.10",
     "@tokens-studio/sd-transforms": "^2.0.0",
-    "eslint-plugin-storybook": "^9.0.10",
-    "prop-types": "^15.8.1",
-    "react-docgen-typescript": "^2.4.0",
-    "storybook": "^9.0.10",
-    "style-dictionary": "^5.0.0",
-    "ts-loader": "^9.5.2",
-    "webpack": "^5.99.9"
+    "style-dictionary": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,15 +23,12 @@
     "eject": "react-scripts eject",
     "build:tokens": "style-dictionary build --config config/style-dictionary.config.mjs && node scripts/generate-shadcn-fonts.js && node scripts/generate-shadcn-globals.js && node build/mui/validate-theme-mapping.js",
     "watch:tokens": "style-dictionary build --config config/style-dictionary.config.mjs --watch",
-    "validate:theme": "node build/mui/validate-theme-mapping.js",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "validate:theme": "node build/mui/validate-theme-mapping.js"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest",
-      "plugin:storybook/recommended"
+      "react-app/jest"
     ]
   },
   "browserslist": {
