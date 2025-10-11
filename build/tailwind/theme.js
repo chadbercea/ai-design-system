@@ -1,4 +1,4 @@
-module.exports = {
+export const theme = {
   "colors": {
     "white": "#ffffff",
     "black": "#000000",
@@ -158,3 +158,5 @@ module.exports = {
     "24": "6rem"
   }
 };
+
+export default theme;

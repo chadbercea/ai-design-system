@@ -256,7 +256,9 @@ StyleDictionary.registerFormat({
       spacing
     };
     
-    return `module.exports = ${JSON.stringify(theme, null, 2)};
+        return `export const theme = ${JSON.stringify(theme, null, 2)};
+
+export default theme;
 `;
   }
 });
