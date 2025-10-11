@@ -672,7 +672,6 @@
   },
   "Align": {
     "left": {
-      "descriptoin": "Align text left.",
       "$type": "text",
       "$value": "left",
       "$description": "Alight text left."
