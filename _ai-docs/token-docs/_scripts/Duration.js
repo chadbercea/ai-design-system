@@ -1,1 +1,0 @@
-// Canonical Duration primitives will be documented or exported here. 

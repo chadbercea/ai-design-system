@@ -1,1 +1,0 @@
-// Canonical Sizing primitives will be documented or exported here. 

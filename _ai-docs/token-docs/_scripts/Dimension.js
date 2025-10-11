@@ -1,1 +1,0 @@
-// Canonical Dimension primitives will be documented or exported here. 

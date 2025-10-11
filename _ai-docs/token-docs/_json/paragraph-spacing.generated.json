@@ -1,9 +1,0 @@
-{
-  "paragraphSpacing": {
-    "0": {
-      "$type": "paragraphSpacing",
-      "$value": "0",
-      "$description": "Paragraph spacing 0"
-    }
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "lineHeights": {
-    "100": {
-      "$type": "lineHeights",
-      "$value": "100%",
-      "$description": "Line height 100%"
-    }
-  }
-}
