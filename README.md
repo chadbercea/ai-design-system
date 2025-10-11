@@ -25,8 +25,18 @@ Running `npm run build:tokens` generates tokens in multiple formats:
 - **`build/css/tokens.css`** - CSS custom properties
 - **`build/js/tokens.mjs`** - JavaScript/CommonJS module
 - **`build/json/tokens.json`** - JSON format (for inspection/debugging)
-- **`build/mui/theme.js`** - Tokens for Material-UI consumption
-- **`build/tailwind/theme.js`** - Tokens for Tailwind CSS consumption
+- **`build/mui/theme.js`** - Material-UI theme configuration
+- **`build/tailwind/theme.js`** - Tailwind CSS configuration
+- **`build/shadcn/variables.css`** - Shadcn CSS variables (HSL format)
+- **`build/shadcn/tailwind.config.js`** - Shadcn + Tailwind hybrid config
+
+## Live Demo
+
+See the tokens in action: `npm run demo`
+
+The demo shows side-by-side comparisons of stock components vs. DDS-themed components for MUI, Tailwind, and Shadcn. Change a token value and watch all frameworks update together.
+
+See `demo/README.md` for full testing instructions.
 
 ## Quick Start
 
@@ -40,9 +50,15 @@ Running `npm run build:tokens` generates tokens in multiple formats:
    npm run build:tokens
    ```
 
-3. Watch for changes (auto-rebuild):
+3. View the demo:
    ```bash
-   npm watch:tokens
+   npm run demo
+   ```
+   Opens a browser showing all framework themes in action with before/after comparisons.
+
+4. Watch for changes (auto-rebuild):
+   ```bash
+   npm run watch:tokens
    ```
 
 ## Token Format

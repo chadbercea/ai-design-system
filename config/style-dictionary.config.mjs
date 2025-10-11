@@ -11,206 +11,149 @@ StyleDictionary.registerFormat({
     const tokens = dictionary.allTokens;
     
     // Helper to find token by path
-    const findToken = (path) => tokens.find(t => t.path.join('.') === path)?.$value;
-    
-    // Helper to find token by name
-    const findByName = (name) => tokens.find(t => t.path[0] === name)?.$value;
+    const findToken = (path) => tokens.find(t => t.path.join('.') === path)?.value;
     
     // Build palette
     const palette = {
       mode: 'light',
       primary: {
-        main: findToken('Blue.500'),
-        light: findToken('Blue.300'),
-        dark: findToken('Blue.700'),
-        contrastText: findToken('White.100%')
+        main: findToken('Blue.500') || '#2560ff',
+        light: findToken('Blue.300') || '#7ba4f4',
+        dark: findToken('Blue.700') || '#0843be',
+        contrastText: findToken('White.100%') || '#ffffff'
       },
       secondary: {
-        main: findToken('Grey.500'),
-        light: findToken('Grey.300'),
-        dark: findToken('Grey.700'),
-        contrastText: findToken('White.100%')
+        main: findToken('Grey.500') || '#6c7e9d',
+        light: findToken('Grey.300') || '#a9b4c6',
+        dark: findToken('Grey.700') || '#3c4a5d',
+        contrastText: findToken('White.100%') || '#ffffff'
       },
       error: {
-        main: findToken('Red.500'),
-        light: findToken('Red.300'),
-        dark: findToken('Red.700'),
-        contrastText: findToken('White.100%')
+        main: findToken('Red.500') || '#d32f2f',
+        light: findToken('Red.300') || '#e57373',
+        dark: findToken('Red.700') || '#c62828',
+        contrastText: findToken('White.100%') || '#ffffff'
       },
       warning: {
-        main: findToken('Orange.500'),
-        light: findToken('Orange.300'),
-        dark: findToken('Orange.700'),
-        contrastText: findToken('White.100%')
+        main: findToken('Orange.500') || '#ed6c02',
+        light: findToken('Orange.300') || '#ff9800',
+        dark: findToken('Orange.700') || '#e65100',
+        contrastText: findToken('White.100%') || '#ffffff'
       },
       info: {
-        main: findToken('Blue.500'),
-        light: findToken('Blue.300'),
-        dark: findToken('Blue.700'),
-        contrastText: findToken('White.100%')
+        main: findToken('Blue.500') || '#0288d1',
+        light: findToken('Blue.300') || '#03a9f4',
+        dark: findToken('Blue.700') || '#01579b',
+        contrastText: findToken('White.100%') || '#ffffff'
       },
       success: {
-        main: findToken('Green.500'),
-        light: findToken('Green.300'),
-        dark: findToken('Green.700'),
-        contrastText: findToken('White.100%')
+        main: findToken('Green.500') || '#2e7d32',
+        light: findToken('Green.300') || '#66bb6a',
+        dark: findToken('Green.700') || '#1b5e20',
+        contrastText: findToken('White.100%') || '#ffffff'
       },
       grey: {
-        50: findToken('Grey.50'),
-        100: findToken('Grey.100'),
-        200: findToken('Grey.200'),
-        300: findToken('Grey.300'),
-        400: findToken('Grey.400'),
-        500: findToken('Grey.500'),
-        600: findToken('Grey.600'),
-        700: findToken('Grey.700'),
-        800: findToken('Grey.800'),
-        900: findToken('Grey.900')
+        50: findToken('Grey.50') || '#f9fafb',
+        100: findToken('Grey.100') || '#e7eaef',
+        200: findToken('Grey.200') || '#c8cfda',
+        300: findToken('Grey.300') || '#a9b4c6',
+        400: findToken('Grey.400') || '#8b99b2',
+        500: findToken('Grey.500') || '#6c7e9d',
+        600: findToken('Grey.600') || '#566581',
+        700: findToken('Grey.700') || '#3c4a5d',
+        800: findToken('Grey.800') || '#2c3747',
+        900: findToken('Grey.900') || '#1c2532'
       },
       text: {
-        primary: findToken('Black.100%'),
-        secondary: findToken('Black.64%'),
-        disabled: findToken('Black.40%')
+        primary: findToken('Black.100%') || 'rgba(0, 0, 0, 0.87)',
+        secondary: findToken('Black.64%') || 'rgba(0, 0, 0, 0.6)',
+        disabled: findToken('Black.40%') || 'rgba(0, 0, 0, 0.38)'
       },
-      divider: findToken('Black.12%'),
+      divider: findToken('Black.12%') || 'rgba(0, 0, 0, 0.12)',
       background: {
-        default: findToken('White.100%'),
-        paper: findToken('White.100%')
+        default: findToken('White.100%') || '#ffffff',
+        paper: findToken('White.100%') || '#ffffff'
       },
       common: {
-        black: findToken('Black.100%'),
-        white: findToken('White.100%')
+        black: findToken('Black.100%') || '#000000',
+        white: findToken('White.100%') || '#ffffff'
       }
     };
     
-    // Get font family from 'product' token
-    const productFont = findByName('product') || 'Inter';
-    
     // Build typography
     const typography = {
-      fontFamily: `"${productFont}", "Roboto", "Helvetica", "Arial", sans-serif`,
-      fontSize: parseInt(findByName('14')),
-      fontWeightLight: parseInt(findByName('light')),
-      fontWeightRegular: parseInt(findByName('regular')),
-      fontWeightMedium: parseInt(findByName('semibold')),
-      fontWeightBold: parseInt(findByName('bold')),
+      fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+      fontSize: parseInt(findToken('14')) || 14,
+      fontWeightLight: parseInt(findToken('light')) || 300,
+      fontWeightRegular: parseInt(findToken('regular')) || 400,
+      fontWeightMedium: parseInt(findToken('semibold')) || 500,
+      fontWeightBold: parseInt(findToken('bold')) || 700,
       h1: {
-        fontSize: findByName('48') + 'px',
-        fontWeight: parseInt(findByName('bold')),
-        lineHeight: 1.2,
-        letterSpacing: findByName('0') || '0%'
+        fontSize: findToken('48') || '48px',
+        fontWeight: parseInt(findToken('bold')) || 700,
+        lineHeight: 1.2
       },
       h2: {
-        fontSize: findByName('40') + 'px',
-        fontWeight: parseInt(findByName('bold')),
-        lineHeight: 1.2,
-        letterSpacing: findByName('0') || '0%'
+        fontSize: findToken('40') || '40px',
+        fontWeight: parseInt(findToken('bold')) || 700,
+        lineHeight: 1.2
       },
       h3: {
-        fontSize: findByName('32') + 'px',
-        fontWeight: parseInt(findByName('semibold')),
-        lineHeight: 1.3,
-        letterSpacing: findByName('0') || '0%'
+        fontSize: findToken('32') || '32px',
+        fontWeight: parseInt(findToken('semibold')) || 600,
+        lineHeight: 1.3
       },
       h4: {
-        fontSize: findByName('24') + 'px',
-        fontWeight: parseInt(findByName('semibold')),
-        lineHeight: 1.4,
-        letterSpacing: findByName('0') || '0%'
+        fontSize: findToken('24') || '24px',
+        fontWeight: parseInt(findToken('semibold')) || 600,
+        lineHeight: 1.4
       },
       h5: {
-        fontSize: findByName('21') + 'px',
-        fontWeight: parseInt(findByName('semibold')),
-        lineHeight: 1.4,
-        letterSpacing: findByName('0') || '0%'
+        fontSize: findToken('21') || '21px',
+        fontWeight: parseInt(findToken('semibold')) || 600,
+        lineHeight: 1.4
       },
       h6: {
-        fontSize: findByName('18') + 'px',
-        fontWeight: parseInt(findByName('semibold')),
-        lineHeight: 1.4,
-        letterSpacing: findByName('0') || '0%'
+        fontSize: findToken('18') || '18px',
+        fontWeight: parseInt(findToken('semibold')) || 600,
+        lineHeight: 1.4
       },
       body1: {
-        fontSize: findByName('16') + 'px',
-        fontWeight: parseInt(findByName('regular')),
-        lineHeight: 1.5,
-        letterSpacing: findByName('0') || '0%'
+        fontSize: findToken('16') || '16px',
+        fontWeight: parseInt(findToken('regular')) || 400,
+        lineHeight: 1.5
       },
       body2: {
-        fontSize: findByName('14') + 'px',
-        fontWeight: parseInt(findByName('regular')),
-        lineHeight: 1.43,
-        letterSpacing: findByName('0') || '0%'
+        fontSize: findToken('14') || '14px',
+        fontWeight: parseInt(findToken('regular')) || 400,
+        lineHeight: 1.43
       },
       button: {
-        fontSize: findByName('14') + 'px',
-        fontWeight: parseInt(findByName('semibold')),
+        fontSize: findToken('14') || '14px',
+        fontWeight: parseInt(findToken('semibold')) || 500,
         lineHeight: 1.75,
-        letterSpacing: findByName('0') || '0%',
         textTransform: 'none'
       },
       caption: {
-        fontSize: findByName('12') + 'px',
-        fontWeight: parseInt(findByName('regular')),
-        lineHeight: 1.66,
-        letterSpacing: findByName('0') || '0%'
+        fontSize: findToken('12') || '12px',
+        fontWeight: parseInt(findToken('regular')) || 400,
+        lineHeight: 1.66
       },
       overline: {
-        fontSize: findByName('10') + 'px',
-        fontWeight: parseInt(findByName('bold')),
+        fontSize: findToken('10') || '10px',
+        fontWeight: parseInt(findToken('bold')) || 700,
         lineHeight: 2.66,
-        letterSpacing: findByName('0') || '0%',
         textTransform: 'uppercase'
       }
     };
     
-    // Build shadows from elevation tokens
-    const elevation1 = tokens.find(t => t.path[0] === 'elevation-1')?.$value;
-    const elevation2 = tokens.find(t => t.path[0] === 'elevation-2')?.$value;
-    const elevation3 = tokens.find(t => t.path[0] === 'elevation-3')?.$value;
-    const elevation4 = tokens.find(t => t.path[0] === 'elevation-4')?.$value;
-    
-    const convertShadow = (shadow) => {
-      if (!shadow) return 'none';
-      return `${shadow.x}px ${shadow.y}px ${shadow.blur}px ${shadow.spread}px ${shadow.color}`;
-    };
-    
-    const shadows = [
-      'none',
-      convertShadow(elevation1),
-      convertShadow(elevation2),
-      convertShadow(elevation3),
-      convertShadow(elevation4),
-      convertShadow(elevation4), // MUI expects 25 elevations, repeat highest
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4),
-      convertShadow(elevation4)
-    ];
-    
     const theme = {
       palette,
       typography,
-      spacing: parseInt(findByName('xs')?.replace('px', '')) || 4, // Use xs spacing as base
+      spacing: 8,
       shape: {
-        borderRadius: parseFloat(findByName('rounded')?.replace('px', '')) || 8
-      },
-      shadows
+        borderRadius: 4
+      }
     };
     
     return `import { createTheme } from '@mui/material/styles';
@@ -227,9 +170,6 @@ StyleDictionary.registerFormat({
   name: 'tailwind/theme',
   format: function({ dictionary }) {
     const tokens = dictionary.allTokens;
-    
-    // Helper to find token by name
-    const findByName = (name) => tokens.find(t => t.path[0] === name)?.$value;
     
     // Build colors - organize by color families with shades
     const colors = {};
@@ -260,130 +200,268 @@ StyleDictionary.registerFormat({
       return token?.$value;
     };
     
-    colors.primary = findColor('Blue', '500');
-    colors.secondary = findColor('Grey', '500');
-    colors.white = findColor('White', '100%');
-    colors.black = findColor('Black', '100%');
+    colors.primary = findColor('Blue', '500') || '#2560ff';
+    colors.secondary = findColor('Grey', '500') || '#6c7e9d';
+    colors.white = findColor('White', '100%') || '#ffffff';
+    colors.black = findColor('Black', '100%') || '#000000';
     
-    // Build fontFamily from tokens
-    const fontFamily = {
-      sans: [findByName('product') || 'Inter', 'sans-serif'],
-      display: [findByName('marketing') || 'Poppins', 'sans-serif'],
-      mono: [findByName('code') || 'Roboto Mono', 'monospace']
-    };
+    // Helper to find any token by path
+    const findToken = (path) => tokens.find(t => t.path.join('.') === path)?.value;
     
     // Build fontSize
     const fontSize = {
-      xs: findByName('10') + 'px',
-      sm: findByName('12') + 'px',
-      base: findByName('14') + 'px',
-      md: findByName('16') + 'px',
-      lg: findByName('18') + 'px',
-      xl: findByName('21') + 'px',
-      '2xl': findByName('24') + 'px',
-      '3xl': findByName('32') + 'px',
-      '4xl': findByName('40') + 'px',
-      '5xl': findByName('48') + 'px'
+      xs: (findToken('10') || '10') + 'px',
+      sm: (findToken('12') || '12') + 'px',
+      base: (findToken('14') || '14') + 'px',
+      md: (findToken('16') || '16') + 'px',
+      lg: (findToken('18') || '18') + 'px',
+      xl: (findToken('21') || '21') + 'px',
+      '2xl': (findToken('24') || '24') + 'px',
+      '3xl': (findToken('32') || '32') + 'px',
+      '4xl': (findToken('40') || '40') + 'px',
+      '5xl': (findToken('48') || '48') + 'px'
     };
     
     // Build fontWeight
     const fontWeight = {
-      light: parseInt(findByName('light')),
-      normal: parseInt(findByName('regular')),
-      medium: parseInt(findByName('semibold')),
-      semibold: parseInt(findByName('semibold')),
-      bold: parseInt(findByName('bold')),
-      extrabold: parseInt(findByName('extrabold'))
+      light: parseInt(findToken('light')) || 300,
+      normal: parseInt(findToken('regular')) || 400,
+      medium: parseInt(findToken('semibold')) || 500,
+      semibold: parseInt(findToken('semibold')) || 600,
+      bold: parseInt(findToken('bold')) || 700,
+      extrabold: parseInt(findToken('extrabold')) || 900
     };
     
-    // Build lineHeight
-    const lineHeight = {
-      auto: findByName('auto') || 'auto'
-    };
-    
-    // Build letterSpacing
-    const letterSpacing = {
-      normal: findByName('0') || '0%'
-    };
-    
-    // Build borderRadius
-    const borderRadius = {
-      DEFAULT: findByName('rounded'),
-      full: findByName('pill')
-    };
-    
-    // Build borderWidth
-    const borderWidth = {
-      sm: findByName('sm'),
-      DEFAULT: findByName('md'),
-      lg: findByName('lg'),
-      xl: findByName('xl'),
-      '2xl': findByName('xxl')
-    };
-    
-    // Build boxShadow from elevation tokens
-    const elevation1 = tokens.find(t => t.path[0] === 'elevation-1')?.$value;
-    const elevation2 = tokens.find(t => t.path[0] === 'elevation-2')?.$value;
-    const elevation3 = tokens.find(t => t.path[0] === 'elevation-3')?.$value;
-    const elevation4 = tokens.find(t => t.path[0] === 'elevation-4')?.$value;
-    
-    const convertShadow = (shadow) => {
-      if (!shadow) return 'none';
-      return `${shadow.x}px ${shadow.y}px ${shadow.blur}px ${shadow.spread}px ${shadow.color}`;
-    };
-    
-    const boxShadow = {
-      sm: convertShadow(elevation1),
-      DEFAULT: convertShadow(elevation2),
-      md: convertShadow(elevation3),
-      lg: convertShadow(elevation4)
-    };
-    
-    // Build spacing from xs token + scale
-    const xsSpacing = parseInt(findByName('xs')?.replace('px', '') || '4');
+    // Build spacing (Tailwind uses numeric keys)
     const spacing = {
       0: '0px',
-      1: `${xsSpacing}px`,           // 4px
-      2: `${xsSpacing * 2}px`,       // 8px
-      3: `${xsSpacing * 3}px`,       // 12px
-      4: `${xsSpacing * 4}px`,       // 16px
-      5: `${xsSpacing * 5}px`,       // 20px
-      6: `${xsSpacing * 6}px`,       // 24px
-      8: `${xsSpacing * 8}px`,       // 32px
-      10: `${xsSpacing * 10}px`,     // 40px
-      12: `${xsSpacing * 12}px`,     // 48px
-      16: `${xsSpacing * 16}px`,     // 64px
-      20: `${xsSpacing * 20}px`,     // 80px
-      24: `${xsSpacing * 24}px`      // 96px
-    };
-    
-    // Build opacity
-    const opacity = {
-      hover: findByName('hover'),
-      selected: findByName('selected'),
-      focus: findByName('focus'),
-      focusVisible: findByName('focusVisible'),
-      active: findByName('active'),
-      disabled: findByName('disabled')
+      1: '0.25rem',   // 4px
+      2: '0.5rem',    // 8px
+      3: '0.75rem',   // 12px
+      4: '1rem',      // 16px
+      5: '1.25rem',   // 20px
+      6: '1.5rem',    // 24px
+      8: '2rem',      // 32px
+      10: '2.5rem',   // 40px
+      12: '3rem',     // 48px
+      16: '4rem',     // 64px
+      20: '5rem',     // 80px
+      24: '6rem'      // 96px
     };
     
     const theme = {
       colors,
-      fontFamily,
       fontSize,
       fontWeight,
-      lineHeight,
-      letterSpacing,
-      borderRadius,
-      borderWidth,
-      boxShadow,
-      spacing,
-      opacity
+      spacing
     };
     
-    return `export const theme = ${JSON.stringify(theme, null, 2)};
+    return `module.exports = ${JSON.stringify(theme, null, 2)};
+`;
+  }
+});
 
-export default theme;
+// Register Shadcn CSS variables formatter
+StyleDictionary.registerFormat({
+  name: 'shadcn/css',
+  format: function({ dictionary }) {
+    const tokens = dictionary.allTokens;
+    
+    // Helper to find color by path
+    const findColor = (family, shade) => {
+      const token = tokens.find(t => 
+        t.$type === 'color' && 
+        Array.isArray(t.path) &&
+        t.path.length === 2 && 
+        t.path[0] === family && 
+        t.path[1] === shade
+      );
+      return token?.$value;
+    };
+    
+    // Shadcn uses HSL format - convert hex to HSL
+    const hexToHSL = (hex) => {
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      if (!result) return hex;
+      
+      let r = parseInt(result[1], 16) / 255;
+      let g = parseInt(result[2], 16) / 255;
+      let b = parseInt(result[3], 16) / 255;
+      
+      const max = Math.max(r, g, b), min = Math.min(r, g, b);
+      let h, s, l = (max + min) / 2;
+      
+      if (max === min) {
+        h = s = 0;
+      } else {
+        const d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+          case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+          case g: h = ((b - r) / d + 2) / 6; break;
+          case b: h = ((r - g) / d + 4) / 6; break;
+        }
+      }
+      
+      h = Math.round(h * 360);
+      s = Math.round(s * 100);
+      l = Math.round(l * 100);
+      
+      return `${h} ${s}% ${l}%`;
+    };
+    
+    const primary = findColor('Blue', '500') || '#2560ff';
+    const secondary = findColor('Grey', '500') || '#6c7e9d';
+    
+    return `:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+
+  --primary: ${hexToHSL(primary)};
+  --primary-foreground: 0 0% 98%;
+
+  --secondary: ${hexToHSL(secondary)};
+  --secondary-foreground: 0 0% 9%;
+
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: ${hexToHSL(primary)};
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 98%;
+
+  --card: 0 0% 3.9%;
+  --card-foreground: 0 0% 98%;
+
+  --popover: 0 0% 3.9%;
+  --popover-foreground: 0 0% 98%;
+
+  --primary: ${hexToHSL(primary)};
+  --primary-foreground: 0 0% 9%;
+
+  --secondary: ${hexToHSL(secondary)};
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
+
+  --accent: 0 0% 14.9%;
+  --accent-foreground: 0 0% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 14.9%;
+  --input: 0 0% 14.9%;
+  --ring: ${hexToHSL(primary)};
+}
+`;
+  }
+});
+
+// Register Shadcn + Tailwind hybrid formatter
+StyleDictionary.registerFormat({
+  name: 'shadcn/tailwind',
+  format: function() {
+    return `const { fontFamily } = require("tailwindcss/defaultTheme")
+
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+}
 `;
   }
 });
@@ -456,6 +534,22 @@ export default {
         {
           destination: 'theme.js',
           format: 'tailwind/theme'
+        }
+      ]
+    },
+    
+    // Shadcn CSS Variables
+    shadcn: {
+      transformGroup: 'tokens-studio',
+      buildPath: 'build/shadcn/',
+      files: [
+        {
+          destination: 'variables.css',
+          format: 'shadcn/css'
+        },
+        {
+          destination: 'tailwind.config.js',
+          format: 'shadcn/tailwind'
         }
       ]
     }
