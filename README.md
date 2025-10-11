@@ -5,31 +5,13 @@
 # AI Design System
 
 ## Overview
-This project uses Style Dictionary to generate design tokens from a stable, validated source (`DDS Foundations.json`). The tokens are then converted into an MUI theme using our streamlined toolchain.
-
----
-
-## Storybook & Theme Showcase
-
-This project includes a **MUI Masonry Dashboard** in Storybook, demonstrating a modern, Pinterest-style grid of responsive cards using only out-of-the-box MUI components and props.
-
-- **Location:** `stories/MUI/Theme.stories.tsx`
-- **Features:**
-  - Uses MUI's Masonry component for a true bento/masonry layout
-  - All cards are built with MUI Card, elevation, hover, and action buttons
-  - No custom CSS or overrides—100% MUI props and sx
-  - Cards showcase Typography, Buttons, Text Fields, Elevation, and more
-- **How to run:**
-  ```bash
-  npm run storybook
-  ```
-  Then visit [http://localhost:6006/](http://localhost:6006/) in your browser.
+This project uses Style Dictionary to generate design tokens from a stable, validated source (`DDS Foundations.json`). The tokens are transformed into framework-specific themes for MUI, Tailwind, and Shadcn.
 
 ---
 
 ## Toolchain
 ```
-DDS Foundations.json → Style Dictionary → tokens.mjs → createTheme.js → MUI Theme → Storybook Masonry Dashboard
+Figma → Token Studio → DDS Foundations.json → Style Dictionary → Framework Themes (MUI/Tailwind/Shadcn)
 ```
 
 1. **Source**: `token-studio-sync-provider/DDS Foundations.json`
@@ -43,17 +25,13 @@ DDS Foundations.json → Style Dictionary → tokens.mjs → createTheme.js → 
    - Flattens and transforms tokens
    - Outputs ES6 module format
 
-3. **Output**: `build/tokens.mjs`
-   - Flat, camelCase tokens
-   - All values resolved
-   - Ready for JavaScript/TypeScript import
-   - Example: `colorBlue500`, `fontSizes14`, etc.
-
-4. **Theme Creation**: `src/theme/createTheme.js`
-   - Imports tokens from `tokens.mjs`
-   - Maps them to MUI's theme structure
-   - Creates a complete MUI theme
-   - Used by `themeToggle.ts` for theme switching
+3. **Outputs**:
+   - `build/js/tokens.mjs` - ES6 module with all tokens
+   - `build/css/dds-tokens.css` - CSS custom properties
+   - `build/json/tokens.json` - JSON format
+   - `build/mui/theme.js` - MUI theme configuration
+   - `build/tailwind/theme.js` - Tailwind theme configuration
+   - `build/shadcn/theme.js` - Shadcn theme configuration
 
 ## Expected Token Structure
 Tokens in `DDS Foundations.json` should follow this format:
@@ -109,19 +87,15 @@ const App = () => (
    ```bash
    npm run build:tokens
    ```
-3. The output file (`build/tokens.mjs`) will be generated and can be used by the theme system.
-4. **Verify a successful build:** Check that `build/tokens.mjs` exists and contains your exported tokens in the expected structure.
-5. To view the MUI Masonry Dashboard, run Storybook:
-   ```bash
-   npm run storybook
-   ```
-   and open [http://localhost:6006/](http://localhost:6006/).
+3. The output files will be generated in `build/` and can be consumed by your application.
+4. **Verify a successful build:** Check that all files in `build/` exist and contain your exported tokens in the expected structure.
 
 ## Project Structure
 - `config/style-dictionary.config.mjs`: Configuration for Style Dictionary
-- `scripts/build-tokens.mjs`: Script to build tokens using Style Dictionary
-- `src/theme/createTheme.js`: Theme creation using MUI's createTheme
-- `src/theme/themeToggle.ts`: Theme switching functionality
+- `config/register-transforms.mjs`: Custom transforms and formatters
+- `scripts/normalize-tokens.mjs`: Token normalization utilities
+- `token-studio-sync-provider/`: Figma token sync directory (DO NOT MODIFY)
+- `build/`: Generated theme files for consumption
 
 ## Contributing
 Please follow the project guidelines for file organization, validation, and error handling. Holler at yer boi @ChadBercea with any questions, comments, or snide remarks.
