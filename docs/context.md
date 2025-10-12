@@ -59,6 +59,40 @@ Runs Style Dictionary to transform tokens from DTCG format into framework-specif
 - Typography tokens include font family, size, weight, line height, and letter spacing
 - Spacing uses a base-8 scale by default
 
+## AI Agent Instructions - Combat Known Failure Patterns
+
+### Critical Rules for Storybook Demo Work
+
+**NEVER claim something is "fixed" or "complete" without verifying:**
+1. ALL three libraries (MUI, shadcn, Tailwind) use THE SAME semantic token for the same visual element
+2. NO hardcoded colors (hex, rgb, hsl values) exist in showcase components
+3. NO arbitrary shade numbers (grey-300, blue-500) chosen by guessing
+4. The fix is in Style Dictionary formatters, NOT in component code
+
+**When components don't match visually:**
+1. The problem is ALWAYS in Style Dictionary output, never in component code
+2. Fix by adding semantic tokens to Style Dictionary formatters
+3. Semantic tokens must match across all three libraries (card, border, background, foreground)
+4. Do NOT add inline styles or pick random shades to "make it look similar"
+
+**Before claiming "cards match" or "components match":**
+1. Read the actual component files with cat/grep
+2. Verify they use semantic classes (bg-card, text-card-foreground) NOT shade numbers (bg-grey-50)
+3. Verify Style Dictionary outputs include ALL semantic tokens needed
+4. List the specific semantic token each library uses for each element
+
+**Verification checklist for "matching" claims:**
+- [ ] MUI uses token from build/mui/theme.js
+- [ ] shadcn uses CSS var from build/shadcn/variables.css (--card, --border, etc.)
+- [ ] Tailwind uses semantic class from build/tailwind/theme.js (bg-card, NOT bg-grey-50)
+- [ ] All three reference the SAME semantic concept (not arbitrary shades)
+
+**If you find yourself:**
+- Choosing shade numbers manually (grey-50, grey-300) → STOP, fix Style Dictionary
+- Adding inline styles with hex colors → STOP, fix Style Dictionary
+- Claiming "it's close enough" → STOP, it's not done
+- Defending partial work → STOP, admit it's incomplete
+
 ## Git Workflow
 
 1. Work in feature branches

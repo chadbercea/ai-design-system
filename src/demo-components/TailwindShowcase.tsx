@@ -19,9 +19,9 @@ const TailwindShowcaseDDS: React.FC = () => {
           Outlined Button
         </button>
 
-        <div className="border border-gray-300 rounded-lg p-4 bg-gray-50">
+        <div className="border border-grey-300 rounded-lg p-4 bg-grey-50">
           <h3 className="text-lg font-semibold mt-0 mb-2">Card Component</h3>
-          <p className="text-sm text-gray-600 m-0">
+          <p className="text-sm text-grey-600 m-0">
             This card uses design tokens
           </p>
         </div>
@@ -29,7 +29,7 @@ const TailwindShowcaseDDS: React.FC = () => {
         <input 
           type="text" 
           placeholder="Text Input"
-          className="px-4 py-2 border border-gray-300 rounded text-sm"
+          className="px-4 py-2 border border-grey-300 rounded text-sm"
         />
       </div>
     </>

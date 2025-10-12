@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../components/ui/button';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card';
 
 export const ShadcnShowcase: React.FC<{ useDDSTheme?: boolean }> = ({ useDDSTheme = false }) => {
   return (
@@ -18,27 +19,19 @@ export const ShadcnShowcase: React.FC<{ useDDSTheme?: boolean }> = ({ useDDSThem
           Outlined Button
         </Button>
 
-        <div style={{ 
-          border: '1px solid #e0e0e0', 
-          borderRadius: '8px', 
-          padding: '1rem',
-          backgroundColor: '#f5f5f5'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '1.1rem' }}>Card Component</h3>
-          <p style={{ margin: 0, fontSize: '0.875rem', color: '#666' }}>
-            This card uses design tokens
-          </p>
-        </div>
+        <Card>
+          <CardHeader>
+            <CardTitle>Card Component</CardTitle>
+            <CardDescription>
+              This card uses design tokens
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
         <input 
           type="text" 
           placeholder="Text Input"
-          style={{
-            padding: '0.5rem',
-            border: '1px solid #e0e0e0',
-            borderRadius: '4px',
-            fontSize: '0.875rem'
-          }}
+          className="px-4 py-2 border border-input rounded text-sm bg-background"
         />
       </div>
     </div>

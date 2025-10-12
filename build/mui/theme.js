@@ -1,42 +1,43 @@
-import { createTheme } from '@mui/material/styles';
+// MUI theme configuration object
+// Import and use with: import { createTheme } from '@mui/material/styles'; createTheme(themeConfig);
 
-export const theme = createTheme({
+export const theme = {
   "palette": {
     "mode": "light",
     "primary": {
       "main": "#2560ff",
       "light": "#7ba4f4",
-      "dark": "#003db5",
+      "dark": "#0843be",
       "contrastText": "#ffffff"
     },
     "secondary": {
       "main": "#6c7e9d",
       "light": "#a9b4c6",
-      "dark": "#434c5f",
+      "dark": "#3c4a5d",
       "contrastText": "#ffffff"
     },
     "error": {
-      "main": "#ff5757",
-      "light": "#ffa8a8",
-      "dark": "#e40c2c",
+      "main": "#d32f2f",
+      "light": "#e57373",
+      "dark": "#c62828",
       "contrastText": "#ffffff"
     },
     "warning": {
-      "main": "#ff8731",
-      "light": "#ffc499",
-      "dark": "#da5c00",
+      "main": "#ed6c02",
+      "light": "#ff9800",
+      "dark": "#e65100",
       "contrastText": "#ffffff"
     },
     "info": {
-      "main": "#2560ff",
-      "light": "#7ba4f4",
-      "dark": "#003db5",
+      "main": "#0288d1",
+      "light": "#03a9f4",
+      "dark": "#01579b",
       "contrastText": "#ffffff"
     },
     "success": {
-      "main": "#5ace8c",
-      "light": "#a9e5bd",
-      "dark": "#2d9568",
+      "main": "#2e7d32",
+      "light": "#66bb6a",
+      "dark": "#1b5e20",
       "contrastText": "#ffffff"
     },
     "grey": {
@@ -47,14 +48,14 @@ export const theme = createTheme({
       "400": "#8b99b2",
       "500": "#6c7e9d",
       "600": "#566581",
-      "700": "#434c5f",
-      "800": "#2c333f",
-      "900": "#1e2129"
+      "700": "#3c4a5d",
+      "800": "#2c3747",
+      "900": "#1c2532"
     },
     "text": {
-      "primary": "#000000",
-      "secondary": "rgba(0, 0, 0, 0.64)",
-      "disabled": "rgba(0, 0, 0, 0.4)"
+      "primary": "rgba(0, 0, 0, 0.87)",
+      "secondary": "rgba(0, 0, 0, 0.6)",
+      "disabled": "rgba(0, 0, 0, 0.38)"
     },
     "divider": "rgba(0, 0, 0, 0.12)",
     "background": {
@@ -76,103 +77,65 @@ export const theme = createTheme({
     "h1": {
       "fontSize": "48px",
       "fontWeight": 700,
-      "lineHeight": 1.2,
-      "letterSpacing": "0em"
+      "lineHeight": 1.2
     },
     "h2": {
       "fontSize": "40px",
       "fontWeight": 700,
-      "lineHeight": 1.2,
-      "letterSpacing": "0em"
+      "lineHeight": 1.2
     },
     "h3": {
       "fontSize": "32px",
-      "fontWeight": 500,
-      "lineHeight": 1.3,
-      "letterSpacing": "0em"
+      "fontWeight": 600,
+      "lineHeight": 1.3
     },
     "h4": {
       "fontSize": "24px",
-      "fontWeight": 500,
-      "lineHeight": 1.4,
-      "letterSpacing": "0em"
+      "fontWeight": 600,
+      "lineHeight": 1.4
     },
     "h5": {
       "fontSize": "21px",
-      "fontWeight": 500,
-      "lineHeight": 1.4,
-      "letterSpacing": "0em"
+      "fontWeight": 600,
+      "lineHeight": 1.4
     },
     "h6": {
       "fontSize": "18px",
-      "fontWeight": 500,
-      "lineHeight": 1.4,
-      "letterSpacing": "0em"
+      "fontWeight": 600,
+      "lineHeight": 1.4
     },
     "body1": {
       "fontSize": "16px",
       "fontWeight": 400,
-      "lineHeight": 1.5,
-      "letterSpacing": "0em"
+      "lineHeight": 1.5
     },
     "body2": {
       "fontSize": "14px",
       "fontWeight": 400,
-      "lineHeight": 1.43,
-      "letterSpacing": "0em"
+      "lineHeight": 1.43
     },
     "button": {
       "fontSize": "14px",
       "fontWeight": 500,
       "lineHeight": 1.75,
-      "letterSpacing": "0em",
       "textTransform": "none"
     },
     "caption": {
       "fontSize": "12px",
       "fontWeight": 400,
-      "lineHeight": 1.66,
-      "letterSpacing": "0em"
+      "lineHeight": 1.66
     },
     "overline": {
       "fontSize": "10px",
       "fontWeight": 700,
       "lineHeight": 2.66,
-      "letterSpacing": "0em",
       "textTransform": "uppercase"
     }
   },
-  "spacing": 4,
+  "spacing": 8,
   "shape": {
-    "borderRadius": 8
-  },
-  "shadows": [
-    "none",
-    "0px 2px 4px 4px #00000026",
-    "0px 4px 8px 4px #00000033",
-    "0px 4px 12px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033",
-    "0px 4px 16px 4px #00000033"
-  ]
-});
+    "borderRadius": 4
+  }
+};
 
 export default theme;

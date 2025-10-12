@@ -1,3 +1,6 @@
+// Tailwind CSS v3 Theme Configuration
+// Auto-generated from Design Tokens
+
 export const theme = {
   "colors": {
     "white": "#ffffff",
@@ -122,20 +125,6 @@ export const theme = {
     "primary": "#2560ff",
     "secondary": "#6c7e9d"
   },
-  "fontFamily": {
-    "sans": [
-      "Inter",
-      "sans-serif"
-    ],
-    "display": [
-      "Poppins",
-      "sans-serif"
-    ],
-    "mono": [
-      "Roboto Mono",
-      "monospace"
-    ]
-  },
   "fontSize": {
     "xs": "10px",
     "sm": "12px",
@@ -152,55 +141,24 @@ export const theme = {
     "light": 300,
     "normal": 400,
     "medium": 500,
-    "semibold": 500,
+    "semibold": 600,
     "bold": 700,
     "extrabold": 900
   },
-  "lineHeight": {
-    "auto": "auto"
-  },
-  "letterSpacing": {
-    "normal": "0em"
-  },
-  "borderRadius": {
-    "DEFAULT": "8px",
-    "full": "200px"
-  },
-  "borderWidth": {
-    "sm": "1px",
-    "DEFAULT": "1.25px",
-    "lg": "1.5px",
-    "xl": "2px",
-    "2xl": "2.5px"
-  },
-  "boxShadow": {
-    "sm": "0px 2px 4px 4px #00000026",
-    "DEFAULT": "0px 4px 8px 4px #00000033",
-    "md": "0px 4px 12px 4px #00000033",
-    "lg": "0px 4px 16px 4px #00000033"
-  },
   "spacing": {
     "0": "0px",
-    "1": "4px",
-    "2": "8px",
-    "3": "12px",
-    "4": "16px",
-    "5": "20px",
-    "6": "24px",
-    "8": "32px",
-    "10": "40px",
-    "12": "48px",
-    "16": "64px",
-    "20": "80px",
-    "24": "96px"
-  },
-  "opacity": {
-    "hover": 0.12,
-    "selected": 0.16,
-    "focus": 0.24,
-    "focusVisible": 0.32,
-    "active": 1,
-    "disabled": 0.32
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "5": "1.25rem",
+    "6": "1.5rem",
+    "8": "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
+    "16": "4rem",
+    "20": "5rem",
+    "24": "6rem"
   }
 };
 
