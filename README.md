@@ -32,9 +32,28 @@ Running `npm run build:tokens` generates tokens in multiple formats:
 
 ## Live Demo
 
-See the tokens in action: `npm run demo`
+### Storybook (Interactive Component Showcase)
 
-The demo shows side-by-side comparisons of stock components vs. DDS-themed components for MUI, Tailwind, and Shadcn. Change a token value and watch all frameworks update together.
+View all components with live theme switching:
+
+```bash
+npm run storybook
+```
+
+Opens Storybook at `http://localhost:6006` with:
+- **Theme Switcher** in toolbar (paintbrush icon) - Switch between MUI, shadcn, and Tailwind themes
+- **Component Stories** - Button, ColorPalette, Typography
+- **Live Token Updates** - Change tokens, rebuild, refresh to see updates
+
+### HTML Demo
+
+See side-by-side comparisons:
+
+```bash
+npm run demo
+```
+
+Shows stock components vs. DDS-themed components for MUI, Tailwind, and Shadcn.
 
 See `demo/README.md` for full testing instructions.
 
@@ -50,16 +69,23 @@ See `demo/README.md` for full testing instructions.
    npm run build:tokens
    ```
 
-3. View the demo:
+3. Start Storybook (recommended):
    ```bash
-   npm run demo
+   npm run storybook
    ```
-   Opens a browser showing all framework themes in action with before/after comparisons.
+   Opens interactive component showcase at `http://localhost:6006` with theme switching.
 
 4. Watch for changes (auto-rebuild):
    ```bash
    npm run watch:tokens
    ```
+
+## Complete Workflow
+
+1. **Design in Figma** → Token Studio plugin syncs to `token-studio-sync-provider/`
+2. **Build tokens** → `npm run build:tokens` transforms tokens to framework themes
+3. **View in Storybook** → `npm run storybook` shows components using generated themes
+4. **Test changes** → Modify token in Figma → rebuild → refresh Storybook
 
 ## Token Format
 

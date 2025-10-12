@@ -156,16 +156,17 @@ StyleDictionary.registerFormat({
       }
     };
     
-    return `import { createTheme } from '@mui/material/styles';
+    return `// MUI theme configuration object
+// Import and use with: import { createTheme } from '@mui/material/styles'; createTheme(themeConfig);
 
-export const theme = createTheme(${JSON.stringify(theme, null, 2)});
+export const theme = ${JSON.stringify(theme, null, 2)};
 
 export default theme;
 `;
   }
 });
 
-// Register custom Tailwind theme formatter
+// Register custom Tailwind v3 theme formatter (JavaScript object)
 StyleDictionary.registerFormat({
   name: 'tailwind/theme',
   format: function({ dictionary }) {
@@ -256,7 +257,12 @@ StyleDictionary.registerFormat({
       spacing
     };
     
-    return `module.exports = ${JSON.stringify(theme, null, 2)};
+    return `// Tailwind CSS v3 Theme Configuration
+// Auto-generated from Design Tokens
+
+export const theme = ${JSON.stringify(theme, null, 2)};
+
+export default theme;
 `;
   }
 });
@@ -313,7 +319,9 @@ StyleDictionary.registerFormat({
     const primary = findColor('Blue', '500') || '#2560ff';
     const secondary = findColor('Grey', '500') || '#6c7e9d';
     
-    return `:root {
+    return `/* DDS-generated theme from Style Dictionary */
+/* Apply with .dds-theme class to use DDS tokens */
+.dds-theme {
   --background: 0 0% 100%;
   --foreground: 0 0% 3.9%;
 
@@ -327,7 +335,7 @@ StyleDictionary.registerFormat({
   --primary-foreground: 0 0% 98%;
 
   --secondary: ${hexToHSL(secondary)};
-  --secondary-foreground: 0 0% 9%;
+  --secondary-foreground: 0 0% 98%;
 
   --muted: 0 0% 96.1%;
   --muted-foreground: 0 0% 45.1%;
@@ -343,36 +351,6 @@ StyleDictionary.registerFormat({
   --ring: ${hexToHSL(primary)};
 
   --radius: 0.5rem;
-}
-
-.dark {
-  --background: 0 0% 3.9%;
-  --foreground: 0 0% 98%;
-
-  --card: 0 0% 3.9%;
-  --card-foreground: 0 0% 98%;
-
-  --popover: 0 0% 3.9%;
-  --popover-foreground: 0 0% 98%;
-
-  --primary: ${hexToHSL(primary)};
-  --primary-foreground: 0 0% 9%;
-
-  --secondary: ${hexToHSL(secondary)};
-  --secondary-foreground: 0 0% 98%;
-
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 0 0% 63.9%;
-
-  --accent: 0 0% 14.9%;
-  --accent-foreground: 0 0% 98%;
-
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-
-  --border: 0 0% 14.9%;
-  --input: 0 0% 14.9%;
-  --ring: ${hexToHSL(primary)};
 }
 `;
   }
@@ -526,7 +504,7 @@ export default {
       ]
     },
     
-    // Tailwind Theme
+    // Tailwind v3 Theme (JavaScript object)
     tailwind: {
       transformGroup: 'tokens-studio',
       buildPath: 'build/tailwind/',
