@@ -156,16 +156,17 @@ StyleDictionary.registerFormat({
       }
     };
     
-    return `import { createTheme } from '@mui/material/styles';
+    return `// MUI theme configuration object
+// Import and use with: import { createTheme } from '@mui/material/styles'; createTheme(themeConfig);
 
-export const theme = createTheme(${JSON.stringify(theme, null, 2)});
+export const theme = ${JSON.stringify(theme, null, 2)};
 
 export default theme;
 `;
   }
 });
 
-// Register custom Tailwind theme formatter
+// Register custom Tailwind v3 theme formatter (JavaScript object)
 StyleDictionary.registerFormat({
   name: 'tailwind/theme',
   format: function({ dictionary }) {
@@ -256,7 +257,189 @@ StyleDictionary.registerFormat({
       spacing
     };
     
-    return `module.exports = ${JSON.stringify(theme, null, 2)};
+    return `// Tailwind CSS v3 Theme Configuration
+// Auto-generated from Design Tokens
+
+export const theme = ${JSON.stringify(theme, null, 2)};
+
+export default theme;
+`;
+  }
+});
+
+// Register Shadcn CSS variables formatter
+StyleDictionary.registerFormat({
+  name: 'shadcn/css',
+  format: function({ dictionary }) {
+    const tokens = dictionary.allTokens;
+    
+    // Helper to find color by path
+    const findColor = (family, shade) => {
+      const token = tokens.find(t => 
+        t.$type === 'color' && 
+        Array.isArray(t.path) &&
+        t.path.length === 2 && 
+        t.path[0] === family && 
+        t.path[1] === shade
+      );
+      return token?.$value;
+    };
+    
+    // Shadcn uses HSL format - convert hex to HSL
+    const hexToHSL = (hex) => {
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      if (!result) return hex;
+      
+      let r = parseInt(result[1], 16) / 255;
+      let g = parseInt(result[2], 16) / 255;
+      let b = parseInt(result[3], 16) / 255;
+      
+      const max = Math.max(r, g, b), min = Math.min(r, g, b);
+      let h, s, l = (max + min) / 2;
+      
+      if (max === min) {
+        h = s = 0;
+      } else {
+        const d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+          case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+          case g: h = ((b - r) / d + 2) / 6; break;
+          case b: h = ((r - g) / d + 4) / 6; break;
+        }
+      }
+      
+      h = Math.round(h * 360);
+      s = Math.round(s * 100);
+      l = Math.round(l * 100);
+      
+      return `${h} ${s}% ${l}%`;
+    };
+    
+    const primary = findColor('Blue', '500') || '#2560ff';
+    const secondary = findColor('Grey', '500') || '#6c7e9d';
+    
+    return `/* DDS-generated theme from Style Dictionary */
+/* Apply with .dds-theme class to use DDS tokens */
+.dds-theme {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+
+  --primary: ${hexToHSL(primary)};
+  --primary-foreground: 0 0% 98%;
+
+  --secondary: ${hexToHSL(secondary)};
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: ${hexToHSL(primary)};
+
+  --radius: 0.5rem;
+}
+`;
+  }
+});
+
+// Register Shadcn + Tailwind hybrid formatter
+StyleDictionary.registerFormat({
+  name: 'shadcn/tailwind',
+  format: function() {
+    return `const { fontFamily } = require("tailwindcss/defaultTheme")
+
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+}
 `;
   }
 });
@@ -321,7 +504,7 @@ export default {
       ]
     },
     
-    // Tailwind Theme
+    // Tailwind v3 Theme (JavaScript object)
     tailwind: {
       transformGroup: 'tokens-studio',
       buildPath: 'build/tailwind/',
@@ -329,6 +512,22 @@ export default {
         {
           destination: 'theme.js',
           format: 'tailwind/theme'
+        }
+      ]
+    },
+    
+    // Shadcn CSS Variables
+    shadcn: {
+      transformGroup: 'tokens-studio',
+      buildPath: 'build/shadcn/',
+      files: [
+        {
+          destination: 'variables.css',
+          format: 'shadcn/css'
+        },
+        {
+          destination: 'tailwind.config.js',
+          format: 'shadcn/tailwind'
         }
       ]
     }
