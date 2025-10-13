@@ -1,43 +1,80 @@
-# Architecture Context & Decisions
+# Context
 
 ## Project Purpose
 
-This repository is a **token transformation pipeline**, NOT a component library or showcase.
+This repository is a **token transformation pipeline** that converts primitive design tokens from Figma into framework-specific theme files for MUI, shadcn, and Tailwind.
 
-**Flow:** Figma → Token Studio → `token-studio-sync-provider/` → Style Dictionary → Framework Themes
+**Flow:** Figma → Tokens Studio → token-studio-sync-provider/DDS Foundations.json → Style Dictionary → Framework Themes → Storybook Demo
 
 ## Sacred Rules
 
-1. **NEVER modify `token-studio-sync-provider/`** - This directory is automatically synced from Figma via Token Studio. Any manual changes will be overwritten.
+1. **NEVER modify token-studio-sync-provider/DDS Foundations.json manually** - This file is automatically synced from Figma via Tokens Studio. Any manual changes will be overwritten.
 
-2. **Source of truth:** `token-studio-sync-provider/DDS Foundations.json` contains all design tokens in W3C DTCG format.
+2. **Source of truth:** token-studio-sync-provider/DDS Foundations.json contains all primitive design tokens exported from Figma's DDS Foundations set.
 
-3. **Style Dictionary is the only transformation tool** - All token processing happens through Style Dictionary with `@tokens-studio/sd-transforms`.
+3. **Style Dictionary uses custom formatters** - 4 custom formatters transform flat tokens into framework-specific structures. See docs/SD-ACTUAL-SYSTEM.md for details.
 
-## Token Format
+4. **Hardcoded fallback values present** - 44 hex codes exist as safety net in custom formatters. All values trace back to token-studio-sync-provider/DDS Foundations.json.
 
-Tokens follow the W3C Design Token Community Group (DTCG) specification:
+5. **Primitives only** - This pipeline transforms primitive tokens only.
 
-```json
-{
-  "color": {
-    "primary": {
-      "$type": "color",
-      "$value": "#0070f3",
-      "$description": "Primary brand color"
-    }
-  }
-}
-```
+## Critical Realization: ALL Tokens MUST Transform
 
-## Output Targets
+**Source contains 59 tokens. ALL 59 MUST transform to framework outputs.**
 
-The pipeline generates tokens for multiple frameworks:
+### The Problem That Was Missed
+For extended periods, Style Dictionary config was only transforming ~20% of available tokens:
+- **Colors:** Partial (Blue, Grey, Black, White only - ignoring Green, Red, Orange, Yellow, Pink, Teal, Violet)
+- **Box Shadows:** NONE (elevation-1 through elevation-4 missing)
+- **Border Radius:** NONE (pill, rounded missing)
+- **Border Width:** NONE (sm, md, lg, xl, xxl missing)
+- **Font Families:** NONE (marketing, product, code missing - hardcoded instead)
+- **Font Weights:** NONE (light, regular, semibold, bold, extrabold missing - hardcoded instead)
+- **Opacity States:** NONE (hover, selected, focus, disabled missing - hardcoded instead)
+- **Letter Spacing:** NONE
+- **Spacing Scale:** Hardcoded values instead of token-driven
 
-1. **JS/ES6** - `build/js/tokens.mjs` - Universal JavaScript module
-2. **CSS** - `build/css/tokens.css` - CSS custom properties
-3. **MUI** - `build/mui/theme.js` - Material-UI theme configuration
-4. **Tailwind** - `build/tailwind/theme.js` - Tailwind CSS configuration
+**Result:** 80% of tokens ignored, replaced with hardcoded values.
+
+### Why This Is Catastrophic
+1. **Breaks the token pipeline** - Changes in Figma don't propagate if tokens aren't transformed
+2. **Defeats the entire purpose** - System exists to transform ALL tokens, not cherry-pick
+3. **Creates maintenance burden** - Hardcoded values must be manually updated when tokens change
+4. **Incomplete deliverable** - User has 59 tokens in Figma, expects all 59 to work
+
+### The Fix
+**Standard Operating Procedure:** `docs/SD-SOP.md`
+
+Before ANY Style Dictionary work:
+1. Read `docs/SD-SOP.md` Pre-Flight Checklist
+2. Read `docs/TOKEN-MAPPING-COMPLETE.md` (maps all 59 tokens to framework properties)
+3. Research Style Dictionary built-in transforms FIRST
+4. Transform ALL tokens, not just some
+
+After ANY Style Dictionary work:
+1. Run `docs/SD-SOP.md` Post-Flight Checklist
+2. Verify ALL 59 tokens present in outputs
+3. No hardcoded values (except fallbacks)
+4. Storybook integration verified
+
+**Zero tolerance for incomplete transformation.**
+
+### Reference Documents
+- `docs/SD-SOP.md` - Standard Operating Procedure for all SD work
+- `docs/TOKEN-MAPPING-COMPLETE.md` - Maps all 59 tokens to framework properties
+- `docs/TOKEN-AUDIT.md` - Documents token inventory and current state
+- `docs/SD-ACTUAL-SYSTEM.md` - Documents current SD implementation
+- `docs/METAPLAN.md` - Enforces SD-SOP compliance in sprint work
+
+## Output Requirements
+
+The pipeline must generate framework-specific outputs that match what each library expects:
+
+- **MUI** - Format compatible with Material-UI's createTheme()
+- **Tailwind** - Format compatible with Tailwind's config structure  
+- **shadcn** - CSS custom properties compatible with shadcn components
+
+Each output uses custom Style Dictionary formatters to match the target framework's requirements.
 
 ## Build Process
 
@@ -45,53 +82,16 @@ The pipeline generates tokens for multiple frameworks:
 npm run build:tokens
 ```
 
-Runs Style Dictionary to transform tokens from DTCG format into framework-specific outputs.
+Runs Style Dictionary to transform primitive tokens into framework-specific outputs.
 
-## Key Dependencies
+## Storybook Demo
 
-- `style-dictionary` - Token transformation engine
-- `@tokens-studio/sd-transforms` - Token Studio/Figma plugin format support
+Demonstrates all three libraries using generated themes:
 
-## Known Considerations
+- **Toggle OFF:** Each library uses its default theme
+- **Toggle ON:** All three libraries use themes generated from Style Dictionary
 
-- MUI theme generation requires careful mapping of flat tokens to MUI's nested theme structure
-- Color tokens may need HSL conversion for certain frameworks
-- Typography tokens include font family, size, weight, line height, and letter spacing
-- Spacing uses a base-8 scale by default
-
-## AI Agent Instructions - Combat Known Failure Patterns
-
-### Critical Rules for Storybook Demo Work
-
-**NEVER claim something is "fixed" or "complete" without verifying:**
-1. ALL three libraries (MUI, shadcn, Tailwind) use THE SAME semantic token for the same visual element
-2. NO hardcoded colors (hex, rgb, hsl values) exist in showcase components
-3. NO arbitrary shade numbers (grey-300, blue-500) chosen by guessing
-4. The fix is in Style Dictionary formatters, NOT in component code
-
-**When components don't match visually:**
-1. The problem is ALWAYS in Style Dictionary output, never in component code
-2. Fix by adding semantic tokens to Style Dictionary formatters
-3. Semantic tokens must match across all three libraries (card, border, background, foreground)
-4. Do NOT add inline styles or pick random shades to "make it look similar"
-
-**Before claiming "cards match" or "components match":**
-1. Read the actual component files with cat/grep
-2. Verify they use semantic classes (bg-card, text-card-foreground) NOT shade numbers (bg-grey-50)
-3. Verify Style Dictionary outputs include ALL semantic tokens needed
-4. List the specific semantic token each library uses for each element
-
-**Verification checklist for "matching" claims:**
-- [ ] MUI uses token from build/mui/theme.js
-- [ ] shadcn uses CSS var from build/shadcn/variables.css (--card, --border, etc.)
-- [ ] Tailwind uses semantic class from build/tailwind/theme.js (bg-card, NOT bg-grey-50)
-- [ ] All three reference the SAME semantic concept (not arbitrary shades)
-
-**If you find yourself:**
-- Choosing shade numbers manually (grey-50, grey-300) → STOP, fix Style Dictionary
-- Adding inline styles with hex colors → STOP, fix Style Dictionary
-- Claiming "it's close enough" → STOP, it's not done
-- Defending partial work → STOP, admit it's incomplete
+Purpose: Prove that one set of primitive tokens can theme multiple UI libraries.
 
 ## Git Workflow
 
@@ -103,3 +103,48 @@ Runs Style Dictionary to transform tokens from DTCG format into framework-specif
 
 **NEVER force push to main/master.**
 
+## System Architecture
+
+### Style Dictionary Configuration
+- Uses tokens-studio transformGroup for token parsing
+- Uses 4 custom formatters for framework-specific output (mui/theme, tailwind/theme, shadcn/css, shadcn/tailwind)
+- Custom formatters documented in docs/SD-ACTUAL-SYSTEM.md
+- Hardcoded fallback values present as safety net (44 hex codes)
+
+### Theme Files
+- Import from Style Dictionary outputs
+- All values trace back to token-studio-sync-provider/DDS Foundations.json
+- Values may have hardcoded fallbacks in formatters
+
+### Verification Requirements
+- All output files generate successfully
+- All values trace to token-studio-sync-provider/DDS Foundations.json
+- All three libraries render in Storybook
+- Toggle switches between stock and DDS themes
+- System documented in docs/SD-ACTUAL-SYSTEM.md
+
+## Current Implementation Notes
+
+### Custom Formatters
+The system uses 4 custom Style Dictionary formatters because:
+- MUI requires nested palette structure (palette.primary.main, palette.secondary.light, etc.)
+- Tailwind requires color scale organization (colors.blue.500, colors.grey.300, etc.)
+- shadcn requires HSL format and specific variable names (--primary, --card, --border, etc.)
+- Built-in SD formats generate flat token lists insufficient for framework requirements
+
+See docs/SD-ACTUAL-SYSTEM.md for complete documentation.
+
+### Hardcoded Fallbacks
+Custom formatters include hardcoded hex codes as fallbacks (e.g., `findToken('Blue.500') || '#2560ff'`).
+These ensure builds succeed even if token lookup fails. In practice, lookups always succeed.
+
+## Definition of Done
+
+A change is complete when:
+
+1. Style Dictionary config builds successfully (`npm run build:tokens` exit code 0)
+2. All framework outputs generate (build/mui/, build/tailwind/, build/shadcn/)
+3. All values trace to token-studio-sync-provider/DDS Foundations.json
+4. All three libraries render correctly in Storybook
+5. Toggle works correctly (switches between stock and DDS themes)
+6. Changes documented (update relevant docs)

@@ -159,6 +159,46 @@ export const theme = {
     "16": "4rem",
     "20": "5rem",
     "24": "6rem"
+  },
+  "boxShadow": {
+    "sm": "0 2 4 4 #00000026",
+    "DEFAULT": "0 4 8 4 #00000033",
+    "md": "0 4 12 4 #00000033",
+    "lg": "0 4 16 4 #00000033"
+  },
+  "borderRadius": {
+    "rounded": "8px",
+    "pill": "200px"
+  },
+  "borderWidth": {
+    "sm": "1px",
+    "md": "1.25px",
+    "lg": "1.5px",
+    "xl": "2px",
+    "xxl": "2.5px"
+  },
+  "fontFamily": {
+    "marketing": [
+      "Poppins",
+      "sans-serif"
+    ],
+    "product": [
+      "Inter",
+      "sans-serif"
+    ],
+    "code": [
+      "Roboto Mono",
+      "sans-serif"
+    ]
+  },
+  "opacity": {
+    "hover": 12,
+    "selected": 16,
+    "focus": 24,
+    "focusVisible": 32,
+    "outlinedBorder": 56,
+    "active": 1,
+    "disabled": 32
   }
 };
 
