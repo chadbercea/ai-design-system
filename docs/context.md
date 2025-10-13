@@ -18,6 +18,54 @@ This repository is a **token transformation pipeline** that converts primitive d
 
 5. **Primitives only** - This pipeline transforms primitive tokens only.
 
+## Critical Realization: ALL Tokens MUST Transform
+
+**Source contains 59 tokens. ALL 59 MUST transform to framework outputs.**
+
+### The Problem That Was Missed
+For extended periods, Style Dictionary config was only transforming ~20% of available tokens:
+- **Colors:** Partial (Blue, Grey, Black, White only - ignoring Green, Red, Orange, Yellow, Pink, Teal, Violet)
+- **Box Shadows:** NONE (elevation-1 through elevation-4 missing)
+- **Border Radius:** NONE (pill, rounded missing)
+- **Border Width:** NONE (sm, md, lg, xl, xxl missing)
+- **Font Families:** NONE (marketing, product, code missing - hardcoded instead)
+- **Font Weights:** NONE (light, regular, semibold, bold, extrabold missing - hardcoded instead)
+- **Opacity States:** NONE (hover, selected, focus, disabled missing - hardcoded instead)
+- **Letter Spacing:** NONE
+- **Spacing Scale:** Hardcoded values instead of token-driven
+
+**Result:** 80% of tokens ignored, replaced with hardcoded values.
+
+### Why This Is Catastrophic
+1. **Breaks the token pipeline** - Changes in Figma don't propagate if tokens aren't transformed
+2. **Defeats the entire purpose** - System exists to transform ALL tokens, not cherry-pick
+3. **Creates maintenance burden** - Hardcoded values must be manually updated when tokens change
+4. **Incomplete deliverable** - User has 59 tokens in Figma, expects all 59 to work
+
+### The Fix
+**Standard Operating Procedure:** `docs/SD-SOP.md`
+
+Before ANY Style Dictionary work:
+1. Read `docs/SD-SOP.md` Pre-Flight Checklist
+2. Read `docs/TOKEN-MAPPING-COMPLETE.md` (maps all 59 tokens to framework properties)
+3. Research Style Dictionary built-in transforms FIRST
+4. Transform ALL tokens, not just some
+
+After ANY Style Dictionary work:
+1. Run `docs/SD-SOP.md` Post-Flight Checklist
+2. Verify ALL 59 tokens present in outputs
+3. No hardcoded values (except fallbacks)
+4. Storybook integration verified
+
+**Zero tolerance for incomplete transformation.**
+
+### Reference Documents
+- `docs/SD-SOP.md` - Standard Operating Procedure for all SD work
+- `docs/TOKEN-MAPPING-COMPLETE.md` - Maps all 59 tokens to framework properties
+- `docs/TOKEN-AUDIT.md` - Documents token inventory and current state
+- `docs/SD-ACTUAL-SYSTEM.md` - Documents current SD implementation
+- `docs/METAPLAN.md` - Enforces SD-SOP compliance in sprint work
+
 ## Output Requirements
 
 The pipeline must generate framework-specific outputs that match what each library expects:

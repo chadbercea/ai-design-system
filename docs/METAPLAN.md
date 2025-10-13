@@ -78,6 +78,42 @@ cat path/to/file | grep "X"
 3. Do NOT implement hacks (manual colors, arbitrary shade numbers) - fix Style Dictionary
 4. Do NOT skip verification steps to "save time"
 
+## Style Dictionary Critical Rules
+
+**Any sprint involving Style Dictionary MUST follow SD-SOP.md**
+
+**Reference:** `docs/SD-SOP.md` (Style Dictionary Standard Operating Procedure)
+
+### Critical Knowledge
+- Source contains **59 tokens**
+- **ALL 59 tokens MUST transform** to framework outputs
+- Zero hardcoding (except fallbacks)
+- Missing tokens = broken pipeline = catastrophic failure
+
+### Before Modifying SD Config
+- [ ] Read `docs/SD-SOP.md` Pre-Flight Checklist
+- [ ] Read `docs/TOKEN-MAPPING-COMPLETE.md`
+- [ ] Research Style Dictionary built-in transforms FIRST
+- [ ] Document why custom formatters needed (if any)
+
+### After Modifying SD Config
+- [ ] Run `docs/SD-SOP.md` Post-Flight Checklist
+- [ ] Verify ALL 59 tokens present in outputs
+- [ ] Verify Storybook integration works
+- [ ] No console errors
+- [ ] Update SD documentation
+
+### Red Flags for SD Work
+**If ANY of these occur, STOP and re-read SD-SOP.md:**
+- Hardcoding values instead of token lookup
+- Ignoring token types ("we don't need that")
+- Cherry-picking tokens ("just these colors")
+- Claiming "close enough" when tokens missing
+- Skipping verification
+- Claiming ignorance of SD capabilities
+- Making framework excuses
+- Defensive behavior when caught
+
 ## Sprint Status Tracking
 
 Current sprint: [UPDATE THIS]
