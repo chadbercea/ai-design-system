@@ -10,149 +10,237 @@ StyleDictionary.registerFormat({
   format: function({ dictionary }) {
     const tokens = dictionary.allTokens;
     
-    // Helper to find token by path
+    // Helper to find token by path (still needed for non-color tokens until later sprints)
     const findToken = (path) => tokens.find(t => t.path.join('.') === path)?.value;
     
-    // Build palette
+    // Get ALL color tokens and build color families dynamically
+    const colorTokens = tokens.filter(t => t.$type === 'color');
+    const colorFamilies = {};
+    
+    colorTokens.forEach(token => {
+      const [family, shade] = token.path;
+      if (family && shade) {
+        const key = family.toLowerCase();
+        if (!colorFamilies[key]) {
+          colorFamilies[key] = {};
+        }
+        colorFamilies[key][shade] = token.$value;
+      }
+    });
+    
+    // Get ALL opacity tokens (needed for palette.action)
+    const opacityTokens = tokens.filter(t => t.$type === 'opacity');
+    const opacities = {};
+    opacityTokens.forEach(token => {
+      const name = token.path[token.path.length - 1];
+      const value = token.$value;
+      // If value is already a decimal (0.12), use it directly
+      // If value is a percentage string ("12%"), convert it
+      if (typeof value === 'number' && value < 1) {
+        opacities[name] = value; // Already a decimal
+      } else {
+        // Convert percentage to decimal (12% → 0.12 or 12 → 0.12)
+        const numValue = parseFloat(String(value).replace('%', ''));
+        opacities[name] = numValue > 1 ? numValue / 100 : numValue;
+      }
+    });
+    
+    // Build palette from colorFamilies
     const palette = {
       mode: 'light',
       primary: {
-        main: findToken('Blue.500') || '#2560ff',
-        light: findToken('Blue.300') || '#7ba4f4',
-        dark: findToken('Blue.700') || '#0843be',
-        contrastText: findToken('White.100%') || '#ffffff'
+        main: colorFamilies.blue?.['500'] || '#2560ff',
+        light: colorFamilies.blue?.['300'] || '#7ba4f4',
+        dark: colorFamilies.blue?.['700'] || '#0843be',
+        contrastText: colorFamilies.white?.['100%'] || '#ffffff'
       },
       secondary: {
-        main: findToken('Grey.500') || '#6c7e9d',
-        light: findToken('Grey.300') || '#a9b4c6',
-        dark: findToken('Grey.700') || '#3c4a5d',
-        contrastText: findToken('White.100%') || '#ffffff'
+        main: colorFamilies.grey?.['500'] || '#6c7e9d',
+        light: colorFamilies.grey?.['300'] || '#a9b4c6',
+        dark: colorFamilies.grey?.['700'] || '#3c4a5d',
+        contrastText: colorFamilies.white?.['100%'] || '#ffffff'
       },
       error: {
-        main: findToken('Red.500') || '#d32f2f',
-        light: findToken('Red.300') || '#e57373',
-        dark: findToken('Red.700') || '#c62828',
-        contrastText: findToken('White.100%') || '#ffffff'
+        main: colorFamilies.red?.['500'] || '#d32f2f',
+        light: colorFamilies.red?.['300'] || '#e57373',
+        dark: colorFamilies.red?.['700'] || '#c62828',
+        contrastText: colorFamilies.white?.['100%'] || '#ffffff'
       },
       warning: {
-        main: findToken('Orange.500') || '#ed6c02',
-        light: findToken('Orange.300') || '#ff9800',
-        dark: findToken('Orange.700') || '#e65100',
-        contrastText: findToken('White.100%') || '#ffffff'
+        main: colorFamilies.orange?.['500'] || '#ed6c02',
+        light: colorFamilies.orange?.['300'] || '#ff9800',
+        dark: colorFamilies.orange?.['700'] || '#e65100',
+        contrastText: colorFamilies.white?.['100%'] || '#ffffff'
       },
       info: {
-        main: findToken('Blue.500') || '#0288d1',
-        light: findToken('Blue.300') || '#03a9f4',
-        dark: findToken('Blue.700') || '#01579b',
-        contrastText: findToken('White.100%') || '#ffffff'
+        main: colorFamilies.blue?.['500'] || '#0288d1',
+        light: colorFamilies.blue?.['300'] || '#03a9f4',
+        dark: colorFamilies.blue?.['700'] || '#01579b',
+        contrastText: colorFamilies.white?.['100%'] || '#ffffff'
       },
       success: {
-        main: findToken('Green.500') || '#2e7d32',
-        light: findToken('Green.300') || '#66bb6a',
-        dark: findToken('Green.700') || '#1b5e20',
-        contrastText: findToken('White.100%') || '#ffffff'
+        main: colorFamilies.green?.['500'] || '#2e7d32',
+        light: colorFamilies.green?.['300'] || '#66bb6a',
+        dark: colorFamilies.green?.['700'] || '#1b5e20',
+        contrastText: colorFamilies.white?.['100%'] || '#ffffff'
       },
-      grey: {
-        50: findToken('Grey.50') || '#f9fafb',
-        100: findToken('Grey.100') || '#e7eaef',
-        200: findToken('Grey.200') || '#c8cfda',
-        300: findToken('Grey.300') || '#a9b4c6',
-        400: findToken('Grey.400') || '#8b99b2',
-        500: findToken('Grey.500') || '#6c7e9d',
-        600: findToken('Grey.600') || '#566581',
-        700: findToken('Grey.700') || '#3c4a5d',
-        800: findToken('Grey.800') || '#2c3747',
-        900: findToken('Grey.900') || '#1c2532'
-      },
+      // Add ALL color families dynamically
+      grey: colorFamilies.grey || {},
+      blue: colorFamilies.blue || {},
+      green: colorFamilies.green || {},
+      red: colorFamilies.red || {},
+      orange: colorFamilies.orange || {},
+      yellow: colorFamilies.yellow || {},
+      pink: colorFamilies.pink || {},
+      teal: colorFamilies.teal || {},
+      violet: colorFamilies.violet || {},
       text: {
-        primary: findToken('Black.100%') || 'rgba(0, 0, 0, 0.87)',
-        secondary: findToken('Black.64%') || 'rgba(0, 0, 0, 0.6)',
-        disabled: findToken('Black.40%') || 'rgba(0, 0, 0, 0.38)'
+        primary: colorFamilies.black?.['100%'] || 'rgba(0, 0, 0, 0.87)',
+        secondary: colorFamilies.black?.['64%'] || 'rgba(0, 0, 0, 0.6)',
+        disabled: colorFamilies.black?.['40%'] || 'rgba(0, 0, 0, 0.38)'
       },
-      divider: findToken('Black.12%') || 'rgba(0, 0, 0, 0.12)',
+      divider: colorFamilies.black?.['12%'] || 'rgba(0, 0, 0, 0.12)',
       background: {
-        default: findToken('White.100%') || '#ffffff',
-        paper: findToken('White.100%') || '#ffffff'
+        default: colorFamilies.white?.['100%'] || '#ffffff',
+        paper: colorFamilies.white?.['100%'] || '#ffffff'
       },
       common: {
-        black: findToken('Black.100%') || '#000000',
-        white: findToken('White.100%') || '#ffffff'
+        black: colorFamilies.black?.['100%'] || '#000000',
+        white: colorFamilies.white?.['100%'] || '#ffffff'
+      },
+      action: {
+        hoverOpacity: opacities.hover || 0.12,
+        selectedOpacity: opacities.selected || 0.16,
+        focusOpacity: opacities.focus || 0.24,
+        disabledOpacity: opacities.disabled || 0.32,
+        activatedOpacity: opacities.active || 0.16
       }
     };
     
+    // Get ALL box shadow tokens and build shadows array
+    const shadowTokens = tokens.filter(t => t.$type === 'boxShadow');
+    const shadows = ['none']; // MUI shadows array starts with 'none' at index 0
+    
+    shadowTokens.forEach(token => {
+      const name = token.path.join('.');
+      if (name.includes('elevation')) {
+        const level = parseInt(name.match(/\d+/)?.[0]);
+        if (level) {
+          // Convert {color, x, y, blur, spread} to CSS shadow string
+          const shadow = token.$value;
+          const css = `${shadow.x} ${shadow.y} ${shadow.blur} ${shadow.spread} ${shadow.color}`;
+          shadows[level] = css;
+        }
+      }
+    });
+    
+    // Get ALL font weight tokens and build font weights dynamically
+    const fontWeightTokens = tokens.filter(t => t.$type === 'fontWeights');
+    const fontWeights = {};
+    fontWeightTokens.forEach(token => {
+      const name = token.path[token.path.length - 1];
+      fontWeights[name] = parseInt(token.$value);
+    });
+    
+    // Get ALL font size tokens and build font sizes dynamically
+    const fontSizeTokens = tokens.filter(t => t.$type === 'fontSizes');
+    const fontSizes = {};
+    fontSizeTokens.forEach(token => {
+      const size = token.path[token.path.length - 1];
+      fontSizes[size] = token.$value;
+    });
+    
+    // Get ALL font family tokens
+    const fontFamilyTokens = tokens.filter(t => t.$type === 'fontFamilies');
+    const fontFamilies = {};
+    fontFamilyTokens.forEach(token => {
+      const name = token.path[token.path.length - 1];
+      fontFamilies[name] = token.$value;
+    });
+    
     // Build typography
     const typography = {
-      fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
-      fontSize: parseInt(findToken('14')) || 14,
-      fontWeightLight: parseInt(findToken('light')) || 300,
-      fontWeightRegular: parseInt(findToken('regular')) || 400,
-      fontWeightMedium: parseInt(findToken('semibold')) || 500,
-      fontWeightBold: parseInt(findToken('bold')) || 700,
+      fontFamily: fontFamilies.product ? `"${fontFamilies.product}", sans-serif` : '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+      fontSize: parseInt(fontSizes['14']) || 14,
+      fontWeightLight: fontWeights.light || 300,
+      fontWeightRegular: fontWeights.regular || 400,
+      fontWeightMedium: fontWeights.semibold || 500,
+      fontWeightBold: fontWeights.bold || 700,
       h1: {
-        fontSize: findToken('48') || '48px',
-        fontWeight: parseInt(findToken('bold')) || 700,
+        fontSize: fontSizes['48'] + 'px' || '48px',
+        fontWeight: fontWeights.bold || 700,
         lineHeight: 1.2
       },
       h2: {
-        fontSize: findToken('40') || '40px',
-        fontWeight: parseInt(findToken('bold')) || 700,
+        fontSize: fontSizes['40'] + 'px' || '40px',
+        fontWeight: fontWeights.bold || 700,
         lineHeight: 1.2
       },
       h3: {
-        fontSize: findToken('32') || '32px',
-        fontWeight: parseInt(findToken('semibold')) || 600,
+        fontSize: fontSizes['32'] + 'px' || '32px',
+        fontWeight: fontWeights.semibold || 600,
         lineHeight: 1.3
       },
       h4: {
-        fontSize: findToken('24') || '24px',
-        fontWeight: parseInt(findToken('semibold')) || 600,
+        fontSize: fontSizes['24'] + 'px' || '24px',
+        fontWeight: fontWeights.semibold || 600,
         lineHeight: 1.4
       },
       h5: {
-        fontSize: findToken('21') || '21px',
-        fontWeight: parseInt(findToken('semibold')) || 600,
+        fontSize: fontSizes['21'] + 'px' || '21px',
+        fontWeight: fontWeights.semibold || 600,
         lineHeight: 1.4
       },
       h6: {
-        fontSize: findToken('18') || '18px',
-        fontWeight: parseInt(findToken('semibold')) || 600,
+        fontSize: fontSizes['18'] + 'px' || '18px',
+        fontWeight: fontWeights.semibold || 600,
         lineHeight: 1.4
       },
       body1: {
-        fontSize: findToken('16') || '16px',
-        fontWeight: parseInt(findToken('regular')) || 400,
+        fontSize: fontSizes['16'] + 'px' || '16px',
+        fontWeight: fontWeights.regular || 400,
         lineHeight: 1.5
       },
       body2: {
-        fontSize: findToken('14') || '14px',
-        fontWeight: parseInt(findToken('regular')) || 400,
+        fontSize: fontSizes['14'] + 'px' || '14px',
+        fontWeight: fontWeights.regular || 400,
         lineHeight: 1.43
       },
       button: {
-        fontSize: findToken('14') || '14px',
-        fontWeight: parseInt(findToken('semibold')) || 500,
+        fontSize: fontSizes['14'] + 'px' || '14px',
+        fontWeight: fontWeights.semibold || 500,
         lineHeight: 1.75,
         textTransform: 'none'
       },
       caption: {
-        fontSize: findToken('12') || '12px',
-        fontWeight: parseInt(findToken('regular')) || 400,
+        fontSize: fontSizes['12'] + 'px' || '12px',
+        fontWeight: fontWeights.regular || 400,
         lineHeight: 1.66
       },
       overline: {
-        fontSize: findToken('10') || '10px',
-        fontWeight: parseInt(findToken('bold')) || 700,
+        fontSize: fontSizes['10'] + 'px' || '10px',
+        fontWeight: fontWeights.bold || 700,
         lineHeight: 2.66,
         textTransform: 'uppercase'
       }
     };
     
+    // Get ALL border radius tokens
+    const borderRadiusTokens = tokens.filter(t => t.$type === 'borderRadius');
+    const borderRadii = {};
+    borderRadiusTokens.forEach(token => {
+      const name = token.path[token.path.length - 1];
+      borderRadii[name] = token.$value;
+    });
+    
     const theme = {
       palette,
       typography,
+      shadows,
       spacing: 8,
       shape: {
-        borderRadius: 4
+        borderRadius: borderRadii.rounded || '4px',
+        pill: borderRadii.pill || '200px'
       }
     };
     
@@ -250,11 +338,70 @@ StyleDictionary.registerFormat({
       24: '6rem'      // 96px
     };
     
+    // Get ALL box shadow tokens
+    const shadowTokens = tokens.filter(t => t.$type === 'boxShadow');
+    const boxShadow = {};
+    shadowTokens.forEach(token => {
+      const name = token.path.join('.');
+      const shadow = token.$value;
+      // Convert {color, x, y, blur, spread} to CSS shadow string
+      const css = `${shadow.x} ${shadow.y} ${shadow.blur} ${shadow.spread} ${shadow.color}`;
+      if (name.includes('elevation-1')) boxShadow.sm = css;
+      if (name.includes('elevation-2')) boxShadow.DEFAULT = css;
+      if (name.includes('elevation-3')) boxShadow.md = css;
+      if (name.includes('elevation-4')) boxShadow.lg = css;
+    });
+    
+    // Get ALL border radius tokens
+    const borderRadiusTokens = tokens.filter(t => t.$type === 'borderRadius');
+    const borderRadius = {};
+    borderRadiusTokens.forEach(token => {
+      const name = token.path[token.path.length - 1];
+      borderRadius[name] = token.$value;
+    });
+    
+    // Get ALL border width tokens
+    const borderWidthTokens = tokens.filter(t => t.$type === 'borderWidth');
+    const borderWidth = {};
+    borderWidthTokens.forEach(token => {
+      const name = token.path[token.path.length - 1];
+      borderWidth[name] = token.$value;
+    });
+    
+    // Get ALL font family tokens
+    const fontFamilyTokens = tokens.filter(t => t.$type === 'fontFamilies');
+    const fontFamily = {};
+    fontFamilyTokens.forEach(token => {
+      const name = token.path[token.path.length - 1];
+      fontFamily[name] = [token.$value, 'sans-serif'];
+    });
+    
+    // Get ALL opacity tokens
+    const opacityTokens = tokens.filter(t => t.$type === 'opacity');
+    const opacity = {};
+    opacityTokens.forEach(token => {
+      const name = token.path[token.path.length - 1];
+      const value = token.$value;
+      // If value is already a decimal (0.12), convert to percentage
+      // Tailwind uses integers (12, not 0.12)
+      if (typeof value === 'number' && value < 1) {
+        opacity[name] = Math.round(value * 100);
+      } else {
+        const numValue = parseFloat(String(value).replace('%', ''));
+        opacity[name] = Math.round(numValue);
+      }
+    });
+    
     const theme = {
       colors,
       fontSize,
       fontWeight,
-      spacing
+      spacing,
+      boxShadow,
+      borderRadius,
+      borderWidth,
+      fontFamily,
+      opacity
     };
     
     return `// Tailwind CSS v3 Theme Configuration
@@ -319,6 +466,72 @@ StyleDictionary.registerFormat({
     const primary = findColor('Blue', '500') || '#2560ff';
     const secondary = findColor('Grey', '500') || '#6c7e9d';
     
+    // Get ALL box shadow tokens
+    const shadowTokens = tokens.filter(t => t.$type === 'boxShadow');
+    let shadowVars = '';
+    shadowTokens.forEach(token => {
+      const name = token.path.join('-').toLowerCase();
+      const shadow = token.$value;
+      const css = `${shadow.x} ${shadow.y} ${shadow.blur} ${shadow.spread} ${shadow.color}`;
+      shadowVars += `  --${name}: ${css};\n`;
+    });
+    
+    // Get ALL border radius tokens
+    const radiusTokens = tokens.filter(t => t.$type === 'borderRadius');
+    let radiusVars = '';
+    radiusTokens.forEach(token => {
+      const name = token.path.join('-').toLowerCase();
+      radiusVars += `  --radius-${name}: ${token.$value};\n`;
+    });
+    
+    // Get ALL border width tokens
+    const borderWidthTokens = tokens.filter(t => t.$type === 'borderWidth');
+    let borderWidthVars = '';
+    borderWidthTokens.forEach(token => {
+      const name = token.path.join('-').toLowerCase();
+      borderWidthVars += `  --border-width-${name}: ${token.$value};\n`;
+    });
+    
+    // Get ALL font family tokens
+    const fontFamilyTokens = tokens.filter(t => t.$type === 'fontFamilies');
+    let fontFamilyVars = '';
+    fontFamilyTokens.forEach(token => {
+      const name = token.path.join('-').toLowerCase();
+      fontFamilyVars += `  --font-${name}: "${token.$value}", sans-serif;\n`;
+    });
+    
+    // Get ALL font weight tokens
+    const fontWeightTokens = tokens.filter(t => t.$type === 'fontWeights');
+    let fontWeightVars = '';
+    fontWeightTokens.forEach(token => {
+      const name = token.path.join('-').toLowerCase();
+      fontWeightVars += `  --font-weight-${name}: ${token.$value};\n`;
+    });
+    
+    // Get ALL font size tokens
+    const fontSizeTokens = tokens.filter(t => t.$type === 'fontSizes');
+    let fontSizeVars = '';
+    fontSizeTokens.forEach(token => {
+      const name = token.path.join('-').toLowerCase();
+      fontSizeVars += `  --text-${name}: ${token.$value}px;\n`;
+    });
+    
+    // Get ALL opacity tokens
+    const opacityTokens = tokens.filter(t => t.$type === 'opacity');
+    let opacityVars = '';
+    opacityTokens.forEach(token => {
+      const name = token.path.join('-').toLowerCase();
+      const value = token.$value;
+      let opacityValue;
+      if (typeof value === 'number' && value < 1) {
+        opacityValue = value;
+      } else {
+        const numValue = parseFloat(String(value).replace('%', ''));
+        opacityValue = numValue > 1 ? numValue / 100 : numValue;
+      }
+      opacityVars += `  --opacity-${name}: ${opacityValue};\n`;
+    });
+    
     return `/* DDS-generated theme from Style Dictionary */
 /* Apply with .dds-theme class to use DDS tokens */
 .dds-theme {
@@ -351,7 +564,21 @@ StyleDictionary.registerFormat({
   --ring: ${hexToHSL(primary)};
 
   --radius: 0.5rem;
-}
+
+  /* Box shadows */
+${shadowVars}
+  /* Border radius */
+${radiusVars}
+  /* Border widths */
+${borderWidthVars}
+  /* Font families */
+${fontFamilyVars}
+  /* Font weights */
+${fontWeightVars}
+  /* Font sizes */
+${fontSizeVars}
+  /* Opacity states */
+${opacityVars}}
 `;
   }
 });
