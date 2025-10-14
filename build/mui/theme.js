@@ -187,58 +187,58 @@ export const theme = {
     "fontWeightMedium": 500,
     "fontWeightBold": 700,
     "h1": {
-      "fontSize": "48px",
+      "fontSize": 48,
       "fontWeight": 700,
       "lineHeight": 1.2
     },
     "h2": {
-      "fontSize": "40px",
+      "fontSize": 40,
       "fontWeight": 700,
       "lineHeight": 1.2
     },
     "h3": {
-      "fontSize": "32px",
+      "fontSize": 32,
       "fontWeight": 500,
       "lineHeight": 1.3
     },
     "h4": {
-      "fontSize": "24px",
+      "fontSize": 24,
       "fontWeight": 500,
       "lineHeight": 1.4
     },
     "h5": {
-      "fontSize": "21px",
+      "fontSize": 21,
       "fontWeight": 500,
       "lineHeight": 1.4
     },
     "h6": {
-      "fontSize": "18px",
+      "fontSize": 18,
       "fontWeight": 500,
       "lineHeight": 1.4
     },
     "body1": {
-      "fontSize": "16px",
+      "fontSize": 16,
       "fontWeight": 400,
       "lineHeight": 1.5
     },
     "body2": {
-      "fontSize": "14px",
+      "fontSize": 14,
       "fontWeight": 400,
       "lineHeight": 1.43
     },
     "button": {
-      "fontSize": "14px",
+      "fontSize": 14,
       "fontWeight": 500,
       "lineHeight": 1.75,
       "textTransform": "none"
     },
     "caption": {
-      "fontSize": "12px",
+      "fontSize": 12,
       "fontWeight": 400,
       "lineHeight": 1.66
     },
     "overline": {
-      "fontSize": "10px",
+      "fontSize": 10,
       "fontWeight": 700,
       "lineHeight": 2.66,
       "textTransform": "uppercase"
@@ -246,15 +246,38 @@ export const theme = {
   },
   "shadows": [
     "none",
-    "0 2 4 4 #00000026",
-    "0 4 8 4 #00000033",
-    "0 4 12 4 #00000033",
-    "0 4 16 4 #00000033"
+    "0px 2px 4px 4px #00000026",
+    "0px 4px 8px 4px #00000033",
+    "0px 4px 12px 4px #00000033",
+    "0px 4px 16px 4px #00000033"
   ],
   "spacing": 8,
   "shape": {
-    "borderRadius": "8px",
-    "pill": "200px"
+    "borderRadius": 8,
+    "pill": 200
+  },
+  "components": {
+    "MuiCard": {
+      "defaultProps": {
+        "elevation": 0
+      },
+      "styleOverrides": {
+        "root": {
+          "border": "1px solid",
+          "borderColor": "#a9b4c6"
+        }
+      }
+    },
+    "MuiButton": {
+      "defaultProps": {
+        "disableElevation": true
+      },
+      "styleOverrides": {
+        "outlined": {
+          "borderWidth": "1px"
+        }
+      }
+    }
   }
 };
 

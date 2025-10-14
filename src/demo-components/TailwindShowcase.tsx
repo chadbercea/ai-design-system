@@ -15,11 +15,11 @@ const TailwindShowcaseDDS: React.FC = () => {
         <button className="bg-grey-500 text-white px-4 py-2 rounded-md hover:opacity-90 transition">
           Secondary Button
         </button>
-        <button className="border-2 border-blue-500 text-blue-500 px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition">
+        <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white transition">
           Outlined Button
         </button>
 
-        <div className="border border-grey-300 rounded-lg p-4 bg-grey-50">
+        <div className="border border-grey-300 rounded-lg p-4 bg-card">
           <h3 className="text-lg font-semibold mt-0 mb-2">Card Component</h3>
           <p className="text-sm text-grey-600 m-0">
             This card uses design tokens

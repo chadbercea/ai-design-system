@@ -141,7 +141,7 @@ export const theme = {
     "light": 300,
     "normal": 400,
     "medium": 500,
-    "semibold": 600,
+    "semibold": 500,
     "bold": 700,
     "extrabold": 900
   },
@@ -161,12 +161,13 @@ export const theme = {
     "24": "6rem"
   },
   "boxShadow": {
-    "sm": "0 2 4 4 #00000026",
-    "DEFAULT": "0 4 8 4 #00000033",
-    "md": "0 4 12 4 #00000033",
-    "lg": "0 4 16 4 #00000033"
+    "sm": "0px 2px 4px 4px #00000026",
+    "DEFAULT": "0px 4px 8px 4px #00000033",
+    "md": "0px 4px 12px 4px #00000033",
+    "lg": "0px 4px 16px 4px #00000033"
   },
   "borderRadius": {
+    "DEFAULT": "8px",
     "rounded": "8px",
     "pill": "200px"
   },
@@ -188,6 +189,10 @@ export const theme = {
     ],
     "code": [
       "Roboto Mono",
+      "sans-serif"
+    ],
+    "sans": [
+      "Inter",
       "sans-serif"
     ]
   },

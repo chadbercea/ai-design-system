@@ -11,7 +11,28 @@ export default {
   ],
   theme: {
     extend: {
-      // Add DDS token colors as color scale (blue-500, grey-500, etc.)
+      // Override Tailwind defaults with DDS tokens
+      borderRadius: {
+        ...ddsTheme.borderRadius,
+        // Map all Tailwind classes to token values
+        'none': '0',
+        'sm': ddsTheme.borderRadius.rounded,
+        'md': ddsTheme.borderRadius.rounded,
+        'lg': ddsTheme.borderRadius.rounded,
+        'xl': ddsTheme.borderRadius.rounded,
+        '2xl': ddsTheme.borderRadius.rounded,
+        '3xl': ddsTheme.borderRadius.rounded,
+        'full': ddsTheme.borderRadius.pill
+      },
+      borderWidth: ddsTheme.borderWidth,
+      fontSize: ddsTheme.fontSize,
+      fontFamily: {
+        ...ddsTheme.fontFamily,
+        sans: ddsTheme.fontFamily.product
+      },
+      fontWeight: ddsTheme.fontWeight,
+      spacing: ddsTheme.spacing,
+      // Import ALL DDS token properties
       colors: {
         ...ddsTheme.colors,
         // shadcn semantic colors use CSS variables
@@ -49,11 +70,16 @@ export default {
           foreground: 'hsl(var(--card-foreground))'
         },
       },
-      borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
-        sm: 'calc(var(--radius) - 4px)'
-      }
+      // Import remaining DDS theme properties
+      boxShadow: {
+        ...ddsTheme.boxShadow,
+        // Override ALL shadow classes to none (elevation=0 for all components)
+        DEFAULT: 'none',
+        sm: 'none',
+        md: 'none',
+        lg: 'none'
+      },
+      opacity: ddsTheme.opacity
     }
   },
   plugins: [],

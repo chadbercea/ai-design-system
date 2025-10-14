@@ -10,7 +10,7 @@ StyleDictionary.registerFormat({
   format: function({ dictionary }) {
     const tokens = dictionary.allTokens;
     
-    // Helper to find token by path (still needed for non-color tokens until later sprints)
+    // Helper to find token by path (still needed for non-color tokens until later sprints)I 
     const findToken = (path) => tokens.find(t => t.path.join('.') === path)?.value;
     
     // Get ALL color tokens and build color families dynamically
@@ -128,7 +128,7 @@ StyleDictionary.registerFormat({
         if (level) {
           // Convert {color, x, y, blur, spread} to CSS shadow string
           const shadow = token.$value;
-          const css = `${shadow.x} ${shadow.y} ${shadow.blur} ${shadow.spread} ${shadow.color}`;
+          const css = `${shadow.x}px ${shadow.y}px ${shadow.blur}px ${shadow.spread}px ${shadow.color}`;
           shadows[level] = css;
         }
       }
@@ -167,58 +167,58 @@ StyleDictionary.registerFormat({
       fontWeightMedium: fontWeights.semibold || 500,
       fontWeightBold: fontWeights.bold || 700,
       h1: {
-        fontSize: fontSizes['48'] + 'px' || '48px',
+        fontSize: parseInt(fontSizes['48']) || 48,
         fontWeight: fontWeights.bold || 700,
         lineHeight: 1.2
       },
       h2: {
-        fontSize: fontSizes['40'] + 'px' || '40px',
+        fontSize: parseInt(fontSizes['40']) || 40,
         fontWeight: fontWeights.bold || 700,
         lineHeight: 1.2
       },
       h3: {
-        fontSize: fontSizes['32'] + 'px' || '32px',
+        fontSize: parseInt(fontSizes['32']) || 32,
         fontWeight: fontWeights.semibold || 600,
         lineHeight: 1.3
       },
       h4: {
-        fontSize: fontSizes['24'] + 'px' || '24px',
+        fontSize: parseInt(fontSizes['24']) || 24,
         fontWeight: fontWeights.semibold || 600,
         lineHeight: 1.4
       },
       h5: {
-        fontSize: fontSizes['21'] + 'px' || '21px',
+        fontSize: parseInt(fontSizes['21']) || 21,
         fontWeight: fontWeights.semibold || 600,
         lineHeight: 1.4
       },
       h6: {
-        fontSize: fontSizes['18'] + 'px' || '18px',
+        fontSize: parseInt(fontSizes['18']) || 18,
         fontWeight: fontWeights.semibold || 600,
         lineHeight: 1.4
       },
       body1: {
-        fontSize: fontSizes['16'] + 'px' || '16px',
+        fontSize: parseInt(fontSizes['16']) || 16,
         fontWeight: fontWeights.regular || 400,
         lineHeight: 1.5
       },
       body2: {
-        fontSize: fontSizes['14'] + 'px' || '14px',
+        fontSize: parseInt(fontSizes['14']) || 14,
         fontWeight: fontWeights.regular || 400,
         lineHeight: 1.43
       },
       button: {
-        fontSize: fontSizes['14'] + 'px' || '14px',
+        fontSize: parseInt(fontSizes['14']) || 14,
         fontWeight: fontWeights.semibold || 500,
         lineHeight: 1.75,
         textTransform: 'none'
       },
       caption: {
-        fontSize: fontSizes['12'] + 'px' || '12px',
+        fontSize: parseInt(fontSizes['12']) || 12,
         fontWeight: fontWeights.regular || 400,
         lineHeight: 1.66
       },
       overline: {
-        fontSize: fontSizes['10'] + 'px' || '10px',
+        fontSize: parseInt(fontSizes['10']) || 10,
         fontWeight: fontWeights.bold || 700,
         lineHeight: 2.66,
         textTransform: 'uppercase'
@@ -239,8 +239,31 @@ StyleDictionary.registerFormat({
       shadows,
       spacing: 8,
       shape: {
-        borderRadius: borderRadii.rounded || '4px',
-        pill: borderRadii.pill || '200px'
+        borderRadius: parseInt(borderRadii.rounded) || 8,
+        pill: parseInt(borderRadii.pill) || 200
+      },
+      components: {
+        MuiCard: {
+          defaultProps: {
+            elevation: 0
+          },
+          styleOverrides: {
+            root: {
+              border: '1px solid',
+              borderColor: palette.grey?.['300'] || '#c8cfda'
+            }
+          }
+        },
+        MuiButton: {
+          defaultProps: {
+            disableElevation: true
+          },
+          styleOverrides: {
+            outlined: {
+              borderWidth: '1px'
+            }
+          }
+        }
       }
     };
     
@@ -311,15 +334,27 @@ StyleDictionary.registerFormat({
       '5xl': (findToken('48') || '48') + 'px'
     };
     
-    // Build fontWeight
+    // Build fontWeight dynamically from tokens
+    const fontWeightTokens = tokens.filter(t => t.$type === 'fontWeights');
     const fontWeight = {
-      light: parseInt(findToken('light')) || 300,
-      normal: parseInt(findToken('regular')) || 400,
-      medium: parseInt(findToken('semibold')) || 500,
-      semibold: parseInt(findToken('semibold')) || 600,
-      bold: parseInt(findToken('bold')) || 700,
-      extrabold: parseInt(findToken('extrabold')) || 900
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+      extrabold: 900
     };
+    fontWeightTokens.forEach(token => {
+      const name = token.path[token.path.length - 1];
+      const value = parseInt(token.$value);
+      // Map token names to Tailwind names
+      if (name === 'regular') fontWeight.normal = value;
+      else if (name === 'semibold') {
+        fontWeight.medium = value;
+        fontWeight.semibold = value;
+      }
+      else fontWeight[name] = value;
+    });
     
     // Build spacing (Tailwind uses numeric keys)
     const spacing = {
@@ -345,7 +380,7 @@ StyleDictionary.registerFormat({
       const name = token.path.join('.');
       const shadow = token.$value;
       // Convert {color, x, y, blur, spread} to CSS shadow string
-      const css = `${shadow.x} ${shadow.y} ${shadow.blur} ${shadow.spread} ${shadow.color}`;
+      const css = `${shadow.x}px ${shadow.y}px ${shadow.blur}px ${shadow.spread}px ${shadow.color}`;
       if (name.includes('elevation-1')) boxShadow.sm = css;
       if (name.includes('elevation-2')) boxShadow.DEFAULT = css;
       if (name.includes('elevation-3')) boxShadow.md = css;
@@ -357,6 +392,9 @@ StyleDictionary.registerFormat({
     const borderRadius = {};
     borderRadiusTokens.forEach(token => {
       const name = token.path[token.path.length - 1];
+      if (name === 'rounded') {
+        borderRadius['DEFAULT'] = token.$value;
+      }
       borderRadius[name] = token.$value;
     });
     
@@ -375,6 +413,10 @@ StyleDictionary.registerFormat({
       const name = token.path[token.path.length - 1];
       fontFamily[name] = [token.$value, 'sans-serif'];
     });
+    // Set Tailwind's default 'sans' to use product font (Inter)
+    if (fontFamily.product) {
+      fontFamily.sans = fontFamily.product;
+    }
     
     // Get ALL opacity tokens
     const opacityTokens = tokens.filter(t => t.$type === 'opacity');
@@ -472,7 +514,7 @@ StyleDictionary.registerFormat({
     shadowTokens.forEach(token => {
       const name = token.path.join('-').toLowerCase();
       const shadow = token.$value;
-      const css = `${shadow.x} ${shadow.y} ${shadow.blur} ${shadow.spread} ${shadow.color}`;
+      const css = `${shadow.x}px ${shadow.y}px ${shadow.blur}px ${shadow.spread}px ${shadow.color}`;
       shadowVars += `  --${name}: ${css};\n`;
     });
     
