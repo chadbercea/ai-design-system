@@ -45,19 +45,14 @@
     "$value": "48"
   },
   "sm": {
-    "$type": "spacing",
-    "$value": "8px",
-    "$description": "Small spacing."
+    "$type": "borderWidth",
+    "$value": "1px",
+    "$description": "Small border width."
   },
   "md": {
-    "$type": "spacing",
-    "$value": "16px",
-    "$description": "Medium spacing."
-  },
-  "lg": {
     "$type": "borderWidth",
-    "$value": "1.5px",
-    "$description": "Large border width."
+    "$value": "1.25px",
+    "$description": "Medium border width."
   },
   "elevation-1": {
     "$type": "boxShadow",
@@ -69,18 +64,6 @@
       "blur": "4",
       "spread": "4"
     }
-  },
-  "elevation-0": {
-    "$type": "boxShadow",
-    "$value": {
-      "x": "0",
-      "y": "0",
-      "blur": "0",
-      "spread": "0",
-      "color": "rgba(0,0,0,0)",
-      "type": "dropShadow"
-    },
-    "$description": "Default dropshadow style for objects that have dropshadow on interaction or behavior. "
   },
   "elevation-2": {
     "$type": "boxShadow",
@@ -708,6 +691,11 @@
     "$type": "spacing",
     "$value": "4px",
     "$description": "Extra-small spacing."
+  },
+  "lg": {
+    "$type": "borderWidth",
+    "$value": "1.5px",
+    "$description": "Large border width."
   },
   "xl": {
     "$type": "borderWidth",
