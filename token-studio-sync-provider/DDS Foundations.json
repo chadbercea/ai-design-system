@@ -45,14 +45,19 @@
     "$value": "48"
   },
   "sm": {
-    "$type": "borderWidth",
-    "$value": "1px",
-    "$description": "Small border width."
+    "$type": "spacing",
+    "$value": "8px",
+    "$description": "Small spacing."
   },
   "md": {
+    "$type": "spacing",
+    "$value": "16px",
+    "$description": "Medium spacing."
+  },
+  "lg": {
     "$type": "borderWidth",
-    "$value": "1.25px",
-    "$description": "Medium border width."
+    "$value": "1.5px",
+    "$description": "Large border width."
   },
   "elevation-1": {
     "$type": "boxShadow",
@@ -703,11 +708,6 @@
     "$type": "spacing",
     "$value": "4px",
     "$description": "Extra-small spacing."
-  },
-  "lg": {
-    "$type": "borderWidth",
-    "$value": "1.5px",
-    "$description": "Large border width."
   },
   "xl": {
     "$type": "borderWidth",
