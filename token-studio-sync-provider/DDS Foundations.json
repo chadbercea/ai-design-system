@@ -44,11 +44,6 @@
     "$type": "fontSizes",
     "$value": "48"
   },
-  "Matt": {
-    "$type": "boss",
-    "$value": "100%",
-    "$description": "This should be deleted."
-  },
   "sm": {
     "$type": "borderWidth",
     "$value": "1px",

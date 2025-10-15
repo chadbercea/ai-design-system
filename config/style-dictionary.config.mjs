@@ -178,22 +178,22 @@ StyleDictionary.registerFormat({
       },
       h3: {
         fontSize: parseInt(fontSizes['32']) || 32,
-        fontWeight: fontWeights.semibold || 600,
+          fontWeight: fontWeights.semibold || 500,
         lineHeight: 1.3
       },
       h4: {
         fontSize: parseInt(fontSizes['24']) || 24,
-        fontWeight: fontWeights.semibold || 600,
+          fontWeight: fontWeights.semibold || 500,
         lineHeight: 1.4
       },
       h5: {
         fontSize: parseInt(fontSizes['21']) || 21,
-        fontWeight: fontWeights.semibold || 600,
+          fontWeight: fontWeights.semibold || 500,
         lineHeight: 1.4
       },
       h6: {
         fontSize: parseInt(fontSizes['18']) || 18,
-        fontWeight: fontWeights.semibold || 600,
+          fontWeight: fontWeights.semibold || 500,
         lineHeight: 1.4
       },
       body1: {
@@ -237,9 +237,9 @@ StyleDictionary.registerFormat({
       palette,
       typography,
       shadows,
-      spacing: 8,
+      spacing: parseInt(findToken('xs')) || 4,
       shape: {
-        borderRadius: parseInt(borderRadii.rounded) || 8,
+        borderRadius: parseInt(borderRadii.rounded) || parseInt(findToken('rounded')),
         pill: parseInt(borderRadii.pill) || 200
       },
       components: {
@@ -249,18 +249,34 @@ StyleDictionary.registerFormat({
           },
           styleOverrides: {
             root: {
-              border: '1px solid',
+              border: `${findToken('sm') || '1px'} solid`,
               borderColor: palette.grey?.['300'] || '#c8cfda'
             }
           }
         },
         MuiButton: {
-          defaultProps: {
-            disableElevation: true
-          },
           styleOverrides: {
+            contained: {
+              // Use elevation-0 token (shadows[0]) for flat buttons
+              boxShadow: shadows[0],
+              '&:hover': {
+                boxShadow: shadows[0]
+              },
+              '&:active': {
+                boxShadow: shadows[0]
+              }
+            },
             outlined: {
-              borderWidth: '1px'
+              borderWidth: findToken('sm') || '1px'
+            }
+          }
+        },
+        MuiTextField: {
+          styleOverrides: {
+            root: {
+              '& .MuiInputBase-input': {
+                color: palette.text?.primary || '#000000'
+              }
             }
           }
         }
@@ -336,14 +352,7 @@ StyleDictionary.registerFormat({
     
     // Build fontWeight dynamically from tokens
     const fontWeightTokens = tokens.filter(t => t.$type === 'fontWeights');
-    const fontWeight = {
-      light: 300,
-      normal: 400,
-      medium: 500,
-      semibold: 600,
-      bold: 700,
-      extrabold: 900
-    };
+    const fontWeight = {};
     fontWeightTokens.forEach(token => {
       const name = token.path[token.path.length - 1];
       const value = parseInt(token.$value);
@@ -357,21 +366,13 @@ StyleDictionary.registerFormat({
     });
     
     // Build spacing (Tailwind uses numeric keys)
-    const spacing = {
-      0: '0px',
-      1: '0.25rem',   // 4px
-      2: '0.5rem',    // 8px
-      3: '0.75rem',   // 12px
-      4: '1rem',      // 16px
-      5: '1.25rem',   // 20px
-      6: '1.5rem',    // 24px
-      8: '2rem',      // 32px
-      10: '2.5rem',   // 40px
-      12: '3rem',     // 48px
-      16: '4rem',     // 64px
-      20: '5rem',     // 80px
-      24: '6rem'      // 96px
-    };
+    // Build spacing from tokens ONLY
+    const spacingTokens = tokens.filter(t => t.$type === 'spacing');
+    const spacing = {};
+    spacingTokens.forEach(token => {
+      const name = token.path[token.path.length - 1];
+      spacing[name] = token.$value;
+    });
     
     // Get ALL box shadow tokens
     const shadowTokens = tokens.filter(t => t.$type === 'boxShadow');
@@ -381,6 +382,7 @@ StyleDictionary.registerFormat({
       const shadow = token.$value;
       // Convert {color, x, y, blur, spread} to CSS shadow string
       const css = `${shadow.x}px ${shadow.y}px ${shadow.blur}px ${shadow.spread}px ${shadow.color}`;
+      if (name.includes('elevation-0')) boxShadow.none = css;
       if (name.includes('elevation-1')) boxShadow.sm = css;
       if (name.includes('elevation-2')) boxShadow.DEFAULT = css;
       if (name.includes('elevation-3')) boxShadow.md = css;
@@ -601,11 +603,11 @@ StyleDictionary.registerFormat({
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 0 0% 89.8%;
-  --input: 0 0% 89.8%;
+  --border: ${hexToHSL(findColor('Grey', '300'))};
+  --input: ${hexToHSL(findColor('Grey', '300'))};
   --ring: ${hexToHSL(primary)};
 
-  --radius: 0.5rem;
+  --radius: ${parseInt(radiusTokens.find(t => t.path.includes('rounded'))?.$value) / 16}rem;
 
   /* Box shadows */
 ${shadowVars}
@@ -642,7 +644,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: spacing.xs || "4px",
       screens: {
         "2xl": "1400px",
       },

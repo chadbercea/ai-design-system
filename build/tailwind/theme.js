@@ -138,30 +138,19 @@ export const theme = {
     "5xl": "48px"
   },
   "fontWeight": {
-    "light": 300,
-    "normal": 400,
+    "extrabold": 900,
+    "bold": 700,
     "medium": 500,
     "semibold": 500,
-    "bold": 700,
-    "extrabold": 900
+    "normal": 400,
+    "light": 300
   },
   "spacing": {
-    "0": "0px",
-    "1": "0.25rem",
-    "2": "0.5rem",
-    "3": "0.75rem",
-    "4": "1rem",
-    "5": "1.25rem",
-    "6": "1.5rem",
-    "8": "2rem",
-    "10": "2.5rem",
-    "12": "3rem",
-    "16": "4rem",
-    "20": "5rem",
-    "24": "6rem"
+    "xs": "4px"
   },
   "boxShadow": {
     "sm": "0px 2px 4px 4px #00000026",
+    "none": "0px 0px 0px 0px rgba(255,255,255,0)",
     "DEFAULT": "0px 4px 8px 4px #00000033",
     "md": "0px 4px 12px 4px #00000033",
     "lg": "0px 4px 16px 4px #00000033"

@@ -36,7 +36,7 @@ export default {
       colors: {
         ...ddsTheme.colors,
         // shadcn semantic colors use CSS variables
-        border: 'hsl(var(--border))',
+        border: 'hsl(var(--border, 217 20% 72%))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
@@ -73,11 +73,11 @@ export default {
       // Import remaining DDS theme properties
       boxShadow: {
         ...ddsTheme.boxShadow,
-        // Override ALL shadow classes to none (elevation=0 for all components)
-        DEFAULT: 'none',
-        sm: 'none',
-        md: 'none',
-        lg: 'none'
+        // Use elevation-0 token for all shadow classes (flat design)
+        DEFAULT: ddsTheme.boxShadow.none || 'none',
+        sm: ddsTheme.boxShadow.none || 'none',
+        md: ddsTheme.boxShadow.none || 'none',
+        lg: ddsTheme.boxShadow.none || 'none'
       },
       opacity: ddsTheme.opacity
     }

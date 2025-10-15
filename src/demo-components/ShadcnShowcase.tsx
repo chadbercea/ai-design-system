@@ -5,10 +5,10 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../co
 export const ShadcnShowcase: React.FC<{ useDDSTheme?: boolean }> = ({ useDDSTheme = false }) => {
   return (
     <div className={useDDSTheme ? 'dds-theme' : ''}>
-      <h2 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.25rem', fontWeight: 600, borderBottom: '2px solid hsl(var(--primary))', paddingBottom: '0.5rem' }}>
+      <h2 className="text-xl font-semibold mb-4 pb-2 border-b-2 border-primary text-foreground">
         shadcn/ui Components
       </h2>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <div className="flex flex-col gap-4">
         <Button variant="default">
           Primary Button
         </Button>
@@ -31,7 +31,7 @@ export const ShadcnShowcase: React.FC<{ useDDSTheme?: boolean }> = ({ useDDSThem
         <input 
           type="text" 
           placeholder="Text Input"
-          className="px-4 py-2 border border-input rounded text-sm bg-background"
+          className="px-4 py-2 border border-input rounded text-base bg-background text-foreground"
         />
       </div>
     </div>

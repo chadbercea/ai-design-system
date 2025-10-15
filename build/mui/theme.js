@@ -251,7 +251,7 @@ export const theme = {
     "0px 4px 12px 4px #00000033",
     "0px 4px 16px 4px #00000033"
   ],
-  "spacing": 8,
+  "spacing": 4,
   "shape": {
     "borderRadius": 8,
     "pill": 200
@@ -269,12 +269,27 @@ export const theme = {
       }
     },
     "MuiButton": {
-      "defaultProps": {
-        "disableElevation": true
-      },
       "styleOverrides": {
+        "contained": {
+          "boxShadow": "none",
+          "&:hover": {
+            "boxShadow": "none"
+          },
+          "&:active": {
+            "boxShadow": "none"
+          }
+        },
         "outlined": {
           "borderWidth": "1px"
+        }
+      }
+    },
+    "MuiTextField": {
+      "styleOverrides": {
+        "root": {
+          "& .MuiInputBase-input": {
+            "color": "#000000"
+          }
         }
       }
     }
