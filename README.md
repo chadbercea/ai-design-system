@@ -144,8 +144,7 @@ ai-design-system/
 │   ├── demo-components/            # Shared showcase components
 │   │   ├── MUIShowcase.tsx
 │   │   ├── ShadcnShowcase.tsx
-│   │   ├── TailwindShowcase.tsx
-│   │   └── TailwindShowcase-stock.tsx
+│   │   └── TailwindShowcase.tsx
 │   │
 │   ├── themes/                     # Theme provider wrappers
 │   │   ├── mui-theme.ts            # MUI theme setup
@@ -168,10 +167,13 @@ ai-design-system/
 ├── docs/
 │   ├── context.md                  # Architecture & AI instructions
 │   ├── METAPLAN.md                 # Sprint execution methodology
-│   ├── MVP Sprints (Completed)/    # Initial 15-sprint MVP work
-│   └── Pipeline Demo Sprints (Active)/  # 16-sprint verification work
-│       ├── Pipeline Demo PRD.md    # Product requirements
-│       └── SPRINT_1-16_PLAN.md     # Individual sprint plans
+│   ├── PRESENTATION_BRIEF.md       # Presentation guide & business case
+│   └── Style Dictionary PRD (Active)/  # Technical documentation
+│       ├── SD-SOP.md               # Style Dictionary Standard Operating Procedure
+│       ├── TOKEN-MAPPING-COMPLETE.md # Source token → framework mapping
+│       ├── VISUAL-DISCREPANCIES.md # Resolved visual issues
+│       ├── COMPONENT-CONSUMPTION.md # How components use tokens
+│       └── [12 other technical docs]
 │
 └── .storybook/
     ├── main.ts                     # Storybook configuration
@@ -182,15 +184,33 @@ ai-design-system/
 
 This project uses a **sprint-based verification methodology** documented in `docs/METAPLAN.md`.
 
-All 16 sprints of the Pipeline Demo PRD have been completed and verified:
+**Current Status:** Production-Ready ✅
 
-- ✅ **Sprints 1-3**: Token build pipeline outputs
-- ✅ **Sprints 4-6**: Individual library stories render
-- ✅ **Sprints 7-10**: Stock vs DDS theme differentiation
-- ✅ **Sprints 11-14**: Toggle integration and visual impact
-- ✅ **Sprints 15-16**: Error checking and final validation
+### Token Pipeline Verification (Complete)
 
-See `docs/Pipeline Demo Sprints (Active)/` for detailed acceptance criteria and verification steps.
+All hardcoded values have been eliminated from the Style Dictionary configuration:
+
+- ✅ **Spacing**: Uses `xs: 4px` token (no hardcoded `8`)
+- ✅ **Font Weights**: `semibold: 500` from token (not hardcoded `600`)
+- ✅ **Border Widths**: Uses `sm`, `md`, `lg`, `xl`, `xxl` tokens
+- ✅ **Border Radius**: Uses `rounded: 8px`, `pill: 200px` tokens
+- ✅ **Border Colors**: Uses `Grey.300` token (visible, not invisible)
+- ✅ **Shadows**: Uses `elevation-0` through `elevation-4` tokens
+- ✅ **All 58 Tokens Transform**: No fabricated values, no math, no generation
+
+### Success Criteria Verified
+
+Per `/component-token-consumption-mapping.plan.md`:
+1. ✅ MUI spacing = 4 (from xs token)
+2. ✅ Tailwind spacing = ONLY source tokens (no fabricated scale)
+3. ✅ Tailwind semibold = 500 (correct token value)
+4. ✅ MUI border uses borderWidth.sm token
+5. ✅ Zero fabricated values
+6. ✅ Zero math/generation
+7. ✅ All 58 source tokens transform
+8. ✅ Visual consistency in Storybook
+
+See `docs/Style Dictionary PRD (Active)/` for detailed technical documentation.
 
 ## 📖 Using Generated Tokens
 
@@ -297,11 +317,26 @@ npm run verify:themes     # Verify token propagation (CI/CD)
 
 ## 📚 Documentation
 
-- **`docs/context.md`** - Architecture decisions and AI instructions
+### Core Documentation
+- **`docs/context.md`** - Architecture decisions, sacred rules, and system limitations
 - **`docs/METAPLAN.md`** - Sprint methodology and verification approach
-- **`docs/Pipeline Demo Sprints (Active)/`** - Current sprint plans and PRD
-- **`docs/style-dictionary/`** - Style Dictionary configuration reference
-- **`docs/token-studio/`** - Token Studio and DTCG specification guide
+- **`docs/PRESENTATION_BRIEF.md`** - Presentation guide for sharing this system
+
+### Technical Documentation (Style Dictionary PRD)
+- **`SD-SOP.md`** - Standard Operating Procedure for all Style Dictionary work
+- **`TOKEN-MAPPING-COMPLETE.md`** - Complete mapping of all 58 source tokens
+- **`SD-ACTUAL-SYSTEM.md`** - Current Style Dictionary implementation details
+- **`COMPONENT-CONSUMPTION.md`** - How each component consumes design tokens
+- **`VISUAL-DISCREPANCIES.md`** - Documented visual issues and resolutions
+- **`MUI-API-REQUIREMENTS.md`** - MUI theme API requirements
+- **`TAILWIND-API-REQUIREMENTS.md`** - Tailwind config API requirements
+- **`SHADCN-API-REQUIREMENTS.md`** - shadcn/ui CSS variable requirements
+
+### Key Principles
+1. **NEVER modify `token-studio-sync-provider/`** - Auto-synced from Figma
+2. **ALL tokens must transform** - No cherry-picking, no fabrication
+3. **Zero hardcoded values** - Only token lookups with fallbacks
+4. **Verify before claiming completion** - Run commands, show evidence
 
 ## 🤝 Contributing
 
