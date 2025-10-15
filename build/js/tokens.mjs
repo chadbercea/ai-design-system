@@ -24,6 +24,14 @@ module.exports = {
     blur: "4",
     spread: "4",
   },
+  elevation0: {
+    x: "0",
+    y: "0",
+    blur: "0",
+    spread: "0",
+    color: "rgba(255,255,255,0)",
+    type: "dropShadow",
+  },
   elevation2: {
     color: "#00000033",
     type: "dropShadow",

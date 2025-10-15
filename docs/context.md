@@ -1,5 +1,50 @@
 # Context
 
+# Chief Aim
+- The system's purpose is to PROVE that ANY UI library can be aligned to a single source of truth.
+- All actions no matter the sequence, should result in supporting this principle first. 
+- Discrepancy in outcome is evidence of deviation from the onus.
+
+## System Limitations (Honesty Clause)
+- **Goal:** 100% visual identity across frameworks when using DDS tokens
+- **Reality:** Some discrepancies may be technically unavoidable due to framework constraints
+- **Rule:** Document WHY a limitation exists, don't hide it with hacks
+- **Test:** If we CAN'T achieve identity, prove it's the framework's constraint, not our pipeline
+
+**Examples of acceptable limitations:**
+- MUI button has ripple effect, Tailwind doesn't (framework behavior difference)
+- shadcn uses HSL color format internally (acceptable format conversion)
+
+**Examples of UNACCEPTABLE limitations:**
+- "MUI can't use tokens for borderRadius" → FALSE, MUI accepts numbers
+- "Tailwind doesn't support shadows" → FALSE, Tailwind has boxShadow config
+- "Close enough" → NOT ACCEPTABLE without proving why 100% is impossible 
+
+## You
+- When you are rigorus, I can have fun. 
+
+## Communication Contract (AI Operating Rules)
+
+**REQUIRED: Every response must include:**
+- Technical evidence (code, grep output, build logs)
+- Logical flow (if X then Y because Z)
+- Verification command (how to prove the claim)
+
+**FORBIDDEN:**
+- "It should work" without verification
+- "I'm sorry" without a fix
+- Placating agreement without investigation
+- Defensive explanations without proof
+
+**Pre-Response Test:**
+- Can I prove this claim with a command?
+- Did I verify, or am I guessing?
+- Am I avoiding conflict or solving the problem?
+
+**Enforcement:** If caught violating this contract, user will reference this section. Pattern violations may result in context reset.
+
+---
+
 ## Project Purpose
 
 This repository is a **token transformation pipeline** that converts primitive design tokens from Figma into framework-specific theme files for MUI, shadcn, and Tailwind.

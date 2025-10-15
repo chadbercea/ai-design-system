@@ -6,7 +6,8 @@ import {
   Card, 
   CardContent,
   Typography,
-  TextField
+  TextField,
+  Stack
 } from '@mui/material';
 import { muiTheme } from '../themes/mui-theme';
 import { muiStockTheme } from '../themes/mui-theme-stock';
@@ -18,7 +19,7 @@ export const MUIShowcase: React.FC<{ useDDSTheme?: boolean }> = ({ useDDSTheme =
       <Typography variant="h5" sx={{ borderBottom: 2, borderColor: 'primary.main', pb: 1, mb: 2 }}>
         MUI Components
       </Typography>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <Stack spacing={2}>
         <Button variant="contained" color="primary">
           Primary Button
         </Button>
@@ -41,7 +42,7 @@ export const MUIShowcase: React.FC<{ useDDSTheme?: boolean }> = ({ useDDSTheme =
         </Card>
 
         <TextField label="Text Input" variant="outlined" size="small" />
-      </div>
+      </Stack>
     </ThemeProvider>
   );
 };
