@@ -96,7 +96,7 @@ const ThreeColumnComparison = () => {
 };
 
 const meta: Meta<typeof ThreeColumnComparison> = {
-  title: 'Home/Token Pipeline Demo',
+  title: 'DDS Token Pipeline/Home',
   component: ThreeColumnComparison,
   parameters: {
     layout: 'fullscreen',

@@ -9,7 +9,7 @@ const TailwindLibrary = () => (
 );
 
 const meta: Meta<typeof TailwindLibrary> = {
-  title: 'Libraries/Tailwind',
+  title: 'DDS Token Pipeline/Tailwind Library',
   component: TailwindLibrary,
   parameters: {
     layout: 'fullscreen',

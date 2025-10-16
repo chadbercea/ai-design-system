@@ -9,7 +9,7 @@ const MUILibrary = () => (
 );
 
 const meta: Meta<typeof MUILibrary> = {
-  title: 'Libraries/MUI',
+  title: 'DDS Token Pipeline/MUI Library',
   component: MUILibrary,
   parameters: {
     layout: 'fullscreen',

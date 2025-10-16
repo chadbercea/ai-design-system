@@ -13,6 +13,11 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        order: ['DDS Token Pipeline', ['Home', 'MUI Library', 'Tailwind Library', 'Shadcn Library'], 'DDS:NEXT'],
+      },
+    },
   },
 };
 
