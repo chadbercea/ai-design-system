@@ -7,7 +7,7 @@
  * Pipeline Flow:
  *   Figma → Token Studio → DDS Foundations.json (W3C DTCG) → Style Dictionary → Framework Themes
  * 
- * CRITICAL FOR BRYAN (Docker Review):
+ * CRITICAL FOR DDS team (Docker Review):
  * 1. This file has ZERO hardcoded values (except fallbacks)
  * 2. All 58 source tokens transform dynamically
  * 3. No math, no generation - only token lookups
@@ -52,7 +52,7 @@ StyleDictionary.registerFormat({
     const tokens = dictionary.allTokens;
     
     /**
-     * BRYAN: Token Lookup Helper
+     * DDS team: Token Lookup Helper
      * 
      * This helper finds a token by its path string (e.g., 'xs' or 'rounded')
      * Used for non-color tokens like spacing, borderRadius, etc.
@@ -63,7 +63,7 @@ StyleDictionary.registerFormat({
     const findToken = (path) => tokens.find(t => t.path.join('.') === path)?.value;
     
     /**
-     * BRYAN: Color Token Processing
+     * DDS team: Color Token Processing
      * 
      * Problem: Source tokens are flat (Blue.500, Grey.300, etc.)
      * MUI Needs: Nested structure (palette.primary.main, palette.grey[300])
@@ -90,7 +90,7 @@ StyleDictionary.registerFormat({
     });
     
     /**
-     * BRYAN: Opacity Token Processing
+     * DDS team: Opacity Token Processing
      * 
      * Problem: MUI expects opacity as decimal (0.12), but tokens might be percentages (12%)
      * Solution: Normalize all opacity values to decimals
@@ -308,7 +308,7 @@ StyleDictionary.registerFormat({
     });
     
     /**
-     * BRYAN: Final MUI Theme Assembly
+     * DDS team: Final MUI Theme Assembly
      * 
      * This is the complete MUI theme object that gets exported.
      * All values come from tokens (no hardcoding).
@@ -398,7 +398,7 @@ export default theme;
  * Docker Note: Outputs JavaScript object for import into tailwind.config.js
  *              No runtime processing - consumed at Tailwind build time
  * 
- * BRYAN: Tailwind theme format is different from MUI:
+ * DDS team: Tailwind theme format is different from MUI:
  * - MUI: palette.primary.main → single value
  * - Tailwind: colors.blue[500] → scale of values
  * This is why we need custom formatters - different APIs
@@ -409,7 +409,7 @@ StyleDictionary.registerFormat({
     const tokens = dictionary.allTokens;
     
     /**
-     * BRYAN: Tailwind Color Scale Builder
+     * DDS team: Tailwind Color Scale Builder
      * 
      * Tailwind organizes colors by family with numeric shades:
      * { blue: { 100: '#...', 500: '#...', 900: '#...' } }
@@ -581,7 +581,7 @@ StyleDictionary.registerFormat({
     const tokens = dictionary.allTokens;
     
     /**
-     * BRYAN: shadcn Color Lookup Helper
+     * DDS team: shadcn Color Lookup Helper
      * 
      * Finds a specific color token by family and shade
      * Used to get primary/secondary colors from the palette
@@ -598,7 +598,7 @@ StyleDictionary.registerFormat({
     };
     
     /**
-     * BRYAN: Hex to HSL Converter
+     * DDS team: Hex to HSL Converter
      * 
      * Problem: Source tokens are HEX (#2560ff)
      * shadcn Needs: HSL format without hsl() wrapper (217 82% 53%)
@@ -853,7 +853,7 @@ module.exports = {
 });
 
 /**
- * BRYAN: STYLE DICTIONARY PLATFORM CONFIGURATION
+ * DDS team: STYLE DICTIONARY PLATFORM CONFIGURATION
  * 
  * This is the main configuration object that tells Style Dictionary:
  * 1. WHERE to read tokens from (source)
@@ -950,7 +950,7 @@ export default {
      * Format: CUSTOM 'mui/theme' (registered above)
      * Use Case: Import into MUI projects with createTheme()
      * 
-     * BRYAN: This uses our custom formatter to create the nested
+     * DDS team: This uses our custom formatter to create the nested
      *        object structure MUI expects (palette.primary.main)
      */
     mui: {
@@ -971,7 +971,7 @@ export default {
      * Format: CUSTOM 'tailwind/theme' (registered above)
      * Use Case: Import into tailwind.config.js
      * 
-     * BRYAN: This uses our custom formatter to create Tailwind's
+     * DDS team: This uses our custom formatter to create Tailwind's
      *        color scale structure (colors.blue[500])
      */
     tailwind: {
@@ -995,7 +995,7 @@ export default {
      * Format: CUSTOM 'shadcn/css' and 'shadcn/tailwind' (registered above)
      * Use Case: shadcn/ui components with Tailwind
      * 
-     * BRYAN: shadcn is unique - it uses CSS variables with HSL format
+     * DDS team: shadcn is unique - it uses CSS variables with HSL format
      *        AND a Tailwind config. That's why it has 2 output files.
      *        The .dds-theme class applies all variables at once.
      */
@@ -1017,7 +1017,7 @@ export default {
 };
 
 /**
- * BRYAN: SUMMARY FOR DOCKER REVIEW
+ * DDS team: SUMMARY FOR DOCKER REVIEW
  * 
  * This entire file is:
  * 1. Pure JavaScript (Node.js)
