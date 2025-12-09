@@ -9,7 +9,7 @@ const ShadcnLibrary = () => (
 );
 
 const meta: Meta<typeof ShadcnLibrary> = {
-  title: 'Libraries/shadcn',
+  title: 'DDS Token Pipeline/Shadcn Library',
   component: ShadcnLibrary,
   parameters: {
     layout: 'fullscreen',
